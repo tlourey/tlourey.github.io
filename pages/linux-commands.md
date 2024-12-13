@@ -30,7 +30,7 @@ ref: <https://opensource.com/article/19/9/linux-commands-hardware-information>
 
 ### MDADM
 
-TBC
+REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 
 ## Files
 
