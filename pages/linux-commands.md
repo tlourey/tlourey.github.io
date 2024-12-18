@@ -2,17 +2,17 @@
 
 * [Hardware Info](#hardware-info)
 * [Storage](#storage)
-	* [MDADM](#mdadm)
+  * [MDADM](#mdadm)
 * [Files](#files)
-	* [finding large directories and large files](#finding-large-directories-and-large-files)
+  * [finding large directories and large files](#finding-large-directories-and-large-files)
 * [Main SystemD Commands](#main-systemd-commands)
-	* [Important Commands](#important-commands)
-		* [systemctl](#systemctl)
-		* [journalctl](#journalctl)
-		* [timedatectl](#timedatectl)
-		* [resolvectl](#resolvectl)
-	* [Misc Commands](#misc-commands)
-	* [Links](#links)
+  * [Important Commands](#important-commands)
+    * [systemctl](#systemctl)
+    * [journalctl](#journalctl)
+    * [timedatectl](#timedatectl)
+    * [resolvectl](#resolvectl)
+  * [Misc Commands](#misc-commands)
+  * [Links](#links)
 
 ## Hardware Info
 
@@ -98,6 +98,13 @@ Time and date stuff if chrony or NTPD isn't installed
 #### resolvectl
 
 DNS Config
+
+Force systemd-resolved to use the name servers you want to: `sudo resolvectl dns eth0 8.8.4.4 8.8.8.8`
+> [!CAUTION]
+>
+> I would only use this overide to change the order of servers
+> It most likely will ignore this commend if rebooted
+> i'm not sure if things like netplan apply would override it
 
 ### Misc Commands
 
