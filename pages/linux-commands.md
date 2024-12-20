@@ -1,10 +1,11 @@
 # Linux Commands
 
+* [Terminal Stuff](#terminal-stuff)
+* [Files](#files)
+  * [finding large directories and large files](#finding-large-directories-and-large-files)
 * [Hardware Info](#hardware-info)
 * [Storage](#storage)
   * [MDADM](#mdadm)
-* [Files](#files)
-  * [finding large directories and large files](#finding-large-directories-and-large-files)
 * [Main SystemD Commands](#main-systemd-commands)
   * [Important Commands](#important-commands)
     * [systemctl](#systemctl)
@@ -14,23 +15,13 @@
   * [Misc Commands](#misc-commands)
   * [Links](#links)
 
-## Hardware Info
+## Terminal Stuff
 
 ```bash
-lshw
-lshw | less
-lshw --short
-hwinfo
-hwinfo --short
+watch
+less
+wc
 ```
-
-ref: <https://opensource.com/article/19/9/linux-commands-hardware-information>
-
-## Storage
-
-### MDADM
-
-REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 
 ## Files
 
@@ -46,12 +37,41 @@ ls -lahS
 ls -lahS | more
 ls -lahS | less
 
-ls -lah 192.168.21.17*
-ls -lahS 192.168.21.17*
+ls -lah 192.168.1.10*
+ls -lahS 192.168.1.10*
 
 #If you have one large log file and want to see what day had more log entries try: 
 #Linux - Search (grep) for number of lines in log file per day
 ```
+
+## Hardware Info
+
+```bash
+lshw
+lshw | less
+lshw --short
+lscpu
+lsusb
+lspci
+lsblk
+hwinfo # may not always be installed
+hwinfo --short
+```
+
+ref: <https://opensource.com/article/19/9/linux-commands-hardware-information>
+
+## Storage
+
+```bash
+lsblk
+blkid
+fdisk
+cat /etc/fstab
+```
+
+### MDADM
+
+REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 
 ## Main SystemD Commands
 
