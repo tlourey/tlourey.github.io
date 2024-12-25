@@ -2,4 +2,4 @@
 
 Why Hello there
 
-{{ site.data }}
+{{ site.pages.title }}
