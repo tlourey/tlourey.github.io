@@ -1,6 +1,4 @@
-# WTF
-
-Why Hello there
+# Why Hello There
 
 {% assign doclist = site.pages | sort: 'title' %}
 <ol>
