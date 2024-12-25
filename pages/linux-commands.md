@@ -1,3 +1,8 @@
+---
+title: Linux Commands
+description: Linux commands to remember
+---
+
 # Linux Commands
 
 * [Terminal Stuff](#terminal-stuff)
@@ -6,6 +11,7 @@
 * [Hardware Info](#hardware-info)
 * [Storage](#storage)
   * [MDADM](#mdadm)
+* [Log files](#log-files)
 * [Main SystemD Commands](#main-systemd-commands)
   * [Important Commands](#important-commands)
     * [systemctl](#systemctl)
@@ -77,7 +83,7 @@ REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 
 * `/var/log/auth.log`: keep track of all authentication attempts (successful or failed) on your system
 * `faillog -a`: show fail log
-* `sudo faillog -l 60 olivia`: lock out Olivia for 60 mins 
+* `sudo faillog -l 60 olivia`: lock out Olivia for 60 mins
 * `sudo less /var/log/boot.log`: boot log
 * `cat /var/log/apt/history.log`: Apt history
 
