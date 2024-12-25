@@ -73,6 +73,14 @@ cat /etc/fstab
 
 REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 
+## Log files
+
+* `/var/log/auth.log`: keep track of all authentication attempts (successful or failed) on your system
+* `faillog -a`: show fail log
+* `sudo faillog -l 60 olivia`: lock out Olivia for 60 mins 
+* `sudo less /var/log/boot.log`: boot log
+* `cat /var/log/apt/history.log`: Apt history
+
 ## Main SystemD Commands
 
 ### Important Commands
