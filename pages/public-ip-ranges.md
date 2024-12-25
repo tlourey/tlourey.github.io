@@ -1,3 +1,8 @@
+---
+title: Public IP Ranges
+description: Public IP Ranges to note and their references
+---
+
 # List of Public IP Ranges to note
 
 * [Azure](#azure)
