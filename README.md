@@ -2,8 +2,6 @@
 
 Why Hello there
 
-{{ .title }}
-
 {% assign doclist = site.pages | sort: 'title' %}
 <ol>
 {% for item in doclist %}
