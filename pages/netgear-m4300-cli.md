@@ -1,3 +1,8 @@
+---
+title: Netgear Fully Managed Switch M4300 CLI Reference
+description: Commands to remember for Netgear Switches
+---
+
 # Netgear Fully Managed Switch M4300 CLI Reference
 
 > [!WARNING] Draft
