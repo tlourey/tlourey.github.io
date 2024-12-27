@@ -1,6 +1,7 @@
 ---
 title: Public IP Ranges
 description: Public IP Ranges to note and their references
+layout: page
 ---
 
 # List of Public IP Ranges to note
