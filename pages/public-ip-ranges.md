@@ -3,7 +3,7 @@ title: Public IP Ranges
 description: Public IP Ranges to note and their references
 ---
 
-[home](/) [up](../)
+[home](/) [up](./)
 
 * [Azure](#azure)
 * [Amazon](#amazon)
