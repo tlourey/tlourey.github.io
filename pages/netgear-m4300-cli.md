@@ -4,6 +4,8 @@ description: Commands to remember for Netgear Switches
 layout: page
 ---
 
+[back](./)
+
 # Netgear Fully Managed Switch M4300 CLI Reference
 
 > [!WARNING] Draft

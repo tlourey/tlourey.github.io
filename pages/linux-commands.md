@@ -4,6 +4,8 @@ description: Linux commands to remember
 layout: page
 ---
 
+[back](./)
+
 # Linux Commands
 
 * [Terminal Stuff](#terminal-stuff)
