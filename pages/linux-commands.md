@@ -3,7 +3,7 @@ title: Linux Commands
 description: Linux commands to remember
 ---
 
-[back](../)
+[home](/) [up](../)
 
 * [Terminal Stuff](#terminal-stuff)
 * [Files](#files)

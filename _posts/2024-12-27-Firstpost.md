@@ -5,6 +5,6 @@ categories: CATEGORY-1 CATEGORY-2
 description: My first post description
 ---
 
-[back](/)
+[home](/)
 
 My first post
