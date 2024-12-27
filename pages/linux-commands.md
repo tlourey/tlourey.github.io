@@ -5,8 +5,6 @@ description: Linux commands to remember
 
 [back](../)
 
-# Linux Commands
-
 * [Terminal Stuff](#terminal-stuff)
 * [Files](#files)
   * [finding large directories and large files](#finding-large-directories-and-large-files)

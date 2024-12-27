@@ -1,12 +1,9 @@
 ---
 title: Public IP Ranges
 description: Public IP Ranges to note and their references
-layout: page
 ---
 
-[back](./)
-
-# List of Public IP Ranges to note
+[back](../)
 
 * [Azure](#azure)
 * [Amazon](#amazon)

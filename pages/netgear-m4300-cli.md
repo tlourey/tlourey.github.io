@@ -1,12 +1,9 @@
 ---
 title: Netgear Fully Managed Switch M4300 CLI Reference
 description: Commands to remember for Netgear Switches
-layout: page
 ---
 
-[back](./)
-
-# Netgear Fully Managed Switch M4300 CLI Reference
+[back](../)
 
 > [!WARNING] Draft
 > This page is **VERY** draft. Use the commands below with caution. Make sure you backup beforehand. Some commands can cause Netgear's to lockup if done incorrectly.
