@@ -3,7 +3,7 @@ title: Linux Commands
 description: Linux commands to remember
 ---
 
-[back](/)
+[back](../)
 
 # Linux Commands
 
