@@ -3,6 +3,8 @@ title: Powershell Commands
 description: Powershell Commands to remember
 ---
 
+[home](/) [up](./)
+
 ## Oneliners
 
 ### User Management
