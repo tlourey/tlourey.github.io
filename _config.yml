@@ -4,3 +4,7 @@ description: And now, I'm going down to Emmett's Fix-It Shop. [cocks gun] To fix
 page_excerpts: true
 plugins:
   - jekyll-gfm-admonitions
+  - jekyll-optional-front-matter
+whitelist:
+  - jekyll-gfm-admonitions
+  - jekyll-optional-front-matter
