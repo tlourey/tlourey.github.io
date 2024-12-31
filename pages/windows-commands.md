@@ -9,7 +9,7 @@ description: Windows Commands to remember
 
 query user - show user sessions
 
-```winbatch
+```bat
 # query user [<username> | <sessionname> | <sessionID>] [/server:<servername>]
 query user
 query user /server:remotemachine
@@ -19,7 +19,7 @@ quser /server:remotemachine
 
 query session - show user sessions
 
-```winbatch
+```bat
 # query session [<sessionname> | <username> | <sessionID>] [/server:<servername>] [/mode] [/flow] [/connect] [/counter]
 query session john.doe
 qwinsta /server:servername
@@ -27,7 +27,7 @@ qwinsta /server:servername
 
 query session - show user processes
 
-```winbatch
+```bat
 # query process [*|<processID>|<username>|<sessionname>|/id:<nn>|<programname>] [/server:<servername>]
 query process john.doe
 qprocess /server:servername
@@ -41,14 +41,34 @@ qprocess /server:servername
 
 Find Uptime from System Info
 
-```winbatch
+```bat
 systeminfo | find “System Boot Time”
 ```
 
 Get Uptime from CIM via Powershell
 
-```winbatch
+```bat
 Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object LastBootUpTime
+```
+
+## User Profile Management
+
+From an administrative command prompt:
+
+```bat
+rundll32.exe sysdm.cpl,EditUserProfiles
+rem OR
+
+SystemPropertiesAdvanced.exe 
+rem from run (will prompt for admin)
+```
+
+## Bitlocker Status
+
+Check Bitlocker Status
+
+```bat
+manage-bde -status
 ```
 
 ## Unformatted to add above
