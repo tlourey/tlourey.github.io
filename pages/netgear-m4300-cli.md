@@ -34,7 +34,7 @@ Contents:
 
 Quickly backup config:
 
-```bash=
+```cisco
 en
 copy nvram:startup-config nvram:backup-config
 ```
@@ -44,7 +44,7 @@ copy nvram:startup-config nvram:backup-config
 
 Backup and export:
 
-```bash=
+```cisco
 en
 ping management-server.local
 copy nvram:startup-config nvram:backup-config
@@ -55,7 +55,7 @@ copy nvram:startup-config scp://user@management-server.local/home/user/DEVICENAM
 
 Backup and export using TFTP if SFTP/SCP fails:
 
-```bash=
+```cisco
 en
 ping management-server.local
 copy nvram:startup-config nvram:backup-config
@@ -69,21 +69,21 @@ copy nvram:startup-config tftp://192.168.1.1/DEVICENAME-TODAYSDATE.txt
 
 Restart:
 
-```bash=
+```cisco
 en
 reload
 ```
 
 Log viewing:
 
-```bash=
+```cisco
 en 
 show logging buffered
 ```
 
 Log searching:
 
-```bash=
+```cisco
 en 
 show logging buffered | include SEARCHTEXT\
 ```
@@ -112,7 +112,7 @@ While build and minor version upgrades are mostly a BAU activity, you should dis
 
 Firmware Upgrade Preparation Steps:
 
-```bash=
+```cisco
 # NB: If Core Switch that does IP routing, consider if Primary Route is a PoE Device and if you may need to change to Telstra for Quicker Service Restoration
 
 # Take extra backups
@@ -140,7 +140,7 @@ copy scp://user@management-server.local/var/lib/tftpboot/m4300v12.0.<<XX>>.<<YY>
 
 boot image commands:
 
-```bash=
+```cisco
 # show boot image versions and active image
 show bootvar
 
@@ -157,7 +157,7 @@ boot system 2 image2
 
 Post reboot commands:
 
-```bash=
+```cisco
 # create a new tech support and download *AFTER UPGRADE*
 show tech-support
 copy nvram:tech-support scp://user@management-server.local/home/user/<<DEVICENAME>>-TecSupPost-<<YYMMDD>>.txt
@@ -173,7 +173,7 @@ copy nvram:tech-support scp://user@management-server.local/home/user/<<DEVICENAM
 
 PoE Info:
 
-```bash=
+```cisco
 en
 show poe port info 1/0/X
 show poe port info all
@@ -184,7 +184,7 @@ show poe port configuration all
 
 poe reset:
 
-```bash=
+```cisco
 en
 configure
 interface 1/0/X
@@ -195,7 +195,7 @@ exit
 
 port status commands:
 
-```bash=
+```cisco
 # see port status (enabled / disabled)
 show port all
 show port 1/0/X
@@ -210,7 +210,7 @@ show port advertise
 
 port shutdown:
 
-```bash=
+```cisco
 en
 show running-config interface 1/0/X
 configure
@@ -230,7 +230,7 @@ write memory
 
 port open/startup :
 
-```bash=
+```cisco
 en
 show running-config interface 1/0/X
 configure
@@ -252,7 +252,7 @@ write memory
 
 Interface Counters:
 
-```bash
+```cisco
 # This will show all counters for all ports, first batch will be in 2nd out
 show interface counters
 
@@ -269,7 +269,7 @@ show interface ethernet 1/0/14
 
 ### Cable Status
 
-```bash=
+```cisco
 en
 cablestatus 1/0/X
 ```
@@ -288,7 +288,7 @@ From the Netgear M4200 and M4300 Series ProSAFE - Managed SwitchesCLI - Command 
 
 setting up mac address security:
 
-```bash=
+```cisco
 en
 show running-config interface 1/0/X
 configure
@@ -309,7 +309,7 @@ write memory
 
 show ports with port-security:
 
-```bash=
+```cisco
 show port-security all
 
 show port-security 1/0/4
@@ -325,14 +325,14 @@ show port-security violation 1/0/4
 
 Interface browsing:
 
-```bash=
+```cisco
 en
 show interfaces status all
 ```
 
 Interface searching:
 
-```bash=
+```cisco
 en
 show interfaces status all | include KEYWORDINDESCRITION
 ```
@@ -344,7 +344,7 @@ show interfaces status all | include KEYWORDINDESCRITION
 
 mac address on interface:
 
-```bash=
+```cisco
 show mac-addr-table interface 1/0/X
 ```
 
@@ -353,7 +353,7 @@ show mac-addr-table interface 1/0/X
 
 mac address searching:
 
-```bash=
+```cisco
 show mac-addr-table | include AA:BB:CC:00:11:22
 ```
 
@@ -364,7 +364,7 @@ show mac-addr-table | include AA:BB:CC:00:11:22
 
 multiple interface selection:
 
-```bash=
+```cisco
 interface 1/0/2,1/0/10-1/0/20,1/0/22
 ```
 
@@ -372,7 +372,7 @@ interface 1/0/2,1/0/10-1/0/20,1/0/22
 
 show trunks:
 
-```bash=
+```cisco
 show interfaces switchport trunk
 ```
 
@@ -390,7 +390,7 @@ show interfaces switchport trunk
 
 DHCP Commands:
 
-```bash=
+```cisco
 # show DHCP leases & conflicts
 show ip dhcp binding
 show ip dhcp conflict
