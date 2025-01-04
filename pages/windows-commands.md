@@ -1,6 +1,7 @@
 ---
 title: Windows Commands
 description: Windows Commands to remember
+categories: Reference Commands
 ---
 
 [home](/) [up](./)

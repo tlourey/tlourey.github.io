@@ -1,6 +1,7 @@
 ---
 title: Powershell Commands
 description: Powershell Commands to remember
+categories: Reference Commands
 ---
 
 [home](/) [up](./)

@@ -1,6 +1,7 @@
 ---
 title: Linux Commands
 description: Linux commands to remember
+categories: References Commands
 ---
 
 [home](/) [up](./)
