@@ -252,7 +252,8 @@ write memory
 
 Interface Counters:
 
-```bash=# This will show all counters for all ports, first batch will be in 2nd out
+```bash
+# This will show all counters for all ports, first batch will be in 2nd out
 show interface counters
 
 # this will show you counters for one interface without headings. The first line will be the in counters and the second line will be the out counters.
