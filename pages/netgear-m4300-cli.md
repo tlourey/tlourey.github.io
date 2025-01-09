@@ -413,14 +413,23 @@ show ip dhcp server statistics
 
 ## Crypto
 
-If you want to use SSH and/or HTTPS you may need to run the crypto setup. This happens on the switch but isn't in the config.
+If you want to use SSH and/or HTTPS you may need to run the crypto setup. This happens on the switch but isn't in the config file.
+
+for ssh you just need keys, but for HTTPS (ip http secure-server) you need a certificate. If you are not able to use a proper one use a self signed one per instructions below.
 
 ```netgear
 configure
+! for SSH we need keys
 crypto key generate dsa
 ! system will not look like its responding for a couple of seconds to a minute
-crypto ken generate rsa
+crypto key generate rsa
 ! system will not look like its responding for a couple of seconds to a minute
+!
+! if we want HTTPS we need to generate a self signed certificate
+crypto crypto certificate generate 
+!
+exit
+exit
 ```
 
 ## Misc Links
