@@ -8,11 +8,8 @@ categories:
 
 [home](/) [up](./)
 
-> [!WARNING] Draft
-> This page is **VERY** draft. Use the commands below with caution. Make sure you backup beforehand. Some commands can cause Netgear's to lockup if done incorrectly.
-
 > [!CAUTION] M4300 Only
-> These commands are based on M4300's only. Do not use on older models.
+> These commands are based on M4300's only. Do not use on older models. Use the commands below with caution. Make sure you backup beforehand. Some commands can cause Netgear's to lockup if done incorrectly.
 
 Contents:
 
@@ -30,6 +27,7 @@ Contents:
 * [VLAN](#vlan)
 * [Routing Changes](#routing-changes)
 * [DHCP Info](#dhcp-info)
+* [Crypto](#crypto)
 * [Misc Links](#misc-links)
 
 ## Config/Device Management
@@ -91,7 +89,7 @@ show logging buffered | include SEARCHTEXT\
 ```
 
 > [!NOTE] Include Command
-> `include` command on Netgear's is <ins>**case sensitive**</ins>.
+> `include` command on Netgear's is **case sensitive**.
 
 ## Firmware Upgrades and Image Management
 
@@ -340,7 +338,7 @@ show interfaces status all | include KEYWORDINDESCRITION
 ```
 
 > [!NOTE] Include Command
-> `include` command on Netgear's is <ins>**case sensitive**</ins>.
+> `include` command on Netgear's is **case sensitive**.
 
 ### MAC Address browsing / searching
 
@@ -360,7 +358,7 @@ show mac-addr-table | include AA:BB:CC:00:11:22
 ```
 
 > [!NOTE] Include Command
-> `include` command on Netgear's is <ins>**case sensitive**</ins>.
+> `include` command on Netgear's is **case sensitive**.
 
 ### Bulk Changes
 
@@ -412,6 +410,18 @@ show ip dhcp server statistics
 
 > [!NOTE]
 > show dhcp XXXX commands are for making the switch a DHCP Client (mostly)
+
+## Crypto
+
+If you want to use SSH and/or HTTPS you may need to run the crypto setup. This happens on the switch but isn't in the config.
+
+```netgear
+configure
+crypto key generate dsa
+! system will not look like its responding for a couple of seconds to a minute
+crypto ken generate rsa
+! system will not look like its responding for a couple of seconds to a minute
+```
 
 ## Misc Links
 
