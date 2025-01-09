@@ -47,7 +47,7 @@ ls -lahS | less
 ls -lah 192.168.1.10*
 ls -lahS 192.168.1.10*
 
-#If you have one large log file and want to see what day had more log entries try: 
+#If you have one large log file and want to see what day had more log entries try:
 #Linux - Search (grep) for number of lines in log file per day
 ```
 
@@ -90,6 +90,10 @@ REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 
 ## Main SystemD Commands
 
+<https://systemd.io/>
+<https://commons.wikimedia.org/wiki/File:Systemd_components.svg>
+<https://www.freedesktop.org/software/systemd/man/latest/>
+
 ### Important Commands
 
 #### systemctl
@@ -114,6 +118,7 @@ by 'most' remember a service can be:
 
 `sudo journalctl -xe` most common use. jumps to end of journal logs and shows extra info about log entries
 
+`sudo journalctl -e` jumps to the end
 `sudo journalctl -u service_name` show logs about a particular service\
 `sudo journalctl --no-pager` don't page logs\
 `sudo journalctl -r` show logs in reverse order\
@@ -121,7 +126,6 @@ by 'most' remember a service can be:
 `sudo journalctl -f` follow logs live\
 `sudo journalctl --utc` if you want them in utc\
 `sudo journalctl -k` # Kernal messages only\
-`sudo journalctl -u service_name`\
 `sudo journalctl --since=yesterday --until=now`\
 `sudo journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"`\
 `sudo journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot\
@@ -150,6 +154,11 @@ Force systemd-resolved to use the name servers you want to: `sudo resolvectl dns
 
 ### Links
 
+<https://systemd.io/>
+<https://commons.wikimedia.org/wiki/File:Systemd_components.svg>
+
+* <https://www.freedesktop.org/software/systemd/man/latest/>
+* <https://www.man7.org/linux/man-pages/man1/systemd.1.html>
 * <https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal>
 * <https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs>
 * <https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files>
@@ -157,3 +166,4 @@ Force systemd-resolved to use the name servers you want to: `sudo resolvectl dns
 * <https://linuxhandbook.com/journalctl-command/>
 * <https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux>
 * <https://www.redhat.com/sysadmin/systemd-commands>
+* <https://wiki.archlinux.org/title/Systemd>
