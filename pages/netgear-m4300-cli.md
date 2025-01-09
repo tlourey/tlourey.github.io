@@ -426,7 +426,7 @@ crypto key generate rsa
 ! system will not look like its responding for a couple of seconds to a minute
 !
 ! if we want HTTPS we need to generate a self signed certificate
-crypto crypto certificate generate 
+crypto certificate generate
 !
 exit
 exit
