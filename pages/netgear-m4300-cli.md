@@ -27,7 +27,9 @@ Contents:
 * [VLAN](#vlan)
 * [Routing Changes](#routing-changes)
 * [DHCP Info](#dhcp-info)
+* [Syslog](#syslog)
 * [Crypto](#crypto)
+* [Settings in Exec mode](#settings-in-exec-mode)
 * [Misc Links](#misc-links)
 
 ## Config/Device Management
@@ -411,6 +413,29 @@ show ip dhcp server statistics
 > [!NOTE]
 > show dhcp XXXX commands are for making the switch a DHCP Client (mostly)
 
+## Syslog
+
+Want to remove a syslog entry one at a time or just change one entries configuration?
+
+```netgear
+show logging hosts
+! note down the host index number for the one you want to remove. Lets assume its 1 in this case
+configure
+logging host remove 1
+exit
+save
+```
+
+Don't want to change the configuration but want to change the hostname or ip address only?
+
+```netgear
+show logging hosts
+configure
+logging host reconfigure 1 newhostnamehere
+exit
+save
+```
+
 ## Crypto
 
 If you want to use SSH and/or HTTPS you may need to run the crypto setup. This happens on the switch but isn't in the config file.
@@ -431,6 +456,19 @@ crypto certificate generate
 exit
 exit
 ```
+
+## Settings in Exec mode
+
+There are some settings that don't get changed in configure mode, but instead get changed in exec mode. Here are some i'm aware of (but there are more):
+
+* hostname
+* vlan database
+* ip http port 49151
+* ip http secure-server
+* ip http secure-port 49152
+* ip ssh server enable
+* sshcon timeout 30
+* no ip telnet server enable
 
 ## Misc Links
 
