@@ -1,6 +1,6 @@
 ---
 title: Home
-description: ""
+description: "All the shit you don't really want"
 ---
 
 ## Pages
