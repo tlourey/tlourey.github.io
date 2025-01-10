@@ -16,7 +16,7 @@ move a users direct reports to another user
 # Show a specific users direct reports and their title and department
 # eg, show all John Doe direct reports, their title and department
 (get-aduser -Properties directreports -id joe.doe).directreports | get-aduser -Properties Title,Department | sort Name | format-table Name,Title,Department -autosize
- 
+
 # Change all direct reports manager
 # eg, set all John Doe direct reports manager to Joe Bob
 (get-aduser -Properties directreports -id john.doe).directreports | set-aduser -Manager (Get-aduser -id joe.bob)
@@ -46,16 +46,16 @@ Disabled Managers Direct Reports
 ```powershell
 # show disabled managers who have direct reports
 (get-aduser -filter {(Enabled -eq $false) -and (directreports -like "*")} -Properties directreports).name
- 
+
 # show disabled managers direct reports
 (get-aduser -filter {(Enabled -eq $false) -and (directreports -like "*")} -Properties directreports).directreports
- 
+
 # show the 3rd disabled mangers name that has direct reports
 (get-aduser -filter {(Enabled -eq $false) -and (directreports -like "*")} -Properties directreports)[2].name
- 
+
 # show the 3rd disabled mangers direct reports
 (get-aduser -filter {(Enabled -eq $false) -and (directreports -like "*")} -Properties directreports)[2].directreports
- 
+
 # change the 3rd disabled managerts direct reports to another manager
 (get-aduser -filter {(Enabled -eq $false) -and (directreports -like "*")} -Properties directreports)[2].directreports | set-aduser -manager (get-aduser -id newmanagerfirstname.lastname)
 ```
@@ -66,7 +66,7 @@ Disabled Managers Direct Reports
 enter-pssession
 # connect as current user
 enter-pssession servername
- 
+
 # prompt for a different user
 enter-pssession servername -Credential (Get-Credential)
 ```
@@ -80,11 +80,11 @@ Import and connect
 ```powershell
 # First time ever you need to install the module
 Import-Module ExchangeOnlineManagement
- 
+
 # Normally you just need to type
 Connect-ExchangeOnline
 # You should get modern prompt that will deal with mfa
- 
+
 # When you are finished you should disconnect by typing:
 disconnect-exchangeonline
 ```
@@ -96,10 +96,10 @@ Removing OWA Signatures from Email
 ```powershell
 # check signature settings
 Get-MailboxMessageConfiguration -id john.doe@domain.com | select *sig*
- 
+
 # Blank out signature value
 Set-MailboxMessageConfiguration -id john.doe@domain.com -SignatureHtml $null -SignatureText $null
- 
+
 # set values to use signature to none
 Set-MailboxMessageConfiguration -id john.doe@domain.com -AutoAddSignature $false -AutoAddSignatureOnMobile $false -AutoAddSignatureOnReply $false -UseDefaultSignatureOnMobile $false
 ```
@@ -113,7 +113,7 @@ Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).Ad
 Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).AddDays(-1)) -EndDate (get-date) -SenderAddress joe.blogs@domain.com | fl
 # if it returns many results, you can adjust filter further or browse objects by using one of the below
 Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).AddDays(-1)) -EndDate (get-date) -SenderAddress joe.blogs@domain.com | out-gridview -passthrough | fl
- 
+
 #To get the trace details
 Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).AddDays(-1)) -EndDate (get-date) -SenderAddress joe.blogs@domain.com | get-messagetracedetail
 #To expand the trace details
@@ -124,11 +124,11 @@ Tempoarly increase mailbox size
 
 ```powershell
 Set-Mailbox -id <<email@domain.com>> -ProhibitSendQuota <<Value>> -ProhibitSendReceiveQuota <<Value>>
- 
+
 # All our mailboxes are by default 40GB, so to increase to 45:
 Set-Mailbox <<email@domain.com>> -ProhibitSendQuota 43GB -ProhibitSendReceiveQuota 45GB
- 
- 
+
+
 # set mailbox sizses back to defaults afterwards:
 Set-Mailbox -id <<email@domain.com>> -ProhibitSendReceiveQuota 40GB -ProhibitSendQuota 39GB -IssueWarningQuota 36GB
 ```
@@ -151,7 +151,7 @@ force older content to move to archive mailbox once available
 
 ```powershell
 Start-ManagedFolderAssistant -Identity <<email@domain.com>>
- 
+
 # Consider the below if doing in bulk. Use -whatif and -confirm to check (make sure you know how this works before doing it)
 $Mailboxes = Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq "UserMailbox"}
 $Mailboxes.Identity | Start-ManagedFolderAssistant
@@ -194,7 +194,7 @@ Send wake on lan magic packet via Powershell
 # change the mac address you need but make sure its all upper case and use "-". Don't use : as this sometimes isn't supported in earlier versions of Powershell.
 # Computer needs to be on the same network.
 # send a couple of times.
- 
+
 $mac = '01-23-45-67-89-AB';
 [System.Net.NetworkInformation.NetworkInterface]::GetAllNetworkInterfaces() | Where-Object { $_.NetworkInterfaceType -ne [System.Net.NetworkInformation.NetworkInterfaceType]::Loopback -and $_.OperationalStatus -eq [System.Net.NetworkInformation.OperationalStatus]::Up } | ForEach-Object {
     $networkInterface = $_
