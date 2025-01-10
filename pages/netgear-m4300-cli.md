@@ -303,7 +303,7 @@ write memory
 >
 > * always do `show running-config interface 1/0/X` of the interface you are going to shut to make sure it's not a trunk or something special
 > * write memory if you are saving it
-> * You can also use an interface clearing script which will reconfigure port correctly, but you will still need to use {{no shutdown}}
+> * You can also use an interface clearing script which will reconfigure port correctly, but you will still need to use `no shutdown`
 
 ### Counters and Stats
 
