@@ -24,14 +24,18 @@ Contents:
   * [Interface browsing / searching](#interface-browsing--searching)
   * [MAC Address browsing / searching](#mac-address-browsing--searching)
   * [Bulk Changes](#bulk-changes)
-* [Trunk Changes](#trunk-changes)
-* [VLAN](#vlan)
-* [Routing Changes](#routing-changes)
-* [DHCP Info](#dhcp-info)
-* [Syslog](#syslog)
-* [Crypto](#crypto)
-* [Settings in Exec mode](#settings-in-exec-mode)
-* [Misc Links](#misc-links)
+* [Switching and Routing Commands](#switching-and-routing-commands)
+  * [Trunk Changes](#trunk-changes)
+  * [VLAN](#vlan)
+  * [Routing Changes](#routing-changes)
+* [Services](#services)
+  * [DHCP Info](#dhcp-info)
+* [Management, Monitoring and Misc](#management-monitoring-and-misc)
+  * [Syslog](#syslog)
+  * [Crypto](#crypto)
+  * [Settings in Exec mode](#settings-in-exec-mode)
+* [References](#references)
+  * [Useful manuals](#useful-manuals)
 
 ## CLI Environment Levels and Basic commands
 
@@ -421,7 +425,9 @@ multiple interface selection:
 interface 1/0/2,1/0/10-1/0/20,1/0/22
 ```
 
-## Trunk Changes
+## Switching and Routing Commands
+
+### Trunk Changes
 
 show trunks:
 
@@ -431,15 +437,17 @@ show interfaces switchport trunk
 
 * [ ] Adding and changing vlans on trunks
 
-## VLAN
+### VLAN
 
 * [ ] VLAN Notes
 
-## Routing Changes
+### Routing Changes
 
 * [ ] routing change aka failover
 
-## DHCP Info
+## Services
+
+### DHCP Info
 
 DHCP Commands:
 
@@ -464,7 +472,9 @@ show ip dhcp server statistics
 > [!NOTE]
 > show dhcp XXXX commands are for making the switch a DHCP Client (mostly)
 
-## Syslog
+## Management, Monitoring and Misc
+
+### Syslog
 
 Want to remove a syslog entry one at a time or just change one entries configuration?
 
@@ -487,7 +497,7 @@ exit
 save
 ```
 
-## Crypto
+### Crypto
 
 If you want to use SSH and/or HTTPS you may need to run the crypto setup. This happens on the switch but isn't in the config file.
 
@@ -508,7 +518,7 @@ exit
 exit
 ```
 
-## Settings in Exec mode
+### Settings in Exec mode
 
 There are some settings that don't get changed in configure mode, but instead get changed in exec mode. Here are some i'm aware of (but there are more):
 
@@ -521,13 +531,13 @@ There are some settings that don't get changed in configure mode, but instead ge
 * sshcon timeout 30
 * no ip telnet server enable
 
-## Misc Links
+## References
 
 [M4300-52G-PoE\+|https://www.netgear.com/support/product/M4300-52G-PoE-Plus%20550W%20PSU.aspx]
 [M4300-28G-PoE\+|https://www.netgear.com/support/product/M4300-28G-PoE-Plus%20550W%20PSU.aspx]
 [M4100-50G-Poe\+|https://www.netgear.com/support/product/M4100-50G-POEplus%20(GSM7248Pv1h1).aspx]
 
-h2. Useful manuals
+### Useful manuals
 
 [M4300 Intelligent Edge Series Fully Managed Stackable Switches, M4300 Series Switches, M4300-96X Modular Switch, Command Line (CLI) Reference Manual, Software Version or Release 12.0.11 (netgear.com)|https://www.downloads.netgear.com/files/GDC/M4300/M4300-M4300-96X_CLI_EN.pdf]
 
