@@ -1,8 +1,8 @@
 ---
 title: Netgear Fully Managed Switch M4300 CLI Reference
 description: Commands to remember for Netgear Switches
-categories: 
-- References 
+categories:
+- References
 - Commands
 ---
 
@@ -13,6 +13,7 @@ categories:
 
 Contents:
 
+* [CLI Environment Levels and Basic commands](#cli-environment-levels-and-basic-commands)
 * [Config/Device Management](#configdevice-management)
 * [Firmware Upgrades and Image Management](#firmware-upgrades-and-image-management)
 * [Port Commands](#port-commands)
@@ -31,6 +32,34 @@ Contents:
 * [Crypto](#crypto)
 * [Settings in Exec mode](#settings-in-exec-mode)
 * [Misc Links](#misc-links)
+
+## CLI Environment Levels and Basic commands
+
+Levels:
+
+* When you are login you are in ??? level
+* Enable Level:
+  * Type `enable` or just `en` to go to enable level. There may be a password.
+  * Type `exit` to go back to ??? level
+* Configure Level:
+  * Type `configure` to go to configure level, must be in enable level to get to configure
+  * Type `exit` to go back to enable level
+* vlan database:
+  * Type `vlan database` to edit the VLAN Database. Can only be done from enable level, not configure
+  * Type `exit` to exit
+
+Help:
+
+* When partially typing a command you can press Tab or press the `?` key and you will see help info
+
+Searching Output of the previous command:
+
+* you can type `|` then use one of the search options to find text in a commands Output
+* Search options are:
+  * begin: Begin with the line that matches
+  * exclude: Exclude lines that matches
+  * include: Include lines that matches
+  * section: Display portion of lines
 
 ## Config/Device Management
 
@@ -79,19 +108,41 @@ reload
 Log viewing:
 
 ```cisco
-en 
+en
 show logging buffered
+show logging traplogs
 ```
 
 Log searching:
 
 ```cisco
-en 
+en
 show logging buffered | include SEARCHTEXT\
 ```
 
 > [!NOTE] Include Command
 > `include` command on Netgear's is **case sensitive**.
+
+Viewing configs:
+
+```netgear
+show startup-config
+show backup-config
+
+show running-config
+```
+
+Note that `show running-config` has extra options the others dont:
+
+```netgear
+<scriptname>             Script file name for writing active configuration.
+all                      Show all the running configuration on the switch.
+interface                Display the running config for specified interface on
+                         the switch.
+```
+
+> [!TIP] show running-config all
+> This command can show you the full config including defaults that are not specified in your config file, which can be **very very useful**
 
 ## Firmware Upgrades and Image Management
 
@@ -320,7 +371,7 @@ show port-security static 1/0/4
 
 show port-security dynamic 1/0/4
 
-show port-security violation 1/0/4 
+show port-security violation 1/0/4
 ```
 
 ### Interface browsing / searching
