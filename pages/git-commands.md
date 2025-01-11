@@ -1,9 +1,10 @@
 ---
 title: Git Commands
 description: Commands to remember for Git
-categories: 
-- References 
+categories:
+- References
 - Commands
+type: pages
 ---
 
 [home](/) [up](./)

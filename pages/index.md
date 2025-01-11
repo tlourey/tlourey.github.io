@@ -1,6 +1,7 @@
 ---
 title: Reference Pages
 description: Pages of References
+type: index
 ---
 
 [home](/)

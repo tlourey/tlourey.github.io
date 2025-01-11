@@ -2,6 +2,7 @@
 title: Windows Commands
 description: Windows Commands to remember
 categories: Reference Commands
+type: pages
 ---
 
 [home](/) [up](./)
@@ -60,7 +61,7 @@ From an administrative command prompt:
 rundll32.exe sysdm.cpl,EditUserProfiles
 rem OR
 
-SystemPropertiesAdvanced.exe 
+SystemPropertiesAdvanced.exe
 rem from run (will prompt for admin)
 ```
 

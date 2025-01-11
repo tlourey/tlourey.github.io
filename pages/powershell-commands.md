@@ -2,6 +2,7 @@
 title: Powershell Commands
 description: Powershell Commands to remember
 categories: Reference Commands
+type: pages
 ---
 
 [home](/) [up](./)

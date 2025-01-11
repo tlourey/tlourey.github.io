@@ -2,6 +2,7 @@
 title: Linux Commands
 description: Linux commands to remember
 categories: References Commands Tools
+type: pages
 ---
 
 [home](/) [up](./)
