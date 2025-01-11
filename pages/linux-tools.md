@@ -212,11 +212,24 @@ Unattended-Upgrade::Package-Blacklist {
 
 Look for Blacklist in `/etc/apt/apt.conf.d/50unattended-upgrades`
 
-Optional: `sudo dpkg-reconfigure --priority=low unattended-upgrades`: Select yes\
+Optional: `sudo dpkg-reconfigure --priority=low unattended-upgrades` but I don't normally do this.
 
 ### apt-unattended Notes
 
 ### apt-unattended References
 
+<https://ubuntu.com/server/docs/package-management>
 <https://help.ubuntu.com/community/AutomaticSecurityUpdates#Using_the_.22unattended-upgrades.22_package>
 <https://www.cyberciti.biz/faq/set-up-automatic-unattended-updates-for-ubuntu-20-04/>
+
+<!--
+## toolname
+
+### toolname Commands
+
+### toolname Notes
+
+### toolname References
+
+<>
+-->
