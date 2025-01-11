@@ -1,6 +1,6 @@
 ---
 title: Reference Pages
-description: Pages of References
+description: "Do I look like a local library?"
 type: index
 ---
 
