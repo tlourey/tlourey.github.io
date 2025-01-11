@@ -7,10 +7,14 @@ type: index
 
 ## Pages
 
+[View all pages](https://tlourey.github.io/pages/)
+
 {% assign doclist = site.pages | sort: 'title' %}
 <ul>
 {% for item in doclist %}
+  {% if item.type == "pages" %}
     <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+  {% endif %}
 {% endfor %}
 </ul>
 

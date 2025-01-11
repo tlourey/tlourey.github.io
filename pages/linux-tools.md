@@ -1,6 +1,6 @@
 ---
-title: Linux Commands
-description: Linux commands to remember
+title: Linux Tools
+description: Linux tools to remember
 categories: References Commands Tools
 type: pages
 ---
