@@ -20,8 +20,9 @@ type: pages
     * [journalctl](#journalctl)
     * [timedatectl](#timedatectl)
     * [resolvectl](#resolvectl)
-  * [Misc Commands](#misc-commands)
-  * [Links](#links)
+  * [Misc SystemD Commands](#misc-systemd-commands)
+  * [SystemD Links](#systemd-links)
+* [Misc System Commands](#misc-system-commands)
 
 ## Terminal Stuff
 
@@ -146,14 +147,14 @@ Force systemd-resolved to use the name servers you want to: `sudo resolvectl dns
 > It most likely will ignore this commend if rebooted
 > i'm not sure if things like netplan apply would override it
 
-### Misc Commands
+### Misc SystemD Commands
 
 * hostnamectl
 * localectl
 * loginctl
 * machinectl???
 
-### Links
+### SystemD Links
 
 <https://systemd.io/>
 <https://commons.wikimedia.org/wiki/File:Systemd_components.svg>
@@ -168,3 +169,19 @@ Force systemd-resolved to use the name servers you want to: `sudo resolvectl dns
 * <https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux>
 * <https://www.redhat.com/sysadmin/systemd-commands>
 * <https://wiki.archlinux.org/title/Systemd>
+
+## Misc System Commands
+
+`sudo dpkg-reconfigure tzdata`: Set timezone
+`cat /proc/sys/net/ipv4/ip_forward` check the proc setting
+`echo 1 > /proc/sys/net/ipv4/ip_forward` set it temporaryly
+`sysctl -w net.ipv4.ip_forward=0` also set it temporaryly
+`sudo vi /etc/sysctl.conf` and add:
+
+```bash
+net.ipv4.ip_forward = 1
+```
+
+`sudo sysctl -p`
+
+to make it permanent.
