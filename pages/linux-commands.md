@@ -175,6 +175,7 @@ Force systemd-resolved to use the name servers you want to: `sudo resolvectl dns
 ## OpenSSL Commands
 
 `openssl s_client -connect example.org:443`
+`openssl s_client -showcerts -connect example.org:443`
 `openssl s_client -connect google.com:443 -servername ibm.com`: using openssl with SNI
 `echo -n | openssl s_client -connect google.com:443 -servername ibm.com </dev/null | openssl x509 -noout -text | grep ibm.com`
 `openssl x509 -in /etc/ssl/certs/ldap.pem -text -noout | grep "Not After"`: show not after date on cert
