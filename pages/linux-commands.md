@@ -197,6 +197,8 @@ Force systemd-resolved to use the name servers you want to: `sudo resolvectl dns
 <https://www.xolphin.com/support/Certificate_conversions/Convert_pfx_file_to_pem_file>
 <http://jefferytay.wordpress.com/2010/12/09/converting-a-pfx-file-to-pem-and-key-via-openssl/>
 
+To use a lower version of TLS (Results may vary in newer versions): <https://askubuntu.com/questions/1233186/ubuntu-20-04-how-to-set-lower-ssl-security-level>
+
 ## Misc System Commands
 
 `sudo dpkg-reconfigure tzdata`: Set timezone
