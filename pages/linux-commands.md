@@ -22,6 +22,8 @@ type: pages
     * [resolvectl](#resolvectl)
   * [Misc SystemD Commands](#misc-systemd-commands)
   * [SystemD Links](#systemd-links)
+* [OpenSSL Commands](#openssl-commands)
+  * [OpenSSL Links](#openssl-links)
 * [Misc System Commands](#misc-system-commands)
 
 ## Terminal Stuff
@@ -169,6 +171,28 @@ Force systemd-resolved to use the name servers you want to: `sudo resolvectl dns
 * <https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux>
 * <https://www.redhat.com/sysadmin/systemd-commands>
 * <https://wiki.archlinux.org/title/Systemd>
+
+## OpenSSL Commands
+
+`openssl s_client -connect example.org:443`
+`openssl x509 -in /etc/ssl/certs/ldap.pem -text -noout | grep "Not After"`: show not after date on cert
+`openssl x509 -in /etc/ssl/certs/ldap.pem -text -noout | grep -A 1 "Serial Number"`: show serial number of cert
+`openssl pkcs12 -in filename.pfx -out cert.pem -nodes`: convert pfx to pem
+`openssl x509 -noout -text -in certificiate.crt -modulus`: check details on certification
+`openssl rsa -noout -text -in keyfile.ekey/key -modulus`: check details on key
+`openssl req -noout -text -in request.csr -modulus`: check details on request
+`openssl rsa -in encrypted-key-file.ekey -out unecrypted-key-file.key`: change encrypted key to unencrypted
+
+### OpenSSL Links
+
+<https://www.xolphin.com/support/Certificate_conversions/Convert_pfx_file_to_pem_file>
+<http://help.globalscape.com/help/secureserver3/Converting_an_incompatible_traditional_PEM_encoded_encrypted_private_key.htm>
+<http://sycure.wordpress.com/2008/05/15/tips-using-openssl-to-extract-private-key-pem-file-from-pfx-personal-information-exchange/>
+<http://stackoverflow.com/questions/991758/how-to-get-an-openssl-pem-file-from-key-and-crt-files>
+<https://support.citrix.com/article/CTX136444#OpenSSL>
+<https://docs.citrix.com/en-us/citrix-gateway/12-1/install/certificate-management/how-to-convert-pfx-certificate-to-pem.html>
+<https://www.xolphin.com/support/Certificate_conversions/Convert_pfx_file_to_pem_file>
+<http://jefferytay.wordpress.com/2010/12/09/converting-a-pfx-file-to-pem-and-key-via-openssl/>
 
 ## Misc System Commands
 
