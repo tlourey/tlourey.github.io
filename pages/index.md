@@ -21,9 +21,9 @@ type: index
   {% if item.type == "pages" %}
     <li>
       <a href="{{ item.url }}">{{ item.title }}</a> : {{ item.description }}
-      {% for category in item.categories %}
-       ({{ category }})
-      {% endfor %}
+      ({% for category in item.categories %}
+       {{ category }}
+      {% endfor %})
     </li>
   {% endif %}
 {% endfor %}
