@@ -22,7 +22,7 @@ type: index
     <li>
       <a href="{{ item.url }}">{{ item.title }}</a> : {{ item.description }}
       ({% for category in item.categories %}
-       {{ category }}
+       {{ category }}{% if !loop.last %}, {% endif %}
       {% endfor %})
     </li>
   {% endif %}
