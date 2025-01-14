@@ -1,11 +1,14 @@
 ---
 title: Azure Monitoring Agent Data Collection Rules for Log Analytics Workspace
-description: 
+description:
 published: false
-categories: Reference Azure
+categories:
+- References
+- Azure
+- Monitoring
+type: pages
 ---
 
 ## Overview
 
 DCR --> AMA --> DCE --> LAW
-

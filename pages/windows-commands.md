@@ -1,7 +1,9 @@
 ---
 title: Windows Commands
 description: Windows Commands to remember
-categories: Reference Commands
+categories:
+- Reference
+- Commands
 type: pages
 ---
 

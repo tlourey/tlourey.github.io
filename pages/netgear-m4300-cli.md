@@ -4,6 +4,7 @@ description: Commands to remember for Netgear Switches
 categories:
 - References
 - Commands
+- Networks
 type: pages
 ---
 

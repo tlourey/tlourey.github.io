@@ -1,7 +1,10 @@
 ---
 title: Linux Commands
 description: Linux commands to remember
-categories: References Commands
+categories:
+- References
+- Commands
+- Linux
 type: pages
 ---
 
@@ -35,7 +38,7 @@ wc
 
 ## Files
 
-What process is using a file: 
+What process is using a file:
 
 ```bash
 fuser /var/log/syslog
