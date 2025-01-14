@@ -9,7 +9,6 @@ type: pages
 
 * [Terminal Stuff](#terminal-stuff)
 * [Files](#files)
-  * [finding large directories and large files](#finding-large-directories-and-large-files)
 * [Hardware Info](#hardware-info)
 * [Storage](#storage)
   * [MDADM](#mdadm)
@@ -36,7 +35,15 @@ wc
 
 ## Files
 
-### finding large directories and large files
+What process is using a file: 
+
+```bash
+fuser /var/log/syslog
+# Will come back with a process id
+ps aux | grep <Process ID from above>
+```
+
+Finding large directories and large files:
 
 ```bash
 cd /
