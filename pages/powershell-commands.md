@@ -1,7 +1,10 @@
 ---
 title: Powershell Commands
 description: Powershell Commands to remember
-categories: Reference Commands
+categories:
+- Reference
+- Commands
+- PowerShell
 type: pages
 ---
 

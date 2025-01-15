@@ -2,7 +2,9 @@
 title: CIDR
 description: description
 published: true
-categories: References
+categories:
+- References
+- Networks
 type: pages
 ---
 

@@ -1,7 +1,10 @@
 ---
 title: Linux Tools
 description: Linux tools to remember
-categories: References Commands Tools
+categories:
+- References
+- Tools
+- Linux
 type: pages
 ---
 
