@@ -16,6 +16,7 @@ type: pages
 * [Storage](#storage)
   * [MDADM](#mdadm)
 * [Log files](#log-files)
+* [Cron](#cron)
 * [Main SystemD Commands](#main-systemd-commands)
   * [Important Commands](#important-commands)
     * [systemctl](#systemctl)
@@ -101,6 +102,29 @@ REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 * `sudo faillog -l 60 olivia`: lock out Olivia for 60 mins
 * `sudo less /var/log/boot.log`: boot log
 * `cat /var/log/apt/history.log`: Apt history
+
+## Cron
+
+`crontab -l`: current users crontab
+`sudo crontab -l`: root's crontab?
+`cat /etc/crontab`: system crontab file
+`crontab -e`: edit crontab file (can't remember if this needs sudo or not)
+`ls /etc/cron.d/`: indivudal crontab files
+`ls /etc/cron.hourly`: indivudal scripts to run as root hourly
+`ls /etc/cron.daily/`: indivudal scripts to run as root daily
+`ls /etc/cron.weekly/`: indivudal scripts to run as root weekly
+`ls /etc/cron.monthly/`: indivudal scripts to run as root monthly
+
+`cat /etc/default/cron`: cron's default settings
+
+Best website for refining crontab timings: [Crontab.guru - The cron schedule expression generator](https://crontab.guru/)
+
+* <https://crontab.guru/examples.html>
+* <https://crontab.guru/tips.html>
+
+Very well know cron bug that has been left in there by design: <https://crontab.guru/cron-bug.html>
+
+Also refer to [systemctl](#systemctl) commands for times and the links in [SystemD Links](#systemd-links) about timers. SystemD timers do the same thing as cron but they are newer.
 
 ## Main SystemD Commands
 
