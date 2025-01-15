@@ -64,7 +64,7 @@ TBC - Most common transformation is: [Data ingestion duplication avoidance](http
 
 ## DCE - Data Collection Endpoint
 
-TBC
+Apparently not needed unless using Azure Private Link. I think can be used if you have some machiens that can't see the internet without private link but not sure.
 
 ## LAW - Log Analytics Workspace
 
