@@ -1,7 +1,7 @@
 ---
 title: Azure Monitoring Agent Data Collection Rules for Log Analytics Workspace
 description:
-published: false
+published: true
 categories:
 - References
 - Azure
@@ -15,6 +15,7 @@ type: pages
   * [Transformation](#transformation)
 * [DCE - Data Collection Endpoint](#dce---data-collection-endpoint)
 * [LAW - Log Analytics Workspace](#law---log-analytics-workspace)
+* [Streams and Data Sources](#streams-and-data-sources)
 
 ## Overview
 
@@ -68,3 +69,15 @@ TBC
 ## LAW - Log Analytics Workspace
 
 TBC
+
+## Streams and Data Sources
+
+From [Structure of a data collection rule (DCR) in Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-structure)
+
+[Inputstreams](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-structure#input-streams):
+
+* If this is a standard data type such as a Windows event, then the stream will be in the form Microsoft-\<TableName\>. If it's a custom type, then it will be in the form Custom-\<TableName\>
+* [Valid Source Types](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-structure#valid-data-source-types) - there are more
+* [Full list of 240 possible streams values (Oct 20, 2022)](https://github.com/Azure/azure-rest-api-specs/issues/21200#:~:text=Full%20list%20of%20240%20possible%20streams%20values)
+
+[Azure Monitor data sources and data collection methods](https://learn.microsoft.com/en-us/azure/azure-monitor/data-sources)
