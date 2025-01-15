@@ -150,9 +150,14 @@ Time and date stuff if chrony or NTPD isn't installed
 
 #### resolvectl
 
-DNS Config
+DNS Status: `resolvectl status`
 
-Force systemd-resolved to use the name servers you want to: `sudo resolvectl dns eth0 8.8.4.4 8.8.8.8`
+Refresh DNS Settings in an Azure VM: `sudo netplan try`
+
+> [!TIP] /etc/resolv.conf
+> Starting is Ubuntu 20, resolv.conf file is a symbolic link of /run/systemd/resolve/stub-resolv.conf file. This makes sure that the updated DNS servers are reflected in /run/systemd/resolve/resolv.conf file. For more information, see [systemd-resolved](https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:%7E:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder)
+
+DNS Config: To force systemd-resolved to use the name servers you want to: `sudo resolvectl dns eth0 8.8.4.4 8.8.8.8`
 > [!CAUTION]
 >
 > I would only use this overide to change the order of servers
