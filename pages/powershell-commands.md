@@ -10,6 +10,18 @@ type: pages
 
 [home](/) [up](./)
 
+* [Oneliners](#oneliners)
+  * [User Management](#user-management)
+  * [Connecting to a remote server via powershell](#connecting-to-a-remote-server-via-powershell)
+  * [Exchange Powershell](#exchange-powershell)
+    * [Archive Mailbox](#archive-mailbox)
+    * [Mailbox Access Checks](#mailbox-access-checks)
+  * [Local System Management](#local-system-management)
+    * [Uptime, wake on lan, reboot](#uptime-wake-on-lan-reboot)
+    * [Remote Desktop](#remote-desktop)
+* [Additional Resources](#additional-resources)
+* [Other resources to add](#other-resources-to-add)
+
 ## Oneliners
 
 ### User Management

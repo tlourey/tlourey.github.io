@@ -9,6 +9,13 @@ type: pages
 
 [home](/) [up](./)
 
+* [Query Commands](#query-commands)
+* [Uptime](#uptime)
+* [User Profile Management](#user-profile-management)
+* [Bitlocker Status](#bitlocker-status)
+* [Unformatted to add above](#unformatted-to-add-above)
+* [Additional Resources](#additional-resources)
+
 ## Query Commands
 
 query user - show user sessions

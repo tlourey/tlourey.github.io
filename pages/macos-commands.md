@@ -11,6 +11,12 @@ type: pages
 
 [home](/) [up](./)
 
+* [Networking](#networking)
+* [Admin](#admin)
+* [Hardware](#hardware)
+* [Directory Services](#directory-services)
+* [References](#references)
+
 ## Networking
 
 `ifconfig`
