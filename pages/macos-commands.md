@@ -29,8 +29,8 @@ type: pages
 
 `dscacheutil`
 
-Ref: [https://ss64.com/mac/dscacheutil.html]
+Ref: [https://ss64.com/mac/dscacheutil.html](https://ss64.com/mac/dscacheutil.html)
 
 ## References
 
-[https://ss64.com/mac/]
+[https://ss64.com/mac/](https://ss64.com/mac/)
