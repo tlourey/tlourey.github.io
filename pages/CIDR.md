@@ -8,6 +8,8 @@ categories:
 type: pages
 ---
 
+[home](/) [up](./)
+
 ```text
 Netmask              Netmask (binary)                 CIDR     Notes
 _____________________________________________________________________________

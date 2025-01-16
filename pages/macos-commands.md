@@ -9,6 +9,8 @@ categories:
 type: pages
 ---
 
+[home](/) [up](./)
+
 ## Networking
 
 `ifconfig`

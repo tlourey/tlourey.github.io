@@ -8,6 +8,8 @@ categories:
 type: pages
 ---
 
+[home](/) [up](./)
+
 * [DNS Settings](#dns-settings)
 
 ## DNS Settings

@@ -9,6 +9,8 @@ categories:
 type: pages
 ---
 
+[home](/) [up](./)
+
 * [Overview](#overview)
 * [AMA - Azure Monitoring Agent](#ama---azure-monitoring-agent)
 * [DCR - Data Collection Rule](#dcr---data-collection-rule)
