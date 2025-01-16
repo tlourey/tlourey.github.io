@@ -11,6 +11,9 @@ type: pages
 [home](/) [up](./)
 
 * [DNS Settings](#dns-settings)
+* [2nd or Static Mac Address on Nic in Azure](#2nd-or-static-mac-address-on-nic-in-azure)
+* [First Time Setup](#first-time-setup)
+* [Using on 2nd machine](#using-on-2nd-machine)
 
 ## DNS Settings
 
