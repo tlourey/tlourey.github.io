@@ -6,5 +6,6 @@
 		"bootvar",
 		"tftpboot"
 	],
-	"todo-tree.tree.scanMode": "workspace"
+	"todo-tree.tree.scanMode": "workspace",
+	"files.defaultLanguage": "markdown"
 }
