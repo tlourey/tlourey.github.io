@@ -25,6 +25,8 @@ type: pages
     * [resolvectl](#resolvectl)
   * [Misc SystemD Commands](#misc-systemd-commands)
   * [SystemD Links](#systemd-links)
+* [Network Commands](#network-commands)
+  * [Network Reference](#network-reference)
 * [OpenSSL Commands](#openssl-commands)
   * [OpenSSL Links](#openssl-links)
 * [Misc System Commands](#misc-system-commands)
@@ -136,8 +138,11 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 
 #### systemctl
 
-`systemctl list-unit-files` list unit files\
-`systemctl list-unit-files |grep enabled`\
+`systemctl list-units`: lists enabled unit files\
+`systemctl list-units --all`: lists enabled unit files\
+`systemctl list-unit-files` list unit files (even those not enabled)\
+`systemctl list-unit-files | grep enabled`\
+`systemctl list-unit-files --all | grep packagename`\
 `sudo systemctl list-timers` list timers registered\
 `sudo systemctl list-timers --all` list all timers\
 `sudo systemctl cat mdcheck_start.timer`  show the unit file for the timer\
@@ -225,6 +230,28 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 * <https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux>
 * <https://www.redhat.com/sysadmin/systemd-commands>
 * <https://wiki.archlinux.org/title/Systemd>
+
+## Network Commands
+
+Netplan:
+`sudo netplan try`: applies the netplan configs but will revert after X seconds if you don't press enter to confirm.\
+`sudo netplan apply`: applies the netplan configs (have fun!)\
+<https://documentation.ubuntu.com/server/explanation/networking/about-netplan/>\
+
+`ethtool`: Is a program that displays and changes Ethernet card settings such as auto-negotiation, port speed, duplex mode, and Wake-on-LAN. <https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/#ethernet-interface-settings>\
+`netstat`:
+> [!NOTE] netstat
+> netstat is a cross platform command existing in Unix, Linux, Mac and Windows but nearly all of them have different options/switches/parameters
+
+`nslookup`
+`dig`
+`hostname`
+`dnsdomainname`
+
+### Network Reference
+
+<https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/>\
+<https://documentation.ubuntu.com/server/explanation/networking/about-netplan/>\
 
 ## OpenSSL Commands
 
