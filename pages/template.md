@@ -8,6 +8,9 @@ categories:
 type: pages
 ---
 
+* [Heading](#heading)
+
+## Heading
 
 <!--
 ## toolname
