@@ -19,6 +19,7 @@ type: pages
   * [Local System Management](#local-system-management)
     * [Uptime, wake on lan, reboot](#uptime-wake-on-lan-reboot)
     * [Remote Desktop](#remote-desktop)
+* [Commands often forgotten](#commands-often-forgotten)
 * [Additional Resources](#additional-resources)
 * [Other resources to add](#other-resources-to-add)
 
@@ -232,6 +233,12 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 
 > [!TIP] Old Query Commands
 > Check the [old query commands](windows-commands.md)
+
+## Commands often forgotten
+
+`get-content -path c:\temp\mylogfile.log -wait`: like cat. using -wait makes it like tail -f
+`select-string`: kind of like grep (need to check if it does work like grep)
+`out-gridview`: really cool wait view tables/rows
 
 ## Additional Resources
 
