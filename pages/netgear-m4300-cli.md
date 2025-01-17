@@ -31,6 +31,8 @@ Contents:
   * [VLAN](#vlan)
   * [Routing Changes](#routing-changes)
 * [Stacking](#stacking)
+  * [Exec Level](#exec-level)
+  * [Stack Level](#stack-level)
 * [Services](#services)
   * [DHCP Info](#dhcp-info)
 * [Management, Monitoring and Misc](#management-monitoring-and-misc)
@@ -53,6 +55,8 @@ Levels:
   * Type `exit` to go back to enable level
 * vlan database:
   * Type `vlan database` to edit the VLAN Database. Can only be done from enable level, not configure
+* stack level:
+  * Type: `stack` to go to stack level must be in configure level
   * Type `exit` to exit
 
 Help:
@@ -450,8 +454,35 @@ show interfaces switchport trunk
 
 ## Stacking
 
-* [ ] Add stacking status command
-* [ ] Add move management command
+* [x] Add stacking status command
+* [x] Add move management command
+
+### Exec Level
+
+`show switch`: show all switches in the stack and which is management and which is standby\
+`show switch 1`: show details about switch 1 in stack\
+`show swithc detail`: show details about all of them
+
+`show stack-status`: show the stack status from the management switch\
+`show stack-status all`: show all the stack status\
+`show stack-status 1 clear`: clear the stack status stats from switch 1
+
+`show stack-port`: show stack-port summary\
+`show stack-port stack-path all 1`: show all switches stack paths to 1\
+`show stack-port stack-path 1 2`: show the stack cabling path from switch 1 to 2 in stack\
+`show stack-port diag all`: show stack diag stats
+
+### Stack Level
+
+```netgear
+configure
+stack
+```
+
+`initiate failover`: Initiate warm 'restart' to backup unit.\
+`movemanagement`: change the active mangement unit.\
+`standby`: assign an active standby.\
+`stack-port 1/0/50 stack`: configure 1/0/50 as a stack port.
 
 ## Services
 
