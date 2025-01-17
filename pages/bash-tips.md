@@ -1,7 +1,7 @@
 ---
 title: Bash Tips
 description: There are more. much more.
-published: false
+published: true
 categories:
 - References
 - Tips

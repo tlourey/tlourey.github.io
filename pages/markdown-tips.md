@@ -1,7 +1,7 @@
 ---
 title: Markdown Tips
 description: Flavor Flav says "GFM is da shit yo"
-published: false
+published: true
 categories:
 - References
 - Language

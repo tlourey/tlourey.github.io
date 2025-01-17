@@ -1,7 +1,7 @@
 ---
 title: PuTTY Commands
 description: description
-published: false
+published: true
 categories:
 - References
 - Commands
