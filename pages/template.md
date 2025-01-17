@@ -8,6 +8,8 @@ categories:
 type: pages
 ---
 
+[home](/) [up](./)
+
 * [Heading](#heading)
 
 ## Heading
