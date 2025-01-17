@@ -170,6 +170,8 @@ by 'most' remember a service can be:
 * enabled/disabled
 * masked/unmasked - which changes pointers to /dev/null I think
 
+You can have systemd override files (which apparently are like files in /etc/default/). these are supposed to be stored in: `/etc/systemd/system/snmptrapd.service.d/` for the snmptrapd.service
+
 [https://wiki.archlinux.org/title/Systemd](https://wiki.archlinux.org/title/Systemd)
 
 #### journalctl
@@ -237,6 +239,7 @@ Netplan:
 `sudo netplan try`: applies the netplan configs but will revert after X seconds if you don't press enter to confirm.\
 `sudo netplan apply`: applies the netplan configs (have fun!)\
 <https://documentation.ubuntu.com/server/explanation/networking/about-netplan/>\
+<https://netplan.readthedocs.io/en/stable/howto/>
 
 `ethtool`: Is a program that displays and changes Ethernet card settings such as auto-negotiation, port speed, duplex mode, and Wake-on-LAN. <https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/#ethernet-interface-settings>\
 `netstat`:
@@ -252,6 +255,7 @@ Netplan:
 
 <https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/>\
 <https://documentation.ubuntu.com/server/explanation/networking/about-netplan/>\
+<https://netplan.readthedocs.io/en/stable/howto/>
 
 ## OpenSSL Commands
 
