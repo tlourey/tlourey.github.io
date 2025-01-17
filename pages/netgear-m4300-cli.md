@@ -30,6 +30,7 @@ Contents:
   * [Trunk Changes](#trunk-changes)
   * [VLAN](#vlan)
   * [Routing Changes](#routing-changes)
+* [Stacking](#stacking)
 * [Services](#services)
   * [DHCP Info](#dhcp-info)
 * [Management, Monitoring and Misc](#management-monitoring-and-misc)
@@ -446,6 +447,11 @@ show interfaces switchport trunk
 ### Routing Changes
 
 * [ ] routing change aka failover
+
+## Stacking
+
+* [ ] Add stacking status command
+* [ ] Add move management command
 
 ## Services
 
