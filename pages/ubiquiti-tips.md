@@ -1,7 +1,7 @@
 ---
 title: Ubiquiti Tips
 description: Tips and things to remember with Ubiquiti, UniFi, UISP, EdgeRouter systems
-published: false
+published: true
 categories:
 - References
 - Commands

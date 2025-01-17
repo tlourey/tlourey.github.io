@@ -228,17 +228,17 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 
 ## OpenSSL Commands
 
-`openssl s_client -connect example.org:443`
-`openssl s_client -showcerts -connect example.org:443`
-`openssl s_client -connect google.com:443 -servername ibm.com`: using openssl with SNI
-`echo -n | openssl s_client -connect google.com:443 -servername ibm.com </dev/null | openssl x509 -noout -text | grep ibm.com`
-`openssl x509 -in /etc/ssl/certs/ldap.pem -text -noout | grep "Not After"`: show not after date on cert
-`openssl x509 -in /etc/ssl/certs/ldap.pem -text -noout | grep -A 1 "Serial Number"`: show serial number of cert
-`openssl pkcs12 -in filename.pfx -out cert.pem -nodes`: convert pfx to pem
-`openssl x509 -noout -text -in certificiate.crt -modulus`: check details on certification
-`openssl rsa -noout -text -in keyfile.ekey/key -modulus`: check details on key
-`openssl req -noout -text -in request.csr -modulus`: check details on request
-`openssl rsa -in encrypted-key-file.ekey -out unecrypted-key-file.key`: change encrypted key to unencrypted
+`openssl s_client -connect example.org:443`\
+`openssl s_client -showcerts -connect example.org:443`\
+`openssl s_client -connect google.com:443 -servername ibm.com`: using openssl with SNI\
+`echo -n | openssl s_client -connect google.com:443 -servername ibm.com </dev/null | openssl x509 -noout -text | grep ibm.com`\
+`openssl x509 -in /etc/ssl/certs/ldap.pem -text -noout | grep "Not After"`: show not after date on cert\
+`openssl x509 -in /etc/ssl/certs/ldap.pem -text -noout | grep -A 1 "Serial Number"`: show serial number of cert\
+`openssl pkcs12 -in filename.pfx -out cert.pem -nodes`: convert pfx to pem\
+`openssl x509 -noout -text -in certificiate.crt -modulus`: check details on certification\
+`openssl rsa -noout -text -in keyfile.ekey/key -modulus`: check details on key\
+`openssl req -noout -text -in request.csr -modulus`: check details on request\
+`openssl rsa -in encrypted-key-file.ekey -out unecrypted-key-file.key`: change encrypted key to unencrypted\
 
 ### OpenSSL Links
 
@@ -255,16 +255,14 @@ To use a lower version of TLS (Results may vary in newer versions): <https://ask
 
 ## Misc System Commands
 
-`sudo dpkg-reconfigure tzdata`: Set timezone
-`cat /proc/sys/net/ipv4/ip_forward` check the proc setting
-`echo 1 > /proc/sys/net/ipv4/ip_forward` set it temporaryly
-`sysctl -w net.ipv4.ip_forward=0` also set it temporaryly
+`sudo dpkg-reconfigure tzdata`: Set timezone\
+`cat /proc/sys/net/ipv4/ip_forward` check the proc setting\
+`echo 1 > /proc/sys/net/ipv4/ip_forward` set it temporaryly\
+`sysctl -w net.ipv4.ip_forward=0` also set it temporaryly\
 `sudo vi /etc/sysctl.conf` and add:
 
 ```bash
 net.ipv4.ip_forward = 1
 ```
 
-`sudo sysctl -p`
-
-to make it permanent.
+`sudo sysctl -p` to make it permanent.
