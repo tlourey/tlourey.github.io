@@ -13,6 +13,7 @@ type: pages
 * [Amazon](#amazon)
 * [Apple](#apple)
 * [Google](#google)
+* [Cloudflare](#cloudflare)
 
 ## Azure
 
@@ -34,3 +35,7 @@ type: pages
 * <https://support.google.com/a/answer/10026322?hl=en>
 * <https://www.gstatic.com/ipranges/goog.json>
 * <https://www.gstatic.com/ipranges/cloud.json>
+
+## Cloudflare
+
+* <https://www.cloudflare.com/en-au/ips/>
