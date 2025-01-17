@@ -128,9 +128,9 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 
 ## Main SystemD Commands
 
-<https://systemd.io/>
-<https://commons.wikimedia.org/wiki/File:Systemd_components.svg>
-<https://www.freedesktop.org/software/systemd/man/latest/>
+<https://systemd.io/>\
+<https://commons.wikimedia.org/wiki/File:Systemd_components.svg>\
+<https://www.freedesktop.org/software/systemd/man/latest/>\
 
 ### Important Commands
 
@@ -143,14 +143,29 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `sudo systemctl cat mdcheck_start.timer`  show the unit file for the timer\
 `sudo systemctl cat mdcheck_start.service` show the unit file for the service\
 `sudo systemctl status mdcheck_start.service` check the status of a service\
-`sudo systemctl restart mdcheck_start.service`\
-`sudo systemctl stop mdcheck_start.service`\
+`sudo systemctl restart mdcheck_start.service` restarts a service now\
+`sudo systemctl stop mdcheck_start.service` stops a service now\
+`sudo systemctl start mdcheck_start.service` starts a service now\
+`sudo systemctl disable mdcheck_start.service` prevents a service from running at startup\
+`sudo systemctl enable mdcheck_start.service` allows a service to run at startup\
+`sudo systemctl enable --now mdcheck_start.service` allows a service to run at startup and also starts it now\
+`sudo systemctl daemon-reload`: scan for new or changed units\
+`sudo systemctl reload mdcheck_start.service`: reloads a unit and its configuration\
+`sudo systemctl reenable mdcheck_start.service`: disables and re-enableds a unit (useful if units \[install\] section has changed)\
+`systemctl show --property=UnitPath`: show paths to unit files\
+The main Unit paths are (listed from lowest to highest precedence):
+
+* `/usr/lib/systemd/system/`: units provided by installed packages
+* `/etc/systemd/system/`: units installed by the system administrator
+
 `sudo systemctl | grep something` grep most systemctl services\
 by 'most' remember a service can be:
 
 * started/stopped
 * enabled/disabled
 * masked/unmasked - which changes pointers to /dev/null I think
+
+[https://wiki.archlinux.org/title/Systemd](https://wiki.archlinux.org/title/Systemd)
 
 #### journalctl
 
@@ -197,7 +212,7 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 
 ### SystemD Links
 
-<https://systemd.io/>
+<https://systemd.io/>\
 <https://commons.wikimedia.org/wiki/File:Systemd_components.svg>
 
 * <https://www.freedesktop.org/software/systemd/man/latest/>
@@ -227,14 +242,14 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 
 ### OpenSSL Links
 
-<https://www.xolphin.com/support/Certificate_conversions/Convert_pfx_file_to_pem_file>
-<http://help.globalscape.com/help/secureserver3/Converting_an_incompatible_traditional_PEM_encoded_encrypted_private_key.htm>
-<http://sycure.wordpress.com/2008/05/15/tips-using-openssl-to-extract-private-key-pem-file-from-pfx-personal-information-exchange/>
-<http://stackoverflow.com/questions/991758/how-to-get-an-openssl-pem-file-from-key-and-crt-files>
-<https://support.citrix.com/article/CTX136444#OpenSSL>
-<https://docs.citrix.com/en-us/citrix-gateway/12-1/install/certificate-management/how-to-convert-pfx-certificate-to-pem.html>
-<https://www.xolphin.com/support/Certificate_conversions/Convert_pfx_file_to_pem_file>
-<http://jefferytay.wordpress.com/2010/12/09/converting-a-pfx-file-to-pem-and-key-via-openssl/>
+<https://www.xolphin.com/support/Certificate_conversions/Convert_pfx_file_to_pem_file>\
+<http://help.globalscape.com/help/secureserver3/Converting_an_incompatible_traditional_PEM_encoded_encrypted_private_key.htm>\
+<http://sycure.wordpress.com/2008/05/15/tips-using-openssl-to-extract-private-key-pem-file-from-pfx-personal-information-exchange/>\
+<http://stackoverflow.com/questions/991758/how-to-get-an-openssl-pem-file-from-key-and-crt-files>\
+<https://support.citrix.com/article/CTX136444#OpenSSL>\
+<https://docs.citrix.com/en-us/citrix-gateway/12-1/install/certificate-management/how-to-convert-pfx-certificate-to-pem.html>\
+<https://www.xolphin.com/support/Certificate_conversions/Convert_pfx_file_to_pem_file>\
+<http://jefferytay.wordpress.com/2010/12/09/converting-a-pfx-file-to-pem-and-key-via-openssl/>\
 
 To use a lower version of TLS (Results may vary in newer versions): <https://askubuntu.com/questions/1233186/ubuntu-20-04-how-to-set-lower-ssl-security-level>
 
