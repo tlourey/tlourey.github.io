@@ -3,6 +3,7 @@ theme: jekyll-theme-cayman
 title: WTF
 description: "\"And now, I'm going down to Emmett's Fix-It Shop. [cocks gun] To fix...Emmett.\""
 page_excerpts: true
+google_analytics: G-29R261QM9P
 plugins:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
