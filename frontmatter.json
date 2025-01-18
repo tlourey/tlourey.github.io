@@ -44,6 +44,94 @@
           "type": "categories"
         }
       ]
+    },
+    {
+      "name": "posts",
+      "pageBundle": false,
+      "previewPath": null,
+      "template": "post-template.md",
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Published",
+          "name": "published",
+          "type": "boolean"
+        }
+      ]
+    },
+    {
+      "name": "pages",
+      "pageBundle": false,
+      "previewPath": null,
+      "template": "page-template.md",
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string"
+        },
+        {
+          "title": "Description",
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "title": "Is in draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Published",
+          "name": "published",
+          "type": "boolean"
+        }
+      ]
     }
   ],
   "frontMatter.framework.id": "jekyll",
@@ -52,11 +140,19 @@
   "frontMatter.content.pageFolders": [
     {
       "title": "posts",
-      "path": "[[workspace]]/_posts"
+      "path": "[[workspace]]/_posts",
+      "contentTypes": [
+        "posts"
+      ],
+      "filePrefix": "{{year}}-{{month}}-{{day}}-{{title}}.md"
     },
     {
       "title": "pages",
-      "path": "[[workspace]]/pages"
+      "path": "[[workspace]]/pages",
+      "contentTypes": [
+        "pages"
+      ],
+      "filePrefix": "{{title}}.md"
     }
   ],
   "frontMatter.git.enabled": true,
