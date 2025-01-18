@@ -57,12 +57,9 @@
     {
       "title": "pages",
       "path": "[[workspace]]/pages"
-    },
-    {
-      "title": "posts",
-      "path": "[[workspace]]/_posts"
     }
   ],
   "frontMatter.git.enabled": true,
-  "frontMatter.website.host": "https://tlourey.github.io"
+  "frontMatter.website.host": "https://tlourey.github.io",
+  "frontMatter.dashboard.openOnStart": true
 }
