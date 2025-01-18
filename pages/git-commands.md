@@ -3,8 +3,10 @@ title: Git Commands
 description: Commands to remember for Git
 type: pages
 categories:
-- References
-- Commands
+    - References
+    - Commands
+published: true
+draft: true
 ---
 
 [home](/) [up](./)
