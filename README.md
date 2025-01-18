@@ -1,3 +1,1 @@
-# WTF
-
-> *"Hello there!"* - General Kenobi
+# Readme
