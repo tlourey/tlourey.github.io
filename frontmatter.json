@@ -171,5 +171,29 @@
   ],
   "frontMatter.git.enabled": true,
   "frontMatter.website.host": "https://tlourey.github.io",
-  "frontMatter.dashboard.openOnStart": true
+  "frontMatter.dashboard.openOnStart": true,
+  "frontMatter.data.folders": [{
+    "id": "data",
+    "path": "[[workspace]]/data",
+    "singleEntry": true,
+    "enableFileCreation": true,
+    "fileType": "json",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "title": "Name"
+        },
+        "url": {
+          "type": "string",
+          "title": "URL"
+        },
+        "description": {
+          "type": "string",
+          "title": "Description"
+        }
+      }
+    }
+  }]
 }

@@ -2,10 +2,12 @@
 title: Netgear Fully Managed Switch M4300 CLI Reference
 description: Commands to remember for Netgear Switches
 categories:
-- References
-- Commands
-- Networks
+    - References
+    - Commands
+    - Networks
 type: pages
+published: true
+draft: false
 ---
 
 [home](/) [up](./)
@@ -572,14 +574,14 @@ There are some settings that don't get changed in configure mode, but instead ge
 
 ## References
 
-[M4300-52G-PoE\+|https://www.netgear.com/support/product/M4300-52G-PoE-Plus%20550W%20PSU.aspx]
-[M4300-28G-PoE\+|https://www.netgear.com/support/product/M4300-28G-PoE-Plus%20550W%20PSU.aspx]
-[M4100-50G-Poe\+|https://www.netgear.com/support/product/M4100-50G-POEplus%20(GSM7248Pv1h1).aspx]
+[M4300-52G-PoE\+](https://www.netgear.com/support/product/M4300-52G-PoE-Plus%20550W%20PSU.aspx)
+[M4300-28G-PoE\+](https://www.netgear.com/support/product/M4300-28G-PoE-Plus%20550W%20PSU.aspx)
+[M4100-50G-Poe\+](https://www.netgear.com/support/product/M4100-50G-POEplus%20(GSM7248Pv1h1).aspx)
 
 ### Useful manuals
 
-[M4300 Intelligent Edge Series Fully Managed Stackable Switches, M4300 Series Switches, M4300-96X Modular Switch, Command Line (CLI) Reference Manual, Software Version or Release 12.0.11 (netgear.com)|https://www.downloads.netgear.com/files/GDC/M4300/M4300-M4300-96X_CLI_EN.pdf]
+[M4300 Intelligent Edge Series Fully Managed Stackable Switches, M4300 Series Switches, M4300-96X Modular Switch, Command Line (CLI) Reference Manual, Software Version or Release 12.0.11 (netgear.com)](https://www.downloads.netgear.com/files/GDC/M4300/M4300-M4300-96X_CLI_EN.pdf)
 
-[M4300 Intelligent Edge Series Fully Managed Stackable Switches Software Version 12.0.8 (netgear.com)|https://www.downloads.netgear.com/files/GDC/M4300/M4300_SWA_EN.pdf]
+[M4300 Intelligent Edge Series Fully Managed Stackable Switches Software Version 12.0.8 (netgear.com)](https://www.downloads.netgear.com/files/GDC/M4300/M4300_SWA_EN.pdf)
 
-[M4300 Intelligent Edge Series Fully Managed Stackable Switches, M4300 Series Switches, M4300-96X Modular Switch, User Manual, Software Version or Release 12.0.11 (netgear.com)|https://www.downloads.netgear.com/files/GDC/M4300/M4300_M4300-96X_UM_EN.pdf]
+[M4300 Intelligent Edge Series Fully Managed Stackable Switches, M4300 Series Switches, M4300-96X Modular Switch, User Manual, Software Version or Release 12.0.11 (netgear.com)](https://www.downloads.netgear.com/files/GDC/M4300/M4300_M4300-96X_UM_EN.pdf)
