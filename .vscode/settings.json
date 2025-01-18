@@ -7,5 +7,6 @@
 		"tftpboot"
 	],
 	"todo-tree.tree.scanMode": "workspace",
-	"files.defaultLanguage": "markdown"
+	"files.defaultLanguage": "markdown",
+	"frontMatter.dashboard.openOnStart": true
 }

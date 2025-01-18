@@ -60,5 +60,6 @@
       "path": "[[workspace]]/pages",
       "filePrefix": "{{title}}"
     }
-  ]
+  ],
+  "frontMatter.git.enabled": true
 }
