@@ -21,12 +21,20 @@
 	"todo-tree.tree.scanMode": "workspace",
 	"files.defaultLanguage": "markdown",
 	"frontMatter.sponsors.ai.enabled": false,
-	"[markdown]": {
-	},
+	// "[markdown]": {
+	// 	"editor.fontSize": 14,
+	// 	"editor.lineHeight": 26,
+	// 	"editor.wordWrap": "wordWrapColumn",
+	// 	"editor.wordWrapColumn": 64,
+	// 	"editor.lineNumbers": "off",
+	// 	"editor.quickSuggestions": false,
+	// 	"editor.minimap.enabled": false
+	// },
 	"markdown.extension.preview.autoShowPreviewToSide": false,
 	"cSpell.enabled": true,
 	"cSpell.ignoreWords": [
 		"azuremonitoragent",
 		"omfwd"
-	]
+	],
+	"git.branchProtectionPrompt": "alwaysCommit"
 }
