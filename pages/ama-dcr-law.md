@@ -65,6 +65,21 @@ TBC - Most common transformation is: [Data ingestion duplication avoidance](http
                     }
 ```
 
+This didn't work for me... So, I tried this:
+
+```json
+          "dataFlows": [
+                    {
+                        "streams": [
+                            "Microsoft-CommonSecurityLog"
+                        ],
+                        "destinations": [
+                            "DataCollectionEvent"
+                        ],
+                        "transformKql": "  source\n    |  where ProcessName !contains \"CEF\"\n"
+                    }
+```
+
 ## DCE - Data Collection Endpoint
 
 Apparently not needed unless using Azure Private Link. I think can be used if you have some machiens that can't see the internet without private link but not sure.
