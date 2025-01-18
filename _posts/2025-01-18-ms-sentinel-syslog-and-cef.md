@@ -6,7 +6,7 @@ categories:
 - Monitoring
 - Security
 - Azure
-description: "3 clowns, 2 of which are brothers, looking to stich you up with rubbish message, or complexity."
+description: "4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools."
 published: false
 preview: ""
 draft: true
@@ -16,19 +16,6 @@ fmContentType: posts
 ---
 
 [home](/) [up](./)
-<!--- cSpell:disable --->
-* [TL;DR](#tldr)
-* [Intro](#intro)
-* [Syslog Noise](#syslog-noise)
-* [DCR](#dcr)
-  * [Editing DCRs](#editing-dcrs)
-  * [How can I check the DCR Transformation?](#how-can-i-check-the-dcr-transformation)
-  * [Is this really a fix?](#is-this-really-a-fix)
-* [Rsyslog conf modification](#rsyslog-conf-modification)
-  * [How can I check the new Rsyslog config working?](#how-can-i-check-the-new-rsyslog-config-working)
-* [Summary](#summary)
-* [References](#references)
-<!--- cSpell:enable --->
 
 <!--
 ## Draft talking points - Delete before publishing
@@ -47,13 +34,40 @@ fmContentType: posts
 
 ## TL;DR
 
-Content
+Getting CEF Messages into Azure Sentinel is a pain.\
+You can easily send far more than you wanted and then you're paying for ingestion / storage you didn't mean to.\
+There are some queries to determine how big the problem is.\
+We try to filter out the noise getting stored by implementing a simple Azure Monitor Data Collection Rule Transformation.\
+We try to filter out the noise getting sent in the first place by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent.\
+We cover some methods to monitor / test if they work.
+The concept could be adapted to other situations.
 
 ## Intro
 
+TBC
+
+<!--- cSpell:disable --->
+* [TL;DR](#tldr)
+* [Intro](#intro)
+* [Scenario](#scenario)
+* [Syslog Noise](#syslog-noise)
+* [DCR](#dcr)
+  * [Editing DCRs](#editing-dcrs)
+  * [How can I check the DCR Transformation?](#how-can-i-check-the-dcr-transformation)
+  * [Is this really a fix?](#is-this-really-a-fix)
+* [Rsyslog conf modification](#rsyslog-conf-modification)
+  * [How can I check the new Rsyslog config working?](#how-can-i-check-the-new-rsyslog-config-working)
+* [Summary](#summary)
+* [References](#references)
+<!--- cSpell:enable --->
+
+## Scenario
+
+TBC
+
 ## Syslog Noise
 
-Here is how I started to figure out my noise. `DeviceVendor` is part of the [CEF standard](../pages/misc-references.md#cef). So try this in your LAW and adjust your time period/limit per your logging load (Start small then increase either the limit or the time range to get an idea):
+Here is how I started to determine the level of noise. `DeviceVendor` is part of the [CEF standard](../pages/misc-references.md#cef). So try this in your KQL Query in your Log Analytics Workspace and adjust your time period/limit per your logging load (Start small then increase either the limit or the time range to get an idea):
 
 ```kql
 CommonSecurityLog
@@ -213,7 +227,7 @@ Things you may need to consider with the above script.
 
 ### How can I check the new Rsyslog config working?
 
-TBC
+Using the same Azure Metrics I used for the DCR, I should have seen a drop, but I didn't see a noticeable one. Esp given what I was seeing before the DCR Transformation. The metric of log rows dropped is still high. As such I may need to disable the translate to see how good/bad the rsyslog changes are.
 
 ## Summary
 
@@ -228,6 +242,7 @@ TBC
 <https://www.rsyslog.com/storing-messages-from-a-remote-system-into-a-specific-file/>\
 <https://www.rsyslog.com/normalizing-cisco-asa-messages/>\
 <https://www.rsyslog.com/doc/configuration/index.html>\
+<https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/deployment_guide/s1-basic_configuration_of_rsyslog#s2-Filters>\
 [KQL Queries](../pages/kql-queries.md)\
 [AMA DCR LAW](../pages/ama-dcr-law.md)\
 [Misc References](../pages/misc-references.md#cef)
