@@ -49,7 +49,7 @@
       "name": "posts",
       "pageBundle": false,
       "previewPath": null,
-      "template": "post-template.md",
+      "template": "[[workspace]]/.frontmatter/templates/post-template.md",
       "fields": [
         {
           "title": "Title",
@@ -92,6 +92,12 @@
           "title": "Published",
           "name": "published",
           "type": "boolean"
+        },
+        {
+          "title": "Type",
+          "name": "type",
+          "type": "string",
+          "default": "posts"
         }
       ]
     },
@@ -99,7 +105,8 @@
       "name": "pages",
       "pageBundle": false,
       "previewPath": null,
-      "template": "page-template.md",
+      "defaultFileName": "{{title}}",
+      "template": "[[workspace]]/.frontmatter/templates/page-template.md",
       "fields": [
         {
           "title": "Title",
@@ -130,6 +137,12 @@
           "title": "Published",
           "name": "published",
           "type": "boolean"
+        },
+        {
+          "title": "Type",
+          "name": "type",
+          "type": "string",
+          "default": "pages"
         }
       ]
     }
@@ -137,6 +150,7 @@
   "frontMatter.framework.id": "jekyll",
   "frontMatter.content.publicFolder": "assets",
   "frontMatter.preview.host": "http://localhost:4000",
+  "frontMatter.sponsors.ai.enabled": false,
   "frontMatter.content.pageFolders": [
     {
       "title": "posts",
@@ -144,7 +158,7 @@
       "contentTypes": [
         "posts"
       ],
-      "filePrefix": "{{year}}-{{month}}-{{day}}-{{title}}.md"
+      "filePrefix": "{{year}}-{{month}}-{{day}}"
     },
     {
       "title": "pages",
@@ -152,7 +166,7 @@
       "contentTypes": [
         "pages"
       ],
-      "filePrefix": "{{title}}.md"
+      "filePrefix": ""
     }
   ],
   "frontMatter.git.enabled": true,
