@@ -52,14 +52,17 @@
   "frontMatter.content.pageFolders": [
     {
       "title": "posts",
-      "path": "[[workspace]]/_posts",
-      "filePrefix": "{{date|yyyy}}-{{date|MM}}-{{date|dd}}-{{title}}"
+      "path": "[[workspace]]/_posts"
     },
     {
       "title": "pages",
-      "path": "[[workspace]]/pages",
-      "filePrefix": "{{title}}"
+      "path": "[[workspace]]/pages"
+    },
+    {
+      "title": "posts",
+      "path": "[[workspace]]/_posts"
     }
   ],
-  "frontMatter.git.enabled": true
+  "frontMatter.git.enabled": true,
+  "frontMatter.website.host": "https://tlourey.github.io"
 }
