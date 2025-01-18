@@ -3,9 +3,10 @@ title: PuTTY Commands
 description: description
 published: true
 categories:
-- References
-- Commands
+    - References
+    - Commands
 type: pages
+draft: true
 ---
 
 [home](/) [up](./)

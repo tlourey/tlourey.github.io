@@ -3,10 +3,11 @@ title: Ubiquiti Tips
 description: Tips and things to remember with Ubiquiti, UniFi, UISP, EdgeRouter systems
 published: true
 categories:
-- References
-- Commands
-- Tips
+    - References
+    - Commands
+    - Tips
 type: pages
+draft: true
 ---
 
 [home](/) [up](./)

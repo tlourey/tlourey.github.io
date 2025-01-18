@@ -2,11 +2,12 @@
 title: Powershell Commands
 description: Powershell Commands to remember
 categories:
-- Reference
-- Commands
-- PowerShell
-- Language
+    - Reference
+    - Commands
+    - PowerShell
+    - Language
 type: pages
+published: true
 ---
 
 [home](/) [up](./)

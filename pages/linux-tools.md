@@ -2,10 +2,12 @@
 title: Linux Tools
 description: Linux tools to remember
 categories:
-- References
-- Tools
-- Linux
+    - References
+    - Tools
+    - Linux
 type: pages
+draft: true
+published: true
 ---
 
 [home](/) [up](./)

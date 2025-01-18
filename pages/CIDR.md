@@ -3,9 +3,10 @@ title: CIDR
 description: description
 published: true
 categories:
-- References
-- Networks
+    - References
+    - Networks
 type: pages
+draft: false
 ---
 
 [home](/) [up](./)

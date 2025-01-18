@@ -2,9 +2,10 @@
 title: Public IP Ranges
 description: Public IP Ranges to note and their references
 categories:
-- References
-- Networks
+    - References
+    - Networks
 type: pages
+published: true
 ---
 
 [home](/) [up](./)

@@ -3,9 +3,10 @@ title: Markdown Tips
 description: Flavor Flav says "GFM is da shit yo"
 published: true
 categories:
-- References
-- Language
+    - References
+    - Language
 type: pages
+draft: true
 ---
 
 [home](/) [up](./)

@@ -3,10 +3,11 @@ title: Bash Tips
 description: There are more. much more.
 published: true
 categories:
-- References
-- Tips
-- Language
+    - References
+    - Tips
+    - Language
 type: pages
+draft: true
 ---
 
 [home](/) [up](./)

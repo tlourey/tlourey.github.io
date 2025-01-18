@@ -2,10 +2,11 @@
 title: Linux Commands
 description: Linux commands to remember
 categories:
-- References
-- Commands
-- Linux
+    - References
+    - Commands
+    - Linux
 type: pages
+published: true
 ---
 
 [home](/) [up](./)

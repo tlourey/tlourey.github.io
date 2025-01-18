@@ -3,10 +3,11 @@ title: Mac OS Commands
 description: Commands to remember for Mac OS
 published: true
 categories:
-- References
-- Commands
-- MacOS
+    - References
+    - Commands
+    - MacOS
 type: pages
+draft: true
 ---
 
 [home](/) [up](./)

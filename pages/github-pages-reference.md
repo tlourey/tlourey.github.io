@@ -2,6 +2,7 @@
 title: Welcome to Github Pages
 published: false
 type: content
+fmContentType: pages
 ---
 
 ## Welcome to GitHub Pages

@@ -2,9 +2,10 @@
 title: Windows Commands
 description: Windows Commands to remember
 categories:
-- Reference
-- Commands
+    - Reference
+    - Commands
 type: pages
+published: true
 ---
 
 [home](/) [up](./)
