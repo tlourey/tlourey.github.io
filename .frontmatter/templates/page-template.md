@@ -9,8 +9,9 @@ type: pages
 ---
 
 [home](/) [up](./)
-
+ <!--- cSpell:disable --->
 * [Heading](#heading)
+<!--- cSpell:enable --->
 
 ## Heading
 
