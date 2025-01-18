@@ -10,7 +10,7 @@ published: true
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [Terminal Stuff](#terminal-stuff)
 * [Files](#files)
 * [Hardware Info](#hardware-info)
@@ -18,6 +18,7 @@ published: true
   * [MDADM](#mdadm)
 * [Log files](#log-files)
 * [Cron](#cron)
+* [Accounts and Groups](#accounts-and-groups)
 * [Main SystemD Commands](#main-systemd-commands)
   * [Important Commands](#important-commands)
     * [systemctl](#systemctl)
@@ -31,7 +32,7 @@ published: true
 * [OpenSSL Commands](#openssl-commands)
   * [OpenSSL Links](#openssl-links)
 * [Misc System Commands](#misc-system-commands)
-
+<!--- cSpell:enable --->
 ## Terminal Stuff
 
 ```bash
@@ -128,6 +129,22 @@ Best website for refining crontab timings: [Crontab.guru - The cron schedule exp
 Very well know cron bug that has been left in there by design: <https://crontab.guru/cron-bug.html>
 
 Also refer to [systemctl](#systemctl) commands for times and the links in [SystemD Links](#systemd-links) about timers. SystemD timers do the same thing as cron but they are newer.
+
+## Accounts and Groups
+
+`passwd -S USERNAME` shows the date and status of a users password.
+> Display account status information. The status information consists of 7 fields. The first field is the user's login name. The second field indicates if the user account has a locked password (L), has no password (NP), or has a usable password (P). The third field gives the date of the last password change. The next four fields are the minimum age, maximum age, warning period, and inactivity period for the password. These ages are expressed in days.
+
+`sudo passwd -L USERNAME`: Lock out a users password. Doesn't disable account, just doesn't allow password.\
+`sudo usermod --expiredate 1 USERNAME`: Disables an account.
+`sudo faillog -l 60 olivia`: lock out Olivia for 60 mins
+
+`sudo addgroup sshlogin`\
+`sudo adduser XXX`\
+`sudo adduser XXX sshlogin`: add other users group\
+`sudo adduser XXX sudo`: if user also needs sudo\
+`sudo useradd -m -G sshlogin,sudo XXX -s /bin/bash`: sets a users shell, shouldn't be needed much these days
+`sudo passwd XXX`: if you need to change user's password
 
 ## Main SystemD Commands
 
