@@ -11,7 +11,7 @@ draft: true
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [Overview](#overview)
 * [AMA - Azure Monitoring Agent](#ama---azure-monitoring-agent)
 * [DCR - Data Collection Rule](#dcr---data-collection-rule)
@@ -19,7 +19,7 @@ draft: true
 * [DCE - Data Collection Endpoint](#dce---data-collection-endpoint)
 * [LAW - Log Analytics Workspace](#law---log-analytics-workspace)
 * [Streams and Data Sources](#streams-and-data-sources)
-
+<!--- cSpell:enable --->
 ## Overview
 
 DCR --> AMA --> DCE --> LAW
@@ -36,7 +36,7 @@ DCR --> AMA --> DCE --> LAW
 * Defines the things it collections
 * Defines the destination for those things
 * Can define transformations of those things to the destination.
-  * Most common transformation is to reduce the amount of data being imported after it has been colelcted
+  * Most common transformation is to reduce the amount of data being imported after it has been collected
 * Must be in same region as the Log Analytics Workspace it is sending things to
 
 ### Transformation
@@ -44,7 +44,7 @@ DCR --> AMA --> DCE --> LAW
 TBC - Most common transformation is: [Data ingestion duplication avoidance](https://learn.microsoft.com/en-us/azure/sentinel/cef-syslog-ama-overview?tabs=single#data-ingestion-duplication-avoidance)
 
 * free if not adding data
-* Easist way to modify
+* Easiest way to modify
   1. Make in portal
   2. Deploy
   3. Go to export template
@@ -80,9 +80,14 @@ This didn't work for me... So, I tried this:
                     }
 ```
 
+> [!TIP] Microsoft-CommonSecurityLog
+> My Microsoft-CommonSecurityLog was underlined yellow and saying it wasn't valid. It still accepted it and it still worked. This may have been an issue since I moved my sentinel-enabled LAW around. I also noted that when typing it in I had to add a space that before the <!--- cSpell:disable --->`transformkql`<!--- cSpell:enable ---> came up in the drop down so I knew what I was doing was 'somewhat' valid.
+
+Notes about KQL for Transformations: [Supported KQL features in Azure Monitor transformations](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-transformations-kql)
+
 ## DCE - Data Collection Endpoint
 
-Apparently not needed unless using Azure Private Link. I think can be used if you have some machiens that can't see the internet without private link but not sure.
+Apparently not needed unless using Azure Private Link. I think can be used if you have some machines that can't see the internet without private link but not sure.
 
 ## LAW - Log Analytics Workspace
 
@@ -92,7 +97,7 @@ TBC
 
 From [Structure of a data collection rule (DCR) in Azure Monitor](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-structure)
 
-[Inputstreams](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-structure#input-streams):
+[Input-streams](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-structure#input-streams):
 
 * If this is a standard data type such as a Windows event, then the stream will be in the form Microsoft-\<TableName\>. If it's a custom type, then it will be in the form Custom-\<TableName\>
 * [Valid Source Types](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-rule-structure#valid-data-source-types) - there are more

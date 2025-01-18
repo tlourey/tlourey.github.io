@@ -12,11 +12,13 @@ fmContentType: pages
 ---
 
 [home](/) [up](./)
-
+ <!--- cSpell:disable --->
 * [KQL Functions](#kql-functions)
   * [count](#count)
   * [count\_distinct](#count_distinct)
-
+  * [isnotempty](#isnotempty)
+* [Misc References](#misc-references)
+<!--- cSpell:enable --->
 ## KQL Functions
 
 ### count
@@ -42,3 +44,21 @@ StormEvents
 ```
 
 <https://learn.microsoft.com/en-au/kusto/query/count-distinct-aggregation-function?view=microsoft-fabric>
+<!--- cSpell:disable --->
+### isnotempty
+<!--- cSpell:enable --->
+```kql
+StormEvents
+| where isnotempty(BeginLat) and isnotempty(BeginLon)
+```
+
+```kql
+CommonSecurityLog
+| where isnotempty(DeviceVendor)
+```
+
+<https://learn.microsoft.com/en-us/kusto/query/isnotempty-function?view=azure-monitor>
+
+## Misc References
+
+Notes about KQL for Transformations: [Supported KQL features in Azure Monitor transformations](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-transformations-kql)
