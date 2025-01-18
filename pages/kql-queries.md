@@ -19,6 +19,7 @@ fmContentType: pages
   * [isnotempty](#isnotempty)
 * [KQL Queries](#kql-queries)
   * [LAW Table Usage](#law-table-usage)
+  * [Get Watch List](#get-watch-list)
 * [Misc References](#misc-references)
 <!--- cSpell:enable --->
 ## KQL Functions
@@ -69,6 +70,15 @@ CommonSecurityLog
 union withsource=["$TableName"] *
 | summarize Count=count() by TableName=["$TableName"]
 | render barchart
+```
+
+### Get Watch List
+
+```kql
+_GetWatchlist('NetworkAddresses')
+| extend IPSubnet = ["IP Subnet"]
+| extend RangeName = ["Range Name"]
+| project IPSubnet,RangeName
 ```
 
 ## Misc References
