@@ -25,6 +25,7 @@ fmContentType: posts
 * [DCR](#dcr)
   * [Editing DCRs](#editing-dcrs)
 * [How can I check?](#how-can-i-check)
+* [Is this really a fix?](#is-this-really-a-fix)
 * [Summary](#summary)
 * [References](#references)
 <!--- cSpell:enable --->
@@ -156,6 +157,14 @@ One thing I found is that its hide to see exactly. Here are some ways:
 1. Metrics of the DCR - this one I found the best as you can see Logs coming in, log errors, transformation time.
 2. Workbooks on usage of the LAW - esp if its Sentinel enabled.
 3. Trying to mirror / watch / capture what the syslog server output.
+
+## Is this really a fix?
+
+Technically yes, but I understand what you mean. Your still sending a lot of data in the first place, then filtering it out. Depending on the scale, thats money somewhere.
+
+The goal was to also use this as a single (or HA) syslog server for all my needs instead of running multiples.
+
+In my situation I got there by setting the CEF Connection via AMA for Sentinel, in which you must choose a SYSLOG facility to bring in and a level. One of my input devices I could change the facility and one I couldn't. So I may be stuck with User/Log_User Facility. But we could get 'creative' with the RSyslog config file as mentioned above. Thats the next step to try.
 
 ## Summary
 
