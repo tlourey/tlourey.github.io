@@ -4,11 +4,29 @@
 	],
 	"cSpell.words": [
 		"bootvar",
+		"cslint",
+		"SIEM",
 		"tftpboot"
 	],
+	"cSpell.languageSettings": [
+      {
+          // use with Markdown files
+          "languageId": "markdown",
+          // Exclude code.
+          "ignoreRegExpList": [
+              "/^\\s*```[\\s\\S]*?^\\s*```/gm"
+          ]
+      }
+  	],
 	"todo-tree.tree.scanMode": "workspace",
 	"files.defaultLanguage": "markdown",
 	"frontMatter.sponsors.ai.enabled": false,
 	"[markdown]": {
-	}
+	},
+	"markdown.extension.preview.autoShowPreviewToSide": false,
+	"cSpell.enabled": true,
+	"cSpell.ignoreWords": [
+		"azuremonitoragent",
+		"omfwd"
+	]
 }
