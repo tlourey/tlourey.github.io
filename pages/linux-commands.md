@@ -135,15 +135,19 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `passwd -S USERNAME` shows the date and status of a users password.
 > Display account status information. The status information consists of 7 fields. The first field is the user's login name. The second field indicates if the user account has a locked password (L), has no password (NP), or has a usable password (P). The third field gives the date of the last password change. The next four fields are the minimum age, maximum age, warning period, and inactivity period for the password. These ages are expressed in days.
 
-`sudo passwd -L USERNAME`: Lock out a users password. Doesn't disable account, just doesn't allow password.\
-`sudo usermod --expiredate 1 USERNAME`: Disables an account.
+`sudo passwd -l USERNAME`: Lock out a users password. Doesn't disable account, just doesn't allow password.
+> [!CAUTION] Use `passwd -l` with caution
+> This is not the best way to not get prompted for sudo. Because you can't run sudo with a locked password unless you have a no password entry. Use with caution if you don't have a way to roll back!
+
+`sudo passwd -u USERNAME`: unlock password.\
+`sudo usermod --expiredate 1 USERNAME`: Disables an account.\
 `sudo faillog -l 60 olivia`: lock out Olivia for 60 mins
 
 `sudo addgroup sshlogin`\
 `sudo adduser XXX`\
 `sudo adduser XXX sshlogin`: add other users group\
 `sudo adduser XXX sudo`: if user also needs sudo\
-`sudo useradd -m -G sshlogin,sudo XXX -s /bin/bash`: sets a users shell, shouldn't be needed much these days
+`sudo useradd -m -G sshlogin,sudo XXX -s /bin/bash`: sets a users shell, shouldn't be needed much these days\
 `sudo passwd XXX`: if you need to change user's password
 
 ## Main SystemD Commands
