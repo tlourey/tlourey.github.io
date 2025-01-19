@@ -27,8 +27,7 @@
       {% endif %}
     </header>
     <p class="main-content">First Published: {{ page.date | date: "%B %-d, %Y" }} | Last Modified: {{ page.lastmod | date: "%B %-d, %Y" }}</p>
-    <p class="main-content">Categories: {% for category in page.categories %}{%- if forloop.length > 0 -%}{{ category }}{% unless forloop.last %},{% endunless -%}{% endif %}{% endfor %}
-</p>
+    <p class="main-content">Categories: {% for category in page.categories %}{%- if forloop.length > 0 -%}{{ category }}{% unless forloop.last %}, {% endunless -%}{% endif %}{% endfor %}</p>
     <main id="content" class="main-content" role="main">
       {{ content }}
 
