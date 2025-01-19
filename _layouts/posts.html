@@ -27,7 +27,7 @@
       {% endif %}
       <a href="/" class="btn">Home</a>
       <a href="./" class="btn">Up</a>
-      <p class="main-content">First Published: {{ page.date | date: "%B %-d, %Y" }} | Last Modified: {{ page.lastmod | date: "%B %-d, %Y" }}<br>
+      <p class="main-content" style="text-align: left;">First Published: {{ page.date | date: "%B %-d, %Y" }} | Last Modified: {{ page.lastmod | date: "%B %-d, %Y" }}<br>
       Categories: {% for category in page.categories %}{%- if forloop.length > 0 -%}{{ category }}{% unless forloop.last %}, {% endunless -%}{% endif %}{% endfor %}</p>
     </header>
     <main id="content" class="main-content" role="main">
