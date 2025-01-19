@@ -3,13 +3,14 @@ title: Mac OS Commands
 description: Commands to remember for Mac OS
 published: true
 categories:
-    - References
-    - Commands
-    - MacOS
+  - References
+  - Commands
+  - MacOS
 type: pages
+layout: pages
 draft: true
 date: 2025-01-11T11:50:00
-lastmod: 2025-01-19T07:20:15.009Z
+lastmod: 2025-01-19T07:37:08.403Z
 ---
 
 [home](/) [up](./)

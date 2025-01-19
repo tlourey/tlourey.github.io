@@ -3,12 +3,13 @@ title: CIDR
 description: description
 published: true
 categories:
-    - References
-    - Networks
+  - References
+  - Networks
 type: pages
+layout: pages
 draft: false
 date: 2025-01-11T22:26:00
-lastmod: 2025-01-19T07:27:18.271Z
+lastmod: 2025-01-19T07:37:08.428Z
 ---
 
 [home](/) [up](./)

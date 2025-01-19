@@ -5,10 +5,12 @@ published: false
 categories:
     - References
     - Language
-type: pages
+type: pages 
+layout: pages
 draft: true
 tags: []
-fmContentType: pages
+fmContenttype: pages 
+layout: pages
 date: 2025-01-18T16:51:00
 lastmod: 2025-01-19T07:17:38.718Z
 ---

@@ -2,12 +2,13 @@
 title: Windows Commands
 description: Windows Commands to remember
 categories:
-    - Reference
-    - Commands
+  - Reference
+  - Commands
 type: pages
+layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-01-19T07:21:18.049Z
+lastmod: 2025-01-19T07:37:08.362Z
 ---
 
 [home](/) [up](./)

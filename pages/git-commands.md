@@ -2,13 +2,14 @@
 title: Git Commands
 description: Commands to remember for Git
 type: pages
+layout: pages
 categories:
-    - References
-    - Commands
+  - References
+  - Commands
 published: true
 draft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-01-19T07:28:56.579Z
+lastmod: 2025-01-19T07:37:08.423Z
 ---
 
 [home](/) [up](./)

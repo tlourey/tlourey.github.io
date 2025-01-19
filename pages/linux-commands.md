@@ -2,13 +2,14 @@
 title: Linux Commands
 description: Linux commands to remember
 categories:
-    - References
-    - Commands
-    - Linux
+  - References
+  - Commands
+  - Linux
 type: pages
+layout: pages
 published: true
 date: 2024-12-13T15:22:00
-lastmod: 2025-01-19T07:13:03.165Z
+lastmod: 2025-01-19T07:37:08.410Z
 ---
 
 [home](/) [up](./)

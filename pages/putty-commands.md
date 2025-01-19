@@ -3,12 +3,13 @@ title: PuTTY Commands
 description: description
 published: true
 categories:
-    - References
-    - Commands
+  - References
+  - Commands
 type: pages
+layout: pages
 draft: true
 date: 2025-01-17T15:31:00
-lastmod: 2025-01-19T07:28:18.908Z
+lastmod: 2025-01-19T07:37:08.371Z
 ---
 
 [home](/) [up](./)

@@ -3,12 +3,13 @@ title: Azure VM Tips
 description: Tips for setting up Azure VM's
 published: true
 categories:
-    - References
-    - Azure
+  - References
+  - Azure
 type: pages
+layout: pages
 draft: true
 date: 2025-01-15T14:05:00
-lastmod: 2025-01-19T07:19:23.240Z
+lastmod: 2025-01-19T07:37:08.439Z
 ---
 
 [home](/) [up](./)

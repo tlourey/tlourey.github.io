@@ -2,12 +2,13 @@
 title: Public IP Ranges
 description: Public IP Ranges to note and their references
 categories:
-    - References
-    - Networks
+  - References
+  - Networks
 type: pages
+layout: pages
 published: true
 date: 2024-12-31T11:34:00
-lastmod: 2025-01-19T07:21:52.238Z
+lastmod: 2025-01-19T07:37:08.379Z
 ---
 
 [home](/) [up](./)

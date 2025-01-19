@@ -2,14 +2,15 @@
 title: Linux Tools
 description: Linux tools to remember
 categories:
-    - References
-    - Tools
-    - Linux
+  - References
+  - Tools
+  - Linux
 type: pages
+layout: pages
 draft: true
 published: true
 date: 2025-01-11T16:40:00
-lastmod: 2025-01-19T07:15:56.351Z
+lastmod: 2025-01-19T07:37:08.406Z
 ---
 
 [home](/) [up](./)

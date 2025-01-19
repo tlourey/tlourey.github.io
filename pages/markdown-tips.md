@@ -3,12 +3,13 @@ title: Markdown Tips
 description: Flavor Flav says "GFM is da shit yo"
 published: true
 categories:
-    - References
-    - Language
+  - References
+  - Language
 type: pages
+layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-19T07:26:23.613Z
+lastmod: 2025-01-19T07:37:08.397Z
 ---
 
 [home](/) [up](./)
