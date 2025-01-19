@@ -17,6 +17,9 @@ fmContentType: pages
   * [count](#count)
   * [count\_distinct](#count_distinct)
   * [isnotempty](#isnotempty)
+* [KQL Queries](#kql-queries)
+  * [LAW Table Usage](#law-table-usage)
+  * [Get Watch List](#get-watch-list)
 * [Misc References](#misc-references)
 <!--- cSpell:enable --->
 ## KQL Functions
@@ -58,6 +61,25 @@ CommonSecurityLog
 ```
 
 <https://learn.microsoft.com/en-us/kusto/query/isnotempty-function?view=azure-monitor>
+
+## KQL Queries
+
+### LAW Table Usage
+
+```kql
+union withsource=["$TableName"] *
+| summarize Count=count() by TableName=["$TableName"]
+| render barchart
+```
+
+### Get Watch List
+
+```kql
+_GetWatchlist('NetworkAddresses')
+| extend IPSubnet = ["IP Subnet"]
+| extend RangeName = ["Range Name"]
+| project IPSubnet,RangeName
+```
 
 ## Misc References
 

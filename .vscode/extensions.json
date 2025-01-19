@@ -5,6 +5,7 @@
 		"yzhang.markdown-all-in-one",
 		"streetsidesoftware.code-spell-checker",
 		"github.vscode-github-actions",
-		"usernamehw.errorlens"
+		"bierner.markdown-yaml-preamble",
+		"eliostruyf.vscode-front-matter"
 	]
 }
