@@ -24,6 +24,13 @@
           "isPublishDate": true
         },
         {
+          "title": "Last modified date",
+          "name": "modifieddate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
+        },
+        {
           "title": "Content preview",
           "name": "preview",
           "type": "image"
@@ -67,6 +74,13 @@
           "type": "datetime",
           "default": "{{now}}",
           "isPublishDate": true
+        },
+        {
+          "title": "Last modified date",
+          "name": "modifieddate",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
         },
         {
           "title": "Content preview",
@@ -193,6 +207,7 @@
   "frontMatter.git.enabled": true,
   "frontMatter.website.host": "https://tlourey.github.io",
   "frontMatter.dashboard.openOnStart": true,
+  "frontMatter.content.autoUpdateDate": true,
   "frontMatter.data.folders": [
     {
       "id": "data",
