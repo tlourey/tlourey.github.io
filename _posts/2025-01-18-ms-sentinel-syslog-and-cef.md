@@ -1,17 +1,19 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
+modifieddate: 2025-01-19T05:11:17.664Z
 categories:
-- Sentinel
-- Monitoring
-- Security
-- Azure
-description: "4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools."
+    - Sentinel
+    - Monitoring
+    - Security
+    - Azure
+description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
 published: false
 preview: ""
 draft: true
 tags: []
 type: posts
+layout: posts
 fmContentType: posts
 ---
 
@@ -235,7 +237,7 @@ Using the same Azure Metrics I used for the DCR, I should have seen a drop, but 
 
 * Use DCR KQL Transforms to reduce noise being imported
 * Consider adjusting rsyslog.d conf for azure monitoring Agent
-* Learn facilities, syslog and the log files and how they work
+* Learn facilities, syslog and the log files and how they work and more importantly, interact
 
 ## References
 
