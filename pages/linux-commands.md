@@ -165,6 +165,7 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `systemctl list-unit-files` list unit files (even those not enabled)\
 `systemctl list-unit-files | grep enabled`\
 `systemctl list-unit-files --all | grep packagename`\
+`systemctl list-unit-files --state=masked`: list masked units
 `sudo systemctl list-timers` list timers registered\
 `sudo systemctl list-timers --all` list all timers\
 `sudo systemctl cat mdcheck_start.timer`  show the unit file for the timer\
@@ -179,6 +180,8 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `sudo systemctl daemon-reload`: scan for new or changed units\
 `sudo systemctl reload mdcheck_start.service`: reloads a unit and its configuration\
 `sudo systemctl reenable mdcheck_start.service`: disables and re-enableds a unit (useful if units \[install\] section has changed)\
+`sudo systemctl mask mdcheck_start.service`: Mask a unit to make it impossible to start both manually and as a dependancy, which makes masking dangerious. It makes a sim link of the unit file to /dev/null meaning it will never start.\
+`sudo systemctl unmask mdcheck_start.service`: unmask a unit (there are more steps)\
 `systemctl show --property=UnitPath`: show paths to unit files\
 The main Unit paths are (listed from lowest to highest precedence):
 
@@ -214,7 +217,18 @@ You can have systemd override files (which apparently are like files in /etc/def
 
 #### timedatectl
 
-Time and date stuff if chrony or NTPD isn't installed
+Time and date stuff if chrony or NTPD isn't installed. Taken from <https://documentation.ubuntu.com/server/how-to/networking/timedatectl-and-timesyncd/>.
+
+`timedatectl status`: check the timedatectl status\
+`timedatectl list-timezones`: show the timezones\
+`sudo timedatectl set-timezone Australia/Sydney`: Sets the timezone to Australia/Sydney\
+> [!TIP] Consider Distribution Rec Method
+> Eg: Ubuntu usually recommends `sudo dpkg-reconfigure tzdata`
+
+`sudo timedatectl set-local-rtc 0`: Maintains the RTC in UTC. set to 1 to maintain in local timezone.
+
+`systemctl status systemd-timesyncd`: If masked or missing, you may have chrony installed.\
+Timesyncd can configured in `/etc/systemd/timesyncd.conf` & `/etc/systemd/timesyncd.conf.d/`.
 
 #### resolvectl
 
