@@ -7,7 +7,8 @@ categories:
     - Linux
 type: pages
 published: true
-lastmod: 2025-01-19T05:55:34.832Z
+date: 2024-12-13T15:22:00
+lastmod: 2025-01-19T07:13:03.165Z
 ---
 
 [home](/) [up](./)

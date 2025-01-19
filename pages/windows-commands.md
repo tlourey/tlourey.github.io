@@ -6,6 +6,8 @@ categories:
     - Commands
 type: pages
 published: true
+date: 2024-12-31T11:24:00
+lastmod: 2025-01-19T07:21:18.049Z
 ---
 
 [home](/) [up](./)

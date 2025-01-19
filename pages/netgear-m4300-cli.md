@@ -8,6 +8,8 @@ categories:
 type: pages
 published: true
 draft: false
+date: 2024-11-02T11:39:00
+lastmod: 2025-01-19T07:29:50.596Z
 ---
 
 [home](/) [up](./)

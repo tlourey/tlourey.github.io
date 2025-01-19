@@ -1,14 +1,16 @@
 ---
 title: KQL Queries
-description: "KQL Queries to remember"
+description: KQL Queries to remember
 published: false
 categories:
-  - References
-  - Language
+    - References
+    - Language
 type: pages
 draft: true
 tags: []
 fmContentType: pages
+date: 2025-01-18T16:51:00
+lastmod: 2025-01-19T07:17:38.718Z
 ---
 
 [home](/) [up](./)

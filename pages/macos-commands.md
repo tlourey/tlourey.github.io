@@ -8,6 +8,8 @@ categories:
     - MacOS
 type: pages
 draft: true
+date: 2025-01-11T11:50:00
+lastmod: 2025-01-19T07:20:15.009Z
 ---
 
 [home](/) [up](./)

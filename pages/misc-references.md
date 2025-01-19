@@ -1,13 +1,15 @@
 ---
 title: Misc References
-description: "Another Doom Pile"
+description: Another Doom Pile
 published: false
 categories:
-- References
+    - References
 type: pages
 draft: true
 tags: []
 fmContentType: pages
+date: 2025-01-18T16:52:00
+lastmod: 2025-01-19T07:18:16.765Z
 ---
 
 [home](/) [up](./)

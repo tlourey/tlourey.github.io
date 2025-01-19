@@ -8,6 +8,8 @@ categories:
     - Monitoring
 type: pages
 draft: true
+lastmod: 2025-01-19T07:14:02.656Z
+date: 2025-01-15T01:07:00
 ---
 
 [home](/) [up](./)
@@ -19,6 +21,7 @@ draft: true
 * [DCE - Data Collection Endpoint](#dce---data-collection-endpoint)
 * [LAW - Log Analytics Workspace](#law---log-analytics-workspace)
 * [Streams and Data Sources](#streams-and-data-sources)
+* [Misc References](#misc-references)
 <!--- cSpell:enable --->
 ## Overview
 
@@ -104,3 +107,8 @@ From [Structure of a data collection rule (DCR) in Azure Monitor](https://learn.
 * [Full list of 240 possible streams values (Oct 20, 2022)](https://github.com/Azure/azure-rest-api-specs/issues/21200#:~:text=Full%20list%20of%20240%20possible%20streams%20values)
 
 [Azure Monitor data sources and data collection methods](https://learn.microsoft.com/en-us/azure/azure-monitor/data-sources)
+
+## Misc References
+
+<https://learn.microsoft.com/en-us/azure/azure-monitor/agents/troubleshooter-ama-windows?tabs=WindowsPowerShell#linux-troubleshooter>\
+<https://learn.microsoft.com/en-us/azure/azure-monitor/agents/troubleshooter-ama-linux?tabs=redhat%2CGenerateLogs>

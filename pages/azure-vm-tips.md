@@ -7,6 +7,8 @@ categories:
     - Azure
 type: pages
 draft: true
+date: 2025-01-15T14:05:00
+lastmod: 2025-01-19T07:19:23.240Z
 ---
 
 [home](/) [up](./)

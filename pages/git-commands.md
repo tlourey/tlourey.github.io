@@ -7,6 +7,8 @@ categories:
     - Commands
 published: true
 draft: true
+date: 2025-01-05T14:25:00
+lastmod: 2025-01-19T07:28:56.579Z
 ---
 
 [home](/) [up](./)
