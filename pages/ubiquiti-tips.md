@@ -10,10 +10,10 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-01-19T13:41:30.797Z
+lastmod: 2025-01-19T14:19:38.748Z
 ---
 
-[home](/) [up](./)
+
 <!--- cSpell:disable --->
 * [UniFi](#unifi)
   * [Logs](#logs)

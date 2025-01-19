@@ -11,10 +11,10 @@ draft: true
 tags: []
 fmContenttype: pages
 date: 2025-01-18T16:51:00
-lastmod: 2025-01-19T13:33:58.396Z
+lastmod: 2025-01-19T14:19:38.728Z
 ---
 
-[home](/) [up](./)
+
  <!--- cSpell:disable --->
 * [KQL Functions](#kql-functions)
   * [count](#count)

@@ -10,10 +10,10 @@ layout: pages
 published: true
 fmContenttype: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-01-19T13:36:43.151Z
+lastmod: 2025-01-19T14:19:38.763Z
 ---
 
-[home](/) [up](./)
+
 <!--- cSpell:disable --->
 * [Terminal Stuff](#terminal-stuff)
 * [Files](#files)

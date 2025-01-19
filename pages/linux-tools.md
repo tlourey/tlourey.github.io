@@ -10,10 +10,10 @@ layout: pages
 draft: true
 published: true
 date: 2025-01-11T16:40:00
-lastmod: 2025-01-19T13:37:10.629Z
+lastmod: 2025-01-19T14:19:38.786Z
 ---
 
-[home](/) [up](./)
+
 <!--- cSpell:disable --->
 * [etckeeper](#etckeeper)
   * [etckeeper Commands](#etckeeper-commands)

@@ -8,10 +8,10 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:34:00
-lastmod: 2025-01-19T13:45:49.704Z
+lastmod: 2025-01-19T14:19:38.737Z
 ---
 
-[home](/) [up](./)
+
 <!--- cSpell:disable --->
 * [Azure](#azure)
 * [Amazon](#amazon)

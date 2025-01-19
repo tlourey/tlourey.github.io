@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-19T05:11:17.664Z
+modifieddate: 2025-01-19T14:19:38.794Z
 categories:
     - Sentinel
     - Monitoring
@@ -17,7 +17,7 @@ layout: posts
 fmContentType: posts
 ---
 
-[home](/) [up](./)
+
 
 <!--
 ## Draft talking points - Delete before publishing

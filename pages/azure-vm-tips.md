@@ -3,16 +3,16 @@ title: Azure VM Tips
 description: Tips for setting up Azure VM's
 published: true
 categories:
-  - References
-  - Azure
+    - References
+    - Azure
 type: pages
 layout: pages
 draft: true
 date: 2025-01-15T14:05:00
-lastmod: 2025-01-19T07:37:08.439Z
+lastmod: 2025-01-19T14:19:38.752Z
 ---
 
-[home](/) [up](./)
+
 <!--- cSpell:disable --->
 * [DNS Settings](#dns-settings)
 * [2nd or Static Mac Address on Nic in Azure](#2nd-or-static-mac-address-on-nic-in-azure)

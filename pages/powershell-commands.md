@@ -10,10 +10,10 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-19T13:39:43.085Z
+lastmod: 2025-01-19T14:19:38.770Z
 ---
 
-[home](/) [up](./)
+
 <!--- cSpell:disable --->
 * [Oneliners](#oneliners)
   * [User Management](#user-management)

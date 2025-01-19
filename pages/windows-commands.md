@@ -8,10 +8,10 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-01-19T13:42:04.964Z
+lastmod: 2025-01-19T14:19:38.778Z
 ---
 
-[home](/) [up](./)
+
 <!--- cSpell:disable --->
 * [Query Commands](#query-commands)
 * [Uptime](#uptime)

@@ -12,7 +12,7 @@ type: posts
 layout: posts
 ---
 
-[home](/) [up](./)
+
  <!--- cSpell:disable --->
 * [TL;DR](#tldr)
 * [Intro](#intro)
