@@ -7,6 +7,7 @@ categories:
     - Linux
 type: pages
 published: true
+lastmod: 2025-01-19T05:55:34.832Z
 ---
 
 [home](/) [up](./)
@@ -281,6 +282,8 @@ Netplan:
 `netstat`:
 > [!NOTE] netstat
 > netstat is a cross platform command existing in Unix, Linux, Mac and Windows but nearly all of them have different options/switches/parameters
+
+`sudo netstat -tulpn`: show listening.
 
 `nslookup`
 `dig`
