@@ -51,7 +51,7 @@ TBC
 * [Intro](#intro)
 * [Scenario](#scenario)
 * [Syslog Noise](#syslog-noise)
-* [DCR](#dcr)
+* [DCR Transformation](#dcr-transformation)
   * [Editing DCRs](#editing-dcrs)
   * [How can I check the DCR Transformation?](#how-can-i-check-the-dcr-transformation)
   * [Is this really a fix?](#is-this-really-a-fix)
@@ -82,11 +82,11 @@ Where is the noise coming from? I had to muck around with syslog configs to get 
 * Azure Monitor Agent
 * I can't remember the 3rd
 
-So we need to reduce the noise. I planned on taking one of the two approaches
+So we need to reduce the noise. There are two approaches I came to. DCR Transformation & Rsyslog config modification.
 
-## DCR
+## DCR Transformation
 
-They suggest modifying the DCR with something like this:
+MS suggest modifying the DCR with something like this:
 
 ```json
           "dataFlows": [
@@ -122,7 +122,9 @@ Note that not all KQL is supported in Transformations. Refer to [Supported KQL f
 
 ### Editing DCRs
 
-"Cool Story Bro, but I really don't want to fuck around that much...". Me either so there is a cheat if its simple. Using the DCR's Export Template, click deploy and edit the template before you submit it, right over the top of the existing rule.
+Creating and Editing DCR's normally requires you to hard code JSON and submit via the API.
+
+"Cool Story Bro, but I really don't want to fuck around that much...". Me either so there is a cheat if your Transformation is simple. Using the Export Template feature of the Azure Portal on the DCR, click deploy and edit the template before you submit it, right over the top of the existing rule.
 
 1. Go to Azure Monitor
 2. Go to Settings --> Data Collection Rules
