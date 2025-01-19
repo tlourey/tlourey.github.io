@@ -2,19 +2,19 @@
 title: Linux Tools
 description: Linux tools to remember
 categories:
-  - References
-  - Tools
-  - Linux
+    - References
+    - Tools
+    - Linux
 type: pages
 layout: pages
 draft: true
 published: true
 date: 2025-01-11T16:40:00
-lastmod: 2025-01-19T07:37:08.406Z
+lastmod: 2025-01-19T13:37:10.629Z
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [etckeeper](#etckeeper)
   * [etckeeper Commands](#etckeeper-commands)
   * [etckeeper Notes](#etckeeper-notes)
@@ -31,6 +31,7 @@ lastmod: 2025-01-19T07:37:08.406Z
   * [apt-unattended Commands](#apt-unattended-commands)
   * [apt-unattended Notes](#apt-unattended-notes)
   * [apt-unattended References](#apt-unattended-references)
+<!--- cSpell:enable --->
 
 ## etckeeper
 

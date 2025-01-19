@@ -3,23 +3,24 @@ title: Mac OS Commands
 description: Commands to remember for Mac OS
 published: true
 categories:
-  - References
-  - Commands
-  - MacOS
+    - References
+    - Commands
+    - MacOS
 type: pages
 layout: pages
 draft: true
 date: 2025-01-11T11:50:00
-lastmod: 2025-01-19T07:37:08.403Z
+lastmod: 2025-01-19T13:37:59.836Z
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [Networking](#networking)
 * [Admin](#admin)
 * [Hardware](#hardware)
 * [Directory Services](#directory-services)
 * [References](#references)
+<!--- cSpell:enable --->
 
 ## Networking
 

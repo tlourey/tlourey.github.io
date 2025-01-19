@@ -3,23 +3,24 @@ title: Ubiquiti Tips
 description: Tips and things to remember with Ubiquiti, UniFi, UISP, EdgeRouter systems
 published: true
 categories:
-  - References
-  - Commands
-  - Tips
+    - References
+    - Commands
+    - Tips
 type: pages
 layout: pages
 draft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-01-19T07:37:08.367Z
+lastmod: 2025-01-19T13:41:30.797Z
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [UniFi](#unifi)
   * [Logs](#logs)
   * [Monitoring](#monitoring)
 * [EdgeRouter](#edgerouter)
   * [MAC Address Searching on command line](#mac-address-searching-on-command-line)
+<!--- cSpell:enable --->
 
 ## UniFi
 

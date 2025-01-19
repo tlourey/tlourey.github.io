@@ -4,22 +4,22 @@ description: Another Doom Pile
 published: false
 categories:
     - References
-type: pages 
+type: pages
 layout: pages
 draft: true
 tags: []
-fmContenttype: pages 
-layout: pages
+fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-01-19T07:18:16.765Z
+lastmod: 2025-01-19T13:38:51.693Z
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [Standards](#standards)
   * [CEF](#cef)
   * [SMTP](#smtp)
 * [Linux](#linux)
+<!--- cSpell:enable --->
 
 ## Standards
 

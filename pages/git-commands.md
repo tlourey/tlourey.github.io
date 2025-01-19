@@ -13,8 +13,9 @@ lastmod: 2025-01-19T07:37:08.423Z
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [Internet References](#internet-references)
+<!--- cSpell:enable --->
 
 ## Internet References
 

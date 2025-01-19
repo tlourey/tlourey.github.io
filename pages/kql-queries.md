@@ -5,14 +5,13 @@ published: false
 categories:
     - References
     - Language
-type: pages 
+type: pages
 layout: pages
 draft: true
 tags: []
-fmContenttype: pages 
-layout: pages
+fmContenttype: pages
 date: 2025-01-18T16:51:00
-lastmod: 2025-01-19T07:17:38.718Z
+lastmod: 2025-01-19T13:33:58.396Z
 ---
 
 [home](/) [up](./)
@@ -26,6 +25,7 @@ lastmod: 2025-01-19T07:17:38.718Z
   * [Get Watch List](#get-watch-list)
 * [Misc References](#misc-references)
 <!--- cSpell:enable --->
+
 ## KQL Functions
 
 ### count

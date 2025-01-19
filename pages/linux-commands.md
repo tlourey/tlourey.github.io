@@ -2,14 +2,15 @@
 title: Linux Commands
 description: Linux commands to remember
 categories:
-  - References
-  - Commands
-  - Linux
+    - References
+    - Commands
+    - Linux
 type: pages
 layout: pages
 published: true
+fmContenttype: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-01-19T07:37:08.410Z
+lastmod: 2025-01-19T13:36:43.151Z
 ---
 
 [home](/) [up](./)
@@ -36,6 +37,7 @@ lastmod: 2025-01-19T07:37:08.410Z
   * [OpenSSL Links](#openssl-links)
 * [Misc System Commands](#misc-system-commands)
 <!--- cSpell:enable --->
+
 ## Terminal Stuff
 
 ```bash

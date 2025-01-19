@@ -14,10 +14,11 @@ lastmod: 2025-01-19T07:37:08.434Z
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [Bash Scripts](#bash-scripts)
   * [Running as a user](#running-as-a-user)
   * [Misc](#misc)
+<!--- cSpell:enable --->
 
 ## Bash Scripts
 

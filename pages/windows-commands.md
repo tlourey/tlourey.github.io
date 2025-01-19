@@ -2,23 +2,24 @@
 title: Windows Commands
 description: Windows Commands to remember
 categories:
-  - Reference
-  - Commands
+    - Reference
+    - Commands
 type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-01-19T07:37:08.362Z
+lastmod: 2025-01-19T13:42:04.964Z
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [Query Commands](#query-commands)
 * [Uptime](#uptime)
 * [User Profile Management](#user-profile-management)
 * [Bitlocker Status](#bitlocker-status)
 * [Unformatted to add above](#unformatted-to-add-above)
 * [Additional Resources](#additional-resources)
+<!--- cSpell:enable --->
 
 ## Query Commands
 

@@ -3,23 +3,24 @@ title: Markdown Tips
 description: Flavor Flav says "GFM is da shit yo"
 published: true
 categories:
-  - References
-  - Language
+    - References
+    - Language
 type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-19T07:37:08.397Z
+lastmod: 2025-01-19T13:38:21.369Z
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [References](#references)
 * [important thigns to remember](#important-thigns-to-remember)
   * [Tables](#tables)
 * [Not important things to remember](#not-important-things-to-remember)
   * [Collapsed Section](#collapsed-section)
   * [You can add a header](#you-can-add-a-header)
+<!--- cSpell:enable --->
 
 (TOC might be slightly weird)
 

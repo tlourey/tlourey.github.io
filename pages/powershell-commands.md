@@ -2,19 +2,19 @@
 title: Powershell Commands
 description: Powershell Commands to remember
 categories:
-  - Reference
-  - Commands
-  - PowerShell
-  - Language
+    - Reference
+    - Commands
+    - PowerShell
+    - Language
 type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-19T07:37:08.384Z
+lastmod: 2025-01-19T13:39:43.085Z
 ---
 
 [home](/) [up](./)
-
+<!--- cSpell:disable --->
 * [Oneliners](#oneliners)
   * [User Management](#user-management)
   * [Connecting to a remote server via powershell](#connecting-to-a-remote-server-via-powershell)
@@ -27,6 +27,7 @@ lastmod: 2025-01-19T07:37:08.384Z
 * [Commands often forgotten](#commands-often-forgotten)
 * [Additional Resources](#additional-resources)
 * [Other resources to add](#other-resources-to-add)
+<!--- cSpell:enable --->
 
 ## Oneliners
 

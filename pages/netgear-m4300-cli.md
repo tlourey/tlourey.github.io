@@ -2,15 +2,15 @@
 title: Netgear Fully Managed Switch M4300 CLI Reference
 description: Commands to remember for Netgear Switches
 categories:
-  - References
-  - Commands
-  - Networks
+    - References
+    - Commands
+    - Networks
 type: pages
 layout: pages
 published: true
 draft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-01-19T07:37:08.388Z
+lastmod: 2025-01-19T13:39:09.730Z
 ---
 
 [home](/) [up](./)
@@ -19,7 +19,7 @@ lastmod: 2025-01-19T07:37:08.388Z
 > These commands are based on M4300's only. Do not use on older models. Use the commands below with caution. Make sure you backup beforehand. Some commands can cause Netgear's to lockup if done incorrectly.
 
 Contents:
-
+<!--- cSpell:disable --->
 * [CLI Environment Levels and Basic commands](#cli-environment-levels-and-basic-commands)
 * [Config/Device Management](#configdevice-management)
 * [Firmware Upgrades and Image Management](#firmware-upgrades-and-image-management)
@@ -46,6 +46,7 @@ Contents:
   * [Settings in Exec mode](#settings-in-exec-mode)
 * [References](#references)
   * [Useful manuals](#useful-manuals)
+<!--- cSpell:enable --->
 
 ## CLI Environment Levels and Basic commands
 
