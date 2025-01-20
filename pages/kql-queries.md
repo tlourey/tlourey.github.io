@@ -11,7 +11,7 @@ draft: true
 tags: []
 fmContenttype: pages
 date: 2025-01-18T16:51:00
-lastmod: 2025-01-20T10:27:54.742Z
+lastmod: 2025-01-20T10:32:07.664Z
 ---
 
 
@@ -20,7 +20,7 @@ lastmod: 2025-01-20T10:27:54.742Z
   * [count](#count)
   * [count\_distinct](#count_distinct)
   * [isnotempty](#isnotempty)
-* [project](#project)
+  * [project](#project)
 * [KQL Queries](#kql-queries)
   * [LAW Table Usage](#law-table-usage)
   * [Get Watch List](#get-watch-list)
@@ -67,7 +67,7 @@ CommonSecurityLog
 
 <https://learn.microsoft.com/en-au/kusto/query/isnotempty-function?view=azure-monitor>
 
-## project
+### project
 
 Allows limiting of columns
 
