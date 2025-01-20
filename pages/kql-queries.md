@@ -1,7 +1,7 @@
 ---
 title: KQL Queries
 description: KQL Queries to remember
-published: false
+published: true
 categories:
     - References
     - Language
@@ -11,7 +11,7 @@ draft: true
 tags: []
 fmContenttype: pages
 date: 2025-01-18T16:51:00
-lastmod: 2025-01-20T07:32:17.328Z
+lastmod: 2025-01-20T10:27:54.742Z
 ---
 
 
@@ -110,4 +110,5 @@ Notes about KQL for Transformations: [Supported KQL features in Azure Monitor tr
 <https://github.com/rod-trent/MustLearnKQL>\
 <https://github.com/reprise99/Sentinel-Queries>\
 <https://github.com/reprise99/awesome-kql-sentinel>\
-<https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules>
+<https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules>\
+<https://www.kqlsearch.com/>
