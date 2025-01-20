@@ -33,7 +33,7 @@ Don't worry too much about reddog: (<https://learn.microsoft.com/en-us/azure/vir
 
 [Understanding static MAC address licensing in Azure](https://techcommunity.microsoft.com/blog/itopstalkblog/understanding-static-mac-address-licensing-in-azure/1386187)
 
-## First Time Setup
+### First Time Setup
 
 1. Add a 2nd Nic that isn't the primary nic to your VM
 2. Connect it up
@@ -42,7 +42,7 @@ Don't worry too much about reddog: (<https://learn.microsoft.com/en-us/azure/vir
 5. Apply preferred IP Address to 2nd nic
 6. Put an azure resource lock on 2nd nic but not end of world if it gets deleted.
 
-## Using on 2nd machine
+### Using on 2nd machine
 
 1. Add a 2nd Nic that isn't the primary nic to your VM
 2. Connect it up
