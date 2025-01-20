@@ -11,7 +11,7 @@ draft: true
 tags: []
 fmContenttype: pages
 date: 2025-01-18T16:51:00
-lastmod: 2025-01-19T14:19:38.728Z
+lastmod: 2025-01-20T07:27:30.843Z
 ---
 
 
@@ -20,6 +20,7 @@ lastmod: 2025-01-19T14:19:38.728Z
   * [count](#count)
   * [count\_distinct](#count_distinct)
   * [isnotempty](#isnotempty)
+* [project](#project)
 * [KQL Queries](#kql-queries)
   * [LAW Table Usage](#law-table-usage)
   * [Get Watch List](#get-watch-list)
@@ -50,7 +51,7 @@ StormEvents
 | top 5 by UniqueEvents
 ```
 
-<https://learn.microsoft.com/en-au/kusto/query/count-distinct-aggregation-function?view=microsoft-fabric>
+<https://learn.microsoft.com/en-au/kusto/query/count-distinct-aggregation-function?view=azure-monitor>
 <!--- cSpell:disable --->
 ### isnotempty
 <!--- cSpell:enable --->
@@ -64,7 +65,25 @@ CommonSecurityLog
 | where isnotempty(DeviceVendor)
 ```
 
-<https://learn.microsoft.com/en-us/kusto/query/isnotempty-function?view=azure-monitor>
+<https://learn.microsoft.com/en-au/kusto/query/isnotempty-function?view=azure-monitor>
+
+## project
+
+Allows limiting of columns
+
+```kql
+StormEvents
+| project State
+```
+
+<https://learn.microsoft.com/en-au/kusto/query/project-operator?view=azure-monitor>
+
+Other project related operators:
+
+* [project-away-operator](https://learn.microsoft.com/en-au/kusto/query/project-away-operator?view=azure-monitor)
+* [project-keep-operator](https://learn.microsoft.com/en-au/kusto/query/project-keep-operator?view=azure-monitor)
+* [project-rename-operator](https://learn.microsoft.com/en-au/kusto/query/project-rename-operator?view=azure-monitor)
+* [project-reorder-operator](https://learn.microsoft.com/en-au/kusto/query/project-reorder-operator?view=azure-monitor)
 
 ## KQL Queries
 
@@ -87,4 +106,8 @@ _GetWatchlist('NetworkAddresses')
 
 ## Misc References
 
-Notes about KQL for Transformations: [Supported KQL features in Azure Monitor transformations](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-transformations-kql)
+Notes about KQL for Transformations: [Supported KQL features in Azure Monitor transformations](https://learn.microsoft.com/en-au/azure/azure-monitor/essentials/data-collection-transformations-kql)\
+<https://github.com/rod-trent/MustLearnKQL>\
+<https://github.com/reprise99/Sentinel-Queries>\
+<https://github.com/reprise99/awesome-kql-sentinel>\
+<https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules>
