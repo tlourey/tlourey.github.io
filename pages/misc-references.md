@@ -42,3 +42,10 @@ lastmod: 2025-01-20T07:39:20.002Z
 ## Linux
 
 Crontab: Best website for refining crontab timings: [Crontab.guru - The cron schedule expression generator](https://crontab.guru/) - more in [Linux Commands](linux-commands.md)
+
+### Debian Manuals
+
+[The Debian Administrators Handbook](https://www.debian.org/doc/manuals/debian-handbook/index.en.html)\
+[Debian Reference](https://www.debian.org/doc/manuals/debian-reference/index.en.html)\
+[Securing Debian Manual](https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html)\
+<https://www.debian.org/doc/>
