@@ -11,12 +11,12 @@ draft: true
 tags: []
 fmContenttype: pages
 date: 2025-01-18T16:51:00
-lastmod: 2025-01-20T07:27:30.843Z
+lastmod: 2025-01-20T07:32:17.328Z
 ---
 
 
  <!--- cSpell:disable --->
-* [KQL Functions](#kql-functions)
+* [KQL Language](#kql-language)
   * [count](#count)
   * [count\_distinct](#count_distinct)
   * [isnotempty](#isnotempty)
@@ -27,7 +27,7 @@ lastmod: 2025-01-20T07:27:30.843Z
 * [Misc References](#misc-references)
 <!--- cSpell:enable --->
 
-## KQL Functions
+## KQL Language
 
 ### count
 
