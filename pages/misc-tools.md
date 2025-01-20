@@ -1,15 +1,16 @@
 ---
 title: Misc Tools
 description: And not enough toolboxes
-published: true
 categories:
     - Tools
 type: pages
 layout: pages
 draft: true
+published: true
 tags: []
 fmContentType: pages
-lastmod: 2025-01-20T10:27:36.018Z
+date: 2025-01-20T20:00:00
+lastmod: 2025-01-20T10:55:58.808Z
 ---
 
  <!--- cSpell:disable --->
