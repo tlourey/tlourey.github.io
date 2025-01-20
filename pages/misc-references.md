@@ -10,7 +10,7 @@ draft: true
 tags: []
 fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-01-19T14:19:38.741Z
+lastmod: 2025-01-20T07:39:20.002Z
 ---
 
 
@@ -20,6 +20,11 @@ lastmod: 2025-01-19T14:19:38.741Z
   * [SMTP](#smtp)
 * [Linux](#linux)
 <!--- cSpell:enable --->
+
+<!---
+* [ ] add in ubuntu documentation links
+* [ ] add in debian manuals
+--->
 
 ## Standards
 
