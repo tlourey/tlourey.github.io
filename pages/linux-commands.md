@@ -10,7 +10,7 @@ layout: pages
 published: true
 fmContenttype: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-01-19T14:19:38.763Z
+lastmod: 2025-01-20T07:30:30.353Z
 ---
 
 
@@ -23,6 +23,7 @@ lastmod: 2025-01-19T14:19:38.763Z
 * [Log files](#log-files)
 * [Cron](#cron)
 * [Accounts and Groups](#accounts-and-groups)
+* [Apt](#apt)
 * [Main SystemD Commands](#main-systemd-commands)
   * [Important Commands](#important-commands)
     * [systemctl](#systemctl)
@@ -118,11 +119,11 @@ REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 `sudo crontab -l`: root's crontab?
 `cat /etc/crontab`: system crontab file
 `crontab -e`: edit crontab file (can't remember if this needs sudo or not)
-`ls /etc/cron.d/`: indivudal crontab files
-`ls /etc/cron.hourly`: indivudal scripts to run as root hourly
-`ls /etc/cron.daily/`: indivudal scripts to run as root daily
-`ls /etc/cron.weekly/`: indivudal scripts to run as root weekly
-`ls /etc/cron.monthly/`: indivudal scripts to run as root monthly
+`ls /etc/cron.d/`: individual crontab files
+`ls /etc/cron.hourly`: individual scripts to run as root hourly
+`ls /etc/cron.daily/`: individual scripts to run as root daily
+`ls /etc/cron.weekly/`: individual scripts to run as root weekly
+`ls /etc/cron.monthly/`: individual scripts to run as root monthly
 
 `cat /etc/default/cron`: cron's default settings
 
@@ -154,6 +155,14 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `sudo adduser XXX sudo`: if user also needs sudo\
 `sudo useradd -m -G sshlogin,sudo XXX -s /bin/bash`: sets a users shell, shouldn't be needed much these days\
 `sudo passwd XXX`: if you need to change user's password
+
+## Apt
+
+TBC
+<!---
+* [ ] apt vs apt-get vs aptitude vs dpkg
+* [ ] link out to reference and guidance
+--->
 
 ## Main SystemD Commands
 
@@ -331,8 +340,8 @@ To use a lower version of TLS (Results may vary in newer versions): <https://ask
 
 `sudo dpkg-reconfigure tzdata`: Set timezone\
 `cat /proc/sys/net/ipv4/ip_forward` check the proc setting\
-`echo 1 > /proc/sys/net/ipv4/ip_forward` set it temporaryly\
-`sysctl -w net.ipv4.ip_forward=0` also set it temporaryly\
+`echo 1 > /proc/sys/net/ipv4/ip_forward` set it temporarily\
+`sysctl -w net.ipv4.ip_forward=0` also set it temporarily\
 `sudo vi /etc/sysctl.conf` and add:
 
 ```bash
