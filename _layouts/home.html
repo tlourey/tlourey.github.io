@@ -38,7 +38,7 @@
 
     <main id="content" class="main-content" role="main">
       <div class="row">
-        <div class="column" style="background-color:#aaa;">
+        <div class="column">
           <h1>Pages</h1>
           <p><a href="https://tlourey.github.io/pages/">View all pages</a><br>
             {% assign doclist = site.pages | sort: 'title' %}
@@ -50,7 +50,7 @@
             {% endfor %}
             </ul></p>
         </div>
-        <div class="column" style="background-color:#bbb;">
+        <div class="column">
           <h1>Posts</h1>
           <p>{% assign doclist = site.posts | sort: 'title' %}
             <ul>
