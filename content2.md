@@ -1,9 +1,9 @@
 ---
-title: Home
+title: Home2
 description: "All the shit you don't really want"
 # sidebar: toc
 type: index
-layout: home
+layout: home2
 ---
 
 ## Pages
