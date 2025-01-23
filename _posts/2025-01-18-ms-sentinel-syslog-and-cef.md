@@ -253,11 +253,11 @@ Using the same Azure Metrics I used for the DCR, I should have seen a drop, but 
 
 ## Summary
 
-So we haven't worked out the syslog part (yet) but we can keep trying. Some reading indicates that Syslog-NG may be able to modify messages before being processed which may be a better may to attack the problem but I haven't looked into that yet.
+So we haven't worked out the syslog part (yet) but we can keep trying. Some reading indicates that Syslog-NG may be able to modify messages before being processed which may be a better way to attack the problem but I haven't looked into that yet. But here are the takeaways:
 
 * Use DCR KQL Transforms to reduce noise being imported
-* Consider adjusting rsyslog.d conf for azure monitoring Agent
-* Learn facilities (and their history/usage in your Distribution), syslog and the log files and how they work and more importantly, interact
+* Consider adjusting rsyslog.d conf for Azure Monitoring Agent (since my edits are not yet working)
+* Learn facilities (and their history & usage in your Distribution), syslog and the log files and how they work and more importantly, interact
 * Spend more time designing / planning your syslog setup.
 
 ## References
