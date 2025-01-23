@@ -12,12 +12,12 @@ type: posts
 layout: posts
 ---
 
-
- <!--- cSpell:disable --->
+<!--- cSpell:disable --->
 * [TL;DR](#tldr)
 * [Intro](#intro)
 * [Summary](#summary)
- <!--- cSpell:enable --->
+<!--- cSpell:enable --->
+
 ## TL;DR
 
 ## Intro
