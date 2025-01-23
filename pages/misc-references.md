@@ -1,7 +1,7 @@
 ---
 title: Misc References
 description: Another Doom Pile
-published: false
+published: true
 categories:
     - References
 type: pages
@@ -10,7 +10,7 @@ draft: true
 tags: []
 fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-01-20T07:39:20.002Z
+lastmod: 2025-01-20T10:25:57.137Z
 ---
 
 
@@ -19,11 +19,13 @@ lastmod: 2025-01-20T07:39:20.002Z
   * [CEF](#cef)
   * [SMTP](#smtp)
 * [Linux](#linux)
+  * [Debian Manuals](#debian-manuals)
+  * [Ubuntu Manuals](#ubuntu-manuals)
 <!--- cSpell:enable --->
 
 <!---
 * [ ] add in ubuntu documentation links
-* [ ] add in debian manuals
+* [x] add in debian manuals
 --->
 
 ## Standards
@@ -32,8 +34,7 @@ lastmod: 2025-01-20T07:39:20.002Z
 
 [What is CEF?](https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors-8.3/cef-implementation-standard/Content/CEF/Chapter%201%20What%20is%20CEF.htm)
 
-[Implementing ArcSight Common Event Format
-(CEF) - Version 26](https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors-8.4/pdfdoc/cef-implementation-standard/cef-implementation-standard.pdf) - Standards Document
+[Implementing ArcSight Common Event Format(CEF) - Version 26](https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors-8.4/pdfdoc/cef-implementation-standard/cef-implementation-standard.pdf) - Standards Document
 
 ### SMTP
 
@@ -42,3 +43,14 @@ lastmod: 2025-01-20T07:39:20.002Z
 ## Linux
 
 Crontab: Best website for refining crontab timings: [Crontab.guru - The cron schedule expression generator](https://crontab.guru/) - more in [Linux Commands](linux-commands.md)
+
+### Debian Manuals
+
+[The Debian Administrators Handbook](https://www.debian.org/doc/manuals/debian-handbook/index.en.html)\
+[Debian Reference](https://www.debian.org/doc/manuals/debian-reference/index.en.html)\
+[Securing Debian Manual](https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html)\
+<https://www.debian.org/doc/>
+
+### Ubuntu Manuals
+
+[Ubuntu Server Documentation](https://documentation.ubuntu.com/server/)

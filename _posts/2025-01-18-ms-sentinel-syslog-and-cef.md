@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-19T14:19:38.794Z
+modifieddate: 2025-01-20T13:06:01.381Z
 categories:
     - Sentinel
     - Monitoring
@@ -39,8 +39,8 @@ fmContentType: posts
 Getting CEF Messages into Azure Sentinel is a pain.\
 You can easily send far more than you wanted and then you're paying for ingestion / storage you didn't mean to.\
 There are some queries to determine how big the problem is.\
-We try to filter out the noise getting stored by implementing a simple Azure Monitor Data Collection Rule Transformation.\
-We try to filter out the noise getting sent in the first place by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent.\
+We try to filter out the noise *getting stored* by implementing a simple Azure Monitor Data Collection Rule Transformation.\
+We try to filter out the noise *getting sent in the first place* by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent.\
 We cover some methods to monitor / test if they work.
 The concept could be adapted to other situations.
 
@@ -51,7 +51,7 @@ TBC
 <!--- cSpell:disable --->
 * [TL;DR](#tldr)
 * [Intro](#intro)
-* [Scenario](#scenario)
+* [Overview and Scenario](#overview-and-scenario)
 * [Syslog Noise](#syslog-noise)
 * [DCR Transformation](#dcr-transformation)
   * [Editing DCRs](#editing-dcrs)
@@ -63,9 +63,15 @@ TBC
 * [References](#references)
 <!--- cSpell:enable --->
 
-## Scenario
+## Overview and Scenario
 
 TBC
+
+Device --> Rsyslog --> AMA --> DCE --> DCR --> LAW
+API Client --> Rsyslog --> AMA --> DCE --> DCR --> LAW
+
+> [!NOTE] Technically speaking
+> Technically the DCR also gets partially put on the AMA itself.
 
 ## Syslog Noise
 
@@ -76,7 +82,7 @@ CommonSecurityLog
 | summarize Count=count() by DeviceVendor
 ```
 
-Where the device vendor is blank is syslog noise. Also note that those that know syslog facilities better than me may not have chosen the USER facility. I didn't have a choice given of my SIEM integrations.
+Where the device vendor is blank is syslog noise (Noise may be unfair, but they are not not CEF messages). Also note that those that know syslog facilities better than me may not have chosen the USER facility. I didn't have a choice given one of my SIEM integrations.
 
 Where is the noise coming from? I had to muck around with syslog configs to get an idea. But here are some examples I found:
 

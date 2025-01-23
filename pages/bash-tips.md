@@ -1,6 +1,6 @@
 ---
 title: Bash Tips
-description: There are more. much more.
+description: We're gonna need a bigger boat, I mean tip page
 published: true
 categories:
     - References
