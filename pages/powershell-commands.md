@@ -1,6 +1,6 @@
 ---
-title: Powershell Commands
-description: Powershell Commands to remember
+title: PowerShell Commands
+description: PowerShell Commands to remember
 categories:
     - Reference
     - Commands
@@ -10,7 +10,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-19T14:19:38.770Z
+lastmod: 2025-01-23T09:42:07.898Z
 ---
 
 
@@ -143,7 +143,7 @@ Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).Ad
 Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).AddDays(-1)) -EndDate (get-date) -SenderAddress joe.blogs@domain.com | get-messagetracedetail | fl
 ```
 
-Tempoarly increase mailbox size
+Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)
 
 ```powershell
 Set-Mailbox -id <<email@domain.com>> -ProhibitSendQuota <<Value>> -ProhibitSendReceiveQuota <<Value>>
@@ -164,7 +164,7 @@ enable archive mailbox
 Enable-Mailbox -Identity mailbox -Archive
 ```
 
-Turn on auto expanding archive (only use if licenced for exchange archive)
+Turn on auto expanding archive (only use if licensed for exchange archive)
 
 ```powershell
 Enable-Mailbox -Identity user -AutoExpandingArchive
@@ -252,4 +252,4 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 
 ## Other resources to add
 
-* [ ] Impliment oneliners from comments
+* [ ] Implement oneliners from comments
