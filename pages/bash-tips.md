@@ -7,14 +7,18 @@ categories:
     - Tips
     - Language
 type: pages
+layout: pages
 draft: true
+date: 2025-01-17T13:05:00
+lastmod: 2025-01-19T14:19:38.724Z
 ---
 
-[home](/) [up](./)
 
+<!--- cSpell:disable --->
 * [Bash Scripts](#bash-scripts)
   * [Running as a user](#running-as-a-user)
   * [Misc](#misc)
+<!--- cSpell:enable --->
 
 ## Bash Scripts
 

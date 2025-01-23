@@ -6,11 +6,15 @@ categories:
     - Commands
     - Linux
 type: pages
+layout: pages
 published: true
+fmContenttype: pages
+date: 2024-12-13T15:22:00
+lastmod: 2025-01-20T07:30:30.353Z
 ---
 
-[home](/) [up](./)
 
+<!--- cSpell:disable --->
 * [Terminal Stuff](#terminal-stuff)
 * [Files](#files)
 * [Hardware Info](#hardware-info)
@@ -18,6 +22,8 @@ published: true
   * [MDADM](#mdadm)
 * [Log files](#log-files)
 * [Cron](#cron)
+* [Accounts and Groups](#accounts-and-groups)
+* [Apt](#apt)
 * [Main SystemD Commands](#main-systemd-commands)
   * [Important Commands](#important-commands)
     * [systemctl](#systemctl)
@@ -31,6 +37,7 @@ published: true
 * [OpenSSL Commands](#openssl-commands)
   * [OpenSSL Links](#openssl-links)
 * [Misc System Commands](#misc-system-commands)
+<!--- cSpell:enable --->
 
 ## Terminal Stuff
 
@@ -112,11 +119,11 @@ REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 `sudo crontab -l`: root's crontab?
 `cat /etc/crontab`: system crontab file
 `crontab -e`: edit crontab file (can't remember if this needs sudo or not)
-`ls /etc/cron.d/`: indivudal crontab files
-`ls /etc/cron.hourly`: indivudal scripts to run as root hourly
-`ls /etc/cron.daily/`: indivudal scripts to run as root daily
-`ls /etc/cron.weekly/`: indivudal scripts to run as root weekly
-`ls /etc/cron.monthly/`: indivudal scripts to run as root monthly
+`ls /etc/cron.d/`: individual crontab files
+`ls /etc/cron.hourly`: individual scripts to run as root hourly
+`ls /etc/cron.daily/`: individual scripts to run as root daily
+`ls /etc/cron.weekly/`: individual scripts to run as root weekly
+`ls /etc/cron.monthly/`: individual scripts to run as root monthly
 
 `cat /etc/default/cron`: cron's default settings
 
@@ -128,6 +135,34 @@ Best website for refining crontab timings: [Crontab.guru - The cron schedule exp
 Very well know cron bug that has been left in there by design: <https://crontab.guru/cron-bug.html>
 
 Also refer to [systemctl](#systemctl) commands for times and the links in [SystemD Links](#systemd-links) about timers. SystemD timers do the same thing as cron but they are newer.
+
+## Accounts and Groups
+
+`passwd -S USERNAME` shows the date and status of a users password.
+> Display account status information. The status information consists of 7 fields. The first field is the user's login name. The second field indicates if the user account has a locked password (L), has no password (NP), or has a usable password (P). The third field gives the date of the last password change. The next four fields are the minimum age, maximum age, warning period, and inactivity period for the password. These ages are expressed in days.
+
+`sudo passwd -l USERNAME`: Lock out a users password. Doesn't disable account, just doesn't allow password.
+> [!CAUTION] Use `passwd -l` with caution
+> This is not the best way to not get prompted for sudo. Because you can't run sudo with a locked password unless you have a no password entry. Use with caution if you don't have a way to roll back!
+
+`sudo passwd -u USERNAME`: unlock password.\
+`sudo usermod --expiredate 1 USERNAME`: Disables an account.\
+`sudo faillog -l 60 olivia`: lock out Olivia for 60 mins
+
+`sudo addgroup sshlogin`\
+`sudo adduser XXX`\
+`sudo adduser XXX sshlogin`: add other users group\
+`sudo adduser XXX sudo`: if user also needs sudo\
+`sudo useradd -m -G sshlogin,sudo XXX -s /bin/bash`: sets a users shell, shouldn't be needed much these days\
+`sudo passwd XXX`: if you need to change user's password
+
+## Apt
+
+TBC
+<!---
+* [ ] apt vs apt-get vs aptitude vs dpkg
+* [ ] link out to reference and guidance
+--->
 
 ## Main SystemD Commands
 
@@ -144,6 +179,7 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `systemctl list-unit-files` list unit files (even those not enabled)\
 `systemctl list-unit-files | grep enabled`\
 `systemctl list-unit-files --all | grep packagename`\
+`systemctl list-unit-files --state=masked`: list masked units
 `sudo systemctl list-timers` list timers registered\
 `sudo systemctl list-timers --all` list all timers\
 `sudo systemctl cat mdcheck_start.timer`  show the unit file for the timer\
@@ -158,6 +194,8 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `sudo systemctl daemon-reload`: scan for new or changed units\
 `sudo systemctl reload mdcheck_start.service`: reloads a unit and its configuration\
 `sudo systemctl reenable mdcheck_start.service`: disables and re-enableds a unit (useful if units \[install\] section has changed)\
+`sudo systemctl mask mdcheck_start.service`: Mask a unit to make it impossible to start both manually and as a dependancy, which makes masking dangerious. It makes a sim link of the unit file to /dev/null meaning it will never start.\
+`sudo systemctl unmask mdcheck_start.service`: unmask a unit (there are more steps)\
 `systemctl show --property=UnitPath`: show paths to unit files\
 The main Unit paths are (listed from lowest to highest precedence):
 
@@ -193,7 +231,18 @@ You can have systemd override files (which apparently are like files in /etc/def
 
 #### timedatectl
 
-Time and date stuff if chrony or NTPD isn't installed
+Time and date stuff if chrony or NTPD isn't installed. Taken from <https://documentation.ubuntu.com/server/how-to/networking/timedatectl-and-timesyncd/>.
+
+`timedatectl status`: check the timedatectl status\
+`timedatectl list-timezones`: show the timezones\
+`sudo timedatectl set-timezone Australia/Sydney`: Sets the timezone to Australia/Sydney\
+> [!TIP] Consider Distribution Rec Method
+> Eg: Ubuntu usually recommends `sudo dpkg-reconfigure tzdata`
+
+`sudo timedatectl set-local-rtc 0`: Maintains the RTC in UTC. set to 1 to maintain in local timezone.
+
+`systemctl status systemd-timesyncd`: If masked or missing, you may have chrony installed.\
+Timesyncd can configured in `/etc/systemd/timesyncd.conf` & `/etc/systemd/timesyncd.conf.d/`.
 
 #### resolvectl
 
@@ -247,6 +296,8 @@ Netplan:
 > [!NOTE] netstat
 > netstat is a cross platform command existing in Unix, Linux, Mac and Windows but nearly all of them have different options/switches/parameters
 
+`sudo netstat -tulpn`: show listening.
+
 `nslookup`
 `dig`
 `hostname`
@@ -289,8 +340,8 @@ To use a lower version of TLS (Results may vary in newer versions): <https://ask
 
 `sudo dpkg-reconfigure tzdata`: Set timezone\
 `cat /proc/sys/net/ipv4/ip_forward` check the proc setting\
-`echo 1 > /proc/sys/net/ipv4/ip_forward` set it temporaryly\
-`sysctl -w net.ipv4.ip_forward=0` also set it temporaryly\
+`echo 1 > /proc/sys/net/ipv4/ip_forward` set it temporarily\
+`sysctl -w net.ipv4.ip_forward=0` also set it temporarily\
 `sudo vi /etc/sysctl.conf` and add:
 
 ```bash

@@ -6,15 +6,19 @@ categories:
     - References
     - Azure
 type: pages
+layout: pages
 draft: true
+date: 2025-01-15T14:05:00
+lastmod: 2025-01-19T14:19:38.752Z
 ---
 
-[home](/) [up](./)
 
+<!--- cSpell:disable --->
 * [DNS Settings](#dns-settings)
 * [2nd or Static Mac Address on Nic in Azure](#2nd-or-static-mac-address-on-nic-in-azure)
 * [First Time Setup](#first-time-setup)
 * [Using on 2nd machine](#using-on-2nd-machine)
+<!--- cSpell:enable --->
 
 ## DNS Settings
 

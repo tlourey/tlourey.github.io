@@ -2,7 +2,9 @@
 title: Welcome to Github Pages
 published: false
 type: content
-fmContentType: pages
+fmContenttype: pages
+layout: pages
+modifieddate: 2025-01-19T07:37:08.420Z
 ---
 
 ## Welcome to GitHub Pages

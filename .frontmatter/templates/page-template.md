@@ -5,10 +5,11 @@ published: false
 categories:
 - References
 - Commands
-type: pages
+type: pages 
+layout: pages
 ---
 
-[home](/) [up](./)
+
  <!--- cSpell:disable --->
 * [Heading](#heading)
 <!--- cSpell:enable --->

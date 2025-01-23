@@ -7,11 +7,14 @@ categories:
     - PowerShell
     - Language
 type: pages
+layout: pages
 published: true
+date: 2024-12-31T10:54:00
+lastmod: 2025-01-19T14:19:38.770Z
 ---
 
-[home](/) [up](./)
 
+<!--- cSpell:disable --->
 * [Oneliners](#oneliners)
   * [User Management](#user-management)
   * [Connecting to a remote server via powershell](#connecting-to-a-remote-server-via-powershell)
@@ -24,6 +27,7 @@ published: true
 * [Commands often forgotten](#commands-often-forgotten)
 * [Additional Resources](#additional-resources)
 * [Other resources to add](#other-resources-to-add)
+<!--- cSpell:enable --->
 
 ## Oneliners
 

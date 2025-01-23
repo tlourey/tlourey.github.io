@@ -7,16 +7,20 @@ categories:
     - Commands
     - MacOS
 type: pages
+layout: pages
 draft: true
+date: 2025-01-11T11:50:00
+lastmod: 2025-01-19T14:19:38.756Z
 ---
 
-[home](/) [up](./)
 
+<!--- cSpell:disable --->
 * [Networking](#networking)
 * [Admin](#admin)
 * [Hardware](#hardware)
 * [Directory Services](#directory-services)
 * [References](#references)
+<!--- cSpell:enable --->
 
 ## Networking
 

@@ -6,17 +6,21 @@ categories:
     - References
     - Language
 type: pages
+layout: pages
 draft: true
+date: 2025-01-17T13:40:00
+lastmod: 2025-01-19T14:19:38.774Z
 ---
 
-[home](/) [up](./)
 
+<!--- cSpell:disable --->
 * [References](#references)
 * [important thigns to remember](#important-thigns-to-remember)
   * [Tables](#tables)
 * [Not important things to remember](#not-important-things-to-remember)
   * [Collapsed Section](#collapsed-section)
   * [You can add a header](#you-can-add-a-header)
+<!--- cSpell:enable --->
 
 (TOC might be slightly weird)
 

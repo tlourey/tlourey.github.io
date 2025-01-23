@@ -5,16 +5,20 @@ categories:
     - References
     - Networks
 type: pages
+layout: pages
 published: true
+date: 2024-12-31T11:34:00
+lastmod: 2025-01-19T14:19:38.737Z
 ---
 
-[home](/) [up](./)
 
+<!--- cSpell:disable --->
 * [Azure](#azure)
 * [Amazon](#amazon)
 * [Apple](#apple)
 * [Google](#google)
 * [Cloudflare](#cloudflare)
+<!--- cSpell:enable --->
 
 ## Azure
 

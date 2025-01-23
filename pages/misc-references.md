@@ -1,21 +1,30 @@
 ---
 title: Misc References
-description: "Another Doom Pile"
+description: Another Doom Pile
 published: false
 categories:
-- References
+    - References
 type: pages
+layout: pages
 draft: true
 tags: []
-fmContentType: pages
+fmContenttype: pages
+date: 2025-01-18T16:52:00
+lastmod: 2025-01-20T07:39:20.002Z
 ---
 
-[home](/) [up](./)
 
+<!--- cSpell:disable --->
 * [Standards](#standards)
   * [CEF](#cef)
   * [SMTP](#smtp)
 * [Linux](#linux)
+<!--- cSpell:enable --->
+
+<!---
+* [ ] add in ubuntu documentation links
+* [ ] add in debian manuals
+--->
 
 ## Standards
 

@@ -7,16 +7,20 @@ categories:
     - Commands
     - Tips
 type: pages
+layout: pages
 draft: true
+date: 2025-01-17T11:12:00
+lastmod: 2025-01-19T14:19:38.748Z
 ---
 
-[home](/) [up](./)
 
+<!--- cSpell:disable --->
 * [UniFi](#unifi)
   * [Logs](#logs)
   * [Monitoring](#monitoring)
 * [EdgeRouter](#edgerouter)
   * [MAC Address Searching on command line](#mac-address-searching-on-command-line)
+<!--- cSpell:enable --->
 
 ## UniFi
 

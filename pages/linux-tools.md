@@ -6,12 +6,15 @@ categories:
     - Tools
     - Linux
 type: pages
+layout: pages
 draft: true
 published: true
+date: 2025-01-11T16:40:00
+lastmod: 2025-01-19T14:19:38.786Z
 ---
 
-[home](/) [up](./)
 
+<!--- cSpell:disable --->
 * [etckeeper](#etckeeper)
   * [etckeeper Commands](#etckeeper-commands)
   * [etckeeper Notes](#etckeeper-notes)
@@ -28,6 +31,7 @@ published: true
   * [apt-unattended Commands](#apt-unattended-commands)
   * [apt-unattended Notes](#apt-unattended-notes)
   * [apt-unattended References](#apt-unattended-references)
+<!--- cSpell:enable --->
 
 ## etckeeper
 
