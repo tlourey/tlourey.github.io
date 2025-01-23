@@ -1,7 +1,7 @@
 ---
 title: Power BI datasource security sucks
 date: 2025-01-23T07:48:04.684Z
-modifieddate: 2025-01-23T07:52:29.767Z
+modifieddate: 2025-01-23T07:54:49.975Z
 categories: []
 description: ""
 published: false
@@ -29,3 +29,7 @@ fmContentType: posts
 ## Intro
 
 ## Summary
+
+Vote for it to be better: <https://ideas.fabric.microsoft.com/ideas/idea/?ideaid=2468fe9d-498f-ec11-826d-501ac50aa35e>
+
+Other give me other ideas...
