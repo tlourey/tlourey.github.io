@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-20T13:06:01.381Z
+modifieddate: 2025-01-23T14:09:02.485Z
 categories:
     - Sentinel
     - Monitoring
@@ -40,17 +40,18 @@ Getting CEF Messages into Azure Sentinel is a pain.\
 You can easily send far more than you wanted and then you're paying for ingestion / storage you didn't mean to.\
 There are some queries to determine how big the problem is.\
 We try to filter out the noise *getting stored* by implementing a simple Azure Monitor Data Collection Rule Transformation.\
-We try to filter out the noise *getting sent in the first place* by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent.\
+We try to filter out the noise *getting sent in the first place* by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent.
+So far this **hasn't** worked. \
 We cover some methods to monitor / test if they work.
 The concept could be adapted to other situations.
 
-## Intro
+## Introduction
 
 TBC
 
 <!--- cSpell:disable --->
 * [TL;DR](#tldr)
-* [Intro](#intro)
+* [Introduction](#introduction)
 * [Overview and Scenario](#overview-and-scenario)
 * [Syslog Noise](#syslog-noise)
 * [DCR Transformation](#dcr-transformation)
@@ -65,13 +66,24 @@ TBC
 
 ## Overview and Scenario
 
-TBC
+In this scenario we had a NGFW in an MPLS and a NGAV/EDR SaaS Solution configured to send message to a new Ubuntu based syslog server we created running rsyslog and using Azure Monitoring Agent for Linux 1.33 (more importantly above 1.28). We then have a Azure Monitor Data Collection Rule getting syslog messages with a facility of USER/LOG_USER. Thats a mouthful of crap. Lets break it down.
+
+1. The NGFW can send CEF messages to a Syslog server and to a specific facility over a private MPLS network.
+2. The NGAV/EDR solution has a Firehose API Client that routes messages to a syslog server (no facility control).
+3. The syslog server is an Ubuntu 22 LTS server in Azure. This means its running Rsyslog and the Azure Monitoring Agent.
+4. The version of Azure Monitoring Agent matters as versions 1.28 and greater simplify the 'pickup' process. Before this there were 2 different agents and different methods of each and unix sockets and the Log Analytics Agents and all sorts of other crap. Don't get me wrong AMA isn't great but its better than what we had.
+5. AMA puts in an rsyslog configuration that routes a copy of *all* syslog messages to the AMA.
+6. An Azure Monitor Data Collection Rule was created by Azure Sentinel that collects everything sent to USER/LOG_USER. That DCR gets deployed to the syslog server via AMA.
+7. That DCR then routes the syslog messages it collects to the public Data Collection Endpoint.
+8. The Data Collection Endpoint processes the other part of the DCR which is its destination. Since this DCR was created by sentinel, its going to the same workspace sentinel is running in.
 
 Device --> Rsyslog --> AMA --> DCE --> DCR --> LAW
 API Client --> Rsyslog --> AMA --> DCE --> DCR --> LAW
 
-> [!NOTE] Technically speaking
-> Technically the DCR also gets partially put on the AMA itself.
+> [!NOTE] Data Collection Endpoint
+> I mention Data Collection Endpoint(s) and DCE's above. Mostly to be aware of the component. You can create Data Collections Endpoints but you don't need to unless you're using Azure Private Links.
+
+So now we have syslog messages going into our Log Analytics Workspace and there is a lot, and I think a lot of it is noisy.
 
 ## Syslog Noise
 
@@ -240,6 +252,8 @@ Things you may need to consider with the above script.
 Using the same Azure Metrics I used for the DCR, I should have seen a drop, but I didn't see a noticeable one. Esp given what I was seeing before the DCR Transformation. The metric of log rows dropped is still high. As such I may need to disable the translate to see how good/bad the rsyslog changes are.
 
 ## Summary
+
+So we haven't worked out the syslog part (yet) but we can keep trying. Some reading indicates that Syslog-NG may be able to modify messages before being processed which may be a better may to attack the problem but I haven't looked into that yet.
 
 * Use DCR KQL Transforms to reduce noise being imported
 * Consider adjusting rsyslog.d conf for azure monitoring Agent

@@ -8,6 +8,9 @@
 		"cslint",
 		"dpkg",
 		"lastmod",
+		"MPLS",
+		"NGAV",
+		"NGFW",
 		"SIEM",
 		"tftpboot"
 	],
