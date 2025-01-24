@@ -18,6 +18,7 @@ lastmod: 2025-01-24T03:38:52.181Z
 * [Important things to remember](#important-things-to-remember)
   * [Tables](#tables)
   * [Code Blocks](#code-blocks)
+  * [Alerts](#alerts)
 * [Not important things to remember](#not-important-things-to-remember)
   * [Creating diagrams](#creating-diagrams)
   * [Collapsed Section](#collapsed-section)
@@ -57,6 +58,13 @@ From: <https://docs.github.com/en/get-started/writing-on-github/working-with-adv
 > When you create a fenced code block that you also want to have syntax highlighting on a GitHub Pages site, use lower-case language identifiers. For more information, see [About GitHub Pages and Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#syntax-highlighting).
 
 > GitHub use [Linguist](https://github.com/github-linguist/linguist) to perform language detection and to select [third-party grammars](https://github.com/github-linguist/linguist/blob/main/vendor/README.md) for syntax highlighting. You can find out which keywords are valid in the [languages YAML file](https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml).
+
+### Alerts
+
+<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts>
+
+> [!IMPORTANT] Alerts on Github pages
+> Alerts don't work on github pages but they do in the github viewer
 
 ## Not important things to remember
 
