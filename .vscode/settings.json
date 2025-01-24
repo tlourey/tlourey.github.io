@@ -11,7 +11,9 @@
 		"MPLS",
 		"NGAV",
 		"NGFW",
+		"Omnissa",
 		"SIEM",
+		"TAXII",
 		"tftpboot",
 		"Ubiquiti"
 	],
@@ -27,7 +29,6 @@
   	],
 	"todo-tree.tree.scanMode": "workspace",
 	"files.defaultLanguage": "markdown",
-	"frontMatter.sponsors.ai.enabled": false,
 	// "[markdown]": {
 	// 	"editor.fontSize": 14,
 	// 	"editor.lineHeight": 26,
@@ -43,7 +44,14 @@
 		"azuremonitoragent",
 		"frontmatter",
 		"modifieddate",
-		"omfwd"
-	],
+		"omfwd",
+		"Fastly"
+	],    
+	"markdownlint.config": {
+        "MD033": {
+            "allowed_elements": ["details", "summary"]
+        },
+        "MD028": false
+    },
 	"git.branchProtectionPrompt": "alwaysCommit"
 }
