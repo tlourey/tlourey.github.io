@@ -84,4 +84,7 @@ You can add an image or a code block, too.
 
 </details>
 
+> [!NOTE] Theme
+> the above may not render correctly depending on the Jekyll theme in use but if you view it via github itself, it does seem to render correctly.
+
 <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections>
