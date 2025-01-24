@@ -10,7 +10,7 @@ layout: pages
 published: true
 fmContenttype: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-01-20T07:30:30.353Z
+lastmod: 2025-01-24T07:38:00.335Z
 ---
 
 
@@ -296,7 +296,9 @@ Netplan:
 > [!NOTE] netstat
 > netstat is a cross platform command existing in Unix, Linux, Mac and Windows but nearly all of them have different options/switches/parameters
 
-`sudo netstat -tulpn`: show listening.
+`sudo netstat -tulpn`: show listening.\
+`sudo netstat -lanp`: show active and listening\
+`sudo netstat -lanp | grep 22`: grep active and listening for port 22
 
 `nslookup`
 `dig`
