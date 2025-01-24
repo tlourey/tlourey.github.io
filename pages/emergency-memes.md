@@ -1,14 +1,17 @@
 ---
 title: Emergency Memes
 description: ""
-published: false
-categories: []
+published: true
+categories:
+    - Emergency
+    - Memes
+    - Reference
 type: pages
 layout: pages
-draft: true
+draft: false
 tags: []
 fmContentType: pages
-lastmod: 2025-01-24T08:38:04.332Z
+lastmod: 2025-01-24T08:39:07.773Z
 ---
 
 <!--- cSpell:disable --->
