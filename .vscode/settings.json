@@ -12,7 +12,8 @@
 		"NGAV",
 		"NGFW",
 		"SIEM",
-		"tftpboot"
+		"tftpboot",
+		"Ubiquiti"
 	],
 	"cSpell.languageSettings": [
       {
