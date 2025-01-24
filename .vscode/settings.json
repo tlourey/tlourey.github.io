@@ -11,7 +11,9 @@
 		"MPLS",
 		"NGAV",
 		"NGFW",
+		"Omnissa",
 		"SIEM",
+		"TAXII",
 		"tftpboot",
 		"Ubiquiti"
 	],
@@ -42,7 +44,8 @@
 		"azuremonitoragent",
 		"frontmatter",
 		"modifieddate",
-		"omfwd"
+		"omfwd",
+		"Fastly"
 	],    
 	"markdownlint.config": {
         "MD033": {
