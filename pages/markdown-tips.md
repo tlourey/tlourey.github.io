@@ -15,7 +15,7 @@ lastmod: 2025-01-24T03:38:52.181Z
 
 <!--- cSpell:disable --->
 * [References](#references)
-* [important thigns to remember](#important-thigns-to-remember)
+* [Important things to remember](#important-things-to-remember)
   * [Tables](#tables)
 * [Not important things to remember](#not-important-things-to-remember)
   * [Collapsed Section](#collapsed-section)
@@ -29,16 +29,16 @@ lastmod: 2025-01-24T03:38:52.181Z
 Super useful:
 
 <https://github.github.com/gfm/>\
-<https://docs.github.com/en/get-started/writing-on-github>\
+<https://docs.github.com/en/get-started/writing-on-github>
 
 Less useful but still good:
 
 <https://spec.commonmark.org/current/> the standard\
-<https://markdown.github.io/> - documents various implimentions\
-<https://daringfireball.net/projects/markdown/>
+<https://markdown.github.io/> - documents various implementations\
+<https://daringfireball.net/projects/markdown/>\
 <https://en.wikipedia.org/wiki/Markdown>
 
-## important thigns to remember
+## Important things to remember
 
 ### Tables
 
