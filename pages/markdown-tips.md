@@ -21,7 +21,9 @@ lastmod: 2025-01-24T03:38:52.181Z
 * [Not important things to remember](#not-important-things-to-remember)
   * [Creating diagrams](#creating-diagrams)
   * [Collapsed Section](#collapsed-section)
-  * [You can add a header](#you-can-add-a-header)
+    * [You can add a header](#you-can-add-a-header)
+  * [Useless by cool](#useless-by-cool)
+    * [ASCII STL](#ascii-stl)
 <!--- cSpell:enable --->
 
 (TOC might be slightly weird)
@@ -60,7 +62,8 @@ From: <https://docs.github.com/en/get-started/writing-on-github/working-with-adv
 
 ### Creating diagrams
 
-<https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams>
+<https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams>\
+<https://asciiflow.com/>
 
 ### Collapsed Section
 
@@ -88,7 +91,7 @@ Looks like:
 
 <summary>Tips for collapsed sections</summary>
 
-### You can add a header
+#### You can add a header
 
 You can add text within a collapsed section.
 
@@ -104,3 +107,76 @@ You can add an image or a code block, too.
 > the above may not render correctly depending on the Jekyll theme in use but if you view it via github itself, it does seem to render correctly.
 
 <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections>
+
+### Useless by cool
+
+#### ASCII STL
+
+<!--- cSpell:disable --->
+````markdown
+```stl
+solid cube_corner
+  facet normal 0.0 -1.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 1.0 0.0 0.0
+      vertex 0.0 0.0 1.0
+    endloop
+  endfacet
+  facet normal 0.0 0.0 -1.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 1.0 0.0
+      vertex 1.0 0.0 0.0
+    endloop
+  endfacet
+  facet normal -1.0 0.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 0.0 1.0
+      vertex 0.0 1.0 0.0
+    endloop
+  endfacet
+  facet normal 0.577 0.577 0.577
+    outer loop
+      vertex 1.0 0.0 0.0
+      vertex 0.0 1.0 0.0
+      vertex 0.0 0.0 1.0
+    endloop
+  endfacet
+endsolid
+```
+````
+
+```stl
+solid cube_corner
+  facet normal 0.0 -1.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 1.0 0.0 0.0
+      vertex 0.0 0.0 1.0
+    endloop
+  endfacet
+  facet normal 0.0 0.0 -1.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 1.0 0.0
+      vertex 1.0 0.0 0.0
+    endloop
+  endfacet
+  facet normal -1.0 0.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 0.0 1.0
+      vertex 0.0 1.0 0.0
+    endloop
+  endfacet
+  facet normal 0.577 0.577 0.577
+    outer loop
+      vertex 1.0 0.0 0.0
+      vertex 0.0 1.0 0.0
+      vertex 0.0 0.0 1.0
+    endloop
+  endfacet
+endsolid
+```
