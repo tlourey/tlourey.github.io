@@ -8,12 +8,14 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:34:00
-lastmod: 2025-01-24T07:58:23.315Z
+lastmod: 2025-01-24T08:18:18.481Z
 ---
 
 
 <!--- cSpell:disable --->
-* [Azure](#azure)
+* [Microsoft](#microsoft)
+  * [Microsoft 365](#microsoft-365)
+  * [Azure](#azure)
   * [Microsoft Sentinel](#microsoft-sentinel)
 * [Amazon](#amazon)
 * [Apple](#apple)
@@ -25,7 +27,15 @@ lastmod: 2025-01-24T07:58:23.315Z
 * [Misc Sources](#misc-sources)
 <!--- cSpell:enable --->
 
-## Azure
+## Microsoft
+
+### Microsoft 365
+
+<https://learn.microsoft.com/en-au/microsoft-365/enterprise/microsoft-365-ip-web-service?view=o365-worldwide> - Documentation \
+<https://endpoints.office.com/endpoints/worldwide?clientrequestid=b10c5ed1-bad1-445f-b386-b919946339a7>\
+<https://learn.microsoft.com/en-au/microsoft-365/enterprise/additional-office365-ip-addresses-and-urls?view=o365-worldwide> - additional endpoints
+
+### Azure
 
 * <https://www.microsoft.com/en-us/download/details.aspx?id=56519>
 * <https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20241021.json>
