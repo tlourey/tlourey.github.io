@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-20T13:06:01.381Z
+modifieddate: 2025-01-23T14:26:19.850Z
 categories:
     - Sentinel
     - Monitoring
@@ -40,17 +40,18 @@ Getting CEF Messages into Azure Sentinel is a pain.\
 You can easily send far more than you wanted and then you're paying for ingestion / storage you didn't mean to.\
 There are some queries to determine how big the problem is.\
 We try to filter out the noise *getting stored* by implementing a simple Azure Monitor Data Collection Rule Transformation.\
-We try to filter out the noise *getting sent in the first place* by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent.\
-We cover some methods to monitor / test if they work.
+We try to filter out the noise *getting sent in the first place* by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent.
+So far this **hasn't** worked. \
+We cover some methods to monitor / test if they work.\
 The concept could be adapted to other situations.
 
-## Intro
+## Introduction
 
 TBC
 
 <!--- cSpell:disable --->
 * [TL;DR](#tldr)
-* [Intro](#intro)
+* [Introduction](#introduction)
 * [Overview and Scenario](#overview-and-scenario)
 * [Syslog Noise](#syslog-noise)
 * [DCR Transformation](#dcr-transformation)
@@ -65,24 +66,35 @@ TBC
 
 ## Overview and Scenario
 
-TBC
+In this scenario we had a NGFW in an MPLS and a NGAV/EDR SaaS Solution configured to send message to a new Ubuntu based syslog server we created running rsyslog and using Azure Monitoring Agent for Linux 1.33 (more importantly above 1.28). We then have a Azure Monitor Data Collection Rule getting syslog messages with a facility of USER/LOG_USER into the Log Analytics Workspace that is used by Sentinel. Thats a mouthful of crap. Lets break it down.
 
-Device --> Rsyslog --> AMA --> DCE --> DCR --> LAW
+1. The NGFW can send CEF messages to a Syslog server and to a specific facility over a private MPLS network.
+2. The NGAV/EDR solution has a Firehose API Client that routes messages to a syslog server (no facility control).
+3. The syslog server is an Ubuntu 22 LTS server in Azure. This means its running Rsyslog and the Azure Monitoring Agent.
+4. The version of Azure Monitoring Agent matters as versions 1.28 and greater simplify the 'pickup' process. Before this there were 2 different agents and different methods of each and unix sockets and the Log Analytics Agents and all sorts of other crap. Don't get me wrong AMA isn't great but its better than what we had.
+5. AMA puts in an rsyslog configuration that routes a copy of *all* syslog messages to the AMA.
+6. An Azure Monitor Data Collection Rule was created by Azure Sentinel that collects everything sent to USER/LOG_USER. That DCR gets deployed to the syslog server via AMA.
+7. That DCR then routes the syslog messages it collects to the public Data Collection Endpoint.
+8. The Data Collection Endpoint processes the other part of the DCR which is its destination. Since this DCR was created by sentinel, its going to the same workspace sentinel is running in.
+
+Device --> Rsyslog --> AMA --> DCE --> DCR --> LAW\
 API Client --> Rsyslog --> AMA --> DCE --> DCR --> LAW
 
-> [!NOTE] Technically speaking
-> Technically the DCR also gets partially put on the AMA itself.
+> [!NOTE] Data Collection Endpoint
+> I mention Data Collection Endpoint(s) and DCE's above. Mostly to be aware of the component. You can create Data Collections Endpoints but you don't need to unless you're using Azure Private Links.
+
+So now we have syslog messages going into our Log Analytics Workspace and there is a lot, and I think a fair bit of it is noise.
 
 ## Syslog Noise
 
-Here is how I started to determine the level of noise. `DeviceVendor` is part of the [CEF standard](../pages/misc-references.md#cef). So try this in your KQL Query in your Log Analytics Workspace and adjust your time period/limit per your logging load (Start small then increase either the limit or the time range to get an idea):
+Here is how I started to determine the level of noise. `DeviceVendor` is part of the [CEF standard](../pages/misc-references.md#cef). So try this KQL Query in your Log Analytics Workspace and adjust your time period/limit per your logging load (Start small then increase either the limit or the time range to get an idea):
 
 ```kql
 CommonSecurityLog
 | summarize Count=count() by DeviceVendor
 ```
 
-Where the device vendor is blank is syslog noise (Noise may be unfair, but they are not not CEF messages). Also note that those that know syslog facilities better than me may not have chosen the USER facility. I didn't have a choice given one of my SIEM integrations.
+Messages where the DeviceVendor is blank is syslog noise (Noise may be unfair, but they are not CEF messages). Also note that those that know syslog facilities better than me may not have chosen the USER facility. I didn't have a choice given the Firehose API client. Maybe I could roll my own client? ARE YOU HIGH? Anyway back on topic...
 
 Where is the noise coming from? I had to muck around with syslog configs to get an idea. But here are some examples I found:
 
@@ -146,12 +158,12 @@ Creating and Editing DCR's normally requires you to hard code JSON and submit vi
 
 ### How can I check the DCR Transformation?
 
-One thing I found is that its hide to see exactly. Here are some ways:
+One thing I found is that it can be hard to see exactly. Here are some ways I found:
 
-1. Metrics of the DCR - this one I found the best as you can see Logs coming in, log errors, transformation time.
+1. Metrics of the DCR - this method I found best as you can see Logs coming in, log errors, transformation time.
 2. Workbooks on usage of the LAW - esp if its Sentinel enabled.
-3. Trying to mirror / watch / capture what the syslog server output.
-4. Try the noisy KQL query from above again
+3. Trying to mirror / watch / capture what the syslog server output. Too hard.
+4. Try the noisy KQL query from above again (this was my litmus test).
 
 ### Is this really a fix?
 
@@ -241,9 +253,12 @@ Using the same Azure Metrics I used for the DCR, I should have seen a drop, but 
 
 ## Summary
 
+So we haven't worked out the syslog part (yet) but we can keep trying. Some reading indicates that Syslog-NG may be able to modify messages before being processed which may be a better way to attack the problem but I haven't looked into that yet. But here are the takeaways:
+
 * Use DCR KQL Transforms to reduce noise being imported
-* Consider adjusting rsyslog.d conf for azure monitoring Agent
-* Learn facilities, syslog and the log files and how they work and more importantly, interact
+* Consider adjusting rsyslog.d conf for Azure Monitoring Agent (since my edits are not yet working)
+* Learn facilities (and their history & usage in your Distribution), syslog and the log files and how they work and more importantly, interact
+* Spend more time designing / planning your syslog setup.
 
 ## References
 
