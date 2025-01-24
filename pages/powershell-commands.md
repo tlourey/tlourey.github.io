@@ -10,7 +10,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-23T09:42:07.898Z
+lastmod: 2025-01-24T03:23:15.410Z
 ---
 
 
@@ -21,6 +21,7 @@ lastmod: 2025-01-23T09:42:07.898Z
   * [Exchange Powershell](#exchange-powershell)
     * [Archive Mailbox](#archive-mailbox)
     * [Mailbox Access Checks](#mailbox-access-checks)
+    * [Mailbox Access](#mailbox-access)
   * [Local System Management](#local-system-management)
     * [Uptime, wake on lan, reboot](#uptime-wake-on-lan-reboot)
     * [Remote Desktop](#remote-desktop)
@@ -156,6 +157,8 @@ Set-Mailbox <<email@domain.com>> -ProhibitSendQuota 43GB -ProhibitSendReceiveQuo
 Set-Mailbox -id <<email@domain.com>> -ProhibitSendReceiveQuota 40GB -ProhibitSendQuota 39GB -IssueWarningQuota 36GB
 ```
 
+Make sure to lower mailbox sizes afterwards back to defaults
+
 #### Archive Mailbox
 
 enable archive mailbox
@@ -180,6 +183,8 @@ $Mailboxes = Get-Mailbox -ResultSize Unlimited -Filter {RecipientTypeDetails -eq
 $Mailboxes.Identity | Start-ManagedFolderAssistant
 ```
 
+Make sure to lower mailbox sizes afterwards back to defaults
+
 #### Mailbox Access Checks
 
 Search what permissions are on a particular mailbox
@@ -199,7 +204,53 @@ Search if a particular personal has access to any mailboxes
 Get-Mailbox -ResultSize Unlimited | Get-MailboxFolderPermission -User john.doe@domain.com | ft User,Identity,AccessRights
 ```
 
-Make sure to lower mailbox sizes afterwards back to defaults
+#### Mailbox Access
+
+From and More info: <https://learn.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-permissions-for-recipients>
+
+Full Access
+
+```powershell
+Add-MailboxPermission -Identity <MailboxIdentity> -User <DelegateIdentity> -AccessRights FullAccess -InheritanceType All
+Remove-MailboxPermission -Identity <MailboxIdentity> -User <DelegateIdentity> -AccessRights FullAccess -InheritanceType All
+
+# This example assigns the delegate Raymond Sam the Full Access permission to the mailbox of Terry Adams.
+Add-MailboxPermission -Identity "Terry Adams" -User raymonds -AccessRights FullAccess -InheritanceType All
+
+# This does the same but *without* Automapping
+Add-MailboxPermission -Identity "Terry Adams" -User raymonds -AccessRights FullAccess -InheritanceType All -AutoMapping $false
+# There is no way to adjust automapping. To change it you need to remove the mailbox permission then re-add it with the new setting
+
+# To test it worked
+Get-MailboxPermission <MailboxIdentity> | where {$_.AccessRights -like 'Full*'} | Format-Table User,Deny,IsInherited,AccessRights -Auto
+```
+
+Send as
+
+```powershell
+# This example assigns the Send As permission to the Printer Support group on the shared mailbox named Contoso Printer Support.
+Add-RecipientPermission -Identity "Contoso Printer Support" -Trustee "Printer Support" -AccessRights SendAs
+
+# To test it worked: 
+Get-RecipientPermission -Identity <MailboxIdentity> -Trustee <DelegateIdentity>
+```
+
+Send be behalf
+
+```powershell
+# <Cmdlet> -Identity <MailboxOrGroupIdentity> -GrantSendOnBehalfTo <Delegates>
+# This will reset whoever had the ability to send on behalf of Sean and only grant it to Holly
+Set-Mailbox -Identity seanc@contoso.com -GrantSendOnBehalfTo hollyh
+
+# This will add tempassistants to whoever can already send on behalf of Exec's shared mailbox
+Set-Mailbox "Contoso Executives" -GrantSendOnBehalfTo @{Add="tempassistants@contoso.com"}
+
+# This will reset whoever had the ability to send on behalf of PrinterSupport and only grant it to sarad
+Set-DistributionGroup -Identity printersupport@contoso.com -GrantSendOnBehalfTo sarad
+
+# This will only remove administrator
+Set-DynamicDistributionGroup "All Employees" -GrantSendOnBehalfTo @{Remove="Administrator"}
+```
 
 ### Local System Management
 

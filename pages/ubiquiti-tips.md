@@ -6,11 +6,12 @@ categories:
     - References
     - Commands
     - Tips
+    - Ubiquiti
 type: pages
 layout: pages
 draft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-01-19T14:19:38.748Z
+lastmod: 2025-01-24T02:55:46.970Z
 ---
 
 
@@ -20,6 +21,7 @@ lastmod: 2025-01-19T14:19:38.748Z
   * [Monitoring](#monitoring)
 * [EdgeRouter](#edgerouter)
   * [MAC Address Searching on command line](#mac-address-searching-on-command-line)
+  * [EdgeRouter on a stick](#edgerouter-on-a-stick)
 <!--- cSpell:enable --->
 
 ## UniFi
@@ -40,14 +42,14 @@ Nagios command to check number of process on UniFi Self hosted. In this case, wa
 
 `sudo arp -n | grep -i ab:cd:ef:12:34:56`
 
-<!--
-## toolname
+### EdgeRouter on a stick
 
-### toolname Commands
-
-### toolname Notes
-
-### toolname References
-
-<>
--->
+[Hardware Offloading](https://help.ui.com/hc/en-us/articles/115006567467-EdgeRouter-Hardware-Offloading)\
+[Archiving and Managing the Configuration Files](https://help.ui.com/hc/en-us/articles/204960084)\
+[Backup and Restore Configuration](https://help.ui.com/hc/en-us/articles/360002535514)\
+[Configuration and Operational Mode](https://help.ui.com/hc/en-us/articles/204960094-EdgeRouter-Configuration-and-Operational-Mode)\
+[VLAN-Aware Switch](https://help.ui.com/hc/en-us/articles/115012700967)\
+[How to Create a Guest/LAN Firewall Rule](https://help.ui.com/hc/en-us/articles/218889067)\
+[Router on a Stick](https://help.ui.com/hc/en-us/articles/204959444-EdgeRouter-Router-on-a-Stick)\
+[Hardware Offloading](https://help.ui.com/hc/en-us/articles/115006567467-EdgeRouter-Hardware-Offloading)\
+[Packets Process (aka order of operations)](https://help.ui.com/hc/en-us/articles/204976664-EdgeRouter-Packets-Processing)

@@ -8,8 +8,12 @@
 		"cslint",
 		"dpkg",
 		"lastmod",
+		"MPLS",
+		"NGAV",
+		"NGFW",
 		"SIEM",
-		"tftpboot"
+		"tftpboot",
+		"Ubiquiti"
 	],
 	"cSpell.languageSettings": [
       {

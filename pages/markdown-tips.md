@@ -1,6 +1,6 @@
 ---
 title: Markdown Tips
-description: Flavor Flav says "GFM is da shit yo"
+description: Flavor Flav says "GFM is da shiz yo"
 published: true
 categories:
     - References
@@ -9,7 +9,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-19T14:19:38.774Z
+lastmod: 2025-01-24T03:38:52.181Z
 ---
 
 
