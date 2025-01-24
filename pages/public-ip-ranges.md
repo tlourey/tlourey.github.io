@@ -8,12 +8,13 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:34:00
-lastmod: 2025-01-24T07:36:52.795Z
+lastmod: 2025-01-24T07:58:23.315Z
 ---
 
 
 <!--- cSpell:disable --->
 * [Azure](#azure)
+  * [Microsoft Sentinel](#microsoft-sentinel)
 * [Amazon](#amazon)
 * [Apple](#apple)
 * [Google](#google)
@@ -28,6 +29,10 @@ lastmod: 2025-01-24T07:36:52.795Z
 
 * <https://www.microsoft.com/en-us/download/details.aspx?id=56519>
 * <https://download.microsoft.com/download/7/1/D/71D86715-5596-4529-9B13-DA13A5DE5B63/ServiceTags_Public_20241021.json>
+
+### Microsoft Sentinel
+
+[IP allowlisting for the Microsoft Sentinel TAXII client](https://learn.microsoft.com/en-us/azure/sentinel/connect-threat-intelligence-taxii#ip-allowlisting-for-the-microsoft-sentinel-taxii-client)
 
 ## Amazon
 
