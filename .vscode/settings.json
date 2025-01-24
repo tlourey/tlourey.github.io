@@ -27,7 +27,6 @@
   	],
 	"todo-tree.tree.scanMode": "workspace",
 	"files.defaultLanguage": "markdown",
-	"frontMatter.sponsors.ai.enabled": false,
 	// "[markdown]": {
 	// 	"editor.fontSize": 14,
 	// 	"editor.lineHeight": 26,
