@@ -1,6 +1,6 @@
 ---
 title: Emergency Memes
-description: ""
+description: Break [out] memes in case of Emergency
 published: true
 categories:
     - Emergency
@@ -11,7 +11,7 @@ layout: pages
 draft: false
 tags: []
 fmContentType: pages
-lastmod: 2025-01-24T08:39:07.773Z
+lastmod: 2025-01-24T08:43:25.266Z
 ---
 
 <!--- cSpell:disable --->
@@ -20,6 +20,8 @@ lastmod: 2025-01-24T08:39:07.773Z
 * [This is fine](#this-is-fine)
 * [Sarcastic Yay](#sarcastic-yay)
 * [Unimpressed](#unimpressed)
+* [Snappy Response](#snappy-response)
+* [Go away](#go-away)
 <!--- cSpell:enable --->
 
 ## Homer Simpsons Fire on console
@@ -47,3 +49,11 @@ lastmod: 2025-01-24T08:39:07.773Z
 
 [![Picture](/assets/images/unimpressed.jpeg)](/assets/images/unimpressed.jpeg)\
 <https://www.vice.com/en/article/disappointed-cricket-fan-meme/>
+
+## Snappy Response
+
+[![Picture](/assets/images/yourmother.gif)](/assets/images/yourmother.gif)
+
+## Go away
+
+[![Picture](/assets/images/noob.jpg)](/assets/images/noob.jpg)
