@@ -44,6 +44,12 @@
 		"frontmatter",
 		"modifieddate",
 		"omfwd"
-	],
+	],    
+	"markdownlint.config": {
+        "MD033": {
+            "allowed_elements": ["details", "summary"]
+        },
+        "MD028": false
+    },
 	"git.branchProtectionPrompt": "alwaysCommit"
 }

@@ -8,7 +8,7 @@ fmContentType: index
 ## TODO
 
 * [ ] Think about how you want robots.txt setup
-* [ ] consider staticman or using github issues for comments on blog posts
+* [ ] consider staticman or using github issues (or better yet github discussions) for comments on blog posts
 * [ ] Decide if we are keeping FrontMatter CMS or not
 * [ ] Try and configure front matter categories to make a YAML list not a JSON Array
 
