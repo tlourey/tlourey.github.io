@@ -3,16 +3,16 @@ title: Azure Monitoring Data Collection Rules for Log Analytics Workspace
 description: Ripe and ready for TLAs and FLTLAs
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 draft: true
-lastmod: 2025-01-19T14:19:38.720Z
+lastmod: 2025-01-25T09:00:41.406Z
 date: 2025-01-15T01:07:00
 tags:
-  - Azure
-  - Monitoring
-  - References
+    - Azure
+    - Monitoring
+    - References
 ---
 
 
@@ -83,9 +83,12 @@ This didn't work for me... So, I tried this:
                         "destinations": [
                             "DataCollectionEvent"
                         ],
-                        "transformKql": "  source\n    |  where ProcessName !contains \"CEF\"\n"
+                        "transformKql": "  source\n    |  where isnotempty(DeviceVendor)\n"
                     }
+          ]
 ```
+
+Because `DeviceVendor` is part of the [CEF Standard](misc-references.md#cef). More details in an upcoming post.
 
 > [!TIP] Microsoft-CommonSecurityLog
 > My Microsoft-CommonSecurityLog was underlined yellow and saying it wasn't valid. It still accepted it and it still worked. This may have been an issue since I moved my sentinel-enabled LAW around. I also noted that when typing it in I had to add a space that before the <!--- cSpell:disable --->`transformkql`<!--- cSpell:enable ---> came up in the drop down so I knew what I was doing was 'somewhat' valid.

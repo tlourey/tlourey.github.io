@@ -42,6 +42,6 @@ I may also start making posts & ranting here.
   * [Markdown yaml Preamble](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-yaml-preamble)
   * [Frontmatter CMS for VSCode](https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-front-matter)
   * [Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid) (not needed but can be helpful)
-* [Cayman Theme](https://pages-themes.github.io/cayman/)
+* [Cayman Theme](https://pages-themes.github.io/cayman/) (poorly customised)
 * [Jekyll](https://jekyllrb.com/)
 * [Github Pages](https://pages.github.com/)
