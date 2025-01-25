@@ -2,17 +2,17 @@
 title: PowerShell Commands
 description: PowerShell Commands to remember
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-24T03:23:15.410Z
+lastmod: 2025-01-25T04:38:27.070Z
 tags:
-  - Commands
-  - Language
-  - PowerShell
-  - Reference
+    - Commands
+    - Language
+    - PowerShell
+    - References
 ---
 
 
@@ -233,7 +233,7 @@ Send as
 # This example assigns the Send As permission to the Printer Support group on the shared mailbox named Contoso Printer Support.
 Add-RecipientPermission -Identity "Contoso Printer Support" -Trustee "Printer Support" -AccessRights SendAs
 
-# To test it worked: 
+# To test it worked:
 Get-RecipientPermission -Identity <MailboxIdentity> -Trustee <DelegateIdentity>
 ```
 

@@ -8,12 +8,10 @@ type: pages
 layout: pages
 draft: false
 tags:
-    - Emergency
     - Memes
-    - Reference
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-01-25T03:08:36.384Z
+lastmod: 2025-01-25T04:38:18.758Z
 ---
 
 <!--- cSpell:disable --->
