@@ -3,13 +3,13 @@ title: KQL Queries
 description: KQL Queries to remember
 published: true
 categories:
-  - Language
-  - References
   - Tech
 type: pages
 layout: pages
 draft: true
-tags: []
+tags:
+  - Language
+  - References
 fmContenttype: pages
 date: 2025-01-18T16:51:00
 lastmod: 2025-01-20T10:32:07.664Z

@@ -3,12 +3,12 @@ title: Misc References
 description: Another Doom Pile
 published: true
 categories:
-  - References
   - Tech
 type: pages
 layout: pages
 draft: true
-tags: []
+tags:
+  - References
 fmContenttype: pages
 date: 2025-01-18T16:52:00
 lastmod: 2025-01-24T01:39:38.432Z

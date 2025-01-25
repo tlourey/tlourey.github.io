@@ -2,16 +2,17 @@
 title: Linux Tools
 description: Linux tools to remember
 categories:
-  - Linux
-  - References
   - Tech
-  - Tools
 type: pages
 layout: pages
 draft: true
 published: true
 date: 2025-01-11T16:40:00
 lastmod: 2025-01-19T14:19:38.786Z
+tags:
+  - Linux
+  - References
+  - Tools
 ---
 
 

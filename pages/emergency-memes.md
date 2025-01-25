@@ -3,16 +3,17 @@ title: Emergency Memes
 description: Break [out] memes in case of Emergency
 published: true
 categories:
-    - Emergency
-    - Memes
-    - Reference
+    - Funnies
 type: pages
 layout: pages
 draft: false
-tags: []
+tags:
+    - Emergency
+    - Memes
+    - Reference
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-01-24T11:57:33.949Z
+lastmod: 2025-01-25T03:08:36.384Z
 ---
 
 <!--- cSpell:disable --->

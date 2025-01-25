@@ -3,14 +3,15 @@ title: PuTTY Commands
 description: description
 published: true
 categories:
-  - Commands
-  - References
   - Tech
 type: pages
 layout: pages
 draft: true
 date: 2025-01-17T15:31:00
 lastmod: 2025-01-19T14:19:38.745Z
+tags:
+  - Commands
+  - References
 ---
 
 
