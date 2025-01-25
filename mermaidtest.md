@@ -11,5 +11,8 @@ layout: default
 graph LR;
     Device --> Rsyslog;
     API Client --> Rsyslog;
-    Rsyslog --> AMA --> DCE --> DCR --> LAW;
+    Rsyslog --> AMA;
+    AMA --> DCE;
+    DCE --> DCR;
+    DCR --> LAW;
 ```
