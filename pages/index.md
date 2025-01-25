@@ -4,7 +4,7 @@ description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-modifieddate: 2025-01-25T03:11:09.438Z
+modifieddate: 2025-01-25T04:34:08.422Z
 ---
 
 [home](/)
@@ -19,7 +19,7 @@ modifieddate: 2025-01-25T03:11:09.438Z
       ({% for category in item.tags %}
         {%- if forloop.length > 0 -%}
         {{ category }}{% unless forloop.last %}, {% endunless -%} {% endif %}
-      {% endfor %})
+      {%- endfor %})
     </li>
   {% endif %}
 {% endfor %}
