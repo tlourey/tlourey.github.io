@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-01-25T03:20:03.244Z
+lastmod: 2025-01-25T07:50:08.130Z
 ---
 
  <!--- cSpell:disable --->
@@ -22,6 +22,7 @@ lastmod: 2025-01-25T03:20:03.244Z
 * [PowerShell Tools](#powershell-tools)
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
+* [Chrome or Edge Extensions](#chrome-or-edge-extensions)
 <!--- cSpell:enable --->
 
 ## Network Tools
@@ -76,7 +77,21 @@ lastmod: 2025-01-25T03:20:03.244Z
 
 ## Windows Tools
 
-<https://learn.microsoft.com/en-us/windows/powertoys/>\
-<https://cmder.app/>\
+**<https://learn.microsoft.com/en-us/windows/powertoys/>**\
+**<https://cmder.app/>**\
 <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>\
-<https://learn.microsoft.com/en-us/sysinternals/>
+**<https://learn.microsoft.com/en-us/sysinternals/>**\
+**<https://www.vandyke.com/products/securecrt/windows.html> - Its not free but its good.**\
+<https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
+**[Total Commander](https://www.ghisler.com/)** - THE PIMP!
+
+## Chrome or Edge Extensions
+
+* Session Buddy:
+  * <https://microsoftedge.microsoft.com/addons/detail/session-buddy/hgpnndpninkidjggjjhfadpmipappndb?hl=en-GB>\
+  * <https://chromewebstore.google.com/detail/session-buddy/edacconmaakjimmfgnblocblbcdcpbko>
+[Refined Microsoft Learn](https://github.com/merill/refined-microsoft-learn/)
+  * <https://microsoftedge.microsoft.com/addons/detail/refined-microsoft-learn/ohjiccikicdhcdlophelgjppakkdlfmg>\
+  * <https://chromewebstore.google.com/detail/microsoft-learn-boost/mkacacgjjgafnjekdcoodibajidagopd>
+* Context Menu Search:
+  * <https://chromewebstore.google.com/detail/context-menu-search/ocpcmghnefmdhljkoiapafejjohldoga>
