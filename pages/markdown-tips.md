@@ -3,15 +3,15 @@ title: Markdown Tips
 description: Flavor Flav says "GFM is da shiz yo"
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-24T03:38:52.181Z
+lastmod: 2025-01-25T04:43:35.476Z
 tags:
-  - Language
-  - References
+    - Language
+    - References
 ---
 
 
@@ -122,6 +122,8 @@ You can add an image or a code block, too.
 ### Useless by cool
 
 #### ASCII STL
+
+This gets rendered by GitHub but not Github pages
 
 <!--- cSpell:disable --->
 ````markdown
