@@ -4,12 +4,13 @@ description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-modifieddate: 2025-01-25T04:34:08.422Z
+modifieddate: 2025-01-25T04:36:48.557Z
 ---
 
 [home](/)
 
 <!--- cSpell:disable --->
+<!-- markdownlint-disable MD033 --->
 {% assign doclist = site.pages | sort: 'title' %}
 <ul>
 {% for item in doclist %}
@@ -24,4 +25,5 @@ modifieddate: 2025-01-25T04:34:08.422Z
   {% endif %}
 {% endfor %}
 </ul>
+<!-- markdownlint-enable MD033 --->
 <!--- cSpell:disable --->
