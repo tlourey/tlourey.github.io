@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-25T04:43:35.476Z
+lastmod: 2025-01-25T05:26:13.746Z
 tags:
     - Language
     - References
@@ -21,6 +21,7 @@ tags:
   * [Tables](#tables)
   * [Code Blocks](#code-blocks)
   * [Alerts](#alerts)
+  * [Wikis](#wikis)
 * [Not important things to remember](#not-important-things-to-remember)
   * [Creating diagrams](#creating-diagrams)
   * [Collapsed Section](#collapsed-section)
@@ -37,7 +38,7 @@ Super useful:
 
 <https://github.github.com/gfm/>\
 <https://docs.github.com/en/get-started/writing-on-github>\
-<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>\
+**<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>**\
 <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text>
 
 Less useful but still good:
@@ -68,6 +69,12 @@ From: <https://docs.github.com/en/get-started/writing-on-github/working-with-adv
 
 > [!IMPORTANT] Alerts on Github pages
 > Alerts don't work on github pages but they do in the github viewer
+
+### Wikis
+
+* Not all Github markdown is supported in wikis apparently[^1].
+
+[^1]: <https://docs.github.com/en/enterprise-cloud@latest/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes:~:text=Footnotes%20are%20not%20supported%20in%20wikis.>
 
 ## Not important things to remember
 
