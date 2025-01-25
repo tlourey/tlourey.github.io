@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-25T10:12:58.724Z
+modifieddate: 2025-01-25T14:04:00.338Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -84,7 +84,7 @@ API Client --> Rsyslog --> AMA --> DCE --> DCR --> LAW
 ```mermaid
 graph LR;
     Device --> Rsyslog;
-    API Client --> Rsyslog;
+    APIClient --> Rsyslog;
     Rsyslog --> AMA;
     AMA --> DCE;
     DCE --> DCR;
