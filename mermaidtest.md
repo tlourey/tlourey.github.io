@@ -16,3 +16,15 @@ graph LR;
     DCE --> DCR;
     DCR --> LAW;
 ```
+
+```mermaid
+flowchart LR
+  subgraph SysLog Server
+    direction LR
+    APIClient --> Rsyslog --> AMA
+  end
+  Device --> Rsyslog;
+  AMA --> DCE;
+  DCE --> DCR;
+  DCR --> LAW;
+```
