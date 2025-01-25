@@ -3,8 +3,9 @@ title: Markdown Tips
 description: Flavor Flav says "GFM is da shiz yo"
 published: true
 categories:
-    - References
-    - Language
+  - Language
+  - References
+  - Tech
 type: pages
 layout: pages
 draft: true

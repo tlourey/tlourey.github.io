@@ -3,8 +3,9 @@ title: CIDR
 description: description
 published: true
 categories:
-    - References
-    - Networks
+  - Networks
+  - References
+  - Tech
 type: pages
 layout: pages
 draft: false

@@ -2,9 +2,10 @@
 title: Linux Commands
 description: Linux commands to remember
 categories:
-    - References
-    - Commands
-    - Linux
+  - Commands
+  - Linux
+  - References
+  - Tech
 type: pages
 layout: pages
 published: true

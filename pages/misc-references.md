@@ -3,7 +3,8 @@ title: Misc References
 description: Another Doom Pile
 published: true
 categories:
-    - References
+  - References
+  - Tech
 type: pages
 layout: pages
 draft: true

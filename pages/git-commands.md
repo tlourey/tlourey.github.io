@@ -4,8 +4,9 @@ description: Commands to remember for Git
 type: pages
 layout: pages
 categories:
-    - References
-    - Commands
+  - Commands
+  - References
+  - Tech
 published: true
 draft: true
 date: 2025-01-05T14:25:00

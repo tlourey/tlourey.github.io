@@ -2,10 +2,11 @@
 title: PowerShell Commands
 description: PowerShell Commands to remember
 categories:
-    - Reference
-    - Commands
-    - PowerShell
-    - Language
+  - Commands
+  - Language
+  - PowerShell
+  - Reference
+  - Tech
 type: pages
 layout: pages
 published: true

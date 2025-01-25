@@ -2,7 +2,8 @@
 title: Misc Tools
 description: And not enough toolboxes
 categories:
-    - Tools
+  - Tech
+  - Tools
 type: pages
 layout: pages
 draft: true

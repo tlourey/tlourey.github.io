@@ -2,8 +2,9 @@
 title: Windows Commands
 description: Windows Commands to remember
 categories:
-    - Reference
-    - Commands
+  - Commands
+  - Reference
+  - Tech
 type: pages
 layout: pages
 published: true

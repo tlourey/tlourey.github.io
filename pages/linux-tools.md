@@ -2,9 +2,10 @@
 title: Linux Tools
 description: Linux tools to remember
 categories:
-    - References
-    - Tools
-    - Linux
+  - Linux
+  - References
+  - Tech
+  - Tools
 type: pages
 layout: pages
 draft: true

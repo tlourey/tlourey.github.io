@@ -2,8 +2,9 @@
 title: Public IP Ranges
 description: Public IP Ranges to note and their references
 categories:
-    - References
-    - Networks
+  - Networks
+  - References
+  - Tech
 type: pages
 layout: pages
 published: true

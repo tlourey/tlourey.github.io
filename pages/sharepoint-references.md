@@ -2,7 +2,8 @@
 title: SharePoint References
 description: ""
 published: false
-categories: []
+categories:
+  - Tech
 type: pages
 layout: pages
 draft: true

@@ -3,8 +3,9 @@ title: Azure VM Tips
 description: Tips for setting up Azure VM's
 published: true
 categories:
-    - References
-    - Azure
+  - Azure
+  - References
+  - Tech
 type: pages
 layout: pages
 draft: true

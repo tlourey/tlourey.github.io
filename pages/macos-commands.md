@@ -3,9 +3,10 @@ title: Mac OS Commands
 description: Commands to remember for Mac OS
 published: true
 categories:
-    - References
-    - Commands
-    - MacOS
+  - Commands
+  - MacOS
+  - References
+  - Tech
 type: pages
 layout: pages
 draft: true

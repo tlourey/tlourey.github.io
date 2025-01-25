@@ -3,8 +3,9 @@ title: KQL Queries
 description: KQL Queries to remember
 published: true
 categories:
-    - References
-    - Language
+  - Language
+  - References
+  - Tech
 type: pages
 layout: pages
 draft: true

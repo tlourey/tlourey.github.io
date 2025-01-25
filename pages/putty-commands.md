@@ -3,8 +3,9 @@ title: PuTTY Commands
 description: description
 published: true
 categories:
-    - References
-    - Commands
+  - Commands
+  - References
+  - Tech
 type: pages
 layout: pages
 draft: true
