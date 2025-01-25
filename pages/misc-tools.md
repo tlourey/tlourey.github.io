@@ -2,16 +2,16 @@
 title: Misc Tools
 description: And not enough toolboxes
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 draft: true
 published: true
 tags:
-  - Tools
+    - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-01-20T10:55:58.808Z
+lastmod: 2025-01-25T03:20:03.244Z
 ---
 
  <!--- cSpell:disable --->
@@ -21,6 +21,7 @@ lastmod: 2025-01-20T10:55:58.808Z
 * [KQL Tools](#kql-tools)
 * [PowerShell Tools](#powershell-tools)
 * [Microsoft 365 Tools](#microsoft-365-tools)
+* [Windows Tools](#windows-tools)
 <!--- cSpell:enable --->
 
 ## Network Tools
@@ -71,4 +72,11 @@ lastmod: 2025-01-20T10:55:58.808Z
 
 ## Microsoft 365 Tools
 
-<https://microsoft365dsc.com/>
+<https://microsoft365dsc.com/>\
+
+## Windows Tools
+
+<https://learn.microsoft.com/en-us/windows/powertoys/>\
+<https://cmder.app/>\
+<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>\
+<https://learn.microsoft.com/en-us/sysinternals/>

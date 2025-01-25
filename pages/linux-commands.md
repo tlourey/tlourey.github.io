@@ -2,22 +2,23 @@
 title: Linux Commands
 description: Linux commands to remember
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 published: true
 fmContenttype: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-01-24T07:38:00.335Z
+lastmod: 2025-01-25T03:20:41.517Z
 tags:
-  - Commands
-  - Linux
-  - References
+    - Commands
+    - Linux
+    - References
 ---
 
 
 <!--- cSpell:disable --->
 * [Terminal Stuff](#terminal-stuff)
+  * [TMUX](#tmux)
 * [Files](#files)
 * [Hardware Info](#hardware-info)
 * [Storage](#storage)
@@ -48,6 +49,11 @@ watch
 less
 wc
 ```
+
+### TMUX
+
+* [ ] TMUX
+* [ ] Byobu
 
 ## Files
 
