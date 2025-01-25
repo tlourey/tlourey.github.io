@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-25T09:11:55.984Z
+modifieddate: 2025-01-25T10:12:58.724Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -84,9 +84,16 @@ API Client --> Rsyslog --> AMA --> DCE --> DCR --> LAW
 ```mermaid
 graph LR;
     Device --> Rsyslog;
-    API Client --> Rsyslog
-    Rsyslog --> AMA --> DCE --> DCR --> LAW;
+    API Client --> Rsyslog;
+    Rsyslog --> AMA;
+    AMA --> DCE;
+    DCE --> DCR;
+    DCR --> LAW;
 ```
+
+Until I get the above reding on github pages you can view the above [here](https://github.com/tlourey/tlourey.github.io/blob/main/mermaidtest.md)
+
+* [ ] TODO:Get mermaid displaying correctly on github pages
 
 There were dreams of having this one syslog server being used for everything include some other rsyslog config but that was also scaled back to focus on noise reduction and until I can refine my rsyslog configs.
 
