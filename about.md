@@ -11,6 +11,15 @@ permalink: /about
 
 ## About WTF
 
-How many times have you said: *"WTF was that command or query or link that did that thing?"* or *"WTF is this thing talking about?"*
+How many times have you asked:\
+*"WTF was that command or query or link that did that thing?"*\
+*"WTF is this thing talking about?"*\
+*"WTF was that cool tool that did that thing"*\
+*"WTF is that important concept I was trying to remember"*\
+*"WTF is that awesome meme called"*
 
-And here is where I try to put those things so it doesn't take me so long to answer the question of WTF?
+Enough that I started creating this.
+
+So here is where I try to put those things so it doesn't take me so long to answer the question of WTF?
+
+I may also start making posts & ranting here.
