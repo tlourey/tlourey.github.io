@@ -10,6 +10,6 @@ layout: default
 ```mermaid
 graph LR;
     Device --> Rsyslog;
-    API Client --> Rsyslog
+    API Client --> Rsyslog;
     Rsyslog --> AMA --> DCE --> DCR --> LAW;
 ```
