@@ -23,8 +23,9 @@ flowchart LR
   subgraph SysLog Server
     direction LR
     APIClient --> Rsyslog --> AMA
+    DCR1[DCR] --> AMA
   end
   AMA --> DCE;
-  DCE --> DCR;
-  DCR --> LAW;
+  DCE --> DCR2[DCR];
+  DCR2[DCR] --> LAW;
 ```
