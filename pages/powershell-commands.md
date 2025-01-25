@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-25T04:38:27.070Z
+lastmod: 2025-01-25T07:34:36.873Z
 tags:
     - Commands
     - Language
@@ -301,7 +301,8 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 
 ## Additional Resources
 
-[PowerShell Module Browser - PowerShell - Microsoft Learn](https://learn.microsoft.com/en-au/powershell/module/)
+[PowerShell Module Browser - PowerShell - Microsoft Learn](https://learn.microsoft.com/en-au/powershell/module/)\
+[Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Graph PowerShell](https://learn.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map?view=graph-powershell-1.0&pivots=azure-ad-powershell)
 
 ## Other resources to add
 
