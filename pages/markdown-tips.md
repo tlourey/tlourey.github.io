@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-25T05:26:13.746Z
+lastmod: 2025-01-26T04:20:42.652Z
 tags:
     - Language
     - References
@@ -23,6 +23,7 @@ tags:
   * [Alerts](#alerts)
   * [Wikis](#wikis)
 * [Not important things to remember](#not-important-things-to-remember)
+  * [Footnotes](#footnotes)
   * [Creating diagrams](#creating-diagrams)
   * [Collapsed Section](#collapsed-section)
     * [You can add a header](#you-can-add-a-header)
@@ -68,7 +69,7 @@ From: <https://docs.github.com/en/get-started/writing-on-github/working-with-adv
 <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts>
 
 > [!IMPORTANT] Alerts on Github pages
-> Alerts don't work on github pages but they do in the github viewer
+> Alerts don't work on github pages but they do when reading readme.md in an github repo, but it doesn't seem they work when viewing various other markdown files.
 
 ### Wikis
 
@@ -78,10 +79,29 @@ From: <https://docs.github.com/en/get-started/writing-on-github/working-with-adv
 
 ## Not important things to remember
 
+### Footnotes
+
+<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes>
+
+```markdown
+Here is a simple footnote[^1].
+
+A footnote can also have multiple lines[^2].
+
+[^1]: My reference.
+[^2]: To add line breaks within a footnote, prefix new lines with 2 spaces.
+  This is a second line.
+```
+
+> [!NOTE]
+> The position of a footnote in your Markdown does not influence where the footnote will be rendered. You can write a footnote right after your reference to the footnote, and the footnote will still render at the bottom of the Markdown. Footnotes are not supported in wikis.
+
 ### Creating diagrams
 
-<https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams>\
-<https://asciiflow.com/>
+<https://asciiflow.com/>\
+<https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-diagrams>
+
+* Mermaid only works in Github not github pages unless you make your own action to build the site
 
 ### Collapsed Section
 
