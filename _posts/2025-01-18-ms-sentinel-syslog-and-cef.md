@@ -17,7 +17,7 @@ tags:
 type: posts
 layout: posts
 fmContentType: posts
-modifieddate: 2025-01-26T16:23:32.520Z
+modifieddate: 2025-01-26T16:27:15.815Z
 ---
 
 ## TL;DR
@@ -293,6 +293,6 @@ Here are the takeaways:
 <https://www.rsyslog.com/doc/configuration/index.html>\
 <https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/deployment_guide/s1-basic_configuration_of_rsyslog#s2-Filters>\
 <https://en.wikipedia.org/wiki/Syslog>
-[KQL Queries](/pages/kql-queries.md)\
-[AMA DCR LAW](/pages/ama-dcr-law.md)\
-[Misc References](/pages/misc-references.md#cef)
+[KQL Queries](/pages/kql-queries.html)\
+[AMA DCR LAW](/pages/ama-dcr-law.html)\
+[Misc References](/pages/misc-references.html#cef)
