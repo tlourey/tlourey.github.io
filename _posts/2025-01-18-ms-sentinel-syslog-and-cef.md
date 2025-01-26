@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-26T07:36:15.292Z
+modifieddate: 2025-01-26T08:19:43.417Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -39,7 +39,7 @@ fmContentType: posts
 ## TL;DR
 
 Getting CEF Messages into Azure Sentinel is more of a pain than it should be.\
-You can easily send far more than you wanted and then you're paying for ingestion / storage you didn't mean to.\
+You can easily send far more than you intended and then you're paying for increased ingestion & storage you didn't mean to.\
 There are some queries to determine how big the problem is.\
 We try to filter out the noise *getting stored* by implementing a simple Azure Monitor Data Collection Rule Transformation. This seems to have worked.\
 We try to filter out the noise *getting sent in the first place* by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent. So far the modified rsyslog config **hasn't** worked. \
@@ -48,7 +48,10 @@ The concept could be adapted to other situations.
 
 ## Introduction
 
-TBC
+When reviewing a setup to get CEF messages into Sentinel, I found there was far more messages going in than their should be and that most of those messages were not valid.
+
+> [!NOTE] "SYSLOG, I say no, no, no!"
+> In **this** scenario i'm **not** sending SYSLOG messages into Sentinel. That can be done but wasn't the point of this post. However some of the steps and/or thinking may still be useful.
 
 <!--- cSpell:disable --->
 * [TL;DR](#tldr)
@@ -67,7 +70,7 @@ TBC
 
 ## Overview and Scenario
 
-In this scenario we had a NGFW in an private network and a NGAV/EDR SaaS Solution configured to send message to a new Ubuntu based syslog server we created running rsyslog and using Azure Monitoring Agent for Linux 1.33 (more importantly above 1.28). We then have a Azure Monitor Data Collection Rule getting syslog messages with a facility of USER/LOG_USER into the Log Analytics Workspace that is used by Sentinel. Thats a mouthful of crap. Lets break it down.
+In this scenario we had a Next-Generation Firewall (NGFW) in an private network and a Next-Generation Antivirus/Endpoint Detection and Response (NGAV/EDR) SaaS solution configured to send message to a new Ubuntu based syslog server we created running rsyslog and using Azure Monitoring Agent (AMA) for Linux 1.33 (more importantly above 1.28). We then have a Azure Monitor Data Collection Rule getting syslog messages with a facility of USER/LOG_USER into the Log Analytics Workspace that is used by Sentinel. Thats a mouthful of crap. Lets break it down.
 
 1. The NGFW can send CEF messages to a Syslog server and to a specific facility over a private network.
 2. The NGAV/EDR solution has a Firehose API Client that routes messages to a syslog server (no facility control).
@@ -98,23 +101,26 @@ Until I get the above reding on github pages you can view the above [here](https
 
 * [ ] TODO:Get mermaid displaying correctly on github pages
 
-There were dreams of having this one syslog server being used for everything include some other rsyslog config but that was also scaled back to focus on noise reduction and until I can refine my rsyslog configs.
+There were dreams of having this one syslog server being used for everything by including some other rsyslog configs for log management but that was scaled back to focus on noise reduction and until we can refine the rsyslog configs.
 
 > [!NOTE] Data Collection Endpoint
-> I mention Data Collection Endpoint(s) and DCE's above. Mostly to be aware of the component. You can create Data Collections Endpoints but you don't need to unless you're using Azure Private Links.
+> I mention Data Collection Endpoint's (DCE) above. Mostly to be aware of the component. You can create Data Collections Endpoints but you don't need to unless you're using Azure Private Links.
 
-So now we have syslog messages going into our Log Analytics Workspace and there is a lot, and I think a fair bit of it is noise.
+Now we have syslog messages going into our Log Analytics Workspace and there is a lot, and I think a fair bit of it is noise.
 
 ## Syslog Noise
 
-Here is how I started to determine the level of noise. `DeviceVendor` is part of the [CEF standard](../pages/misc-references.md#cef). So try this KQL Query in your Log Analytics Workspace and adjust your time period/limit per your logging load (Start small then increase either the limit or the time range to get an idea):
+> [!NOTE] No SYSLOG for Sentinel
+> In **this** scenario i'm **not** sending SYSLOG messages into Sentinel. That can be done but wasn't the point of this post.
+
+Here is how I started to determine the level of noise. `DeviceVendor` is part of the [CEF standard](../pages/misc-references.md#cef). So try this KQL Query in the Log Analytics Workspace and adjust your time period/limit per your logging load (Start small then increase either the limit or the time range to get an idea):
 
 ```kql
 CommonSecurityLog
 | summarize Count=count() by DeviceVendor
 ```
 
-Messages where the DeviceVendor is blank is syslog noise (Noise may be unfair, but they are not CEF messages). Also note that those that know syslog facilities better than me may not have chosen the USER facility. I didn't have a choice given the Firehose API client. Maybe I could roll my own client? ARE YOU HIGH? Anyway back on topic...
+Messages where the `DeviceVendor` is blank is syslog noise (Noise may be unfair but in this scenario they shouldn't be there as we are not sending regular SYSLOG messages to Sentinel. So they are not CEF messages). Also note that those that know syslog facilities better than me may not have chosen the USER facility. I didn't have a choice given the Firehose API client. Maybe I could roll my own client? ARE YOU HIGH? Anyway back on topic...
 
 Where is the noise coming from? I had to muck around with syslog configs to get an idea. But here are some examples I found:
 
@@ -273,16 +279,19 @@ Using the same Azure Metrics I used for the DCR, I should have seen a drop, but 
 
 ## Summary
 
-So we haven't worked out the syslog part (yet) but we can keep trying. Some reading indicates that Syslog-NG may be able to modify messages before being processed which may be a better way to attack the problem but I haven't looked into that yet.
+So we haven't worked out the syslog part (yet) but we're making progress. Some reading indicates that Syslog-NG may be able to modify messages before being processed which may be a better way to attack the problem but I haven't looked into that yet.
 
 Some of the problem may be the choice of USER/LOG_USER facility level (where I had the choice) and a lack of common usages or lack of understanding the intent of specific facility levels. I get the *feeling* USER/LOG_USER is a dumping ground. My goal of just ignoring the facility level and only forwarding CEF messages should have taken care of this but the Rsyslog config didn't work.
 
+> [!NOTE] "No SYSLOG, No Cry"
+> Another reminder that in **this** scenario i'm **not** sending SYSLOG messages into Sentinel. That can be done but wasn't the point of this post. However some of the steps and/or thinking may still be useful.
+
 Here are the takeaways:
 
-* Use DCR KQL Transforms to reduce noise being imported
-* Consider adjusting rsyslog.d conf for Azure Monitoring Agent better than I did (since my edits are not yet working)
-* Learn facilities (and their history & usage in your Distribution), syslog and the log files and how they work and more importantly, interact
-* Spend more time designing / planning your syslog setup.
+* Use DCR KQL Transforms to reduce noise being imported.
+* Consider adjusting rsyslog.d conf for Azure Monitoring Agent better than I did (since my edits are not yet working).
+* Learn SYSLOG, SYSLOG facilities (and their history & usage in your Distribution), the log files and how they work and more importantly, interact.
+* Spend more time designing / planning your syslog setup and config.
 
 ## References
 
