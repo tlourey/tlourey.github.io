@@ -32,7 +32,7 @@ I may also start making posts & ranting here.
 
 ## About Me?
 
-[![Picture](/assets/images/zapp-brannigan.jpg)](/assets/images/zapp-brannigan.jpg) [^1]
+[![Picture](/assets/images/zapp-brannigan.jpg)](/assets/images/zapp-brannigan.jpg)[^1]
 
 [^1] : <https://9gag.com/gag/aYezgWV>
 
