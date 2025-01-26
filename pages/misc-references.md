@@ -11,7 +11,7 @@ tags:
     - References
 fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-01-25T03:17:52.052Z
+lastmod: 2025-01-26T22:27:07.488Z
 ---
 
 
@@ -86,7 +86,8 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 
 **<https://msportals.io/>** - **The best and most up to date website of all of Microsoft's Portals.** Source: <https://github.com/adamfowlerit/msportals.io>\
 <https://cmd.ms/> - I don't use this much but can be useful\
-<https://pnp.github.io/> - Microsoft 365 & Power Platform Community - used to be called Patterns and Practices. Make some good tools like PnP Tools for SharePoint/O365 plus a tonne of samples.
+<https://pnp.github.io/> - Microsoft 365 & Power Platform Community - used to be called Patterns and Practices. Make some good tools like PnP Tools for SharePoint/O365 plus a tonne of samples.\
+<https://adoption.microsoft.com/en-us/> - we should all use this website more often
 
 ## Azure
 
