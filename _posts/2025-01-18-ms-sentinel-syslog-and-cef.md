@@ -17,7 +17,7 @@ tags:
 type: posts
 layout: posts
 fmContentType: posts
-modifieddate: 2025-01-26T16:18:04.732Z
+modifieddate: 2025-01-26T16:20:11.178Z
 ---
 
 ## TL;DR
@@ -86,7 +86,7 @@ flowchart LR
   DCR2[DCR] --> LAW;
 ```
 
-Until I get the above reding on github pages you can view the above [here](https://github.com/tlourey/tlourey.github.io/blob/main/_posts/2025-01-18-ms-sentinel-syslog-and-cef.md#overview-and-scenario)
+Until I get the above rendering on github pages you can view the above [here](https://github.com/tlourey/tlourey.github.io/blob/main/_posts/2025-01-18-ms-sentinel-syslog-and-cef.md#overview-and-scenario)
 
 * [ ] TODO:Get mermaid displaying correctly on github pages
 
