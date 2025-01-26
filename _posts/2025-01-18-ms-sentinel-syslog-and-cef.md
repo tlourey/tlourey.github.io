@@ -17,7 +17,7 @@ tags:
 type: posts
 layout: posts
 fmContentType: posts
-modifieddate: 2025-01-26T16:27:15.815Z
+modifieddate: 2025-01-26T16:28:57.809Z
 ---
 
 ## TL;DR
@@ -292,7 +292,7 @@ Here are the takeaways:
 <https://www.rsyslog.com/normalizing-cisco-asa-messages/>\
 <https://www.rsyslog.com/doc/configuration/index.html>\
 <https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/deployment_guide/s1-basic_configuration_of_rsyslog#s2-Filters>\
-<https://en.wikipedia.org/wiki/Syslog>
+<https://en.wikipedia.org/wiki/Syslog>\
 [KQL Queries](/pages/kql-queries.html)\
 [AMA DCR LAW](/pages/ama-dcr-law.html)\
 [Misc References](/pages/misc-references.html#cef)
