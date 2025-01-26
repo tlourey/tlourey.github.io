@@ -27,7 +27,7 @@
       {% endif %}
       <a href="/about" class="btn">About</a>
       <a href="/" class="btn">Home</a>
-      <a href="./" class="btn">Up</a>
+      <a href="/content.html" class="btn">Up</a>
       <p class="main-content" style="text-align: left;">First Published: {{ page.date | date: "%B %-d, %Y" }} | Last Modified: {{ page.lastmod | date: "%B %-d, %Y" }}<br>
       Categories: {% for category in page.categories %}{%- if forloop.length > 0 -%}{{ category }}{% unless forloop.last %}, {% endunless -%}{% endif %}{% endfor %} | Tags: {% for tag in page.tags %}{%- if forloop.length > 0 -%}{{ tag }}{% unless forloop.last %}, {% endunless -%}{% endif %}{% endfor %}</p>
       {% if page.draft %}<p class="main-content">This post is a draft.</p>{% endif %}
