@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-26T07:05:42.558Z
+lastmod: 2025-01-26T23:01:59.950Z
 ---
 
 <!--- cSpell:disable --->
@@ -24,10 +24,17 @@ lastmod: 2025-01-26T07:05:42.558Z
 * [Styling and Theming](#styling-and-theming)
   * [Theming](#theming)
     * [Custom Theming](#custom-theming)
-  * [Connect to SharePoint Online](#connect-to-sharepoint-online)
+    * [Connect via SharePoint Online PowerShell](#connect-via-sharepoint-online-powershell)
+  * [PnP PowerShell](#pnp-powershell)
+  * [PnP Provisioning Engine](#pnp-provisioning-engine)
+  * [CSOM](#csom)
+* [Specific Articles to save](#specific-articles-to-save)
+* [Formatting](#formatting)
+  * [Formatting JSON Schemas](#formatting-json-schemas)
 * [Good sites](#good-sites)
+  * [Microsoft Sites](#microsoft-sites)
   * [Microsoft 365 Community Content](#microsoft-365-community-content)
-  * [Misc](#misc)
+  * [Misc Sites](#misc-sites)
 <!--- cSpell:enable --->
 
 ## Good points to remember
@@ -75,7 +82,7 @@ lastmod: 2025-01-26T07:05:42.558Z
 
 ## Styling and Theming
 
-* [ ] Add LookBook Link
+<https://lookbook.microsoft.com/>
 
 ### Theming
 
@@ -113,7 +120,7 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 > [!TIP] Gallery Module Easier
 > Rather than download and install the MSI its easier to install and manage teh SharePoint Online PowerShell Module via PowerShell Gallery
 
-### Install SharePoint Online PowerShell
+#### Install SharePoint Online PowerShell
 
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
@@ -123,7 +130,7 @@ Install-Module -Name Microsoft.Online.SharePoint.PowerShell -Scope CurrentUser
 Update-Module -Name Microsoft.Online.SharePoint.PowerShell
 ```
 
-### Connect to SharePoint Online
+#### Connect via SharePoint Online PowerShell
 
 With MFA:
 
@@ -132,14 +139,64 @@ With MFA:
 > [!NOTE]
 > There is a known issue between the SharePoint Online Management Shell module and SharePoint Client Components SDK where the module will fail to load if both are installed on the same computer. If you encounter this issue, uninstall the SharePoint Client Components SDK.
 
+### PnP PowerShell
+
+[PnP PowerShell Intro](https://learn.microsoft.com/en-au/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)\
+[PnP PowerShell](https://pnp.github.io/powershell/index.html)
+
+### PnP Provisioning Engine
+
+<https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine>
+
+### CSOM
+
+CSOM: Client-Side Object Model
+
+[Download SharePoint Online Client Components SDK](https://www.microsoft.com/en-us/download/details.aspx?id=42038)\
+<https://www.sharepointdiary.com/2019/04/connect-to-sharepoint-online-using-csom-powershell.html>\
+<https://www.sharepointdiary.com/2019/08/connect-sharepoint-online-powershell-using-mfa.html> - contains section on connecting with CSOM and MFA
+
+More Info:\
+<https://learn.microsoft.com/en-us/sharepoint/dev/general-development/get-started-using-the-client-object-model-with-external-data-in-sharepoint>\
+<https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code>\
+<https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins-modernize/from-csom-to-pnp-libraries>
+
+## Specific Articles to save
+
+<https://techcommunity.microsoft.com/discussions/sharepoint_general/remove-items-in-new-button/3886747> - good tips on customising new button at site level.\
+<https://techcommunity.microsoft.com/discussions/sharepoint_general/hide-folder-and-template-under-upload-on-sharepoint-document-library/3874653> - for use in advanced view formatting\
+
+[Disable "Comments, Likes and Views" in SharePoint modern - Microsoft Community – includes social graph per site](https://answers.microsoft.com/en-us/msoffice/forum/all/disable-comments-likes-and-views-in-sharepoint/c523e324-e95e-4ace-b859-85782afc8135)
+[SharePoint Online: Disable Page Comments in Modern Sites using PowerShell - SharePoint Diary – powershell per site](https://www.sharepointdiary.com/2018/11/sharepoint-online-disable-page-comments-using-powershell.html)
+
+## Formatting
+
+<https://support.microsoft.com/en-us/office/formatting-list-views-f737fb8b-afb7-45b9-b9b5-4505d4427dd1>\
+<https://learn.microsoft.com/en-gb/sharepoint/dev/declarative-customization/view-formatting>\
+<https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/view-commandbar-formatting>
+
+<https://pnp.github.io/List-Formatting/>\
+<https://pnp.github.io/List-Formatting/tools/> - I haven't used this yet but it looks like it might be useful
+
+### Formatting JSON Schemas
+
+<https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json>\
+<https://developer.microsoft.com/json-schemas/sp/v2/command-bar-formatting.schema.json>
+
 ## Good sites
+
+### Microsoft Sites
+
+<https://adoption.microsoft.com/en-us/microsoft-lists/>\
+<https://adoption.microsoft.com/en-us/microsoft-lists/resources/>\
+<https://adoption.microsoft.com/en-us/sharepoint/>
 
 ### Microsoft 365 Community Content
 
 [Site Builder/Owner: New Site Checklist](https://learn.microsoft.com/en-us/microsoft-365/community/new-site-checklist)\
 <https://pnp.github.io/> - Microsoft 365 & Power Platform Community - used to be called Patterns and Practices. Make some good tools like PnP Tools for SharePoint/O365 plus a tonne of samples.
 
-### Misc
+### Misc Sites
 
 **<https://sharepointmaven.com/>** - really good\
 <https://www.sharepointdiary.com/> - older but still ok.
