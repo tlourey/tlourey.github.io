@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-26T16:12:10.718Z
+modifieddate: 2025-01-26T16:12:43.828Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -18,23 +18,6 @@ type: posts
 layout: posts
 fmContentType: posts
 ---
-
-
-
-<!--
-## Draft talking points - Delete before publishing
-
-* [ ] Expensive Log Analytics Injection? Noisy syslog's?
-* [x] Situation specifics (Azure, tools that didn't allow facility changes, original goals of syslog server)
-* [ ] Learn Syslog Facilities (I still haven't enough)
-* [ ] Learn Azure Monitoring DCR Transformations
-* [ ] Learn how your syslog tool process configurations, eg `/etc/rsyslog.d/*.conf`
-* [x] MS's Rsyslog configuration gets slightly better after AMA Version 1.28
-* [x] It still sends too much noise. How to see how much???
-* [ ] Solutions are:
-  * [ ] Modify the `/etc/rsyslog.d/10-azuremonitoragent-omfwd.conf` AND/OR
-  * [x] Use DCR Transformation
--->
 
 ## TL;DR
 
