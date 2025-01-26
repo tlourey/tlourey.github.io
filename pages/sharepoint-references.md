@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-25T06:31:00.950Z
+lastmod: 2025-01-26T03:50:05.913Z
 ---
 
 <!--- cSpell:disable --->
@@ -19,6 +19,7 @@ lastmod: 2025-01-25T06:31:00.950Z
 * [Validation Tips](#validation-tips)
 * [SharePoint Formulas](#sharepoint-formulas)
   * [Common Formulas](#common-formulas)
+* [Microsoft 365 Community Content](#microsoft-365-community-content)
 <!--- cSpell:enable --->
 
 ## Concepts
@@ -45,3 +46,7 @@ lastmod: 2025-01-25T06:31:00.950Z
 ### Common Formulas
 
 `=[My Column Name] > TODAY()`: Column name must be greater than today's date.
+
+## Microsoft 365 Community Content
+
+[Site Builder/Owner: New Site Checklist](https://learn.microsoft.com/en-us/microsoft-365/community/new-site-checklist)
