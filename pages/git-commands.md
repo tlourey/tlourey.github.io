@@ -4,12 +4,14 @@ description: Commands to remember for Git
 type: pages
 layout: pages
 categories:
-    - References
-    - Commands
+  - Tech
 published: true
 draft: true
 date: 2025-01-05T14:25:00
 lastmod: 2025-01-19T14:19:38.759Z
+tags:
+  - Commands
+  - References
 ---
 
 

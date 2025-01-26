@@ -3,21 +3,24 @@ title: Azure VM Tips
 description: Tips for setting up Azure VM's
 published: true
 categories:
-    - References
-    - Azure
+    - Tech
 type: pages
 layout: pages
 draft: true
 date: 2025-01-15T14:05:00
-lastmod: 2025-01-19T14:19:38.752Z
+lastmod: 2025-01-25T04:30:51.045Z
+tags:
+    - Azure
+    - References
 ---
 
 
 <!--- cSpell:disable --->
 * [DNS Settings](#dns-settings)
-* [2nd or Static Mac Address on Nic in Azure](#2nd-or-static-mac-address-on-nic-in-azure)
-* [First Time Setup](#first-time-setup)
-* [Using on 2nd machine](#using-on-2nd-machine)
+* [Multiple IP Addresses on Azure vms](#multiple-ip-addresses-on-azure-vms)
+* [Static Mac Address on Nic in Azure](#static-mac-address-on-nic-in-azure)
+  * [First Time Setup](#first-time-setup)
+  * [Using on 2nd machine](#using-on-2nd-machine)
 <!--- cSpell:enable --->
 
 ## DNS Settings
@@ -29,7 +32,13 @@ Set DNS Domain via Netplan on box: (<https://learn.microsoft.com/en-us/troublesh
 
 Don't worry too much about reddog: (<https://learn.microsoft.com/en-us/azure/virtual-network/virtual-networks-name-resolution-for-vms-and-role-instances?tabs=ubuntu>)
 
-## 2nd or Static Mac Address on Nic in Azure
+## Multiple IP Addresses on Azure vms
+
+<https://learn.microsoft.com/en-au/azure/virtual-network/ip-services/virtual-network-multiple-ip-addresses-portal>
+
+## Static Mac Address on Nic in Azure
+
+Must be on 2nd non-primary Nic
 
 [Understanding static MAC address licensing in Azure](https://techcommunity.microsoft.com/blog/itopstalkblog/understanding-static-mac-address-licensing-in-azure/1386187)
 

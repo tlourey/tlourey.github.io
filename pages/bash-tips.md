@@ -3,14 +3,16 @@ title: Bash Tips
 description: We're gonna need a bigger boat, I mean tip page
 published: true
 categories:
-    - References
-    - Tips
-    - Language
+  - Tech
 type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:05:00
 lastmod: 2025-01-19T14:19:38.724Z
+tags:
+  - Language
+  - References
+  - Tips
 ---
 
 

@@ -2,4 +2,4 @@
 
 > *"Hello there!"* - General Kenobi
 
-[![Picture](/assets/images/yourmother.gif)](/content2.html)
+[![Picture](/assets/images/yourmother.gif)](/content.html)

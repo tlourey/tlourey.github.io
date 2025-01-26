@@ -2,13 +2,15 @@
 title: Windows Commands
 description: Windows Commands to remember
 categories:
-    - Reference
-    - Commands
+    - Tech
 type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-01-19T14:19:38.778Z
+lastmod: 2025-01-25T04:38:32.069Z
+tags:
+    - Commands
+    - References
 ---
 
 

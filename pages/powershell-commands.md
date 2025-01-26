@@ -2,15 +2,17 @@
 title: PowerShell Commands
 description: PowerShell Commands to remember
 categories:
-    - Reference
-    - Commands
-    - PowerShell
-    - Language
+    - Tech
 type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-24T03:23:15.410Z
+lastmod: 2025-01-25T07:34:36.873Z
+tags:
+    - Commands
+    - Language
+    - PowerShell
+    - References
 ---
 
 
@@ -231,7 +233,7 @@ Send as
 # This example assigns the Send As permission to the Printer Support group on the shared mailbox named Contoso Printer Support.
 Add-RecipientPermission -Identity "Contoso Printer Support" -Trustee "Printer Support" -AccessRights SendAs
 
-# To test it worked: 
+# To test it worked:
 Get-RecipientPermission -Identity <MailboxIdentity> -Trustee <DelegateIdentity>
 ```
 
@@ -299,7 +301,8 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 
 ## Additional Resources
 
-[PowerShell Module Browser - PowerShell - Microsoft Learn](https://learn.microsoft.com/en-au/powershell/module/)
+[PowerShell Module Browser - PowerShell - Microsoft Learn](https://learn.microsoft.com/en-au/powershell/module/)\
+[Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Graph PowerShell](https://learn.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map?view=graph-powershell-1.0&pivots=azure-ad-powershell)
 
 ## Other resources to add
 

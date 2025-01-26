@@ -3,15 +3,18 @@ title: KQL Queries
 description: KQL Queries to remember
 published: true
 categories:
-    - References
-    - Language
+    - Tech
 type: pages
 layout: pages
 draft: true
-tags: []
+tags:
+    - Language
+    - References
+    - Azure Sentinel
+    - Azure Log Analytics
 fmContenttype: pages
 date: 2025-01-18T16:51:00
-lastmod: 2025-01-20T10:32:07.664Z
+lastmod: 2025-01-25T04:45:08.347Z
 ---
 
 

@@ -1,17 +1,19 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-23T14:26:19.850Z
+modifieddate: 2025-01-25T10:12:58.724Z
 categories:
-    - Sentinel
-    - Monitoring
-    - Security
-    - Azure
+    - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
 published: false
 preview: ""
 draft: true
-tags: []
+tags:
+    - Azure
+    - Monitoring
+    - Azure Sentinel
+    - Azure Log Analytics
+    - Security
 type: posts
 layout: posts
 fmContentType: posts
@@ -22,16 +24,16 @@ fmContentType: posts
 <!--
 ## Draft talking points - Delete before publishing
 
-* Expensive Log Analytics Injection? Noisy syslog's?
-* Situation specifics (Azure, tools that didn't allow facility changes, original goals of syslog server)
-* Learn Syslog Facilities (I still haven't enough)
-* Learn Azure Monitoring DCR Transformations
-* Learn how your syslog tool process configurations, eg `/etc/rsyslog.d/*.conf`
-* MS's Rsyslog configuration gets slightly better after AMA Version 1.28
-* It still sends too much noise. What to see how much???
-* Solutions are:
-  * Modify the `/etc/rsyslog.d/10-azuremonitoragent-omfwd.conf` OR
-  * Use DCR Transformation
+* [ ] Expensive Log Analytics Injection? Noisy syslog's?
+* [x] Situation specifics (Azure, tools that didn't allow facility changes, original goals of syslog server)
+* [ ] Learn Syslog Facilities (I still haven't enough)
+* [ ] Learn Azure Monitoring DCR Transformations
+* [ ] Learn how your syslog tool process configurations, eg `/etc/rsyslog.d/*.conf`
+* [x] MS's Rsyslog configuration gets slightly better after AMA Version 1.28
+* [x] It still sends too much noise. How to see how much???
+* [ ] Solutions are:
+  * [ ] Modify the `/etc/rsyslog.d/10-azuremonitoragent-omfwd.conf` AND/OR
+  * [x] Use DCR Transformation
 -->
 
 ## TL;DR
@@ -39,9 +41,8 @@ fmContentType: posts
 Getting CEF Messages into Azure Sentinel is a pain.\
 You can easily send far more than you wanted and then you're paying for ingestion / storage you didn't mean to.\
 There are some queries to determine how big the problem is.\
-We try to filter out the noise *getting stored* by implementing a simple Azure Monitor Data Collection Rule Transformation.\
-We try to filter out the noise *getting sent in the first place* by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent.
-So far this **hasn't** worked. \
+We try to filter out the noise *getting stored* by implementing a simple Azure Monitor Data Collection Rule Transformation. This seems to have worked.\
+We try to filter out the noise *getting sent in the first place* by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent. So far the modified rsyslog config **hasn't** worked. \
 We cover some methods to monitor / test if they work.\
 The concept could be adapted to other situations.
 
@@ -66,9 +67,9 @@ TBC
 
 ## Overview and Scenario
 
-In this scenario we had a NGFW in an MPLS and a NGAV/EDR SaaS Solution configured to send message to a new Ubuntu based syslog server we created running rsyslog and using Azure Monitoring Agent for Linux 1.33 (more importantly above 1.28). We then have a Azure Monitor Data Collection Rule getting syslog messages with a facility of USER/LOG_USER into the Log Analytics Workspace that is used by Sentinel. Thats a mouthful of crap. Lets break it down.
+In this scenario we had a NGFW in an private network and a NGAV/EDR SaaS Solution configured to send message to a new Ubuntu based syslog server we created running rsyslog and using Azure Monitoring Agent for Linux 1.33 (more importantly above 1.28). We then have a Azure Monitor Data Collection Rule getting syslog messages with a facility of USER/LOG_USER into the Log Analytics Workspace that is used by Sentinel. Thats a mouthful of crap. Lets break it down.
 
-1. The NGFW can send CEF messages to a Syslog server and to a specific facility over a private MPLS network.
+1. The NGFW can send CEF messages to a Syslog server and to a specific facility over a private network.
 2. The NGAV/EDR solution has a Firehose API Client that routes messages to a syslog server (no facility control).
 3. The syslog server is an Ubuntu 22 LTS server in Azure. This means its running Rsyslog and the Azure Monitoring Agent.
 4. The version of Azure Monitoring Agent matters as versions 1.28 and greater simplify the 'pickup' process. Before this there were 2 different agents and different methods of each and unix sockets and the Log Analytics Agents and all sorts of other crap. Don't get me wrong AMA isn't great but its better than what we had.
@@ -79,6 +80,22 @@ In this scenario we had a NGFW in an MPLS and a NGAV/EDR SaaS Solution configure
 
 Device --> Rsyslog --> AMA --> DCE --> DCR --> LAW\
 API Client --> Rsyslog --> AMA --> DCE --> DCR --> LAW
+
+```mermaid
+graph LR;
+    Device --> Rsyslog;
+    API Client --> Rsyslog;
+    Rsyslog --> AMA;
+    AMA --> DCE;
+    DCE --> DCR;
+    DCR --> LAW;
+```
+
+Until I get the above reding on github pages you can view the above [here](https://github.com/tlourey/tlourey.github.io/blob/main/mermaidtest.md)
+
+* [ ] TODO:Get mermaid displaying correctly on github pages
+
+There were dreams of having this one syslog server being used for everything include some other rsyslog config but that was also scaled back to focus on noise reduction and until I can refine my rsyslog configs.
 
 > [!NOTE] Data Collection Endpoint
 > I mention Data Collection Endpoint(s) and DCE's above. Mostly to be aware of the component. You can create Data Collections Endpoints but you don't need to unless you're using Azure Private Links.
@@ -249,7 +266,7 @@ Things you may need to consider with the above script.
 
 ### How can I check the new Rsyslog config working?
 
-Using the same Azure Metrics I used for the DCR, I should have seen a drop, but I didn't see a noticeable one. Esp given what I was seeing before the DCR Transformation. The metric of log rows dropped is still high. As such I may need to disable the translate to see how good/bad the rsyslog changes are.
+Using the same Azure Metrics I used for the DCR, I should have seen a drop, but there wasn't anything noticeable one since the DCR Transformation drop. Especially given what I was seeing before the DCR Transformation. The metric of log rows dropped is still high. As such I may need to disable the translate to see how good/bad the rsyslog changes are.
 
 ## Summary
 

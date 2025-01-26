@@ -3,20 +3,22 @@ title: Misc References
 description: Another Doom Pile
 published: true
 categories:
-    - References
+    - Tech
 type: pages
 layout: pages
 draft: true
-tags: []
+tags:
+    - References
 fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-01-24T01:39:38.432Z
+lastmod: 2025-01-25T03:17:52.052Z
 ---
 
 
 <!--- cSpell:disable --->
 * [Standards](#standards)
   * [Networking](#networking)
+  * [CIDR](#cidr)
   * [CEF](#cef)
   * [SMTP](#smtp)
   * [Misc](#misc)
@@ -24,6 +26,8 @@ lastmod: 2025-01-24T01:39:38.432Z
   * [Debian Manuals](#debian-manuals)
   * [Ubuntu Manuals](#ubuntu-manuals)
 * [Microsoft Platforms](#microsoft-platforms)
+* [Azure](#azure)
+  * [Conventions](#conventions)
 * [People](#people)
 <!--- cSpell:enable --->
 
@@ -43,6 +47,10 @@ lastmod: 2025-01-24T01:39:38.432Z
 <https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt> - Port Listing in Txt\
 **<https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml> - Port Listing in HTML** \
 <https://www.iana.org/protocols>
+
+### CIDR
+
+[CIDR](CIDR.md)
 
 ### CEF
 
@@ -79,6 +87,14 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 **<https://msportals.io/>** - **The best and most up to date website of all of Microsoft's Portals.** Source: <https://github.com/adamfowlerit/msportals.io>\
 <https://cmd.ms/> - I don't use this much but can be useful\
 <https://pnp.github.io/> - Microsoft 365 & Power Platform Community - used to be called Patterns and Practices. Make some good tools like PnP Tools for SharePoint/O365 plus a tonne of samples.
+
+## Azure
+
+### Conventions
+
+<https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming>\
+<https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations>\
+<https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules>
 
 ## People
 

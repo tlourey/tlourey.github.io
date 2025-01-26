@@ -3,13 +3,15 @@ title: CIDR
 description: description
 published: true
 categories:
-    - References
-    - Networks
+  - Tech
 type: pages
 layout: pages
 draft: false
 date: 2025-01-11T22:26:00
 lastmod: 2025-01-19T14:19:38.790Z
+tags:
+  - Networks
+  - References
 ---
 
 
