@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-26T16:12:43.828Z
+modifieddate: 2025-01-26T16:15:55.660Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -21,13 +21,13 @@ fmContentType: posts
 
 ## TL;DR
 
-Getting CEF Messages into Azure Sentinel is more of a pain than it should be.\
-You can easily send far more than you intended and then you're paying for increased ingestion & storage you didn't mean to.\
-There are some queries to determine how big the problem is.\
-We try to filter out the noise *getting stored* by implementing a simple Azure Monitor Data Collection Rule Transformation. This seems to have worked.\
-We try to filter out the noise *getting sent in the first place* by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent. So far the modified rsyslog config **hasn't** worked. \
-We cover some methods to monitor / test if they work.\
-The concept could be adapted to other situations.
+* Getting CEF Messages into Azure Sentinel is more of a pain than it should be.
+* You can easily send far more than you intended and then you're paying for increased ingestion & storage you didn't mean to.
+* There are some queries to determine how big the problem is.
+* We try to filter out the noise *getting stored* by implementing a simple Azure Monitor Data Collection Rule Transformation. This seems to have worked.
+* We try to filter out the noise *getting sent in the first place* by modifying the rsyslog ruleset to reduce what gets sent to the Azure Monitoring Agent. So far the modified rsyslog config **hasn't** worked.
+* We cover some methods to monitor / test if they work.
+* The concept could be adapted to other situations.
 
 ## Introduction
 
