@@ -11,7 +11,7 @@ tags:
     - References
 fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-01-26T22:27:07.488Z
+lastmod: 2025-01-26T23:11:24.652Z
 ---
 
 
@@ -29,6 +29,7 @@ lastmod: 2025-01-26T22:27:07.488Z
 * [Azure](#azure)
   * [Conventions](#conventions)
 * [People](#people)
+* [Misc Misc Misc](#misc-misc-misc)
 <!--- cSpell:enable --->
 
 <!---
@@ -100,3 +101,7 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 ## People
 
 <https://merill.net/> / <https://github.com/merill> - Big Azure AD / Entra Guy. Makes a LOT of tools, sites and references that are very useful. Plus a great entra ID newsletter and I think is blog is good too!
+
+## Misc Misc Misc
+
+[Formatting Sandbox](https://meta.stackexchange.com/questions/3122/formatting-sandbox/327695#327695)
