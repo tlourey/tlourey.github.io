@@ -14,13 +14,14 @@ tags:
     - Tips
     - References
 fmContentType: pages
-lastmod: 2025-01-25T06:18:12.291Z
+lastmod: 2025-01-26T06:42:13.247Z
 ---
 
 <!--- cSpell:disable --->
 * [SharePoint Language Settings for end user](#sharepoint-language-settings-for-end-user)
 * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
+* [DSC](#dsc)
 <!--- cSpell:enable --->
 
 ## SharePoint Language Settings for end user
@@ -34,3 +35,7 @@ Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-l
 ## Microsoft 365 Language Settings
 
 <https://myaccount.microsoft.com/settingsandprivacy/language>
+
+## DSC
+
+<https://microsoft365dsc.com/>
