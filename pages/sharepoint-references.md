@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-26T07:05:42.558Z
+lastmod: 2025-01-26T09:45:45.717Z
 ---
 
 <!--- cSpell:disable --->
@@ -27,7 +27,7 @@ lastmod: 2025-01-26T07:05:42.558Z
   * [Connect to SharePoint Online](#connect-to-sharepoint-online)
 * [Good sites](#good-sites)
   * [Microsoft 365 Community Content](#microsoft-365-community-content)
-  * [Misc](#misc)
+  * [Misc Sites](#misc-sites)
 <!--- cSpell:enable --->
 
 ## Good points to remember
@@ -139,7 +139,7 @@ With MFA:
 [Site Builder/Owner: New Site Checklist](https://learn.microsoft.com/en-us/microsoft-365/community/new-site-checklist)\
 <https://pnp.github.io/> - Microsoft 365 & Power Platform Community - used to be called Patterns and Practices. Make some good tools like PnP Tools for SharePoint/O365 plus a tonne of samples.
 
-### Misc
+### Misc Sites
 
 **<https://sharepointmaven.com/>** - really good\
 <https://www.sharepointdiary.com/> - older but still ok.
