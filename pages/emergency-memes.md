@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-01-25T04:38:18.758Z
+lastmod: 2025-01-26T09:41:44.060Z
 ---
 
 <!--- cSpell:disable --->
@@ -22,6 +22,7 @@ lastmod: 2025-01-25T04:38:18.758Z
 * [Unimpressed](#unimpressed)
 * [Snappy Response](#snappy-response)
 * [Go away](#go-away)
+* [Jackie Chan](#jackie-chan)
 * [Ba dum tisss](#ba-dum-tisss)
 <!--- cSpell:enable --->
 
@@ -58,6 +59,12 @@ lastmod: 2025-01-25T04:38:18.758Z
 ## Go away
 
 [![Picture](/assets/images/noob.jpg)](/assets/images/noob.jpg)
+
+## Jackie Chan
+
+Photo:\ [![Picture](/assets/images/jackie-chan-photo.jpg)](/assets/images/jackie-chan-photo.jpg)
+Drawing:\
+[![Picture](/assets/images/jackie-chan-drawing.jpg)](/assets/images/jackie-chan-drawing.jpg)
 
 ## Ba dum tisss
 
