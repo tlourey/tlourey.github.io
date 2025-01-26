@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-25T14:32:17.380Z
+modifieddate: 2025-01-26T07:36:15.292Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -38,7 +38,7 @@ fmContentType: posts
 
 ## TL;DR
 
-Getting CEF Messages into Azure Sentinel is a pain.\
+Getting CEF Messages into Azure Sentinel is more of a pain than it should be.\
 You can easily send far more than you wanted and then you're paying for ingestion / storage you didn't mean to.\
 There are some queries to determine how big the problem is.\
 We try to filter out the noise *getting stored* by implementing a simple Azure Monitor Data Collection Rule Transformation. This seems to have worked.\
@@ -122,7 +122,7 @@ Where is the noise coming from? I had to muck around with syslog configs to get 
 * Azure Monitor Agent
 * I can't remember the 3rd
 
-So we need to reduce the noise. There are two approaches I came to. DCR Transformation & Rsyslog config modification.
+So we need to reduce the noise. There are two approaches I came up with. DCR Transformation & Rsyslog config modification.
 
 ## DCR Transformation
 
@@ -273,10 +273,14 @@ Using the same Azure Metrics I used for the DCR, I should have seen a drop, but 
 
 ## Summary
 
-So we haven't worked out the syslog part (yet) but we can keep trying. Some reading indicates that Syslog-NG may be able to modify messages before being processed which may be a better way to attack the problem but I haven't looked into that yet. But here are the takeaways:
+So we haven't worked out the syslog part (yet) but we can keep trying. Some reading indicates that Syslog-NG may be able to modify messages before being processed which may be a better way to attack the problem but I haven't looked into that yet.
+
+Some of the problem may be the choice of USER/LOG_USER facility level (where I had the choice) and a lack of common usages or lack of understanding the intent of specific facility levels. I get the *feeling* USER/LOG_USER is a dumping ground. My goal of just ignoring the facility level and only forwarding CEF messages should have taken care of this but the Rsyslog config didn't work.
+
+Here are the takeaways:
 
 * Use DCR KQL Transforms to reduce noise being imported
-* Consider adjusting rsyslog.d conf for Azure Monitoring Agent (since my edits are not yet working)
+* Consider adjusting rsyslog.d conf for Azure Monitoring Agent better than I did (since my edits are not yet working)
 * Learn facilities (and their history & usage in your Distribution), syslog and the log files and how they work and more importantly, interact
 * Spend more time designing / planning your syslog setup.
 
@@ -288,6 +292,7 @@ So we haven't worked out the syslog part (yet) but we can keep trying. Some read
 <https://www.rsyslog.com/normalizing-cisco-asa-messages/>\
 <https://www.rsyslog.com/doc/configuration/index.html>\
 <https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/deployment_guide/s1-basic_configuration_of_rsyslog#s2-Filters>\
+<https://en.wikipedia.org/wiki/Syslog>
 [KQL Queries](../pages/kql-queries.md)\
 [AMA DCR LAW](../pages/ama-dcr-law.md)\
 [Misc References](../pages/misc-references.md#cef)
