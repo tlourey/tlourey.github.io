@@ -1,11 +1,11 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-26T15:14:31.375Z
+modifieddate: 2025-01-26T16:12:10.718Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
-published: false
+published: true
 preview: ""
 draft: true
 tags:
@@ -191,16 +191,18 @@ Note that not all KQL is supported in Transformations. Refer to [Supported KQL f
 
 One thing I found is that it can be hard to check the DCR Transformation exactly . Here are some ways I found:
 
-1. Metrics of the DCR - this method I found best as you can see Logs coming in, log errors, transformation time.
+1. Metrics of the DCR - this method I found best as you can see Logs coming in, log errors, transformation time and the main one for me was Log Rows Dropped. This one moved a lot.
 2. Workbooks on usage of the LAW, especially if its Sentinel-enabled.
 3. Trying to mirror / watch / capture what the syslog server output. Too hard.
 4. Try the noisy KQL query from above again (this was my litmus test).
 
+Seeing the log rows dropped metric really indicated this was working. But...
+
 ### Is this really a fix?
 
-Technically yes, but I understand what you mean. You're still sending a lot of data in the first place, then filtering it out. Depending on the scale, thats money somewhere.
+Technically yes, but I understand what you mean. You're still sending a lot of data in the first place, then filtering it out with the DCR Transformation. Depending on the scale, thats money somewhere.
 
-The goal was to also use this as a single (or HA) syslog server for all needs instead of running multiples.
+The goal was to use this as a single (or HA) syslog server for all needs instead of running multiple servers.
 
 In my situation I got there by setting the CEF Connection via AMA for Sentinel, in which you must choose a SYSLOG facility to bring in and a level. One of my input devices I could change the facility and one I couldn't. So I may be stuck with User/Log_User Facility. But we could get 'creative' with the RSyslog config file as mentioned above. Thats the next step to try.
 
@@ -209,7 +211,7 @@ In my situation I got there by setting the CEF Connection via AMA for Sentinel, 
 If you setup log forwarding via:
 
 1. The Azure Monitoring Agent and a DCR
-2. Setup the Sentinel CEF Connector and run Forwarder_AMA_installer.py
+2. Setup the Sentinel CEF Connector and run `Forwarder_AMA_installer.py`
 
 on your syslog server and you're running Azure Monitoring Agent v1.28 or newer, you will end up with `/etc/rsyslog.d/10-azuremonitoragent-omfwd.conf` being created. It looks like:
 
@@ -275,16 +277,16 @@ if $rawmsg contains "CEF:" or $rawmsg contains "ASA-" then {
 Things you may need to consider with the above script.
 
 * The Azure support tools may not work correctly.
-* Forwarder_AMA_installer.py may revert it back
-* Sentinel_AMA_troubleshoot.py may not work
+* `Forwarder_AMA_installer.py` may revert it back
+* `Sentinel_AMA_troubleshoot.py` may not work
 
 ### How can I check the new Rsyslog config working?
 
-Using the same Azure Metrics I used for the DCR, I should have seen a drop, but there wasn't anything noticeable one since the DCR Transformation drop. Especially given what I was seeing before the DCR Transformation. The metric of log rows dropped is still high. As such I may need to disable the translate to see how good/bad the rsyslog changes are.
+Using the same Azure Metrics I used for the DCR, you should have seen a drop, but ***I didn't*** see anything significant change since the DCR Transformation drop, Especially given what I was seeing before the DCR Transformation. The metric of log rows dropped is still high. As such I may need to disable the transformation to assess the impact of the rsyslog changes.
 
 ## Summary
 
-So we haven't worked out the syslog part (yet) but we're making progress. Some reading indicates that Syslog-NG may be able to modify messages before being processed which may be a better way to attack the problem but I haven't looked into that yet.
+So we ***haven't worked out*** the syslog part (yet) but we're making progress. Some reading indicates that Syslog-NG may be able to modify messages before being processed which may be a better way to attack the problem but I haven't looked into that yet.
 
 Some of the problem may be the choice of USER/LOG_USER facility level (where I had the choice) and a lack of common usages or lack of understanding the intent of specific facility levels. I get the *feeling* USER/LOG_USER is a dumping ground. My goal of just ignoring the facility level and only forwarding CEF messages should have taken care of this but the Rsyslog config didn't work.
 
