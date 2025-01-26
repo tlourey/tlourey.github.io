@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-01-26T09:41:44.060Z
+lastmod: 2025-01-26T09:46:14.337Z
 ---
 
 <!--- cSpell:disable --->
@@ -62,7 +62,8 @@ lastmod: 2025-01-26T09:41:44.060Z
 
 ## Jackie Chan
 
-Photo:\ [![Picture](/assets/images/jackie-chan-photo.jpg)](/assets/images/jackie-chan-photo.jpg)
+Photo:\
+[![Picture](/assets/images/jackie-chan-photo.jpg)](/assets/images/jackie-chan-photo.jpg)
 Drawing:\
 [![Picture](/assets/images/jackie-chan-drawing.jpg)](/assets/images/jackie-chan-drawing.jpg)
 
