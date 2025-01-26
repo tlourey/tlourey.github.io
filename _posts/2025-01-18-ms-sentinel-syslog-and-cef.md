@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-modifieddate: 2025-01-25T10:12:58.724Z
+modifieddate: 2025-01-25T14:32:17.380Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -82,13 +82,16 @@ Device --> Rsyslog --> AMA --> DCE --> DCR --> LAW\
 API Client --> Rsyslog --> AMA --> DCE --> DCR --> LAW
 
 ```mermaid
-graph LR;
-    Device --> Rsyslog;
-    API Client --> Rsyslog;
-    Rsyslog --> AMA;
-    AMA --> DCE;
-    DCE --> DCR;
-    DCR --> LAW;
+flowchart LR
+  Device --> Rsyslog;
+  subgraph SysLog Server
+    direction LR
+    APIClient --> Rsyslog --> AMA
+    DCR1[DCR] --> AMA
+  end
+  AMA --> DCE;
+  DCE --> DCR2[DCR];
+  DCR2[DCR] --> LAW;
 ```
 
 Until I get the above reding on github pages you can view the above [here](https://github.com/tlourey/tlourey.github.io/blob/main/mermaidtest.md)
