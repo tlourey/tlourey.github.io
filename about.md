@@ -11,6 +11,7 @@ permalink: /about
 
 <!--- cspell:disable --->
 * [WTF?](#wtf)
+* [About Me?](#about-me)
 * [Stack](#stack)
 <!--- cspell:enable --->
 
@@ -28,6 +29,12 @@ Enough that I started creating this.
 So here is where I try to put those things so it doesn't take me so long to answer the question of WTF?
 
 I may also start making posts & ranting here.
+
+## About Me?
+
+[![Picture](/assets/images/zapp-brannigan.jpg)](/assets/images/zapp-brannigan.jpg) [^1]
+
+[^1] : <https://9gag.com/gag/aYezgWV>
 
 ## Stack
 
