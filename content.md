@@ -6,4 +6,6 @@ type: index
 layout: home2
 ---
 
-## Heading here
+## If I had an Announcement it would go here
+
+But I don't

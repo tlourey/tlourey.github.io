@@ -43,5 +43,6 @@ I may also start making posts & ranting here.
   * [Frontmatter CMS for VSCode](https://marketplace.visualstudio.com/items?itemName=eliostruyf.vscode-front-matter)
   * [Liquid](https://marketplace.visualstudio.com/items?itemName=sissel.shopify-liquid) (not needed but can be helpful)
 * [Cayman Theme](https://pages-themes.github.io/cayman/) (poorly customised)
+* [giscus](https://giscus.app/)
 * [Jekyll](https://jekyllrb.com/)
 * [Github Pages](https://pages.github.com/)

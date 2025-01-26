@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-25T07:34:36.873Z
+lastmod: 2025-01-26T06:42:29.134Z
 tags:
     - Commands
     - Language
@@ -27,6 +27,7 @@ tags:
   * [Local System Management](#local-system-management)
     * [Uptime, wake on lan, reboot](#uptime-wake-on-lan-reboot)
     * [Remote Desktop](#remote-desktop)
+* [SharePoint PowerShell](#sharepoint-powershell)
 * [Commands often forgotten](#commands-often-forgotten)
 * [Additional Resources](#additional-resources)
 * [Other resources to add](#other-resources-to-add)
@@ -293,16 +294,23 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 > [!TIP] Old Query Commands
 > Check the [old query commands](windows-commands.md)
 
+## SharePoint PowerShell
+
+[SharePoint Online PowerShell](sharepoint-references.md#sharepoint-online-powershell)\
+[PnP PowerShell Intro](https://learn.microsoft.com/en-au/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)\
+[PnP PowerShell](https://pnp.github.io/powershell/index.html)
+
 ## Commands often forgotten
 
-`get-content -path c:\temp\mylogfile.log -wait`: like cat. using -wait makes it like tail -f
-`select-string`: kind of like grep (need to check if it does work like grep)
-`out-gridview`: really cool wait view tables/rows
+`Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f
+`Select-String`: kind of like grep (need to check if it does work like grep)
+`Out-GridView`: really cool wait view tables/rows
 
 ## Additional Resources
 
 [PowerShell Module Browser - PowerShell - Microsoft Learn](https://learn.microsoft.com/en-au/powershell/module/)\
-[Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Graph PowerShell](https://learn.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map?view=graph-powershell-1.0&pivots=azure-ad-powershell)
+[Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Graph PowerShell](https://learn.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map?view=graph-powershell-1.0&pivots=azure-ad-powershell)\
+<https://microsoft365dsc.com/>
 
 ## Other resources to add
 
