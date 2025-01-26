@@ -34,7 +34,7 @@ I may also start making posts & ranting here.
 
 [![Picture](/assets/images/zapp-brannigan.jpg)](/assets/images/zapp-brannigan.jpg)[^1]
 
-[^1] : <https://9gag.com/gag/aYezgWV>
+[^1]: <https://9gag.com/gag/aYezgWV>
 
 ## Stack
 
