@@ -11,7 +11,7 @@ tags:
     - References
 fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-01-26T23:11:24.652Z
+lastmod: 2025-01-27T04:20:26.689Z
 ---
 
 
@@ -21,6 +21,7 @@ lastmod: 2025-01-26T23:11:24.652Z
   * [CIDR](#cidr)
   * [CEF](#cef)
   * [SMTP](#smtp)
+  * [Markdown](#markdown)
   * [Misc](#misc)
 * [Linux](#linux)
   * [Debian Manuals](#debian-manuals)
@@ -62,6 +63,16 @@ lastmod: 2025-01-26T23:11:24.652Z
 ### SMTP
 
 <https://datatracker.ietf.org/doc/rfc5321/>
+
+### Markdown
+
+<https://daringfireball.net/projects/markdown/> - where it started\
+<https://spec.commonmark.org/> - the main standard (via <https://commonmark.org>)
+<https://markdown.github.io/> - documents various implementations\
+<https://github.github.com/gfm/> - the GitHub Flavored Markdown Spec\
+<https://en.wikipedia.org/wiki/Markdown>
+
+Refer to [Markdown Tips](./markdown-tips.html)
 
 ### Misc
 
