@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-27T08:10:20.831Z
+lastmod: 2025-01-27T09:24:25.819Z
 ---
 
 <!--- cSpell:disable --->
@@ -200,7 +200,8 @@ Connect-PnPOnline [yourtenant].sharepoint.com -DeviceLogin -Tenant <tenant>.onmi
 
 ### PnP Provisioning Engine
 
-<https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine>
+<https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine>\
+<https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/applying-pnp-templates>
 
 ### CSOM
 
@@ -260,7 +261,9 @@ More Info:\
 <https://techcommunity.microsoft.com/discussions/sharepoint_general/remove-items-in-new-button/3886747> - good tips on customising new button at site level.\
 <https://techcommunity.microsoft.com/discussions/sharepoint_general/hide-folder-and-template-under-upload-on-sharepoint-document-library/3874653> - for use in advanced view formatting\
 <https://www.reddit.com/r/sharepoint/comments/1c67ms4/create_items_in_libraries_but_not_new_libraries/>\
-<https://sharepointmaven.com/how-to-copy-an-existing-document-library-in-sharepoint-online/> - also includes how to get around a very obscure error if you have audience targeting enabled on a the library.
+<https://sharepointmaven.com/how-to-copy-an-existing-document-library-in-sharepoint-online/> - also includes how to get around a very obscure error if you have audience targeting enabled on a the library.\
+<https://learn.microsoft.com/en-us/answers/questions/1367728/how-do-you-use-powershell-to-copy-a-sharepoint-onl>\
+<https://stackoverflow.com/questions/78491086/get-pnpsitetemplate-gets-stuck-for-a-long-time-on-certain-handlers> - sometimes running PnP Commands in VSCode has strange issues
 
 ### Disabling Comments (for one site only)
 
