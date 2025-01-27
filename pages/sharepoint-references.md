@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-26T23:01:59.950Z
+lastmod: 2025-01-27T00:15:43.150Z
 ---
 
 <!--- cSpell:disable --->
@@ -26,9 +26,12 @@ lastmod: 2025-01-26T23:01:59.950Z
     * [Custom Theming](#custom-theming)
     * [Connect via SharePoint Online PowerShell](#connect-via-sharepoint-online-powershell)
   * [PnP PowerShell](#pnp-powershell)
+    * [Installing](#installing)
+    * [Connecting](#connecting)
   * [PnP Provisioning Engine](#pnp-provisioning-engine)
   * [CSOM](#csom)
 * [Specific Articles to save](#specific-articles-to-save)
+  * [Disabling Comments (for one site only)](#disabling-comments-for-one-site-only)
 * [Formatting](#formatting)
   * [Formatting JSON Schemas](#formatting-json-schemas)
 * [Good sites](#good-sites)
@@ -122,6 +125,9 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 
 #### Install SharePoint Online PowerShell
 
+> [!TIP] PS5 not PS7
+> this module only seems to work in PS5/Windows PowerShell.
+
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
 # OR for no admin rights
@@ -143,6 +149,32 @@ With MFA:
 
 [PnP PowerShell Intro](https://learn.microsoft.com/en-au/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)\
 [PnP PowerShell](https://pnp.github.io/powershell/index.html)
+
+#### Installing
+
+```powershell
+Install-Module PnP.PowerShell -Scope CurrentUser
+```
+
+If it hasn't been used in the tenant before
+
+```powershell
+Import-Module PnP.PowerShell
+Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [yourtennantnamehere].onmicrosoft.com -Interactive
+```
+
+> [!TIP] Whats in a name
+> You can change the name away from PnP Rocks to something else if you want just note it and the application id down.
+
+#### Connecting
+
+<https://pnp.github.io/powershell/articles/authentication.html>
+
+```powershell
+Connect-PnPOnline [yourtenant].sharepoint.com -Interactive -ClientId <client id of your Entra ID Application Registration>
+# OR
+Connect-PnPOnline [yourtenant].sharepoint.com -DeviceLogin -Tenant <tenant>.onmicrosoft.com -ClientId <client id of your Entra ID Application Registration>
+```
 
 ### PnP Provisioning Engine
 
@@ -166,8 +198,23 @@ More Info:\
 <https://techcommunity.microsoft.com/discussions/sharepoint_general/remove-items-in-new-button/3886747> - good tips on customising new button at site level.\
 <https://techcommunity.microsoft.com/discussions/sharepoint_general/hide-folder-and-template-under-upload-on-sharepoint-document-library/3874653> - for use in advanced view formatting\
 
-[Disable "Comments, Likes and Views" in SharePoint modern - Microsoft Community – includes social graph per site](https://answers.microsoft.com/en-us/msoffice/forum/all/disable-comments-likes-and-views-in-sharepoint/c523e324-e95e-4ace-b859-85782afc8135)
-[SharePoint Online: Disable Page Comments in Modern Sites using PowerShell - SharePoint Diary – powershell per site](https://www.sharepointdiary.com/2018/11/sharepoint-online-disable-page-comments-using-powershell.html)
+### Disabling Comments (for one site only)
+
+To disable for a **specific site only** and not for the whole Tenant using PnP PowerShell (after connecting)
+
+```powershell
+$SiteURL = https://tenantname.sharepoint.com/sites/comms-site-i-want-comments-and-likes-disabled-on
+# Ensure Site URL does *not* have a trailing slash
+
+Set-PnPSite -Identity $SiteURL -SocialBarOnSitePagesDisabled $True -CommentsOnSitePagesDisabled $True
+```
+
+More Info: [https://pnp.github.io/powershell/cmdlets/Set-PnPSite.html]
+
+[Disable "Comments, Likes and Views" in SharePoint modern - Microsoft Community - includes social graph per site](https://answers.microsoft.com/en-us/msoffice/forum/all/disable-comments-likes-and-views-in-sharepoint/c523e324-e95e-4ace-b859-85782afc8135)
+[SharePoint Online: Disable Page Comments in Modern Sites using PowerShell - SharePoint Diary - powershell per site](https://www.sharepointdiary.com/2018/11/sharepoint-online-disable-page-comments-using-powershell.html)
+<https://sharepointmaven.com/2-ways-to-disable-modern-page-comments/>\
+<https://sharepoint.stackexchange.com/questions/274969/remove-social-and-comments-footer-from-spo-site-page>
 
 ## Formatting
 
