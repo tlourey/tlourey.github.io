@@ -8,6 +8,7 @@ google_analytics: G-29R261QM9P
 plugins:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
+  - jekyll-sitemap
 whitelist:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
