@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-27T04:24:38.389Z
+lastmod: 2025-01-27T04:31:47.917Z
 tags:
     - Language
     - References
@@ -24,10 +24,12 @@ tags:
     * [Issue with Alert Titles](#issue-with-alert-titles)
   * [Wikis](#wikis)
 * [Not important things to remember](#not-important-things-to-remember)
+  * [GFM Definition](#gfm-definition)
   * [Footnotes](#footnotes)
   * [Creating diagrams](#creating-diagrams)
   * [Collapsed Section](#collapsed-section)
     * [You can add a header](#you-can-add-a-header)
+  * [Bug in Markdown all in one](#bug-in-markdown-all-in-one)
   * [Useless by cool](#useless-by-cool)
     * [ASCII STL](#ascii-stl)
 <!--- cSpell:enable --->
@@ -96,6 +98,16 @@ But I think both are standards compliant.
 
 ## Not important things to remember
 
+### GFM Definition
+
+> GitHub Flavored Markdown, often shortened as GFM, is the dialect of Markdown that is currently supported for user content on GitHub.com and GitHub Enterprise.
+>
+> This formal specification, based on the CommonMark Spec, defines the syntax and semantics of this dialect.
+>
+> GFM is a strict superset of CommonMark. All the features which are supported in GitHub user content and that are not specified on the original CommonMark Spec are hence known as extensions, and highlighted as such.
+>
+> While GFM supports a wide range of inputs, it's worth noting that GitHub.com and GitHub Enterprise perform additional post-processing and sanitization after GFM is converted to HTML to ensure security and consistency of the website.
+
 ### Footnotes
 
 <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#footnotes>
@@ -162,6 +174,12 @@ You can add an image or a code block, too.
 > the above may not render correctly depending on the Jekyll theme in use but if you view it via github itself, it does seem to render correctly.
 
 <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections>
+
+### Bug in Markdown all in one
+
+When using the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension in VS Code, and using the Table of Contents, it may do weird things if you have an intended code block inside an ordered list if the intending is not perfect.
+
+<https://github.com/tlourey/tlourey.github.io/commit/1ce91e004eca6ccb70b683c0e50895acdb879ea2> shows the slight intending change of the code block fixing up the table of contents.
 
 ### Useless by cool
 
