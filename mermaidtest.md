@@ -29,3 +29,11 @@ flowchart LR
   DCE --> DCR2[DCR];
   DCR2[DCR] --> LAW;
 ```
+
+> [!NOTE] Title
+> My note with a title
+
+Here is some other Text
+
+> [!NOTE]
+> Here is my note with no title
