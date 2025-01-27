@@ -14,9 +14,8 @@ tags:
     - Azure Log Analytics
 fmContenttype: pages
 date: 2025-01-18T16:51:00
-lastmod: 2025-01-27T15:40:11.394Z
+lastmod: 2025-01-27T15:52:09.319Z
 ---
-
 
  <!--- cSpell:disable --->
 * [KQL Language](#kql-language)
