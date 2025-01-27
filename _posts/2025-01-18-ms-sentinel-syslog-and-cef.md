@@ -1,12 +1,12 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-lastmod: 2025-01-27T07:38:34.874Z
+lastmod: 2025-01-27T07:43:47.937Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
 published: true
-preview: /images/azure-make-sense.png
+preview: /assets/images/azure-make-sense.png
 draft: true
 tags:
     - Azure
