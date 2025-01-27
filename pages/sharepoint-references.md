@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-27T05:53:17.193Z
+lastmod: 2025-01-27T08:10:20.831Z
 ---
 
 <!--- cSpell:disable --->
@@ -169,7 +169,8 @@ With MFA:
 ### PnP PowerShell
 
 [PnP PowerShell Intro](https://learn.microsoft.com/en-au/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)\
-[PnP PowerShell](https://pnp.github.io/powershell/index.html)
+[PnP PowerShell](https://pnp.github.io/powershell/index.html)\
+[PnP PowerShell Cmdlets](https://pnp.github.io/powershell/cmdlets/index.html)
 
 #### Installing
 
@@ -258,7 +259,8 @@ More Info:\
 
 <https://techcommunity.microsoft.com/discussions/sharepoint_general/remove-items-in-new-button/3886747> - good tips on customising new button at site level.\
 <https://techcommunity.microsoft.com/discussions/sharepoint_general/hide-folder-and-template-under-upload-on-sharepoint-document-library/3874653> - for use in advanced view formatting\
-<https://www.reddit.com/r/sharepoint/comments/1c67ms4/create_items_in_libraries_but_not_new_libraries/>
+<https://www.reddit.com/r/sharepoint/comments/1c67ms4/create_items_in_libraries_but_not_new_libraries/>\
+<https://sharepointmaven.com/how-to-copy-an-existing-document-library-in-sharepoint-online/> - also includes how to get around a very obscure error if you have audience targeting enabled on a the library.
 
 ### Disabling Comments (for one site only)
 
@@ -300,3 +302,4 @@ More Info: [https://pnp.github.io/powershell/cmdlets/Set-PnPSite.html]
 
 * [ ] Reorder topics
 * [ ] Bring in links from process documents
+* [ ] Look into lockdown mode
