@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-lastmod: 2025-01-27T07:43:47.937Z
+lastmod: 2025-01-27T12:18:27.715Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -35,7 +35,7 @@ So you've got CEF Messages you want to go into Azure Sentinel. That sounds like 
 
 ![Meme](/assets/images/azure-make-sense.png)
 
-When reviewing a setup to get CEF messages into Sentinel, I found there was far more messages going in than their should be and that most of those messages were not valid. That sounds like $$$ going down the drain. So I went over the setup from top to bottom.
+When reviewing a setup to get CEF messages into Sentinel, I found there was far more messages going in than their should be and that most of those messages were not valid. That sounds like $$$ going down the drain. So I went over the setup trying to find this excess.
 
 Thats where this came from. Hopefully it will help someone.
 
@@ -312,6 +312,6 @@ Here are the takeaways:
 <https://www.rsyslog.com/doc/configuration/index.html>\
 <https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/6/html/deployment_guide/s1-basic_configuration_of_rsyslog#s2-Filters>\
 <https://en.wikipedia.org/wiki/Syslog>\
-[KQL Queries](/pages/kql-queries.html)\
-[AMA DCR LAW](/pages/ama-dcr-law.html)\
-[Misc References](/pages/misc-references.html#cef)
+[KQL Queries| WTF](/pages/kql-queries.html)\
+[AMA DCR LAW | WTF](/pages/ama-dcr-law.html)\
+[Misc References | WTF](/pages/misc-references.html#cef)
