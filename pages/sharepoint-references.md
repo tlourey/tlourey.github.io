@@ -11,12 +11,13 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-27T01:01:02.826Z
+lastmod: 2025-01-27T04:06:03.407Z
 ---
 
 <!--- cSpell:disable --->
 * [Good points to remember](#good-points-to-remember)
 * [Concepts](#concepts)
+  * [SharePoint (Online) Hierarchy](#sharepoint-online-hierarchy)
 * [Validation Tips](#validation-tips)
 * [SharePoint Formulas](#sharepoint-formulas)
   * [Common Formulas](#common-formulas)
@@ -33,10 +34,15 @@ lastmod: 2025-01-27T01:01:02.826Z
     * [Connecting](#connecting)
   * [PnP Provisioning Engine](#pnp-provisioning-engine)
   * [CSOM](#csom)
+* [Permissions](#permissions)
+* [Site Collection Features](#site-collection-features)
+* [Formatting](#formatting)
+  * [Lists and Views](#lists-and-views)
+    * [Formatting JSON Schemas](#formatting-json-schemas)
+  * [Columns](#columns)
+* [BrandCentre](#brandcentre)
 * [Specific Articles to save](#specific-articles-to-save)
   * [Disabling Comments (for one site only)](#disabling-comments-for-one-site-only)
-* [Formatting](#formatting)
-  * [Formatting JSON Schemas](#formatting-json-schemas)
 * [Good sites](#good-sites)
   * [Microsoft Sites](#microsoft-sites)
   * [Microsoft 365 Community Content](#microsoft-365-community-content)
@@ -62,8 +68,18 @@ lastmod: 2025-01-27T01:01:02.826Z
   * A big limitation of the Column Validation I mentioned above is that you can not reference other columns. This is where the list/library validation comes into play. [^1]
 * [Site-Wide Column vs Library Column](https://learn.microsoft.com/en-au/microsoft-365/community/list-column-or-site-column-which-one-to-choose)
 * Audience Targeting is more about showing/not showing/promoting content and isn't really security
+* Hubs vs Sites
+* Modern vs Classic
+* Comm Sites vs Team Sites
+* News posts vs Pages
+* Roll up
+* Hierarchy
 
 [^1]: <https://sharepointmaven.com/how-to-do-column-validation-in-sharepoint/>
+
+### SharePoint (Online) Hierarchy
+
+<https://learn.microsoft.com/en-us/sharepoint/sharepointonline/media/b7cf87f3-578c-4605-bb31-9d2ecf88877e.png>
 
 ## Validation Tips
 
@@ -197,10 +213,49 @@ More Info:\
 <https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code>\
 <https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins-modernize/from-csom-to-pnp-libraries>
 
+## Permissions
+
+**<https://learn.microsoft.com/en-us/sharepoint/understanding-permission-levels>** - should refer to this more often\
+<https://support.microsoft.com/en-au/office/customize-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782>
+
+<https://www.reddit.com/r/sharepoint/comments/1c67ms4/create_items_in_libraries_but_not_new_libraries/>
+
+<https://sharegate.com/blog/sharepoint-permissions-best-practices-2-ways-to-manage>\
+<https://www.sharepointdiary.com/2013/04/sharepoint-permission-levels.html>
+
+## Site Collection Features
+
+<https://support.microsoft.com/en-au/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04>
+
+## Formatting
+
+### Lists and Views
+
+<https://support.microsoft.com/en-us/office/formatting-list-views-f737fb8b-afb7-45b9-b9b5-4505d4427dd1>\
+<https://learn.microsoft.com/en-gb/sharepoint/dev/declarative-customization/view-formatting>\
+<https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/view-commandbar-formatting>
+
+<https://pnp.github.io/List-Formatting/>\
+<https://pnp.github.io/List-Formatting/tools/> - I haven't used this yet but it looks like it might be useful
+
+#### Formatting JSON Schemas
+
+<https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json>\
+<https://developer.microsoft.com/json-schemas/sp/v2/command-bar-formatting.schema.json>
+
+### Columns
+
+<https://support.microsoft.com/en-us/office/column-formatting-with-json-1f927342-2bed-4745-b727-ff8b7ff96b22>
+
+## BrandCentre
+
+<https://learn.microsoft.com/en-us/sharepoint/brand-center-overview>
+
 ## Specific Articles to save
 
 <https://techcommunity.microsoft.com/discussions/sharepoint_general/remove-items-in-new-button/3886747> - good tips on customising new button at site level.\
 <https://techcommunity.microsoft.com/discussions/sharepoint_general/hide-folder-and-template-under-upload-on-sharepoint-document-library/3874653> - for use in advanced view formatting\
+<https://www.reddit.com/r/sharepoint/comments/1c67ms4/create_items_in_libraries_but_not_new_libraries/>
 
 ### Disabling Comments (for one site only)
 
@@ -219,20 +274,6 @@ More Info: [https://pnp.github.io/powershell/cmdlets/Set-PnPSite.html]
 [SharePoint Online: Disable Page Comments in Modern Sites using PowerShell - SharePoint Diary - powershell per site](https://www.sharepointdiary.com/2018/11/sharepoint-online-disable-page-comments-using-powershell.html)
 <https://sharepointmaven.com/2-ways-to-disable-modern-page-comments/>\
 <https://sharepoint.stackexchange.com/questions/274969/remove-social-and-comments-footer-from-spo-site-page>
-
-## Formatting
-
-<https://support.microsoft.com/en-us/office/formatting-list-views-f737fb8b-afb7-45b9-b9b5-4505d4427dd1>\
-<https://learn.microsoft.com/en-gb/sharepoint/dev/declarative-customization/view-formatting>\
-<https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/view-commandbar-formatting>
-
-<https://pnp.github.io/List-Formatting/>\
-<https://pnp.github.io/List-Formatting/tools/> - I haven't used this yet but it looks like it might be useful
-
-### Formatting JSON Schemas
-
-<https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json>\
-<https://developer.microsoft.com/json-schemas/sp/v2/command-bar-formatting.schema.json>
 
 ## Good sites
 
