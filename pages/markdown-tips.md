@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-27T04:31:47.917Z
+lastmod: 2025-01-27T12:28:25.088Z
 tags:
     - Language
     - References
@@ -22,6 +22,7 @@ tags:
   * [Code Blocks](#code-blocks)
   * [Alerts](#alerts)
     * [Issue with Alert Titles](#issue-with-alert-titles)
+  * [Github Pages](#github-pages)
   * [Wikis](#wikis)
 * [Not important things to remember](#not-important-things-to-remember)
   * [GFM Definition](#gfm-definition)
@@ -89,6 +90,13 @@ But an alert with a title does not get rended in github correctly.
 > An alert with a title doesn't get rended correctly.
 
 But I think both are standards compliant.
+
+### Github Pages
+
+[Github Pages supported themes](https://pages.github.com/themes/)\
+[Jekyll Plugins that are whitelisted at github pages](https://pages.github.com/versions/)\
+[GitHub Pages plugins that are enabled by default and cannot be disabled](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#:~:text=GitHub%20Pages%20uses%20plugins%20that%20are%20enabled%20by%20default%20and%20cannot%20be%20disabled)\
+[Github pages configuration that cannot be changed](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#:~:text=Some%20configuration%20settings%20cannot%20be%20changed%20for%20GitHub%20Pages%20sites)
 
 ### Wikis
 
