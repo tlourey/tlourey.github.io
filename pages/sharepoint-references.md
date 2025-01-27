@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-27T00:15:43.150Z
+lastmod: 2025-01-27T01:01:02.826Z
 ---
 
 <!--- cSpell:disable --->
@@ -23,7 +23,10 @@ lastmod: 2025-01-27T00:15:43.150Z
 * [Audience Targeting](#audience-targeting)
 * [Styling and Theming](#styling-and-theming)
   * [Theming](#theming)
-    * [Custom Theming](#custom-theming)
+  * [Custom Theming](#custom-theming)
+* [Tools](#tools)
+  * [SharePoint Online PowerShell](#sharepoint-online-powershell)
+    * [Install SharePoint Online PowerShell](#install-sharepoint-online-powershell)
     * [Connect via SharePoint Online PowerShell](#connect-via-sharepoint-online-powershell)
   * [PnP PowerShell](#pnp-powershell)
     * [Installing](#installing)
@@ -38,6 +41,7 @@ lastmod: 2025-01-27T00:15:43.150Z
   * [Microsoft Sites](#microsoft-sites)
   * [Microsoft 365 Community Content](#microsoft-365-community-content)
   * [Misc Sites](#misc-sites)
+
 <!--- cSpell:enable --->
 
 ## Good points to remember
@@ -91,7 +95,7 @@ lastmod: 2025-01-27T00:15:43.150Z
 
 TBC
 
-#### Custom Theming
+### Custom Theming
 
 Create Custom Theming for SharePoint site or hub using <https://www.aka.ms/themedesigner>
 
@@ -102,13 +106,13 @@ Create Custom Theming for SharePoint site or hub using <https://www.aka.ms/theme
 5. Click Export Theme
 6. Create a PowerShell File (assumes [SharePoint Online PowerShell](#sharepoint-online-powershell) already installed)
 
-    ```powershell
-    $themepalette = @.... # paste the contents of the exported theme file
-    Import-Module -Name Microsoft.Online.SharePoint.PowerShell
-    Connect-SPOService -Url https://<<YOUR_TENANT_NAME>>-admin.sharepoint.com
-    Add-SPOTheme -Identity "My custom theme" -Palette $themepalette -IsInverted $false -Whatif
-        Add-SPOTheme -Identity "My custom theme" -Palette $themepalette -IsInverted $false -Confirm
-    Disconnect-SPOService
+   ```powershell
+   $themepalette = @.... # paste the contents of the exported theme file
+   Import-Module -Name Microsoft.Online.SharePoint.PowerShell
+   Connect-SPOService -Url https://<<YOUR_TENANT_NAME>>-admin.sharepoint.com
+   Add-SPOTheme -Identity "My custom theme" -Palette $themepalette -IsInverted $false -Whatif
+       Add-SPOTheme -Identity "My custom theme" -Palette $themepalette -IsInverted $false -Confirm
+   Disconnect-SPOService
    ```
 
 More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-powershell>
