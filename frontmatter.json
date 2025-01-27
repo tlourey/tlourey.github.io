@@ -28,7 +28,7 @@
           "name": "lastmod",
           "type": "datetime",
           "default": "{{now}}",
-          "islastmod": true
+          "isModifiedDate": true
         },
         {
           "title": "Content preview",
@@ -167,6 +167,13 @@
           "title": "fmContentType",
           "name": "fmContentType",
           "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
         },
         {
           "title": "Last modified date",
