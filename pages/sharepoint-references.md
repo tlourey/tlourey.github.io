@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-27T04:06:03.407Z
+lastmod: 2025-01-27T05:53:17.193Z
 ---
 
 <!--- cSpell:disable --->
@@ -47,6 +47,7 @@ lastmod: 2025-01-27T04:06:03.407Z
   * [Microsoft Sites](#microsoft-sites)
   * [Microsoft 365 Community Content](#microsoft-365-community-content)
   * [Misc Sites](#misc-sites)
+* [TODO](#todo)
 
 <!--- cSpell:enable --->
 
@@ -216,6 +217,8 @@ More Info:\
 ## Permissions
 
 **<https://learn.microsoft.com/en-us/sharepoint/understanding-permission-levels>** - should refer to this more often\
+<https://learn.microsoft.com/en-us/sharepoint/what-is-permissions-inheritance>\
+<https://learn.microsoft.com/en-us/sharepoint/modern-experience-sharing-permissions>\
 <https://support.microsoft.com/en-au/office/customize-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782>
 
 <https://www.reddit.com/r/sharepoint/comments/1c67ms4/create_items_in_libraries_but_not_new_libraries/>
@@ -292,3 +295,8 @@ More Info: [https://pnp.github.io/powershell/cmdlets/Set-PnPSite.html]
 
 **<https://sharepointmaven.com/>** - really good\
 <https://www.sharepointdiary.com/> - older but still ok.
+
+## TODO
+
+* [ ] Reorder topics
+* [ ] Bring in links from process documents
