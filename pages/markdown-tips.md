@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-26T04:20:42.652Z
+lastmod: 2025-01-27T04:24:38.389Z
 tags:
     - Language
     - References
@@ -21,6 +21,7 @@ tags:
   * [Tables](#tables)
   * [Code Blocks](#code-blocks)
   * [Alerts](#alerts)
+    * [Issue with Alert Titles](#issue-with-alert-titles)
   * [Wikis](#wikis)
 * [Not important things to remember](#not-important-things-to-remember)
   * [Footnotes](#footnotes)
@@ -59,7 +60,7 @@ Less useful but still good:
 
 From: <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting>
 
-> [!TIP] Tip
+> [!TIP]
 > When you create a fenced code block that you also want to have syntax highlighting on a GitHub Pages site, use lower-case language identifiers. For more information, see [About GitHub Pages and Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#syntax-highlighting).
 
 > GitHub use [Linguist](https://github.com/github-linguist/linguist) to perform language detection and to select [third-party grammars](https://github.com/github-linguist/linguist/blob/main/vendor/README.md) for syntax highlighting. You can find out which keywords are valid in the [languages YAML file](https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml).
@@ -68,8 +69,24 @@ From: <https://docs.github.com/en/get-started/writing-on-github/working-with-adv
 
 <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts>
 
-> [!IMPORTANT] Alerts on Github pages
-> Alerts don't work on github pages but they do when reading readme.md in an github repo, but it doesn't seem they work when viewing various other markdown files.
+> [!IMPORTANT]
+> Alerts on Github pages: Alerts don't work on github pages but they do when reading readme.md in an github repo, but it doesn't seem they work when viewing various other markdown files.
+
+#### Issue with Alert Titles
+
+27/01/25: With absolute 0 research, I think i've found a bug with Markdown alerts on Github (not github pages which won't render them unless you use a plugin).
+
+An alert with no title gets rended in Github correctly.
+
+> [!TIP]
+> Here is a tip with no title
+
+But an alert with a title does not get rended in github correctly.
+
+> [!TIP] Alert with title
+> An alert with a title doesn't get rended correctly.
+
+But I think both are standards compliant.
 
 ### Wikis
 
