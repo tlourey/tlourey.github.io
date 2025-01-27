@@ -13,7 +13,7 @@ tags:
     - Azure Sentinel
     - Security
 fmContentType: pages
-lastmod: 2025-01-27T06:51:42.321Z
+lastmod: 2025-01-27T07:11:34.576Z
 date: 2025-01-27T06:07:50.792Z
 ---
 
