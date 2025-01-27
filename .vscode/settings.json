@@ -55,5 +55,22 @@
         },
         "MD028": false
     },
-	"git.branchProtectionPrompt": "alwaysCommit"
+	"git.branchProtectionPrompt": "alwaysCommit",
+	"frontMatter.content.grouping": [
+        {
+			"title": "type", "name": "type" 
+		},
+		{
+			"title": "draft", "name": "draft"
+		},
+		{
+			"title": "published", "name": "published"
+		}
+	],
+	"frontMatter.dashboard.openOnStart": true,
+	"frontMatter.git.enabled": true,
+	"frontMatter.global.timezone": "AEST",
+	"frontMatter.site.baseURL": "https://tlourey.github.io",
+	"frontMatter.templates.enabled": true
+
 }
