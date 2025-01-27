@@ -1,12 +1,12 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-lastmod: 2025-01-27T06:14:15.795Z
+lastmod: 2025-01-27T07:38:34.874Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
 published: true
-preview: ""
+preview: /images/azure-make-sense.png
 draft: true
 tags:
     - Azure
@@ -32,6 +32,8 @@ fmContentType: posts
 ## Introduction
 
 So you've got CEF Messages you want to go into Azure Sentinel. That sounds like a neat idea doesn't it! BULLSHIT.
+
+![Meme](/assets/images/azure-make-sense.png)
 
 When reviewing a setup to get CEF messages into Sentinel, I found there was far more messages going in than their should be and that most of those messages were not valid. That sounds like $$$ going down the drain. So I went over the setup from top to bottom.
 
@@ -59,6 +61,8 @@ Thats where this came from. Hopefully it will help someone.
 <!-- markdownlint-disable MD051-->
 In this scenario we had a [NGFW](## "Next-Generation Firewall") in an private network and a [NGAV/EDR](## "Next-Generation Antivirus/Endpoint Detection and Response") SaaS solution configured to send message to a new Ubuntu based syslog server we created running rsyslog and using [AMA](## "Azure Monitoring Agent") for Linux 1.33 (more importantly above 1.28). We then have a Azure Monitor Data Collection Rule getting syslog messages with a facility of USER/LOG_USER into the Log Analytics Workspace that is used by Sentinel. Thats a mouthful of crap. Lets break it down.
 <!-- markdownlint-enable MD051-->
+
+![Technobabble](/assets/images/technobabble.jpg)
 
 1. The NGFW can send CEF messages to a Syslog server and to a specific facility over a private network.
 2. The NGAV/EDR solution has a Firehose API Client that routes messages to a syslog server (without facility control).
@@ -108,7 +112,11 @@ CommonSecurityLog
 | summarize Count=count() by DeviceVendor
 ```
 
-Messages where the `DeviceVendor` is blank is syslog noise (Noise may be unfair but in this scenario they shouldn't be there as we are not sending regular SYSLOG messages to Sentinel. So they are not CEF messages). Also note that those that know syslog facilities better than me may not have chosen the USER facility. I didn't have a choice given the Firehose API client. Maybe I could roll my own client? ARE YOU HIGH? Anyway back on topic...
+Messages where the `DeviceVendor` is blank is syslog noise (Noise may be unfair but in this scenario they shouldn't be there as we are not sending regular SYSLOG messages to Sentinel. So they are not CEF messages). Also note that those that know syslog facilities better than me may not have chosen the USER facility. I didn't have a choice given the Firehose API client. Maybe I could roll my own client? ARE YOU HIGH? 
+
+![ARE YOU HIGH](/assets/images/are-you-high-carmen-barton.gif)
+
+Anyway back on topic...
 
 Where is the noise coming from? I had to muck around with syslog configs to get an idea. But here are some examples I found:
 
@@ -158,7 +166,11 @@ Note that not all KQL is supported in Transformations. Refer to [Supported KQL f
 
 <!-- markdownlint-disable-line MD051-->Creating and editing [DCR](## "Data Collection Rules")'s usually requires hard-coding JSON and submitting it via the API.
 
-"Cool Story Bro, but I really don't want to fuck around that much...". Me either so there is a cheat if your Transformation is simple.
+"Cool Story Bro, but I really don't want to fuck around that much...". 
+
+![Cool Story Bro](/assets/images/cool-story-bro.jpg)
+
+Me either so there is a cheat if your Transformation is simple.
 
 1. Go to Azure Monitor in the Azure Portal
 2. Go to Settings --> Data Collection Rules
@@ -183,7 +195,12 @@ Seeing the log rows dropped metric really indicated this was working. But...
 
 ### Is this really a fix?
 
-Technically yes, but I understand what you mean. You're still sending a lot of data in the first place, then filtering it out with the DCR Transformation. Depending on the scale, thats money somewhere.
+Technically yes...
+
+![Technically Correct](/assets/images/technically-correct.jpg)
+
+
+ but I understand what you mean. You're still sending a lot of data in the first place, then filtering it out with the DCR Transformation. Depending on the scale, thats money somewhere.
 
 The goal was to use this as a single (or HA) syslog server for all needs instead of running multiple servers.
 
@@ -222,7 +239,10 @@ target="127.0.0.1" Port="28330" Protocol="tcp")
 ```
 
 > [!NOTE] Azure Monitoring Agent before 1.28
-> Before 1.28 you will end up with 2 files in `/etc/rsyslog.d/`. This is because AMA uses a Unix Socket to get the syslog's, where after 1.28 its back to like it was in the Log Analytics Agent (something running on a port)
+> Before 1.28 you will end up with 2 files in `/etc/rsyslog.d/`. This is because AMA uses a Unix Socket to get the syslog's, where after 1.28 its back to like it was in the Log Analytics Agent (something running on a port)\
+> Before 1.28: File Missing\
+> After 1.28:
+> ![Forwarder After 1.28](/assets/images/cef-forwarder-diagram.png)
 
 One option to consider is adjusting the rsyslog file. One Idea I was considering stealing was back from when they used the Log Analytics Agent with syslog forwarding:
 
