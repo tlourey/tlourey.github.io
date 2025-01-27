@@ -25,10 +25,10 @@
         },
         {
           "title": "Last modified date",
-          "name": "modifieddate",
+          "name": "lastmod",
           "type": "datetime",
           "default": "{{now}}",
-          "isModifiedDate": true
+          "islastmod": true
         },
         {
           "title": "Content preview",
@@ -77,7 +77,7 @@
         },
         {
           "title": "Last modified date",
-          "name": "modifieddate",
+          "name": "lastmod",
           "type": "datetime",
           "default": "{{now}}",
           "isModifiedDate": true
@@ -157,6 +157,23 @@
           "name": "type",
           "type": "string",
           "default": "pages"
+        },
+        {
+          "title": "layout",
+          "name": "layout",
+          "type": "string"
+        },
+        {
+          "title": "fmContentType",
+          "name": "fmContentType",
+          "type": "string"
+        },
+        {
+          "title": "Last modified date",
+          "name": "lastmod",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
         }
       ]
     },
