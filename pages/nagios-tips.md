@@ -7,11 +7,12 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-01-28T01:03:50.825Z
+lastmod: 2025-01-28T02:19:57.535Z
 tags:
     - Monitoring
     - Nagios
     - SNMP
+    - OID
 draft: true
 fmContentType: pages
 ---
@@ -110,18 +111,20 @@ $_HOSTSNMPCOMMUNITY$
 
 ### Synology
 
-<https://kb.synology.com/en-us/DG/Synology_DiskStation_MIB_Guide/3>
-<https://global.download.synology.com/download/Document/Software/DeveloperGuide/Firmware/DSM/All/enu/Synology_DiskStation_MIB_Guide.pdf>
+MIB Guide: <https://kb.synology.com/en-us/DG/Synology_DiskStation_MIB_Guide/3>\
+MIB Guide as PDF: <https://global.download.synology.com/download/Document/Software/DeveloperGuide/Firmware/DSM/All/enu/Synology_DiskStation_MIB_Guide.pdf>\
+MIB Download: <https://global.download.synology.com/download/Document/Software/DeveloperGuide/Firmware/DSM/All/enu/Synology_MIB_File.zip>
 
 ### Netgear
 
-<https://www.downloads.netgear.com/files/GDC/M4300/M4300v12.0.19.4-mibs.zip>
+MIB Download: <https://www.downloads.netgear.com/files/GDC/M4300/M4300v12.0.19.4-mibs.zip>
 
 ### APC
 
-<https://www.opsview.com/resources/monitoring/blog/apc-ups-monitoring-useful-oids>
+<https://www.opsview.com/resources/monitoring/blog/apc-ups-monitoring-useful-oids>\
 <https://docs.vistanet.jp/about/supported-resources/templates-in-detail/apc-ups-status-check-g2/>
 
-<https://download.schneider-electric.com/files?p_Doc_Ref=SPD_ASTE-6Z5QEY_EN&p_enDocType=User+guide&p_File_Name=ASTE-6Z5QEY_R0_EN.pdf>
-<https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsDraft.knowledgeEditAsDraft=1/>
-<https://www.se.com/au/en/download/document/APC_POWERNETMIB_452_EN/>
+MIB Guide: <https://download.schneider-electric.com/files?p_Doc_Ref=SPD_ASTE-6Z5QEY_EN&p_enDocType=User+guide&p_File_Name=ASTE-6Z5QEY_R0_EN.pdf>\
+MIB Download: <https://www.se.com/au/en/download/document/APC_POWERNETMIB_452_EN/>
+
+APC Support for Generic UPS OID Standard Thing <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsDraft.knowledgeEditAsDraft=1/>\
