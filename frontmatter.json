@@ -117,6 +117,11 @@
           "title": "layout",
           "name": "layout",
           "type": "string"
+        },
+        {
+          "title": "fmContentType",
+          "name": "fmContentType",
+          "type": "string"
         }
       ]
     },
@@ -186,11 +191,6 @@
           "type": "datetime",
           "default": "{{now}}",
           "isModifiedDate": true
-        },
-        {
-          "title": "fmContenttype",
-          "name": "fmContenttype",
-          "type": "string"
         }
       ]
     },
