@@ -11,7 +11,7 @@ tags:
     - References
 fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-01-27T04:20:26.689Z
+lastmod: 2025-01-28T02:27:10.181Z
 ---
 
 
@@ -21,6 +21,8 @@ lastmod: 2025-01-27T04:20:26.689Z
   * [CIDR](#cidr)
   * [CEF](#cef)
   * [SMTP](#smtp)
+  * [SNMP](#snmp)
+    * [RFC1628 - Generic UPS Management Information Base](#rfc1628---generic-ups-management-information-base)
   * [Markdown](#markdown)
   * [Misc](#misc)
 * [Linux](#linux)
@@ -63,6 +65,14 @@ lastmod: 2025-01-27T04:20:26.689Z
 ### SMTP
 
 <https://datatracker.ietf.org/doc/rfc5321/>
+
+### SNMP
+
+#### RFC1628 - Generic UPS Management Information Base
+
+<https://datatracker.ietf.org/doc/html/rfc1628>
+
+APC Support: <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsDraft.knowledgeEditAsDraft=1/>
 
 ### Markdown
 
