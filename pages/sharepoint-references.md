@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-27T09:24:25.819Z
+lastmod: 2025-01-28T05:47:28.059Z
 ---
 
 <!--- cSpell:disable --->
@@ -41,8 +41,12 @@ lastmod: 2025-01-27T09:24:25.819Z
     * [Formatting JSON Schemas](#formatting-json-schemas)
   * [Columns](#columns)
 * [BrandCentre](#brandcentre)
+* [Training](#training)
+* [Microsoft Lists](#microsoft-lists)
+* [Teams and SharePoint](#teams-and-sharepoint)
 * [Specific Articles to save](#specific-articles-to-save)
   * [Disabling Comments (for one site only)](#disabling-comments-for-one-site-only)
+* [References](#references)
 * [Good sites](#good-sites)
   * [Microsoft Sites](#microsoft-sites)
   * [Microsoft 365 Community Content](#microsoft-365-community-content)
@@ -80,7 +84,9 @@ lastmod: 2025-01-27T09:24:25.819Z
 
 ### SharePoint (Online) Hierarchy
 
-<https://learn.microsoft.com/en-us/sharepoint/sharepointonline/media/b7cf87f3-578c-4605-bb31-9d2ecf88877e.png>
+[![Picture](https://learn.microsoft.com/en-us/sharepoint/sharepointonline/media/b7cf87f3-578c-4605-bb31-9d2ecf88877e.png)](https://learn.microsoft.com/en-us/sharepoint/sharepointonline/media/b7cf87f3-578c-4605-bb31-9d2ecf88877e.png)
+
+The above diagram is from a MS Learn page about permissions but excluding Hubs, it still shows the correct order. Note that a Document Library is almost the same as List library except its around files and not list items.
 
 ## Validation Tips
 
@@ -256,6 +262,25 @@ More Info:\
 
 <https://learn.microsoft.com/en-us/sharepoint/brand-center-overview>
 
+## Training
+
+<https://learn.microsoft.com/en-us/sharepoint/training-change-management>
+
+* [ ] Add more of the links from the above
+* [ ] Add links to adoption resources
+
+## Microsoft Lists
+
+* [ ] Add MS Lists Adoption resources
+
+<https://learn.microsoft.com/en-us/sharepoint/control-lists>\
+<https://learn.microsoft.com/en-us/sharepoint/lists-sync-policies> - windows\
+<https://learn.microsoft.com/en-us/sharepoint/lists-sync-policies-macos> - mac
+
+## Teams and SharePoint
+
+<https://learn.microsoft.com/en-us/sharepoint/teams-connected-sites>
+
 ## Specific Articles to save
 
 <https://techcommunity.microsoft.com/discussions/sharepoint_general/remove-items-in-new-button/3886747> - good tips on customising new button at site level.\
@@ -282,6 +307,10 @@ More Info: [https://pnp.github.io/powershell/cmdlets/Set-PnPSite.html]
 [SharePoint Online: Disable Page Comments in Modern Sites using PowerShell - SharePoint Diary - powershell per site](https://www.sharepointdiary.com/2018/11/sharepoint-online-disable-page-comments-using-powershell.html)
 <https://sharepointmaven.com/2-ways-to-disable-modern-page-comments/>\
 <https://sharepoint.stackexchange.com/questions/274969/remove-social-and-comments-footer-from-spo-site-page>
+
+## References
+
+<https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience>
 
 ## Good sites
 
