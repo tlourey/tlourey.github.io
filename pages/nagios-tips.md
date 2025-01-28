@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-01-28T02:19:57.535Z
+lastmod: 2025-01-28T03:56:05.685Z
 tags:
     - Monitoring
     - Nagios
@@ -18,6 +18,7 @@ fmContentType: pages
 ---
 
 <!--- cSpell:disable --->
+* [Nagios Verify](#nagios-verify)
 * [Hostgroup Excludes](#hostgroup-excludes)
 * [Nagios References](#nagios-references)
   * [Thresholds](#thresholds)
@@ -31,6 +32,17 @@ fmContentType: pages
   * [APC](#apc)
 
 <!--- cSpell:enable --->
+
+## Nagios Verify
+
+*nagios4 -v config_file: Reads all data in the configuration files and performs a basic verification/sanity check.  Always make sure you verify your config data before (re)starting Nagios.*
+
+In my case I use `sudo /usr/sbin/nagios4 -v ~/mynagiosrepo/nagios-test.cfg`:
+
+* It needs to be sudo so it can access everything Nagios can (one day I may try `sudo -u nagios CMD`)
+* nagios-test.cfg is the same as my normal nagios.conf except i've changed: `cfg_dir=./conf.d` so it verifies all the changes in my local repo before I push and then pull in `/etc/nagios4`
+
+More info: [Verifying your Nagios Core configuration](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/verifyconfig.html)
 
 ## Hostgroup Excludes
 
