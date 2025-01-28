@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-01-26T09:46:14.337Z
+lastmod: 2025-01-27T07:45:43.137Z
 ---
 
 <!--- cSpell:disable --->
@@ -24,6 +24,8 @@ lastmod: 2025-01-26T09:46:14.337Z
 * [Go away](#go-away)
 * [Jackie Chan](#jackie-chan)
 * [Ba dum tisss](#ba-dum-tisss)
+* [Technically correct](#technically-correct)
+* [Technically](#technically)
 <!--- cSpell:enable --->
 
 ## Homer Simpsons Fire on console
@@ -70,3 +72,11 @@ Drawing:\
 ## Ba dum tisss
 
 [![Picture](/assets/images/ba-dum-tisss.gif)](/assets/images/ba-dum-tisss.gif)
+
+## Technically correct
+
+[![Picture](/assets/images/technically-correct.jpg)](/assets/images/technically-correct.jpg)
+
+## Technically
+
+[![Picture](/assets/images/technically-quotation-marks.gif)](/assets/images/technically-quotation-marks.gif)

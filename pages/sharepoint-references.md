@@ -11,30 +11,48 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-26T23:01:59.950Z
+lastmod: 2025-01-28T05:47:28.059Z
 ---
 
 <!--- cSpell:disable --->
 * [Good points to remember](#good-points-to-remember)
 * [Concepts](#concepts)
+  * [SharePoint (Online) Hierarchy](#sharepoint-online-hierarchy)
 * [Validation Tips](#validation-tips)
 * [SharePoint Formulas](#sharepoint-formulas)
   * [Common Formulas](#common-formulas)
 * [Audience Targeting](#audience-targeting)
 * [Styling and Theming](#styling-and-theming)
   * [Theming](#theming)
-    * [Custom Theming](#custom-theming)
+  * [Custom Theming](#custom-theming)
+* [Tools](#tools)
+  * [SharePoint Online PowerShell](#sharepoint-online-powershell)
+    * [Install SharePoint Online PowerShell](#install-sharepoint-online-powershell)
     * [Connect via SharePoint Online PowerShell](#connect-via-sharepoint-online-powershell)
   * [PnP PowerShell](#pnp-powershell)
+    * [Installing](#installing)
+    * [Connecting](#connecting)
   * [PnP Provisioning Engine](#pnp-provisioning-engine)
   * [CSOM](#csom)
-* [Specific Articles to save](#specific-articles-to-save)
+* [Permissions](#permissions)
+* [Site Collection Features](#site-collection-features)
 * [Formatting](#formatting)
-  * [Formatting JSON Schemas](#formatting-json-schemas)
+  * [Lists and Views](#lists-and-views)
+    * [Formatting JSON Schemas](#formatting-json-schemas)
+  * [Columns](#columns)
+* [BrandCentre](#brandcentre)
+* [Training](#training)
+* [Microsoft Lists](#microsoft-lists)
+* [Teams and SharePoint](#teams-and-sharepoint)
+* [Specific Articles to save](#specific-articles-to-save)
+  * [Disabling Comments (for one site only)](#disabling-comments-for-one-site-only)
+* [References](#references)
 * [Good sites](#good-sites)
   * [Microsoft Sites](#microsoft-sites)
   * [Microsoft 365 Community Content](#microsoft-365-community-content)
   * [Misc Sites](#misc-sites)
+* [TODO](#todo)
+
 <!--- cSpell:enable --->
 
 ## Good points to remember
@@ -55,8 +73,20 @@ lastmod: 2025-01-26T23:01:59.950Z
   * A big limitation of the Column Validation I mentioned above is that you can not reference other columns. This is where the list/library validation comes into play. [^1]
 * [Site-Wide Column vs Library Column](https://learn.microsoft.com/en-au/microsoft-365/community/list-column-or-site-column-which-one-to-choose)
 * Audience Targeting is more about showing/not showing/promoting content and isn't really security
+* Hubs vs Sites
+* Modern vs Classic
+* Comm Sites vs Team Sites
+* News posts vs Pages
+* Roll up
+* Hierarchy
 
 [^1]: <https://sharepointmaven.com/how-to-do-column-validation-in-sharepoint/>
+
+### SharePoint (Online) Hierarchy
+
+[![Picture](https://learn.microsoft.com/en-us/sharepoint/sharepointonline/media/b7cf87f3-578c-4605-bb31-9d2ecf88877e.png)](https://learn.microsoft.com/en-us/sharepoint/sharepointonline/media/b7cf87f3-578c-4605-bb31-9d2ecf88877e.png)
+
+The above diagram is from a MS Learn page about permissions but excluding Hubs, it still shows the correct order. Note that a Document Library is almost the same as List library except its around files and not list items.
 
 ## Validation Tips
 
@@ -88,7 +118,7 @@ lastmod: 2025-01-26T23:01:59.950Z
 
 TBC
 
-#### Custom Theming
+### Custom Theming
 
 Create Custom Theming for SharePoint site or hub using <https://www.aka.ms/themedesigner>
 
@@ -99,13 +129,13 @@ Create Custom Theming for SharePoint site or hub using <https://www.aka.ms/theme
 5. Click Export Theme
 6. Create a PowerShell File (assumes [SharePoint Online PowerShell](#sharepoint-online-powershell) already installed)
 
-    ```powershell
-    $themepalette = @.... # paste the contents of the exported theme file
-    Import-Module -Name Microsoft.Online.SharePoint.PowerShell
-    Connect-SPOService -Url https://<<YOUR_TENANT_NAME>>-admin.sharepoint.com
-    Add-SPOTheme -Identity "My custom theme" -Palette $themepalette -IsInverted $false -Whatif
-        Add-SPOTheme -Identity "My custom theme" -Palette $themepalette -IsInverted $false -Confirm
-    Disconnect-SPOService
+   ```powershell
+   $themepalette = @.... # paste the contents of the exported theme file
+   Import-Module -Name Microsoft.Online.SharePoint.PowerShell
+   Connect-SPOService -Url https://<<YOUR_TENANT_NAME>>-admin.sharepoint.com
+   Add-SPOTheme -Identity "My custom theme" -Palette $themepalette -IsInverted $false -Whatif
+       Add-SPOTheme -Identity "My custom theme" -Palette $themepalette -IsInverted $false -Confirm
+   Disconnect-SPOService
    ```
 
 More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-powershell>
@@ -121,6 +151,9 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 > Rather than download and install the MSI its easier to install and manage teh SharePoint Online PowerShell Module via PowerShell Gallery
 
 #### Install SharePoint Online PowerShell
+
+> [!TIP] PS5 not PS7
+> this module only seems to work in PS5/Windows PowerShell.
 
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
@@ -142,11 +175,39 @@ With MFA:
 ### PnP PowerShell
 
 [PnP PowerShell Intro](https://learn.microsoft.com/en-au/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)\
-[PnP PowerShell](https://pnp.github.io/powershell/index.html)
+[PnP PowerShell](https://pnp.github.io/powershell/index.html)\
+[PnP PowerShell Cmdlets](https://pnp.github.io/powershell/cmdlets/index.html)
+
+#### Installing
+
+```powershell
+Install-Module PnP.PowerShell -Scope CurrentUser
+```
+
+If it hasn't been used in the tenant before
+
+```powershell
+Import-Module PnP.PowerShell
+Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [yourtennantnamehere].onmicrosoft.com -Interactive
+```
+
+> [!TIP] Whats in a name
+> You can change the name away from PnP Rocks to something else if you want just note it and the application id down.
+
+#### Connecting
+
+<https://pnp.github.io/powershell/articles/authentication.html>
+
+```powershell
+Connect-PnPOnline [yourtenant].sharepoint.com -Interactive -ClientId <client id of your Entra ID Application Registration>
+# OR
+Connect-PnPOnline [yourtenant].sharepoint.com -DeviceLogin -Tenant <tenant>.onmicrosoft.com -ClientId <client id of your Entra ID Application Registration>
+```
 
 ### PnP Provisioning Engine
 
-<https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine>
+<https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/introducing-the-pnp-provisioning-engine>\
+<https://learn.microsoft.com/en-us/sharepoint/dev/solution-guidance/applying-pnp-templates>
 
 ### CSOM
 
@@ -161,15 +222,25 @@ More Info:\
 <https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code>\
 <https://learn.microsoft.com/en-us/sharepoint/dev/sp-add-ins-modernize/from-csom-to-pnp-libraries>
 
-## Specific Articles to save
+## Permissions
 
-<https://techcommunity.microsoft.com/discussions/sharepoint_general/remove-items-in-new-button/3886747> - good tips on customising new button at site level.\
-<https://techcommunity.microsoft.com/discussions/sharepoint_general/hide-folder-and-template-under-upload-on-sharepoint-document-library/3874653> - for use in advanced view formatting\
+**<https://learn.microsoft.com/en-us/sharepoint/understanding-permission-levels>** - should refer to this more often\
+<https://learn.microsoft.com/en-us/sharepoint/what-is-permissions-inheritance>\
+<https://learn.microsoft.com/en-us/sharepoint/modern-experience-sharing-permissions>\
+<https://support.microsoft.com/en-au/office/customize-permissions-for-a-sharepoint-list-or-library-02d770f3-59eb-4910-a608-5f84cc297782>
 
-[Disable "Comments, Likes and Views" in SharePoint modern - Microsoft Community – includes social graph per site](https://answers.microsoft.com/en-us/msoffice/forum/all/disable-comments-likes-and-views-in-sharepoint/c523e324-e95e-4ace-b859-85782afc8135)
-[SharePoint Online: Disable Page Comments in Modern Sites using PowerShell - SharePoint Diary – powershell per site](https://www.sharepointdiary.com/2018/11/sharepoint-online-disable-page-comments-using-powershell.html)
+<https://www.reddit.com/r/sharepoint/comments/1c67ms4/create_items_in_libraries_but_not_new_libraries/>
+
+<https://sharegate.com/blog/sharepoint-permissions-best-practices-2-ways-to-manage>\
+<https://www.sharepointdiary.com/2013/04/sharepoint-permission-levels.html>
+
+## Site Collection Features
+
+<https://support.microsoft.com/en-au/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04>
 
 ## Formatting
+
+### Lists and Views
 
 <https://support.microsoft.com/en-us/office/formatting-list-views-f737fb8b-afb7-45b9-b9b5-4505d4427dd1>\
 <https://learn.microsoft.com/en-gb/sharepoint/dev/declarative-customization/view-formatting>\
@@ -178,10 +249,68 @@ More Info:\
 <https://pnp.github.io/List-Formatting/>\
 <https://pnp.github.io/List-Formatting/tools/> - I haven't used this yet but it looks like it might be useful
 
-### Formatting JSON Schemas
+#### Formatting JSON Schemas
 
 <https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json>\
 <https://developer.microsoft.com/json-schemas/sp/v2/command-bar-formatting.schema.json>
+
+### Columns
+
+<https://support.microsoft.com/en-us/office/column-formatting-with-json-1f927342-2bed-4745-b727-ff8b7ff96b22>
+
+## BrandCentre
+
+<https://learn.microsoft.com/en-us/sharepoint/brand-center-overview>
+
+## Training
+
+<https://learn.microsoft.com/en-us/sharepoint/training-change-management>
+
+* [ ] Add more of the links from the above
+* [ ] Add links to adoption resources
+
+## Microsoft Lists
+
+* [ ] Add MS Lists Adoption resources
+
+<https://learn.microsoft.com/en-us/sharepoint/control-lists>\
+<https://learn.microsoft.com/en-us/sharepoint/lists-sync-policies> - windows\
+<https://learn.microsoft.com/en-us/sharepoint/lists-sync-policies-macos> - mac
+
+## Teams and SharePoint
+
+<https://learn.microsoft.com/en-us/sharepoint/teams-connected-sites>
+
+## Specific Articles to save
+
+<https://techcommunity.microsoft.com/discussions/sharepoint_general/remove-items-in-new-button/3886747> - good tips on customising new button at site level.\
+<https://techcommunity.microsoft.com/discussions/sharepoint_general/hide-folder-and-template-under-upload-on-sharepoint-document-library/3874653> - for use in advanced view formatting\
+<https://www.reddit.com/r/sharepoint/comments/1c67ms4/create_items_in_libraries_but_not_new_libraries/>\
+<https://sharepointmaven.com/how-to-copy-an-existing-document-library-in-sharepoint-online/> - also includes how to get around a very obscure error if you have audience targeting enabled on a the library.\
+<https://learn.microsoft.com/en-us/answers/questions/1367728/how-do-you-use-powershell-to-copy-a-sharepoint-onl>\
+<https://stackoverflow.com/questions/78491086/get-pnpsitetemplate-gets-stuck-for-a-long-time-on-certain-handlers> - sometimes running PnP Commands in VSCode has strange issues
+
+### Disabling Comments (for one site only)
+
+To disable for a **specific site only** and not for the whole Tenant using PnP PowerShell (after connecting)
+
+```powershell
+$SiteURL = https://tenantname.sharepoint.com/sites/comms-site-i-want-comments-and-likes-disabled-on
+# Ensure Site URL does *not* have a trailing slash
+
+Set-PnPSite -Identity $SiteURL -SocialBarOnSitePagesDisabled $True -CommentsOnSitePagesDisabled $True
+```
+
+More Info: [https://pnp.github.io/powershell/cmdlets/Set-PnPSite.html]
+
+[Disable "Comments, Likes and Views" in SharePoint modern - Microsoft Community - includes social graph per site](https://answers.microsoft.com/en-us/msoffice/forum/all/disable-comments-likes-and-views-in-sharepoint/c523e324-e95e-4ace-b859-85782afc8135)
+[SharePoint Online: Disable Page Comments in Modern Sites using PowerShell - SharePoint Diary - powershell per site](https://www.sharepointdiary.com/2018/11/sharepoint-online-disable-page-comments-using-powershell.html)
+<https://sharepointmaven.com/2-ways-to-disable-modern-page-comments/>\
+<https://sharepoint.stackexchange.com/questions/274969/remove-social-and-comments-footer-from-spo-site-page>
+
+## References
+
+<https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience>
 
 ## Good sites
 
@@ -200,3 +329,9 @@ More Info:\
 
 **<https://sharepointmaven.com/>** - really good\
 <https://www.sharepointdiary.com/> - older but still ok.
+
+## TODO
+
+* [ ] Reorder topics
+* [ ] Bring in links from process documents
+* [ ] Look into lockdown mode

@@ -2,11 +2,15 @@
 title: Template
 description: description
 published: false
-categories:
-- References
-- Commands
+categories: []
 type: pages
 layout: pages
+fmContenttype: pages
+date: null
+lastmod: null
+tags: []
+draft: true
+fmContentType: pages
 ---
 
 <!--- cSpell:disable --->

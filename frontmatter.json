@@ -25,7 +25,7 @@
         },
         {
           "title": "Last modified date",
-          "name": "modifieddate",
+          "name": "lastmod",
           "type": "datetime",
           "default": "{{now}}",
           "isModifiedDate": true
@@ -77,7 +77,7 @@
         },
         {
           "title": "Last modified date",
-          "name": "modifieddate",
+          "name": "lastmod",
           "type": "datetime",
           "default": "{{now}}",
           "isModifiedDate": true
@@ -112,6 +112,16 @@
           "name": "type",
           "type": "string",
           "default": "posts"
+        },
+        {
+          "title": "layout",
+          "name": "layout",
+          "type": "string"
+        },
+        {
+          "title": "fmContentType",
+          "name": "fmContentType",
+          "type": "string"
         }
       ]
     },
@@ -157,6 +167,30 @@
           "name": "type",
           "type": "string",
           "default": "pages"
+        },
+        {
+          "title": "layout",
+          "name": "layout",
+          "type": "string"
+        },
+        {
+          "title": "fmContentType",
+          "name": "fmContentType",
+          "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Last modified date",
+          "name": "lastmod",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
         }
       ]
     },
