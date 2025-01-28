@@ -11,7 +11,8 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-28T05:47:28.059Z
+lastmod: 2025-01-28T13:42:35.744Z
+date: 2025-01-28T05:47:28.059Z
 ---
 
 <!--- cSpell:disable --->
@@ -47,8 +48,8 @@ lastmod: 2025-01-28T05:47:28.059Z
 * [Specific Articles to save](#specific-articles-to-save)
   * [Disabling Comments (for one site only)](#disabling-comments-for-one-site-only)
 * [References](#references)
-* [Good sites](#good-sites)
-  * [Microsoft Sites](#microsoft-sites)
+  * [High Level](#high-level)
+  * [Adoption](#adoption)
   * [Microsoft 365 Community Content](#microsoft-365-community-content)
   * [Misc Sites](#misc-sites)
 * [TODO](#todo)
@@ -310,11 +311,11 @@ More Info: [https://pnp.github.io/powershell/cmdlets/Set-PnPSite.html]
 
 ## References
 
+### High Level
+
 <https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience>
 
-## Good sites
-
-### Microsoft Sites
+### Adoption
 
 <https://adoption.microsoft.com/en-us/microsoft-lists/>\
 <https://adoption.microsoft.com/en-us/microsoft-lists/resources/>\
