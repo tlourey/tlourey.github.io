@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-01-25T07:50:08.130Z
+lastmod: 2025-01-28T06:45:12.582Z
 ---
 
  <!--- cSpell:disable --->
@@ -23,6 +23,7 @@ lastmod: 2025-01-25T07:50:08.130Z
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
+* [Security Tools](#security-tools)
 <!--- cSpell:enable --->
 
 ## Network Tools
@@ -95,3 +96,9 @@ lastmod: 2025-01-25T07:50:08.130Z
   * <https://chromewebstore.google.com/detail/microsoft-learn-boost/mkacacgjjgafnjekdcoodibajidagopd>
 * Context Menu Search:
   * <https://chromewebstore.google.com/detail/context-menu-search/ocpcmghnefmdhljkoiapafejjohldoga>
+
+## Security Tools
+
+<https://dicepass.org/>\
+<https://github.com/onetimesecret/onetimesecret> / <https://onetimesecret.com/>\
+<https://www.random.org/> / <https://www.random.org/passwords/?num=5&len=16&format=html&rnd=new>
