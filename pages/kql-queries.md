@@ -14,12 +14,12 @@ tags:
     - Azure Log Analytics
 fmContenttype: pages
 date: 2025-01-18T16:51:00
-lastmod: 2025-01-25T04:45:08.347Z
+lastmod: 2025-01-27T15:52:09.319Z
 ---
-
 
  <!--- cSpell:disable --->
 * [KQL Language](#kql-language)
+  * [Overview](#overview)
   * [count](#count)
   * [count\_distinct](#count_distinct)
   * [isnotempty](#isnotempty)
@@ -31,6 +31,17 @@ lastmod: 2025-01-25T04:45:08.347Z
 <!--- cSpell:enable --->
 
 ## KQL Language
+
+### Overview
+
+[Kusto](https://learn.microsoft.com/en-us/kusto/?view=azure-monitor)\
+[KQL](https://learn.microsoft.com/en-us/kusto/query/?view=azure-monitor)\
+[KQL Quick Reference](https://learn.microsoft.com/en-us/kusto/query/kql-quick-reference?view=azure-monitor)\
+[KQL Learning Resources](https://learn.microsoft.com/en-us/kusto/query/kql-learning-resources?view=azure-monitor)\
+[Learn Common Operators](https://learn.microsoft.com/en-us/kusto/query/tutorials/learn-common-operators?view=azure-monitor)\
+[SQL to KQL Cheat Sheet](https://learn.microsoft.com/en-us/kusto/query/sql-cheat-sheet?view=azure-monitor)\
+[KQL Regex](https://learn.microsoft.com/en-us/kusto/query/regex?view=azure-monitor)\
+[KQL Timezones](https://learn.microsoft.com/en-us/kusto/query/timezone?view=azure-monitor)
 
 ### count
 
