@@ -15,7 +15,7 @@ tags:
     - References
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-01-27T06:29:41.455Z
+lastmod: 2025-01-29T03:37:54.838Z
 ---
 
 <!--- cSpell:disable --->
@@ -28,6 +28,8 @@ lastmod: 2025-01-27T06:29:41.455Z
 ## SharePoint Language Settings for end user
 
 Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-language-settings-0f6a477a-dcab-4462-9d0c-e3b53d138183> - this article isn't update for copilot. you need to click the 'You can add more profile information here.' link. Will take you to go <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
+
+This can affect things like validation. Refer to [Validation Tips](sharepoint-references.html#validation-tips)
 
 ## OneDrive Language Settings for end user
 
