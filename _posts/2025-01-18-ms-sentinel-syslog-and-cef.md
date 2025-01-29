@@ -1,12 +1,12 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-lastmod: 2025-01-27T12:18:27.715Z
+lastmod: 2025-01-29T06:42:18.012Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
 published: true
-preview: /assets/images/azure-make-sense.png
+preview: /images/azure-make-sense.png
 draft: true
 tags:
     - Azure
@@ -112,7 +112,7 @@ CommonSecurityLog
 | summarize Count=count() by DeviceVendor
 ```
 
-Messages where the `DeviceVendor` is blank is syslog noise (Noise may be unfair but in this scenario they shouldn't be there as we are not sending regular SYSLOG messages to Sentinel. So they are not CEF messages). Also note that those that know syslog facilities better than me may not have chosen the USER facility. I didn't have a choice given the Firehose API client. Maybe I could roll my own client? ARE YOU HIGH? 
+Messages where the `DeviceVendor` is blank is syslog noise (Noise may be unfair but in this scenario they shouldn't be there as we are not sending regular SYSLOG messages to Sentinel. So they are not CEF messages). Also note that those that know syslog facilities better than me may not have chosen the USER facility. I didn't have a choice given the Firehose API client. Maybe I could roll my own client? ARE YOU HIGH?
 
 ![ARE YOU HIGH](/assets/images/are-you-high-carmen-barton.gif)
 
@@ -166,7 +166,7 @@ Note that not all KQL is supported in Transformations. Refer to [Supported KQL f
 
 <!-- markdownlint-disable-line MD051-->Creating and editing [DCR](## "Data Collection Rules")'s usually requires hard-coding JSON and submitting it via the API.
 
-"Cool Story Bro, but I really don't want to fuck around that much...". 
+"Cool Story Bro, but I really don't want to fuck around that much...".
 
 ![Cool Story Bro](/assets/images/cool-story-bro.jpg)
 
@@ -199,8 +199,7 @@ Technically yes...
 
 ![Technically Correct](/assets/images/technically-correct.jpg)
 
-
- but I understand what you mean. You're still sending a lot of data in the first place, then filtering it out with the DCR Transformation. Depending on the scale, thats money somewhere.
+but I understand what you mean. You're still sending a lot of data in the first place, then filtering it out with the DCR Transformation. Depending on the scale, thats money somewhere.
 
 The goal was to use this as a single (or HA) syslog server for all needs instead of running multiple servers.
 
