@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-27T12:28:25.088Z
+lastmod: 2025-01-29T03:41:54.175Z
 tags:
     - Language
     - References
@@ -92,6 +92,8 @@ But an alert with a title does not get rended in github correctly.
 But I think both are standards compliant.
 
 ### Github Pages
+
+[Github Pages Doco](https://docs.github.com/en/pages)
 
 [Github Pages supported themes](https://pages.github.com/themes/)\
 [Jekyll Plugins that are whitelisted at github pages](https://pages.github.com/versions/)\
