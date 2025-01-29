@@ -3,16 +3,15 @@ title: Nagios Tips
 description: Tips for Nagios and SNMP
 published: false
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
 lastmod: 2025-01-28T03:56:05.685Z
 tags:
-    - Monitoring
-    - Nagios
-    - SNMP
-    - OID
+  - Monitoring
+  - Nagios
+  - SNMP
 draft: true
 fmContentType: pages
 ---
