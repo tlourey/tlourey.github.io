@@ -22,3 +22,9 @@ fmContentType: index
 
 <https://github.com/pages-themes/cayman>\
 <https://pages-themes.github.io/cayman/>
+
+## Misc Note
+
+```text
+https://github.com/tlourey/tlourey.github.io/blob/main/pages/filename.md = https://tlourey.github.io/pages/filename.html
+```
