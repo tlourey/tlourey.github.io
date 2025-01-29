@@ -1,5 +1,5 @@
 ---
-title: Azure Monitoring Data Collection Rules for Log Analytics Workspace
+title: Azure Monitor Data Collection Rules for Log Analytics
 description: Ripe and ready for TLAs and FLTLAs
 published: true
 categories:
@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 draft: true
-lastmod: 2025-01-25T09:00:41.406Z
+lastmod: 2025-01-29T13:23:21.474Z
 date: 2025-01-15T01:07:00
 tags:
     - Azure
