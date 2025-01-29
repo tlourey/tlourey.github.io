@@ -47,7 +47,8 @@
 		"frontmatter",
 		"lastmod",
 		"omfwd",
-		"Fastly"
+		"Fastly",
+		"hostgroups"
 	],    
 	"markdownlint.config": {
         "MD033": {
