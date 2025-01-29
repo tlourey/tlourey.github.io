@@ -7,12 +7,13 @@ categories:
 type: pages
 layout: pages
 draft: true
-lastmod: 2025-01-29T13:23:21.474Z
+lastmod: 2025-01-29T13:24:19.201Z
 date: 2025-01-15T01:07:00
 tags:
     - Azure
     - Monitoring
     - References
+    - Azure Log Analytics
 ---
 
 
