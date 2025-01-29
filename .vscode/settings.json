@@ -48,7 +48,8 @@
 		"lastmod",
 		"omfwd",
 		"Fastly",
-		"hostgroups"
+		"hostgroups",
+		"SNMP"
 	],    
 	"markdownlint.config": {
         "MD033": {
