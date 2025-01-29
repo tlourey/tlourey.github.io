@@ -264,6 +264,7 @@
   "frontMatter.git.enabled": true,
   "frontMatter.website.host": "https://tlourey.github.io",
   "frontMatter.dashboard.openOnStart": true,
+  "frontMatter.dashboard.content.pagination": 30,
   "frontMatter.content.autoUpdateDate": true,
   "frontMatter.data.folders": [
     {
