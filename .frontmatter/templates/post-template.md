@@ -1,13 +1,14 @@
 ---
 title: Template
-date: 2024-12-27 12:00:00 +1100
-lastmod: 2025-01-19T05:11:17.664Z
-categories: []
 description: Description
 published: false
-draft: true
+categories: []
 type: posts
 layout: posts
+date: null
+lastmod: null
+tags: []
+draft: true
 fmContentType: posts
 ---
 
