@@ -33,7 +33,8 @@
         {
           "title": "Content preview",
           "name": "preview",
-          "type": "image"
+          "type": "image",
+          "isPreviewImage": true
         },
         {
           "title": "Is in draft",
@@ -49,6 +50,17 @@
           "title": "Categories",
           "name": "categories",
           "type": "categories"
+        },
+        {
+          "title": "Published",
+          "name": "published",
+          "type": "boolean"
+        },
+        {
+          "title": "fmContentType",
+          "name": "fmContentType",
+          "type": "string",
+          "default": "default"
         }
       ]
     },
@@ -85,7 +97,8 @@
         {
           "title": "Content preview",
           "name": "preview",
-          "type": "image"
+          "type": "image",
+          "isPreviewImage": true
         },
         {
           "title": "Is in draft",
@@ -116,12 +129,14 @@
         {
           "title": "layout",
           "name": "layout",
-          "type": "string"
+          "type": "string",
+          "default": "posts"
         },
         {
           "title": "fmContentType",
           "name": "fmContentType",
-          "type": "string"
+          "type": "string",
+          "default": "posts"
         }
       ]
     },
@@ -141,6 +156,26 @@
           "title": "Description",
           "name": "description",
           "type": "string"
+        },
+        {
+          "title": "Publishing date",
+          "name": "date",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isPublishDate": true
+        },
+        {
+          "title": "Last modified date",
+          "name": "lastmod",
+          "type": "datetime",
+          "default": "{{now}}",
+          "isModifiedDate": true
+        },
+        {
+          "title": "Content preview",
+          "name": "preview",
+          "type": "image",
+          "isPreviewImage": true
         },
         {
           "title": "Is in draft",
@@ -171,26 +206,14 @@
         {
           "title": "layout",
           "name": "layout",
-          "type": "string"
+          "type": "string",
+          "default": "pages"
         },
         {
           "title": "fmContentType",
           "name": "fmContentType",
-          "type": "string"
-        },
-        {
-          "title": "Publishing date",
-          "name": "date",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isPublishDate": true
-        },
-        {
-          "title": "Last modified date",
-          "name": "lastmod",
-          "type": "datetime",
-          "default": "{{now}}",
-          "isModifiedDate": true
+          "type": "string",
+          "default": "pages"
         }
       ]
     },

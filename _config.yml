@@ -13,3 +13,6 @@ plugins:
 whitelist:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
+relative_links:
+  # enabled: true # already enabled by default
+  collections: true

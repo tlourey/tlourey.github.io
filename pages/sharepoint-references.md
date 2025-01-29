@@ -11,7 +11,8 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-28T05:47:28.059Z
+lastmod: 2025-01-29T03:39:58.455Z
+date: 2025-01-28T05:47:28.059Z
 ---
 
 <!--- cSpell:disable --->
@@ -47,8 +48,8 @@ lastmod: 2025-01-28T05:47:28.059Z
 * [Specific Articles to save](#specific-articles-to-save)
   * [Disabling Comments (for one site only)](#disabling-comments-for-one-site-only)
 * [References](#references)
-* [Good sites](#good-sites)
-  * [Microsoft Sites](#microsoft-sites)
+  * [High Level](#high-level)
+  * [Adoption](#adoption)
   * [Microsoft 365 Community Content](#microsoft-365-community-content)
   * [Misc Sites](#misc-sites)
 * [TODO](#todo)
@@ -94,6 +95,10 @@ The above diagram is from a MS Learn page about permissions but excluding Hubs, 
 * Today() and Now() seem to not always follow the timezone of the sharepoint site. Google for fixes. They are just semi-shitty workarounds like adding using created/modified dates or doing math to the today function.
   * <https://answers.microsoft.com/en-us/msoffice/forum/all/sharepoint-today-function-not-showing-correct-date/7d094e83-2a60-4d53-b06b-73c575008035> (expand to see app replies)
 
+Consider if the regional, language or timezone settings are set which can import this. refer to [SharePoint Language Settings for end user](microsoft-365-tips.md#sharepoint-language-settings-for-end-user) and [SharePoint Language Settings for end user](microsoft-365-tips.md#onedrive-language-settings-for-end-user)
+
+Also remember each site has its own regional settings in Site settings which also have a language and timezone setting.
+
 ## SharePoint Formulas
 
 [Examples of common formulas in lists](https://support.microsoft.com/en-us/office/examples-of-common-formulas-in-lists-d81f5f21-2b4e-45ce-b170-bf7ebf6988b3)\
@@ -102,6 +107,7 @@ The above diagram is from a MS Learn page about permissions but excluding Hubs, 
 ### Common Formulas
 
 `=[My Column Name] > TODAY()`: Column name must be greater than today's date.
+`=[My Column Name] <= TODAY()`: Column name must be less than or equal to today's date.
 
 ## Audience Targeting
 
@@ -310,11 +316,11 @@ More Info: [https://pnp.github.io/powershell/cmdlets/Set-PnPSite.html]
 
 ## References
 
+### High Level
+
 <https://learn.microsoft.com/en-us/sharepoint/information-architecture-modern-experience>
 
-## Good sites
-
-### Microsoft Sites
+### Adoption
 
 <https://adoption.microsoft.com/en-us/microsoft-lists/>\
 <https://adoption.microsoft.com/en-us/microsoft-lists/resources/>\
