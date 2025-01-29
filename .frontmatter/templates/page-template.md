@@ -5,7 +5,6 @@ published: false
 categories: []
 type: pages
 layout: pages
-fmContenttype: pages
 date: null
 lastmod: null
 tags: []
