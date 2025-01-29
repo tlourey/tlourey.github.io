@@ -3,7 +3,7 @@ title: Management Tips
 description: ""
 published: false
 categories:
-  - NonTech
+  - NotTech
 type: pages
 layout: pages
 draft: true
