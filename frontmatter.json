@@ -33,7 +33,8 @@
         {
           "title": "Content preview",
           "name": "preview",
-          "type": "image"
+          "type": "image",
+          "isPreviewImage": true
         },
         {
           "title": "Is in draft",
@@ -96,7 +97,8 @@
         {
           "title": "Content preview",
           "name": "preview",
-          "type": "image"
+          "type": "image",
+          "isPreviewImage": true
         },
         {
           "title": "Is in draft",
@@ -172,7 +174,8 @@
         {
           "title": "Content preview",
           "name": "preview",
-          "type": "image"
+          "type": "image",
+          "isPreviewImage": true
         },
         {
           "title": "Is in draft",
