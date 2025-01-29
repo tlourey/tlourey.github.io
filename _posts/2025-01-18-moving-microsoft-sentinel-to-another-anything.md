@@ -1,14 +1,14 @@
 ---
 title: Moving Microsoft Sentinel to another anything
 date: 2025-01-18T05:41:37.512Z
-categories:
-- Sentinel
-- Azure
-description: "STOP. There will be tears and there isn't a great answer. Read this for bad ideas"
+categories: []
+description: STOP. There will be tears and there isn't a great answer. Read this for bad ideas
 published: false
 preview: ""
 draft: true
-tags: []
+tags:
+  - Azure
+  - Sentinel
 type: posts
 fmContentType: posts
 ---

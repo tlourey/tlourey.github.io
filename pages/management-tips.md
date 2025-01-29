@@ -3,15 +3,15 @@ title: Management Tips
 description: ""
 published: false
 categories:
-    - NonTech
-    - TBA
+  - NonTech
 type: pages
 layout: pages
 draft: true
 tags:
-    - Writing
-    - Communication
-    - Management
+  - Communication
+  - Management
+  - TBA
+  - Writing
 fmContentType: pages
 lastmod: 2025-01-26T04:36:47.523Z
 ---

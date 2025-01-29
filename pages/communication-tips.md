@@ -3,15 +3,15 @@ title: Communication Tips
 description: ""
 published: false
 categories:
-    - TBA
-    - NotTech
+  - NotTech
 type: pages
 layout: pages
 draft: true
 tags:
-    - Writing
-    - Communication
-    - Management
+  - Communication
+  - Management
+  - TBA
+  - Writing
 fmContentType: pages
 lastmod: 2025-01-26T04:34:45.673Z
 ---
