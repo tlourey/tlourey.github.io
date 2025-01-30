@@ -1,6 +1,6 @@
 ---
 title: SharePoint References
-description: ""
+description: \"SharePoint is old pig in lipstick, wearing trendy clothes and trying to fit in with the young kids\" - Me
 published: true
 categories:
     - Tech
@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-29T23:45:05.720Z
+lastmod: 2025-01-30T03:30:23.717Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -62,7 +62,7 @@ date: 2025-01-28T05:47:28.059Z
 
 > *"SharePoint is not as forgiving as \[some other platforms like\] Confluence"* - A CIO I worked with
 
-> *"SharePoint is old pig in lipstick but wearing trendy clothes and hanging out with the young kids"* - Me
+> *"SharePoint is old pig in lipstick, wearing trendy clothes and trying to fit in with the young kids"* - Me
 
 ## Concepts
 
@@ -239,6 +239,9 @@ More Info:\
 
 <https://sharegate.com/blog/sharepoint-permissions-best-practices-2-ways-to-manage>\
 <https://www.sharepointdiary.com/2013/04/sharepoint-permission-levels.html>
+
+<https://learn.microsoft.com/en-us/sharepoint/change-external-sharing-site>\
+<https://learn.microsoft.com/en-us/sharepoint/change-default-sharing-link>
 
 ## Site Collection Features
 
