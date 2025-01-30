@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-30T03:30:23.717Z
+lastmod: 2025-01-30T03:33:56.806Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -242,6 +242,9 @@ More Info:\
 
 <https://learn.microsoft.com/en-us/sharepoint/change-external-sharing-site>\
 <https://learn.microsoft.com/en-us/sharepoint/change-default-sharing-link>
+
+> [!NOTE]
+> To change the default link type for a Teams private or shared channel site, you must use the [Set-SPOSite](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps) PowerShell cmdlet.
 
 ## Site Collection Features
 
