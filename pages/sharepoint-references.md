@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-29T03:39:58.455Z
+lastmod: 2025-01-29T23:45:05.720Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -294,15 +294,17 @@ More Info:\
 <https://www.reddit.com/r/sharepoint/comments/1c67ms4/create_items_in_libraries_but_not_new_libraries/>\
 <https://sharepointmaven.com/how-to-copy-an-existing-document-library-in-sharepoint-online/> - also includes how to get around a very obscure error if you have audience targeting enabled on a the library.\
 <https://learn.microsoft.com/en-us/answers/questions/1367728/how-do-you-use-powershell-to-copy-a-sharepoint-onl>\
-<https://stackoverflow.com/questions/78491086/get-pnpsitetemplate-gets-stuck-for-a-long-time-on-certain-handlers> - sometimes running PnP Commands in VSCode has strange issues
+**<https://stackoverflow.com/questions/78491086/get-pnpsitetemplate-gets-stuck-for-a-long-time-on-certain-handlers> - sometimes running PnP Commands in VSCode has strange issues**
 
 ### Disabling Comments (for one site only)
 
 To disable for a **specific site only** and not for the whole Tenant using PnP PowerShell (after connecting)
 
 ```powershell
+Import-Module PnP.PowerShell
 $SiteURL = https://tenantname.sharepoint.com/sites/comms-site-i-want-comments-and-likes-disabled-on
 # Ensure Site URL does *not* have a trailing slash
+connect-PnPOnline $siteUrl -DeviceLogin -Tenant yourtenantnamehere.onmicrosoft.com -ClientId <<PnP App ID GUID for your AAD here>>
 
 Set-PnPSite -Identity $SiteURL -SocialBarOnSitePagesDisabled $True -CommentsOnSitePagesDisabled $True
 ```
