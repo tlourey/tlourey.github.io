@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-01-27T07:45:43.137Z
+lastmod: 2025-01-30T08:04:31.566Z
 ---
 
 <!--- cSpell:disable --->
@@ -26,6 +26,7 @@ lastmod: 2025-01-27T07:45:43.137Z
 * [Ba dum tisss](#ba-dum-tisss)
 * [Technically correct](#technically-correct)
 * [Technically](#technically)
+* [I award you no points](#i-award-you-no-points)
 <!--- cSpell:enable --->
 
 ## Homer Simpsons Fire on console
@@ -80,3 +81,10 @@ Drawing:\
 ## Technically
 
 [![Picture](/assets/images/technically-quotation-marks.gif)](/assets/images/technically-quotation-marks.gif)
+
+## I award you no points
+
+[![Picture](/assets/images/billymadison-godhelp.gif)](/assets/images/billymadison-godhelp.gif.gif)\
+<https://tenor.com/en-AU/view/billymadison-godhelp-idiot-stupid-rambling-gif-10636357>
+
+<https://www.youtube.com/watch?v=5hfYJsQAhl0>
