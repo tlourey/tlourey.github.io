@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-31T13:37:55.922Z
+lastmod: 2025-01-31T13:48:26.401Z
 tags:
     - Commands
     - Language
@@ -43,7 +43,8 @@ tags:
 
 ## PowerShell Basics
 
-<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/>
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/>\
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about>
 
 ### Common Pipeline Modifiers
 
@@ -51,7 +52,7 @@ tags:
 `ft` - [`format-table`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table)\
 `sort` - [`sort-objects`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object)\
 `select` - [`select-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object)\
-`where` - [`where-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/where-object) 
+`where` - [`where-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/where-object)
 
 ### Comparison Operators
 
