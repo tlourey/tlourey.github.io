@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-30T12:02:06.330Z
+lastmod: 2025-01-31T08:53:20.888Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -46,7 +46,7 @@ date: 2025-01-28T05:47:28.059Z
 * [Microsoft Lists](#microsoft-lists)
 * [Teams and SharePoint](#teams-and-sharepoint)
 * [Specific Articles to save](#specific-articles-to-save)
-  * [Disabling Comments (for one site only)](#disabling-comments-for-one-site-only)
+  * [Disabling Comments and Social Bar (for one site only)](#disabling-comments-and-social-bar-for-one-site-only)
 * [References](#references)
   * [High Level](#high-level)
   * [Adoption](#adoption)
@@ -301,9 +301,9 @@ More Info:\
 <https://learn.microsoft.com/en-us/answers/questions/1367728/how-do-you-use-powershell-to-copy-a-sharepoint-onl>\
 **<https://stackoverflow.com/questions/78491086/get-pnpsitetemplate-gets-stuck-for-a-long-time-on-certain-handlers> - sometimes running PnP Commands in VSCode has strange issues**
 
-### Disabling Comments (for one site only)
+### Disabling Comments and Social Bar (for one site only)
 
-To disable for a **specific site only** and not for the whole Tenant using PnP PowerShell (after connecting)
+To disable comments and/or the social bar for a **specific site only** and not for the whole Tenant using PnP PowerShell (after connecting)
 
 ```powershell
 Import-Module PnP.PowerShell
