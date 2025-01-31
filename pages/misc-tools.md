@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-01-28T06:45:12.582Z
+lastmod: 2025-01-29T10:01:14.660Z
 ---
 
  <!--- cSpell:disable --->
@@ -75,6 +75,8 @@ lastmod: 2025-01-28T06:45:12.582Z
 ## Microsoft 365 Tools
 
 <https://microsoft365dsc.com/>\
+<https://aka.ms/m365dscwhitepaper>\
+<https://microsoft365dsc.com/resources/overview/>
 
 ## Windows Tools
 

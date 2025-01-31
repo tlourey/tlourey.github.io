@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-lastmod: 2025-01-29T06:42:18.012Z
+lastmod: 2025-01-30T08:09:57.206Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -33,7 +33,7 @@ fmContentType: posts
 
 So you've got CEF Messages you want to go into Azure Sentinel. That sounds like a neat idea doesn't it! BULLSHIT.
 
-![Meme](/assets/images/azure-make-sense.png)
+![SAY WHAT AGAIN](/assets/images/azure-make-sense.png)
 
 When reviewing a setup to get CEF messages into Sentinel, I found there was far more messages going in than their should be and that most of those messages were not valid. That sounds like $$$ going down the drain. So I went over the setup trying to find this excess.
 

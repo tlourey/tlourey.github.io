@@ -1,5 +1,5 @@
 ---
-title: Azure Monitoring Data Collection Rules for Log Analytics Workspace
+title: Azure Monitor Data Collection Rules for Log Analytics
 description: Ripe and ready for TLAs and FLTLAs
 published: true
 categories:
@@ -7,12 +7,14 @@ categories:
 type: pages
 layout: pages
 draft: true
-lastmod: 2025-01-25T09:00:41.406Z
+lastmod: 2025-01-31T07:06:25.963Z
 date: 2025-01-15T01:07:00
 tags:
     - Azure
     - Monitoring
     - References
+    - Azure Log Analytics
+fmContentType: pages
 ---
 
 
@@ -118,4 +120,5 @@ From [Structure of a data collection rule (DCR) in Azure Monitor](https://learn.
 ## Misc References
 
 <https://learn.microsoft.com/en-us/azure/azure-monitor/agents/troubleshooter-ama-windows?tabs=WindowsPowerShell#linux-troubleshooter>\
-<https://learn.microsoft.com/en-us/azure/azure-monitor/agents/troubleshooter-ama-linux?tabs=redhat%2CGenerateLogs>
+<https://learn.microsoft.com/en-us/azure/azure-monitor/agents/troubleshooter-ama-linux?tabs=redhat%2CGenerateLogs>\
+**<https://learn.microsoft.com/en-us/azure/sentinel/connect-cef-syslog-ama?tabs=portal#test-the-connector>** - contains commands to test syslog and the connector

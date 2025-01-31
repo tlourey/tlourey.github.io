@@ -1,24 +1,24 @@
 ---
 title: Nagios Tips
-description: Tips for Nagios and SNMP
+description: Tips and References for Nagios with a little sprinkle of SNMP and OIDs
 published: false
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-01-28T03:56:05.685Z
+lastmod: 2025-01-31T12:54:22.451Z
 tags:
-  - Monitoring
-  - Nagios
-  - SNMP
+    - Monitoring
+    - Nagios
+    - SNMP
 draft: true
 fmContentType: pages
 ---
 
 <!--- cSpell:disable --->
 * [Nagios Verify](#nagios-verify)
-* [Hostgroup Excludes](#hostgroup-excludes)
+* [HostGroup Excludes](#hostgroup-excludes)
 * [Nagios References](#nagios-references)
   * [Thresholds](#thresholds)
 * [SNMP](#snmp)
@@ -29,21 +29,20 @@ fmContentType: pages
   * [Synology](#synology)
   * [Netgear](#netgear)
   * [APC](#apc)
-
 <!--- cSpell:enable --->
 
 ## Nagios Verify
 
 *nagios4 -v config_file: Reads all data in the configuration files and performs a basic verification/sanity check.  Always make sure you verify your config data before (re)starting Nagios.*
 
-In my case I use `sudo /usr/sbin/nagios4 -v ~/mynagiosrepo/nagios-test.cfg`:
+In my case I use `sudo /usr/sbin/nagios4 -v ~/my-nagios-repo/nagios-test.cfg`:
 
 * It needs to be sudo so it can access everything Nagios can (one day I may try `sudo -u nagios CMD`)
 * nagios-test.cfg is the same as my normal nagios.conf except i've changed: `cfg_dir=./conf.d` so it verifies all the changes in my local repo before I push and then pull in `/etc/nagios4`
 
 More info: [Verifying your Nagios Core configuration](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/verifyconfig.html)
 
-## Hostgroup Excludes
+## HostGroup Excludes
 
 When applying checks to hostgroups, you can exclude a host.
 
@@ -54,7 +53,7 @@ define service {
   #dauphine is excluded from this check as it is not on the domain.
   host_name             !not-this-host
   service_description   SSH
-  check_command         
+  check_command
 }
 ```
 
@@ -62,18 +61,18 @@ define service {
 
 [Nagios Plugin Development Guidelines](https://nagios-plugins.org/doc/guidelines.html)
 
-[Nagios Object Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html)
-[Nagios Host Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#host)
-[Nagios Service Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#service)
+[Nagios Object Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html)\
+[Nagios Host Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#host)\
+[Nagios Service Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#service)\
 
 [Nagios Macro List](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/macrolist.html)
 
-<https://nagios-plugins.org/doc/man/check_snmp.html>
-<https://nagios-plugins.org/doc/extra-opts.html>
-<https://nagios-plugins.org/development/>
+<https://nagios-plugins.org/doc/man/check_snmp.html>\
+<https://nagios-plugins.org/doc/extra-opts.html>\
+<https://nagios-plugins.org/development/>\
 
-<https://www.monitoring-plugins.org/doc/man/index.html>
-<https://www.monitoring-plugins.org/doc/guidelines.html>
+<https://www.monitoring-plugins.org/doc/man/index.html>\
+<https://www.monitoring-plugins.org/doc/guidelines.html>\
 <https://www.monitoring-plugins.org/doc/man/check_http.html>
 
 ### Thresholds

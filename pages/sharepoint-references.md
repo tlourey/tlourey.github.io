@@ -1,6 +1,6 @@
 ---
 title: SharePoint References
-description: ""
+description: \"SharePoint is old pig in lipstick, wearing trendy clothes and trying to fit in with the young kids\" - Me
 published: true
 categories:
     - Tech
@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-29T03:39:58.455Z
+lastmod: 2025-01-31T08:53:20.888Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -46,14 +46,13 @@ date: 2025-01-28T05:47:28.059Z
 * [Microsoft Lists](#microsoft-lists)
 * [Teams and SharePoint](#teams-and-sharepoint)
 * [Specific Articles to save](#specific-articles-to-save)
-  * [Disabling Comments (for one site only)](#disabling-comments-for-one-site-only)
+  * [Disabling Comments and Social Bar (for one site only)](#disabling-comments-and-social-bar-for-one-site-only)
 * [References](#references)
   * [High Level](#high-level)
   * [Adoption](#adoption)
   * [Microsoft 365 Community Content](#microsoft-365-community-content)
   * [Misc Sites](#misc-sites)
 * [TODO](#todo)
-
 <!--- cSpell:enable --->
 
 ## Good points to remember
@@ -62,7 +61,7 @@ date: 2025-01-28T05:47:28.059Z
 
 > *"SharePoint is not as forgiving as \[some other platforms like\] Confluence"* - A CIO I worked with
 
-> *"SharePoint is old pig in lipstick but wearing trendy clothes and hanging out with the young kids"* - Me
+> *"SharePoint is old pig in lipstick, wearing trendy clothes and trying to fit in with the young kids"* - Me
 
 ## Concepts
 
@@ -240,6 +239,12 @@ More Info:\
 <https://sharegate.com/blog/sharepoint-permissions-best-practices-2-ways-to-manage>\
 <https://www.sharepointdiary.com/2013/04/sharepoint-permission-levels.html>
 
+<https://learn.microsoft.com/en-us/sharepoint/change-external-sharing-site>\
+<https://learn.microsoft.com/en-us/sharepoint/change-default-sharing-link>
+
+> [!NOTE]
+> To change the default link type for a Teams private or shared channel site, you must use the [Set-SPOSite](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps) PowerShell cmdlet.
+
 ## Site Collection Features
 
 <https://support.microsoft.com/en-au/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04>
@@ -294,15 +299,17 @@ More Info:\
 <https://www.reddit.com/r/sharepoint/comments/1c67ms4/create_items_in_libraries_but_not_new_libraries/>\
 <https://sharepointmaven.com/how-to-copy-an-existing-document-library-in-sharepoint-online/> - also includes how to get around a very obscure error if you have audience targeting enabled on a the library.\
 <https://learn.microsoft.com/en-us/answers/questions/1367728/how-do-you-use-powershell-to-copy-a-sharepoint-onl>\
-<https://stackoverflow.com/questions/78491086/get-pnpsitetemplate-gets-stuck-for-a-long-time-on-certain-handlers> - sometimes running PnP Commands in VSCode has strange issues
+**<https://stackoverflow.com/questions/78491086/get-pnpsitetemplate-gets-stuck-for-a-long-time-on-certain-handlers> - sometimes running PnP Commands in VSCode has strange issues**
 
-### Disabling Comments (for one site only)
+### Disabling Comments and Social Bar (for one site only)
 
-To disable for a **specific site only** and not for the whole Tenant using PnP PowerShell (after connecting)
+To disable comments and/or the social bar for a **specific site only** and not for the whole Tenant using PnP PowerShell (after connecting)
 
 ```powershell
+Import-Module PnP.PowerShell
 $SiteURL = https://tenantname.sharepoint.com/sites/comms-site-i-want-comments-and-likes-disabled-on
 # Ensure Site URL does *not* have a trailing slash
+connect-PnPOnline $siteUrl -DeviceLogin -Tenant yourtenantnamehere.onmicrosoft.com -ClientId <<PnP App ID GUID for your AAD here>>
 
 Set-PnPSite -Identity $SiteURL -SocialBarOnSitePagesDisabled $True -CommentsOnSitePagesDisabled $True
 ```

@@ -6,15 +6,14 @@ categories:
 type: pages
 layout: pages
 published: true
-fmContenttype: pages
+fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-01-25T03:20:41.517Z
+lastmod: 2025-01-31T07:41:46.455Z
 tags:
     - Commands
     - Linux
     - References
 ---
-
 
 <!--- cSpell:disable --->
 * [Terminal Stuff](#terminal-stuff)
@@ -23,7 +22,7 @@ tags:
 * [Hardware Info](#hardware-info)
 * [Storage](#storage)
   * [MDADM](#mdadm)
-* [Log files](#log-files)
+* [Logging and Log files](#logging-and-log-files)
 * [Cron](#cron)
 * [Accounts and Groups](#accounts-and-groups)
 * [Apt](#apt)
@@ -113,13 +112,15 @@ cat /etc/fstab
 
 REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 
-## Log files
+## Logging and Log files
 
 * `/var/log/auth.log`: keep track of all authentication attempts (successful or failed) on your system
 * `faillog -a`: show fail log
 * `sudo faillog -l 60 olivia`: lock out Olivia for 60 mins
 * `sudo less /var/log/boot.log`: boot log
 * `cat /var/log/apt/history.log`: Apt history
+
+Some Tips to test/evulate syslog message via the network are in [Microsoft Sentinel Tips](/pages/microsoft-sentinel-tips.md#syslog-connector-testing)
 
 ## Cron
 
@@ -304,7 +305,7 @@ Netplan:
 > [!NOTE] netstat
 > netstat is a cross platform command existing in Unix, Linux, Mac and Windows but nearly all of them have different options/switches/parameters
 
-`sudo netstat -tulpn`: show listening.\
+`sudo netstat -tulpn` or `sudo netstat -lnptv`: show listening.\
 `sudo netstat -lanp`: show active and listening\
 `sudo netstat -lanp | grep 22`: grep active and listening for port 22
 
@@ -312,6 +313,21 @@ Netplan:
 `dig`
 `hostname`
 `dnsdomainname`
+
+`nc`: netcat: <https://manpages.org/nc>
+
+<https://nc110.sourceforge.io/>
+
+* [ ] add in common netcat commands
+
+`tcpdump`: packet capture\
+`sudo tcpdump -n udp port 514 -vv`: Capture UDP Port 512 but don't show me all the details in verbose.\
+`sudo tcpdump -n udp port 514 -A -vv`: Capture UDP Port 512 AND show me all the details in verbose.\
+`sudo tcpdump -i any port 514 -A -vv`: capture on any interface port 514 and show me all the details in verbose\
+
+<https://www.tcpdump.org/manpages/tcpdump.1.html>
+
+* [ ] Add the command tcpdump arguments you always forget
 
 ### Network Reference
 
