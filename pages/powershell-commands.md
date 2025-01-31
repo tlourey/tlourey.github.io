@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-26T06:42:29.134Z
+lastmod: 2025-01-31T13:17:43.775Z
 tags:
     - Commands
     - Language
@@ -18,15 +18,18 @@ tags:
 
 <!--- cSpell:disable --->
 * [Oneliners](#oneliners)
-  * [User Management](#user-management)
   * [Connecting to a remote server via powershell](#connecting-to-a-remote-server-via-powershell)
-  * [Exchange Powershell](#exchange-powershell)
-    * [Archive Mailbox](#archive-mailbox)
-    * [Mailbox Access Checks](#mailbox-access-checks)
-    * [Mailbox Access](#mailbox-access)
-  * [Local System Management](#local-system-management)
-    * [Uptime, wake on lan, reboot](#uptime-wake-on-lan-reboot)
-    * [Remote Desktop](#remote-desktop)
+  * [Also See](#also-see)
+* [Active Directory](#active-directory)
+  * [User Management OneLiners](#user-management-oneliners)
+* [Exchange Powershell](#exchange-powershell)
+  * [Archive Mailbox](#archive-mailbox)
+  * [Mailbox Access Checks](#mailbox-access-checks)
+  * [Mailbox Access](#mailbox-access)
+* [Local System Management](#local-system-management)
+  * [File and Space Management OneLiners](#file-and-space-management-oneliners)
+  * [Uptime, wake on lan, reboot](#uptime-wake-on-lan-reboot)
+  * [Remote Desktop](#remote-desktop)
 * [SharePoint PowerShell](#sharepoint-powershell)
 * [Commands often forgotten](#commands-often-forgotten)
 * [Additional Resources](#additional-resources)
@@ -35,7 +38,28 @@ tags:
 
 ## Oneliners
 
-### User Management
+### Connecting to a remote server via powershell
+
+```powershell
+enter-pssession
+# connect as current user
+enter-pssession servername
+
+# prompt for a different user
+enter-pssession servername -Credential (Get-Credential)
+```
+
+### Also See
+
+[User Management OneLiners](#user-management-oneliners)\
+[File and Space Management OneLiners](#file-and-space-management-oneliners)
+
+## Active Directory
+
+[ActiveDirectory PowerShell Module](https://learn.microsoft.com/en-us/powershell/module/activedirectory/)\
+[about_ActiveDirectory](https://learn.microsoft.com/en-us/powershell/module/activedirectory/about/about_activedirectory)
+
+### User Management OneLiners
 
 move a users direct reports to another user
 
@@ -87,18 +111,7 @@ Disabled Managers Direct Reports
 (get-aduser -filter {(Enabled -eq $false) -and (directreports -like "*")} -Properties directreports)[2].directreports | set-aduser -manager (get-aduser -id newmanagerfirstname.lastname)
 ```
 
-### Connecting to a remote server via powershell
-
-```powershell
-enter-pssession
-# connect as current user
-enter-pssession servername
-
-# prompt for a different user
-enter-pssession servername -Credential (Get-Credential)
-```
-
-### Exchange Powershell
+## Exchange Powershell
 
 NB: Sometimes this is easier in mail trace in EAC
 
@@ -162,7 +175,7 @@ Set-Mailbox -id <<email@domain.com>> -ProhibitSendReceiveQuota 40GB -ProhibitSen
 
 Make sure to lower mailbox sizes afterwards back to defaults
 
-#### Archive Mailbox
+### Archive Mailbox
 
 enable archive mailbox
 
@@ -188,7 +201,7 @@ $Mailboxes.Identity | Start-ManagedFolderAssistant
 
 Make sure to lower mailbox sizes afterwards back to defaults
 
-#### Mailbox Access Checks
+### Mailbox Access Checks
 
 Search what permissions are on a particular mailbox
 
@@ -207,7 +220,7 @@ Search if a particular personal has access to any mailboxes
 Get-Mailbox -ResultSize Unlimited | Get-MailboxFolderPermission -User john.doe@domain.com | ft User,Identity,AccessRights
 ```
 
-#### Mailbox Access
+### Mailbox Access
 
 From and More info: <https://learn.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-permissions-for-recipients>
 
@@ -255,9 +268,25 @@ Set-DistributionGroup -Identity printersupport@contoso.com -GrantSendOnBehalfTo 
 Set-DynamicDistributionGroup "All Employees" -GrantSendOnBehalfTo @{Remove="Administrator"}
 ```
 
-### Local System Management
+## Local System Management
 
-#### Uptime, wake on lan, reboot
+### File and Space Management OneLiners
+
+Find Files over than 30 days
+
+```powershell
+# List *.log files over 30 days
+Get-ChildItem -Filter *.log -Path c:\windows\system32\logfiles | where {$_.CreationTime -lt ((Get-Date).AddDays(-30))}
+```
+
+Find and delete files over than 30 days
+
+```powershell
+# Delete *.log files over 30 days
+Get-ChildItem -Filter *.log -Path c:\windows\system32\logfiles | where {$_.CreationTime -lt ((Get-Date).AddDays(-30))} | Remove-Item -Confirm
+```
+
+### Uptime, wake on lan, reboot
 
 Get Uptime from CIM via Powershell
 
@@ -287,7 +316,7 @@ $mac = '01-23-45-67-89-AB';
 }
 ```
 
-#### Remote Desktop
+### Remote Desktop
 
 Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https://learn.microsoft.com/en-au/powershell/module/remotedesktop/)
 
