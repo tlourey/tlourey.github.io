@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-31T13:17:43.775Z
+lastmod: 2025-01-31T13:37:55.922Z
 tags:
     - Commands
     - Language
@@ -17,6 +17,11 @@ tags:
 
 
 <!--- cSpell:disable --->
+* [PowerShell Basics](#powershell-basics)
+  * [Common Pipeline Modifiers](#common-pipeline-modifiers)
+  * [Comparison Operators](#comparison-operators)
+    * [Dates](#dates)
+  * [Times and TimeZones](#times-and-timezones)
 * [Oneliners](#oneliners)
   * [Connecting to a remote server via powershell](#connecting-to-a-remote-server-via-powershell)
   * [Also See](#also-see)
@@ -35,6 +40,32 @@ tags:
 * [Additional Resources](#additional-resources)
 * [Other resources to add](#other-resources-to-add)
 <!--- cSpell:enable --->
+
+## PowerShell Basics
+
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/>
+
+### Common Pipeline Modifiers
+
+`fl` - [`format-list`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-list)\
+`ft` - [`format-table`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table)\
+`sort` - [`sort-objects`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object)\
+`select` - [`select-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object)\
+`where` - [`where-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/where-object) 
+
+### Comparison Operators
+
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators>
+
+`-contains`: Finds an item in a array/List, not great with wildcards\
+`-like`: finds things like. good for wildcards
+
+#### Dates
+
+`-gt`: TBC\
+`-lt`: TBC
+
+### Times and TimeZones
 
 ## Oneliners
 
