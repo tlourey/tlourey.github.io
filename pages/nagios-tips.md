@@ -1,13 +1,13 @@
 ---
 title: Nagios Tips
-description: Tips for Nagios and SNMP
-published: false
+description: Tips and References for Nagios with a little sprinkle of SNMP and OIDs
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-01-29T13:14:57.384Z
+lastmod: 2025-01-31T04:25:24.976Z
 tags:
     - Monitoring
     - Nagios
@@ -61,18 +61,18 @@ define service {
 
 [Nagios Plugin Development Guidelines](https://nagios-plugins.org/doc/guidelines.html)
 
-[Nagios Object Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html)
-[Nagios Host Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#host)
-[Nagios Service Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#service)
+[Nagios Object Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html)\
+[Nagios Host Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#host)\
+[Nagios Service Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#service)\
 
 [Nagios Macro List](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/macrolist.html)
 
-<https://nagios-plugins.org/doc/man/check_snmp.html>
-<https://nagios-plugins.org/doc/extra-opts.html>
-<https://nagios-plugins.org/development/>
+<https://nagios-plugins.org/doc/man/check_snmp.html>\
+<https://nagios-plugins.org/doc/extra-opts.html>\
+<https://nagios-plugins.org/development/>\
 
-<https://www.monitoring-plugins.org/doc/man/index.html>
-<https://www.monitoring-plugins.org/doc/guidelines.html>
+<https://www.monitoring-plugins.org/doc/man/index.html>\
+<https://www.monitoring-plugins.org/doc/guidelines.html>\
 <https://www.monitoring-plugins.org/doc/man/check_http.html>
 
 ### Thresholds
