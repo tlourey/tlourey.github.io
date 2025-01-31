@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-01-31T07:35:05.808Z
+lastmod: 2025-01-31T07:41:46.455Z
 tags:
     - Commands
     - Linux
@@ -320,7 +320,10 @@ Netplan:
 
 * [ ] add in common netcat commands
 
-`tcpdump`: packet capture
+`tcpdump`: packet capture\
+`sudo tcpdump -n udp port 514 -vv`: Capture UDP Port 512 but don't show me all the details in verbose.\
+`sudo tcpdump -n udp port 514 -A -vv`: Capture UDP Port 512 AND show me all the details in verbose.\
+`sudo tcpdump -i any port 514 -A -vv`: capture on any interface port 514 and show me all the details in verbose\
 
 <https://www.tcpdump.org/manpages/tcpdump.1.html>
 
