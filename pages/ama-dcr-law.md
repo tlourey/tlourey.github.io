@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 draft: true
-lastmod: 2025-01-29T13:26:14.881Z
+lastmod: 2025-01-31T07:06:25.963Z
 date: 2025-01-15T01:07:00
 tags:
     - Azure
@@ -120,4 +120,5 @@ From [Structure of a data collection rule (DCR) in Azure Monitor](https://learn.
 ## Misc References
 
 <https://learn.microsoft.com/en-us/azure/azure-monitor/agents/troubleshooter-ama-windows?tabs=WindowsPowerShell#linux-troubleshooter>\
-<https://learn.microsoft.com/en-us/azure/azure-monitor/agents/troubleshooter-ama-linux?tabs=redhat%2CGenerateLogs>
+<https://learn.microsoft.com/en-us/azure/azure-monitor/agents/troubleshooter-ama-linux?tabs=redhat%2CGenerateLogs>\
+**<https://learn.microsoft.com/en-us/azure/sentinel/connect-cef-syslog-ama?tabs=portal#test-the-connector>** - contains commands to test syslog and the connector
