@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-01-31T07:15:36.380Z
+lastmod: 2025-01-31T07:35:05.808Z
 tags:
     - Commands
     - Linux
@@ -313,6 +313,18 @@ Netplan:
 `dig`
 `hostname`
 `dnsdomainname`
+
+`nc`: netcat: <https://manpages.org/nc>
+
+<https://nc110.sourceforge.io/>
+
+* [ ] add in common netcat commands
+
+`tcpdump`: packet capture
+
+<https://www.tcpdump.org/manpages/tcpdump.1.html>
+
+* [ ] Add the command tcpdump arguments you always forget
 
 ### Network Reference
 
