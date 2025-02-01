@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-01-29T10:01:14.660Z
+lastmod: 2025-02-01T03:44:57.173Z
 ---
 
  <!--- cSpell:disable --->
@@ -20,6 +20,7 @@ lastmod: 2025-01-29T10:01:14.660Z
 * [Software Tools](#software-tools)
 * [KQL Tools](#kql-tools)
 * [PowerShell Tools](#powershell-tools)
+* [Email Tools](#email-tools)
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
@@ -72,6 +73,15 @@ lastmod: 2025-01-29T10:01:14.660Z
 
 [PowerShell Module Browser](https://learn.microsoft.com/en-us/powershell/module/)
 
+## Email Tools
+
+<https://mha.azurewebsites.net/>\
+<https://mxtoolbox.com/>
+
+* <https://mxtoolbox.com/EmailHeaders.aspx>
+* <https://mxtoolbox.com/SuperTool.aspx>
+* <https://mxtoolbox.com/dmarc.aspx>
+
 ## Microsoft 365 Tools
 
 <https://microsoft365dsc.com/>\
@@ -86,7 +96,8 @@ lastmod: 2025-01-29T10:01:14.660Z
 **<https://learn.microsoft.com/en-us/sysinternals/>**\
 **<https://www.vandyke.com/products/securecrt/windows.html> - Its not free but its good.**\
 <https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
-**[Total Commander](https://www.ghisler.com/)** - THE PIMP!
+**[Total Commander](https://www.ghisler.com/)** - THE PIMP!\
+<https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandagon yet but its not shit.
 
 ## Chrome or Edge Extensions
 

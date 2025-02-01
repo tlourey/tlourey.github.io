@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-01-31T13:17:43.775Z
+lastmod: 2025-02-01T02:27:34.594Z
 tags:
     - Commands
     - Language
@@ -17,12 +17,26 @@ tags:
 
 
 <!--- cSpell:disable --->
+* [PowerShell Basics](#powershell-basics)
+  * [Commands and Help](#commands-and-help)
+  * [Common Pipeline Modifiers](#common-pipeline-modifiers)
+  * [Comparison Operators](#comparison-operators)
+    * [Dates](#dates)
+    * [Times and TimeZones](#times-and-timezones)
+  * [-WhatIf](#-whatif)
+  * [Force](#force)
+* [Module Management](#module-management)
+  * [PowerShellGet and PSResourceGet](#powershellget-and-psresourceget)
 * [Oneliners](#oneliners)
   * [Connecting to a remote server via powershell](#connecting-to-a-remote-server-via-powershell)
   * [Also See](#also-see)
 * [Active Directory](#active-directory)
   * [User Management OneLiners](#user-management-oneliners)
 * [Exchange Powershell](#exchange-powershell)
+  * [Setup](#setup)
+  * [Removing OWA Signatures from Email](#removing-owa-signatures-from-email)
+  * [Mail tracing](#mail-tracing)
+  * [Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)](#temporarily-increase-mailbox-size-this-assumes-you-never-give-users-their-full-mailbox-in-the-first-place)
   * [Archive Mailbox](#archive-mailbox)
   * [Mailbox Access Checks](#mailbox-access-checks)
   * [Mailbox Access](#mailbox-access)
@@ -35,6 +49,83 @@ tags:
 * [Additional Resources](#additional-resources)
 * [Other resources to add](#other-resources-to-add)
 <!--- cSpell:enable --->
+
+## PowerShell Basics
+
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/>\
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about>
+
+### Commands and Help
+
+`get-command`:\
+`get-commmand -module <Modulemame>`:\
+`get-help commandname`:\
+`get-help commandname -full`:\
+`get-help commandname -detailed`:\
+`get-help commandname -examples`:\
+`get-help commandname -online`:\
+`update-help`
+
+### Common Pipeline Modifiers
+
+`fl` - [`format-list`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-list)\
+`ft` - [`format-table`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table)\
+`sort` - [`sort-objects`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object)\
+`select` - [`select-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object)\
+`where` - [`where-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/where-object)
+
+### Comparison Operators
+
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators>
+
+`-contains`: Finds an item in a array/List, not great with wildcards\
+`-like`: finds things like. good for wildcards
+
+#### Dates
+
+`-gt`: TBC\
+`-lt`: TBC
+
+#### Times and TimeZones
+
+TBC
+
+### -WhatIf
+
+TBC
+
+### Force
+
+TBC
+
+## Module Management
+
+* [ ] Fill in the Module Management commands
+
+`Get-Module`: TBC\
+`Get-Module -ListAvailable`: TBC\
+`Find-Module`
+`Install-Module`: TBC\
+`Install-Module -scope CurrentUser`: TBC\
+`Install-Module -scope AllUsers`: TBC\
+`Update-Module`: TBC\
+`Uninstall-Module`: TBC - [REF](https://learn.microsoft.com/en-us/powershell/module/powershellget/uninstall-module)
+
+* Consider Admin Rights
+* Consider Module Locations
+* Consider Multiple Versions
+
+`Import-Module`: TBC\
+`Remove-Module`: TBC\
+
+`-AllowClobber`: TBC\
+`-AllowPreRelease`: TBC
+
+Also check [Modules in PowerShell Tips](powershell-tips.md#modules) for info on module paths
+
+### PowerShellGet and PSResourceGet
+
+TBC
 
 ## Oneliners
 
@@ -113,7 +204,34 @@ Disabled Managers Direct Reports
 
 ## Exchange Powershell
 
+<https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps>\
+[Other Exchange PowerShells](https://learn.microsoft.com/en-us/powershell/module/exchange/?view=exchange-ps)\
+<https://aka.ms/exov3-module>
+
 NB: Sometimes this is easier in mail trace in EAC
+
+### Setup
+
+Install
+
+```powershell
+Install-Module ExchangeOnlineManagement
+# OR
+Install-Module ExchangeOnlineManagement -Scope CurrentUser
+```
+
+Update:
+
+```powershell
+Update-Module ExchangeOnlineManagement
+```
+
+If you get `Module 'ExchangeOnlineManagement' was not installed by using Install-Module, so it cannot be updated.`:
+
+* Module may have more installed via MSI
+* More Likely: It was installed for a different version of PowerShell - eg V7 and your using V5.1 [^1]
+
+[^1]: <https://www.reddit.com/r/PowerShell/comments/yf07e3/comment/iu1bmh2/>
 
 Import and connect
 
@@ -131,7 +249,7 @@ disconnect-exchangeonline
 
 <https://docs.microsoft.com/en-au/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps>
 
-Removing OWA Signatures from Email
+### Removing OWA Signatures from Email
 
 ```powershell
 # check signature settings
@@ -144,7 +262,7 @@ Set-MailboxMessageConfiguration -id john.doe@domain.com -SignatureHtml $null -Si
 Set-MailboxMessageConfiguration -id john.doe@domain.com -AutoAddSignature $false -AutoAddSignatureOnMobile $false -AutoAddSignatureOnReply $false -UseDefaultSignatureOnMobile $false
 ```
 
-Mail tracing
+### Mail tracing
 
 ```powershell
 # get messages sent to john from joe, from exactly 1 day ago until this very second
@@ -160,7 +278,7 @@ Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).Ad
 Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).AddDays(-1)) -EndDate (get-date) -SenderAddress joe.blogs@domain.com | get-messagetracedetail | fl
 ```
 
-Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)
+### Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)
 
 ```powershell
 Set-Mailbox -id <<email@domain.com>> -ProhibitSendQuota <<Value>> -ProhibitSendReceiveQuota <<Value>>
