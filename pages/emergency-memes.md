@@ -11,13 +11,14 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-01-30T08:04:31.566Z
+lastmod: 2025-02-01T03:29:55.012Z
 ---
 
 <!--- cSpell:disable --->
 * [Homer Simpsons Fire on console](#homer-simpsons-fire-on-console)
 * [Dumpster fire](#dumpster-fire)
 * [This is fine](#this-is-fine)
+* [Sarcastic Kid Laughing](#sarcastic-kid-laughing)
 * [Sarcastic Yay](#sarcastic-yay)
 * [Unimpressed](#unimpressed)
 * [Snappy Response](#snappy-response)
@@ -44,6 +45,11 @@ lastmod: 2025-01-30T08:04:31.566Z
 
 [![Picture](/assets/images/this-is-fine-fire.gif)](/assets/images/this-is-fine-fire.gif)\
 <https://tenor.com/en-AU/view/this-is-fine-fire-house-burning-okay-gif-5263684>
+
+## Sarcastic Kid Laughing
+
+[![Picture](/assets/images/sarcastic-laugh.gif)](/assets/images/sarcastic-laugh.gif)\
+<https://tenor.com/en-AU/view/so_witty-gif-19006692>
 
 ## Sarcastic Yay
 
