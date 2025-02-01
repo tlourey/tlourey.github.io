@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-02-01T01:52:40.193Z
+lastmod: 2025-02-01T03:44:57.173Z
 ---
 
  <!--- cSpell:disable --->
@@ -20,6 +20,7 @@ lastmod: 2025-02-01T01:52:40.193Z
 * [Software Tools](#software-tools)
 * [KQL Tools](#kql-tools)
 * [PowerShell Tools](#powershell-tools)
+* [Email Tools](#email-tools)
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
@@ -71,6 +72,15 @@ lastmod: 2025-02-01T01:52:40.193Z
 ## PowerShell Tools
 
 [PowerShell Module Browser](https://learn.microsoft.com/en-us/powershell/module/)
+
+## Email Tools
+
+<https://mha.azurewebsites.net/>\
+<https://mxtoolbox.com/>
+
+* <https://mxtoolbox.com/EmailHeaders.aspx>
+* <https://mxtoolbox.com/SuperTool.aspx>
+* <https://mxtoolbox.com/dmarc.aspx>
 
 ## Microsoft 365 Tools
 
