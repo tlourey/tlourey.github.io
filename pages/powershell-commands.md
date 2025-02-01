@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-02-01T01:39:41.098Z
+lastmod: 2025-02-01T01:42:39.021Z
 tags:
     - Commands
     - Language
@@ -109,7 +109,7 @@ enter-pssession servername -Credential (Get-Credential)
 
 NB: Sometimes this is easier in mail trace in EAC
 
-#### Setup 
+#### Setup
 
 Install
 
@@ -128,7 +128,9 @@ Update-Module ExchangeOnlineManagement
 If you get `Module 'ExchangeOnlineManagement' was not installed by using Install-Module, so it cannot be updated.`:
 
 * Module may have more installed via MSI
-* More Likely: It was installed for a different version of PowerShell - eg V7 and your using V5.1
+* More Likely: It was installed for a different version of PowerShell - eg V7 and your using V5.1 [^1]
+
+[^1]: <https://www.reddit.com/r/PowerShell/comments/yf07e3/comment/iu1bmh2/>
 
 Import and connect
 
