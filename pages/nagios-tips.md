@@ -1,13 +1,13 @@
 ---
 title: Nagios Tips
 description: Tips and References for Nagios with a little sprinkle of SNMP and OIDs
-published: true
+published: false
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-01-31T04:25:24.976Z
+lastmod: 2025-01-31T12:54:22.451Z
 tags:
     - Monitoring
     - Nagios

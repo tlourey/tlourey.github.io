@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-02-01T01:42:39.021Z
+lastmod: 2025-02-01T01:45:47.004Z
 tags:
     - Commands
     - Language
@@ -17,29 +17,85 @@ tags:
 
 
 <!--- cSpell:disable --->
+* [PowerShell Basics](#powershell-basics)
+  * [Common Pipeline Modifiers](#common-pipeline-modifiers)
+  * [Comparison Operators](#comparison-operators)
+    * [Dates](#dates)
+  * [Times and TimeZones](#times-and-timezones)
 * [Oneliners](#oneliners)
-  * [User Management](#user-management)
   * [Connecting to a remote server via powershell](#connecting-to-a-remote-server-via-powershell)
-  * [Exchange Powershell](#exchange-powershell)
-    * [Setup](#setup)
-    * [Removing OWA Signatures from Email](#removing-owa-signatures-from-email)
-    * [Mail tracing](#mail-tracing)
-    * [Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)](#temporarily-increase-mailbox-size-this-assumes-you-never-give-users-their-full-mailbox-in-the-first-place)
-    * [Archive Mailbox](#archive-mailbox)
-    * [Mailbox Access Checks](#mailbox-access-checks)
-    * [Mailbox Access](#mailbox-access)
-  * [Local System Management](#local-system-management)
-    * [Uptime, wake on lan, reboot](#uptime-wake-on-lan-reboot)
-    * [Remote Desktop](#remote-desktop)
+  * [Also See](#also-see)
+* [Active Directory](#active-directory)
+  * [User Management OneLiners](#user-management-oneliners)
+* [Exchange Powershell](#exchange-powershell)
+  * [Setup](#setup)
+  * [Removing OWA Signatures from Email](#removing-owa-signatures-from-email)
+  * [Mail tracing](#mail-tracing)
+  * [Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)](#temporarily-increase-mailbox-size-this-assumes-you-never-give-users-their-full-mailbox-in-the-first-place)
+  * [Archive Mailbox](#archive-mailbox)
+  * [Mailbox Access Checks](#mailbox-access-checks)
+  * [Mailbox Access](#mailbox-access)
+* [Local System Management](#local-system-management)
+  * [File and Space Management OneLiners](#file-and-space-management-oneliners)
+  * [Uptime, wake on lan, reboot](#uptime-wake-on-lan-reboot)
+  * [Remote Desktop](#remote-desktop)
 * [SharePoint PowerShell](#sharepoint-powershell)
 * [Commands often forgotten](#commands-often-forgotten)
 * [Additional Resources](#additional-resources)
 * [Other resources to add](#other-resources-to-add)
 <!--- cSpell:enable --->
 
+## PowerShell Basics
+
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/>\
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about>
+
+### Common Pipeline Modifiers
+
+`fl` - [`format-list`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-list)\
+`ft` - [`format-table`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table)\
+`sort` - [`sort-objects`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object)\
+`select` - [`select-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object)\
+`where` - [`where-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/where-object)
+
+### Comparison Operators
+
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators>
+
+`-contains`: Finds an item in a array/List, not great with wildcards\
+`-like`: finds things like. good for wildcards
+
+#### Dates
+
+`-gt`: TBC\
+`-lt`: TBC
+
+### Times and TimeZones
+
 ## Oneliners
 
-### User Management
+### Connecting to a remote server via powershell
+
+```powershell
+enter-pssession
+# connect as current user
+enter-pssession servername
+
+# prompt for a different user
+enter-pssession servername -Credential (Get-Credential)
+```
+
+### Also See
+
+[User Management OneLiners](#user-management-oneliners)\
+[File and Space Management OneLiners](#file-and-space-management-oneliners)
+
+## Active Directory
+
+[ActiveDirectory PowerShell Module](https://learn.microsoft.com/en-us/powershell/module/activedirectory/)\
+[about_ActiveDirectory](https://learn.microsoft.com/en-us/powershell/module/activedirectory/about/about_activedirectory)
+
+### User Management OneLiners
 
 move a users direct reports to another user
 
@@ -91,25 +147,14 @@ Disabled Managers Direct Reports
 (get-aduser -filter {(Enabled -eq $false) -and (directreports -like "*")} -Properties directreports)[2].directreports | set-aduser -manager (get-aduser -id newmanagerfirstname.lastname)
 ```
 
-### Connecting to a remote server via powershell
-
-```powershell
-enter-pssession
-# connect as current user
-enter-pssession servername
-
-# prompt for a different user
-enter-pssession servername -Credential (Get-Credential)
-```
-
-### Exchange Powershell
+## Exchange Powershell
 
 <https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps>\
 [Other Exchange PowerShells](https://learn.microsoft.com/en-us/powershell/module/exchange/?view=exchange-ps)
 
 NB: Sometimes this is easier in mail trace in EAC
 
-#### Setup
+### Setup
 
 Install
 
@@ -148,7 +193,7 @@ disconnect-exchangeonline
 
 <https://docs.microsoft.com/en-au/powershell/exchange/connect-to-exchange-online-powershell?view=exchange-ps>
 
-#### Removing OWA Signatures from Email
+### Removing OWA Signatures from Email
 
 ```powershell
 # check signature settings
@@ -161,7 +206,7 @@ Set-MailboxMessageConfiguration -id john.doe@domain.com -SignatureHtml $null -Si
 Set-MailboxMessageConfiguration -id john.doe@domain.com -AutoAddSignature $false -AutoAddSignatureOnMobile $false -AutoAddSignatureOnReply $false -UseDefaultSignatureOnMobile $false
 ```
 
-#### Mail tracing
+### Mail tracing
 
 ```powershell
 # get messages sent to john from joe, from exactly 1 day ago until this very second
@@ -177,7 +222,7 @@ Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).Ad
 Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).AddDays(-1)) -EndDate (get-date) -SenderAddress joe.blogs@domain.com | get-messagetracedetail | fl
 ```
 
-#### Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)
+### Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)
 
 ```powershell
 Set-Mailbox -id <<email@domain.com>> -ProhibitSendQuota <<Value>> -ProhibitSendReceiveQuota <<Value>>
@@ -192,7 +237,7 @@ Set-Mailbox -id <<email@domain.com>> -ProhibitSendReceiveQuota 40GB -ProhibitSen
 
 Make sure to lower mailbox sizes afterwards back to defaults
 
-#### Archive Mailbox
+### Archive Mailbox
 
 enable archive mailbox
 
@@ -218,7 +263,7 @@ $Mailboxes.Identity | Start-ManagedFolderAssistant
 
 Make sure to lower mailbox sizes afterwards back to defaults
 
-#### Mailbox Access Checks
+### Mailbox Access Checks
 
 Search what permissions are on a particular mailbox
 
@@ -237,7 +282,7 @@ Search if a particular personal has access to any mailboxes
 Get-Mailbox -ResultSize Unlimited | Get-MailboxFolderPermission -User john.doe@domain.com | ft User,Identity,AccessRights
 ```
 
-#### Mailbox Access
+### Mailbox Access
 
 From and More info: <https://learn.microsoft.com/en-us/exchange/recipients-in-exchange-online/manage-permissions-for-recipients>
 
@@ -285,9 +330,25 @@ Set-DistributionGroup -Identity printersupport@contoso.com -GrantSendOnBehalfTo 
 Set-DynamicDistributionGroup "All Employees" -GrantSendOnBehalfTo @{Remove="Administrator"}
 ```
 
-### Local System Management
+## Local System Management
 
-#### Uptime, wake on lan, reboot
+### File and Space Management OneLiners
+
+Find Files over than 30 days
+
+```powershell
+# List *.log files over 30 days
+Get-ChildItem -Filter *.log -Path c:\windows\system32\logfiles | where {$_.CreationTime -lt ((Get-Date).AddDays(-30))}
+```
+
+Find and delete files over than 30 days
+
+```powershell
+# Delete *.log files over 30 days
+Get-ChildItem -Filter *.log -Path c:\windows\system32\logfiles | where {$_.CreationTime -lt ((Get-Date).AddDays(-30))} | Remove-Item -Confirm
+```
+
+### Uptime, wake on lan, reboot
 
 Get Uptime from CIM via Powershell
 
@@ -317,7 +378,7 @@ $mac = '01-23-45-67-89-AB';
 }
 ```
 
-#### Remote Desktop
+### Remote Desktop
 
 Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https://learn.microsoft.com/en-au/powershell/module/remotedesktop/)
 
