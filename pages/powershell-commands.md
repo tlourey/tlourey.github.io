@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-02-01T01:45:47.004Z
+lastmod: 2025-02-01T02:27:34.594Z
 tags:
     - Commands
     - Language
@@ -18,10 +18,15 @@ tags:
 
 <!--- cSpell:disable --->
 * [PowerShell Basics](#powershell-basics)
+  * [Commands and Help](#commands-and-help)
   * [Common Pipeline Modifiers](#common-pipeline-modifiers)
   * [Comparison Operators](#comparison-operators)
     * [Dates](#dates)
-  * [Times and TimeZones](#times-and-timezones)
+    * [Times and TimeZones](#times-and-timezones)
+  * [-WhatIf](#-whatif)
+  * [Force](#force)
+* [Module Management](#module-management)
+  * [PowerShellGet and PSResourceGet](#powershellget-and-psresourceget)
 * [Oneliners](#oneliners)
   * [Connecting to a remote server via powershell](#connecting-to-a-remote-server-via-powershell)
   * [Also See](#also-see)
@@ -50,6 +55,17 @@ tags:
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/>\
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about>
 
+### Commands and Help
+
+`get-command`:\
+`get-commmand -module <Modulemame>`:\
+`get-help commandname`:\
+`get-help commandname -full`:\
+`get-help commandname -detailed`:\
+`get-help commandname -examples`:\
+`get-help commandname -online`:\
+`update-help`
+
 ### Common Pipeline Modifiers
 
 `fl` - [`format-list`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-list)\
@@ -70,7 +86,46 @@ tags:
 `-gt`: TBC\
 `-lt`: TBC
 
-### Times and TimeZones
+#### Times and TimeZones
+
+TBC
+
+### -WhatIf
+
+TBC
+
+### Force
+
+TBC
+
+## Module Management
+
+* [ ] Fill in the Module Management commands
+
+`Get-Module`: TBC\
+`Get-Module -ListAvailable`: TBC\
+`Find-Module`
+`Install-Module`: TBC\
+`Install-Module -scope CurrentUser`: TBC\
+`Install-Module -scope AllUsers`: TBC\
+`Update-Module`: TBC\
+`Uninstall-Module`: TBC - [REF](https://learn.microsoft.com/en-us/powershell/module/powershellget/uninstall-module)
+
+* Consider Admin Rights
+* Consider Module Locations
+* Consider Multiple Versions
+
+`Import-Module`: TBC\
+`Remove-Module`: TBC\
+
+`-AllowClobber`: TBC\
+`-AllowPreRelease`: TBC
+
+Also check [Modules in PowerShell Tips](powershell-tips.md#modules) for info on module paths
+
+### PowerShellGet and PSResourceGet
+
+TBC
 
 ## Oneliners
 
@@ -150,7 +205,8 @@ Disabled Managers Direct Reports
 ## Exchange Powershell
 
 <https://learn.microsoft.com/en-us/powershell/exchange/exchange-online-powershell?view=exchange-ps>\
-[Other Exchange PowerShells](https://learn.microsoft.com/en-us/powershell/module/exchange/?view=exchange-ps)
+[Other Exchange PowerShells](https://learn.microsoft.com/en-us/powershell/module/exchange/?view=exchange-ps)\
+<https://aka.ms/exov3-module>
 
 NB: Sometimes this is easier in mail trace in EAC
 
