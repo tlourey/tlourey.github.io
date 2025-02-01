@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-29T03:41:54.175Z
+lastmod: 2025-02-01T05:40:46.120Z
 tags:
     - Language
     - References
@@ -56,6 +56,30 @@ Less useful but still good:
 ## Important things to remember
 
 ### Tables
+
+```markdown
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+```
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+```markdown
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| `git status`   | *git status*     | \|    |
+| git diff     | git diff       | **git diff**      |
+```
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| `git status`   | *git status*     | \|    |
+| git diff     | git diff       | **git diff**      |
 
 <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables>
 
