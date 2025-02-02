@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-01-31T12:54:22.451Z
+lastmod: 2025-02-02T07:01:30.003Z
 tags:
     - Monitoring
     - Nagios
@@ -18,7 +18,9 @@ fmContentType: pages
 
 <!--- cSpell:disable --->
 * [Nagios Verify](#nagios-verify)
+* [Searching](#searching)
 * [HostGroup Excludes](#hostgroup-excludes)
+* [Emails with missing hostname](#emails-with-missing-hostname)
 * [Nagios References](#nagios-references)
   * [Thresholds](#thresholds)
 * [SNMP](#snmp)
@@ -42,6 +44,15 @@ In my case I use `sudo /usr/sbin/nagios4 -v ~/my-nagios-repo/nagios-test.cfg`:
 
 More info: [Verifying your Nagios Core configuration](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/verifyconfig.html)
 
+## Searching
+
+When searching in vscode, try these:
+
+`name\s*generic`
+
+* This will search for name then ignore any whitespace characters (tabs or spaces) then the next bit of text.
+* eg: use\s*generic-switch
+
 ## HostGroup Excludes
 
 When applying checks to hostgroups, you can exclude a host.
@@ -54,6 +65,39 @@ define service {
   host_name             !not-this-host
   service_description   SSH
   check_command
+}
+```
+
+## Emails with missing hostname
+
+If you have an email alert come through, normally for a service but the hostname seems to be missing, check if the alias definition for the host is blank.
+
+Example:
+
+```email
+From: nagios@domain
+Sent: Sunday, 12 January 2025 7:23 PM
+To: nagiosalerts
+Subject: ** PROBLEM Service Alert: /Battery Runtime Remaming is WARNING **
+
+***** Nagios *****
+
+Notification Type: PROBLEM
+
+Service: Battery Runtime Remaming
+Host:
+Address: 192.168.0.10
+State: WARNING
+
+Date/Time: Sun Jan 12 19:22:52 AEDT 2025
+```
+
+```nagios
+define host {
+    use                         generic-host
+    host_name                   CF-HQUPS3
+    alias
+    Address                     192.168.0.10
 }
 ```
 
