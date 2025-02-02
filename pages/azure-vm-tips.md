@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-15T14:05:00
-lastmod: 2025-01-25T04:30:51.045Z
+lastmod: 2025-02-02T13:54:12.363Z
 tags:
     - Azure
     - References
@@ -24,6 +24,9 @@ tags:
 <!--- cSpell:enable --->
 
 ## DNS Settings
+
+> [!TIP]
+> TIP
 
 Set DNS Servers via Azure Nic interface
 Refresh on system via `sudo netplan try`
