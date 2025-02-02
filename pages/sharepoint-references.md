@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-31T13:52:02.231Z
+lastmod: 2025-02-02T02:21:36.786Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -150,10 +150,11 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 ### SharePoint Online PowerShell
 
 <https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps>\
-<https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps>
+<https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps>\
+<https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/?view=sharepoint-ps>
 
 > [!TIP] Gallery Module Easier
-> Rather than download and install the MSI its easier to install and manage teh SharePoint Online PowerShell Module via PowerShell Gallery
+> Rather than download and install the MSI its easier to install and manage the SharePoint Online PowerShell Module via PowerShell Gallery
 
 #### Install SharePoint Online PowerShell
 
