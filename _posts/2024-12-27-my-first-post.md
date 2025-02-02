@@ -1,7 +1,7 @@
 ---
 title: My first Post
 date: 2024-12-27 12:00:00 +1100
-lastmod: 2025-02-02T12:58:40.458Z
+lastmod: 2025-02-02T13:04:59.520Z
 categories:
     - CATEGORY-1
     - CATEGORY-2
@@ -19,4 +19,4 @@ modifieddate: 2025-01-27T06:00:14.730Z
 
 ## My first post
 
-First!
+First
