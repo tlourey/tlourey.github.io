@@ -291,5 +291,24 @@
         }
       }
     }
-  ]
+  ],
+  "frontMatter.content.snippets": {
+    "Toolname": {
+      "description": "For headings about tools",
+      "body": [
+        "## [[toolname]]",
+        "",
+        "### [[toolname]] Commands",
+        "",
+        "### [[toolname]] Notes",
+        "",
+        "### [[toolname]] Tips",
+        "",
+        "### [[toolname]] References",
+        "",
+        ""
+      ],
+      "fields": []
+    }
+  }
 }
