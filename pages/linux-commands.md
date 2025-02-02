@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-01-31T07:41:46.455Z
+lastmod: 2025-02-02T13:44:14.006Z
 tags:
     - Commands
     - Linux
@@ -151,7 +151,8 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 > Display account status information. The status information consists of 7 fields. The first field is the user's login name. The second field indicates if the user account has a locked password (L), has no password (NP), or has a usable password (P). The third field gives the date of the last password change. The next four fields are the minimum age, maximum age, warning period, and inactivity period for the password. These ages are expressed in days.
 
 `sudo passwd -l USERNAME`: Lock out a users password. Doesn't disable account, just doesn't allow password.
-> [!CAUTION] Use `passwd -l` with caution
+> [!CAUTION]
+> **Use `passwd -l` with caution**\
 > This is not the best way to not get prompted for sudo. Because you can't run sudo with a locked password unless you have a no password entry. Use with caution if you don't have a way to roll back!
 
 `sudo passwd -u USERNAME`: unlock password.\
@@ -245,7 +246,8 @@ Time and date stuff if chrony or NTPD isn't installed. Taken from <https://docum
 `timedatectl status`: check the timedatectl status\
 `timedatectl list-timezones`: show the timezones\
 `sudo timedatectl set-timezone Australia/Sydney`: Sets the timezone to Australia/Sydney\
-> [!TIP] Consider Distribution Rec Method
+> [!TIP]
+> **Consider Distribution Rec Method**\
 > Eg: Ubuntu usually recommends `sudo dpkg-reconfigure tzdata`
 
 `sudo timedatectl set-local-rtc 0`: Maintains the RTC in UTC. set to 1 to maintain in local timezone.
@@ -259,7 +261,8 @@ DNS Status: `resolvectl status`
 
 Refresh DNS Settings in an Azure VM: `sudo netplan try`
 
-> [!TIP] /etc/resolv.conf
+> [!TIP]
+> **/etc/resolv.conf**\
 > Starting is Ubuntu 20, resolv.conf file is a symbolic link of /run/systemd/resolve/stub-resolv.conf file. This makes sure that the updated DNS servers are reflected in /run/systemd/resolve/resolv.conf file. For more information, see [systemd-resolved](https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:%7E:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder)
 
 DNS Config: To force systemd-resolved to use the name servers you want to: `sudo resolvectl dns eth0 8.8.4.4 8.8.8.8`
@@ -302,7 +305,8 @@ Netplan:
 
 `ethtool`: Is a program that displays and changes Ethernet card settings such as auto-negotiation, port speed, duplex mode, and Wake-on-LAN. <https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/#ethernet-interface-settings>\
 `netstat`:
-> [!NOTE] netstat
+> [!NOTE]
+> **netstat**\
 > netstat is a cross platform command existing in Unix, Linux, Mac and Windows but nearly all of them have different options/switches/parameters
 
 `sudo netstat -tulpn` or `sudo netstat -lnptv`: show listening.\

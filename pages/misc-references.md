@@ -11,7 +11,7 @@ tags:
     - References
 fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-01-28T02:27:10.181Z
+lastmod: 2025-02-02T13:36:05.155Z
 ---
 
 
@@ -40,7 +40,7 @@ lastmod: 2025-01-28T02:27:10.181Z
 * [x] add in debian manuals
 --->
 
-> [!NOTE] Bold
+> [!NOTE]
 > Things in **bold** I use **a lot**
 
 ## Standards

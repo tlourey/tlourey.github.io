@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-02-02T12:48:55.426Z
+lastmod: 2025-02-02T13:45:47.045Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -172,12 +172,14 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 <https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps>\
 <https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/?view=sharepoint-ps>
 
-> [!TIP] Gallery Module Easier
+> [!TIP]
+> **Gallery Module Easier**\
 > Rather than download and install the MSI its easier to install and manage the SharePoint Online PowerShell Module via PowerShell Gallery
 
 #### Install SharePoint Online PowerShell
 
-> [!TIP] PS5 not PS7
+> [!TIP]
+> **PS5 not PS7**\
 > this module only seems to work in PS5/Windows PowerShell.
 
 ```powershell
@@ -216,7 +218,8 @@ Import-Module PnP.PowerShell
 Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [yourtennantnamehere].onmicrosoft.com -Interactive
 ```
 
-> [!TIP] Whats in a name
+> [!TIP]
+> **Whats in a name**\
 > You can change the name away from PnP Rocks to something else if you want just note it and the application id down.
 
 #### Connecting

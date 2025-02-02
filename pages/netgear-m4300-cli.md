@@ -2,22 +2,23 @@
 title: Netgear Fully Managed Switch M4300 CLI Reference
 description: Commands to remember for Netgear Switches
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 published: true
 draft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-01-19T14:19:38.782Z
+lastmod: 2025-02-02T13:45:14.032Z
 tags:
-  - Commands
-  - Networks
-  - References
+    - Commands
+    - Networks
+    - References
 ---
 
 
 
-> [!CAUTION] M4300 Only
+> [!CAUTION]
+> **M4300 Only**\
 > These commands are based on M4300's only. Do not use on older models. Use the commands below with caution. Make sure you backup beforehand. Some commands can cause Netgear's to lockup if done incorrectly.
 
 Contents:
@@ -89,7 +90,8 @@ en
 copy nvram:startup-config nvram:backup-config
 ```
 
-> [!CAUTION] M4300 Only
+> [!CAUTION]
+> **M4300 Only**\
 > Do not use the following commands on any other Netgear switches except **M4300** or switch will reboot
 
 Backup and export:
@@ -114,7 +116,8 @@ copy system:running-config nvram:startup-config
 copy nvram:startup-config tftp://192.168.1.1/DEVICENAME-TODAYSDATE.txt
 ```
 
-> [!TIP] TFTP Path
+> [!TIP]
+> **TFTP Path**\
 > If using XXX TFTP Package on Ubuntu the default path for TFTP files is: `/var/lib/tftpboot`
 
 Restart:
@@ -139,7 +142,8 @@ en
 show logging buffered | include SEARCHTEXT\
 ```
 
-> [!NOTE] Include Command
+> [!NOTE]
+> **Include Command**\
 > `include` command on Netgear's is **case sensitive**.
 
 Viewing configs:
@@ -160,13 +164,14 @@ interface                Display the running config for specified interface on
                          the switch.
 ```
 
-> [!TIP] show running-config all
+> [!TIP]
+> **show running-config all**\
 > This command can show you the full config including defaults that are not specified in your config file, which can be **very very useful**
 
 ## Firmware Upgrades and Image Management
 
-> [!NOTE] Upgrade Prep:
->
+> [!NOTE]
+> **Upgrade Prep**\
 > 1. You will need to substitute text between << and >> per the instructions inside. eg:
 >       1. `<<DEVICENAME>>` is the name of the switch
 >       1. `<<YYYYMMDD>>` is for the date with 4 digit year, eg: 20231201 or 20240119
@@ -236,7 +241,8 @@ copy nvram:tech-support scp://user@management-server.local/home/user/<<DEVICENAM
 
 ```
 
-> [!TIP] Update Records
+> [!TIP]
+> **Update Records**\
 > Unless automated, make sure you update the firmware version in your CMDB/DCIM/IPAM/Spreadsheet/Ticket/Asset Management/etc
 
 ## Port Commands
@@ -409,7 +415,8 @@ en
 show interfaces status all | include KEYWORDINDESCRITION
 ```
 
-> [!NOTE] Include Command
+> [!NOTE]
+> **Include Command**\
 > `include` command on Netgear's is **case sensitive**.
 
 ### MAC Address browsing / searching
@@ -429,7 +436,8 @@ mac address searching:
 show mac-addr-table | include AA:BB:CC:00:11:22
 ```
 
-> [!NOTE] Include Command
+> [!NOTE]
+> **Include Command**\
 > `include` command on Netgear's is **case sensitive**.
 
 ### Bulk Changes

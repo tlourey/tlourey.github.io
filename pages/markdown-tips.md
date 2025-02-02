@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-02-01T05:40:46.120Z
+lastmod: 2025-02-02T13:44:32.331Z
 tags:
     - Language
     - References
@@ -204,7 +204,8 @@ You can add an image or a code block, too.
 
 </details>
 
-> [!NOTE] Theme
+> [!NOTE]
+> **Theme**\
 > the above may not render correctly depending on the Jekyll theme in use but if you view it via github itself, it does seem to render correctly.
 
 <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections>
