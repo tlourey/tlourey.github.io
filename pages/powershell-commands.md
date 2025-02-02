@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-02-02T09:09:53.263Z
+lastmod: 2025-02-02T09:10:54.832Z
 tags:
     - Commands
     - Language
@@ -450,9 +450,9 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 
 ## Commands often forgotten
 
-`Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f\
+`Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content#-wait>\
 `Select-String`: kind of like grep (need to check if it does work like grep)\
-`Out-GridView`: really cool wait view tables/rows\
+`Out-GridView`: really cool wait view tables/rows. -passthru is also really awesome. You should read the help page in full esp the Notes stuff: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview>
 
 ## Additional Resources
 
