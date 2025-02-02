@@ -292,23 +292,116 @@
       }
     }
   ],
+  "frontMatter.snippets.wrapper.enabled": false,
   "frontMatter.content.snippets": {
-    "Toolname": {
-      "description": "For headings about tools",
+    "VSCodeExtension": {
+      "description": "For headings about VSCode Extensions",
       "body": [
-        "## [[toolname]]",
         "",
-        "### [[toolname]] Commands",
+        "## [[ExtensionName]]",
         "",
-        "### [[toolname]] Notes",
+        "<https://marketplace.visualstudio.com/items?itemName=[[VSCodeSlug]]>\\",
+        "<vscode:extension/[[VSCodeSlug]]>",
         "",
-        "### [[toolname]] Tips",
+        "### [[ExtensionName]] Commands",
         "",
-        "### [[toolname]] References",
+        "### [[ExtensionName]] Notes",
         "",
+        "### [[ExtensionName]] Tips",
+        "",
+        "### [[ExtensionName]] References",
         ""
       ],
-      "fields": []
+      "fields": [
+        {
+          "name": "ExtensionName",
+          "title": "Extension Name",
+          "type": "string"
+        },
+        {
+          "name": "VSCodeSlug",
+          "title": "VSCode Slug",
+          "type": "string"
+        },
+        {
+          "name": "VSCodeSlug",
+          "title": "VSCode Slug",
+          "type": "string"
+        },
+        {
+          "name": "ExtensionName",
+          "title": "Extension Name",
+          "type": "string"
+        },
+        {
+          "name": "ExtensionName",
+          "title": "Extension Name",
+          "type": "string"
+        },
+        {
+          "name": "ExtensionName",
+          "title": "Extension Name",
+          "type": "string"
+        },
+        {
+          "name": "ExtensionName",
+          "title": "Extension Name",
+          "type": "string"
+        }
+      ]
+    },
+    "ToolName": {
+      "description": "For headings about tools",
+      "body": [
+        "",
+        "## [[ToolName]]",
+        "",
+        "### [[ToolName]] Commands",
+        "",
+        "### [[ToolName]] Notes",
+        "",
+        "### [[ToolName]] Tips",
+        "",
+        "### [[ToolName]] References",
+        ""
+      ],
+      "fields": [
+        {
+          "name": "ToolName",
+          "title": "ToolName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "ToolName",
+          "title": "ToolName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "ToolName",
+          "title": "ToolName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "ToolName",
+          "title": "ToolName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "ToolName",
+          "title": "ToolName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        }
+      ]
     }
   }
 }
