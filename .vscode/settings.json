@@ -4,6 +4,7 @@
 	],
 	"cSpell.words": [
 		"bootvar",
+		"cmder",
 		"Contenttype",
 		"cslint",
 		"CSOM",
@@ -50,7 +51,8 @@
 		"Fastly",
 		"hostgroups",
 		"SNMP",
-		"OneLiners"
+		"OneLiners",
+		"Contoso"
 	],    
 	"markdownlint.config": {
         "MD033": {
