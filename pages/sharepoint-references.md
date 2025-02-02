@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-02-02T08:30:10.862Z
+lastmod: 2025-02-02T12:48:55.426Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -80,7 +80,7 @@ date: 2025-01-28T05:47:28.059Z
 * News posts vs Pages
 * Roll up
 * Hierarchy
-* Copy vs Move
+* Copy to vs Move To issues when enforcing uniqueness
 
 [^1]: <https://sharepointmaven.com/how-to-do-column-validation-in-sharepoint/>
 
