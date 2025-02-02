@@ -28,3 +28,7 @@ fmContentType: index
 ```text
 https://github.com/tlourey/tlourey.github.io/blob/main/pages/filename.md = https://tlourey.github.io/pages/filename.html
 ```
+
+## Idea
+
+Introduce bool front matter feild - isquote. If yes, make project tagline italics
