@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-02-01T06:23:48.146Z
+lastmod: 2025-02-02T10:36:10.884Z
 tags:
     - Microsoft 365
     - Teams
@@ -32,7 +32,7 @@ Rough example of method 1:
 <html>
  <body>
   <script async defer src="https://teams.microsoft.com/share/launcher.js"></script>
-  
+
   <div
    class="teams-share-button"
    data-href="https://tlourey.github.io/"
@@ -61,6 +61,18 @@ Examples:
 <https://teams.microsoft.com/share?href=https://example.com&referrer=example2.com>
 
 <https://teams.microsoft.com/share?href=https%3A%2F%2Ftlourey.github.io%2F&msgText=Look%20MA%2C%20No%20pants!&referrer=127.0.0.1>
+
+Using the above we should be able to create a bookmarklet
+
+```javascript
+javascript:(function()%7Bvar url %3D document.URL %3B%0A%0Awindow.location.href %3D "https%3A%2F%2Fteams.microsoft.com%2Fshare%3Fhref%3D"%0A                        %2B url %3B%7D)()%3B
+```
+
+[Share to Teams](javascript:(function()%7Bvar url %3D document.URL %3B%0A%0Awindow.location.href %3D "https%3A%2F%2Fteams.microsoft.com%2Fshare%3Fhref%3D"%0A                        %2B url %3B%7D)()%3B)\
+
+If that doesn't work maybe this will
+
+<a href="javascript:(function()%7Bvar url %3D document.URL %3B%0A%0Awindow.location.href %3D "https%3A%2F%2Fteams.microsoft.com%2Fshare%3Fhref%3D"%0A                        %2B url %3B%7D)()%3B">Share to Teams</a>
 
 ## Network and Location Data
 
