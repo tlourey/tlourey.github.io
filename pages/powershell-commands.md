@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-02-01T04:25:48.555Z
+lastmod: 2025-02-02T09:09:53.263Z
 tags:
     - Commands
     - Language
@@ -450,9 +450,9 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 
 ## Commands often forgotten
 
-`Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f
-`Select-String`: kind of like grep (need to check if it does work like grep)
-`Out-GridView`: really cool wait view tables/rows
+`Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f\
+`Select-String`: kind of like grep (need to check if it does work like grep)\
+`Out-GridView`: really cool wait view tables/rows\
 
 ## Additional Resources
 
