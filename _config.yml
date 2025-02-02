@@ -5,6 +5,7 @@ description: "\"And now, I'm going down to Emmett's Fix-It Shop. [cocks gun] To 
 page_excerpts: true
 lang: en-AU
 google_analytics: G-29R261QM9P
+repository: tlourey/tlourey.github.io
 plugins:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
