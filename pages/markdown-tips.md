@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-02-03T07:35:35.587Z
+lastmod: 2025-02-03T07:47:25.942Z
 tags:
     - Language
     - References
@@ -40,7 +40,7 @@ tags:
 ## References
 
 Super useful:
-
+<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github> - i can't remember if the quick start was useful or not\
 <https://docs.github.com/en/get-started/writing-on-github>\
 **<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>**\
 <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text>
@@ -123,6 +123,14 @@ But I think both are standards compliant.
 [Jekyll Plugins that are whitelisted at github pages](https://pages.github.com/versions/)\
 [GitHub Pages plugins that are enabled by default and cannot be disabled](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#:~:text=GitHub%20Pages%20uses%20plugins%20that%20are%20enabled%20by%20default%20and%20cannot%20be%20disabled)\
 [Github pages configuration that cannot be changed](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#:~:text=Some%20configuration%20settings%20cannot%20be%20changed%20for%20GitHub%20Pages%20sites)
+
+Also something to consider: Changing your Markdown processor <https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/setting-a-markdown-processor-for-your-github-pages-site-using-jekyll>
+
+For _config.yml
+
+```YAML
+markdown: kramdown
+```
 
 ### Wikis
 
