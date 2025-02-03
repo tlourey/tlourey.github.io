@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-02-02T13:44:32.331Z
+lastmod: 2025-02-03T07:35:35.587Z
 tags:
     - Language
     - References
@@ -41,15 +41,15 @@ tags:
 
 Super useful:
 
-<https://github.github.com/gfm/>\
 <https://docs.github.com/en/get-started/writing-on-github>\
 **<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>**\
 <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text>
 
 Less useful but still good:
 
+<https://github.github.com/gfm/> - Github Flavored Markdown. An older version of hte CommonMark Spec + Github Spec Extensions\
 <https://spec.commonmark.org/current/> the standard\
-<https://markdown.github.io/> - documents various implementations\
+<https://markdown.github.io/> - documents various implementations but I think this is actually dead\
 <https://daringfireball.net/projects/markdown/>\
 <https://en.wikipedia.org/wiki/Markdown>
 
@@ -117,7 +117,7 @@ But I think both are standards compliant.
 
 ### Github Pages
 
-[Github Pages Doco](https://docs.github.com/en/pages)
+[Github Pages Documentation](https://docs.github.com/en/pages)
 
 [Github Pages supported themes](https://pages.github.com/themes/)\
 [Jekyll Plugins that are whitelisted at github pages](https://pages.github.com/versions/)\
