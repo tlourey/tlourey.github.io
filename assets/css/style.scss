@@ -5,4 +5,43 @@
 	font-style: italic;
 }
 
+.btn {
+	margin-bottom: 0.5rem;
+	+ .btn {
+		margin-left: 0.5rem;
+	}
+
+	@include large {
+		padding: 0.5rem 0.75rem;
+	}
+}
+
+.page-header {
+	@include large {
+		padding: 3rem 6rem;
+	}
+
+	@include medium {
+		padding: 1rem 4rem;
+	}
+	
+	@include small {
+		padding: 0.5rem 1rem;
+	}
+}
+
+.main-content {
+	@include large {
+		padding: 1rem 6rem;
+	}
+
+	@include medium {
+		padding: 1rem 4rem;
+	}
+	
+	@include small {
+		padding: 1rem 1rem;
+	}
+}
+
 @import "{{ site.theme }}";
