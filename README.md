@@ -28,3 +28,13 @@ fmContentType: index
 ```text
 https://github.com/tlourey/tlourey.github.io/blob/main/pages/filename.md = https://tlourey.github.io/pages/filename.html
 ```
+
+## Misc Testing
+
+> [!NOTE] Title
+> My note with a title
+
+Here is some other Text
+
+> [!NOTE]
+> Here is my note with no title
