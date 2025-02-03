@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-lastmod: 2025-02-03T12:22:38.811Z
+lastmod: 2025-02-03T12:25:03.167Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -240,7 +240,7 @@ queue.saveonshutdown="on"
 target="127.0.0.1" Port="28330" Protocol="tcp")
 ```
 
-> [!NOTE]
+> [!IMPORTANT]
 > **Azure Monitoring Agent before 1.28**\
 > Before 1.28 you will end up with 2 files in `/etc/rsyslog.d/`. This is because AMA uses a Unix Socket to get the syslog's, where after 1.28 its back to like it was in the Log Analytics Agent (something running on a port)\
 > Before 1.28: File Missing\
