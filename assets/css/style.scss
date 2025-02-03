@@ -1,8 +1,8 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
 .project-tagline {
 	font-style: italic;
 }
+
+@import "{{ site.theme }}";
