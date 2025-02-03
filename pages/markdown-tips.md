@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-02-03T07:47:25.942Z
+lastmod: 2025-02-03T07:59:37.281Z
 tags:
     - Language
     - References
@@ -37,21 +37,25 @@ tags:
 
 (TOC might be slightly weird)
 
+> [!TIP]
+> **Bold** means highly used
+
 ## References
 
-Super useful:
-<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github> - i can't remember if the quick start was useful or not\
+Super useful:\
+**<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text>**\
+<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>
 <https://docs.github.com/en/get-started/writing-on-github>\
-**<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>**\
-<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text>
+
+<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github> - i can't remember if the quick start was useful or not\
 
 Less useful but still good:
 
 <https://github.github.com/gfm/> - Github Flavored Markdown. An older version of hte CommonMark Spec + Github Spec Extensions\
 <https://spec.commonmark.org/current/> the standard\
-<https://markdown.github.io/> - documents various implementations but I think this is actually dead\
 <https://daringfireball.net/projects/markdown/>\
-<https://en.wikipedia.org/wiki/Markdown>
+<https://en.wikipedia.org/wiki/Markdown>\
+<https://markdown.github.io/> - is supposed to documents various implementations but I think this is actually dead
 
 ## Important things to remember
 
@@ -113,7 +117,13 @@ But an alert with a title does not get rended in github correctly.
 > [!TIP] Alert with title
 > An alert with a title doesn't get rended correctly.
 
-But I think both are standards compliant.
+~~But I think both are standards compliant.~~ 3/02/25: Its not. Read below.
+
+3/0/25: Not a bug, just not a part of the 2 main specs (CommonMark and GFM) in use but does seem to have a lot of support and works in some extensions and some systems.
+
+<https://github.com/orgs/community/discussions/16925> - where alerts first got introduced\
+<https://github.com/orgs/community/discussions/48797>\
+<https://github.com/orgs/community/discussions/103219>
 
 ### Github Pages
 
