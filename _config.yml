@@ -6,7 +6,8 @@ page_excerpts: true
 lang: en-AU
 google_analytics: G-29R261QM9P
 repository: tlourey/tlourey.github.io
-markdown: GFM
+# markdown: GFM
+markdown: kramdown
 plugins:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
@@ -15,6 +16,9 @@ plugins:
 whitelist:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-remote-theme
 relative_links:
   # enabled: true # already enabled by default
   collections: true
