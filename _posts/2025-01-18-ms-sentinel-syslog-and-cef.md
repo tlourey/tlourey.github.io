@@ -1,7 +1,7 @@
 ---
 title: MS Sentinel, Syslog, CEF and Azure Monitor Agent
 date: 2025-01-18T05:46:46.188Z
-lastmod: 2025-01-30T08:09:57.206Z
+lastmod: 2025-02-03T12:08:28.824Z
 categories:
     - Tech
 description: 4 clowns, 2 of which are brothers, looking to stich you up with rubbish messages, complexity, just to be tools.
@@ -39,7 +39,8 @@ When reviewing a setup to get CEF messages into Sentinel, I found there was far 
 
 Thats where this came from. Hopefully it will help someone.
 
-> [!NOTE] "SYSLOG, I say no, no, no!"
+> [!NOTE]
+> **"SYSLOG, I say no, no, no!"**
 > In **this** scenario i'm **not** sending SYSLOG messages into Sentinel. That can be done but wasn't the point of this post. However some of the steps and/or thinking may still be useful.
 
 <!--- cSpell:disable --->
@@ -95,14 +96,16 @@ Until I get the above rendering on github pages you can view the above [here](ht
 
 There were dreams of having this one syslog server being used for everything by including some other rsyslog configs for log management but that was scaled back to focus on noise reduction and until we can refine the rsyslog configs.
 
-> [!NOTE] Data Collection Endpoint
+> [!NOTE]
+> **Data Collection Endpoint**
 > I mention Data Collection Endpoint's (DCE) above. Mostly to be aware of the component. You can create Data Collections Endpoints but you don't need to unless you're using Azure Private Links.
 
 Now we have syslog messages going into our Log Analytics Workspace and there is a lot, and I think a fair bit of it is noise.
 
 ## Syslog Noise
 
-> [!NOTE] No SYSLOG for Sentinel
+> [!NOTE]
+> **No SYSLOG for Sentinel**
 > In **this** scenario i'm **not** sending SYSLOG messages into Sentinel. That can be done but wasn't the point of this post.
 
 Here is how I started to determine the level of noise. `DeviceVendor` is part of the [CEF standard](../pages/misc-references.md#cef). So try this KQL Query in the Log Analytics Workspace and adjust your time period/limit per your logging load (Start small then increase either the limit or the time range to get an idea):
@@ -237,7 +240,8 @@ queue.saveonshutdown="on"
 target="127.0.0.1" Port="28330" Protocol="tcp")
 ```
 
-> [!NOTE] Azure Monitoring Agent before 1.28
+> [!NOTE]
+> **Azure Monitoring Agent before 1.28**
 > Before 1.28 you will end up with 2 files in `/etc/rsyslog.d/`. This is because AMA uses a Unix Socket to get the syslog's, where after 1.28 its back to like it was in the Log Analytics Agent (something running on a port)\
 > Before 1.28: File Missing\
 > After 1.28:
@@ -292,7 +296,8 @@ So we ***haven't worked out*** the syslog part (yet) but we're making progress. 
 
 Some of the problem may be the choice of USER/LOG_USER facility level (where I had the choice) and a lack of common usages or lack of understanding the intent of specific facility levels. I get the *feeling* USER/LOG_USER is a dumping ground. My goal of just ignoring the facility level and only forwarding CEF messages should have taken care of this but the Rsyslog config didn't work.
 
-> [!NOTE] "No SYSLOG, No Cry"
+> [!NOTE]
+> **"No SYSLOG, No Cry"**
 > Another reminder that in **this** scenario i'm **not** sending SYSLOG messages into Sentinel. That can be done but wasn't the point of this post. However some of the steps and/or thinking may still be useful.
 
 Here are the takeaways:
