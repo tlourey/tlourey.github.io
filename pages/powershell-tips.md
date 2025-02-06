@@ -1,13 +1,13 @@
 ---
 title: PowerShell Tips
-description: ""
+description: Tips and Tricks with PowerShell
 published: false
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2025-02-02T09:11:25.303Z
+lastmod: 2025-02-06T12:59:09.725Z
 tags:
     - Tips
     - PowerShell
