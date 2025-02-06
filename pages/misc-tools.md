@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-02-01T03:44:57.173Z
+lastmod: 2025-02-02T10:35:49.856Z
 ---
 
  <!--- cSpell:disable --->
@@ -24,6 +24,7 @@ lastmod: 2025-02-01T03:44:57.173Z
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
+* [Misc Web Tools](#misc-web-tools)
 * [Security Tools](#security-tools)
 <!--- cSpell:enable --->
 
@@ -109,6 +110,11 @@ lastmod: 2025-02-01T03:44:57.173Z
   * <https://chromewebstore.google.com/detail/microsoft-learn-boost/mkacacgjjgafnjekdcoodibajidagopd>
 * Context Menu Search:
   * <https://chromewebstore.google.com/detail/context-menu-search/ocpcmghnefmdhljkoiapafejjohldoga>
+
+## Misc Web Tools
+
+<https://caiorss.github.io/bookmarklet-maker/>\
+[Network Calculators](https://subnetmask.info) - now seems to redirect to <https://web.archive.org/web/20240429134052if_/https://subnetmask.info/>
 
 ## Security Tools
 

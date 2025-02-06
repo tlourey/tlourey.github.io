@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-01-31T13:52:02.231Z
+lastmod: 2025-02-02T13:45:47.045Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -19,6 +19,7 @@ date: 2025-01-28T05:47:28.059Z
 * [Good points to remember](#good-points-to-remember)
 * [Concepts](#concepts)
   * [SharePoint (Online) Hierarchy](#sharepoint-online-hierarchy)
+  * [Copy vs Move](#copy-vs-move)
 * [Validation Tips](#validation-tips)
 * [SharePoint Formulas](#sharepoint-formulas)
   * [Common Formulas](#common-formulas)
@@ -79,6 +80,7 @@ date: 2025-01-28T05:47:28.059Z
 * News posts vs Pages
 * Roll up
 * Hierarchy
+* Copy to vs Move To issues when enforcing uniqueness
 
 [^1]: <https://sharepointmaven.com/how-to-do-column-validation-in-sharepoint/>
 
@@ -87,6 +89,23 @@ date: 2025-01-28T05:47:28.059Z
 [![Picture](https://learn.microsoft.com/en-us/sharepoint/sharepointonline/media/b7cf87f3-578c-4605-bb31-9d2ecf88877e.png)](https://learn.microsoft.com/en-us/sharepoint/sharepointonline/media/b7cf87f3-578c-4605-bb31-9d2ecf88877e.png)
 
 The above diagram is from a MS Learn page about permissions but excluding Hubs, it still shows the correct order. Note that a Document Library is almost the same as List library except its around files and not list items.
+
+### Copy vs Move
+
+<https://support.microsoft.com/en-au/office/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc>
+
+* When you use **Move to**, the **history** of the document **is copied** to the new destination.
+* When you use **Copy to** with documents that have version **history**, **only the latest version is copied**.
+* To copy earlier versions, you need to restore and copy each one. For more info about versioning, see [Enable and configure versioning for a list or library](https://support.microsoft.com/en-au/office/enable-and-configure-versioning-for-a-list-or-library-1555d642-23ee-446a-990a-bcab618c7a37)
+
+If you have a column that has 'enforce unique values' enabled in your destination library:
+
+* When you try to **Move \[to\]** a document from one Document Library to a destination library that has enforce unique values enabled, the move will fail
+* When you **Copy \[to\]** a document from one Document Library to a destination library that has enforce unique values enabled, the file will copy but the meta data won't.
+
+  > The Move to operation will fail if you attempt to move the document across libraries and the destination has enforced unique values.[^2]
+
+[^2]: <https://support.microsoft.com/en-au/office/move-or-copy-files-in-sharepoint-00e2f483-4df3-46be-a861-1f5f0c1a87bc#:~:text=The%C2%A0Move%20to%20operation%20will%20fail%20if%20you%20attempt%20to%20move%20the%20document%20across%20libraries%20and%20the%20destination%20has%20enforced%20unique%20values>.
 
 ## Validation Tips
 
@@ -150,14 +169,17 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 ### SharePoint Online PowerShell
 
 <https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/introduction-sharepoint-online-management-shell?view=sharepoint-ps>\
-<https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps>
+<https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps>\
+<https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/?view=sharepoint-ps>
 
-> [!TIP] Gallery Module Easier
-> Rather than download and install the MSI its easier to install and manage teh SharePoint Online PowerShell Module via PowerShell Gallery
+> [!TIP]
+> **Gallery Module Easier**\
+> Rather than download and install the MSI its easier to install and manage the SharePoint Online PowerShell Module via PowerShell Gallery
 
 #### Install SharePoint Online PowerShell
 
-> [!TIP] PS5 not PS7
+> [!TIP]
+> **PS5 not PS7**\
 > this module only seems to work in PS5/Windows PowerShell.
 
 ```powershell
@@ -196,7 +218,8 @@ Import-Module PnP.PowerShell
 Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [yourtennantnamehere].onmicrosoft.com -Interactive
 ```
 
-> [!TIP] Whats in a name
+> [!TIP]
+> **Whats in a name**\
 > You can change the name away from PnP Rocks to something else if you want just note it and the application id down.
 
 #### Connecting

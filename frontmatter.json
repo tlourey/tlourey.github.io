@@ -291,5 +291,117 @@
         }
       }
     }
-  ]
+  ],
+  "frontMatter.snippets.wrapper.enabled": false,
+  "frontMatter.content.snippets": {
+    "VSCodeExtension": {
+      "description": "For headings about VSCode Extensions",
+      "body": [
+        "",
+        "## [[ExtensionName]]",
+        "",
+        "<https://marketplace.visualstudio.com/items?itemName=[[VSCodeSlug]]>\\",
+        "<vscode:extension/[[VSCodeSlug]]>",
+        "",
+        "### [[ExtensionName]] Commands",
+        "",
+        "### [[ExtensionName]] Notes",
+        "",
+        "### [[ExtensionName]] Tips",
+        "",
+        "### [[ExtensionName]] References",
+        ""
+      ],
+      "fields": [
+        {
+          "name": "ExtensionName",
+          "title": "Extension Name",
+          "type": "string"
+        },
+        {
+          "name": "VSCodeSlug",
+          "title": "VSCode Slug",
+          "type": "string"
+        },
+        {
+          "name": "VSCodeSlug",
+          "title": "VSCode Slug",
+          "type": "string"
+        },
+        {
+          "name": "ExtensionName",
+          "title": "Extension Name",
+          "type": "string"
+        },
+        {
+          "name": "ExtensionName",
+          "title": "Extension Name",
+          "type": "string"
+        },
+        {
+          "name": "ExtensionName",
+          "title": "Extension Name",
+          "type": "string"
+        },
+        {
+          "name": "ExtensionName",
+          "title": "Extension Name",
+          "type": "string"
+        }
+      ]
+    },
+    "ToolName": {
+      "description": "For headings about tools",
+      "body": [
+        "",
+        "## [[ToolName]]",
+        "",
+        "### [[ToolName]] Commands",
+        "",
+        "### [[ToolName]] Notes",
+        "",
+        "### [[ToolName]] Tips",
+        "",
+        "### [[ToolName]] References",
+        ""
+      ],
+      "fields": [
+        {
+          "name": "ToolName",
+          "title": "ToolName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "ToolName",
+          "title": "ToolName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "ToolName",
+          "title": "ToolName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "ToolName",
+          "title": "ToolName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "ToolName",
+          "title": "ToolName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        }
+      ]
+    }
+  }
 }

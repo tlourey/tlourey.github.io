@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-01-29T03:41:54.175Z
+lastmod: 2025-02-03T07:59:37.281Z
 tags:
     - Language
     - References
@@ -37,25 +37,53 @@ tags:
 
 (TOC might be slightly weird)
 
+> [!TIP]
+> **Bold** means highly used
+
 ## References
 
-Super useful:
-
-<https://github.github.com/gfm/>\
+Super useful:\
+**<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text>**\
+<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>
 <https://docs.github.com/en/get-started/writing-on-github>\
-**<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax>**\
-<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#styling-text>
+
+<https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github> - i can't remember if the quick start was useful or not\
 
 Less useful but still good:
 
+<https://github.github.com/gfm/> - Github Flavored Markdown. An older version of hte CommonMark Spec + Github Spec Extensions\
 <https://spec.commonmark.org/current/> the standard\
-<https://markdown.github.io/> - documents various implementations\
 <https://daringfireball.net/projects/markdown/>\
-<https://en.wikipedia.org/wiki/Markdown>
+<https://en.wikipedia.org/wiki/Markdown>\
+<https://markdown.github.io/> - is supposed to documents various implementations but I think this is actually dead
 
 ## Important things to remember
 
 ### Tables
+
+```markdown
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+```
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+```markdown
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| `git status`   | *git status*     | \|    |
+| git diff     | git diff       | **git diff**      |
+```
+
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| `git status`   | *git status*     | \|    |
+| git diff     | git diff       | **git diff**      |
 
 <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-tables>
 
@@ -89,16 +117,30 @@ But an alert with a title does not get rended in github correctly.
 > [!TIP] Alert with title
 > An alert with a title doesn't get rended correctly.
 
-But I think both are standards compliant.
+~~But I think both are standards compliant.~~ 3/02/25: Its not. Read below.
+
+3/0/25: Not a bug, just not a part of the 2 main specs (CommonMark and GFM) in use but does seem to have a lot of support and works in some extensions and some systems.
+
+<https://github.com/orgs/community/discussions/16925> - where alerts first got introduced\
+<https://github.com/orgs/community/discussions/48797>\
+<https://github.com/orgs/community/discussions/103219>
 
 ### Github Pages
 
-[Github Pages Doco](https://docs.github.com/en/pages)
+[Github Pages Documentation](https://docs.github.com/en/pages)
 
 [Github Pages supported themes](https://pages.github.com/themes/)\
 [Jekyll Plugins that are whitelisted at github pages](https://pages.github.com/versions/)\
 [GitHub Pages plugins that are enabled by default and cannot be disabled](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#:~:text=GitHub%20Pages%20uses%20plugins%20that%20are%20enabled%20by%20default%20and%20cannot%20be%20disabled)\
 [Github pages configuration that cannot be changed](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#:~:text=Some%20configuration%20settings%20cannot%20be%20changed%20for%20GitHub%20Pages%20sites)
+
+Also something to consider: Changing your Markdown processor <https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/setting-a-markdown-processor-for-your-github-pages-site-using-jekyll>
+
+For _config.yml
+
+```YAML
+markdown: kramdown
+```
 
 ### Wikis
 
@@ -180,7 +222,8 @@ You can add an image or a code block, too.
 
 </details>
 
-> [!NOTE] Theme
+> [!NOTE]
+> **Theme**\
 > the above may not render correctly depending on the Jekyll theme in use but if you view it via github itself, it does seem to render correctly.
 
 <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections>

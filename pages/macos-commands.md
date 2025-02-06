@@ -3,16 +3,16 @@ title: Mac OS Commands
 description: Commands to remember for Mac OS
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 draft: true
 date: 2025-01-11T11:50:00
-lastmod: 2025-01-19T14:19:38.756Z
+lastmod: 2025-02-02T13:44:24.265Z
 tags:
-  - Commands
-  - MacOS
-  - References
+    - Commands
+    - MacOS
+    - References
 ---
 
 
@@ -28,7 +28,8 @@ tags:
 
 `ifconfig`
 `netstat -nr -f inet`: show the routing table (ipv4)
-> [!NOTE] netstat
+> [!NOTE]
+> **netstat**\
 > netstat is a cross platform command existing in Unix, Linux, Mac and Windows but nearly all of them have different options/switches/parameters
 `scutil --dns | grep 'nameserver'`: Show the name servers
 

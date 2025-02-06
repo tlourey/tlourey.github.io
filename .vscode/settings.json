@@ -4,6 +4,7 @@
 	],
 	"cSpell.words": [
 		"bootvar",
+		"cmder",
 		"Contenttype",
 		"cslint",
 		"CSOM",
@@ -50,7 +51,8 @@
 		"Fastly",
 		"hostgroups",
 		"SNMP",
-		"OneLiners"
+		"OneLiners",
+		"Contoso"
 	],    
 	"markdownlint.config": {
         "MD033": {
@@ -74,6 +76,7 @@
 	"frontMatter.git.enabled": true,
 	"frontMatter.global.timezone": "AEST",
 	"frontMatter.site.baseURL": "https://tlourey.github.io",
-	"frontMatter.templates.enabled": true
+	"frontMatter.templates.enabled": true,
+	"frontMatter.panel.openOnSupportedFile": true
 
 }

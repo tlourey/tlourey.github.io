@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-15T14:05:00
-lastmod: 2025-01-25T04:30:51.045Z
+lastmod: 2025-02-02T14:14:53.344Z
 tags:
     - Azure
     - References
