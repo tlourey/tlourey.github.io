@@ -76,6 +76,7 @@
 	"frontMatter.git.enabled": true,
 	"frontMatter.global.timezone": "AEST",
 	"frontMatter.site.baseURL": "https://tlourey.github.io",
-	"frontMatter.templates.enabled": true
+	"frontMatter.templates.enabled": true,
+	"frontMatter.panel.openOnSupportedFile": true
 
 }

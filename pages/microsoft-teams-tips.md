@@ -3,15 +3,15 @@ title: Microsoft Teams Tips
 description: ""
 published: false
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
 lastmod: 2025-02-02T10:36:10.884Z
 tags:
-    - Microsoft 365
-    - Teams
-    - Tips
+  - Microsoft365
+  - Teams
+  - Tips
 draft: true
 fmContentType: pages
 preview: ""
