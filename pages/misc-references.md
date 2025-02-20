@@ -11,13 +11,13 @@ tags:
     - References
 fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-02-02T13:36:05.155Z
+lastmod: 2025-02-20T07:45:58.088Z
 ---
 
 
 <!--- cSpell:disable --->
 * [Standards](#standards)
-  * [Networking](#networking)
+  * [Networks](#networks)
   * [CIDR](#cidr)
   * [CEF](#cef)
   * [SMTP](#smtp)
@@ -31,6 +31,7 @@ lastmod: 2025-02-02T13:36:05.155Z
 * [Microsoft Platforms](#microsoft-platforms)
 * [Azure](#azure)
   * [Conventions](#conventions)
+* [Networking](#networking)
 * [People](#people)
 * [Misc Misc Misc](#misc-misc-misc)
 <!--- cSpell:enable --->
@@ -45,7 +46,7 @@ lastmod: 2025-02-02T13:36:05.155Z
 
 ## Standards
 
-### Networking
+### Networks
 
 <https://www.iana.org/>\
 <https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.txt> - Port Listing in Txt\
@@ -81,6 +82,9 @@ APC Support: <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeE
 <https://markdown.github.io/> - documents various implementations\
 <https://github.github.com/gfm/> - the GitHub Flavored Markdown Spec\
 <https://en.wikipedia.org/wiki/Markdown>
+
+<https://www.markdownguide.org/getting-started/>\
+<https://dillinger.io/>
 
 Refer to [Markdown Tips](./markdown-tips.html)
 
@@ -118,6 +122,10 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 <https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-naming>\
 <https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ready/azure-best-practices/resource-abbreviations>\
 <https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/resource-name-rules>
+
+## Networking
+
+<https://en.wikipedia.org/wiki/Captive_portal>
 
 ## People
 
