@@ -3,15 +3,15 @@ title: Microsoft Sentinel Tips
 description: ""
 published: false
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 draft: true
 tags:
-    - Azure
-    - Azure Log Analytics
-    - Azure Sentinel
-    - Security
+  - Azure
+  - Azure_Log_Analytics
+  - Azure_Sentinel
+  - Security
 fmContentType: pages
 lastmod: 2025-01-31T07:13:39.921Z
 date: 2025-01-27T06:07:50.792Z

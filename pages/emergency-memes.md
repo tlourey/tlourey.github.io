@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-02-01T03:29:55.012Z
+lastmod: 2025-02-20T09:08:15.183Z
 ---
 
 <!--- cSpell:disable --->
@@ -28,6 +28,18 @@ lastmod: 2025-02-01T03:29:55.012Z
 * [Technically correct](#technically-correct)
 * [Technically](#technically)
 * [I award you no points](#i-award-you-no-points)
+* [Squinty Chicken](#squinty-chicken)
+* [Imma have to call you back](#imma-have-to-call-you-back)
+* [Pathetic](#pathetic)
+* [What the hell was that](#what-the-hell-was-that)
+* [Your joke is bad and you should feel bad](#your-joke-is-bad-and-you-should-feel-bad)
+* [daaaaaamn](#daaaaaamn)
+* [That ain't funny](#that-aint-funny)
+* [JFC](#jfc)
+* [This won't end well](#this-wont-end-well)
+* [Homer backing away](#homer-backing-away)
+* [If he dies, he dies](#if-he-dies-he-dies)
+* [Computer says no](#computer-says-no)
 <!--- cSpell:enable --->
 
 ## Homer Simpsons Fire on console
@@ -90,7 +102,69 @@ Drawing:\
 
 ## I award you no points
 
-[![Picture](/assets/images/billymadison-godhelp.gif)](/assets/images/billymadison-godhelp.gif.gif)\
+[![Picture](/assets/images/billymadison-godhelp.gif)](/assets/images/billymadison-godhelp.gif)\
 <https://tenor.com/en-AU/view/billymadison-godhelp-idiot-stupid-rambling-gif-10636357>
 
 <https://www.youtube.com/watch?v=5hfYJsQAhl0>
+
+## Squinty Chicken
+
+[![Picture](/assets/images/squinty-chicken.gif)](/assets/images/squinty-chicken.gif)\
+<https://giphy.com/gifs/chicken-suspicious-despicable-me-WiVvi66FqT2bpym6R8>
+
+## Imma have to call you back
+
+[![Picture](/assets/images/ima-have-to-call-you-back.jpg)](/assets/images/ima-have-to-call-you-back.jpg)
+
+The PG Version:
+
+[![Picture](/assets/images/let-me-call-you-back.webp)](/assets/images/let-me-call-you-back.webp)
+
+## Pathetic
+
+[![Picture](/assets/images/pathetic.jpg)](/assets/images/pathetic.jpg)\
+<https://knowyourmeme.com/memes/principal-skinners-pathetic>
+
+## What the hell was that
+
+[![Picture](/assets/images/krusty-the-clown-what-the-hell.gif)](/assets/images/krusty-the-clown-what-the-hell.gif)\
+<https://tenor.com/en-AU/view/krusty-the-clown-what-the-hell-what-was-that-what-the-hell-was-that-gif-5588192374297367658>
+
+## Your joke is bad and you should feel bad
+
+[![Picture](/assets/images/your-joke-is-bad-and-you-should-feel-bad.jpg)](/assets/images/your-joke-is-bad-and-you-should-feel-bad.jpg)
+
+## daaaaaamn
+
+[![Picture](/assets/images/daaaaaamn.gif)](/assets/images/daaaaaamn.gif)\
+<https://tenor.com/en-AU/view/damn-shookt-shocked-gif-5580082>
+
+## That ain't funny
+
+[![Picture](/assets/images/that-shit-aint-funny-not-funny.gif)](/assets/images/that-shit-aint-funny-not-funny.gif)\
+<https://tenor.com/en-AU/view/that-shit-aint-funny-not-funny-eddie-murphy-delirious-gif-17638196>
+
+## JFC
+
+[![Picture](/assets/images/jfc.jpeg)](/assets/images/jfc.jpeg)\
+<https://imgur.com/gallery/jesus-fuckin-christ-C3tPB>
+
+## This won't end well
+
+[![Picture](/assets/images/this-will-not-end-well.jpg)](/assets/images/this-will-not-end-well.jpg)\
+<https://www.flickr.com/photos/195096636@N06/52262564989/>
+
+## Homer backing away
+
+[![Picture](/assets/images/homer-backing-away.gif)](/assets/images/homer-backing-away.gif)\
+<https://knowyourmeme.com/memes/homer-simpson-backs-into-bushes>
+
+## If he dies, he dies
+
+[![Picture](/assets/images/if-he-dies-he-dies.gif)](/assets/images/if-he-dies-he-dies.gif)\
+<https://tenor.com/en-AU/view/rocky-iv-dolph-lundgren-captain-ivan-drago-if-he-dies-he-dies-dies-gif-4956349>
+
+## Computer says no
+
+[![Picture](/assets/images/computer-says-no.gif)](/assets/images/computer-says-no.gif)\
+<https://www.bigfooty.com/forum/media/computer-says-no-carol-beer-gif.146670/>

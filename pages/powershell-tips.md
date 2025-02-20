@@ -1,13 +1,13 @@
 ---
 title: PowerShell Tips
-description: ""
-published: false
+description: Tips and Tricks with PowerShell
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2025-02-02T09:11:25.303Z
+lastmod: 2025-02-06T13:04:22.164Z
 tags:
     - Tips
     - PowerShell
@@ -25,6 +25,7 @@ preview: ""
 * [Authentication Methods](#authentication-methods)
   * [Using Single Browser with Multple profiles](#using-single-browser-with-multple-profiles)
 * [Tools](#tools)
+* [Traps](#traps)
 <!--- cSpell:enable --->
 
 ## Installing Modules
@@ -70,3 +71,7 @@ Also check [PowerShell Commands often forgotten](powershell-commands.md#commands
 <https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandagon yet but its not shit.
 
 Also check [Misc Tools](misc-tools.md)
+
+## Traps
+
+<https://github.com/nightroman/PowerShellTraps>
