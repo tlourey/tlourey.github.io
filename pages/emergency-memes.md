@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-02-20T08:32:21.257Z
+lastmod: 2025-02-20T09:08:15.183Z
 ---
 
 <!--- cSpell:disable --->
@@ -37,6 +37,9 @@ lastmod: 2025-02-20T08:32:21.257Z
 * [That ain't funny](#that-aint-funny)
 * [JFC](#jfc)
 * [This won't end well](#this-wont-end-well)
+* [Homer backing away](#homer-backing-away)
+* [If he dies, he dies](#if-he-dies-he-dies)
+* [Computer says no](#computer-says-no)
 <!--- cSpell:enable --->
 
 ## Homer Simpsons Fire on console
@@ -150,3 +153,18 @@ The PG Version:
 
 [![Picture](/assets/images/this-will-not-end-well.jpg)](/assets/images/this-will-not-end-well.jpg)\
 <https://www.flickr.com/photos/195096636@N06/52262564989/>
+
+## Homer backing away
+
+[![Picture](/assets/images/homer-backing-away.gif)](/assets/images/homer-backing-away.gif)\
+<https://knowyourmeme.com/memes/homer-simpson-backs-into-bushes>
+
+## If he dies, he dies
+
+[![Picture](/assets/images/if-he-dies-he-dies.gif)](/assets/images/if-he-dies-he-dies.gif)\
+<https://tenor.com/en-AU/view/rocky-iv-dolph-lundgren-captain-ivan-drago-if-he-dies-he-dies-dies-gif-4956349>
+
+## Computer says no
+
+[![Picture](/assets/images/computer-says-no.gif)](/assets/images/computer-says-no.gif)\
+<https://www.bigfooty.com/forum/media/computer-says-no-carol-beer-gif.146670/>
