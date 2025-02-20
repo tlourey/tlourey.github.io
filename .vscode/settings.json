@@ -8,6 +8,7 @@
 		"Contenttype",
 		"cslint",
 		"CSOM",
+		"DMARC",
 		"dpkg",
 		"giscus",
 		"lastmod",
@@ -17,6 +18,7 @@
 		"Omnissa",
 		"SIEM",
 		"TAXII",
+		"Telco",
 		"tftpboot",
 		"Ubiquiti"
 	],
@@ -44,15 +46,16 @@
 	"markdown.extension.preview.autoShowPreviewToSide": false,
 	"cSpell.enabled": true,
 	"cSpell.ignoreWords": [
+		"BLUF",
+		"Contoso",
+		"Fastly",
+		"OneLiners",
+		"SNMP",
 		"azuremonitoragent",
 		"frontmatter",
-		"lastmod",
-		"omfwd",
-		"Fastly",
 		"hostgroups",
-		"SNMP",
-		"OneLiners",
-		"Contoso"
+		"lastmod",
+		"omfwd"
 	],    
 	"markdownlint.config": {
         "MD033": {
