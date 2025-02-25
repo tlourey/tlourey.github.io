@@ -32,6 +32,6 @@ type: index
 {% assign doclist = site.categories %}
 <ul>
 {% for item in doclist %}
-  <li>{{ item }}</li>
+  <li>{{ item.name }}</li>
 {% endfor %}
 </ul>
