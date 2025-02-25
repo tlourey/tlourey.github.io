@@ -29,6 +29,9 @@ type: index
 
 ## Categories
 
+{% assign doclist = site.categories %}
 <ul>
-  <li>{{ site.categories }}</li>
+{% for item in doclist %}
+  <li>{{ item.categories }}</li>
+{% endfor %}
 </ul>
