@@ -36,4 +36,10 @@ type: index
 
 **OR**
 
+{% for page in site.pages %}
+{{ page.categories | uniq }}
+{% endfor %}
+
+**OR**
+
 {{ site.pages[page.categories] | uniq }}
