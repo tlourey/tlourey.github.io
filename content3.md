@@ -30,6 +30,6 @@ type: index
 ## Categories
 
 {% for page in site.pages %}
-{{ assign usedcategories = page.categories }}
+{% assign usedcategories = page.categories %}
 {{ usedcategories | uniq | join: ", " }}
 {% endfor %}
