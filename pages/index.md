@@ -4,7 +4,7 @@ description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-lastmod: 2025-02-25T10:54:33.702Z
+lastmod: 2025-02-25T11:26:01.007Z
 ---
 
 [home](/)
@@ -27,3 +27,7 @@ lastmod: 2025-02-25T10:54:33.702Z
 </ul>
 <!-- markdownlint-enable MD033 --->
 <!--- cSpell:disable --->
+
+<!--
+For some reason this page renders incorrectly when markdown processor is set to GFM.
+-->
