@@ -32,6 +32,8 @@ type: index
 {% for page in site.pages %}
 {% assign usedcategories = page.categories | join: ", " %}
 {{ usedcategories | uniq }}
-**OR**
-{{ site.pages[page.categories] | uniq }}
 {% endfor %}
+
+**OR**
+
+{{ site.pages[page.categories] | uniq }}
