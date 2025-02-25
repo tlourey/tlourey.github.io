@@ -29,9 +29,8 @@ type: index
 
 ## Categories
 
-{% assign doclist = site.categories %}
-<ul>
-{% for item in doclist %}
-  <li>{{ item.categories }}</li>
+{% for page in site.pages %}
+{% if page.categories contains 'tech' %}
+<p>{{ page.title }}</p>
+{% endif %}
 {% endfor %}
-</ul>
