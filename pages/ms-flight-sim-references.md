@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-25T00:57:23.440Z
-lastmod: 2025-02-25T02:20:33.067Z
+lastmod: 2025-02-25T11:01:29.713Z
 tags:
     - MSFS
     - References
@@ -26,6 +26,7 @@ preview: ""
 ## Planing tools
 
 <https://planner.flightsimulator.com/> - Requires Xbox Account that has a Microsoft Flight Simulator *2024* Career enabled\
+<https://dispatch.simbrief.com/home> - needs a free account\
 <https://www.simbrief.com/home/>
 
 ## Keyboard Shortcut References
