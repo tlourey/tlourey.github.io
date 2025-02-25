@@ -31,5 +31,5 @@ type: index
 
 {% for page in site.pages %}
 {% assign usedcategories = page.categories %}
-{{ usedcategories | uniq | join: ", " }}
+{{ usedcategories | uniq }}
 {% endfor %}
