@@ -30,7 +30,7 @@ type: index
 ## Categories
 
 {% for page in site.pages %}
-{% if page.categories contains 'tech' %}
+{% if page.categories contains 'Tech' %}
 <p>{{ page.title }}</p>
 {% endif %}
 {% endfor %}
