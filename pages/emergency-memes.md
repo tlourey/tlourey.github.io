@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-02-20T09:08:15.183Z
+lastmod: 2025-02-26T12:23:08.999Z
 ---
 
 <!--- cSpell:disable --->
@@ -36,10 +36,14 @@ lastmod: 2025-02-20T09:08:15.183Z
 * [daaaaaamn](#daaaaaamn)
 * [That ain't funny](#that-aint-funny)
 * [JFC](#jfc)
-* [This won't end well](#this-wont-end-well)
+* [This will not end well](#this-will-not-end-well)
 * [Homer backing away](#homer-backing-away)
 * [If he dies, he dies](#if-he-dies-he-dies)
 * [Computer says no](#computer-says-no)
+* [Naked Gun Facepalm](#naked-gun-facepalm)
+* [Old man yells at cloud](#old-man-yells-at-cloud)
+* [Man stirring pot](#man-stirring-pot)
+* [Spared no expense](#spared-no-expense)
 <!--- cSpell:enable --->
 
 ## Homer Simpsons Fire on console
@@ -149,7 +153,7 @@ The PG Version:
 [![Picture](/assets/images/jfc.jpeg)](/assets/images/jfc.jpeg)\
 <https://imgur.com/gallery/jesus-fuckin-christ-C3tPB>
 
-## This won't end well
+## This will not end well
 
 [![Picture](/assets/images/this-will-not-end-well.jpg)](/assets/images/this-will-not-end-well.jpg)\
 <https://www.flickr.com/photos/195096636@N06/52262564989/>
@@ -168,3 +172,21 @@ The PG Version:
 
 [![Picture](/assets/images/computer-says-no.gif)](/assets/images/computer-says-no.gif)\
 <https://www.bigfooty.com/forum/media/computer-says-no-carol-beer-gif.146670/>
+
+## Naked Gun Facepalm
+
+[![Picture](/assets/images/naked-gun-face-palm.gif)](/assets/images/naked-gun-face-palm.gif)\
+<https://tenor.com/en-AU/view/naked-gun-face-palm-funny-omg-oh-no-gif-5707607>
+
+## Old man yells at cloud
+
+[![Picture](/assets/images/old-man-yells-at-cloud.webp)](/assets/images/old-man-yells-at-cloud.webp)\
+<https://memepediadankmemes.fandom.com/wiki/Old_Man_Yells_at_Cloud>
+
+## Man stirring pot
+
+[![Picture](/assets/images/man-stirring-pot.gif)](/assets/images/man-stirring-pot.gif)
+
+## Spared no expense
+
+[![Picture](/assets/images/spared-no-expense.jpg)](/assets/images/spared-no-expense.jpg)
