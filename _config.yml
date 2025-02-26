@@ -9,6 +9,10 @@ repository: tlourey/tlourey.github.io
 url: https://tlourey.github.io
 # markdown: GFM
 markdown: kramdown
+# collections:
+  # - category
+    # output: true
+  # - categories
 plugins:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
