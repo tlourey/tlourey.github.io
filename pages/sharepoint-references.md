@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-02-02T13:45:47.045Z
+lastmod: 2025-02-26T12:45:48.770Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -19,6 +19,7 @@ date: 2025-01-28T05:47:28.059Z
 * [Good points to remember](#good-points-to-remember)
 * [Concepts](#concepts)
   * [SharePoint (Online) Hierarchy](#sharepoint-online-hierarchy)
+  * [SharePoint content types hierarchy](#sharepoint-content-types-hierarchy)
   * [Copy vs Move](#copy-vs-move)
 * [Validation Tips](#validation-tips)
 * [SharePoint Formulas](#sharepoint-formulas)
@@ -89,6 +90,10 @@ date: 2025-01-28T05:47:28.059Z
 [![Picture](https://learn.microsoft.com/en-us/sharepoint/sharepointonline/media/b7cf87f3-578c-4605-bb31-9d2ecf88877e.png)](https://learn.microsoft.com/en-us/sharepoint/sharepointonline/media/b7cf87f3-578c-4605-bb31-9d2ecf88877e.png)
 
 The above diagram is from a MS Learn page about permissions but excluding Hubs, it still shows the correct order. Note that a Document Library is almost the same as List library except its around files and not list items.
+
+### SharePoint content types hierarchy
+
+[SharePoint content types hierarchy (PDF)](/assets/pdfs/sharepoint-default-content-types-hierarchy.pdf)
 
 ### Copy vs Move
 
