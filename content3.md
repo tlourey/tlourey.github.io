@@ -59,7 +59,7 @@ type: index
 
 {% capture my_variable %}
 {% for item in all_categories %}
-{{ item }}
+{{ item }},
 {% endfor %}
 {% endcapture %}
 
