@@ -81,7 +81,7 @@ Dedup:
 <ul>
 {% for cat in mycats %}
   {% for item in doclist %}
-    {% if item.categories == cat %}
+    {% if item.categories == "Tech" %}
       <li>
         <a href="{{ item.url }}">{{ item.title }}</a> : {{ item.description }}
       </li>
