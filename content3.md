@@ -47,4 +47,8 @@ type: index
 
 **OR**
 
-{{ site.categories }}
+{{ site.category }}
+
+**OR**
+
+{{ site.collections }}
