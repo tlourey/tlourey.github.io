@@ -76,13 +76,13 @@ Dedup:
 ## New index
 
 <!-- {% assign mycats = "Tech, NotTech, Gaming, Funnies" | split: ", " %} -->
-{% assign doclist = site.pages | sort: 'title' %}
+{% assign pages = site.pages | sort: 'title' %}
 
 <ul>
-  {% for item in doclist %}
-    {% if item.categories == "Tech" %}
+  {% for page in pages %}
+    {% if page.type == "pages" %}
       <li>
-        <a href="{{ item.url }}">{{ item.title }}</a> : {{ item.description }}
+        <a href="{{ page.url }}">{{ page.title }}</a> : {{ page.description }}
       </li>
     {% endif %}
   {% endfor %}
