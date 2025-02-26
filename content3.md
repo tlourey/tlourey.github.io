@@ -44,7 +44,7 @@ type: index
 
 Dedup:
 
-{{ my_variable2 | uniq }}
+{{ my_variable2 | uniq | join: ", " }}
 
 **OR**
 
