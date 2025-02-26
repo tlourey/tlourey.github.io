@@ -7,9 +7,10 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-25T04:41:08.679Z
-lastmod: 2025-02-25T04:48:22.184Z
+lastmod: 2025-02-26T13:00:42.661Z
 tags:
     - MacOS
+    - Tips
 draft: true
 fmContentType: pages
 preview: ""
