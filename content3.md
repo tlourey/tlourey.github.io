@@ -55,7 +55,7 @@ type: index
 
 **OR**
 
-{% assign all_categories = site.pages | map: "category" %}
+{% assign all_categories = site.pages | map: "categories" %}
 
 {% for item in all_categories %}
 {{ item }}
