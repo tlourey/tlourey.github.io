@@ -80,7 +80,7 @@ Dedup:
 
 <ul>
   {% for page in pages %}
-    {% if page.type == "pages" %}
+    {% if page.categories == "Tech" %}
       <li>
         <a href="{{ page.url }}">{{ page.title }}</a> : {{ page.description }}
       </li>
