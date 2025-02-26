@@ -52,3 +52,11 @@ type: index
 **OR**
 
 {{ site.collections }}
+
+**OR**
+
+{% assign all_categories = site.pages | map: "category" %}
+
+{% for item in all_categories %}
+- {{ item }}
+{% endfor %}
