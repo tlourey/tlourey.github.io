@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-25T04:41:08.679Z
-lastmod: 2025-02-26T13:00:42.661Z
+lastmod: 2025-02-26T23:37:07.412Z
 tags:
     - MacOS
     - Tips
@@ -17,8 +17,17 @@ preview: ""
 ---
 
 <!--- cSpell:disable --->
+* [Mouse Scrolling](#mouse-scrolling)
 * [Time doesn't update](#time-doesnt-update)
 <!--- cSpell:enable --->
+
+## Mouse Scrolling
+
+If external (non-apple) mouse scrolling is inverse on a mac laptop, change:
+
+Preferences --> Mouse --> Natural scrolling: False
+
+But this changes it for both track pad and mouse. To me it should be on for a track pad but not a mouse. If your external mouse has software, install it so that you can separately set scrolling direction/mode.
 
 ## Time doesn't update
 
