@@ -82,7 +82,7 @@ Dedup:
   {% for page in pages %}
     {% if page.categories == "Tech" %}
       <li>
-        <a href="{{ page.url }}">{{ page.title }}</a> : {{ page.description }}
+        <a href="{{ page.url }}">{{ page.title }}</a> : {{ page.description }} ({{ page.categories }})
       </li>
     {% endif %}
   {% endfor %}
