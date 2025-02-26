@@ -36,9 +36,15 @@ type: index
 
 **OR**
 
+{% capture my_variable2 %}
 {% for page in site.pages %}
-{{ page.categories | uniq }}
+{{ page.categories}},
 {% endfor %}
+{% endcapture %}
+
+Dedup:
+
+{{ my_variable2 | uniq }}
 
 **OR**
 
