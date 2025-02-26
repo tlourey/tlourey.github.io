@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-02-26T12:23:08.999Z
+lastmod: 2025-02-26T12:31:11.458Z
 ---
 
 <!--- cSpell:disable --->
@@ -44,6 +44,7 @@ lastmod: 2025-02-26T12:23:08.999Z
 * [Old man yells at cloud](#old-man-yells-at-cloud)
 * [Man stirring pot](#man-stirring-pot)
 * [Spared no expense](#spared-no-expense)
+* [My last fuck on fire](#my-last-fuck-on-fire)
 <!--- cSpell:enable --->
 
 ## Homer Simpsons Fire on console
@@ -190,3 +191,7 @@ The PG Version:
 ## Spared no expense
 
 [![Picture](/assets/images/spared-no-expense.jpg)](/assets/images/spared-no-expense.jpg)
+
+## My last fuck on fire
+
+[![Picture](/assets/images/my-last-f-onfire.jpg)](/assets/images/my-last-f-onfire.jpg)
