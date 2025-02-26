@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-02-26T12:45:48.770Z
+lastmod: 2025-02-26T23:59:29.921Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -93,7 +93,8 @@ The above diagram is from a MS Learn page about permissions but excluding Hubs, 
 
 ### SharePoint content types hierarchy
 
-[SharePoint content types hierarchy (PDF)](/assets/pdfs/sharepoint-default-content-types-hierarchy.pdf)
+[SharePoint content types hierarchy (PDF)](/assets/pdfs/sharepoint-default-content-types-hierarchy.pdf)\
+Originally from <https://download.microsoft.com/download/0/b/b/0bb74648-212a-4c5d-b8a4-1b991dcf0a7d/sharepoint-default-content-types-hierarchy.pdf>
 
 ### Copy vs Move
 
