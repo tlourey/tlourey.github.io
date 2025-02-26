@@ -30,9 +30,9 @@ type: index
 ## Categories
 
 {% for page in site.pages %}
-{% assign usedcategories = page.categories | split: ", " %}
+{% assign usedcategories = page.categories %}
 {% endfor %}
-{{ usedcategories}}
+{{ usedcategories }}
 
 **OR**
 
@@ -44,3 +44,7 @@ type: index
 
 {% assign mycat = site.pages[page.categories] %}
 {{ mycat | uniq }}
+
+**OR**
+
+{{ site.categories }}
