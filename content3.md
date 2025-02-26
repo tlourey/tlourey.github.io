@@ -57,11 +57,11 @@ type: index
 
 {% assign all_categories = site.pages | map: "categories" %}
 
-{% for item in all_categories %}
 {% capture my_variable %}
+{% for item in all_categories %}
 {{ item }}
-{% endcapture %}
 {% endfor %}
+{% endcapture %}
 
 Dedup:
 
