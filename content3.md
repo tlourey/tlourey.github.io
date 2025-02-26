@@ -42,4 +42,5 @@ type: index
 
 **OR**
 
-{{ site.pages[page.categories] | uniq }}
+{% assign mycat = site.pages[page.categories] %}
+{{ mycat | uniq }}
