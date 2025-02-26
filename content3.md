@@ -75,11 +75,10 @@ Dedup:
 
 ## New index
 
-{% assign mycats = "Tech, NotTech, Gaming, Funnies" | split: ", " %}
+<!-- {% assign mycats = "Tech, NotTech, Gaming, Funnies" | split: ", " %} -->
 {% assign doclist = site.pages | sort: 'title' %}
 
 <ul>
-{% for cat in mycats %}
   {% for item in doclist %}
     {% if item.categories == "Tech" %}
       <li>
@@ -87,5 +86,4 @@ Dedup:
       </li>
     {% endif %}
   {% endfor %}
-{% endfor %}
 </ul>
