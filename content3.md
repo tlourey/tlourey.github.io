@@ -48,8 +48,8 @@ Dedup:
 
 **OR**
 
-{% assign mycat = site.pages[page.categories] %}
-{{ mycat | uniq }}
+{% assign mytestcat = site.pages[page.categories] %}
+{{ mytestcat | uniq }}
 
 **OR**
 
@@ -72,3 +72,20 @@ Dedup:
 Dedup:
 
 {{ my_variable | uniq }}
+
+## New index
+
+{% assign mycats = "Tech, NotTech, Gaming, Funnies" | split: ", " %}
+{% assign doclist = site.pages | sort: 'title' %}
+
+<ul>
+{% for cat in mycats %}
+  {% for item in doclist %}
+    {% if item.categories == cat %}
+      <li>
+        <a href="{{ item.url }}">{{ item.title }}</a> : {{ item.description }}
+      </li>
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+</ul>
