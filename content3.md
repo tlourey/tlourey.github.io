@@ -75,15 +75,30 @@ Dedup:
 
 ## New index
 
-<!-- {% assign mycats = "Tech, NotTech, Gaming, Funnies" | split: ", " %} -->
-{% assign pages = site.pages | sort: 'title' %}
-
-<ul>
-  {% for page in pages %}
-    {% if page.categories == "Tech" %}
-      <li>
-        <a href="{{ page.url }}">{{ page.title }}</a> : {{ page.description }} ({{ page.categories }})
-      </li>
-    {% endif %}
+{% comment %} Get all post categories {% endcomment %}
+{% for post in site.posts %}
+  {% for category in post.categories %}
+    {% unless siteCategories contains category %}
+      {% if siteCategories != "" %}
+        {% assign siteCategories = siteCategories | append: ", " %}
+      {% endif %}
+      {% assign siteCategories = siteCategories | append: category %}
+    {% endunless %}
   {% endfor %}
-</ul>
+{% endfor %}
+
+{% comment %} Get all page categories and append to a list of site categories {% endcomment %}
+{% for page in site.pages %}
+  {% if page.categories %}
+    {% for category in page.categories %}
+      {% unless siteCategories contains category %}
+        {% if siteCategories != "" %}
+          {% assign siteCategories = siteCategories | append: ", " %}
+        {% endif %}
+        {% assign siteCategories = siteCategories | append: category %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+Site categories: {{ siteCategories }}
