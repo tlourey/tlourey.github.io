@@ -93,10 +93,10 @@ Dedup:
   {% if page.categories %}
     {% for category in page.categories %}
       {% unless siteCategories contains category %}
+        {% assign siteCategories = siteCategories | append: category %}
         {% if siteCategories != "" %}
           {% assign siteCategories = siteCategories | append: ", " %}
         {% endif %}
-        {% assign siteCategories = siteCategories | append: category %}
       {% endunless %}
     {% endfor %}
   {% endif %}
