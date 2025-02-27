@@ -114,7 +114,7 @@ Site categories: {{ siteCategories }}
 <ul>
   {% for page in site.pages %}
     {% for pagecategory in page.categories %}
-      {% if pagecategories == category %}
+      {% if pagecategory == category %}
         <li>{{ page.title }}</li>
       {% endif %}
     {% endfor %}
