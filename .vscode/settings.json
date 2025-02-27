@@ -1,6 +1,7 @@
 {
 	"cSpell.dictionaries": [
-		"markdown"
+		"markdown",
+		"ruby"
 	],
 	"cSpell.words": [
 		"bootvar",
@@ -52,6 +53,7 @@
 		"OneLiners",
 		"SNMP",
 		"azuremonitoragent",
+		"endfor",
 		"frontmatter",
 		"hostgroups",
 		"lastmod",
