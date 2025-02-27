@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-02-26T23:59:29.921Z
+lastmod: 2025-02-27T00:01:25.673Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -19,7 +19,7 @@ date: 2025-01-28T05:47:28.059Z
 * [Good points to remember](#good-points-to-remember)
 * [Concepts](#concepts)
   * [SharePoint (Online) Hierarchy](#sharepoint-online-hierarchy)
-  * [SharePoint content types hierarchy](#sharepoint-content-types-hierarchy)
+  * [SharePoint content types](#sharepoint-content-types)
   * [Copy vs Move](#copy-vs-move)
 * [Validation Tips](#validation-tips)
 * [SharePoint Formulas](#sharepoint-formulas)
@@ -91,10 +91,12 @@ date: 2025-01-28T05:47:28.059Z
 
 The above diagram is from a MS Learn page about permissions but excluding Hubs, it still shows the correct order. Note that a Document Library is almost the same as List library except its around files and not list items.
 
-### SharePoint content types hierarchy
+### SharePoint content types
 
-[SharePoint content types hierarchy (PDF)](/assets/pdfs/sharepoint-default-content-types-hierarchy.pdf)\
-Originally from <https://download.microsoft.com/download/0/b/b/0bb74648-212a-4c5d-b8a4-1b991dcf0a7d/sharepoint-default-content-types-hierarchy.pdf>
+[Introduction to content types and content type publishing](https://support.microsoft.com/en-au/office/introduction-to-content-types-and-content-type-publishing-e1277a2e-a1e8-4473-9126-91a0647766e5)
+
+**[SharePoint content types hierarchy (PDF)](/assets/pdfs/sharepoint-default-content-types-hierarchy.pdf)\
+Originally from <https://download.microsoft.com/download/0/b/b/0bb74648-212a-4c5d-b8a4-1b991dcf0a7d/sharepoint-default-content-types-hierarchy.pdf>**
 
 ### Copy vs Move
 
