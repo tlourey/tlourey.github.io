@@ -8,7 +8,7 @@ layout: pages
 published: true
 draft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-02-27T11:41:50.537Z
+lastmod: 2025-02-27T12:31:42.706Z
 tags:
     - Commands
     - Networks
@@ -20,7 +20,7 @@ tags:
 
 Contents:
 <!--- cSpell:disable --->
-* [CLI Environment Levels and Basic commands](#cli-environment-levels-and-basic-commands)
+* [CLI Environment Command Modes and Basic commands](#cli-environment-command-modes-and-basic-commands)
 * [Config/Device Management](#configdevice-management)
 * [Firmware Upgrades and Image Management](#firmware-upgrades-and-image-management)
 * [Port Commands](#port-commands)
@@ -42,28 +42,34 @@ Contents:
   * [DHCP Info](#dhcp-info)
 * [Management, Monitoring and Misc](#management-monitoring-and-misc)
   * [Syslog](#syslog)
+  * [Port Mirroring](#port-mirroring)
+    * [RSPAN VLAN](#rspan-vlan)
   * [Crypto](#crypto)
   * [Settings in Exec mode](#settings-in-exec-mode)
 * [References](#references)
   * [Useful manuals](#useful-manuals)
 <!--- cSpell:enable --->
 
-## CLI Environment Levels and Basic commands
+## CLI Environment Command Modes and Basic commands
 
-Levels:
+Command Modes:
 
-* When you are login you are in ??? level
-* Enable Level:
+* User Exec: When you are login
+* Privileged Exec aka Enable Level:
   * Type `enable` or just `en` to go to enable level. There may be a password.
   * Type `exit` to go back to ??? level
-* Configure Level:
+* Global Configure Level:
   * Type `configure` to go to configure level, must be in enable level to get to configure
   * Type `exit` to go back to enable level
-* vlan database:
+* Interface config:
+  * specific interface or range
+* vlan config:
   * Type `vlan database` to edit the VLAN Database. Can only be done from enable level, not configure
 * stack level:
   * Type: `stack` to go to stack level must be in configure level
   * Type `exit` to exit
+
+More Modes in CLI ref under Table 5: CLI Command Modes (Page 19 - 23)
 
 Help:
 
@@ -542,6 +548,27 @@ logging host reconfigure 1 newhostnamehere
 exit
 save
 ```
+
+### Port Mirroring
+
+> [!TIP] Mirror vs capture
+> Mirror is for WireShark to another machine. Capture is the switch trying to do it and I think its more for debugging.
+
+`show monitor session`: show list of sessions setup\
+`show monitor session 1`: show the details of monitor session 1. There can only be 4 sessions (1-4)\
+`no monitor`: remove all monitor configs setup\
+Source Interface Command: `monitor session session-id source {interface {unit/slot/port | cpu | lag} | vlan vlan-id | remote vlan vlan-id} [rx | tx]` - eg:
+
+* `monitor session 1 source interface 1/0/10`
+* `monitor session 1 source vlan 10 rx`
+
+Destination Interface Command: `monitor session session-id destination {interface {unit/slot/port} | remote vlan vlan-id reflector-port unit/slot/port)` - eg:
+
+* `monitor session 1 destination interface 1/0/1`
+
+#### RSPAN VLAN
+
+TBC
 
 ### Crypto
 
