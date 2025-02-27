@@ -8,16 +8,14 @@ layout: pages
 published: true
 draft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-02-27T11:08:42.850Z
+lastmod: 2025-02-27T11:23:57.908Z
 tags:
     - Commands
     - Networks
     - References
 ---
 
-
-
-> [!CAUTION] **M4300 Only**
+> [!CAUTION] M4300 Only
 > These commands are based on M4300's only. Do not use on older models. Use the commands below with caution. Make sure you backup beforehand. Some commands can cause Netgear's to lockup if done incorrectly.
 
 Contents:
@@ -89,8 +87,7 @@ en
 copy nvram:startup-config nvram:backup-config
 ```
 
-> [!CAUTION]
-> **M4300 Only**\
+> [!CAUTION] M4300 Only
 > Do not use the following commands on any other Netgear switches except **M4300** or switch will reboot
 
 Backup and export:
@@ -115,8 +112,7 @@ copy system:running-config nvram:startup-config
 copy nvram:startup-config tftp://192.168.1.1/DEVICENAME-TODAYSDATE.txt
 ```
 
-> [!TIP]
-> **TFTP Path**\
+> [!TIP] TFTP Path
 > If using XXX TFTP Package on Ubuntu the default path for TFTP files is: `/var/lib/tftpboot`
 
 Restart:
@@ -141,8 +137,7 @@ en
 show logging buffered | include SEARCHTEXT\
 ```
 
-> [!NOTE]
-> **Include Command**\
+> [!NOTE] Include Command
 > `include` command on Netgear's is **case sensitive**.
 
 Viewing configs:
@@ -154,7 +149,7 @@ show backup-config
 show running-config
 ```
 
-Note that `show running-config` has extra options the others dont:
+Note that `show running-config` has extra options the others don't:
 
 ```netgear
 <scriptname>             Script file name for writing active configuration.
@@ -163,14 +158,13 @@ interface                Display the running config for specified interface on
                          the switch.
 ```
 
-> [!TIP]
-> **show running-config all**\
+> [!TIP] show running-config all
 > This command can show you the full config including defaults that are not specified in your config file, which can be **very very useful**
 
 ## Firmware Upgrades and Image Management
 
-> [!NOTE]
-> **Upgrade Prep**\
+> [!NOTE] Upgrade Prep
+>
 > 1. You will need to substitute text between << and >> per the instructions inside. eg:
 >       1. `<<DEVICENAME>>` is the name of the switch
 >       1. `<<YYYYMMDD>>` is for the date with 4 digit year, eg: 20231201 or 20240119
@@ -240,8 +234,7 @@ copy nvram:tech-support scp://user@management-server.local/home/user/<<DEVICENAM
 
 ```
 
-> [!TIP]
-> **Update Records**\
+> [!TIP] Update Records
 > Unless automated, make sure you update the firmware version in your CMDB/DCIM/IPAM/Spreadsheet/Ticket/Asset Management/etc
 
 ## Port Commands
@@ -354,10 +347,11 @@ cablestatus 1/0/X
 From the Netgear M4200 and M4300 Series ProSAFE - Managed SwitchesCLI - Command Reference Manual - Software Version 12.0.2 0 - February 2018 (Page 312):
 
 > _Cable Status: One of the following statuses is returned:\
-> • Normal. The cable is working correctly.\
-> • Open. The cable is disconnected or there is a faulty connector.\
-> • Short. There is an electrical short in the cable.\
-> • Cable Test Failed. The cable status could not be determined. The cable may in fact be working._
+>
+> * Normal. The cable is working correctly.\
+> * Open. The cable is disconnected or there is a faulty connector.\
+> * Short. There is an electrical short in the cable.\
+> * Cable Test Failed. The cable status could not be determined. The cable may in fact be working._
 >
 > _Cable Length: If this feature is supported by the PHY for the current link speed, the cable length is displayed as a range between the shortest estimated length and the longest estimated length. Note that if the link is down and a cable is attached to a 10/100 Ethernet adapter, then the cable status may display as Open or Short because some Ethernet adapters leave unused wire pairs unterminated or grounded. Unknown is displayed if the cable length could not be determined_
 
@@ -414,8 +408,7 @@ en
 show interfaces status all | include KEYWORDINDESCRITION
 ```
 
-> [!NOTE]
-> **Include Command**\
+> [!NOTE] Include Command
 > `include` command on Netgear's is **case sensitive**.
 
 ### MAC Address browsing / searching
@@ -435,8 +428,7 @@ mac address searching:
 show mac-addr-table | include AA:BB:CC:00:11:22
 ```
 
-> [!NOTE]
-> **Include Command**\
+> [!NOTE] Include Command
 > `include` command on Netgear's is **case sensitive**.
 
 ### Bulk Changes
@@ -476,7 +468,7 @@ show interfaces switchport trunk
 
 `show switch`: show all switches in the stack and which is management and which is standby\
 `show switch 1`: show details about switch 1 in stack\
-`show swithc detail`: show details about all of them
+`show switch detail`: show details about all of them
 
 `show stack-status`: show the stack status from the management switch\
 `show stack-status all`: show all the stack status\
@@ -495,7 +487,7 @@ stack
 ```
 
 `initiate failover`: Initiate warm 'restart' to backup unit.\
-`movemanagement`: change the active mangement unit.\
+`movemanagement`: change the active management unit.\
 `standby`: assign an active standby.\
 `stack-port 1/0/50 stack`: configure 1/0/50 as a stack port.
 
