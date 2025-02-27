@@ -23,61 +23,6 @@ type: index
 
 ## Posts
 
-{% assign doclist = site.posts | sort: 'title' %}
-<ul>
-{% for item in doclist %}
-    <li><a href="{{ item.url }}">{{ item.title }}</a></li>
-{% endfor %}
-</ul>
-
-## Categories
-
-{% for page in site.pages %}
-{% assign usedcategories = page.categories %}
-{% endfor %}
-{{ usedcategories }}
-
-**OR**
-
-{% capture my_variable2 %}
-{% for page in site.pages %}
-{{ page.categories}},
-{% endfor %}
-{% endcapture %}
-
-Dedup:
-
-{{ my_variable2 | uniq | join: ", " }}
-
-**OR**
-
-{% assign mytestcat = site.pages[page.categories] %}
-{{ mytestcat | uniq }}
-
-**OR**
-
-{{ site.category }}
-
-**OR**
-
-{{ site.collections }}
-
-**OR**
-
-{% assign all_categories = site.pages | map: "categories" %}
-
-{% capture my_variable %}
-{% for item in all_categories %}
-{{ item }},
-{% endfor %}
-{% endcapture %}
-
-Dedup:
-
-{{ my_variable | uniq }}
-
-## New index
-
 {% comment %} Get all post categories
 <!-- {% for post in site.posts %}
   {% for category in post.categories %}
@@ -105,7 +50,9 @@ Dedup:
   {% endif %}
 {% endfor %}
 
+{% comment %}
 Site categories: {{ siteCategories }}
+{% endcomment %}
 
 {% assign siteCategories = siteCategories | split: ", " %}
 
@@ -115,7 +62,10 @@ Site categories: {{ siteCategories }}
   {% for page in site.pages %}
     {% for pagecategory in page.categories %}
       {% if pagecategory == category %}
-        <li>{{ page.title }}</li>
+        <li><a href="{{ page.url }}">{{ page.title }}</a> : {{ page.description }}
+          ({% for tags in page.tags %}
+            {%- if forloop.length > 0 -%}{{ tags }}{% unless forloop.last %}, {% endunless -%} {% endif %}
+          {%- endfor %})
       {% endif %}
     {% endfor %}
   {% endfor %}
