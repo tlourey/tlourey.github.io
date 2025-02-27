@@ -5,6 +5,9 @@ description: "All the shit you don't really want"
 type: index
 ---
 
+<!-- markdownlint-disable-file -->
+<!-- cspell:disable -->
+
 ## Pages
 
 [View all pages](https://tlourey.github.io/pages/)
@@ -110,9 +113,11 @@ Site categories: {{ siteCategories }}
 {{ category }}:<br>
 <ul>
   {% for page in site.pages %}
-    {% if page.categories == category %}
-      <li>{{ page.title }}</li>
-    {% endif %}
+    {% for pagecategory in page.categories %}
+      {% if pagecategories == category %}
+        <li>{{ page.title }}</li>
+      {% endif %}
+    {% endfor %}
   {% endfor %}
 </ul>
 {% endfor %}
