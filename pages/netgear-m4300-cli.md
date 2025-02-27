@@ -8,7 +8,7 @@ layout: pages
 published: true
 draft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-02-27T11:39:00.573Z
+lastmod: 2025-02-27T11:41:50.537Z
 tags:
     - Commands
     - Networks
@@ -275,7 +275,7 @@ show port status all
 show port advertise
 ```
 
-> [!NOTE]
+> [!NOTE] NOTE
 > You may be asked to save if you logout. You can ignore this but you will be asked again in the future. for some reason poe reset is considered a change
 
 port shutdown:
@@ -292,7 +292,7 @@ exit
 write memory
 ```
 <!-- markdownlint-disable MD032 -->
-> [!NOTE]
+> [!NOTE] NOTE
 > * always do `show running-config interface 1/0/X` of the interface you are going to shut to make sure its not an uplink, downlink, trunk or something special. Also be cautious if its an access point.
 > * review the existing description from the show running config step above and **if appropriate** update but make sure you keep some of the initial notes. Description field is limited. try to include a reference number.
 > * write memory if you are saving it
@@ -312,7 +312,7 @@ exit
 write memory
 ```
 <!-- markdownlint-disable MD032 -->
-> [!NOTE]
+> [!NOTE] NOTE
 > * always do `show running-config interface 1/0/X` of the interface you are going to shut to make sure it's not a trunk or something special
 > * write memory if you are saving it
 > * You can also use an interface clearing script which will reconfigure port correctly, but you will still need to use `no shutdown`
@@ -373,7 +373,7 @@ exit
 write memory
  ```
 
-> [!NOTE]
+> [!NOTE] NOTE
 >
 > * always do `show running-config interface 1/0/X` of the interface you are going to secure its not a trunk or something special
 > * write memory if you are saving it
