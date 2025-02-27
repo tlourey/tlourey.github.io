@@ -9,9 +9,9 @@
 
 .btn {
 	margin-bottom: 0.5rem;
-	+ .btn {
-		margin-left: 0.5rem;
-	}
+	// + .btn {
+	// 	margin-left: 0.5rem;
+	// }
 
 	@include large {
 		padding: 0.5rem 0.75rem;
