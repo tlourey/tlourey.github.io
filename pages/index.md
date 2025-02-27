@@ -4,14 +4,14 @@ description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-lastmod: 2025-02-27T14:24:09.781Z
+lastmod: 2025-02-27T14:27:52.298Z
 published: true
 ---
 
 <!-- markdownlint-disable MD033 --->
-<a href="/about" class="btn">About</a>
-<a href="/" class="btn">Home</a>
-<a href="/content.html" class="btn">Up</a>
+<a href="/about">About</a>
+<a href="/">Home</a>
+<a href="/content.html">Up</a>
 
 <!--- cSpell:disable --->
 {% for page in site.pages %}
