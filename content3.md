@@ -55,6 +55,8 @@ Site categories: {{ siteCategories }}
 {% endcomment %}
 
 {% assign siteCategories = siteCategories | split: ", " %}
+{% assign siteCategories = siteCategories | sort %}
+
 
 {% for category in siteCategories %}
 {{ category }}:<br>
