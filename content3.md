@@ -103,3 +103,14 @@ Dedup:
 {% endfor %}
 
 Site categories: {{ siteCategories }}
+
+{% for category in siteCategories %}
+{{ category }}:
+<ul>
+  {% for page in site.pages %}
+    {% if page.categories == category %}
+      <li>{{ page.title }}</li>
+    {% endfor %}
+  {% endfor %}
+</ul>
+{% endfor %}
