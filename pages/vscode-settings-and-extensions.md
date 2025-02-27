@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-02-26T23:54:07.474Z
+lastmod: 2025-02-27T11:22:49.169Z
 tags:
     - VSCode
 draft: true
@@ -81,7 +81,8 @@ preview: ""
 
 <https://cspell.org/configuration/>\
 <https://streetsidesoftware.com/vscode-spell-checker/docs/configuration>\
-<https://github.com/streetsidesoftware/cspell-dicts/tree/main/dictionaries> - list of all available dictionaries.
+<https://github.com/streetsidesoftware/cspell-dicts/tree/main/dictionaries> - list of all available dictionaries.\
+<https://cspell.org/configuration/document-settings/#inline-document-settings> - inline comments to control cspell
 
 ### Markdown all in one
 

@@ -8,22 +8,19 @@ layout: pages
 published: true
 draft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-02-02T13:45:14.032Z
+lastmod: 2025-02-27T12:31:42.706Z
 tags:
     - Commands
     - Networks
     - References
 ---
 
-
-
-> [!CAUTION]
-> **M4300 Only**\
+> [!CAUTION] M4300 Only
 > These commands are based on M4300's only. Do not use on older models. Use the commands below with caution. Make sure you backup beforehand. Some commands can cause Netgear's to lockup if done incorrectly.
 
 Contents:
 <!--- cSpell:disable --->
-* [CLI Environment Levels and Basic commands](#cli-environment-levels-and-basic-commands)
+* [CLI Environment Command Modes and Basic commands](#cli-environment-command-modes-and-basic-commands)
 * [Config/Device Management](#configdevice-management)
 * [Firmware Upgrades and Image Management](#firmware-upgrades-and-image-management)
 * [Port Commands](#port-commands)
@@ -45,28 +42,34 @@ Contents:
   * [DHCP Info](#dhcp-info)
 * [Management, Monitoring and Misc](#management-monitoring-and-misc)
   * [Syslog](#syslog)
+  * [Port Mirroring](#port-mirroring)
+    * [RSPAN VLAN](#rspan-vlan)
   * [Crypto](#crypto)
   * [Settings in Exec mode](#settings-in-exec-mode)
 * [References](#references)
   * [Useful manuals](#useful-manuals)
 <!--- cSpell:enable --->
 
-## CLI Environment Levels and Basic commands
+## CLI Environment Command Modes and Basic commands
 
-Levels:
+Command Modes:
 
-* When you are login you are in ??? level
-* Enable Level:
+* User Exec: When you are login
+* Privileged Exec aka Enable Level:
   * Type `enable` or just `en` to go to enable level. There may be a password.
   * Type `exit` to go back to ??? level
-* Configure Level:
+* Global Configure Level:
   * Type `configure` to go to configure level, must be in enable level to get to configure
   * Type `exit` to go back to enable level
-* vlan database:
+* Interface config:
+  * specific interface or range
+* vlan config:
   * Type `vlan database` to edit the VLAN Database. Can only be done from enable level, not configure
 * stack level:
   * Type: `stack` to go to stack level must be in configure level
   * Type `exit` to exit
+
+More Modes in CLI ref under Table 5: CLI Command Modes (Page 19 - 23)
 
 Help:
 
@@ -90,8 +93,7 @@ en
 copy nvram:startup-config nvram:backup-config
 ```
 
-> [!CAUTION]
-> **M4300 Only**\
+> [!CAUTION] M4300 Only
 > Do not use the following commands on any other Netgear switches except **M4300** or switch will reboot
 
 Backup and export:
@@ -116,8 +118,7 @@ copy system:running-config nvram:startup-config
 copy nvram:startup-config tftp://192.168.1.1/DEVICENAME-TODAYSDATE.txt
 ```
 
-> [!TIP]
-> **TFTP Path**\
+> [!TIP] TFTP Path
 > If using XXX TFTP Package on Ubuntu the default path for TFTP files is: `/var/lib/tftpboot`
 
 Restart:
@@ -142,8 +143,7 @@ en
 show logging buffered | include SEARCHTEXT\
 ```
 
-> [!NOTE]
-> **Include Command**\
+> [!NOTE] Include Command
 > `include` command on Netgear's is **case sensitive**.
 
 Viewing configs:
@@ -155,7 +155,7 @@ show backup-config
 show running-config
 ```
 
-Note that `show running-config` has extra options the others dont:
+Note that `show running-config` has extra options the others don't:
 
 ```netgear
 <scriptname>             Script file name for writing active configuration.
@@ -164,14 +164,13 @@ interface                Display the running config for specified interface on
                          the switch.
 ```
 
-> [!TIP]
-> **show running-config all**\
+> [!TIP] show running-config all
 > This command can show you the full config including defaults that are not specified in your config file, which can be **very very useful**
 
 ## Firmware Upgrades and Image Management
 
-> [!NOTE]
-> **Upgrade Prep**\
+> [!NOTE] Upgrade Prep
+>
 > 1. You will need to substitute text between << and >> per the instructions inside. eg:
 >       1. `<<DEVICENAME>>` is the name of the switch
 >       1. `<<YYYYMMDD>>` is for the date with 4 digit year, eg: 20231201 or 20240119
@@ -240,9 +239,8 @@ show tech-support
 copy nvram:tech-support scp://user@management-server.local/home/user/<<DEVICENAME>>-TecSupPost-<<YYMMDD>>.txt
 
 ```
-
-> [!TIP]
-> **Update Records**\
+<!-- cSpell:ignore CMDB DCIM -->
+> [!TIP] Update Records
 > Unless automated, make sure you update the firmware version in your CMDB/DCIM/IPAM/Spreadsheet/Ticket/Asset Management/etc
 
 ## Port Commands
@@ -283,7 +281,7 @@ show port status all
 show port advertise
 ```
 
-> [!NOTE]
+> [!NOTE] NOTE
 > You may be asked to save if you logout. You can ignore this but you will be asked again in the future. for some reason poe reset is considered a change
 
 port shutdown:
@@ -299,12 +297,12 @@ exit
 exit
 write memory
 ```
-
-> [!NOTE]
->
+<!-- markdownlint-disable MD032 -->
+> [!NOTE] NOTE
 > * always do `show running-config interface 1/0/X` of the interface you are going to shut to make sure its not an uplink, downlink, trunk or something special. Also be cautious if its an access point.
 > * review the existing description from the show running config step above and **if appropriate** update but make sure you keep some of the initial notes. Description field is limited. try to include a reference number.
 > * write memory if you are saving it
+<!-- markdownlint-enable MD032-->
 
 port open/startup :
 
@@ -319,12 +317,12 @@ exit
 exit
 write memory
 ```
-
-> [!NOTE]
->
+<!-- markdownlint-disable MD032 -->
+> [!NOTE] NOTE
 > * always do `show running-config interface 1/0/X` of the interface you are going to shut to make sure it's not a trunk or something special
 > * write memory if you are saving it
 > * You can also use an interface clearing script which will reconfigure port correctly, but you will still need to use `no shutdown`
+<!-- markdownlint-enable MD032 -->
 
 ### Counters and Stats
 
@@ -355,10 +353,11 @@ cablestatus 1/0/X
 From the Netgear M4200 and M4300 Series ProSAFE - Managed SwitchesCLI - Command Reference Manual - Software Version 12.0.2 0 - February 2018 (Page 312):
 
 > _Cable Status: One of the following statuses is returned:\
-> • Normal. The cable is working correctly.\
-> • Open. The cable is disconnected or there is a faulty connector.\
-> • Short. There is an electrical short in the cable.\
-> • Cable Test Failed. The cable status could not be determined. The cable may in fact be working._
+>
+> * Normal. The cable is working correctly.\
+> * Open. The cable is disconnected or there is a faulty connector.\
+> * Short. There is an electrical short in the cable.\
+> * Cable Test Failed. The cable status could not be determined. The cable may in fact be working._
 >
 > _Cable Length: If this feature is supported by the PHY for the current link speed, the cable length is displayed as a range between the shortest estimated length and the longest estimated length. Note that if the link is down and a cable is attached to a 10/100 Ethernet adapter, then the cable status may display as Open or Short because some Ethernet adapters leave unused wire pairs unterminated or grounded. Unknown is displayed if the cable length could not be determined_
 
@@ -380,7 +379,7 @@ exit
 write memory
  ```
 
-> [!NOTE]
+> [!NOTE] NOTE
 >
 > * always do `show running-config interface 1/0/X` of the interface you are going to secure its not a trunk or something special
 > * write memory if you are saving it
@@ -415,8 +414,7 @@ en
 show interfaces status all | include KEYWORDINDESCRITION
 ```
 
-> [!NOTE]
-> **Include Command**\
+> [!NOTE] Include Command
 > `include` command on Netgear's is **case sensitive**.
 
 ### MAC Address browsing / searching
@@ -427,7 +425,7 @@ mac address on interface:
 show mac-addr-table interface 1/0/X
 ```
 
-> [!NOTE]
+> [!NOTE] show mac-address-table command
 > `show mac-address-table` is different to `show mac-addr-table`
 
 mac address searching:
@@ -436,8 +434,7 @@ mac address searching:
 show mac-addr-table | include AA:BB:CC:00:11:22
 ```
 
-> [!NOTE]
-> **Include Command**\
+> [!NOTE] Include Command
 > `include` command on Netgear's is **case sensitive**.
 
 ### Bulk Changes
@@ -477,7 +474,7 @@ show interfaces switchport trunk
 
 `show switch`: show all switches in the stack and which is management and which is standby\
 `show switch 1`: show details about switch 1 in stack\
-`show swithc detail`: show details about all of them
+`show switch detail`: show details about all of them
 
 `show stack-status`: show the stack status from the management switch\
 `show stack-status all`: show all the stack status\
@@ -494,9 +491,9 @@ show interfaces switchport trunk
 configure
 stack
 ```
-
+<!-- cSpell:ignore movemanagement -->
 `initiate failover`: Initiate warm 'restart' to backup unit.\
-`movemanagement`: change the active mangement unit.\
+`movemanagement`: change the active management unit.\
 `standby`: assign an active standby.\
 `stack-port 1/0/50 stack`: configure 1/0/50 as a stack port.
 
@@ -524,7 +521,7 @@ show ip dhcp global configuration
 show ip dhcp server statistics
 ```
 
-> [!NOTE]
+> [!NOTE] NOTE
 > show dhcp XXXX commands are for making the switch a DHCP Client (mostly)
 
 ## Management, Monitoring and Misc
@@ -551,6 +548,27 @@ logging host reconfigure 1 newhostnamehere
 exit
 save
 ```
+
+### Port Mirroring
+
+> [!TIP] Mirror vs capture
+> Mirror is for WireShark to another machine. Capture is the switch trying to do it and I think its more for debugging.
+
+`show monitor session`: show list of sessions setup\
+`show monitor session 1`: show the details of monitor session 1. There can only be 4 sessions (1-4)\
+`no monitor`: remove all monitor configs setup\
+Source Interface Command: `monitor session session-id source {interface {unit/slot/port | cpu | lag} | vlan vlan-id | remote vlan vlan-id} [rx | tx]` - eg:
+
+* `monitor session 1 source interface 1/0/10`
+* `monitor session 1 source vlan 10 rx`
+
+Destination Interface Command: `monitor session session-id destination {interface {unit/slot/port} | remote vlan vlan-id reflector-port unit/slot/port)` - eg:
+
+* `monitor session 1 destination interface 1/0/1`
+
+#### RSPAN VLAN
+
+TBC
 
 ### Crypto
 
@@ -593,6 +611,8 @@ There are some settings that don't get changed in configure mode, but instead ge
 [M4100-50G-Poe\+](https://www.netgear.com/support/product/M4100-50G-POEplus%20(GSM7248Pv1h1).aspx)
 
 ### Useful manuals
+
+<!-- cSpell:ignore Stackable -->
 
 [M4300 Intelligent Edge Series Fully Managed Stackable Switches, M4300 Series Switches, M4300-96X Modular Switch, Command Line (CLI) Reference Manual, Software Version or Release 12.0.11 (netgear.com)](https://www.downloads.netgear.com/files/GDC/M4300/M4300-M4300-96X_CLI_EN.pdf)
 

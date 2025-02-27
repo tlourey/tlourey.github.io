@@ -4,8 +4,9 @@ published: false
 type: content
 fmContenttype: pages
 layout: pages
-lastmod: 2025-01-19T07:37:08.420Z
-modifieddate: 2025-01-27T06:00:14.741Z
+lastmod: 2025-02-27T08:53:16.327Z
+categories:
+    - Tech
 ---
 
 ## Welcome to GitHub Pages
