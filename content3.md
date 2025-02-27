@@ -104,8 +104,10 @@ Dedup:
 
 Site categories: {{ siteCategories }}
 
+{% assign siteCategories = siteCategories | split: ", " %}
+
 {% for category in siteCategories %}
-{{ category }}:
+{{ category }}:<br>
 <ul>
   {% for page in site.pages %}
     {% if page.categories == category %}
