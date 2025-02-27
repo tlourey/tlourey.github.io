@@ -58,7 +58,8 @@
 		"frontmatter",
 		"hostgroups",
 		"lastmod",
-		"omfwd"
+		"omfwd",
+		"sshcon"
 	],    
 	"markdownlint.config": {
         "MD033": {

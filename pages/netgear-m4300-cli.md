@@ -8,7 +8,7 @@ layout: pages
 published: true
 draft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-02-27T11:23:57.908Z
+lastmod: 2025-02-27T11:26:12.180Z
 tags:
     - Commands
     - Networks
@@ -233,7 +233,7 @@ show tech-support
 copy nvram:tech-support scp://user@management-server.local/home/user/<<DEVICENAME>>-TecSupPost-<<YYMMDD>>.txt
 
 ```
-
+<!-- cSpell:ignore CMDB DCIM -->
 > [!TIP] Update Records
 > Unless automated, make sure you update the firmware version in your CMDB/DCIM/IPAM/Spreadsheet/Ticket/Asset Management/etc
 
@@ -485,7 +485,7 @@ show interfaces switchport trunk
 configure
 stack
 ```
-
+<!-- cSpell:ignore movemanagement -->
 `initiate failover`: Initiate warm 'restart' to backup unit.\
 `movemanagement`: change the active management unit.\
 `standby`: assign an active standby.\
@@ -584,6 +584,8 @@ There are some settings that don't get changed in configure mode, but instead ge
 [M4100-50G-Poe\+](https://www.netgear.com/support/product/M4100-50G-POEplus%20(GSM7248Pv1h1).aspx)
 
 ### Useful manuals
+
+<!-- cSpell:ignore Stackable -->
 
 [M4300 Intelligent Edge Series Fully Managed Stackable Switches, M4300 Series Switches, M4300-96X Modular Switch, Command Line (CLI) Reference Manual, Software Version or Release 12.0.11 (netgear.com)](https://www.downloads.netgear.com/files/GDC/M4300/M4300-M4300-96X_CLI_EN.pdf)
 
