@@ -4,7 +4,7 @@ description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-lastmod: 2025-02-27T13:38:42.505Z
+lastmod: 2025-02-27T13:46:11.709Z
 ---
 
 [home](/)
@@ -34,7 +34,7 @@ lastmod: 2025-02-27T13:38:42.505Z
     {% for pagecategory in page.categories %}
       {% if pagecategory == category %}
         <li><a href="{{ page.url }}">{{ page.title }}</a> : {{ page.description }}
-          ({% for tags in page.tags %}
+          (Tags: {% for tags in page.tags %}
             {%- if forloop.length > 0 -%}{{ tags }}{% unless forloop.last %}, {% endunless -%} {% endif %}
           {%- endfor %})
         </li>
