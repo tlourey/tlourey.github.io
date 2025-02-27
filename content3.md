@@ -76,7 +76,7 @@ Dedup:
 ## New index
 
 {% comment %} Get all post categories {% endcomment %}
-{% for post in site.posts %}
+<!-- {% for post in site.posts %}
   {% for category in post.categories %}
     {% unless siteCategories contains category %}
       {% if siteCategories != "" %}
@@ -85,7 +85,7 @@ Dedup:
       {% assign siteCategories = siteCategories | append: category %}
     {% endunless %}
   {% endfor %}
-{% endfor %}
+{% endfor %} -->
 
 {% comment %} Get all page categories and append to a list of site categories {% endcomment %}
 {% for page in site.pages %}
