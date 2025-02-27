@@ -24,6 +24,11 @@ whitelist:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-remote-theme
+defaults:
+    - scope:
+        path: "assets/images"
+      values:
+        image: true
 relative_links:
   # enabled: true # already enabled by default
   collections: true
