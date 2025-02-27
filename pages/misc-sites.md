@@ -1,16 +1,17 @@
 ---
 title: Misc Sites
-description: ""
-published: false
+description: TBA
+published: true
 categories:
     - Tech
     - NotTech
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-02-27T12:42:54.370Z
+lastmod: 2025-02-27T14:08:53.488Z
 tags:
-    - TBA
+    - References
+    - Tools
 draft: true
 fmContentType: pages
 preview: ""
@@ -18,7 +19,7 @@ preview: ""
 
 <!--- cSpell:disable --->
 * [Time and date and clocks](#time-and-date-and-clocks)
-* [News](#news)
+* [Tech News](#tech-news)
 * [Weather](#weather)
 * [Music](#music)
 * [Reviews](#reviews)
@@ -33,9 +34,10 @@ preview: ""
 <https://www.timeanddate.com/>\
 <https://corporate.watch/> - Quarters: start, end and remaining
 
-## News
+## Tech News
 
-<https://hckrnews.com/>
+<https://hckrnews.com/>\
+<https://feedly.com/i/my/me>
 
 ## Weather
 
@@ -49,7 +51,7 @@ preview: ""
 
 <https://www.rtings.com/>\
 <https://www.whathifi.com/au>\
-<https://www.nytimes.com/wirecutter/electronics/>\
+<https://www.nytimes.com/wirecutter/electronics/>
 
 ## Notes and Learnings
 

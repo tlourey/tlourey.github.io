@@ -1,13 +1,13 @@
 ---
 title: Mac OS Tips
 description: Tips for Mac OS
-published: false
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-02-25T04:41:08.679Z
-lastmod: 2025-02-26T23:37:07.412Z
+lastmod: 2025-02-27T14:09:31.530Z
 tags:
     - MacOS
     - Tips
