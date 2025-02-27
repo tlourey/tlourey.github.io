@@ -47,7 +47,7 @@
             <ul>
             {% for item in doclist %}
               {% if item.type == "pages" %}
-                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                <li><a href="{{ item.url }}">{{ item.title }}</a> ({{ item.categories }})</li>
               {% endif %}
             {% endfor %}
             </ul></p>
@@ -57,7 +57,7 @@
           <p>{% assign doclist = site.posts | sort: 'title' %}
             <ul>
             {% for item in doclist %}
-                <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+                <li><a href="{{ item.url }}">{{ item.title }}</a> ({{ item.categories }})</li>
             {% endfor %}
             </ul>
           </p>
