@@ -110,7 +110,7 @@ Site categories: {{ siteCategories }}
   {% for page in site.pages %}
     {% if page.categories == category %}
       <li>{{ page.title }}</li>
-    {% endfor %}
+    {% endif %}
   {% endfor %}
 </ul>
 {% endfor %}
