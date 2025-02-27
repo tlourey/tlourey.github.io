@@ -66,6 +66,7 @@ Site categories: {{ siteCategories }}
           ({% for tags in page.tags %}
             {%- if forloop.length > 0 -%}{{ tags }}{% unless forloop.last %}, {% endunless -%} {% endif %}
           {%- endfor %})
+        </li>
       {% endif %}
     {% endfor %}
   {% endfor %}
