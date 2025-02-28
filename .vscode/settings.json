@@ -63,7 +63,11 @@
 	],    
 	"markdownlint.config": {
         "MD033": {
-            "allowed_elements": ["details", "summary"]
+            "allowed_elements": [
+				"details",
+				"summary",
+				"ins"
+			]
         },
         "MD028": false
     },

@@ -61,6 +61,12 @@
           "name": "fmContentType",
           "type": "string",
           "default": "default"
+        },
+        {
+          "title": "mermaid",
+          "name": "mermaid",
+          "type": "boolean",
+          "default": "false"
         }
       ]
     },
@@ -137,6 +143,12 @@
           "name": "fmContentType",
           "type": "string",
           "default": "posts"
+        },
+        {
+          "title": "mermaid",
+          "name": "mermaid",
+          "type": "boolean",
+          "default": "false"
         }
       ]
     },
@@ -214,6 +226,12 @@
           "name": "fmContentType",
           "type": "string",
           "default": "pages"
+        },
+        {
+          "title": "mermaid",
+          "name": "mermaid",
+          "type": "boolean",
+          "default": "false"
         }
       ]
     },
