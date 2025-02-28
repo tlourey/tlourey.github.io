@@ -1,13 +1,13 @@
 ---
 title: The Division Stuff
-description: ""
-published: false
+description: Stuff about The Division
+published: true
 categories:
     - Gaming
 type: pages
 layout: pages
 date: 2025-02-25T02:28:07.426Z
-lastmod: 2025-02-28T13:12:49.849Z
+lastmod: 2025-02-28T18:14:38.431Z
 tags:
     - The Division 2
 draft: true
