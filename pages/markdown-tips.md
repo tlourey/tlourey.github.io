@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-02-03T07:59:37.281Z
+lastmod: 2025-02-28T01:40:10.650Z
 tags:
     - Language
     - References
@@ -30,6 +30,7 @@ tags:
   * [Creating diagrams](#creating-diagrams)
   * [Collapsed Section](#collapsed-section)
     * [You can add a header](#you-can-add-a-header)
+  * [Markdown Lint Exclusions](#markdown-lint-exclusions)
   * [Bug in Markdown all in one](#bug-in-markdown-all-in-one)
   * [Useless by cool](#useless-by-cool)
     * [ASCII STL](#ascii-stl)
@@ -227,6 +228,14 @@ You can add an image or a code block, too.
 > the above may not render correctly depending on the Jekyll theme in use but if you view it via github itself, it does seem to render correctly.
 
 <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections>
+
+### Markdown Lint Exclusions
+
+If you are using markdownlint package or extension, you may want to exclude some specific rules, or at last adjust them at times. Example, I want markdown lint to show me inline html but not if its just an underline.
+
+We can see that at <https://github.com/DavidAnson/markdownlint/blob/main/doc/md033.md> that rule MD033 has a parameter for allowed elements.
+
+for an example of this refer to [VSCode Settings and Extensions](vscode-settings-and-extensions.md#allow-some-inline-html)
 
 ### Bug in Markdown all in one
 

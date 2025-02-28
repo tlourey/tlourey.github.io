@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-02-27T11:22:49.169Z
+lastmod: 2025-02-28T01:39:31.877Z
 tags:
     - VSCode
 draft: true
@@ -32,6 +32,14 @@ preview: ""
       * [Bug in Markdown all in one](#bug-in-markdown-all-in-one)
     * [Markdown all in one Tips](#markdown-all-in-one-tips)
     * [Markdown all in one References](#markdown-all-in-one-references)
+* [markdownlint](#markdownlint)
+  * [markdownlint Commands](#markdownlint-commands)
+  * [markdownlint Notes](#markdownlint-notes)
+    * [Ignore Rules](#ignore-rules)
+    * [Rules with Parameter](#rules-with-parameter)
+  * [markdownlint Tips](#markdownlint-tips)
+    * [Allow some inline HTML](#allow-some-inline-html)
+  * [markdownlint References](#markdownlint-references)
 <!--- cSpell:enable --->
 
 ## Settings
@@ -118,3 +126,42 @@ Useful settings:
 #### Markdown all in one References
 
 Full settings on marketplace base:<https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one#supported-settings>
+
+## markdownlint
+
+Still TBC
+
+* [ ] Finishing filling in markdownlint
+
+<https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint>\
+<vscode:extension/DavidAnson.vscode-markdownlint>
+
+### markdownlint Commands
+
+### markdownlint Notes
+
+#### Ignore Rules
+
+sometimes you may want to ignore specific rules.
+
+#### Rules with Parameter
+
+Some rules may have parameters so you can customise how they are evaluated. See example in tips .
+
+### markdownlint Tips
+
+#### Allow some inline HTML
+
+```json
+ "markdownlint.config": {
+    "MD033": {
+      "allowed_elements": [
+        "details",
+        "summary",
+        "ins"
+      ]
+    },
+ }
+```
+
+### markdownlint References
