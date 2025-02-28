@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-02-28T01:39:31.877Z
+lastmod: 2025-02-28T02:22:34.396Z
 tags:
     - VSCode
 draft: true
@@ -20,6 +20,9 @@ preview: ""
 
 <!--- cSpell:disable --->
 * [Settings](#settings)
+* [Custom Keyboard Shortcuts](#custom-keyboard-shortcuts)
+  * [CTRL+U: Underline in Markdown](#ctrlu-underline-in-markdown)
+  * [References](#references)
 * [Extensions](#extensions)
   * [vscode-spell-checker](#vscode-spell-checker)
     * [vscode-spell-checker Commands](#vscode-spell-checker-commands)
@@ -46,6 +49,45 @@ preview: ""
 
 `"editor.renderWhitespace": "all",` \
 `"editor.renderControlCharacters": true,`: useful for rendering UNICODE Characters that sometimes are not good including invisible characters
+
+## Custom Keyboard Shortcuts
+
+### CTRL+U: Underline in Markdown
+
+Based off: <https://stackoverflow.com/questions/39333639/visual-studio-code-snippet-as-keyboard-shortcut-key/43604034#43604034>
+
+markdown.json (user snippet):
+
+```json
+    "underline": {
+        "prefix": "underline",
+        "body": [
+            "<ins>$TM_SELECTED_TEXT${1:}</ins>"
+        ],
+        "description": "Encloses selected text in <ins></ins> tags"
+    }
+
+```
+
+keybindings.json:
+
+```json
+{
+    "key": "cmd+u",
+    "command": "editor.action.insertSnippet",
+    "args": { "name": "underline" },
+    "when": "editorTextFocus && editorLangId == markdown"
+}
+
+```
+
+### References
+
+[Windows PDF](https://go.microsoft.com/fwlink/?linkid=832145)\
+[macOS PDF](https://go.microsoft.com/fwlink/?linkid=832143)\
+[Linux PDF](https://go.microsoft.com/fwlink/?linkid=832144)
+
+[when clause contexts for keyboard shortcuts](https://code.visualstudio.com/api/references/when-clause-contexts)
 
 ## Extensions
 
