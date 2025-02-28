@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-11T11:50:00
-lastmod: 2025-02-02T13:44:24.265Z
+lastmod: 2025-02-28T18:16:51.373Z
 tags:
     - Commands
     - MacOS
@@ -49,4 +49,5 @@ Ref: [https://ss64.com/mac/dscacheutil.html](https://ss64.com/mac/dscacheutil.ht
 
 ## References
 
-[https://ss64.com/mac/](https://ss64.com/mac/)
+[https://ss64.com/mac/](https://ss64.com/mac/)\
+[Advanced macOS Command-Line Tools](https://saurabhs.org/advanced-macos-commands)
