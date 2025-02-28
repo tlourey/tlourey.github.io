@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-02-26T12:31:11.458Z
+lastmod: 2025-02-28T03:27:08.970Z
 ---
 
 <!--- cSpell:disable --->
@@ -45,6 +45,8 @@ lastmod: 2025-02-26T12:31:11.458Z
 * [Man stirring pot](#man-stirring-pot)
 * [Spared no expense](#spared-no-expense)
 * [My last fuck on fire](#my-last-fuck-on-fire)
+* [Field of Fucks](#field-of-fucks)
+* [Quality Bait](#quality-bait)
 <!--- cSpell:enable --->
 
 ## Homer Simpsons Fire on console
@@ -195,3 +197,17 @@ The PG Version:
 ## My last fuck on fire
 
 [![Picture](/assets/images/my-last-f-onfire.jpg)](/assets/images/my-last-f-onfire.jpg)
+
+## Field of Fucks
+
+[![Picture](/assets/images/the-field-of-fucks-is-barren.jpg)](/assets/images/the-field-of-fucks-is-barren.jpg)
+
+[![Picture](/assets/images/the-field-of-fucks-someecards.jpg)](/assets/images/the-field-of-fucks-someecards.jpg)
+
+## Quality Bait
+
+Low Quality:
+[![Picture](/assets/images/low-quality-bait.jpeg)](/assets/images/low-quality-bait.jpeg)
+
+Excellent Quality:
+[![Picture](/assets/images/excellent-bait.png)](/assets/images/excellent-bait.png)
