@@ -10,6 +10,7 @@ lastmod: null
 tags: []
 draft: true
 fmContentType: pages
+mermaid: false
 ---
 
 <!--- cSpell:disable --->
@@ -18,6 +19,7 @@ fmContentType: pages
 
 ## Heading
 
+<!-- cSpell:ignore toolname -->
 <!--
 ## toolname
 

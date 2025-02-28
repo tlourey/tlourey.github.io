@@ -10,6 +10,7 @@ lastmod: null
 tags: []
 draft: true
 fmContentType: posts
+mermaid: false
 ---
 
 <!--- cSpell:disable --->
