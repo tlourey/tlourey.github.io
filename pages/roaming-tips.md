@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T03:22:07.372Z
-lastmod: 2025-02-28T01:24:59.772Z
+lastmod: 2025-02-28T01:48:18.458Z
 tags:
     - Roaming
     - Travel
@@ -88,7 +88,7 @@ Question : WiFi calling - does that need roaming??
 
 DSDS: Dual Sim Dual Standby: Device supports 2 sims and both are active and registered with the mobile network but only **one** can be used at a time. You can't call off one sim and sms off another at the same time. More commonly, you can't use data off one sim and make calls off the sim at the same time. Most devices support DSDS.
 
-DSDA: Dual Sim Dual Active: Both sims can be used simultaneously. Data off of one, calling off of another? Yes. Dual data connections? Technically use but I wouldn't *automatically* expect your bandwidth to double and I doubt your phone will be able start <ins>bonding</ins> the two links together. Your milage may vary.
+DSDA: Dual Sim Dual Active: Both sims can be used simultaneously. Data off of one, calling off of another? Yes. Dual data connections? Technically use but I wouldn't *automatically* expect your <ins>bandwidth</ins> to double and I doubt your phone will be able start <ins>bonding</ins> the two links together. Your milage may vary.
 
 ## Data Saving Tips
 
