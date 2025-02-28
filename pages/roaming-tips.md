@@ -1,6 +1,6 @@
 ---
 title: Roaming Tips
-description: ""
+description: Tips and Tricks while roaming overseas
 published: false
 categories:
     - Tech
@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T03:22:07.372Z
-lastmod: 2025-02-28T01:48:18.458Z
+lastmod: 2025-02-28T03:05:26.922Z
 tags:
     - Roaming
     - Travel
@@ -20,81 +20,125 @@ preview: ""
 
 <!--- cSpell:disable --->
 * [Bias and Background](#bias-and-background)
+* [Emergency calls](#emergency-calls)
 * [eSims](#esims)
   * [2 eSims active](#2-esims-active)
+  * [Providers](#providers)
 * [Using vs Simultaneously Using (aka DSDA vs DSDS)](#using-vs-simultaneously-using-aka-dsda-vs-dsds)
 * [Data Saving Tips](#data-saving-tips)
   * [Android Users](#android-users)
   * [Apple Users](#apple-users)
+  * [Apps allowed to use Cellular data](#apps-allowed-to-use-cellular-data)
 <!--- cSpell:enable --->
 
 <!--
-• disable sync (Android)
-• data saver
-• esim (data only and voice)
-• roaming for voice only
-• call forwarding
-• prepaid vs postpaid vs business
-• DSDA dual sim vs dual active vs the other one
-• * unlocked
-• * versions
-• 2 at once but 2 esims at once, only really moden
-• apps where you have set download over WiFi only off.
-• * yt music
-• * google photos
-• Vodafone roaming still
-• offline prep (spotify, yt music, yt, Netflix etc)
-• esim providers I am aware that at least seem legit (have not used either so not a recommendation):
-• * Sally (Nord VPN)
-• * tripsim by Syd
-• * most don't do voice. Only data...
-• Vodafone maratime roaming? $$$
-• cell at Sea?
-• choose what you do and where
-• VPNs work
-• VPNs personal
-• WiFi calling with no signal
-• situation: personal telstra prepaid, wife with voda, bought cruise WiFi.
-• learn voicemail remote access
+* [x] disable sync (Android)
+* [x] data saver
+* [x] esim (data only and voice)
+* [x] roaming for voice only
+* [ ] call forwarding
+* [ ] prepaid vs postpaid vs business
+* [x] DSDA dual sim vs dual active vs the other one
+* [x] * unlocked
+* [x] * versions
+* [x] 2 at once but 2 esims at once, only really moden
+* [ ] apps where you have set download over WiFi only off.
+* [ ] * yt music
+* [ ] * google photos
+* [ ] Vodafone roaming still
+* [ ] offline prep (spotify, yt music, yt, Netflix etc)
+* [x] esim providers I am aware that at least seem legit (have not used either so not a recommendation):
+* [x] * Sally (Nord VPN)
+* [x] * tripsim by Syd
+* [x] * most don't do voice. Only data...
+* [ ] Vodafone maratime roaming? $$$
+* [ ] cell at Sea?
+* [ ] choose what you do and where
+* [ ] VPNs work
+* [ ] VPNs personal
+* [ ] WiFi calling with no signal
+* [ ] situation: personal telstra prepaid, wife with voda, bought cruise WiFi.
+* [ ] learn voicemail remote access
 
 Question : WiFi calling - does that need roaming??
 
-#blogpost #websitepage
 -->
 
 ## Bias and Background
 
 * TBC
 
+## Emergency calls
+
+* Not all countries use 911. Some use 000, 999 or something else. Ref: <https://en.wikipedia.org/wiki/Emergency_telephone_number>
+* 112 works in all countries (AFAIK) from mobile phones as its part of the GSM Standard. Ref: <https://en.wikipedia.org/wiki/112_(emergency_telephone_number)>
+* Don't **assume** VoIP, Skype, WiFi Calling, etc will be able to make emergency calls. It may do, but it may not.
+
 ## eSims
 
-* Most of them don't do voice roaming, just data
-* If you're already using an esim, you need to check what your device supports
-* Most devices can have multiple eSims stored but only newer devices can have 2 eSims active.
+* A lot of assumptions around eSims are based off of having an unlocked phone.
+* Most of the popular providers **don't** provide voice or sms services, only data
+  * If you want voice roaming look for providers who also provide voice services.
+  * Consider that since you have data you may be able to use signal, etc.
+  * Check if they will allow 112 calls.
+* If you're already using an esim, you need to check what your device supports in terms of the total number of eSims you can have installed, active and usable.
+* *Most* devices can have multiple eSims **stored** but the number may be different per device.
+* *Most* devices can have 2 sims **active**
+* Only some newer devices can have **2 eSims** that are both **active**.
+* *Most* devices can only **use** one sim at a time. See below for DSDS vs DSDA
 
 ### 2 eSims active
 
-> [!NOTE] Active vs using
-> I am using the word active specifically. This section is about having 2 eSim's *active* at the same time but not *using* 2 eSim's at the same time. There is a difference between *active* and *using* and *simultaneously using*
+> [!NOTE] Active vs Using
+> I am using the word *Active* specifically. This section is about having 2 eSim's *active* at the same time but not *using* 2 eSim's at the same time. There is a difference between *active* and *using* and *simultaneously using*
+
+Having no physical sim and 2 eSims *active* is only available on some devices. (This list is not complete nor up to date)
 
 * iPhone 13 or later[^1]
 * iPhones without a physical tray[^1]
+* Pixel??? - TBC
 
 [^1]: <https://support.apple.com/en-au/109317#:~:text=iPhone%2013%20models%20and%20later%20also%20support%20two%20active%20eSIMs.%20iPhone%20models%20without%20a%20physical%20SIM%20tray%20support%20two%20active%20eSIMs.>
+
+### Providers
+
+These are some eSim providers I am aware of **that at least seem legit**
+
+> [!IMPORTANT] Not Recommendations
+> The below list is not complete, full or any kind of recommendation or endorsement. In most cases I haven't even used them.
+<!-- cSpell:ignore tripsim -->
+* [Sally (NordVPN)](https://saily.com/) - also has an app
+* [tripsim by Syd](https://tripsim.com.au/) - related to sydney airport corporation
 
 <!-- cSpell:ignore DSDA DSDS -->
 
 ## Using vs Simultaneously Using (aka DSDA vs DSDS)
 
+> [!NOTE] Any type of sim
+> This section talks about sims referring to both physical sims and eSims
+
 DSDS: Dual Sim Dual Standby: Device supports 2 sims and both are active and registered with the mobile network but only **one** can be used at a time. You can't call off one sim and sms off another at the same time. More commonly, you can't use data off one sim and make calls off the sim at the same time. Most devices support DSDS.
 
 DSDA: Dual Sim Dual Active: Both sims can be used simultaneously. Data off of one, calling off of another? Yes. Dual data connections? Technically use but I wouldn't *automatically* expect your <ins>bandwidth</ins> to double and I doubt your phone will be able start <ins>bonding</ins> the two links together. Your milage may vary.
+
+[More Info](https://www.qualcomm.com/news/onq/2023/05/unleashing-full-potential-for-simultaneous-5g-cellular-connections-qualcomm-dsda-gen-2-with-dual-data#:~:text=The%20evolution%20of%205G%20DSDA%C2%A0)
 
 ## Data Saving Tips
 
 ### Android Users
 
 * Turn on Data saver (Basic)
-* Turn off Sync (intermediate)
+* Turn off Sync (Intermediate)
+* Turn off data roaming (you can do this per sim if using dual sim)
 
 ### Apple Users
+
+* Turn off data roaming (you can do this per sim if using dual sim)
+* Turn off background sync
+
+### Apps allowed to use Cellular data
+
+* Some apps may be enabled to use cellular data instead of just wifi.
+* You should reconsider this when roaming since your data limits/allowances may be different.
+  * eg: Perhaps you don't need to stream spotify, you can just use what is offline.
+* Apple: [Use mobile/cellular data on your iPhone or iPad](https://support.apple.com/en-us/109323) - under *View how much data you're using* you can disable apps from using cellular data.
