@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-02-28T01:40:10.650Z
+lastmod: 2025-02-28T02:22:54.077Z
 tags:
     - Language
     - References
@@ -32,6 +32,7 @@ tags:
     * [You can add a header](#you-can-add-a-header)
   * [Markdown Lint Exclusions](#markdown-lint-exclusions)
   * [Bug in Markdown all in one](#bug-in-markdown-all-in-one)
+  * [VScode Underline](#vscode-underline)
   * [Useless by cool](#useless-by-cool)
     * [ASCII STL](#ascii-stl)
 <!--- cSpell:enable --->
@@ -242,6 +243,10 @@ for an example of this refer to [VSCode Settings and Extensions](vscode-settings
 When using the [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) extension in VS Code, and using the Table of Contents, it may do weird things if you have an intended code block inside an ordered list if the intending is not perfect.
 
 <https://github.com/tlourey/tlourey.github.io/commit/1ce91e004eca6ccb70b683c0e50895acdb879ea2> shows the slight intending change of the code block fixing up the table of contents.
+
+### VScode Underline
+
+VSCode doesn't have a keyboard shortcut for underline, at least not for markdown. You can try my snippet and keyboard shortcut from [VSCode Settings and Extensions](vscode-settings-and-extensions.md#ctrlu-underline-in-markdown)
 
 ### Useless by cool
 
