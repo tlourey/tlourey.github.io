@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-25T00:57:23.440Z
-lastmod: 2025-02-25T11:01:29.713Z
+lastmod: 2025-02-28T11:48:11.780Z
 tags:
     - MSFS
     - References
@@ -21,7 +21,10 @@ preview: ""
 * [Planing tools](#planing-tools)
 * [Keyboard Shortcut References](#keyboard-shortcut-references)
 * [ThrustMaster T.Flight HOTAS One References](#thrustmaster-tflight-hotas-one-references)
+  * [Custom Keybindings](#custom-keybindings)
+* [MSFS Links](#msfs-links)
 <!--- cSpell:enable --->
+<!--- cSpell:ignore MSFS HOTAS --->
 
 ## Planing tools
 
@@ -41,3 +44,15 @@ preview: ""
 <https://support.thrustmaster.com/en/product/t-flight-hotas-one-en/#games%20settings>\
 <https://ts.thrustmaster.com/download/pictures/Mappings/Mapping-TFlightHotasOne_MFS_2.png> - ThrustMaster Mappings for MSFS on PC and Xbox\
 <https://ts.thrustmaster.com/download/pictures/Mappings/Mapping-TFlightHotasOne-MFS.png> - ThrustMaster mapping for MSFS on PC Only
+
+### Custom Keybindings
+
+X = After Burner
+Y = Landing Gear
+Prev = Parking Brake
+B5/15 = Engine Off
+Next = Check list (2020)/EFB (2024)
+
+## MSFS Links
+
+<https://www.flightsimulator.com/aircraft-manuals/>
