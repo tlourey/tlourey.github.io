@@ -19,6 +19,7 @@ plugins:
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-archives
+  - jekyll-target-blank
 whitelist:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
@@ -26,6 +27,7 @@ whitelist:
   - jekyll-feed
   - jekyll-remote-theme
   - jekyll-archives
+  - jekyll-target-blank
 defaults:
     - scope:
         path: "assets/images"
