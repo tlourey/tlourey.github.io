@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-02-28T02:22:54.077Z
+lastmod: 2025-03-01T01:22:48.811Z
 tags:
     - Language
     - References
@@ -50,6 +50,7 @@ Super useful:\
 <https://docs.github.com/en/get-started/writing-on-github>\
 
 <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/quickstart-for-writing-on-github> - i can't remember if the quick start was useful or not\
+<https://github.com/github/markup/> - This library is the first step of a journey that every markup file in a repository goes on before it is rendered on GitHub.com\
 
 Less useful but still good:
 
