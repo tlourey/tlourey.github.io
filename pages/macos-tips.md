@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-25T04:41:08.679Z
-lastmod: 2025-02-27T14:09:31.530Z
+lastmod: 2025-02-28T18:13:16.712Z
 tags:
     - MacOS
     - Tips
@@ -19,6 +19,7 @@ preview: ""
 <!--- cSpell:disable --->
 * [Mouse Scrolling](#mouse-scrolling)
 * [Time doesn't update](#time-doesnt-update)
+* [Other Tips](#other-tips)
 <!--- cSpell:enable --->
 
 ## Mouse Scrolling
@@ -46,3 +47,7 @@ Caveats:
 
 * Issue with MacOS Sonoma
 * Should be fixed in 14.5 but I had it occur again on 14.7
+
+## Other Tips
+
+<https://saurabhs.org/macos-tips>
