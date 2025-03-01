@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-11T11:50:00
-lastmod: 2025-02-28T18:16:51.373Z
+lastmod: 2025-03-01T13:40:35.507Z
 tags:
     - Commands
     - MacOS
@@ -28,8 +28,8 @@ tags:
 
 `ifconfig`
 `netstat -nr -f inet`: show the routing table (ipv4)
-> [!NOTE]
-> **netstat**\
+
+> [!NOTE] netstat
 > netstat is a cross platform command existing in Unix, Linux, Mac and Windows but nearly all of them have different options/switches/parameters
 `scutil --dns | grep 'nameserver'`: Show the name servers
 

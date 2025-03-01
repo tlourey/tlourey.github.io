@@ -3,17 +3,17 @@ title: Azure Monitor Data Collection Rules for Log Analytics
 description: Ripe and ready for TLAs and FLTLAs
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 draft: true
-lastmod: 2025-02-02T13:21:22.412Z
+lastmod: 2025-03-01T13:32:41.479Z
 date: 2025-01-15T01:07:00
 tags:
-  - Azure
-  - Azure_Log_Analytics
-  - Monitoring
-  - References
+    - Azure
+    - Azure_Log_Analytics
+    - Monitoring
+    - References
 fmContentType: pages
 ---
 
@@ -92,8 +92,7 @@ This didn't work for me... So, I tried this:
 
 Because `DeviceVendor` is part of the [CEF Standard](misc-references.md#cef). More details in an upcoming post.
 
-> [!TIP]
-> **Microsoft-CommonSecurityLog**\
+> [!TIP] Microsoft-CommonSecurityLog
 > My Microsoft-CommonSecurityLog was underlined yellow and saying it wasn't valid. It still accepted it and it still worked. This may have been an issue since I moved my sentinel-enabled LAW around. I also noted that when typing it in I had to add a space that before the <!--- cSpell:disable --->`transformkql`<!--- cSpell:enable ---> came up in the drop down so I knew what I was doing was 'somewhat' valid.
 
 Notes about KQL for Transformations: [Supported KQL features in Azure Monitor transformations](https://learn.microsoft.com/en-us/azure/azure-monitor/essentials/data-collection-transformations-kql)
