@@ -11,7 +11,7 @@ tags:
     - References
 fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-02-20T07:45:58.088Z
+lastmod: 2025-03-01T05:30:04.114Z
 ---
 
 
@@ -129,7 +129,8 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 
 ## People
 
-<https://merill.net/> / <https://github.com/merill> - Big Azure AD / Entra Guy. Makes a LOT of tools, sites and references that are very useful. Plus a great entra ID newsletter and I think is blog is good too!
+<https://merill.net/> / <https://github.com/merill> - Big Azure AD / Entra Guy. Makes a LOT of tools, sites and references that are very useful. Plus a great entra ID newsletter and I think is blog is good too!\
+<https://entra.news/> - the newsletter from the guy above.
 
 ## Misc Misc Misc
 
