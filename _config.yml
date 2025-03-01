@@ -18,12 +18,14 @@ plugins:
   - jekyll-optional-front-matter
   - jekyll-sitemap
   - jekyll-feed
+  - jekyll-archives
 whitelist:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-remote-theme
+  - jekyll-archives
 defaults:
     - scope:
         path: "assets/images"
