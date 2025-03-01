@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-02-28T03:27:08.970Z
+lastmod: 2025-03-01T01:35:13.778Z
 ---
 
 <!--- cSpell:disable --->
@@ -54,6 +54,8 @@ lastmod: 2025-02-28T03:27:08.970Z
 [![Picture](/assets/images/homer-water-console.gif)](/assets/images/homer-water-console.gif)\
 <https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fndt668s03bcd1.gif>\
 <https://i.redd.it/ndt668s03bcd1.gif>
+
+[Top](#content)
 
 ## Dumpster fire
 
@@ -211,3 +213,5 @@ Low Quality:
 
 Excellent Quality:
 [![Picture](/assets/images/excellent-bait.png)](/assets/images/excellent-bait.png)
+
+[Top](#content)
