@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-03-01T01:08:09.773Z
+lastmod: 2025-03-01T01:34:52.361Z
 tags:
     - References
     - Tools
@@ -20,6 +20,7 @@ preview: ""
 <!--- cSpell:disable --->
 * [Time and date and clocks](#time-and-date-and-clocks)
 * [Tech News](#tech-news)
+* [Web Development](#web-development)
 * [Weather](#weather)
   * [Weather Sites](#weather-sites)
   * [Misc Weather Sites](#misc-weather-sites)
@@ -40,6 +41,11 @@ preview: ""
 
 <https://hckrnews.com/>\
 <https://feedly.com/i/my/me>
+
+## Web Development
+
+**<https://www.w3schools.com/>**\
+<https://csszengarden.com/>
 
 ## Weather
 
