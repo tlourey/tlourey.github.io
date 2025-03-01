@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-03-01T01:22:48.811Z
+lastmod: 2025-03-01T13:31:44.907Z
 tags:
     - Language
     - References
@@ -39,7 +39,7 @@ tags:
 
 (TOC might be slightly weird)
 
-> [!TIP]
+> [!TIP] TIP
 > **Bold** means highly used
 
 ## References
@@ -94,7 +94,7 @@ Less useful but still good:
 
 From: <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/creating-and-highlighting-code-blocks#syntax-highlighting>
 
-> [!TIP]
+> [!TIP] TIP
 > When you create a fenced code block that you also want to have syntax highlighting on a GitHub Pages site, use lower-case language identifiers. For more information, see [About GitHub Pages and Jekyll](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#syntax-highlighting).
 
 > GitHub use [Linguist](https://github.com/github-linguist/linguist) to perform language detection and to select [third-party grammars](https://github.com/github-linguist/linguist/blob/main/vendor/README.md) for syntax highlighting. You can find out which keywords are valid in the [languages YAML file](https://github.com/github-linguist/linguist/blob/main/lib/linguist/languages.yml).
@@ -103,7 +103,7 @@ From: <https://docs.github.com/en/get-started/writing-on-github/working-with-adv
 
 <https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts>
 
-> [!IMPORTANT]
+> [!IMPORTANT] IMPORTANT
 > Alerts on Github pages: Alerts don't work on github pages but they do when reading readme.md in an github repo, but it doesn't seem they work when viewing various other markdown files.
 
 #### Issue with Alert Titles
@@ -177,7 +177,7 @@ A footnote can also have multiple lines[^2].
   This is a second line.
 ```
 
-> [!NOTE]
+> [!NOTE] NOTE
 > The position of a footnote in your Markdown does not influence where the footnote will be rendered. You can write a footnote right after your reference to the footnote, and the footnote will still render at the bottom of the Markdown. Footnotes are not supported in wikis.
 
 ### Creating diagrams
@@ -225,8 +225,7 @@ You can add an image or a code block, too.
 
 </details>
 
-> [!NOTE]
-> **Theme**\
+> [!NOTE] Theme
 > the above may not render correctly depending on the Jekyll theme in use but if you view it via github itself, it does seem to render correctly.
 
 <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/organizing-information-with-collapsed-sections>
