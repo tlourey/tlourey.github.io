@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-01T13:39:48.495Z
+lastmod: 2025-03-02T01:21:16.658Z
 tags:
     - Commands
     - Linux
@@ -47,6 +47,7 @@ tags:
 watch
 less
 wc
+column
 ```
 
 ### TMUX
