@@ -43,7 +43,7 @@
         <div class="column">
           <h1>Pages</h1>
           <p><a href="https://tlourey.github.io/pages/">View all pages</a><br>
-            {% assign doclist = site.pages | sort: 'title' %}
+            {% assign doclist = site.pages | sort: 'lastmod' %}
             <ul>
             {% for item in doclist %}
               {% if item.type == "pages" %}
