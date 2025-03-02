@@ -28,6 +28,12 @@ whitelist:
   - jekyll-remote-theme
   - jekyll-archives
   - jekyll-target-blank
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
 defaults:
     - scope:
         path: "assets/images"
