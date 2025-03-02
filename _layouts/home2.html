@@ -41,9 +41,9 @@
       {{ content }}
       <div class="row">
         <div class="column">
-          <h1>Pages</h1>
-          <p><a href="https://tlourey.github.io/pages/">View all pages</a><br>
-            {% assign doclist = site.pages | sort: 'lastmod' %}
+          <h1>Pages (Last Modified)</h1>
+          <p><a href="https://tlourey.github.io/pages/">View all pages and more details</a><br>
+            {% assign doclist = site.pages | sort: 'lastmod' | reverse %}
             <ul>
             {% for item in doclist %}
               {% if item.type == "pages" %}
