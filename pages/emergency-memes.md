@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-03-01T01:35:13.778Z
+lastmod: 2025-03-04T01:58:56.218Z
 ---
 
 <!--- cSpell:disable --->
@@ -47,6 +47,8 @@ lastmod: 2025-03-01T01:35:13.778Z
 * [My last fuck on fire](#my-last-fuck-on-fire)
 * [Field of Fucks](#field-of-fucks)
 * [Quality Bait](#quality-bait)
+* [Cool Story Bro](#cool-story-bro)
+* [Are you high](#are-you-high)
 <!--- cSpell:enable --->
 
 ## Homer Simpsons Fire on console
@@ -213,5 +215,13 @@ Low Quality:
 
 Excellent Quality:
 [![Picture](/assets/images/excellent-bait.png)](/assets/images/excellent-bait.png)
+
+## Cool Story Bro
+
+[![Picture](/assets/images/cool-story-bro.jpg)](/assets/images/cool-story-bro.jpg)
+
+## Are you high
+
+[![Picture](/assets/images/are-you-high-carmen-barton.gif)](/assets/images/are-you-high-carmen-barton.gif)
 
 [Top](#content)
