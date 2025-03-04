@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-02T01:21:16.658Z
+lastmod: 2025-03-04T01:32:02.582Z
 tags:
     - Commands
     - Linux
@@ -19,6 +19,7 @@ tags:
 * [Terminal Stuff](#terminal-stuff)
   * [TMUX](#tmux)
 * [Files](#files)
+  * [Compressing and Decompressing files](#compressing-and-decompressing-files)
 * [Hardware Info](#hardware-info)
 * [Storage](#storage)
   * [MDADM](#mdadm)
@@ -83,6 +84,13 @@ ls -lahS 192.168.1.10*
 #If you have one large log file and want to see what day had more log entries try:
 #Linux - Search (grep) for number of lines in log file per day
 ```
+
+### Compressing and Decompressing files
+
+`tar -zcvf <<archive name>>.tgz files-to-compress`\
+`tar -zxvf <<archive name>> location-to-extract`
+
+* [ ] add in gzip / gunzip
 
 ## Hardware Info
 
