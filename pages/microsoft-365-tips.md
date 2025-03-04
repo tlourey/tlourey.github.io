@@ -3,22 +3,22 @@ title: Microsoft 365 Tips
 description: Bottomless pit
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 draft: true
 tags:
-  - Entra
-  - Exchange
-  - Microsoft365
-  - Office
-  - OneDrive
-  - References
-  - SharePoint
-  - Tips
+    - Entra
+    - Exchange
+    - Microsoft365
+    - Office
+    - OneDrive
+    - References
+    - SharePoint
+    - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-02-01T06:19:57.667Z
+lastmod: 2025-03-01T06:04:04.417Z
 ---
 
 <!--- cSpell:disable --->
@@ -32,6 +32,7 @@ lastmod: 2025-02-01T06:19:57.667Z
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
+* [Entra](#entra)
 * [Diag Tools](#diag-tools)
 <!--- cSpell:enable --->
 
@@ -122,6 +123,21 @@ Also:
 ## DSC
 
 <https://microsoft365dsc.com/>
+
+## Entra
+
+> [!NOTE] Size
+> This section may become big enough that it will become its own page.
+
+<https://entra.news/>\
+<https://github.com/merill/awesome-entra> - Github awesome list for Entra\
+<https://azuread.github.io/MSIdentityTools/>\
+<https://graphxray.merill.net/>
+
+<https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/governance/verify-first-party-apps-sign-in> Verify First Party App ID's\
+<https://github.com/MicrosoftDocs/entra-docs/blob/main/.docutune/dictionaries/known-guids.json> - Github List of known IDs\
+<https://github.com/merill/microsoft-info/> - contains app GUIDs and permission GUIDs\
+<https://raw.githubusercontent.com/merill/microsoft-info/main/_info/MicrosoftApps.json>
 
 ## Diag Tools
 

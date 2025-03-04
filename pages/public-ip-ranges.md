@@ -2,15 +2,15 @@
 title: Public IP Ranges
 description: Public IP Ranges to note and their references
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:34:00
-lastmod: 2025-01-24T08:18:18.481Z
+lastmod: 2025-03-02T01:27:23.966Z
 tags:
-  - Networks
-  - References
+    - Networks
+    - References
 ---
 
 
@@ -54,13 +54,15 @@ tags:
 
 ## Apple
 
-* <https://support.apple.com/en-au/101555>
+* [Use Apple products on enterprise networks](https://support.apple.com/en-au/101555)
+* [Apple Push Notification Services (APNS) Ranges](https://support.apple.com/en-au/102266#:~:text=The%20APNs%20servers%20use%20load,which%20is%20assigned%20to%20Apple)
 
 ## Google
 
 * <https://support.google.com/a/answer/10026322?hl=en>
 * <https://www.gstatic.com/ipranges/goog.json>
 * <https://www.gstatic.com/ipranges/cloud.json>
+* [FCM IP Ranges Answer](https://stackoverflow.com/questions/45529020/android-fcm-what-are-the-ips-and-ports-for-firewall)
 
 ## Cloudflare
 

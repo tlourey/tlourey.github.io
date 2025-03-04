@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-02-02T13:44:14.006Z
+lastmod: 2025-03-04T01:37:54.498Z
 tags:
     - Commands
     - Linux
@@ -19,6 +19,7 @@ tags:
 * [Terminal Stuff](#terminal-stuff)
   * [TMUX](#tmux)
 * [Files](#files)
+  * [Compressing and Decompressing files](#compressing-and-decompressing-files)
 * [Hardware Info](#hardware-info)
 * [Storage](#storage)
   * [MDADM](#mdadm)
@@ -47,10 +48,11 @@ tags:
 watch
 less
 wc
+column
 ```
 
 ### TMUX
-
+<!-- cspell:ignore Byobu -->
 * [ ] TMUX
 * [ ] Byobu
 
@@ -82,6 +84,27 @@ ls -lahS 192.168.1.10*
 #If you have one large log file and want to see what day had more log entries try:
 #Linux - Search (grep) for number of lines in log file per day
 ```
+
+### Compressing and Decompressing files
+
+`tar -zcvf <<archive name>>.tgz files-to-compress`\
+`tar -zxvf <<archive name>>.tgz location-to-extract`
+
+Options:
+
+* -c: create an archive
+* -x: extract from an archive
+* -f: filename of archive
+* -v: verbose
+* -z: use Gzip compression
+* -t: list files in archive
+* -r: updates or adds files to existing archive (without recreating it)
+* -u: add files to existing archive
+* -A: move multiple archives into one
+* -j: use bzip2 (.tar.bz2)
+* -W: verify extension
+
+* [ ] add in gzip / gunzip commands
 
 ## Hardware Info
 
@@ -120,7 +143,7 @@ REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 * `sudo less /var/log/boot.log`: boot log
 * `cat /var/log/apt/history.log`: Apt history
 
-Some Tips to test/evulate syslog message via the network are in [Microsoft Sentinel Tips](/pages/microsoft-sentinel-tips.md#syslog-connector-testing)
+Some Tips to test/evaluate syslog message via the network are in [Microsoft Sentinel Tips](/pages/microsoft-sentinel-tips.md#syslog-connector-testing)
 
 ## Cron
 
@@ -151,8 +174,8 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 > Display account status information. The status information consists of 7 fields. The first field is the user's login name. The second field indicates if the user account has a locked password (L), has no password (NP), or has a usable password (P). The third field gives the date of the last password change. The next four fields are the minimum age, maximum age, warning period, and inactivity period for the password. These ages are expressed in days.
 
 `sudo passwd -l USERNAME`: Lock out a users password. Doesn't disable account, just doesn't allow password.
-> [!CAUTION]
-> **Use `passwd -l` with caution**\
+
+> [!CAUTION] Use `passwd -l` with caution**
 > This is not the best way to not get prompted for sudo. Because you can't run sudo with a locked password unless you have a no password entry. Use with caution if you don't have a way to roll back!
 
 `sudo passwd -u USERNAME`: unlock password.\
@@ -204,7 +227,7 @@ TBC
 `sudo systemctl daemon-reload`: scan for new or changed units\
 `sudo systemctl reload mdcheck_start.service`: reloads a unit and its configuration\
 `sudo systemctl reenable mdcheck_start.service`: disables and re-enableds a unit (useful if units \[install\] section has changed)\
-`sudo systemctl mask mdcheck_start.service`: Mask a unit to make it impossible to start both manually and as a dependancy, which makes masking dangerious. It makes a sim link of the unit file to /dev/null meaning it will never start.\
+`sudo systemctl mask mdcheck_start.service`: Mask a unit to make it impossible to start both manually and as a dependency, which makes masking dangerous. It makes a sim link of the unit file to /dev/null meaning it will never start.\
 `sudo systemctl unmask mdcheck_start.service`: unmask a unit (there are more steps)\
 `systemctl show --property=UnitPath`: show paths to unit files\
 The main Unit paths are (listed from lowest to highest precedence):
@@ -245,9 +268,9 @@ Time and date stuff if chrony or NTPD isn't installed. Taken from <https://docum
 
 `timedatectl status`: check the timedatectl status\
 `timedatectl list-timezones`: show the timezones\
-`sudo timedatectl set-timezone Australia/Sydney`: Sets the timezone to Australia/Sydney\
-> [!TIP]
-> **Consider Distribution Rec Method**\
+`sudo timedatectl set-timezone Australia/Sydney`: Sets the timezone to Australia/Sydney
+
+> [!TIP] Consider Distribution Rec Method
 > Eg: Ubuntu usually recommends `sudo dpkg-reconfigure tzdata`
 
 `sudo timedatectl set-local-rtc 0`: Maintains the RTC in UTC. set to 1 to maintain in local timezone.
@@ -261,14 +284,13 @@ DNS Status: `resolvectl status`
 
 Refresh DNS Settings in an Azure VM: `sudo netplan try`
 
-> [!TIP]
-> **/etc/resolv.conf**\
+> [!TIP] /etc/resolv.conf
 > Starting is Ubuntu 20, resolv.conf file is a symbolic link of /run/systemd/resolve/stub-resolv.conf file. This makes sure that the updated DNS servers are reflected in /run/systemd/resolve/resolv.conf file. For more information, see [systemd-resolved](https://manpages.ubuntu.com/manpages/bionic/man8/systemd-resolved.service.8.html#:%7E:text=systemd%2Dresolved%20is%20a%20system,an%20LLMNR%20resolver%20and%20responder)
 
 DNS Config: To force systemd-resolved to use the name servers you want to: `sudo resolvectl dns eth0 8.8.4.4 8.8.8.8`
-> [!CAUTION]
->
-> I would only use this overide to change the order of servers
+
+> [!CAUTION] CAUTION
+> I would only use this override to change the order of servers
 > It most likely will ignore this commend if rebooted
 > i'm not sure if things like netplan apply would override it
 
@@ -305,8 +327,8 @@ Netplan:
 
 `ethtool`: Is a program that displays and changes Ethernet card settings such as auto-negotiation, port speed, duplex mode, and Wake-on-LAN. <https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/#ethernet-interface-settings>\
 `netstat`:
-> [!NOTE]
-> **netstat**\
+
+> [!NOTE] netstat
 > netstat is a cross platform command existing in Unix, Linux, Mac and Windows but nearly all of them have different options/switches/parameters
 
 `sudo netstat -tulpn` or `sudo netstat -lnptv`: show listening.\
