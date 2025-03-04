@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: false
 date: 2025-01-11T22:26:00
-lastmod: 2025-03-04T11:44:17.269Z
+lastmod: 2025-03-04T11:48:16.510Z
 tags:
     - Networks
     - References
@@ -16,6 +16,7 @@ tags:
 
 <!--- cSpell:disable --->
 * [CIDR Notes](#cidr-notes)
+* [VLSM](#vlsm)
 * [CGNAT Ranges](#cgnat-ranges)
 <!--- cSpell:enable --->
 
@@ -263,6 +264,10 @@ Convert Fahrenheit <> Celsius:
 
 last updated: 4jul02
 ```
+
+## VLSM
+
+[VLSM Workbook](/assets/pdfs/vlsm-workbook-v2.pdf)
 
 ## CGNAT Ranges
 
