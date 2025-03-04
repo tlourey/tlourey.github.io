@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T03:22:07.372Z
-lastmod: 2025-02-28T03:05:26.922Z
+lastmod: 2025-03-04T05:18:55.373Z
 tags:
     - Roaming
     - Travel
@@ -29,6 +29,7 @@ preview: ""
   * [Android Users](#android-users)
   * [Apple Users](#apple-users)
   * [Apps allowed to use Cellular data](#apps-allowed-to-use-cellular-data)
+  * [Prepare beforehand](#prepare-beforehand)
 <!--- cSpell:enable --->
 
 <!--
@@ -42,10 +43,11 @@ preview: ""
 * [x] * unlocked
 * [x] * versions
 * [x] 2 at once but 2 esims at once, only really moden
-* [ ] apps where you have set download over WiFi only off.
-* [ ] * yt music
-* [ ] * google photos
-* [ ] Vodafone roaming still
+* [x] apps where you have set download over WiFi only off.
+* [x] * yt music
+* [x] * google photos
+* [ ] Check your providers coverage
+* [ ] Vodafone roaming still one of the best
 * [ ] offline prep (spotify, yt music, yt, Netflix etc)
 * [x] esim providers I am aware that at least seem legit (have not used either so not a recommendation):
 * [x] * Sally (Nord VPN)
@@ -70,9 +72,9 @@ Question : WiFi calling - does that need roaming??
 
 ## Emergency calls
 
-* Not all countries use 911. Some use 000, 999 or something else. Ref: <https://en.wikipedia.org/wiki/Emergency_telephone_number>
+* Not all countries use 000 or 911. Some use 999 or something else. Ref: <https://en.wikipedia.org/wiki/Emergency_telephone_number>
 * 112 works in all countries (AFAIK) from mobile phones as its part of the GSM Standard. Ref: <https://en.wikipedia.org/wiki/112_(emergency_telephone_number)>
-* Don't **assume** VoIP, Skype, WiFi Calling, etc will be able to make emergency calls. It may do, but it may not.
+* Don't **assume** VoIP, Skype, WiFi Calling, etc will be able to make emergency calls. WiFi calling *may* do, but it may not.
 
 ## eSims
 
@@ -139,6 +141,20 @@ DSDA: Dual Sim Dual Active: Both sims can be used simultaneously. Data off of on
 ### Apps allowed to use Cellular data
 
 * Some apps may be enabled to use cellular data instead of just wifi.
-* You should reconsider this when roaming since your data limits/allowances may be different.
-  * eg: Perhaps you don't need to stream spotify, you can just use what is offline.
+* **You should reconsider this when roaming since your data limits/allowances may be different**. Eg:
+  * Perhaps you don't need to stream spotify, you can just use what is offline.
+  * Perhaps Netflix doesn't need to download and/or stream over Cellular.
 * Apple: [Use mobile/cellular data on your iPhone or iPad](https://support.apple.com/en-us/109323) - under *View how much data you're using* you can disable apps from using cellular data.
+* Android: [Reduce & manage mobile data usage](https://support.google.com/fi/answer/9458407?hl=en#:~:text=Check%20your%20mobile%20data%20usage)
+
+### Prepare beforehand
+
+In addition to removing cellular data access for apps, you can also tell a lot of them to download things before you go offline. eg:
+
+* You can tell spotify to download some playlists.
+* You can get Netflix to download a show and its espoides (watch out for smart downloads if you have haven't followed the instructions in [Apps allowed to use Cellular data](#Apps allowed to use Cellular data))
+* You can tell Google maps the area you would like to have offline maps for an area you are navigating too
+* Review / consider the settings for Google Phones or iCloud Photos.
+
+> [!IMPORTANT] Backups
+> I'm not saying you should disable backups on device, but you should consider what would be the most important data for you to backup while away. In most cases the photos are often the most important thing people want to backup while away but it may be better to leave the backup enabled, don't have backups over cellular then make sure you can connect to a Wi-Fi network and then run the backup there. Or consider getting a seperate sim.
