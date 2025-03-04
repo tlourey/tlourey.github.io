@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-04T06:20:45.740Z
+lastmod: 2025-03-04T22:56:39.559Z
 tags:
     - Commands
     - Linux
@@ -259,7 +259,7 @@ TBC
 `sudo systemctl status mdcheck_start.service` check the status of a service\
 `sudo systemctl restart mdcheck_start.service` restarts a service now\
 `sudo systemctl stop mdcheck_start.service` stops a service now\
-`sudo systemctl start mdcheck_start.service` starts a service now\
+`sudo systemctl start mdcheck_start.service` starts a service now. Can also be used to run a timer manually unless timer is configured with `RefuseManualStart=yes` or `RefuseManualStop=yes`\
 `sudo systemctl disable mdcheck_start.service` prevents a service from running at startup\
 `sudo systemctl enable mdcheck_start.service` allows a service to run at startup\
 `sudo systemctl enable --now mdcheck_start.service` allows a service to run at startup and also starts it now\
