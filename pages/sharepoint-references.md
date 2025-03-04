@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-02-27T00:01:25.673Z
+lastmod: 2025-03-01T13:43:10.095Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -139,7 +139,7 @@ Also remember each site has its own regional settings in Site settings which als
 
 <https://support.microsoft.com/en-au/office/target-content-to-a-specific-audience-on-a-sharepoint-site-68113d1b-be99-4d4c-a61c-73b087f48a81>
 
-> [!TIP]
+> [!TIP] TIP
 > Audience Targeting doesn't work with SharePoint groups, only AD, AAD, M365 etc
 
 ## Styling and Theming
@@ -180,14 +180,12 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 <https://learn.microsoft.com/en-us/powershell/sharepoint/sharepoint-online/connect-sharepoint-online?view=sharepoint-ps>\
 <https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/?view=sharepoint-ps>
 
-> [!TIP]
-> **Gallery Module Easier**\
+> [!TIP] Gallery Module Easier
 > Rather than download and install the MSI its easier to install and manage the SharePoint Online PowerShell Module via PowerShell Gallery
 
 #### Install SharePoint Online PowerShell
 
-> [!TIP]
-> **PS5 not PS7**\
+> [!TIP] PS5 not PS7
 > this module only seems to work in PS5/Windows PowerShell.
 
 ```powershell
@@ -204,7 +202,7 @@ With MFA:
 
 `Connect-SPOService -Url https://contoso-admin.sharepoint.com`
 
-> [!NOTE]
+> [!NOTE] NOTE
 > There is a known issue between the SharePoint Online Management Shell module and SharePoint Client Components SDK where the module will fail to load if both are installed on the same computer. If you encounter this issue, uninstall the SharePoint Client Components SDK.
 
 ### PnP PowerShell
@@ -226,8 +224,7 @@ Import-Module PnP.PowerShell
 Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [yourtennantnamehere].onmicrosoft.com -Interactive
 ```
 
-> [!TIP]
-> **Whats in a name**\
+> [!TIP] Whats in a name
 > You can change the name away from PnP Rocks to something else if you want just note it and the application id down.
 
 #### Connecting
@@ -273,7 +270,7 @@ More Info:\
 <https://learn.microsoft.com/en-us/sharepoint/change-external-sharing-site>\
 <https://learn.microsoft.com/en-us/sharepoint/change-default-sharing-link>
 
-> [!NOTE]
+> [!NOTE] NOTE
 > To change the default link type for a Teams private or shared channel site, you must use the [Set-SPOSite](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps) PowerShell cmdlet.
 
 ## Site Collection Features

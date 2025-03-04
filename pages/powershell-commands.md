@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-02-02T13:45:24.412Z
+lastmod: 2025-03-01T13:43:37.441Z
 tags:
     - Commands
     - Language
@@ -59,7 +59,7 @@ draft: true
 ### Commands and Help
 
 `get-command`:\
-`get-commmand -module <Modulemame>`:\
+`get-command -module <ModuleName>`:\
 `get-help commandname`:\
 `get-help commandname -full`:\
 `get-help commandname -detailed`:\
@@ -329,8 +329,7 @@ Search what permissions are on a particular mailbox
 Get-MailboxPermission -Identity john.doe@domain.com
 ```
 
-> [!WARNING]
-> **Queries against all mailboxes**\
+> [!WARNING] Queries against all mailboxes
 > The below queries, unless filtered run across all mailboxes. These queries may take some time to run.
 
 Search if a particular personal has access to any mailboxes
@@ -440,9 +439,8 @@ $mac = '01-23-45-67-89-AB';
 
 Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https://learn.microsoft.com/en-au/powershell/module/remotedesktop/)
 
-> [!TIP]
-> **Old Query Commands**\
-> Check the [old query commands](windows-commands.md)
+> [!TIP] Old Query Commands
+> Check the [old query commands](windows-commands.md#query-commands)
 
 ## SharePoint PowerShell
 
