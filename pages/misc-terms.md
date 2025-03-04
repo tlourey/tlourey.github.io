@@ -3,15 +3,15 @@ title: Misc Terms
 description: Terms, Definitions, Abbreviations
 published: true
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 date: 2025-02-20T06:58:16.807Z
-lastmod: 2025-02-27T14:10:01.100Z
+lastmod: 2025-03-04T11:22:33.500Z
 tags:
-    - References
-    - Tips
-draft: true
+  - References
+  - Tips
+isdraft: true
 fmContentType: pages
 preview: ""
 ---

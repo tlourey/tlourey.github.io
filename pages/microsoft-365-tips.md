@@ -3,22 +3,22 @@ title: Microsoft 365 Tips
 description: Bottomless pit
 published: true
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 tags:
-    - Entra
-    - Exchange
-    - Microsoft365
-    - Office
-    - OneDrive
-    - References
-    - SharePoint
-    - Tips
+  - Entra
+  - Exchange
+  - Microsoft365
+  - Office
+  - OneDrive
+  - References
+  - SharePoint
+  - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-01T06:04:04.417Z
+lastmod: 2025-03-04T11:22:33.657Z
 ---
 
 <!--- cSpell:disable --->

@@ -3,16 +3,16 @@ title: Misc Sites
 description: TBA
 published: true
 categories:
-    - Tech
-    - NotTech
+  - Tech
+  - NotTech
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-03-04T04:18:17.064Z
+lastmod: 2025-03-04T11:22:33.462Z
 tags:
-    - References
-    - Tools
-draft: true
+  - References
+  - Tools
+isdraft: true
 fmContentType: pages
 preview: ""
 ---

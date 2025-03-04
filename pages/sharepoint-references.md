@@ -3,15 +3,15 @@ title: SharePoint References
 description: '"SharePoint is old pig in lipstick, wearing trendy clothes and trying to fit in with the young kids" - Me'
 published: true
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 tags:
-    - SharePoint
-    - References
+  - SharePoint
+  - References
 fmContentType: pages
-lastmod: 2025-03-01T13:43:10.095Z
+lastmod: 2025-03-04T11:22:33.653Z
 date: 2025-01-28T05:47:28.059Z
 ---
 

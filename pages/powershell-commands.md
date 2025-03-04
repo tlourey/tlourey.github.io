@@ -2,18 +2,18 @@
 title: PowerShell Commands
 description: PowerShell Commands to remember
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-03-01T13:43:37.441Z
+lastmod: 2025-03-04T11:22:33.650Z
 tags:
-    - Commands
-    - Language
-    - PowerShell
-    - References
-draft: true
+  - Commands
+  - Language
+  - PowerShell
+  - References
+isdraft: true
 ---
 
 

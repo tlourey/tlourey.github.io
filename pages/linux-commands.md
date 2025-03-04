@@ -2,18 +2,18 @@
 title: Linux Commands
 description: Linux commands to remember
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-04T06:20:45.740Z
+lastmod: 2025-03-04T11:22:33.566Z
 tags:
-    - Commands
-    - Linux
-    - References
-draft: false
+  - Commands
+  - Linux
+  - References
+isdraft: false
 ---
 
 <!--- cSpell:disable --->

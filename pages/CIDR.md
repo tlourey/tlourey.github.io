@@ -6,9 +6,9 @@ categories:
   - Tech
 type: pages
 layout: pages
-draft: false
+isdraft: false
 date: 2025-01-11T22:26:00
-lastmod: 2025-01-19T14:19:38.790Z
+lastmod: 2025-03-04T11:22:33.474Z
 tags:
   - Networks
   - References

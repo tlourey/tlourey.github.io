@@ -5,10 +5,10 @@ categories:
   - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 published: true
 date: 2025-01-11T16:40:00
-lastmod: 2025-01-19T14:19:38.786Z
+lastmod: 2025-03-04T11:22:33.643Z
 tags:
   - Linux
   - References

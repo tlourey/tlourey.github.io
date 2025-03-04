@@ -3,16 +3,16 @@ title: Mac OS Commands
 description: Commands to remember for Mac OS
 published: true
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 date: 2025-01-11T11:50:00
-lastmod: 2025-03-01T13:40:35.507Z
+lastmod: 2025-03-04T11:22:33.561Z
 tags:
-    - Commands
-    - MacOS
-    - References
+  - Commands
+  - MacOS
+  - References
 ---
 
 

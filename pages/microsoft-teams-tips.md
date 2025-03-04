@@ -7,12 +7,12 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-02-02T10:36:10.884Z
+lastmod: 2025-03-04T11:22:33.627Z
 tags:
   - Microsoft365
   - Teams
   - Tips
-draft: true
+isdraft: true
 fmContentType: pages
 preview: ""
 ---
