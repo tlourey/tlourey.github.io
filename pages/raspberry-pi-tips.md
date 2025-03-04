@@ -9,8 +9,8 @@ layout: pages
 date: 2025-03-02T12:22:10.320Z
 lastmod: 2025-03-04T11:22:33.527Z
 tags:
+  - RaspberryPi
   - Tips
-  - Raspberry Pi
 isdraft: true
 fmContentType: pages
 mermaid: "false"

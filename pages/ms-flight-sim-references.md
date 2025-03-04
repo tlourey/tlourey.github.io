@@ -9,9 +9,9 @@ layout: pages
 date: 2025-02-25T00:57:23.440Z
 lastmod: 2025-03-04T11:22:33.504Z
 tags:
+  - FlightSim
   - MSFS
   - References
-  - Flight Sim
 isdraft: true
 fmContentType: pages
 preview: ""
