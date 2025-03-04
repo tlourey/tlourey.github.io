@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-04T04:51:08.958Z
+lastmod: 2025-03-04T06:20:45.740Z
 tags:
     - Commands
     - Linux
@@ -43,6 +43,10 @@ draft: false
   * [Network Reference](#network-reference)
 * [OpenSSL Commands](#openssl-commands)
   * [OpenSSL Links](#openssl-links)
+* [SSH](#ssh)
+* [SSH Client](#ssh-client)
+* [SSH Keys](#ssh-keys)
+  * [SSHD](#sshd)
 * [Misc System Commands](#misc-system-commands)
 <!--- cSpell:enable --->
 
@@ -425,6 +429,22 @@ Netplan:
 <http://jefferytay.wordpress.com/2010/12/09/converting-a-pfx-file-to-pem-and-key-via-openssl/>\
 
 To use a lower version of TLS (Results may vary in newer versions): <https://askubuntu.com/questions/1233186/ubuntu-20-04-how-to-set-lower-ssl-security-level>
+
+## SSH
+
+## SSH Client
+
+* [ ] add in common ssh client commands needed
+
+## SSH Keys
+
+* [ ] Add in SSH Keygen stuff
+* [ ] Add in ssh key copy stuff
+* [ ] Add in authorised keys file management tips
+
+### SSHD
+
+`sudo sshd -T`:Show sshd current **running** config
 
 ## Misc System Commands
 
