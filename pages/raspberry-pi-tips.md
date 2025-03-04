@@ -1,13 +1,13 @@
 ---
 title: Raspberry Pi Tips
 description: Tips and tricks for the PI.
-published: false
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-03-04T02:58:28.314Z
+lastmod: 2025-03-04T04:35:15.822Z
 tags:
     - Tips
     - Raspberry Pi
