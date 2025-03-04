@@ -39,7 +39,7 @@
         {
           "title": "Is in draft",
           "name": "draft",
-          "type": "draft"
+          "type": "boolean"
         },
         {
           "title": "Tags",
@@ -109,7 +109,7 @@
         {
           "title": "Is in draft",
           "name": "draft",
-          "type": "draft"
+          "type": "boolean"
         },
         {
           "title": "Tags",
@@ -192,7 +192,7 @@
         {
           "title": "Is in draft",
           "name": "draft",
-          "type": "draft"
+          "type": "boolean"
         },
         {
           "title": "Tags",
