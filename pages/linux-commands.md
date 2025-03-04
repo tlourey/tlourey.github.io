@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-04T01:32:02.582Z
+lastmod: 2025-03-04T01:37:54.498Z
 tags:
     - Commands
     - Linux
@@ -88,9 +88,23 @@ ls -lahS 192.168.1.10*
 ### Compressing and Decompressing files
 
 `tar -zcvf <<archive name>>.tgz files-to-compress`\
-`tar -zxvf <<archive name>> location-to-extract`
+`tar -zxvf <<archive name>>.tgz location-to-extract`
 
-* [ ] add in gzip / gunzip
+Options:
+
+* -c: create an archive
+* -x: extract from an archive
+* -f: filename of archive
+* -v: verbose
+* -z: use Gzip compression
+* -t: list files in archive
+* -r: updates or adds files to existing archive (without recreating it)
+* -u: add files to existing archive
+* -A: move multiple archives into one
+* -j: use bzip2 (.tar.bz2)
+* -W: verify extension
+
+* [ ] add in gzip / gunzip commands
 
 ## Hardware Info
 
