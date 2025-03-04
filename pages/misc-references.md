@@ -10,7 +10,7 @@ draft: true
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-04T06:32:28.514Z
+lastmod: 2025-03-04T22:29:13.599Z
 fmContentType: pages
 ---
 
@@ -102,7 +102,8 @@ Refer to [Markdown Tips](./markdown-tips.html)
 
 ## Linux
 
-Crontab: Best website for refining crontab timings: [Crontab.guru - The cron schedule expression generator](https://crontab.guru/) - more in [Linux Commands](linux-commands.md)
+Crontab: Best website for refining crontab timings: [Crontab.guru - The cron schedule expression generator](https://crontab.guru/) - more in [Linux Commands](linux-commands.md)\
+[Arch Linux Wiki](https://wiki.archlinux.org/title/Main_page) - Contains a lot more up to date resources for linux, even for non-arch users. I **don't** use arch by the way :grin:
 
 ### Debian Manuals
 
@@ -113,7 +114,10 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 
 ### Ubuntu Manuals
 
-**[Ubuntu Server Documentation](https://documentation.ubuntu.com/server/)**
+**[Ubuntu Server Documentation](https://documentation.ubuntu.com/server/)**\
+[Offical Ubuntu Documentation](https://help.ubuntu.com/) - older documentation landing portal\
+[Ubuntu Wiki](https://wiki.ubuntu.com/) - community edited, not well maintained.
+
 
 ## Microsoft Platforms
 
