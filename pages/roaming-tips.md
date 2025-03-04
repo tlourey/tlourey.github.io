@@ -3,17 +3,17 @@ title: Roaming Tips
 description: Tips and Tricks while roaming overseas
 published: false
 categories:
-    - Tech
-    - NotTech
+  - Tech
+  - NotTech
 type: pages
 layout: pages
 date: 2025-02-27T03:22:07.372Z
-lastmod: 2025-03-04T05:18:55.373Z
+lastmod: 2025-03-04T11:35:15.669Z
 tags:
-    - Roaming
-    - Travel
-    - Internet
-draft: true
+  - Roaming
+  - Travel
+  - Internet
+isdraft: true
 fmContentType: pages
 preview: ""
 ---

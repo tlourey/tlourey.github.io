@@ -3,14 +3,14 @@ title: Exchange Commands
 description: ""
 published: false
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 date: 2025-01-29T07:27:17.598Z
-lastmod: 2025-01-29T07:33:51.938Z
+lastmod: 2025-03-04T11:35:15.677Z
 tags:
-    - Exchange
-draft: true
+  - Exchange
+isdraft: true
 fmContentType: pages
 preview: ""
 ---

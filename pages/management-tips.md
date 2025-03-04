@@ -6,14 +6,14 @@ categories:
   - NotTech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 tags:
   - Communication
   - Management
   - TBA
   - Writing
 fmContentType: pages
-lastmod: 2025-01-26T04:36:47.523Z
+lastmod: 2025-03-04T11:35:15.666Z
 ---
 
 <!--- cSpell:disable --->

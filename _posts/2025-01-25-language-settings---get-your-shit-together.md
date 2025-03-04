@@ -1,19 +1,19 @@
 ---
 title: Language and Region Settings when not in USA
 date: 2025-01-25T06:19:32.138Z
-lastmod: 2025-01-28T14:36:25.043Z
+lastmod: 2025-03-04T11:35:15.658Z
 categories:
-    - Tech
+  - Tech
 description: Get your shit together
 published: false
-draft: true
+isdraft: true
 type: posts
 layout: posts
 preview: ""
 tags:
-    - Microsoft 365
-    - Language
-    - Rant
+  - Microsoft 365
+  - Language
+  - Rant
 fmContentType: posts
 ---
 

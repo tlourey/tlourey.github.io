@@ -5,12 +5,13 @@ categories: []
 description: STOP. There will be tears and there isn't a great answer. Read this for bad ideas
 published: false
 preview: ""
-draft: true
+isdraft: true
 tags:
   - Azure
   - Sentinel
 type: posts
 fmContentType: posts
+lastmod: 2025-03-04T11:35:15.650Z
 ---
 
 [home](/) [up](./)
