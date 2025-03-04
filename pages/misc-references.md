@@ -9,9 +9,9 @@ layout: pages
 draft: true
 tags:
     - References
-fmContenttype: pages
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-01T13:40:55.491Z
+lastmod: 2025-03-04T02:39:40.358Z
+fmContentType: pages
 ---
 
 
@@ -19,6 +19,7 @@ lastmod: 2025-03-01T13:40:55.491Z
 * [Standards](#standards)
   * [Networks](#networks)
   * [CIDR](#cidr)
+    * [VLSM](#vlsm)
   * [CEF](#cef)
   * [SMTP](#smtp)
   * [SNMP](#snmp)
@@ -55,7 +56,12 @@ lastmod: 2025-03-01T13:40:55.491Z
 
 ### CIDR
 
-[CIDR](CIDR.md)
+**[CIDR](CIDR.md)**\
+<https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>
+
+#### VLSM
+
+[VLSM Workbook](/assets/pdfs/vlsm-workbook-v2.pdf)
 
 ### CEF
 
@@ -125,7 +131,8 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 
 ## Networking
 
-<https://en.wikipedia.org/wiki/Captive_portal>
+<https://en.wikipedia.org/wiki/Captive_portal>\
+[Use Apple products on enterprise networks](https://support.apple.com/en-au/101555) - covers steps to complete and IP Ranges
 
 ## People
 
