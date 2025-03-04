@@ -79,7 +79,7 @@
 			"title": "type", "name": "type" 
 		},
 		{
-			"title": "draft", "name": "draft"
+			"title": "isdraft", "name": "isdraft"
 		},
 		{
 			"title": "published", "name": "published"

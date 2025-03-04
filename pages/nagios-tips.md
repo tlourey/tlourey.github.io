@@ -7,14 +7,14 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-02-26T13:02:33.000Z
+lastmod: 2025-03-04T11:37:21.058Z
 tags:
     - Monitoring
     - Nagios
     - SNMP
     - Tips
     - References
-draft: true
+isdraft: false
 fmContentType: pages
 ---
 
@@ -183,4 +183,4 @@ MIB Download: <https://www.downloads.netgear.com/files/GDC/M4300/M4300v12.0.19.4
 MIB Guide: <https://download.schneider-electric.com/files?p_Doc_Ref=SPD_ASTE-6Z5QEY_EN&p_enDocType=User+guide&p_File_Name=ASTE-6Z5QEY_R0_EN.pdf>\
 MIB Download: <https://www.se.com/au/en/download/document/APC_POWERNETMIB_452_EN/>
 
-APC Support for Generic UPS OID Standard Thing <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsDraft.knowledgeEditAsDraft=1/>\
+APC Support for Generic UPS OID Standard Thing <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsisdraft.knowledgeEditAsisdraft=1/>\

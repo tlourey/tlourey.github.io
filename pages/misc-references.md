@@ -6,11 +6,11 @@ categories:
     - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-04T22:29:13.599Z
+lastmod: 2025-03-04T23:00:35.380Z
 fmContentType: pages
 ---
 
@@ -80,7 +80,7 @@ fmContentType: pages
 
 <https://datatracker.ietf.org/doc/html/rfc1628>
 
-APC Support: <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsDraft.knowledgeEditAsDraft=1/>
+APC Support: <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsisdraft.knowledgeEditAsisdraft=1/>
 
 ### Markdown
 

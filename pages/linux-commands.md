@@ -8,12 +8,12 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-04T22:56:39.559Z
+lastmod: 2025-03-04T22:59:58.269Z
 tags:
     - Commands
     - Linux
     - References
-draft: false
+isdraft: false
 ---
 
 <!--- cSpell:disable --->

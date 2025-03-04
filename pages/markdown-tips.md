@@ -6,9 +6,9 @@ categories:
     - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: false
 date: 2025-01-17T13:40:00
-lastmod: 2025-03-04T22:28:28.341Z
+lastmod: 2025-03-04T23:00:21.284Z
 tags:
     - Language
     - References

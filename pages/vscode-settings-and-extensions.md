@@ -3,14 +3,14 @@ title: VSCode Settings and Extensions
 description: ""
 published: false
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-03-04T06:34:07.868Z
+lastmod: 2025-03-04T11:22:33.532Z
 tags:
-    - VSCode
-draft: true
+  - VSCode
+isdraft: true
 fmContentType: pages
 preview: ""
 ---

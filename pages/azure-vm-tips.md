@@ -3,15 +3,15 @@ title: Azure VM Tips
 description: Tips for setting up Azure VM's
 published: true
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 date: 2025-01-15T14:05:00
-lastmod: 2025-03-04T06:18:25.025Z
+lastmod: 2025-03-04T11:22:33.478Z
 tags:
-    - Azure
-    - Tips
+  - Azure
+  - Tips
 ---
 
 

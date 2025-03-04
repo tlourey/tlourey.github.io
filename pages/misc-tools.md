@@ -2,16 +2,16 @@
 title: Misc Tools
 description: And not enough toolboxes
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 published: true
 tags:
-    - Tools
+  - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-02-02T10:35:49.856Z
+lastmod: 2025-03-04T11:22:33.556Z
 ---
 
  <!--- cSpell:disable --->

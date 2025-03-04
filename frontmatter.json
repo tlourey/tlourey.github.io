@@ -38,7 +38,7 @@
         },
         {
           "title": "Is in draft",
-          "name": "draft",
+          "name": "isdraft",
           "type": "boolean"
         },
         {
@@ -107,8 +107,8 @@
           "isPreviewImage": true
         },
         {
-          "title": "Is in draft",
-          "name": "draft",
+          "title": "Is in isdraft",
+          "name": "isdraft",
           "type": "boolean"
         },
         {
@@ -190,8 +190,8 @@
           "isPreviewImage": true
         },
         {
-          "title": "Is in draft",
-          "name": "draft",
+          "title": "Is in isdraft",
+          "name": "isdraft",
           "type": "boolean"
         },
         {
@@ -264,8 +264,8 @@
   },
   "frontMatter.preview.host": "http://localhost:4000",
   "frontMatter.sponsors.ai.enabled": false,
-  "frontMatter.content.draftField": {
-    "name": "draft",
+  "frontMatter.content.isdraftField": {
+    "name": "isdraft",
     "type": "boolean"
   },
   "frontMatter.content.pageFolders": [

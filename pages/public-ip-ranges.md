@@ -7,10 +7,11 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:34:00
-lastmod: 2025-03-02T01:27:23.966Z
+lastmod: 2025-03-04T11:45:03.253Z
 tags:
     - Networks
     - References
+isdraft: false
 ---
 
 
@@ -25,6 +26,7 @@ tags:
 * [Cloudflare](#cloudflare)
 * [Omnissa](#omnissa)
 * [Salesforce](#salesforce)
+* [CGNAT](#cgnat)
 * [Misc Providers](#misc-providers)
 * [Misc Sources](#misc-sources)
 <!--- cSpell:enable --->
@@ -83,6 +85,12 @@ tags:
 * <https://ip-ranges.salesforce.com/ip-ranges.json>\
 * <https://help.tableau.com/current/online/en-us/to_keep_data_fresh.htm#new-ip-addresses-after-hyperforce-migration>\
 * <https://my.slack.com/help/urls>
+
+## CGNAT
+
+100.64.0.0 to 100.127.255.255
+
+<https://en.wikipedia.org/wiki/Carrier-grade_NAT>
 
 ## Misc Providers
 

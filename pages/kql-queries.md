@@ -6,7 +6,7 @@ categories:
   - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 tags:
   - Azure_Log_Analytics
   - Azure_Sentinel
@@ -14,7 +14,7 @@ tags:
   - References
 fmContenttype: pages
 date: 2025-01-18T16:51:00
-lastmod: 2025-01-27T15:52:09.319Z
+lastmod: 2025-03-04T11:22:33.490Z
 ---
 
  <!--- cSpell:disable --->
