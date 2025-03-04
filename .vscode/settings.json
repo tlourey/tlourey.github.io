@@ -67,7 +67,8 @@
             "allowed_elements": [
 				"details",
 				"summary",
-				"ins"
+				"ins",
+				"kbd"
 			]
         },
         "MD028": false

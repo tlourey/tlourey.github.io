@@ -10,7 +10,7 @@ draft: true
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-04T02:39:40.358Z
+lastmod: 2025-03-04T06:32:28.514Z
 fmContentType: pages
 ---
 
@@ -33,6 +33,7 @@ fmContentType: pages
 * [Azure](#azure)
   * [Conventions](#conventions)
 * [Networking](#networking)
+* [Windows](#windows)
 * [People](#people)
 * [Misc Misc Misc](#misc-misc-misc)
 <!--- cSpell:enable --->
@@ -133,6 +134,14 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 
 <https://en.wikipedia.org/wiki/Captive_portal>\
 [Use Apple products on enterprise networks](https://support.apple.com/en-au/101555) - covers steps to complete and IP Ranges
+
+## Windows
+
+<https://support.microsoft.com/en-au/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec> - Windows shortcuts. The ones you are normally forgetting are:
+
+* <kbd>Windows + A</kbd>: Action Centre
+* <kbd>Windows key + Ctrl + Shift + B</kbd>: Reset graphics driver
+* <kbd>CTRL+Esc</kbd>: Start menu
 
 ## People
 

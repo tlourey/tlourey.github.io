@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-02-28T02:22:34.396Z
+lastmod: 2025-03-04T06:34:07.868Z
 tags:
     - VSCode
 draft: true
@@ -200,7 +200,8 @@ Some rules may have parameters so you can customise how they are evaluated. See 
       "allowed_elements": [
         "details",
         "summary",
-        "ins"
+        "ins",
+        "kbd"
       ]
     },
  }
