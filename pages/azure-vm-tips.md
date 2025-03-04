@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-15T14:05:00
-lastmod: 2025-02-02T14:14:53.344Z
+lastmod: 2025-03-04T05:45:18.490Z
 tags:
     - Azure
     - References
@@ -16,12 +16,29 @@ tags:
 
 
 <!--- cSpell:disable --->
+* [Access Methods](#access-methods)
+* [Resetting VM Passwords](#resetting-vm-passwords)
 * [DNS Settings](#dns-settings)
 * [Multiple IP Addresses on Azure vms](#multiple-ip-addresses-on-azure-vms)
 * [Static Mac Address on Nic in Azure](#static-mac-address-on-nic-in-azure)
   * [First Time Setup](#first-time-setup)
   * [Using on 2nd machine](#using-on-2nd-machine)
 <!--- cSpell:enable --->
+
+## Access Methods
+
+[Azure PowerShell](https://learn.microsoft.com/en-au/powershell/azure/)\
+[Azure CLI](https://learn.microsoft.com/en-au/cli/azure/)\
+[Azure CloudShell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview) - Direct access links:
+
+* <https://shell.azure.com/>
+* <https://portal.azure.com>
+
+## Resetting VM Passwords
+
+<https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/reset-rdp#reset-the-local-administrator-account-password> - Reset Password using Azure Portal\
+<https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/reset-rdp#reset-the-local-administrator-account-password-1> - Reset Password using Azure PowerShell\
+<https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/reset-password> - Reset Linux Password using Azure CLI or Azure Cloudshell
 
 ## DNS Settings
 
