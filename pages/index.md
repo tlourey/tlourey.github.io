@@ -4,7 +4,7 @@ description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-lastmod: 2025-03-04T13:21:54.574Z
+lastmod: 2025-03-04T13:42:36.035Z
 published: true
 isdraft: false
 ---
@@ -32,14 +32,14 @@ isdraft: false
 {% assign siteCategories = siteCategories | sort %}
 
 {% for category in siteCategories %}
-{{ category }}:<br>
+<a name="{{ category }}">{{ category }}:<br>
 <ul>
   {% for page in site.pages %}
     {% for pagecategory in page.categories %}
       {% if pagecategory == category %}
         <li><a href="{{ page.url }}">{{ page.title }}</a> : {{ page.description }}
           (Tags: {% for tags in page.tags %}
-            {%- if forloop.length > 0 -%}{{ tags }}{% unless forloop.last %}, {% endunless -%} {% endif %}
+            {%- if forloop.length > 0 -%}<a href="https://tlourey.github.io/pages/tags.html#{{ tags }}">{{ tags }}</a>{% unless forloop.last %}, {% endunless -%} {% endif %}
           {%- endfor %})
         </li>
       {% endif %}
