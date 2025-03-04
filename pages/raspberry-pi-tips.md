@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-03-04T04:35:15.822Z
+lastmod: 2025-03-04T04:49:41.779Z
 tags:
     - Tips
     - Raspberry Pi
@@ -103,3 +103,5 @@ Some extra Commands inside bluetoothctl to help:\
 `pair <<INSERT MAC ADDRESS OF DEVICE>>`: shouldn't be needed for keyboard and mouse but may be.\
 `info <<INSERT MAC ADDRESS OF DEVICE>>`: show info about the device.\
 `power off`: turn the bluetooth controlled off (this isn't rfkill)
+
+More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.html>

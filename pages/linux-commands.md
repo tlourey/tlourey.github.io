@@ -8,11 +8,12 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-04T02:46:27.554Z
+lastmod: 2025-03-04T04:51:08.958Z
 tags:
     - Commands
     - Linux
     - References
+draft: false
 ---
 
 <!--- cSpell:disable --->
@@ -153,6 +154,8 @@ rfkill is part of [systemd](#systemd-links)
 
 > [!NOTE] NOTE
 > If its a keyboard it should come back with 6 digits to type into the keyboard. Type them and press enter
+
+More bluetoothctl commands: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.html>
 
 ## Storage
 
@@ -332,6 +335,7 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 * localectl
 * loginctl
 * machinectl???
+* [bluetoothctl (refer above)](#bluetoothctl)
 
 ### SystemD Links
 
