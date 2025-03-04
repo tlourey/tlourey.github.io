@@ -8,16 +8,17 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-15T14:05:00
-lastmod: 2025-03-04T05:45:18.490Z
+lastmod: 2025-03-04T06:17:01.622Z
 tags:
     - Azure
-    - References
+    - Tips
 ---
 
 
 <!--- cSpell:disable --->
 * [Access Methods](#access-methods)
 * [Resetting VM Passwords](#resetting-vm-passwords)
+* [Updating or Adding SSH Keys](#updating-or-adding-ssh-keys)
 * [DNS Settings](#dns-settings)
 * [Multiple IP Addresses on Azure vms](#multiple-ip-addresses-on-azure-vms)
 * [Static Mac Address on Nic in Azure](#static-mac-address-on-nic-in-azure)
@@ -39,6 +40,11 @@ tags:
 <https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/reset-rdp#reset-the-local-administrator-account-password> - Reset Password using Azure Portal\
 <https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/reset-rdp#reset-the-local-administrator-account-password-1> - Reset Password using Azure PowerShell\
 <https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/reset-password> - Reset Linux Password using Azure CLI or Azure Cloudshell
+
+## Updating or Adding SSH Keys
+
+<https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection#use-the-azure-portal> - reset or change an existing SSH key\
+<https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/vmaccess-linux#update-ssh-key> - setup an ssh key
 
 ## DNS Settings
 
