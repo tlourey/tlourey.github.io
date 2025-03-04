@@ -264,6 +264,10 @@
   },
   "frontMatter.preview.host": "http://localhost:4000",
   "frontMatter.sponsors.ai.enabled": false,
+  "frontMatter.content.draftField": {
+    "name": "draft",
+    "type": "boolean"
+  },
   "frontMatter.content.pageFolders": [
     {
       "title": "posts",
