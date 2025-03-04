@@ -3,18 +3,23 @@ title: CIDR
 description: description
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 isdraft: false
 date: 2025-01-11T22:26:00
-lastmod: 2025-03-04T11:22:33.474Z
+lastmod: 2025-03-04T11:44:17.269Z
 tags:
-  - Networks
-  - References
+    - Networks
+    - References
 ---
 
+<!--- cSpell:disable --->
+* [CIDR Notes](#cidr-notes)
+* [CGNAT Ranges](#cgnat-ranges)
+<!--- cSpell:enable --->
 
+## CIDR Notes
 
 ```text
 Netmask              Netmask (binary)                 CIDR     Notes
@@ -258,3 +263,9 @@ Convert Fahrenheit <> Celsius:
 
 last updated: 4jul02
 ```
+
+## CGNAT Ranges
+
+100.64.0.0 to 100.127.255.255
+
+<https://en.wikipedia.org/wiki/Carrier-grade_NAT>
