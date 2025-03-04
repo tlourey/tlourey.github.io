@@ -258,7 +258,10 @@
     }
   ],
   "frontMatter.framework.id": "jekyll",
-  "frontMatter.content.publicFolder": "assets",
+  "frontMatter.content.publicFolder": {
+    "path": "assets",
+    "relative": false
+  },
   "frontMatter.preview.host": "http://localhost:4000",
   "frontMatter.sponsors.ai.enabled": false,
   "frontMatter.content.pageFolders": [
@@ -420,6 +423,11 @@
           "default": ""
         }
       ]
+    },
+    "Image Snippet":{
+      "description": "Image with caption",
+      "body": "{{< caption \"[[&mediaUrl]]\" \"[[caption]]\" >}}",
+      "isMediaSnippet": true
     }
   }
 }
