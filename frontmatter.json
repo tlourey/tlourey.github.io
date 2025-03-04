@@ -37,7 +37,7 @@
           "isPreviewImage": true
         },
         {
-          "title": "Is in isdraft",
+          "title": "Is in draft",
           "name": "isdraft",
           "type": "boolean"
         },
