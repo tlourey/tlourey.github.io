@@ -3,25 +3,48 @@ title: Azure VM Tips
 description: Tips for setting up Azure VM's
 published: true
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 date: 2025-01-15T14:05:00
-lastmod: 2025-02-02T14:14:53.344Z
+lastmod: 2025-03-04T11:22:33.478Z
 tags:
-    - Azure
-    - References
+  - Azure
+  - Tips
 ---
 
 
 <!--- cSpell:disable --->
+* [Access Methods](#access-methods)
+* [Resetting VM Passwords](#resetting-vm-passwords)
+* [Updating or Adding SSH Keys](#updating-or-adding-ssh-keys)
 * [DNS Settings](#dns-settings)
 * [Multiple IP Addresses on Azure vms](#multiple-ip-addresses-on-azure-vms)
 * [Static Mac Address on Nic in Azure](#static-mac-address-on-nic-in-azure)
   * [First Time Setup](#first-time-setup)
   * [Using on 2nd machine](#using-on-2nd-machine)
 <!--- cSpell:enable --->
+
+## Access Methods
+
+[Azure PowerShell](https://learn.microsoft.com/en-au/powershell/azure/)\
+[Azure CLI](https://learn.microsoft.com/en-au/cli/azure/)\
+[Azure CloudShell](https://learn.microsoft.com/en-us/azure/cloud-shell/overview) - Direct access links:
+
+* <https://shell.azure.com/>
+* <https://portal.azure.com>
+
+## Resetting VM Passwords
+
+<https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/reset-rdp#reset-the-local-administrator-account-password> - Reset Password using Azure Portal\
+<https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/windows/reset-rdp#reset-the-local-administrator-account-password-1> - Reset Password using Azure PowerShell\
+<https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/reset-password> - Reset Linux Password using Azure CLI or Azure Cloudshell
+
+## Updating or Adding SSH Keys
+
+<https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection#use-the-azure-portal> - reset or change an existing SSH key\
+<https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/vmaccess-linux#update-ssh-key> - setup a ssh key
 
 ## DNS Settings
 

@@ -2,17 +2,17 @@
 title: Netgear Fully Managed Switch M4300 CLI Reference
 description: Commands to remember for Netgear Switches
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 published: true
-draft: false
+isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-02-27T12:31:42.706Z
+lastmod: 2025-03-04T11:22:33.660Z
 tags:
-    - Commands
-    - Networks
-    - References
+  - Commands
+  - Networks
+  - References
 ---
 
 > [!CAUTION] M4300 Only

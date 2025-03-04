@@ -2,17 +2,18 @@
 title: Linux Commands
 description: Linux commands to remember
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-04T01:37:54.498Z
+lastmod: 2025-03-04T11:22:33.566Z
 tags:
-    - Commands
-    - Linux
-    - References
+  - Commands
+  - Linux
+  - References
+isdraft: false
 ---
 
 <!--- cSpell:disable --->
@@ -20,7 +21,10 @@ tags:
   * [TMUX](#tmux)
 * [Files](#files)
   * [Compressing and Decompressing files](#compressing-and-decompressing-files)
-* [Hardware Info](#hardware-info)
+* [Hardware](#hardware)
+  * [Hardware Info](#hardware-info)
+  * [rfkill](#rfkill)
+  * [bluetoothctl](#bluetoothctl)
 * [Storage](#storage)
   * [MDADM](#mdadm)
 * [Logging and Log files](#logging-and-log-files)
@@ -39,6 +43,10 @@ tags:
   * [Network Reference](#network-reference)
 * [OpenSSL Commands](#openssl-commands)
   * [OpenSSL Links](#openssl-links)
+* [SSH](#ssh)
+* [SSH Client](#ssh-client)
+* [SSH Keys](#ssh-keys)
+  * [SSHD](#sshd)
 * [Misc System Commands](#misc-system-commands)
 <!--- cSpell:enable --->
 
@@ -106,7 +114,9 @@ Options:
 
 * [ ] add in gzip / gunzip commands
 
-## Hardware Info
+## Hardware
+
+### Hardware Info
 
 ```bash
 lshw
@@ -121,6 +131,35 @@ hwinfo --short
 ```
 
 ref: <https://opensource.com/article/19/9/linux-commands-hardware-information>
+
+### rfkill
+
+```bash
+rfkill --output ID,TYPE
+rfkill block all
+rfkill unblock wlan
+rfkill block bluetooth uwb wimax wwan gps fm nfc
+```
+
+rfkill is part of [systemd](#systemd-links)
+
+### bluetoothctl
+
+`agent on`: Turns bluetooth agent on\
+`default agent`: sets bluetoothctl as default agent to manage bluetooth\
+`scan on`: start scanning\
+`scan off`: stop scanning\
+`trust <<INSERT MAC ADDRESS OF DEVICE>>`: trust a specific device.\
+`connect <<INSERT MAC ADDRESS OF DEVICE>>`: connect to a specific device\
+`remove <<INSERT MAC ADDRESS OF DEVICE>>`: removes device from list. This should be tried before all others. Ideally either before or after `trust`\
+`pair <<INSERT MAC ADDRESS OF DEVICE>>`: shouldn't be needed for keyboard and mouse but may be.\
+`info <<INSERT MAC ADDRESS OF DEVICE>>`: show info about the device.\
+`power off`: turn the bluetooth controlled off (this isn't rfkill)
+
+> [!NOTE] NOTE
+> If its a keyboard it should come back with 6 digits to type into the keyboard. Type them and press enter
+
+More bluetoothctl commands: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.html>
 
 ## Storage
 
@@ -300,6 +339,7 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 * localectl
 * loginctl
 * machinectl???
+* [bluetoothctl (refer above)](#bluetoothctl)
 
 ### SystemD Links
 
@@ -316,6 +356,8 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 * <https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux>
 * <https://www.redhat.com/sysadmin/systemd-commands>
 * <https://wiki.archlinux.org/title/Systemd>
+
+Also see [rfkill](#rfkill)
 
 ## Network Commands
 
@@ -387,6 +429,22 @@ Netplan:
 <http://jefferytay.wordpress.com/2010/12/09/converting-a-pfx-file-to-pem-and-key-via-openssl/>\
 
 To use a lower version of TLS (Results may vary in newer versions): <https://askubuntu.com/questions/1233186/ubuntu-20-04-how-to-set-lower-ssl-security-level>
+
+## SSH
+
+## SSH Client
+
+* [ ] add in common ssh client commands needed
+
+## SSH Keys
+
+* [ ] Add in SSH Keygen stuff
+* [ ] Add in ssh key copy stuff
+* [ ] Add in authorised keys file management tips
+
+### SSHD
+
+`sudo sshd -T`:Show sshd current **running** config
 
 ## Misc System Commands
 

@@ -3,16 +3,16 @@ title: MS Flight Sim References
 description: Things to remember when playing MSFS
 published: true
 categories:
-    - Gaming
+  - Gaming
 type: pages
 layout: pages
 date: 2025-02-25T00:57:23.440Z
-lastmod: 2025-02-28T13:04:46.000Z
+lastmod: 2025-03-04T11:22:33.504Z
 tags:
-    - MSFS
-    - References
-    - Flight Sim
-draft: true
+  - MSFS
+  - References
+  - Flight Sim
+isdraft: true
 fmContentType: pages
 preview: ""
 ---

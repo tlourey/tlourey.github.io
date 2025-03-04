@@ -67,7 +67,8 @@
             "allowed_elements": [
 				"details",
 				"summary",
-				"ins"
+				"ins",
+				"kbd"
 			]
         },
         "MD028": false
@@ -78,7 +79,7 @@
 			"title": "type", "name": "type" 
 		},
 		{
-			"title": "draft", "name": "draft"
+			"title": "isdraft", "name": "isdraft"
 		},
 		{
 			"title": "published", "name": "published"

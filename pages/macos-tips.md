@@ -3,15 +3,15 @@ title: Mac OS Tips
 description: Tips for Mac OS
 published: true
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 date: 2025-02-25T04:41:08.679Z
-lastmod: 2025-02-28T18:13:16.712Z
+lastmod: 2025-03-04T11:22:33.496Z
 tags:
-    - MacOS
-    - Tips
-draft: true
+  - MacOS
+  - Tips
+isdraft: true
 fmContentType: pages
 preview: ""
 ---

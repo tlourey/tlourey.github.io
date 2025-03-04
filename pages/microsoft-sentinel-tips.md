@@ -6,14 +6,14 @@ categories:
   - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 tags:
   - Azure
   - Azure_Log_Analytics
   - Azure_Sentinel
   - Security
 fmContentType: pages
-lastmod: 2025-01-31T07:13:39.921Z
+lastmod: 2025-03-04T11:22:33.538Z
 date: 2025-01-27T06:07:50.792Z
 ---
 

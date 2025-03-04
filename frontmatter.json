@@ -38,8 +38,8 @@
         },
         {
           "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
+          "name": "isdraft",
+          "type": "boolean"
         },
         {
           "title": "Tags",
@@ -107,9 +107,9 @@
           "isPreviewImage": true
         },
         {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
+          "title": "Is in isdraft",
+          "name": "isdraft",
+          "type": "boolean"
         },
         {
           "title": "Tags",
@@ -190,9 +190,9 @@
           "isPreviewImage": true
         },
         {
-          "title": "Is in draft",
-          "name": "draft",
-          "type": "draft"
+          "title": "Is in isdraft",
+          "name": "isdraft",
+          "type": "boolean"
         },
         {
           "title": "Tags",
@@ -258,9 +258,16 @@
     }
   ],
   "frontMatter.framework.id": "jekyll",
-  "frontMatter.content.publicFolder": "assets",
+  "frontMatter.content.publicFolder": {
+    "path": "assets",
+    "relative": false
+  },
   "frontMatter.preview.host": "http://localhost:4000",
   "frontMatter.sponsors.ai.enabled": false,
+  "frontMatter.content.isdraftField": {
+    "name": "isdraft",
+    "type": "boolean"
+  },
   "frontMatter.content.pageFolders": [
     {
       "title": "posts",
@@ -420,6 +427,11 @@
           "default": ""
         }
       ]
+    },
+    "Image Snippet":{
+      "description": "Image with caption",
+      "body": "{{< caption \"[[&mediaUrl]]\" \"[[caption]]\" >}}",
+      "isMediaSnippet": true
     }
   }
 }

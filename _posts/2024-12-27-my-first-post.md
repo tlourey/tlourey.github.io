@@ -1,7 +1,7 @@
 ---
 title: My first Post
 date: 2024-12-27 12:00:00 +1100
-lastmod: 2025-02-27T23:36:40.975Z
+lastmod: 2025-03-04T11:27:45.773Z
 categories:
     - NotTech
 description: My first post description
@@ -9,6 +9,7 @@ published: true
 fmContentType: posts
 type: posts
 layout: posts
+isdraft: false
 ---
 
 * [My first post](#my-first-post)

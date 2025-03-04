@@ -3,15 +3,15 @@ title: Markdown Tips
 description: Flavor Flav says "GFM is da shiz yo"
 published: true
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 date: 2025-01-17T13:40:00
-lastmod: 2025-03-01T13:31:44.907Z
+lastmod: 2025-03-04T11:22:33.570Z
 tags:
-    - Language
-    - References
+  - Language
+  - References
 ---
 
 

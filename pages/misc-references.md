@@ -3,15 +3,15 @@ title: Misc References
 description: Another Doom Pile
 published: true
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
-draft: true
+isdraft: true
 tags:
-    - References
-fmContenttype: pages
+  - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-01T13:40:55.491Z
+lastmod: 2025-03-04T11:22:33.515Z
+fmContentType: pages
 ---
 
 
@@ -19,6 +19,7 @@ lastmod: 2025-03-01T13:40:55.491Z
 * [Standards](#standards)
   * [Networks](#networks)
   * [CIDR](#cidr)
+    * [VLSM](#vlsm)
   * [CEF](#cef)
   * [SMTP](#smtp)
   * [SNMP](#snmp)
@@ -32,6 +33,7 @@ lastmod: 2025-03-01T13:40:55.491Z
 * [Azure](#azure)
   * [Conventions](#conventions)
 * [Networking](#networking)
+* [Windows](#windows)
 * [People](#people)
 * [Misc Misc Misc](#misc-misc-misc)
 <!--- cSpell:enable --->
@@ -55,7 +57,12 @@ lastmod: 2025-03-01T13:40:55.491Z
 
 ### CIDR
 
-[CIDR](CIDR.md)
+**[CIDR](CIDR.md)**\
+<https://en.wikipedia.org/wiki/Classless_Inter-Domain_Routing>
+
+#### VLSM
+
+[VLSM Workbook](/assets/pdfs/vlsm-workbook-v2.pdf)
 
 ### CEF
 
@@ -73,7 +80,7 @@ lastmod: 2025-03-01T13:40:55.491Z
 
 <https://datatracker.ietf.org/doc/html/rfc1628>
 
-APC Support: <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsDraft.knowledgeEditAsDraft=1/>
+APC Support: <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsisdraft.knowledgeEditAsisdraft=1/>
 
 ### Markdown
 
@@ -125,7 +132,16 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 
 ## Networking
 
-<https://en.wikipedia.org/wiki/Captive_portal>
+<https://en.wikipedia.org/wiki/Captive_portal>\
+[Use Apple products on enterprise networks](https://support.apple.com/en-au/101555) - covers steps to complete and IP Ranges
+
+## Windows
+
+<https://support.microsoft.com/en-au/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec> - Windows shortcuts. The ones you are normally forgetting are:
+
+* <kbd>Windows + A</kbd>: Action Centre
+* <kbd>Windows key + Ctrl + Shift + B</kbd>: Reset graphics driver
+* <kbd>CTRL+Esc</kbd>: Start menu
 
 ## People
 

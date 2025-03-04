@@ -3,16 +3,16 @@ title: Misc Sites
 description: TBA
 published: true
 categories:
-    - Tech
-    - NotTech
+  - Tech
+  - NotTech
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-03-01T01:34:52.361Z
+lastmod: 2025-03-04T11:22:33.462Z
 tags:
-    - References
-    - Tools
-draft: true
+  - References
+  - Tools
+isdraft: true
 fmContentType: pages
 preview: ""
 ---
@@ -25,7 +25,7 @@ preview: ""
   * [Weather Sites](#weather-sites)
   * [Misc Weather Sites](#misc-weather-sites)
 * [Music](#music)
-* [Reviews](#reviews)
+* [Reviews and Ratings](#reviews-and-ratings)
 * [Notes and Learnings](#notes-and-learnings)
 <!--- cSpell:enable --->
 
@@ -79,7 +79,7 @@ Windy Help Videos (still haven't watched them)\
 
 <https://idonthavespotify.donado.co/>
 
-## Reviews
+## Reviews and Ratings
 
 <https://www.rtings.com/>\
 <https://www.whathifi.com/au>\

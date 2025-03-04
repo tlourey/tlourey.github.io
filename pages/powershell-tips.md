@@ -3,15 +3,15 @@ title: PowerShell Tips
 description: Tips and Tricks with PowerShell
 published: true
 categories:
-    - Tech
+  - Tech
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2025-02-06T13:04:22.164Z
+lastmod: 2025-03-04T11:22:33.549Z
 tags:
-    - Tips
-    - PowerShell
-draft: true
+  - Tips
+  - PowerShell
+isdraft: true
 fmContentType: pages
 preview: ""
 ---
