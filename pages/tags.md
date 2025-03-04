@@ -1,10 +1,10 @@
 ---
-title: Pages
+title: Pages (By Tags)
 description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-lastmod: 2025-03-04T13:18:27.681Z
+lastmod: 2025-03-04T13:21:02.737Z
 published: true
 isdraft: true
 ---
