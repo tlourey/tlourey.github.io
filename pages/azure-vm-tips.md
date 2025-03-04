@@ -8,7 +8,7 @@ type: pages
 layout: pages
 draft: true
 date: 2025-01-15T14:05:00
-lastmod: 2025-03-04T06:17:01.622Z
+lastmod: 2025-03-04T06:18:25.025Z
 tags:
     - Azure
     - Tips
@@ -44,7 +44,7 @@ tags:
 ## Updating or Adding SSH Keys
 
 <https://learn.microsoft.com/en-us/troubleshoot/azure/virtual-machines/linux/troubleshoot-ssh-connection#use-the-azure-portal> - reset or change an existing SSH key\
-<https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/vmaccess-linux#update-ssh-key> - setup an ssh key
+<https://learn.microsoft.com/en-us/azure/virtual-machines/extensions/vmaccess-linux#update-ssh-key> - setup a ssh key
 
 ## DNS Settings
 
