@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-05T01:04:54.830Z
+lastmod: 2025-03-05T01:06:15.243Z
 tags:
     - Commands
     - Linux
@@ -417,6 +417,7 @@ Netplan:
 tcpdump exmaples:
 
 * <https://github.com/tcpdump-examples/how-to-use-tcpdump>
+* <https://danielmiessler.com/blog/tcpdump>
 * <https://hackertarget.com/tcpdump-examples/>
 
 ### Network Reference
