@@ -2,17 +2,17 @@
 title: Netgear Fully Managed Switch M4300 CLI Reference
 description: Commands to remember for Netgear Switches
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-03-04T11:22:33.660Z
+lastmod: 2025-03-05T02:47:32.544Z
 tags:
-  - Commands
-  - Networks
-  - References
+    - Commands
+    - Networks
+    - References
 ---
 
 > [!CAUTION] M4300 Only
@@ -34,7 +34,7 @@ Contents:
 * [Switching and Routing Commands](#switching-and-routing-commands)
   * [Trunk Changes](#trunk-changes)
   * [VLAN](#vlan)
-  * [Routing Changes](#routing-changes)
+  * [Static Routing Changes](#static-routing-changes)
 * [Stacking](#stacking)
   * [Exec Level](#exec-level)
   * [Stack Level](#stack-level)
@@ -461,14 +461,17 @@ show interfaces switchport trunk
 
 * [ ] VLAN Notes
 
-### Routing Changes
+### Static Routing Changes
 
-* [ ] routing change aka failover
+```cisco
+en
+ip route 0.0.0.0 0.0.0.0 192.168.1.3 description BackupRouter
+no ip route 0.0.0.0 0.0.0.0 192.168.1.2
+exit
+show ip route
+```
 
 ## Stacking
-
-* [x] Add stacking status command
-* [x] Add move management command
 
 ### Exec Level
 
