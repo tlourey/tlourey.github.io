@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-05T02:30:13.339Z
+lastmod: 2025-03-05T05:21:58.365Z
 tags:
     - Commands
     - Linux
@@ -18,8 +18,13 @@ isdraft: false
 
 <!--- cSpell:disable --->
 * [Terminal Stuff](#terminal-stuff)
+  * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
+  * [Aliases](#aliases)
   * [TMUX](#tmux)
 * [Files](#files)
+  * [What process is using a file](#what-process-is-using-a-file)
+  * [ls options often forgotten](#ls-options-often-forgotten)
+  * [Finding large directories and large files](#finding-large-directories-and-large-files)
   * [Compressing and Decompressing files](#compressing-and-decompressing-files)
 * [Hardware](#hardware)
   * [Hardware Info](#hardware-info)
@@ -54,12 +59,32 @@ isdraft: false
 
 ## Terminal Stuff
 
+### Terminal Filtering and Monitoring
+
 ```bash
 watch
 less
 wc
 column
 ```
+
+### Aliases
+
+```bash
+alias list='ls -la'
+alias ls='ls -h' # other options will still work such as ls -la but the -h will be added.
+alias [alias]='[path-to-script]/[filename].sh'
+```
+
+To make permanent, add alias to:
+
+* Bash shell: ~/.bashrc
+* Zsh shell: ~/.zshrc
+* Tcsh shell: ~/.tcshrc
+* Fish shell: ~/.config/fish/config.fish
+
+> [!NOTE] Double edged sword
+> If you add an option to a command as an alias, when you remote to a new system, it may not have that alias. Consider the usefulness of a permanent alias vs the gain in muscle memory
 
 ### TMUX
 <!-- cspell:ignore Byobu -->
@@ -68,7 +93,7 @@ column
 
 ## Files
 
-What process is using a file:
+### What process is using a file
 
 ```bash
 fuser /var/log/syslog
@@ -76,7 +101,30 @@ fuser /var/log/syslog
 ps aux | grep <Process ID from above>
 ```
 
-Finding large directories and large files:
+### ls options often forgotten
+
+-t: sort by time, newest first
+-h: human readable sizes
+-S: sort by file size, largest first
+-r: reverse
+-R: recursive
+--time: options are:
+
+* access time (-u): atime, access, use;
+* change time (-c): ctime, status;
+* birth time: birth, creation;
+
+-u: sort by access time
+-c:
+
+* with -lt: sort by, and show, ctime (time of last modification of file status information);
+* with -l: show ctime and sort by name;
+* otherwise: sort by ctime, newest first
+
+-X: sort by extensions
+-x: lines instead of colums
+
+### Finding large directories and large files
 
 ```bash
 cd /
