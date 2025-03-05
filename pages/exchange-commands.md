@@ -3,13 +3,13 @@ title: Exchange Commands
 description: ""
 published: false
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 date: 2025-01-29T07:27:17.598Z
-lastmod: 2025-03-04T11:35:15.677Z
+lastmod: 2025-03-05T05:56:29.079Z
 tags:
-  - Exchange
+    - Exchange
 isdraft: true
 fmContentType: pages
 preview: ""
@@ -17,6 +17,8 @@ preview: ""
 
 <!--- cSpell:disable --->
 * [Heading](#heading)
+* [Exchange Audit Log search](#exchange-audit-log-search)
+  * [Searching for Exchange Rule Changes](#searching-for-exchange-rule-changes)
 <!--- cSpell:enable --->
 
 ## Heading
@@ -159,3 +161,9 @@ get-RemoteDomain some-custom-domain | Set-RemoteDomain -AutoReplyEnabled $true
 Remove-Remotedomain some-custom-domain
 
 -->
+
+## Exchange Audit Log search
+
+### Searching for Exchange Rule Changes
+
+`Search-UnifiedAuditLog -StartDate 25/11/2024 -EndDate 27/11/2024 -Operations New-TransportRule, Set-TransportRule, Enable-TransportRule, Disable-TransportRule, Remove-TransportRule | Format-Table`
