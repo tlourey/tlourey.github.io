@@ -58,6 +58,7 @@
 		"endfor",
 		"frontmatter",
 		"hostgroups",
+		"isdraft",
 		"lastmod",
 		"omfwd",
 		"sshcon"
