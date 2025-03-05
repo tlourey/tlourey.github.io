@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-05T02:29:25.862Z
+lastmod: 2025-03-05T02:30:13.339Z
 tags:
     - Commands
     - Linux
@@ -114,7 +114,7 @@ Options:
 * -j: use bzip2 (.tar.bz2)
 * -W: verify extension
 
-`gunzip [Options] [archivename/filename]`
+`gunzip [Options] [archive-name/filename]`
 
 `gzip file.txt`: zips file.txt into file.gz\
 `gunzip file.gz`: unzip file.gz and then delete file.gz leaving only file.txt
