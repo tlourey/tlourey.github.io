@@ -1,15 +1,17 @@
 ---
 title: Exchange Commands
-description: ""
+description: TBA
 published: false
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-01-29T07:27:17.598Z
-lastmod: 2025-03-05T06:22:56.728Z
+lastmod: 2025-03-05T06:24:31.203Z
 tags:
     - Exchange
+    - PowerShell
+    - Microsoft365
 isdraft: true
 fmContentType: pages
 preview: ""
