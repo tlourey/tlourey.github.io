@@ -10,7 +10,7 @@ isdraft: true
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-04T23:00:35.380Z
+lastmod: 2025-03-05T03:53:37.520Z
 fmContentType: pages
 ---
 
@@ -115,9 +115,8 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 ### Ubuntu Manuals
 
 **[Ubuntu Server Documentation](https://documentation.ubuntu.com/server/)**\
-[Offical Ubuntu Documentation](https://help.ubuntu.com/) - older documentation landing portal\
+[official Ubuntu Documentation](https://help.ubuntu.com/) - older documentation landing portal\
 [Ubuntu Wiki](https://wiki.ubuntu.com/) - community edited, not well maintained.
-
 
 ## Microsoft Platforms
 
@@ -143,9 +142,12 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 
 <https://support.microsoft.com/en-au/windows/keyboard-shortcuts-in-windows-dcc61a57-8ff0-cffe-9796-cb9706c75eec> - Windows shortcuts. The ones you are normally forgetting are:
 
-* <kbd>Windows + A</kbd>: Action Centre
-* <kbd>Windows key + Ctrl + Shift + B</kbd>: Reset graphics driver
-* <kbd>CTRL+Esc</kbd>: Start menu
+* <kbd>Windows key</kbd> + <kbd>A</kbd>: Action Centre
+* <kbd>Windows key</kbd> + <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>B</kbd>: Reset graphics driver
+* <kbd>CTRL</kbd> + <kbd>Esc</kbd>: Start menu
+* <kbd>Left Alt</kbd> + <kbd>Left Shift</kbd> + <kbd>Num Lock</kbd>: Turn on mouse keys
+
+Also check [Windows Tips](windows-tips.md)
 
 ## People
 
