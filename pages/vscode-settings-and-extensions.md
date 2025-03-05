@@ -1,20 +1,20 @@
 ---
 title: VSCode Settings and Extensions
-description: ""
-published: false
+description: TBC
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-03-05T03:06:22.175Z
+lastmod: 2025-03-05T03:08:16.725Z
 tags:
     - VSCode
+    - Tools
 isdraft: true
 fmContentType: pages
 preview: ""
 ---
-
 
 <!-- cSpell:ignore ignoreword,ignorewords,yzhang -->
 
