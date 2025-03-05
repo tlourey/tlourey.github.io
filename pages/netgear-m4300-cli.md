@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-03-05T02:47:32.544Z
+lastmod: 2025-03-05T02:48:09.469Z
 tags:
     - Commands
     - Networks
@@ -148,7 +148,7 @@ show logging buffered | include SEARCHTEXT\
 
 Viewing configs:
 
-```netgear
+```cisco
 show startup-config
 show backup-config
 
@@ -157,7 +157,7 @@ show running-config
 
 Note that `show running-config` has extra options the others don't:
 
-```netgear
+```cisco
 <scriptname>             Script file name for writing active configuration.
 all                      Show all the running configuration on the switch.
 interface                Display the running config for specified interface on
@@ -490,7 +490,7 @@ show ip route
 
 ### Stack Level
 
-```netgear
+```cisco
 configure
 stack
 ```
@@ -533,7 +533,7 @@ show ip dhcp server statistics
 
 Want to remove a syslog entry one at a time or just change one entries configuration?
 
-```netgear
+```cisco
 show logging hosts
 ! note down the host index number for the one you want to remove. Lets assume its 1 in this case
 configure
@@ -544,7 +544,7 @@ save
 
 Don't want to change the configuration but want to change the hostname or ip address only?
 
-```netgear
+```cisco
 show logging hosts
 configure
 logging host reconfigure 1 newhostnamehere
@@ -579,7 +579,7 @@ If you want to use SSH and/or HTTPS you may need to run the crypto setup. This h
 
 for ssh you just need keys, but for HTTPS (ip http secure-server) you need a certificate. If you are not able to use a proper one use a self signed one per instructions below.
 
-```netgear
+```cisco
 configure
 ! for SSH we need keys
 crypto key generate dsa
