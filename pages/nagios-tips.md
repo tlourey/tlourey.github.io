@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-03-04T11:37:21.058Z
+lastmod: 2025-03-05T01:28:26.690Z
 tags:
     - Monitoring
     - Nagios
@@ -33,6 +33,7 @@ fmContentType: pages
   * [Synology](#synology)
   * [Netgear](#netgear)
   * [APC](#apc)
+* [Reading SNMP Mib Files (TBC)](#reading-snmp-mib-files-tbc)
 <!--- cSpell:enable --->
 
 ## Nagios Verify
@@ -184,3 +185,34 @@ MIB Guide: <https://download.schneider-electric.com/files?p_Doc_Ref=SPD_ASTE-6Z5
 MIB Download: <https://www.se.com/au/en/download/document/APC_POWERNETMIB_452_EN/>
 
 APC Support for Generic UPS OID Standard Thing <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsisdraft.knowledgeEditAsisdraft=1/>\
+
+## Reading SNMP Mib Files (TBC)
+
+OID: .1.3.6.1.4.1.**318.1.1.1.7.2.3.0**
+
+```mib
+apc                            OBJECT IDENTIFIER ::=  { enterprises 318 }
+
+products                       OBJECT IDENTIFIER ::=  { apc 1 }
+~~
+hardware                       OBJECT IDENTIFIER ::=  { products 1 }
+~~
+ups                            OBJECT IDENTIFIER ::=  { hardware 1 }
+~~
+upsTest                        OBJECT IDENTIFIER ::=  { ups 7 }
+~~
+upsAdvTest                     OBJECT IDENTIFIER ::=  { upsTest 2 }
+~~
+upsAdvTestDiagnosticsResults OBJECT-TYPE
+   SYNTAX INTEGER {
+      ok(1),
+      failed(2),
+      invalidTest(3),
+      testInProgress(4)
+   }
+   ACCESS read-only
+   STATUS mandatory
+   DESCRIPTION
+      "The results of the last UPS diagnostics test performed."
+   ::= { upsAdvTest 3 }
+```
