@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-03-05T01:28:26.690Z
+lastmod: 2025-03-05T01:43:47.875Z
 tags:
     - Monitoring
     - Nagios
@@ -29,6 +29,7 @@ fmContentType: pages
   * [Ticks](#ticks)
   * [Uptime oids](#uptime-oids)
   * [Macros](#macros)
+  * [MIB Downloads](#mib-downloads)
 * [Vendor Refs](#vendor-refs)
   * [Synology](#synology)
   * [Netgear](#netgear)
@@ -163,6 +164,23 @@ For the service or check:
 ```nagios
 $_HOSTSNMPCOMMUNITY$
 ```
+
+### MIB Downloads
+
+> [!CAUTION] CAUTION
+> I pasted the below to have it handy in the future but you should understand the implications before installing the package, running the program or editing snmp.conf
+
+You can consider using `download-mibs`
+
+`sudo apt-get install snmp-mibs-downloader`
+
+It can then be forced or updatesd with `sudo download-mibs`
+
+From: <https://thejoyofstick.com/blog/2019/05/28/installing-snmp-mib-files-in-linux-ubuntu-12-04-lts/>
+
+Either way mibs need to end up in `/usr/share/mibs/` or `/usr/share/snmp/mibs/` depending on your distro.
+
+You may also need to consider editing `/etc/snmp/snmp.conf` to comment out the to comment out the `mibs` line (apparently)
 
 ## Vendor Refs
 
