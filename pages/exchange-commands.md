@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-29T07:27:17.598Z
-lastmod: 2025-03-05T05:56:29.079Z
+lastmod: 2025-03-05T05:58:29.760Z
 tags:
     - Exchange
 isdraft: true
@@ -19,6 +19,7 @@ preview: ""
 * [Heading](#heading)
 * [Exchange Audit Log search](#exchange-audit-log-search)
   * [Searching for Exchange Rule Changes](#searching-for-exchange-rule-changes)
+  * [Searxhing for Exchange Connector Changes](#searxhing-for-exchange-connector-changes)
 <!--- cSpell:enable --->
 
 ## Heading
@@ -167,3 +168,7 @@ Remove-Remotedomain some-custom-domain
 ### Searching for Exchange Rule Changes
 
 `Search-UnifiedAuditLog -StartDate 25/11/2024 -EndDate 27/11/2024 -Operations New-TransportRule, Set-TransportRule, Enable-TransportRule, Disable-TransportRule, Remove-TransportRule | Format-Table`
+
+### Searxhing for Exchange Connector Changes
+
+`Search-UnifiedAuditLog -StartDate -StartDate 25/11/2024 -EndDate 27/11/2024 -Operations "New-InboundConnector","Set-InboundConnector","Remove-InboundConnector`
