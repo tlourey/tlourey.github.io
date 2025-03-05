@@ -3,22 +3,22 @@ title: Microsoft 365 Tips
 description: Bottomless pit
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 isdraft: true
 tags:
-  - Entra
-  - Exchange
-  - Microsoft365
-  - Office
-  - OneDrive
-  - References
-  - SharePoint
-  - Tips
+    - Entra
+    - Exchange
+    - Microsoft365
+    - Office
+    - OneDrive
+    - References
+    - SharePoint
+    - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-04T11:22:33.657Z
+lastmod: 2025-03-05T02:42:25.000Z
 ---
 
 <!--- cSpell:disable --->
@@ -30,6 +30,7 @@ lastmod: 2025-03-04T11:22:33.657Z
 * [SharePoint Language Settings for end user](#sharepoint-language-settings-for-end-user)
 * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
+  * [Configuring Language and regional settings for new users](#configuring-language-and-regional-settings-for-new-users)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
 * [Entra](#entra)
@@ -101,7 +102,34 @@ This can affect things like validation. Refer to [Validation Tips](sharepoint-re
 
 <https://myaccount.microsoft.com/settingsandprivacy/language>
 
-* [ ] include tip about presetting office 365, sharepoint and exchange language, region and timezone settings
+### Configuring Language and regional settings for new users
+
+<https://learn.microsoft.com/en-au/microsoft-365/troubleshoot/access-management/set-language-and-region>
+
+```powershell
+# Update the User's Preferred Language details
+Import-Module Microsoft.Graph.Users
+
+Connect-MgGraph  -Scopes 'User.ReadWrite.All'
+
+$preferredLanguage = 'en-au'
+$userId = Get-MgUser -UserId user1@contoso.com
+Update-MgUser -UserId $userId.Id -PreferredLanguage $preferredLanguage
+```
+
+```powershell
+# Update User's Usage Location details
+Import-Module Microsoft.Graph.Users
+
+Connect-MgGraph  -Scopes 'User.ReadWrite.All'
+
+$usageLocation = 'AU'
+$userId = Get-MgUser -UserId user1@contoso.com
+Update-MgUser -UserId $userId.Id -Usagelocation $usageLocation
+```
+
+For Exchange: `Set-MailboxRegionalConfiguration -Identity $upn -Language 3081 -TimeZone "AUS Eastern Standard Time" -DateFormat "d/MM/yyyy"`\
+<https://learn.microsoft.com/en-au/powershell/module/exchange/set-mailboxregionalconfiguration?view=exchange-ps>
 
 ## Network Details Upload
 

@@ -1,20 +1,20 @@
 ---
 title: VSCode Settings and Extensions
-description: ""
-published: false
+description: TBC
+published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-03-04T11:22:33.532Z
+lastmod: 2025-03-05T03:08:16.725Z
 tags:
-  - VSCode
+    - VSCode
+    - Tools
 isdraft: true
 fmContentType: pages
 preview: ""
 ---
-
 
 <!-- cSpell:ignore ignoreword,ignorewords,yzhang -->
 
@@ -94,7 +94,7 @@ keybindings.json:
 ### vscode-spell-checker
 
 <https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker>\
-<https://streetsidesoftware.com/vscode-spell-checker/>
+<https://streetsidesoftware.com/vscode-spell-checker/>\
 <https://cspell.org/>
 
 #### vscode-spell-checker Commands
@@ -171,24 +171,49 @@ Full settings on marketplace base:<https://marketplace.visualstudio.com/items?it
 
 ## markdownlint
 
-Still TBC
-
-* [ ] Finishing filling in markdownlint
-
 <https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint>\
 <vscode:extension/DavidAnson.vscode-markdownlint>
 
 ### markdownlint Commands
 
+Consider setting markdownlint.focusMode - only valid at user level, not workspace
+
+```json
+{
+    "editor.someSetting": true,
+    "markdownlint.focusMode": true
+}
+```
+
+To ignore issues on the N lines above and below the cursor, set focusMode to a positive integer representing the number of lines to ignore in each direction:
+
+```json
+{
+    "editor.someSetting": true,
+    "markdownlint.focusMode": 2
+}
+```
+
+More settings are here: <https://github.com/DavidAnson/vscode-markdownlint>
+
 ### markdownlint Notes
 
 #### Ignore Rules
 
-sometimes you may want to ignore specific rules.
+You can use ignore lines inside of files where you can disable markdown lint or a specific rule for the whole file, the next line or just a section (where it can then be re-enabled), such as:
+
+```html
+<!-- markdownlint-disable MD000 -->
+<!-- markdownlint-enable MD000 -->
+<!-- markdownlint-disable-next-line MD000 -->
+<!-- markdownlint-disable-file MD000 -->
+```
+
+You can also configure the markdown lint settings to ignore this.
 
 #### Rules with Parameter
 
-Some rules may have parameters so you can customise how they are evaluated. See example in tips .
+Some rules may have parameters so you can customise how they are evaluated. See example in tips. Find the rules with Parameters in the rules link in references.
 
 ### markdownlint Tips
 
@@ -208,3 +233,5 @@ Some rules may have parameters so you can customise how they are evaluated. See 
 ```
 
 ### markdownlint References
+
+<https://github.com/DavidAnson/markdownlint/> - Contains rules

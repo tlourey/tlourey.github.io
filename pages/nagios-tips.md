@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-03-04T11:37:21.058Z
+lastmod: 2025-03-05T02:13:56.636Z
 tags:
     - Monitoring
     - Nagios
@@ -29,10 +29,13 @@ fmContentType: pages
   * [Ticks](#ticks)
   * [Uptime oids](#uptime-oids)
   * [Macros](#macros)
+  * [MIB Downloads](#mib-downloads)
 * [Vendor Refs](#vendor-refs)
   * [Synology](#synology)
   * [Netgear](#netgear)
   * [APC](#apc)
+    * [Mib doesn't exist](#mib-doesnt-exist)
+* [Reading SNMP Mib Files (TBC)](#reading-snmp-mib-files-tbc)
 <!--- cSpell:enable --->
 
 ## Nagios Verify
@@ -163,6 +166,23 @@ For the service or check:
 $_HOSTSNMPCOMMUNITY$
 ```
 
+### MIB Downloads
+
+> [!CAUTION] CAUTION
+> I pasted the below to have it handy in the future but you should understand the implications before installing the package, running the program or editing snmp.conf
+
+You can consider using `download-mibs`
+
+`sudo apt-get install snmp-mibs-downloader`
+
+It can then be forced or updated with `sudo download-mibs`
+
+From: <https://thejoyofstick.com/blog/2019/05/28/installing-snmp-mib-files-in-linux-ubuntu-12-04-lts/>
+
+Either way mibs need to end up in `/usr/share/mibs/` or `/usr/share/snmp/mibs/` depending on your distribution.
+
+You may also need to consider editing `/etc/snmp/snmp.conf` to comment out the to comment out the `mibs` line (apparently)
+
 ## Vendor Refs
 
 ### Synology
@@ -184,3 +204,40 @@ MIB Guide: <https://download.schneider-electric.com/files?p_Doc_Ref=SPD_ASTE-6Z5
 MIB Download: <https://www.se.com/au/en/download/document/APC_POWERNETMIB_452_EN/>
 
 APC Support for Generic UPS OID Standard Thing <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeEditAsisdraft.knowledgeEditAsisdraft=1/>\
+
+#### Mib doesn't exist
+
+If you query an APC OID and the response you get is that the MIB doesn't exist, it may be that the device in query doesn't support it.
+
+eg: upsAdvTestBatteryProcessStatus which is .1.3.6.1.4.1.318.1.1.1.7.2.14.0 comes back on most APC UPS's as MIB Doesn't exist. While it does do this function, it just seems this mib isn't supported on some models. You can try something like an snmp walk like `snmpwalk -v 1 -c public 192.168.1.10 .1.3.6.1.4.1.318.1.1.1.7.2` and see which ones reply.
+
+## Reading SNMP Mib Files (TBC)
+
+OID: .1.3.6.1.4.1.**318.1.1.1.7.2.3.0**
+
+```mib
+apc                            OBJECT IDENTIFIER ::=  { enterprises 318 }
+
+products                       OBJECT IDENTIFIER ::=  { apc 1 }
+~~
+hardware                       OBJECT IDENTIFIER ::=  { products 1 }
+~~
+ups                            OBJECT IDENTIFIER ::=  { hardware 1 }
+~~
+upsTest                        OBJECT IDENTIFIER ::=  { ups 7 }
+~~
+upsAdvTest                     OBJECT IDENTIFIER ::=  { upsTest 2 }
+~~
+upsAdvTestDiagnosticsResults OBJECT-TYPE
+   SYNTAX INTEGER {
+      ok(1),
+      failed(2),
+      invalidTest(3),
+      testInProgress(4)
+   }
+   ACCESS read-only
+   STATUS mandatory
+   DESCRIPTION
+      "The results of the last UPS diagnostics test performed."
+   ::= { upsAdvTest 3 }
+```

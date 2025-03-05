@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: false
 date: 2025-01-17T13:40:00
-lastmod: 2025-03-04T11:55:33.601Z
+lastmod: 2025-03-04T23:00:21.284Z
 tags:
     - Language
     - References
@@ -25,6 +25,7 @@ tags:
   * [Github Pages](#github-pages)
   * [Wikis](#wikis)
 * [Not important things to remember](#not-important-things-to-remember)
+  * [Emojis in Markdown](#emojis-in-markdown)
   * [GFM Definition](#gfm-definition)
   * [Footnotes](#footnotes)
   * [Creating diagrams](#creating-diagrams)
@@ -33,6 +34,7 @@ tags:
   * [Markdown Lint Exclusions](#markdown-lint-exclusions)
   * [Bug in Markdown all in one](#bug-in-markdown-all-in-one)
   * [VScode Underline](#vscode-underline)
+  * [Extended Syntax](#extended-syntax)
   * [Useless by cool](#useless-by-cool)
     * [ASCII STL](#ascii-stl)
 <!--- cSpell:enable --->
@@ -153,6 +155,14 @@ markdown: kramdown
 
 ## Not important things to remember
 
+### Emojis in Markdown
+
+<https://www.markdownguide.org/extended-syntax/#emoji>\
+<https://gist.github.com/rxaviers/7360908> - random emoji shortcut reference
+
+> [!TIP] Static Site Generator
+> If you're using a static site generator (Jekyll, Hugo, etc), make sure you [encode HTML pages as UTF-8](https://www.w3.org/International/tutorials/tutorial-char-enc/).
+
 ### GFM Definition
 
 > GitHub Flavored Markdown, often shortened as GFM, is the dialect of Markdown that is currently supported for user content on GitHub.com and GitHub Enterprise.
@@ -247,6 +257,30 @@ When using the [Markdown All in One](https://marketplace.visualstudio.com/items?
 ### VScode Underline
 
 VSCode doesn't have a keyboard shortcut for underline, at least not for markdown. You can try my snippet and keyboard shortcut from [VSCode Settings and Extensions](vscode-settings-and-extensions.md#ctrlu-underline-in-markdown)
+
+### Extended Syntax
+
+<https://www.markdownguide.org/extended-syntax/> - not always supported
+
+==highlighted== is sometimes `==highlighted==`\
+H~2~O is sometimes `H~2~O`\
+
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+
+```markdown
+First Term
+: This is the definition of the first term.
+
+Second Term
+: This is one definition of the second term.
+: This is another definition of the second term.
+```
+
 
 ### Useless by cool
 

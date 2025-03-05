@@ -23,7 +23,8 @@
 		"TAXII",
 		"Telco",
 		"tftpboot",
-		"Ubiquiti"
+		"Ubiquiti",
+		"VLSM"
 	],
 	"cSpell.languageSettings": [
       {
@@ -58,6 +59,7 @@
 		"endfor",
 		"frontmatter",
 		"hostgroups",
+		"isdraft",
 		"lastmod",
 		"omfwd",
 		"sshcon"

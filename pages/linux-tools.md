@@ -2,17 +2,17 @@
 title: Linux Tools
 description: Linux tools to remember
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 isdraft: true
 published: true
 date: 2025-01-11T16:40:00
-lastmod: 2025-03-04T11:22:33.643Z
+lastmod: 2025-03-04T23:00:11.563Z
 tags:
-  - Linux
-  - References
-  - Tools
+    - Linux
+    - References
+    - Tools
 ---
 
 
@@ -33,6 +33,11 @@ tags:
   * [apt-unattended Commands](#apt-unattended-commands)
   * [apt-unattended Notes](#apt-unattended-notes)
   * [apt-unattended References](#apt-unattended-references)
+* [logrotate](#logrotate)
+  * [logrotate Commands](#logrotate-commands)
+  * [logrotate Notes](#logrotate-notes)
+  * [logrotate Tips](#logrotate-tips)
+  * [logrotate References](#logrotate-references)
 <!--- cSpell:enable --->
 
 ## etckeeper
@@ -233,6 +238,33 @@ Optional: `sudo dpkg-reconfigure --priority=low unattended-upgrades` but I don't
 <https://ubuntu.com/server/docs/package-management>
 <https://help.ubuntu.com/community/AutomaticSecurityUpdates#Using_the_.22unattended-upgrades.22_package>
 <https://www.cyberciti.biz/faq/set-up-automatic-unattended-updates-for-ubuntu-20-04/>
+
+## logrotate
+
+### logrotate Commands
+
+`/usr/sbin/logrotate /etc/logrotate.conf`: run manually\
+`sudo systemctl start logrotate.timer`: run systemd timer manually.
+
+### logrotate Notes
+
+* Used to be run by cron job in /etc/cron.daily but now seems to use systemd timers
+* weekly: 0 means Sunday, 1 means Monday, ..., 6 means Saturday; the special value 7 means each 7 days, irrespectively of weekday. Defaults to 0 if the weekday argument is omitted.
+
+### logrotate Tips
+
+For files that are stuck open, you can consider the following directives.
+
+* copytruncate
+* If required, use a post-rotate to restart the service
+
+From: <https://serverfault.com/questions/55610/logrotate-and-open-files>
+
+### logrotate References
+
+**<https://man.archlinux.org/man/logrotate.conf.5#CONFIGURATION_FILE_DIRECTIVES>**\
+<https://man.archlinux.org/man/logrotate.8>\
+<https://github.com/logrotate/logrotate>
 
 <!--
 ## toolname

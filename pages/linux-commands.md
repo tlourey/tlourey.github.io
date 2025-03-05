@@ -2,24 +2,29 @@
 title: Linux Commands
 description: Linux commands to remember
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-04T11:22:33.566Z
+lastmod: 2025-03-05T05:21:58.365Z
 tags:
-  - Commands
-  - Linux
-  - References
+    - Commands
+    - Linux
+    - References
 isdraft: false
 ---
 
 <!--- cSpell:disable --->
 * [Terminal Stuff](#terminal-stuff)
+  * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
+  * [Aliases](#aliases)
   * [TMUX](#tmux)
 * [Files](#files)
+  * [What process is using a file](#what-process-is-using-a-file)
+  * [ls options often forgotten](#ls-options-often-forgotten)
+  * [Finding large directories and large files](#finding-large-directories-and-large-files)
   * [Compressing and Decompressing files](#compressing-and-decompressing-files)
 * [Hardware](#hardware)
   * [Hardware Info](#hardware-info)
@@ -40,6 +45,8 @@ isdraft: false
   * [Misc SystemD Commands](#misc-systemd-commands)
   * [SystemD Links](#systemd-links)
 * [Network Commands](#network-commands)
+  * [netstat](#netstat)
+  * [tcpdump](#tcpdump)
   * [Network Reference](#network-reference)
 * [OpenSSL Commands](#openssl-commands)
   * [OpenSSL Links](#openssl-links)
@@ -52,12 +59,32 @@ isdraft: false
 
 ## Terminal Stuff
 
+### Terminal Filtering and Monitoring
+
 ```bash
 watch
 less
 wc
 column
 ```
+
+### Aliases
+
+```bash
+alias list='ls -la'
+alias ls='ls -h' # other options will still work such as ls -la but the -h will be added.
+alias [alias]='[path-to-script]/[filename].sh'
+```
+
+To make permanent, add alias to:
+
+* Bash shell: ~/.bashrc
+* Zsh shell: ~/.zshrc
+* Tcsh shell: ~/.tcshrc
+* Fish shell: ~/.config/fish/config.fish
+
+> [!NOTE] Double edged sword
+> If you add an option to a command as an alias, when you remote to a new system, it may not have that alias. Consider the usefulness of a permanent alias vs the gain in muscle memory
 
 ### TMUX
 <!-- cspell:ignore Byobu -->
@@ -66,7 +93,7 @@ column
 
 ## Files
 
-What process is using a file:
+### What process is using a file
 
 ```bash
 fuser /var/log/syslog
@@ -74,7 +101,30 @@ fuser /var/log/syslog
 ps aux | grep <Process ID from above>
 ```
 
-Finding large directories and large files:
+### ls options often forgotten
+
+-t: sort by time, newest first
+-h: human readable sizes
+-S: sort by file size, largest first
+-r: reverse
+-R: recursive
+--time: options are:
+
+* access time (-u): atime, access, use;
+* change time (-c): ctime, status;
+* birth time: birth, creation;
+
+-u: sort by access time
+-c:
+
+* with -lt: sort by, and show, ctime (time of last modification of file status information);
+* with -l: show ctime and sort by name;
+* otherwise: sort by ctime, newest first
+
+-X: sort by extensions
+-x: lines instead of colums
+
+### Finding large directories and large files
 
 ```bash
 cd /
@@ -112,7 +162,23 @@ Options:
 * -j: use bzip2 (.tar.bz2)
 * -W: verify extension
 
-* [ ] add in gzip / gunzip commands
+`gunzip [Options] [archive-name/filename]`
+
+`gzip file.txt`: zips file.txt into file.gz\
+`gunzip file.gz`: unzip file.gz and then delete file.gz leaving only file.txt
+
+Options:
+-h: show all options
+-c: view text in file
+-f: force (not sure why)
+-k: keep original file after (un)zipping
+-l: give details on filename
+-r: recursive
+-v: verbose
+-t: test if file is valid
+-a: only works on windows. uses ASCII to convert end-of-line characters using local conversion.
+
+More options are available. Look at: <https://www.geeksforgeeks.org/gunzip-command-in-linux-with-examples/>
 
 ## Hardware
 
@@ -259,7 +325,7 @@ TBC
 `sudo systemctl status mdcheck_start.service` check the status of a service\
 `sudo systemctl restart mdcheck_start.service` restarts a service now\
 `sudo systemctl stop mdcheck_start.service` stops a service now\
-`sudo systemctl start mdcheck_start.service` starts a service now\
+`sudo systemctl start mdcheck_start.service` starts a service now. Can also be used to run a timer manually unless timer is configured with `RefuseManualStart=yes` or `RefuseManualStop=yes`\
 `sudo systemctl disable mdcheck_start.service` prevents a service from running at startup\
 `sudo systemctl enable mdcheck_start.service` allows a service to run at startup\
 `sudo systemctl enable --now mdcheck_start.service` allows a service to run at startup and also starts it now\
@@ -368,6 +434,9 @@ Netplan:
 <https://netplan.readthedocs.io/en/stable/howto/>
 
 `ethtool`: Is a program that displays and changes Ethernet card settings such as auto-negotiation, port speed, duplex mode, and Wake-on-LAN. <https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/#ethernet-interface-settings>\
+
+### netstat
+
 `netstat`:
 
 > [!NOTE] netstat
@@ -388,14 +457,32 @@ Netplan:
 
 * [ ] add in common netcat commands
 
+### tcpdump
+
+`sudo tcpdump -i eth0 -nn -s0 -v port 80`
+
+* -i : Select interface that the capture is to take place on, this will often be an ethernet card or wireless adapter but could also be a vlan or something more unusual. Not always required if there is only one network adapter.
+* -nn : A single (n) will not resolve hostnames. A double (nn) will not resolve hostnames or ports. This is handy for not only viewing the IP / port numbers but also when capturing a large amount of data, as the name resolution will slow down the capture.
+* -s0 : Snap length, is the size of the packet to capture. -s0 will set the size to unlimited - use this if you want to capture all the traffic. Needed if you want to pull binaries / files from network traffic.
+* -v : Verbose, using (-v) or (-vv) increases the amount of detail shown in the output, often showing more protocol specific information.
+
 `tcpdump`: packet capture\
 `sudo tcpdump -n udp port 514 -vv`: Capture UDP Port 512 but don't show me all the details in verbose.\
 `sudo tcpdump -n udp port 514 -A -vv`: Capture UDP Port 512 AND show me all the details in verbose.\
+`sudo tcpdump -i eth0 proto 17`: capture protocol 17 (udp) on eth0\
 `sudo tcpdump -i any port 514 -A -vv`: capture on any interface port 514 and show me all the details in verbose\
+`sudo tcpdump -i eth0 ip 192.168.1.10`: captures traffic to or from 192.168.1.10 on eth0\
+`sudo tcpdump -i eth0 dst 10.10.1.20`: capture traffic on eth0 going to 10.10.1.20\
+`sudo tcpdump -i eth0 -s0 -w test.pcap`: capture all traffic on eth0 (snap length) and write it to a packet capture file\
+`tcpdump -i eth0 -U -w - 'host 192.168.2.29 and (port 22222 or port 22221 or port 80)'`: uses and & or statements. Using in brackets is better to prevent shell getting in the way. (()) in zsh (mac)
 
 <https://www.tcpdump.org/manpages/tcpdump.1.html>
 
-* [ ] Add the command tcpdump arguments you always forget
+tcpdump exmaples:
+
+* <https://github.com/tcpdump-examples/how-to-use-tcpdump>
+* <https://danielmiessler.com/blog/tcpdump>
+* <https://hackertarget.com/tcpdump-examples/>
 
 ### Network Reference
 
