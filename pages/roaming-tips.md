@@ -3,16 +3,16 @@ title: Roaming Tips
 description: Tips and Tricks while roaming overseas
 published: false
 categories:
-  - Tech
-  - NotTech
+    - Tech
+    - NotTech
 type: pages
 layout: pages
 date: 2025-02-27T03:22:07.372Z
-lastmod: 2025-03-04T11:35:15.669Z
+lastmod: 2025-03-05T10:49:13.446Z
 tags:
-  - Roaming
-  - Travel
-  - Internet
+    - Roaming
+    - Travel
+    - Internet
 isdraft: true
 fmContentType: pages
 preview: ""
@@ -21,6 +21,8 @@ preview: ""
 <!--- cSpell:disable --->
 * [Bias and Background](#bias-and-background)
 * [Emergency calls](#emergency-calls)
+* [Voicemail](#voicemail)
+* [Australian Providers Roaming Info](#australian-providers-roaming-info)
 * [eSims](#esims)
   * [2 eSims active](#2-esims-active)
   * [Providers](#providers)
@@ -48,14 +50,14 @@ preview: ""
 * [x] * google photos
 * [ ] Check your providers coverage
 * [ ] Vodafone roaming still one of the best
-* [ ] offline prep (spotify, yt music, yt, Netflix etc)
+* [x] offline prep (spotify, yt music, yt, Netflix etc)
 * [x] esim providers I am aware that at least seem legit (have not used either so not a recommendation):
 * [x] * Sally (Nord VPN)
 * [x] * tripsim by Syd
 * [x] * most don't do voice. Only data...
 * [ ] Vodafone maratime roaming? $$$
 * [ ] cell at Sea?
-* [ ] choose what you do and where
+* [x] choose what you do and where
 * [ ] VPNs work
 * [ ] VPNs personal
 * [ ] WiFi calling with no signal
@@ -75,6 +77,22 @@ Question : WiFi calling - does that need roaming??
 * Not all countries use 000 or 911. Some use 999 or something else. Ref: <https://en.wikipedia.org/wiki/Emergency_telephone_number>
 * 112 works in all countries (AFAIK) from mobile phones as its part of the GSM Standard. Ref: <https://en.wikipedia.org/wiki/112_(emergency_telephone_number)>
 * Don't **assume** VoIP, Skype, WiFi Calling, etc will be able to make emergency calls. WiFi calling *may* do, but it may not.
+
+## Voicemail
+
+If you decide that you are not taking your normal phone with you or you want to keep your roaming costs down, but still check your voicemail, most voicemail providers have a way to check your voicemails remotely, which may be cheaper.
+
+In a lot of cases its simply a matter of calling your own number and then pressing * or # during your voicemail greeting and then entering your pin. Check beforehand so you know your details and test you can access your voicemail remotely before you leave home.
+
+## Australian Providers Roaming Info
+
+Telstra Personal: <https://www.telstra.com.au/international-roaming>\
+Telstra Small Business: TBC\
+Telstra Enterprise: <https://www.telstra.com.au/business-enterprise/products/mobility-solutions/plans-and-devices/international-roaming>
+
+Vodaphone Personal: TBC
+
+Optus: TBC
 
 ## eSims
 
@@ -158,3 +176,4 @@ In addition to removing cellular data access for apps, you can also tell a lot o
 
 > [!IMPORTANT] Backups
 > I'm not saying you should disable backups on device, but you should consider what would be the most important data for you to backup while away. In most cases the photos are often the most important thing people want to backup while away but it may be better to leave the backup enabled, don't have backups over cellular then make sure you can connect to a Wi-Fi network and then run the backup there. Or consider getting a seperate sim.
+> **Consider what task you do where!**
