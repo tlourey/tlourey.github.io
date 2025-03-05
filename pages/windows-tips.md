@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-05T03:48:39.150Z
-lastmod: 2025-03-05T12:26:07.879Z
+lastmod: 2025-03-05T12:36:54.931Z
 tags:
     - Windows
     - Tips
@@ -20,6 +20,7 @@ preview: ""
 <!--- cSpell:disable --->
 * [Keyboard Shortcuts](#keyboard-shortcuts)
 * [Windows Settings Shortcuts](#windows-settings-shortcuts)
+* [Other Windows URIs](#other-windows-uris)
 <!--- cSpell:enable --->
 
 ## Keyboard Shortcuts
@@ -35,4 +36,8 @@ preview: ""
 
 <https://learn.microsoft.com/en-us/windows/apps/develop/launch/launch-settings-app>: contains all `ms-settings:` URI
 <!-- markdownlint-disable-next-line MD033 -->
-Which can be used in hyperlnks, like this: <a href="ms-settings:bluetooth">Bluetooth</a>
+Which can be used in hyperlinks, like this: <a href="ms-settings:bluetooth">Bluetooth</a>
+
+## Other Windows URIs
+
+<https://learn.microsoft.com/en-us/windows/apps/develop/launch/>
