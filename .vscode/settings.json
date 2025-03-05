@@ -23,7 +23,8 @@
 		"TAXII",
 		"Telco",
 		"tftpboot",
-		"Ubiquiti"
+		"Ubiquiti",
+		"VLSM"
 	],
 	"cSpell.languageSettings": [
       {
