@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-06T23:42:22.966Z
+lastmod: 2025-03-06T23:57:15.123Z
 tags:
     - Commands
     - References
@@ -22,12 +22,12 @@ tags:
   * [Logs](#logs)
   * [Monitoring](#monitoring)
 * [EdgeRouter](#edgerouter)
-  * [Help Refs](#help-refs)
+  * [Strange issues when uploading firmware](#strange-issues-when-uploading-firmware)
   * [MAC Address Searching on command line](#mac-address-searching-on-command-line)
-  * [EdgeRouter on a stick](#edgerouter-on-a-stick)
+  * [EdgeRouter Help Refs](#edgerouter-help-refs)
 * [UISP](#uisp)
   * [Paths](#paths)
-  * [Help Refs](#help-refs-1)
+  * [Help Refs](#help-refs)
   * [UNMS CLI](#unms-cli)
 <!--- cSpell:enable --->
 
@@ -45,18 +45,23 @@ Nagios command to check number of process on UniFi Self hosted. In this case, wa
 
 ## EdgeRouter
 
-### Help Refs
+### Strange issues when uploading firmware
 
-<https://help.uisp.com/hc/en-us/articles/22591243829911-EdgeRouter-How-to-Update-the-Bootloader>
+Getting this when uploading a config: "There was an error upgrading the configuration" or similar?
 
-> [!TIP] Bootloader
-> I've noticed that while the new Bootloader image will be put on, it doesn't seem to upgrade itself so its worth checking.
+Something like this: [Restore Config - Upload failed](https://community.ui.com/questions/Restore-Config-Upload-failed/29cab3a5-4220-4d29-a398-e0c624b10260)
+
+1. Try a different browser (not safari - either firefox or chrome.)
+2. Try turning off darkmode in browser and/or OS
+3. Try clearing cache
+
+If all else fails you can look into [uploading a config using SSH/SFTP](https://help.uisp.com/hc/en-us/articles/22591188157079-EdgeRouter-Archiving-and-Managing-the-Configuration-Files)
 
 ### MAC Address Searching on command line
 
 `sudo arp -n | grep -i ab:cd:ef:12:34:56`
 
-### EdgeRouter on a stick
+### EdgeRouter Help Refs
 
 [Hardware Offloading](https://help.ui.com/hc/en-us/articles/115006567467-EdgeRouter-Hardware-Offloading)\
 [Archiving and Managing the Configuration Files](https://help.ui.com/hc/en-us/articles/204960084)\
@@ -66,7 +71,12 @@ Nagios command to check number of process on UniFi Self hosted. In this case, wa
 [How to Create a Guest/LAN Firewall Rule](https://help.ui.com/hc/en-us/articles/218889067)\
 [Router on a Stick](https://help.ui.com/hc/en-us/articles/204959444-EdgeRouter-Router-on-a-Stick)\
 [Hardware Offloading](https://help.ui.com/hc/en-us/articles/115006567467-EdgeRouter-Hardware-Offloading)\
-[Packets Process (aka order of operations)](https://help.ui.com/hc/en-us/articles/204976664-EdgeRouter-Packets-Processing)
+[Packets Process (aka order of operations)](https://help.ui.com/hc/en-us/articles/204976664-EdgeRouter-Packets-Processing)\
+If all else fails you can look into [uploading a config using SSH/SFTP](https://help.uisp.com/hc/en-us/articles/22591188157079-EdgeRouter-Archiving-and-Managing-the-Configuration-Files)\
+[How to Update the Bootloader](https://help.uisp.com/hc/en-us/articles/22591243829911-EdgeRouter-How-to-Update-the-Bootloader)
+
+> [!TIP] Bootloader
+> I've noticed that while the new Bootloader image will be put on, it doesn't seem to upgrade itself so its worth checking.
 
 ## UISP
 
