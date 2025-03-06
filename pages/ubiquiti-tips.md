@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-06T06:29:07.662Z
+lastmod: 2025-03-06T23:40:53.752Z
 tags:
     - Commands
     - References
@@ -22,11 +22,12 @@ tags:
   * [Logs](#logs)
   * [Monitoring](#monitoring)
 * [EdgeRouter](#edgerouter)
+  * [Help Refs](#help-refs)
   * [MAC Address Searching on command line](#mac-address-searching-on-command-line)
   * [EdgeRouter on a stick](#edgerouter-on-a-stick)
 * [UISP](#uisp)
   * [Paths](#paths)
-  * [Help Refs](#help-refs)
+  * [Help Refs](#help-refs-1)
   * [UNMS CLI](#unms-cli)
 <!--- cSpell:enable --->
 
@@ -43,6 +44,10 @@ Nagios command to check number of process on UniFi Self hosted. In this case, wa
 `check_procs -a "-a /usr/lib/unifi/lib/ace.jar -w 5 -c 1:7"`
 
 ## EdgeRouter
+
+### Help Refs
+
+<https://help.uisp.com/hc/en-us/articles/22591243829911-EdgeRouter-How-to-Update-the-Bootloader>
 
 ### MAC Address Searching on command line
 
