@@ -20,6 +20,7 @@ plugins:
   - jekyll-feed
   - jekyll-archives
   - jekyll-target-blank
+  - jekyll-seo-tag
 whitelist:
   - jekyll-gfm-admonitions
   - jekyll-optional-front-matter
@@ -28,6 +29,7 @@ whitelist:
   - jekyll-remote-theme
   - jekyll-archives
   - jekyll-target-blank
+  - jekyll-seo-tag
 category_archive:
   type: liquid
   path: /categories/
