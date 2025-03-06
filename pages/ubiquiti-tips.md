@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-06T23:40:53.752Z
+lastmod: 2025-03-06T23:42:22.966Z
 tags:
     - Commands
     - References
@@ -48,6 +48,9 @@ Nagios command to check number of process on UniFi Self hosted. In this case, wa
 ### Help Refs
 
 <https://help.uisp.com/hc/en-us/articles/22591243829911-EdgeRouter-How-to-Update-the-Bootloader>
+
+> [!TIP] Bootloader
+> I've noticed that while the new Bootloader image will be put on, it doesn't seem to upgrade itself so its worth checking.
 
 ### MAC Address Searching on command line
 
