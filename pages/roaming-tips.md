@@ -1,6 +1,6 @@
 ---
 title: Roaming Tips
-description: Tips and Tricks while roaming overseas
+description: Tips and Tricks before and while roaming overseas
 published: false
 categories:
     - Tech
@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T03:22:07.372Z
-lastmod: 2025-03-05T10:49:13.446Z
+lastmod: 2025-03-06T13:03:28.626Z
 tags:
     - Roaming
     - Travel
