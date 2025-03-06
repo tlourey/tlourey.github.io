@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-11T11:50:00
-lastmod: 2025-03-06T13:29:05.890Z
+lastmod: 2025-03-06T13:32:51.493Z
 tags:
     - Commands
     - MacOS
@@ -41,6 +41,8 @@ tags:
 
 `sudo powermetrics --samplers smc |grep -i "CPU die temperature"`\
 `sudo powermetrics --samplers smc |grep -i "GPU die temperature"`
+
+<https://apple.stackexchange.com/questions/54329/can-i-get-the-cpu-temperature-and-fan-speed-from-the-command-line-in-os-x>
 
 ## Directory Services
 
