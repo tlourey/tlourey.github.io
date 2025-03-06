@@ -3,16 +3,16 @@ title: Mac OS Commands
 description: Commands to remember for Mac OS
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 isdraft: true
 date: 2025-01-11T11:50:00
-lastmod: 2025-03-04T11:22:33.561Z
+lastmod: 2025-03-06T13:29:05.890Z
 tags:
-  - Commands
-  - MacOS
-  - References
+    - Commands
+    - MacOS
+    - References
 ---
 
 
@@ -39,7 +39,8 @@ tags:
 
 ## Hardware
 
-`sudo powermetrics --samplers smc |grep -i "CPU die temperature"`
+`sudo powermetrics --samplers smc |grep -i "CPU die temperature"`\
+`sudo powermetrics --samplers smc |grep -i "GPU die temperature"`
 
 ## Directory Services
 
