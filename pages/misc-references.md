@@ -10,7 +10,7 @@ isdraft: true
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-05T23:36:47.178Z
+lastmod: 2025-03-07T06:48:45.627Z
 fmContentType: pages
 ---
 
@@ -74,6 +74,8 @@ fmContentType: pages
 ### SMTP
 
 <https://datatracker.ietf.org/doc/rfc5321/>
+
+<https://datatracker.ietf.org/doc/html/rfc2142> MAILBOX NAMES FOR COMMON SERVICES, ROLES AND FUNCTIONS
 
 ### SNMP
 
