@@ -3,16 +3,16 @@ title: Bash Tips
 description: We're gonna need a bigger boat, I mean tip page
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T13:05:00
-lastmod: 2025-03-04T11:22:33.486Z
+lastmod: 2025-03-07T12:56:33.813Z
 tags:
-  - Language
-  - References
-  - Tips
+    - Language
+    - References
+    - Tips
 ---
 
 
@@ -20,6 +20,7 @@ tags:
 * [Bash Scripts](#bash-scripts)
   * [Running as a user](#running-as-a-user)
   * [Misc](#misc)
+* [Aliases](#aliases)
 <!--- cSpell:enable --->
 
 ## Bash Scripts
@@ -50,3 +51,7 @@ fi
 * It's good practice to not have the tailing slash on directories. Some tools distinguish between directories with a trailing slash and without
 * Use exit codes. It stops error propagating. See `man errno` for standard numbers
 * Use stderr for error messages, eg `>&2 echo "ERROR: ..."`
+
+## Aliases
+
+See [Linux Commands](linux-commands.md#aliases)
