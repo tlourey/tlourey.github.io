@@ -4,7 +4,7 @@ description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-lastmod: 2025-03-07T12:33:39.429Z
+lastmod: 2025-03-07T12:34:39.868Z
 published: true
 isdraft: false
 ---
@@ -13,6 +13,7 @@ isdraft: false
 <a href="/about">About</a>
 <a href="/">Home</a>
 <a href="/content.html">Up</a>
+<a href="/pages/">Categories</a>
 
 <!--- cSpell:disable --->
 {% for page in site.pages %}
