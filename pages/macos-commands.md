@@ -8,13 +8,13 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-11T11:50:00
-lastmod: 2025-03-06T13:32:51.493Z
+lastmod: 2025-03-07T12:11:57.133Z
 tags:
     - Commands
     - MacOS
     - References
+mermaid: false
 ---
-
 
 <!--- cSpell:disable --->
 * [Networking](#networking)
@@ -40,7 +40,8 @@ tags:
 ## Hardware
 
 `sudo powermetrics --samplers smc |grep -i "CPU die temperature"`\
-`sudo powermetrics --samplers smc |grep -i "GPU die temperature"`
+`sudo powermetrics --samplers smc |grep -i "GPU die temperature"`\
+`sudo powermetrics --samplers smc -i1 -n1`: a single instant sample of SMC sensor readings, including CPU and GPU temprature and fan speed
 
 <https://apple.stackexchange.com/questions/54329/can-i-get-the-cpu-temperature-and-fan-speed-from-the-command-line-in-os-x>
 
