@@ -41,3 +41,5 @@ Which can be used in hyperlinks, like this: <a href="ms-settings:bluetooth">Blue
 ## Other Windows URIs
 
 <https://learn.microsoft.com/en-us/windows/apps/develop/launch/>
+
+* [ ] add emergency restart info
