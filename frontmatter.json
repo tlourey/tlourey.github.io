@@ -287,7 +287,6 @@
       "filePrefix": ""
     }
   ],
-  // "frontMatter.taxonomy.dateFormat": "MMMM D, YYYY",
   "frontMatter.git.enabled": true,
   "frontMatter.website.host": "https://tlourey.github.io",
   "frontMatter.dashboard.openOnStart": true,
@@ -430,10 +429,36 @@
         }
       ]
     },
-    "Image Snippet":{
+    "Image Snippet": {
       "description": "Image with caption",
       "body": "{{< caption \"[[&mediaUrl]]\" \"[[caption]]\" >}}",
       "isMediaSnippet": true
+    },
+    "cSpell: Ignore": {
+      "description": "",
+      "body": "<!--- cSpell:ignore [[Word]] --->",
+      "fields": [
+        {
+          "name": "Word",
+          "title": "Word",
+          "type": "string",
+          "single": true,
+          "default": ""
+        }
+      ]
+    },
+    "cSpell: Words": {
+      "description": "",
+      "body": "<!--- cSpell:ignore [[Word]] --->",
+      "fields": [
+        {
+          "name": "Word",
+          "title": "Word",
+          "type": "string",
+          "single": true,
+          "default": ""
+        }
+      ]
     }
   }
 }
