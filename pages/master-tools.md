@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-07T06:35:39.964Z
-lastmod: 2025-03-07T07:15:07.766Z
+lastmod: 2025-03-07T10:52:30.722Z
 tags:
     - References
     - Tools
@@ -28,6 +28,7 @@ preview: ""
 * [Postmaster](#postmaster)
 * [Masters without Master](#masters-without-master)
   * [NOC](#noc)
+    * [Speedtests](#speedtests)
   * [Security](#security)
 * [Other lists](#other-lists)
 <!--- cSpell:enable --->
@@ -100,6 +101,17 @@ Also often includes abuse functions
 <https://ixpdb.euro-ix.net/en/>
 
 <http://gfblip.appspot.com/>
+
+<https://radar.cloudflare.com>\
+
+#### Speedtests
+
+<https://speedtest.net>\
+<https://fast.com>\
+<https://speed.cloudflare.com>\
+<https://wifiman.com/>\
+<https://www.ozspeedtest.com/>\
+<https://www.aussiebroadband.com.au/speed-test/>
 
 ### Security
 
