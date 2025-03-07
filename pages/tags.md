@@ -4,7 +4,7 @@ description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-lastmod: 2025-03-07T12:39:52.848Z
+lastmod: 2025-03-07T12:42:15.986Z
 published: true
 isdraft: false
 ---
@@ -29,7 +29,7 @@ isdraft: false
 {% assign siteTags = siteTags | split: ", " %}
 {% assign siteTags = siteTags | sort %}
 
-\| {% for tag in siteTags %}[{{ tag }}](#{{ tag }}) \|{%- endfor %}
+\| {% for tag in siteTags %} [{{ tag }}](#{{ tag }}) \|{%- endfor %}
 
 {% for tag in siteTags %}
 <a name="{{ tag }}">{{ tag }}</a>:<br>
