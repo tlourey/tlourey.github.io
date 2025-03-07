@@ -2,16 +2,16 @@
 title: Misc Tools
 description: And not enough toolboxes
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 isdraft: true
 published: true
 tags:
-  - Tools
+    - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-04T11:22:33.556Z
+lastmod: 2025-03-07T07:05:17.757Z
 ---
 
  <!--- cSpell:disable --->
@@ -58,6 +58,8 @@ lastmod: 2025-03-04T11:22:33.556Z
 <https://www.talosintelligence.com/reputation_center/lookup>\
 <https://www.appmaildev.com/>
 
+Also check out [NOC Tools](master-tools.md#noc)
+
 ## Linux Tools
 
 <https://explainshell.com/>
@@ -82,6 +84,8 @@ lastmod: 2025-03-04T11:22:33.556Z
 * <https://mxtoolbox.com/EmailHeaders.aspx>
 * <https://mxtoolbox.com/SuperTool.aspx>
 * <https://mxtoolbox.com/dmarc.aspx>
+
+Also check out [Postmaster Tools](master-tools.md#postmaster)
 
 ## Microsoft 365 Tools
 
@@ -121,3 +125,5 @@ lastmod: 2025-03-04T11:22:33.556Z
 <https://dicepass.org/>\
 <https://github.com/onetimesecret/onetimesecret> / <https://onetimesecret.com/>\
 <https://www.random.org/> / <https://www.random.org/passwords/?num=5&len=16&format=html&rnd=new>
+
+Also check out [Security Tools](master-tools.md#noc)
