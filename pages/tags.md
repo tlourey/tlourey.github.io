@@ -4,12 +4,12 @@ description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-lastmod: 2025-03-04T13:53:57.783Z
+lastmod: 2025-03-07T12:33:39.429Z
 published: true
 isdraft: false
 ---
 
-<!-- markdownlint-disable MD033 --->
+<!-- markdownlint-disable MD033 MD032 --->
 <a href="/about">About</a>
 <a href="/">Home</a>
 <a href="/content.html">Up</a>
@@ -32,7 +32,11 @@ isdraft: false
 {% assign siteTags = siteTags | sort %}
 
 {% for tag in siteTags %}
-<a name="{{ tag}}">{{ tag }}</a>:<br>
+* [{{ tag }}](#{{ tag }})
+{% endfor %}
+
+{% for tag in siteTags %}
+<a name="{{ tag }}">{{ tag }}</a>:<br>
 <ul>
   {% for page in site.pages %}
     {% for pagetags in page.tags %}
