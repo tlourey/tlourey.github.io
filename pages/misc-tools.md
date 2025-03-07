@@ -11,12 +11,14 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-07T12:01:54.096Z
+lastmod: 2025-03-07T12:23:05.751Z
 ---
 
- <!--- cSpell:disable --->
+<!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
+
+<!--- cSpell:disable --->
 * [Network Tools](#network-tools)
-  * [Speedtests](#speedtests)
+  * [Speedtest](#speedtest)
 * [Linux Tools](#linux-tools)
 * [Software Tools](#software-tools)
 * [KQL Tools](#kql-tools)
@@ -65,7 +67,7 @@ lastmod: 2025-03-07T12:01:54.096Z
 <https://www.talosintelligence.com/reputation_center/lookup>\
 <https://www.appmaildev.com/>
 
-### Speedtests
+### Speedtest
 
 <https://speedtest.net>\
 <https://fast.com>\
@@ -105,7 +107,7 @@ lastmod: 2025-03-07T12:01:54.096Z
 **<https://www.vandyke.com/products/securecrt/windows.html> - Its not free but its good.**\
 <https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
 **[Total Commander](https://www.ghisler.com/)** - THE PIMP!\
-<https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandagon yet but its not shit.
+<https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandwagon yet but its not shit.
 
 ## Chrome or Edge Extensions
 
