@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-03-06T02:42:14.900Z
+lastmod: 2025-03-08T13:45:40.554Z
 tags:
     - References
     - Tools
@@ -27,6 +27,7 @@ preview: ""
 * [Music](#music)
 * [Reviews and Ratings](#reviews-and-ratings)
 * [Notes and Learnings](#notes-and-learnings)
+* [Parts and Components](#parts-and-components)
 <!--- cSpell:enable --->
 
 ## Time and date and clocks
@@ -90,3 +91,16 @@ Windy Help Videos (still haven't watched them)\
 ## Notes and Learnings
 
 <https://renenyffenegger.ch/notes/index.html>
+
+## Parts and Components
+
+<https://www.element14.com>\
+<https://www.jaycar.com.au>\
+<https://www.rs-online.com>
+
+<https://www.adafruit.com>\
+<https://store-usa.arduino.cc>\
+<https://raspberry.piaustralia.com.au>
+
+<https://www.mouser.com>\
+<https://www.pakronics.com.au>
