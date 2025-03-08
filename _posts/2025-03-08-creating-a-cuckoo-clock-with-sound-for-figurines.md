@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-08T13:11:33.985Z
+lastmod: 2025-03-08T13:25:36.222Z
 tags:
     - Project
     - Arduino
@@ -59,7 +59,8 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 ### Ideation and Thoughts
 
 * <https://www.instructables.com/I-Cuckoo-Clock-Using-an-Arduino-Stepper-Motor-to-R/>\
-* <https://www.instructables.com/Cuckoo-Clock-arduino>
+* <https://www.instructables.com/Cuckoo-Clock-arduino>\
+* Ideally could support up to a funko pop
 
 ### Parts under consieration
 
