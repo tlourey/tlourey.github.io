@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-08T13:35:01.161Z
+lastmod: 2025-03-08T13:59:30.577Z
 tags:
     - Project
     - Arduino
@@ -58,8 +58,9 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 
 ### Ideation and Thoughts
 
-* <https://www.instructables.com/I-Cuckoo-Clock-Using-an-Arduino-Stepper-Motor-to-R/>\
-* <https://www.instructables.com/Cuckoo-Clock-arduino>\
+* <https://www.instructables.com/I-Cuckoo-Clock-Using-an-Arduino-Stepper-Motor-to-R/>
+* <https://www.instructables.com/Cuckoo-Clock-arduino>
+* We may need an RTC component
 * Ideally could support up to a funko pop
   * <https://funko.com/variety-pop-stand-bases-10-pack/51033.html>
 
@@ -67,7 +68,7 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 
 ### Parts under consieration
 
-<https://au.rs-online.com/web/p/lcd-monochrome-displays/1850193?gb=s>\
-<https://au.element14.com/c/automation-process-control/panel-displays-instrumentation/panel-display-technology/panel-displays?rd=lcd+display>
+* <https://au.rs-online.com/web/p/lcd-monochrome-displays/1850193?gb=s>
+* <https://au.element14.com/c/automation-process-control/panel-displays-instrumentation/panel-display-technology/panel-displays?rd=lcd+display>
 
 ## Summary
