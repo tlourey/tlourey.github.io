@@ -3,13 +3,13 @@ title: The Division Stuff
 description: Stuff about The Division
 published: true
 categories:
-  - Gaming
+    - Gaming
 type: pages
 layout: pages
 date: 2025-02-25T02:28:07.426Z
-lastmod: 2025-03-04T11:22:33.482Z
+lastmod: 2025-03-07T12:28:48.359Z
 tags:
-  - The_Division_2
+    - The_Division_2
 isdraft: true
 fmContentType: pages
 preview: ""
@@ -17,6 +17,7 @@ preview: ""
 
 <!--- cSpell:disable --->
 * [Build Tools](#build-tools)
+* [Sharing Items](#sharing-items)
 * [Misc](#misc)
 * [My build](#my-build)
 <!--- cSpell:enable --->
@@ -27,6 +28,20 @@ preview: ""
 
 <https://docs.google.com/spreadsheets/d/e/2PACX-1vTJEX5DerCvOj3a_m36TRy1gPBAUvrduOIdmXI9j1Y0MpQk1wIXaZ9KOcPa7HzXzp_N5qGmjDj6yEfL/pubhtml#>\
 <https://docs.google.com/spreadsheets/d/1REi6cA7oSzT7h0O9YD6uxAbnCTmE-YKMDctsKogzXC8/pub?output=pdf>
+
+## Sharing Items
+
+From: <https://www.reddit.com/r/thedivision/comments/sabzjq/i_dont_understand_sharing_items/>
+
+> Division 2 loot share works like this:
+>
+> You can only share items with the person(s) who have been in your group the moment you've acquired it. Also you can share items you've got from caches with people that have been in your group when you acquired the cache.
+>
+> You can share those items 1h\[hour\] after acquiring. After that the item becomes unshareable and is yours to do whatever.
+>
+> When you share an item, it gets dropped from your inventory into the game world and anyone, who is eligible to pick up the shared item, can do so.
+>
+> Any item dropped from your inventory (shared) and picked up by someone else, is lost to you. Unless they give it back in that 1 hour sharing for said item is available.
 
 ## Misc
 

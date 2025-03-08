@@ -10,7 +10,7 @@ isdraft: true
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-05T03:53:37.520Z
+lastmod: 2025-03-07T06:48:45.627Z
 fmContentType: pages
 ---
 
@@ -34,6 +34,7 @@ fmContentType: pages
   * [Conventions](#conventions)
 * [Networking](#networking)
 * [Windows](#windows)
+* [Active Directory](#active-directory)
 * [People](#people)
 * [Misc Misc Misc](#misc-misc-misc)
 <!--- cSpell:enable --->
@@ -73,6 +74,8 @@ fmContentType: pages
 ### SMTP
 
 <https://datatracker.ietf.org/doc/rfc5321/>
+
+<https://datatracker.ietf.org/doc/html/rfc2142> MAILBOX NAMES FOR COMMON SERVICES, ROLES AND FUNCTIONS
 
 ### SNMP
 
@@ -148,6 +151,10 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 * <kbd>Left Alt</kbd> + <kbd>Left Shift</kbd> + <kbd>Num Lock</kbd>: Turn on mouse keys
 
 Also check [Windows Tips](windows-tips.md)
+
+## Active Directory
+
+<https://admx.help/> - good group policy reference - except for all the ads
 
 ## People
 

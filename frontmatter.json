@@ -262,6 +262,7 @@
     "path": "assets",
     "relative": false
   },
+  "frontMatter.global.timezone": "Australia/Sydney",
   "frontMatter.preview.host": "http://localhost:4000",
   "frontMatter.sponsors.ai.enabled": false,
   "frontMatter.content.isdraftField": {
@@ -428,10 +429,36 @@
         }
       ]
     },
-    "Image Snippet":{
+    "Image Snippet": {
       "description": "Image with caption",
       "body": "{{< caption \"[[&mediaUrl]]\" \"[[caption]]\" >}}",
       "isMediaSnippet": true
+    },
+    "cSpell: Ignore": {
+      "description": "",
+      "body": "<!--- cSpell:ignore [[Word]] --->",
+      "fields": [
+        {
+          "name": "Word",
+          "title": "Word",
+          "type": "string",
+          "single": true,
+          "default": ""
+        }
+      ]
+    },
+    "cSpell: Words": {
+      "description": "",
+      "body": "<!--- cSpell:ignore [[Word]] --->",
+      "fields": [
+        {
+          "name": "Word",
+          "title": "Word",
+          "type": "string",
+          "single": true,
+          "default": ""
+        }
+      ]
     }
   }
 }

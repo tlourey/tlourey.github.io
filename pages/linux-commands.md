@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-05T05:21:58.365Z
+lastmod: 2025-03-06T06:36:51.549Z
 tags:
     - Commands
     - Linux
@@ -17,6 +17,7 @@ isdraft: false
 ---
 
 <!--- cSpell:disable --->
+* [Operating System Commands](#operating-system-commands)
 * [Terminal Stuff](#terminal-stuff)
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
   * [Aliases](#aliases)
@@ -56,6 +57,13 @@ isdraft: false
   * [SSHD](#sshd)
 * [Misc System Commands](#misc-system-commands)
 <!--- cSpell:enable --->
+
+## Operating System Commands
+
+`lsb_release -a`:tba\
+`cat /etc/debian_version`:TBA\
+`uname`:TBA\
+`uname -a`:TBA
 
 ## Terminal Stuff
 

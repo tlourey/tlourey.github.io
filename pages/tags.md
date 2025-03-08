@@ -4,15 +4,13 @@ description: Do I look like a local library?
 type: index
 fmContentType: default
 date: 2024-12-27T13:38:00
-lastmod: 2025-03-04T13:53:57.783Z
+lastmod: 2025-03-07T12:42:15.986Z
 published: true
 isdraft: false
 ---
 
-<!-- markdownlint-disable MD033 --->
-<a href="/about">About</a>
-<a href="/">Home</a>
-<a href="/content.html">Up</a>
+<!-- markdownlint-disable MD033 MD032 --->
+\| <a href="/about">About</a> \| <a href="/">Home</a> \| <a href="/content.html">Up</a> | <a href="/pages/">Categories</a> |
 
 <!--- cSpell:disable --->
 {% for page in site.pages %}
@@ -31,8 +29,10 @@ isdraft: false
 {% assign siteTags = siteTags | split: ", " %}
 {% assign siteTags = siteTags | sort %}
 
+\| {% for tag in siteTags %} [{{ tag }}](#{{ tag }}) \|{%- endfor %}
+
 {% for tag in siteTags %}
-<a name="{{ tag}}">{{ tag }}</a>:<br>
+<a name="{{ tag }}">{{ tag }}</a>:<br>
 <ul>
   {% for page in site.pages %}
     {% for pagetags in page.tags %}

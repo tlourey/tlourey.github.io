@@ -3,14 +3,14 @@ title: PowerShell Tips
 description: Tips and Tricks with PowerShell
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2025-03-04T11:22:33.549Z
+lastmod: 2025-03-05T12:13:47.960Z
 tags:
-  - Tips
-  - PowerShell
+    - Tips
+    - PowerShell
 isdraft: true
 fmContentType: pages
 preview: ""
@@ -50,10 +50,26 @@ Also check [PowerShell Commands often forgotten](powershell-commands.md#commands
 
 ### Modules
 
-`C:\Program Files\WindowsPowerShell\Modules`: Windows PowerShell 5.1 Modules for all users
-`C:\Users\user.name\OneDrive - Contoso\Documents\WindowsPowerShell\Modules`: Windows PowerShell 5.1 Modules for current user but you have OneDrive known Office folder move on. There are some hiccups and a little pain with this but its managable.
+PowerShell 7:
 
-* [ ] Add PS7 paths
+* Modules installed in the CurrentUser scope:
+  * On Windows, these modules are stored in $HOME\Documents\PowerShell\Modules. The specific location of the Documents folder varies by version of Windows and when you use folder redirection. Also, Microsoft OneDrive can change the location of your Documents folder. To verify the location of your Documents folder, run use the following command: [Environment]::GetFolderPath('MyDocuments').
+  * On non-Windows systems, these modules are stored in the $HOME/.local/share/powershell/Modules folder.
+* Modules installed in the AllUsers scope:
+  * On Windows, these modules are stored in $env:ProgramFiles\PowerShell\Modules.
+  * On non-Windows systems, these modules are stored in /usr/local/share/powershell/Modules.
+* Modules that ship with PowerShell are stored in $PSHOME\Modules
+
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-7.5>
+
+Windows PowerShell 5.1:
+
+* Modules installed in the CurrentUser scope are stored in `$HOME\Documents\WindowsPowerShell\Modules`.
+* Modules installed in the AllUsers scope are stored in `$env:ProgramFiles\WindowsPowerShell\Modules`.
+* Modules that ship with Windows PowerShell stored in `$PSHOME\Modules`, which is `$env:SystemRoot\System32\WindowsPowerShell\1.0\Modules`.
+* `$HOME\OneDrive - Contoso\Documents\WindowsPowerShell\Modules`: Windows PowerShell 5.1 Modules for current user but you have OneDrive known Office folder move on. There are some hiccups and a little pain with this but its managable.\
+
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-5.1>
 
 ## Authentication Methods
 

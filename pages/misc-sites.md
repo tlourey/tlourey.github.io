@@ -3,15 +3,15 @@ title: Misc Sites
 description: TBA
 published: true
 categories:
-  - Tech
-  - NotTech
+    - Tech
+    - NotTech
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-03-04T11:22:33.462Z
+lastmod: 2025-03-06T02:42:14.900Z
 tags:
-  - References
-  - Tools
+    - References
+    - Tools
 isdraft: true
 fmContentType: pages
 preview: ""
@@ -62,6 +62,8 @@ preview: ""
 **<https://beta.bom.gov.au/> - bom.gov.au new beta**\
 <https://beta.bom.gov.au/weather-and-climate/warnings-and-alerts>\
 <http://www.bom.gov.au/australia/radar/> - aus weather radars\
+<http://www.bom.gov.au/australia/meteye/> - good for overlaying different data\
+<http://satview.bom.gov.au/> - fancy weather sat view\
 <https://www.willyweather.com.au/> a friend recommended it but I don't use it much\
 <https://www.google.com.au/search?q=weather>
 

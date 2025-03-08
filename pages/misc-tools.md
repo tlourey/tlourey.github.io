@@ -2,30 +2,39 @@
 title: Misc Tools
 description: And not enough toolboxes
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 isdraft: true
 published: true
 tags:
-  - Tools
+    - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-04T11:22:33.556Z
+lastmod: 2025-03-08T12:35:57.156Z
 ---
 
- <!--- cSpell:disable --->
+<!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
+
+<!--- cSpell:disable --->
 * [Network Tools](#network-tools)
+  * [Speedtest](#speedtest)
 * [Linux Tools](#linux-tools)
 * [Software Tools](#software-tools)
 * [KQL Tools](#kql-tools)
 * [PowerShell Tools](#powershell-tools)
-* [Email Tools](#email-tools)
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
 * [Misc Web Tools](#misc-web-tools)
 * [Security Tools](#security-tools)
+* [Master Tools](#master-tools)
+  * [History and Background](#history-and-background)
+  * [Webmaster](#webmaster)
+    * [Search](#search)
+  * [Hostmaster](#hostmaster)
+  * [Postmaster](#postmaster)
+  * [NOC](#noc)
 <!--- cSpell:enable --->
 
 ## Network Tools
@@ -58,6 +67,15 @@ lastmod: 2025-03-04T11:22:33.556Z
 <https://www.talosintelligence.com/reputation_center/lookup>\
 <https://www.appmaildev.com/>
 
+### Speedtest
+
+<https://speedtest.net>\
+<https://fast.com>\
+<https://speed.cloudflare.com>\
+<https://wifiman.com>\
+<https://www.ozspeedtest.com>\
+<https://www.aussiebroadband.com.au/speed-test/>
+
 ## Linux Tools
 
 <https://explainshell.com/>
@@ -74,15 +92,6 @@ lastmod: 2025-03-04T11:22:33.556Z
 
 [PowerShell Module Browser](https://learn.microsoft.com/en-us/powershell/module/)
 
-## Email Tools
-
-<https://mha.azurewebsites.net/>\
-<https://mxtoolbox.com/>
-
-* <https://mxtoolbox.com/EmailHeaders.aspx>
-* <https://mxtoolbox.com/SuperTool.aspx>
-* <https://mxtoolbox.com/dmarc.aspx>
-
 ## Microsoft 365 Tools
 
 <https://microsoft365dsc.com/>\
@@ -98,7 +107,7 @@ lastmod: 2025-03-04T11:22:33.556Z
 **<https://www.vandyke.com/products/securecrt/windows.html> - Its not free but its good.**\
 <https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
 **[Total Commander](https://www.ghisler.com/)** - THE PIMP!\
-<https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandagon yet but its not shit.
+<https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandwagon yet but its not shit.
 
 ## Chrome or Edge Extensions
 
@@ -114,10 +123,85 @@ lastmod: 2025-03-04T11:22:33.556Z
 ## Misc Web Tools
 
 <https://caiorss.github.io/bookmarklet-maker/>\
-[Network Calculators](https://subnetmask.info) - now seems to redirect to <https://web.archive.org/web/20240429134052if_/https://subnetmask.info/>
+[Network Calculators](https://subnetmask.info) - now seems to redirect to <https://web.archive.org/web/20240429134052if_/https://subnetmask.info/>\
+[The Most Accurate Online Ruler](https://www.ginifab.com/feeds/cm_to_inch/actual_size_ruler.html)
 
 ## Security Tools
 
-<https://dicepass.org/>\
+**<https://crt.sh/>**\
+<https://search.censys.io>\
+<https://www.talosintelligence.com/reputation_center/>\
+<https://www.talosintelligence.com/reputation_center/lookup?search=example.com> - lookup string
+
+<https://dicepass.org>\
 <https://github.com/onetimesecret/onetimesecret> / <https://onetimesecret.com/>\
-<https://www.random.org/> / <https://www.random.org/passwords/?num=5&len=16&format=html&rnd=new>
+<https://www.random.org> / <https://www.random.org/passwords/?num=5&len=16&format=html&rnd=new>
+
+## Master Tools
+
+### History and Background
+
+<https://datatracker.ietf.org/doc/html/rfc2142> MAILBOX NAMES FOR COMMON SERVICES, ROLES AND FUNCTIONS
+
+### Webmaster
+
+<https://analytics.google.com>
+
+#### Search
+
+<https://www.bing.com/webmasters>
+
+<https://search.google.com/search-console>\
+<https://www.google.com/webmasters/tools/siteoverview> - older site that may not be relevant any more
+
+### Hostmaster
+
+**<https://www.whatsmydns.net>** - DNS Replication Check\
+**<http://dns.squish.net>** - DNS Traversal Check\
+<https://developers.cloudflare.com/dns/reference/recommended-third-party-tools/>\
+**<https://dns.google>**
+
+<http://www.webdnstools.com/dnstools/domain_check>\
+<https://lookup.icann.org/en>
+
+<https://docs.wpvip.com/domains/check-dns-record-time-to-live/#:~:text=Run%20dig%20%40%20%2B,current%20TTL%20for%20the%20domain.>
+
+### Postmaster
+
+Also often includes abuse functions
+
+**<https://gmail.com/postmaster/>**\
+<https://senders.yahooinc.com>\
+<https://blog.postmaster.yahooinc.com>\
+<https://sendersupport.olc.protection.outlook.com/pm/Postmaster>\
+<https://sendersupport.olc.protection.outlook.com/snds/>
+
+**<https://mha.azurewebsites.net>**\
+**<https://mxtoolbox.com/SuperTool.aspx>**\
+**<https://mxtoolbox.com/EmailHeaders.aspx>**\
+**<https://mxtoolbox.com/dmarc.aspx>**\
+**<https://mxtoolbox.com>**\
+**<https://dmarcian.com/dmarc-tools/>**\
+<https://dmarcly.com/tools/>\
+<https://www.appmaildev.com>
+
+### NOC
+
+[APNIC WHOIS Search | APNIC](https://wq.apnic.net/static/search.html)\
+[APNIC NetOX](https://netox.apnic.net/)
+
+[Looking Glass - Hurricane Electric (AS9639)](http://lg.he.net/)\
+[Hurricane Electric BGP Toolkit](https://bgp.he.net/)
+
+<http://whois.ripe.net/>
+<https://apps.db.ripe.net/db-web-ui/query>\
+[RIPE Network Coordination Centre](https://www.ripe.net)\
+[Looking Glasses](https://www.ausnog.net/tools/lg)
+
+<https://www.peeringdb.com>\
+<https://www.internetexchangemap.com>\
+<https://ixpdb.euro-ix.net/en/>
+
+<http://gfblip.appspot.com>
+
+<https://radar.cloudflare.com>
