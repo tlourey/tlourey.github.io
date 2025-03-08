@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-07T12:23:05.751Z
+lastmod: 2025-03-08T12:35:57.156Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
@@ -123,7 +123,8 @@ lastmod: 2025-03-07T12:23:05.751Z
 ## Misc Web Tools
 
 <https://caiorss.github.io/bookmarklet-maker/>\
-[Network Calculators](https://subnetmask.info) - now seems to redirect to <https://web.archive.org/web/20240429134052if_/https://subnetmask.info/>
+[Network Calculators](https://subnetmask.info) - now seems to redirect to <https://web.archive.org/web/20240429134052if_/https://subnetmask.info/>\
+[The Most Accurate Online Ruler](https://www.ginifab.com/feeds/cm_to_inch/actual_size_ruler.html)
 
 ## Security Tools
 
