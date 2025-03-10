@@ -3,14 +3,14 @@ title: Misc Terms
 description: Terms, Definitions, Abbreviations
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 date: 2025-02-20T06:58:16.807Z
-lastmod: 2025-03-04T11:22:33.500Z
+lastmod: 2025-03-10T02:39:23.311Z
 tags:
-  - References
-  - Tips
+    - References
+    - Tips
 isdraft: true
 fmContentType: pages
 preview: ""
@@ -32,3 +32,4 @@ preview: ""
 | Bottom Line Up Front | BLUF | The practice of beginning a message with its key information (the "bottom line"). | * Writing/Communication | | [Wikipedia](https://en.wikipedia.org/wiki/BLUF_(communication)) |
 | Customer Termination Unit | CTU | *TBC* | * Telco | | |
 | Integrated Access Device | IAD | *TBC* | * Telco | Mostly used for VoIP Devices | [Wikipedia](https://en.wikipedia.org/wiki/Integrated_access_device) |
+| Pulse-Width Modulation | PWM | any method of representing a signal as a rectangular wave with a varying duty cycle (and for some methods also a varying period) | * Electronics | &quot;PWM is useful for controlling the average power or amplitude delivered by an electrical signal&quot;. Good for controller servos | [Wikipedia](https://en.wikipedia.org/wiki/Pulse-width_modulation) |
