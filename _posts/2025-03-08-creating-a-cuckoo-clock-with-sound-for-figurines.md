@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-10T11:55:48.624Z
+lastmod: 2025-03-10T11:56:40.758Z
 tags:
     - Project
     - Arduino
@@ -88,9 +88,9 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 
 ## Stats
 
-Average Funko Pop Pop Vynal Height: 3.75 Inches = 9.525cm
-Width = 2.5 inches (assumption from internet) = 6.35cm
-Average Weight = 280-340 grams
+* Average Funko Pop Pop Vynal Height: 3.75 Inches = 9.525cm
+* Width = 2.5 inches (assumption from internet) = 6.35cm
+* Average Weight = 280-340 grams
 
 ## Drawning
 
