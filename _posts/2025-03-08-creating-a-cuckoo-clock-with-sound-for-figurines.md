@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-08T14:19:28.799Z
+lastmod: 2025-03-10T02:41:59.140Z
 tags:
     - Project
     - Arduino
@@ -64,6 +64,8 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 * <https://www.reddit.com/r/AskElectronics/comments/drngnh/large_7_segment_4_digit_display/>
 * Ideally could support up to a funko pop
   * <https://funko.com/variety-pop-stand-bases-10-pack/51033.html>
+* <https://www.reddit.com/r/raspberry_pi/comments/4ztkza/wanting_to_learn_raspberry_pi_by_making_an_analog>
+* <https://learn.adafruit.com/adafruit-16-channel-servo-driver-with-raspberry-pi/configuring-your-pi-for-i2c?view=all>
 
 ![Funkpopstand](/assets/images/VarietyPopStandBases10-Pack-hi-res.png)
 
@@ -71,5 +73,6 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 
 * <https://au.rs-online.com/web/p/lcd-monochrome-displays/1850193?gb=s>
 * <https://au.element14.com/c/automation-process-control/panel-displays-instrumentation/panel-display-technology/panel-displays?rd=lcd+display>
+* <https://www.adafruit.com/product/815>
 
 ## Summary
