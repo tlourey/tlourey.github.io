@@ -459,6 +459,54 @@
           "default": ""
         }
       ]
+    },
+    "Term": {
+      "description": "Additional Term for Misc-Terms.md",
+      "body": "| [[Word/Term]] | [[Abbreviation]] | [[Definition]] | [[Contexts]] | [[My Notes]] | [[Links]] |",
+      "fields": [
+        {
+          "name": "Word/Term",
+          "title": "Word/Term",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "Abbreviation",
+          "title": "Abbreviation",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "Definition",
+          "title": "Definition",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "Contexts",
+          "title": "Contexts",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "My Notes",
+          "title": "My Notes",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "Links",
+          "title": "Links",
+          "type": "string",
+          "single": true,
+          "default": ""
+        }
+      ]
     }
   }
 }
