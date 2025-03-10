@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-25T02:28:07.426Z
-lastmod: 2025-03-07T12:28:48.359Z
+lastmod: 2025-03-10T06:50:24.255Z
 tags:
     - The_Division_2
 isdraft: true
@@ -16,11 +16,20 @@ preview: ""
 ---
 
 <!--- cSpell:disable --->
+* [Websites](#websites)
 * [Build Tools](#build-tools)
 * [Sharing Items](#sharing-items)
+* [Tips](#tips)
 * [Misc](#misc)
 * [My build](#my-build)
 <!--- cSpell:enable --->
+
+## Websites
+
+<https://www.ubisoft.com/en-au/game/the-division/the-division-2>\
+<https://www.ubisoft.com/en-au/game/the-division>
+
+<https://www.ubisoft.com/en-au/help/game/the-division-2> - offical help page. not sure if has anything useful.
 
 ## Build Tools
 
@@ -42,6 +51,10 @@ From: <https://www.reddit.com/r/thedivision/comments/sabzjq/i_dont_understand_sh
 > When you share an item, it gets dropped from your inventory into the game world and anyone, who is eligible to pick up the shared item, can do so.
 >
 > Any item dropped from your inventory (shared) and picked up by someone else, is lost to you. Unless they give it back in that 1 hour sharing for said item is available.
+
+## Tips
+
+* White Control Point: Unclaimed
 
 ## Misc
 
