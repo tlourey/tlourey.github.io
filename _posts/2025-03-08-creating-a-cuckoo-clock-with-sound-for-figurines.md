@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-10T02:41:59.140Z
+lastmod: 2025-03-10T10:54:26.714Z
 tags:
     - Project
     - Arduino
@@ -66,6 +66,8 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
   * <https://funko.com/variety-pop-stand-bases-10-pack/51033.html>
 * <https://www.reddit.com/r/raspberry_pi/comments/4ztkza/wanting_to_learn_raspberry_pi_by_making_an_analog>
 * <https://learn.adafruit.com/adafruit-16-channel-servo-driver-with-raspberry-pi/configuring-your-pi-for-i2c?view=all>
+* <https://www.aliexpress.com/w/wholesale-clock-lcd-display.html?spm=a2g0o.productlist.auto_suggest.1.4c8357c7qshx7Q>
+* <https://www.instructables.com/Arduino-and-MAX7219-8-Digit-7-Segment-BCD-Counter/>
 
 ![Funkpopstand](/assets/images/VarietyPopStandBases10-Pack-hi-res.png)
 
@@ -74,5 +76,8 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 * <https://au.rs-online.com/web/p/lcd-monochrome-displays/1850193?gb=s>
 * <https://au.element14.com/c/automation-process-control/panel-displays-instrumentation/panel-display-technology/panel-displays?rd=lcd+display>
 * <https://www.adafruit.com/product/815>
+* <https://www.aliexpress.com/item/1005006857502103.html> 4 bit 0.8" Red display
+* <https://www.robotgear.com.au/Product.aspx/Details/2082-7-Segment-Display-20mm-Red>
+* <https://www.robotgear.com.au/Product.aspx/Details/2096-SparkFun-7-Segment-Serial-Display-Red> - has ATMega328 included to control display
 
 ## Summary
