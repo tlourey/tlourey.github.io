@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-10T10:54:26.714Z
+lastmod: 2025-03-10T11:55:48.624Z
 tags:
     - Project
     - Arduino
@@ -25,6 +25,8 @@ preview: ""
   * [Functions](#functions)
   * [Ideation and Thoughts](#ideation-and-thoughts)
   * [Parts under consieration](#parts-under-consieration)
+* [Stats](#stats)
+* [Drawning](#drawning)
 * [Summary](#summary)
 <!--- cSpell:enable --->
 
@@ -68,6 +70,9 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 * <https://learn.adafruit.com/adafruit-16-channel-servo-driver-with-raspberry-pi/configuring-your-pi-for-i2c?view=all>
 * <https://www.aliexpress.com/w/wholesale-clock-lcd-display.html?spm=a2g0o.productlist.auto_suggest.1.4c8357c7qshx7Q>
 * <https://www.instructables.com/Arduino-and-MAX7219-8-Digit-7-Segment-BCD-Counter/>
+* <https://kitstop.com.au/?s=4+digit+7+segment>
+* <https://kitstop.com.au/product-category/led-7-segment/>
+* <https://core-electronics.com.au/concentric-lact4-12v-20-linear-actuator-4-stroke-12v-0-5-s.html>
 
 ![Funkpopstand](/assets/images/VarietyPopStandBases10-Pack-hi-res.png)
 
@@ -79,5 +84,16 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 * <https://www.aliexpress.com/item/1005006857502103.html> 4 bit 0.8" Red display
 * <https://www.robotgear.com.au/Product.aspx/Details/2082-7-Segment-Display-20mm-Red>
 * <https://www.robotgear.com.au/Product.aspx/Details/2096-SparkFun-7-Segment-Serial-Display-Red> - has ATMega328 included to control display
+* <https://www.jaycar.com.au/sealed-abs-enclosure-240-x-160-x-90mm/p/HB6134>
+
+## Stats
+
+Average Funko Pop Pop Vynal Height: 3.75 Inches = 9.525cm
+Width = 2.5 inches (assumption from internet) = 6.35cm
+Average Weight = 280-340 grams
+
+## Drawning
+
+![Clock](/assets/images/clock1-with%20Plate.drawio.png)
 
 ## Summary
