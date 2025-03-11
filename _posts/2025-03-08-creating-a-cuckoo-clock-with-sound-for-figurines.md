@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-11T12:14:13.396Z
+lastmod: 2025-03-11T13:13:27.373Z
 tags:
     - Project
     - Arduino
@@ -24,10 +24,10 @@ preview: ""
 * [Ideas](#ideas)
   * [Functions](#functions)
   * [Ideation and Thoughts](#ideation-and-thoughts)
-  * [Parts under consideration](#parts-under-consideration)
 * [Stats](#stats)
 * [Drawing](#drawing)
 * [Actuator](#actuator)
+  * [Parts under consideration](#parts-under-consideration)
 * [Summary](#summary)
 <!--- cSpell:enable --->
 
@@ -77,17 +77,6 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 
 ![Funkpopstand](/assets/images/VarietyPopStandBases10-Pack-hi-res.png)
 
-### Parts under consideration
-
-* <https://au.rs-online.com/web/p/lcd-monochrome-displays/1850193?gb=s>
-* <https://au.element14.com/c/automation-process-control/panel-displays-instrumentation/panel-display-technology/panel-displays?rd=lcd+display>
-* <https://www.adafruit.com/product/815>
-* <https://www.aliexpress.com/item/1005006857502103.html> 4 bit 0.8" Red display
-* <https://www.robotgear.com.au/Product.aspx/Details/2082-7-Segment-Display-20mm-Red>
-* <https://www.robotgear.com.au/Product.aspx/Details/2096-SparkFun-7-Segment-Serial-Display-Red> - has ATMega328 included to control display
-* <https://www.jaycar.com.au/sealed-abs-enclosure-240-x-160-x-90mm/p/HB6134>
-* <https://www.digikey.com.au/en/products/detail/actuonix-motion-devices-inc/P8-100-165-12-S/24474910?gQT=1> / <https://www.actuonix.com/assets/images/datasheets/Actuonix%20P8%20Datasheet.pdf>
-
 ## Stats
 
 * Average Funko Pop Pop Vinyl Height: 3.75 Inches = 9.525cm
@@ -107,5 +96,29 @@ After reading parts of [Servos, Steppers or Solenoids? | Choosing an Actuator to
 * Rated Voltage: Something that can also run a pi (can't run this off a PI)
 * Lower Gear Ratio (we need it to be fast but it doesn't have to move much)
 * Able to (move?) 0.5nm
+
+### Parts under consideration
+
+* <https://au.rs-online.com/web/p/lcd-monochrome-displays/1850193?gb=s>
+* <https://au.element14.com/c/automation-process-control/panel-displays-instrumentation/panel-display-technology/panel-displays?rd=lcd+display>
+* <https://www.adafruit.com/product/815>
+* <https://www.aliexpress.com/item/1005006857502103.html> 4 bit 0.8" Red display
+* <https://www.robotgear.com.au/Product.aspx/Details/2082-7-Segment-Display-20mm-Red>
+* <https://www.robotgear.com.au/Product.aspx/Details/2096-SparkFun-7-Segment-Serial-Display-Red> - has ATMega328 included to control display
+* <https://www.jaycar.com.au/sealed-abs-enclosure-240-x-160-x-90mm/p/HB6134>
+* <https://www.digikey.com.au/en/products/detail/actuonix-motion-devices-inc/P8-100-165-12-S/24474910?gQT=1> / <https://www.actuonix.com/assets/images/datasheets/Actuonix%20P8%20Datasheet.pdf>
+* <https://www.digikey.com.au/en/products/filter/electric-actuators-cylinders/1157?s=N4IgjCBcoKwMwWiAxlAZgQwDYGcCmANCAPZQDa4A7AJwyVwgC6RADgC5QgDKbATgJYA7AOYgAvkQC0MKKFSRMuQiXIgAHAAYALEzESQANlkh%2BAE06SwGiKw6QQIImwCeLPJww5UeoA>
+* [2495-L12-100-50-6-S-ND](https://www.digikey.com.au/en/products/detail/actuonix-motion-devices-inc/L12-100-50-6-S/12317300)
+  * 100MM Stroke length
+  * Unit length 152mm
+  * 25mm/s speed
+* [2495-P8-100-49-3-ST-ND](https://www.digikey.com.au/en/products/detail/actuonix-motion-devices-inc/P8-100-49-3-ST/15997551)
+  * 100mm stroke length
+  * unit length 135mm
+  * The speed of travel is determined by the step frequency, and maximum force by the current applied. Looking at data sheet graph we should be ok.
+  * 4.2VDC
+  * <https://www.actuonix.com/p8-100-49-3-st>
+  * <https://www.actuonix.com/assets/images/datasheets/ActuonixP8StepperDatasheet.pdf>
+  * Note: Tic T825 USB Multi-Interface Stepper Motor Controller to control, if not PI i2C?
 
 ## Summary
