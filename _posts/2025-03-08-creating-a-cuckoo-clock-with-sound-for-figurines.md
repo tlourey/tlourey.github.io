@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-11T13:13:27.373Z
+lastmod: 2025-03-11T13:23:57.589Z
 tags:
     - Project
     - Arduino
@@ -120,5 +120,6 @@ After reading parts of [Servos, Steppers or Solenoids? | Choosing an Actuator to
   * <https://www.actuonix.com/p8-100-49-3-st>
   * <https://www.actuonix.com/assets/images/datasheets/ActuonixP8StepperDatasheet.pdf>
   * Note: Tic T825 USB Multi-Interface Stepper Motor Controller to control, if not PI i2C?
+* <https://littlebirdelectronics.com.au/collections/linear-actuators/products/6v-electric-push-rod-100mm-128n> / <https://www.dfrobot.com/product-2369.html> / <https://core-electronics.com.au/6v-electric-push-rod-100mm-128n.html>
 
 ## Summary
