@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-11T08:05:56.097Z
+lastmod: 2025-03-11T12:14:13.396Z
 tags:
     - Project
     - Arduino
@@ -27,6 +27,7 @@ preview: ""
   * [Parts under consideration](#parts-under-consideration)
 * [Stats](#stats)
 * [Drawing](#drawing)
+* [Actuator](#actuator)
 * [Summary](#summary)
 <!--- cSpell:enable --->
 
@@ -85,6 +86,7 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 * <https://www.robotgear.com.au/Product.aspx/Details/2082-7-Segment-Display-20mm-Red>
 * <https://www.robotgear.com.au/Product.aspx/Details/2096-SparkFun-7-Segment-Serial-Display-Red> - has ATMega328 included to control display
 * <https://www.jaycar.com.au/sealed-abs-enclosure-240-x-160-x-90mm/p/HB6134>
+* <https://www.digikey.com.au/en/products/detail/actuonix-motion-devices-inc/P8-100-165-12-S/24474910?gQT=1> / <https://www.actuonix.com/assets/images/datasheets/Actuonix%20P8%20Datasheet.pdf>
 
 ## Stats
 
@@ -96,5 +98,14 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 ## Drawing
 
 ![Clock](/assets/images/clock1-with%20Plate.drawio.png)
+
+## Actuator
+
+After reading parts of [Servos, Steppers or Solenoids? | Choosing an Actuator to Move Your Project](https://core-electronics.com.au/guides/servos-steppers-or-solenoids-choosing-an-actuator-to-move-your-project) and watching part of <https://www.youtube.com/watch?v=s0ABQYxSVdg&t=1s> I think we are after a <ins>*Linear Actuator*</ins> with the following attributes:
+
+* Stroke length: 8.5CM ~ 10CM
+* Rated Voltage: Something that can also run a pi (can't run this off a PI)
+* Lower Gear Ratio (we need it to be fast but it doesn't have to move much)
+* Able to (move?) 0.5nm
 
 ## Summary
