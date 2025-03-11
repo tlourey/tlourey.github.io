@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-11T07:40:55.912Z
+lastmod: 2025-03-11T08:05:56.097Z
 tags:
     - Project
     - Arduino
@@ -90,6 +90,7 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 
 * Average Funko Pop Pop Vinyl Height: 3.75 Inches = 9.525cm
 * Width = 2.5 inches (assumption from internet) = 6.35cm
+* Depth = 2.5 inches (assumption from internet) = 6.35cm
 * Average Weight = 280-340 grams
 
 ## Drawing
