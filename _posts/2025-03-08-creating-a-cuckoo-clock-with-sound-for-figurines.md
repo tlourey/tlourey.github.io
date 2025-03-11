@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-10T11:56:40.758Z
+lastmod: 2025-03-11T07:40:55.912Z
 tags:
     - Project
     - Arduino
@@ -24,9 +24,9 @@ preview: ""
 * [Ideas](#ideas)
   * [Functions](#functions)
   * [Ideation and Thoughts](#ideation-and-thoughts)
-  * [Parts under consieration](#parts-under-consieration)
+  * [Parts under consideration](#parts-under-consideration)
 * [Stats](#stats)
-* [Drawning](#drawning)
+* [Drawing](#drawing)
 * [Summary](#summary)
 <!--- cSpell:enable --->
 
@@ -40,7 +40,7 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 
 ### Functions
 
-* Starting with a 4 Digit LCD 7 Segment Display, but may move to a analoge clock
+* Starting with a 4 Digit LCD 7 Segment Display, but may move to a analog clock
 * Can be muted
 * Muting resets each day
 * Web interface or google interface for muting
@@ -76,7 +76,7 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 
 ![Funkpopstand](/assets/images/VarietyPopStandBases10-Pack-hi-res.png)
 
-### Parts under consieration
+### Parts under consideration
 
 * <https://au.rs-online.com/web/p/lcd-monochrome-displays/1850193?gb=s>
 * <https://au.element14.com/c/automation-process-control/panel-displays-instrumentation/panel-display-technology/panel-displays?rd=lcd+display>
@@ -88,11 +88,11 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 
 ## Stats
 
-* Average Funko Pop Pop Vynal Height: 3.75 Inches = 9.525cm
+* Average Funko Pop Pop Vinyl Height: 3.75 Inches = 9.525cm
 * Width = 2.5 inches (assumption from internet) = 6.35cm
 * Average Weight = 280-340 grams
 
-## Drawning
+## Drawing
 
 ![Clock](/assets/images/clock1-with%20Plate.drawio.png)
 
