@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-08T13:26:52.066Z
+lastmod: 2025-03-11T07:32:09.153Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
@@ -125,7 +125,8 @@ lastmod: 2025-03-08T13:26:52.066Z
 <https://caiorss.github.io/bookmarklet-maker/>\
 [Network Calculators](https://subnetmask.info) - now seems to redirect to <https://web.archive.org/web/20240429134052if_/https://subnetmask.info/>\
 [The Most Accurate Online Ruler](https://www.ginifab.com/feeds/cm_to_inch/actual_size_ruler.html)\
-[Actual size of Online Ruler (cm/mm)](https://www.piliapp.com/actual-size/cm-ruler/)
+[Actual size of Online Ruler (cm/mm)](https://www.piliapp.com/actual-size/cm-ruler/)\
+<https://www.drawio.com/> / <http://draw.io/>
 
 ## Security Tools
 
