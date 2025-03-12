@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-11T08:07:41.279Z
+lastmod: 2025-03-12T00:37:58.057Z
 ---
 
 <!--- cSpell:disable --->
@@ -33,6 +33,7 @@ lastmod: 2025-03-11T08:07:41.279Z
 * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
   * [Configuring Language and regional settings for new users](#configuring-language-and-regional-settings-for-new-users)
+* [Exchange Email Header References](#exchange-email-header-references)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
 * [Entra](#entra)
@@ -142,6 +143,16 @@ Update-MgUser -UserId $userId.Id -Usagelocation $usageLocation
 
 For Exchange: `Set-MailboxRegionalConfiguration -Identity $upn -Language 3081 -TimeZone "AUS Eastern Standard Time" -DateFormat "d/MM/yyyy"`\
 <https://learn.microsoft.com/en-au/powershell/module/exchange/set-mailboxregionalconfiguration?view=exchange-ps>
+
+## Exchange Email Header References
+
+<https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo>\
+<https://learn.microsoft.com/en-us/exchange/header-firewall-exchange-2013-help>
+<https://learn.microsoft.com/en-us/exchange/anti-spam-stamps-exchange-2013-help>
+
+**<https://mha.azurewebsites.net>**
+
+More Mail tools under [Postmaster Tools in Misc Tools](misc-tools.md#postmaster) and Standards links under [SMTP in Misc References](misc-references.md#smtp)
 
 ## Network Details Upload
 
