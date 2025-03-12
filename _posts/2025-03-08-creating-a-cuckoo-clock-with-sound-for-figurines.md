@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-12T02:22:40.636Z
+lastmod: 2025-03-12T06:29:42.722Z
 tags:
     - Project
     - Arduino
@@ -75,6 +75,9 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 * <https://kitstop.com.au/?s=4+digit+7+segment>
 * <https://kitstop.com.au/product-category/led-7-segment/>
 * <https://core-electronics.com.au/concentric-lact4-12v-20-linear-actuator-4-stroke-12v-0-5-s.html>
+* If using PI
+  * Consider SDCard in read only mode - but how can it then do Update
+  * Sounds come from plugged in usb drive
 
 ![Funkpopstand](/assets/images/VarietyPopStandBases10-Pack-hi-res.png)
 
