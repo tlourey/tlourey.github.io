@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-11T13:23:57.589Z
+lastmod: 2025-03-12T02:22:40.636Z
 tags:
     - Project
     - Arduino
@@ -28,6 +28,7 @@ preview: ""
 * [Drawing](#drawing)
 * [Actuator](#actuator)
   * [Parts under consideration](#parts-under-consideration)
+* [Reference Material](#reference-material)
 * [Summary](#summary)
 <!--- cSpell:enable --->
 
@@ -84,6 +85,8 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 * Depth = 2.5 inches (assumption from internet) = 6.35cm
 * Average Weight = 280-340 grams
 
+
+
 ## Drawing
 
 ![Clock](/assets/images/clock1-with%20Plate.drawio.png)
@@ -121,5 +124,13 @@ After reading parts of [Servos, Steppers or Solenoids? | Choosing an Actuator to
   * <https://www.actuonix.com/assets/images/datasheets/ActuonixP8StepperDatasheet.pdf>
   * Note: Tic T825 USB Multi-Interface Stepper Motor Controller to control, if not PI i2C?
 * <https://littlebirdelectronics.com.au/collections/linear-actuators/products/6v-electric-push-rod-100mm-128n> / <https://www.dfrobot.com/product-2369.html> / <https://core-electronics.com.au/6v-electric-push-rod-100mm-128n.html>
+* L298N dual H-Bridge motor driver
+  * <https://howtomechatronics.com/tutorials/arduino/arduino-dc-motor-control-tutorial-l298n-pwm-h-bridge/#h-l298n-driver>
+
+## Reference Material
+
+* <https://newbiely.com/tutorials/raspberry-pi/raspberry-pi-actuator> - good guide from the looks of it
+* <https://github.com/ericescobar/Chicken_Door> - simple example that we can copy from
+  * <https://github.com/ericescobar/Chicken_Door/blob/master/Electrical_Diagram.jpg>
 
 ## Summary
