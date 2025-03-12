@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-12T08:50:11.845Z
+lastmod: 2025-03-12T11:50:31.486Z
 tags:
     - Project
     - Arduino
@@ -146,12 +146,13 @@ After reading parts of [Servos, Steppers or Solenoids? | Choosing an Actuator to
 | 1   | [6v electric push rod 100mm 128n](https://littlebirdelectronics.com.au/collections/linear-actuators/products/6v-electric-push-rod-100mm-128n)| $50.80 | |
 | 1   | [L289n Dual H Bridge Motor Driver](https://littlebirdelectronics.com.au/products/l298n-dual-h-bridge-motor-driver-board) | $15.00 | |
 | 0   | [STEMMA QT / Qwiic JST SH 4-pin Cable with Premium Female Sockets](https://www.adafruit.com/product/4397) | $0.95 | USD, Optional and may not be needed |
+| 1   | [Mini USB Stereo Speaker](https://littlebirdelectronics.com.au/collections/power-supplies/products/mini-usb-stereo-speaker) |$18.29 | |
+| 1   | [Pi 4 Model B](https://raspberry.piaustralia.com.au/products/raspberry-pi-4) | $84.00 | |
 | 1   | 6v power supply (not yet specified) | TBC | |
 | 1   | Pi Power Supply (not yet specified) |TBC | |
 | 1   | breadboard (not yet specified) | TBC | |
-| 1   | [Pi 4 Model B](https://raspberry.piaustralia.com.au/products/raspberry-pi-4) | $84.00 | |
 | 1   | SD card (not yet specified) | TBC | |
-|     | **Total** | $225.99 | |
+|     | **Total** | $244.28 | |
 
 ## Reference Material
 
