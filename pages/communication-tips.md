@@ -1,7 +1,7 @@
 ---
 title: Communication Tips
 description: TBA
-published: false
+published: true
 categories:
     - NotTech
 type: pages
@@ -14,7 +14,7 @@ tags:
     - Writing
 fmContentType: pages
 date: 2024-11-02T11:39:00
-lastmod: 2025-03-12T01:16:07.576Z
+lastmod: 2025-03-12T02:28:04.759Z
 mermaid: false
 ---
 
