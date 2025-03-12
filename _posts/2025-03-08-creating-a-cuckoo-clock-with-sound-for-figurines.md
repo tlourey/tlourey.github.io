@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-12T06:29:42.722Z
+lastmod: 2025-03-12T07:35:01.367Z
 tags:
     - Project
     - Arduino
@@ -78,6 +78,9 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 * If using PI
   * Consider SDCard in read only mode - but how can it then do Update
   * Sounds come from plugged in usb drive
+  * Consider: <https://core-electronics.com.au/guides/ups-with-raspberry-pi-4/> to keep the clock going when no power
+  * <https://raspi.tv/2015/how-to-drive-a-7-segment-display-directly-on-raspberry-pi-in-python>
+    * <https://rasp.io/breakout/>
 
 ![Funkpopstand](/assets/images/VarietyPopStandBases10-Pack-hi-res.png)
 
@@ -87,8 +90,6 @@ Imagine a Warhammer Cuckoo Clock that plays a sound on the hour.
 * Width = 2.5 inches (assumption from internet) = 6.35cm
 * Depth = 2.5 inches (assumption from internet) = 6.35cm
 * Average Weight = 280-340 grams
-
-
 
 ## Drawing
 
