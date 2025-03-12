@@ -7,11 +7,11 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-12T02:31:01.751Z
-lastmod: 2025-03-12T02:41:56.749Z
+lastmod: 2025-03-12T02:43:07.139Z
 tags:
     - References
     - Tips
-    - HTML
+    - Language
 isdraft: true
 fmContentType: pages
 mermaid: false
