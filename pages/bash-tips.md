@@ -8,11 +8,13 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T13:05:00
-lastmod: 2025-03-07T12:56:33.813Z
+lastmod: 2025-03-12T02:47:02.469Z
 tags:
     - Language
+    - Linux
     - References
     - Tips
+    - MacOS
 ---
 
 
