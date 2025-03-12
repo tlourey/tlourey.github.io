@@ -82,6 +82,7 @@ lastmod: 2025-03-12T00:35:18.492Z
 
 ## Software Tools
 
+[pyrexp](https://pythonium.net/regex)
 [regex101](https://regex101.com/)
 
 ## KQL Tools
