@@ -1,6 +1,6 @@
 ---
 title: Communication Tips
-description: ""
+description: TBA
 published: false
 categories:
     - NotTech
@@ -14,7 +14,7 @@ tags:
     - Writing
 fmContentType: pages
 date: 2024-11-02T11:39:00
-lastmod: 2025-03-12T01:01:54.884Z
+lastmod: 2025-03-12T01:16:07.576Z
 mermaid: false
 ---
 
