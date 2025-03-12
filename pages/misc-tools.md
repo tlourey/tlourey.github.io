@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-12T00:35:18.492Z
+lastmod: 2025-03-12T23:43:30.010Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
@@ -82,7 +82,8 @@ lastmod: 2025-03-12T00:35:18.492Z
 
 ## Software Tools
 
-[regex101](https://regex101.com/)
+[regex101](https://regex101.com/)\
+[pyrexp](https://pythonium.net/regex) - Thanks to [@cyrilbois](https://github.com/cyrilbois) for the PR and making the tool!
 
 ## KQL Tools
 
