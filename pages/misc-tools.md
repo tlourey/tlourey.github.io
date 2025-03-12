@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-12T23:43:30.010Z
+lastmod: 2025-03-12T23:49:39.946Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
@@ -25,6 +25,7 @@ lastmod: 2025-03-12T23:43:30.010Z
 * [PowerShell Tools](#powershell-tools)
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
+  * [Hardware](#hardware)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
 * [Misc Web Tools](#misc-web-tools)
 * [Security Tools](#security-tools)
@@ -109,6 +110,11 @@ lastmod: 2025-03-12T23:43:30.010Z
 <https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
 **[Total Commander](https://www.ghisler.com/)** - THE PIMP!\
 <https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandwagon yet but its not shit.
+
+### Hardware
+
+**[USBDeview](https://www.nirsoft.net/utils/usb_devices_view.html)** - really good tool. Shows info about USB device drivers and USB Devices (also nearly everything from Nirsoft is awesome)\
+[DevManView](https://www.nirsoft.net/utils/device_manager_view.html) - Alternative to device manager of Windows (have not used it but everything from Nirsoft is awesome)
 
 ## Chrome or Edge Extensions
 
