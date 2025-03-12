@@ -8,7 +8,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-03-08T12:56:35.139Z
-lastmod: 2025-03-12T07:35:01.367Z
+lastmod: 2025-03-12T07:54:35.534Z
 tags:
     - Project
     - Arduino
@@ -109,6 +109,7 @@ After reading parts of [Servos, Steppers or Solenoids? | Choosing an Actuator to
 * <https://au.rs-online.com/web/p/lcd-monochrome-displays/1850193?gb=s>
 * <https://au.element14.com/c/automation-process-control/panel-displays-instrumentation/panel-display-technology/panel-displays?rd=lcd+display>
 * <https://www.adafruit.com/product/815>
+  * More in <https://www.adafruit.com/category/37_103>
 * <https://www.aliexpress.com/item/1005006857502103.html> 4 bit 0.8" Red display
 * <https://www.robotgear.com.au/Product.aspx/Details/2082-7-Segment-Display-20mm-Red>
 * <https://www.robotgear.com.au/Product.aspx/Details/2096-SparkFun-7-Segment-Serial-Display-Red> - has ATMega328 included to control display
