@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-06T23:57:15.123Z
+lastmod: 2025-03-10T04:31:51.723Z
 tags:
     - Commands
     - References
@@ -26,6 +26,7 @@ tags:
   * [MAC Address Searching on command line](#mac-address-searching-on-command-line)
   * [EdgeRouter Help Refs](#edgerouter-help-refs)
 * [UISP](#uisp)
+  * [When restoring to another device](#when-restoring-to-another-device)
   * [Paths](#paths)
   * [Help Refs](#help-refs)
   * [UNMS CLI](#unms-cli)
@@ -82,6 +83,16 @@ If all else fails you can look into [uploading a config using SSH/SFTP](https://
 
 Used to be called UNMS
 
+### When restoring to another device
+
+If you download a backup from UISP you have to select if you are restoring it do different hardware or not.
+
+[Backup and Restore using UNMS](https://help.uisp.com/hc/en-us/articles/22591243898519-EdgeRouter-Backup-and-Restore-Configuration#3)
+
+Also, when you restore it you may have to adopt the replacement device in UISP
+
+<https://help.uisp.com/hc/en-us/articles/22590956342295-UISP-Add-Devices-to-UISP-Application>
+
 ### Paths
 
 `/home/unms/data/unms-backups`: UNMS Backups\
@@ -92,7 +103,7 @@ Used to be called UNMS
 ### Help Refs
 
 **<https://help.uisp.com/hc/en-us/articles/22591008678039-UISP-First-Time-Setup-Installation>** - also contains `unms-cli` and backup overview.\
-<https://help.uisp.com/hc/en-us/sections/22589661169559-UISP-Management-System>\
+<https://help.uisp.com/hc/en-us/sections/22589661169559-UISP-Management-System> - UISP Console help page\
 <https://help.uisp.com/hc/en-us/categories/22589458689175-UISP>\
 <https://help.uisp.com/hc/en-us/articles/22590970823959-UISP-How-to-Find-Logs-Report-Bugs>\
 <https://help.uisp.com/hc/en-us/articles/22590998733207-UISP-Command-Line-Interface-CLI>\

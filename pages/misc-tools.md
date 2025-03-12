@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-08T13:26:52.066Z
+lastmod: 2025-03-12T00:35:18.492Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
@@ -125,7 +125,8 @@ lastmod: 2025-03-08T13:26:52.066Z
 <https://caiorss.github.io/bookmarklet-maker/>\
 [Network Calculators](https://subnetmask.info) - now seems to redirect to <https://web.archive.org/web/20240429134052if_/https://subnetmask.info/>\
 [The Most Accurate Online Ruler](https://www.ginifab.com/feeds/cm_to_inch/actual_size_ruler.html)\
-[Actual size of Online Ruler (cm/mm)](https://www.piliapp.com/actual-size/cm-ruler/)
+[Actual size of Online Ruler (cm/mm)](https://www.piliapp.com/actual-size/cm-ruler/)\
+<https://www.drawio.com/> / <http://draw.io/>
 
 ## Security Tools
 
@@ -180,11 +181,15 @@ Also often includes abuse functions
 **<https://mha.azurewebsites.net>**\
 **<https://mxtoolbox.com/SuperTool.aspx>**\
 **<https://mxtoolbox.com/EmailHeaders.aspx>**\
+**<https://mxtoolbox.com/emailhealth>** - good overview for a specific domain\
 **<https://mxtoolbox.com/dmarc.aspx>**\
 **<https://mxtoolbox.com>**\
 **<https://dmarcian.com/dmarc-tools/>**\
 <https://dmarcly.com/tools/>\
 <https://www.appmaildev.com>
+
+> [!TIP] TIP
+> Links to Exchange and Exchange Online Header Messages are in [Microsoft 365 Tips](microsoft-365-tips.md#exchange-email-header-references)
 
 ### NOC
 

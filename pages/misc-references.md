@@ -10,7 +10,7 @@ isdraft: true
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-07T06:48:45.627Z
+lastmod: 2025-03-12T00:33:58.933Z
 fmContentType: pages
 ---
 
@@ -73,9 +73,10 @@ fmContentType: pages
 
 ### SMTP
 
-<https://datatracker.ietf.org/doc/rfc5321/>
-
-<https://datatracker.ietf.org/doc/html/rfc2142> MAILBOX NAMES FOR COMMON SERVICES, ROLES AND FUNCTIONS
+[RFC5321: SMTP](https://datatracker.ietf.org/doc/html/rfc5321/)\
+[RFC2142: MAILBOX NAMES FOR COMMON SERVICES, ROLES AND FUNCTIONS](https://datatracker.ietf.org/doc/html/rfc2142>)\
+[RFC7208: SPF](https://datatracker.ietf.org/doc/html/rfc7208)\
+[RFC8601: Message Header Field for Indicating Message Authentication Status](https://datatracker.ietf.org/doc/html/rfc8601)
 
 ### SNMP
 

@@ -18,10 +18,12 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-05T02:42:25.000Z
+lastmod: 2025-03-12T00:37:58.057Z
 ---
 
 <!--- cSpell:disable --->
+* [Licensing](#licensing)
+* [Compliance and Security](#compliance-and-security)
 * [URLs and Landing Zones](#urls-and-landing-zones)
   * [Login, Signin and App Specific URLs](#login-signin-and-app-specific-urls)
   * [App Specific URLs](#app-specific-urls)
@@ -31,11 +33,22 @@ lastmod: 2025-03-05T02:42:25.000Z
 * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
   * [Configuring Language and regional settings for new users](#configuring-language-and-regional-settings-for-new-users)
+* [Exchange Email Header References](#exchange-email-header-references)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
 * [Entra](#entra)
 * [Diag Tools](#diag-tools)
 <!--- cSpell:enable --->
+
+## Licensing
+
+**[Microsoft 365 Licensing Maps](https://m365maps.com)** - really really good site\
+**[Compare Microsoft 365 Enterprise Plan](https://www.microsoft.com/en-au/microsoft-365/enterprise/microsoft365-plans-and-pricing)** - often used to compare\
+**[Microsoft 365, Office 365, Enterprise Mobility + Security, and Windows 11 Subscriptions Comparison PDF](https://go.microsoft.com/fwlink/p/?LinkID=2139145&clcid=0xc09&culture=en-au&country=au)** - really good and contains lots of details about inclusions and add-ons
+
+## Compliance and Security
+
+[Microsoft Information Protection Deployment Accelerator Guide](https://microsoft.github.io/ComplianceCxE/dag/)
 
 ## URLs and Landing Zones
 
@@ -130,6 +143,16 @@ Update-MgUser -UserId $userId.Id -Usagelocation $usageLocation
 
 For Exchange: `Set-MailboxRegionalConfiguration -Identity $upn -Language 3081 -TimeZone "AUS Eastern Standard Time" -DateFormat "d/MM/yyyy"`\
 <https://learn.microsoft.com/en-au/powershell/module/exchange/set-mailboxregionalconfiguration?view=exchange-ps>
+
+## Exchange Email Header References
+
+<https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo>\
+<https://learn.microsoft.com/en-us/exchange/header-firewall-exchange-2013-help>
+<https://learn.microsoft.com/en-us/exchange/anti-spam-stamps-exchange-2013-help>
+
+**<https://mha.azurewebsites.net>**
+
+More Mail tools under [Postmaster Tools in Misc Tools](misc-tools.md#postmaster) and Standards links under [SMTP in Misc References](misc-references.md#smtp)
 
 ## Network Details Upload
 
