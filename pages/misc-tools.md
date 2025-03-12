@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-11T07:32:09.153Z
+lastmod: 2025-03-12T00:26:05.969Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
@@ -181,6 +181,7 @@ Also often includes abuse functions
 **<https://mha.azurewebsites.net>**\
 **<https://mxtoolbox.com/SuperTool.aspx>**\
 **<https://mxtoolbox.com/EmailHeaders.aspx>**\
+**<https://mxtoolbox.com/emailhealth>** - good overview for a specific domain\
 **<https://mxtoolbox.com/dmarc.aspx>**\
 **<https://mxtoolbox.com>**\
 **<https://dmarcian.com/dmarc-tools/>**\
