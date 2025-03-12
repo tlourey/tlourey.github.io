@@ -14,7 +14,8 @@ tags:
     - Writing
     - SoftSkills
 fmContentType: pages
-lastmod: 2025-03-12T00:54:12.088Z
+date: 2024-11-02T11:39:00
+lastmod: 2025-03-12T00:55:12.376Z
 mermaid: false
 ---
 
