@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-03-04T11:23:52.002Z
+lastmod: 2025-03-13T22:30:23.613Z
 tags:
     - Commands
     - References
@@ -59,6 +59,11 @@ qprocess /server:servername
 ## Uptime
 
 Find Uptime from System Info
+
+> [!NOTE] NOTE
+> The below records the time system last registered a **full** boot up.
+> If you have FastBoot enabled, it doesn't reset.
+> Task Manager shows you the 'duration' of your uptime from this date, not the actual duration - ie hibernation doesn't stop this
 
 ```bat
 systeminfo | find “System Boot Time”
