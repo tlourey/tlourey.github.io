@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-13T03:03:30.941Z
+lastmod: 2025-03-13T03:16:49.343Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
@@ -119,6 +119,11 @@ lastmod: 2025-03-13T03:03:30.941Z
 
 #### Video Cables
 
+Somewhat specific cables I often buy and want to remember.
+
+[Keji 4K HDMI Cable 5m](https://www.officeworks.com.au/shop/officeworks/p/keji-4k-hdmi-cable-5m-kejihdmi5m) - cheapish for 5M\
+[StarTech.com 3m 10 ft White Mini DisplayPort to DisplayPort 1.2 Adapter Cable M/M - DisplayPort 4k with HBR2 Support - Mini DP to DP Cable](https://www.amazon.com.au/dp/B0081ZBNCA)\
+[Club3D CAC-2067 DisplayPort to DisplayPort 1.4/Hbr3/ HDR Support Cable DP 1.4 8K 60Hz 1 Meter/3.28 Feet Black Vesa Certified](https://www.amazon.com.au/dp/B076D6GGG8)\
 Active DisplayPort to HDMI for Lenovo Docks that you prefer: [CableCreation Active Displayport to HDMI 4K 60Hz Cable 2.4M(8FT) Support Multi-Screen Display, DP to HDMI HDR Monitor Cable Unidirectional, DP Cable 1.4 to HDMI Support 4K 30Hz, 2K/1080P 144Hz, 120Hz](https://www.amazon.com.au/CableCreation-Unidirectional-DisplayPort-Eyefinity-Multi-Display/dp/B082CXMBCQ?ref_=ast_sto_dp&th=1)
 
 ## Chrome or Edge Extensions
