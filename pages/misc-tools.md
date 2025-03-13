@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-12T23:49:39.946Z
+lastmod: 2025-03-13T03:03:30.941Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
@@ -26,6 +26,7 @@ lastmod: 2025-03-12T23:49:39.946Z
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
   * [Hardware](#hardware)
+    * [Video Cables](#video-cables)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
 * [Misc Web Tools](#misc-web-tools)
 * [Security Tools](#security-tools)
@@ -115,6 +116,10 @@ lastmod: 2025-03-12T23:49:39.946Z
 
 **[USBDeview](https://www.nirsoft.net/utils/usb_devices_view.html)** - really good tool. Shows info about USB device drivers and USB Devices (also nearly everything from Nirsoft is awesome)\
 [DevManView](https://www.nirsoft.net/utils/device_manager_view.html) - Alternative to device manager of Windows (have not used it but everything from Nirsoft is awesome)
+
+#### Video Cables
+
+Active DisplayPort to HDMI for Lenovo Docks that you prefer: [CableCreation Active Displayport to HDMI 4K 60Hz Cable 2.4M(8FT) Support Multi-Screen Display, DP to HDMI HDR Monitor Cable Unidirectional, DP Cable 1.4 to HDMI Support 4K 30Hz, 2K/1080P 144Hz, 120Hz](https://www.amazon.com.au/CableCreation-Unidirectional-DisplayPort-Eyefinity-Multi-Display/dp/B082CXMBCQ?ref_=ast_sto_dp&th=1)
 
 ## Chrome or Edge Extensions
 
