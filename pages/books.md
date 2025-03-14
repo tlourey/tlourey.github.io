@@ -1,7 +1,7 @@
 ---
 title: Books
 description: TBA
-published: false
+published: true
 categories:
     - NotTech
     - Tech
