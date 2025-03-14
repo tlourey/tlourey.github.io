@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-03-05T02:13:56.636Z
+lastmod: 2025-03-14T07:46:26.334Z
 tags:
     - Monitoring
     - Nagios
@@ -108,11 +108,13 @@ define host {
 
 ## Nagios References
 
+[Nagios 4.0 Documentation Table of Contents](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/toc.html)
+
 [Nagios Plugin Development Guidelines](https://nagios-plugins.org/doc/guidelines.html)
 
 [Nagios Object Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html)\
 [Nagios Host Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#host)\
-[Nagios Service Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#service)\
+[Nagios Service Definitions](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/objectdefinitions.html#service)
 
 [Nagios Macro List](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/macrolist.html)
 
