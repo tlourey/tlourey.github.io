@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-06T06:36:51.549Z
+lastmod: 2025-03-16T21:58:24.713Z
 tags:
     - Commands
     - Linux
@@ -22,6 +22,7 @@ isdraft: false
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
   * [Aliases](#aliases)
   * [TMUX](#tmux)
+  * [Serial Stuff](#serial-stuff)
 * [Files](#files)
   * [What process is using a file](#what-process-is-using-a-file)
   * [ls options often forgotten](#ls-options-often-forgotten)
@@ -98,6 +99,20 @@ To make permanent, add alias to:
 <!-- cspell:ignore Byobu -->
 * [ ] TMUX
 * [ ] Byobu
+* [ ] screen
+
+### Serial Stuff
+
+Query comms / serial port settings: `stty < /dev/ttyS0`
+
+Consider:
+
+* `minicom`
+* `picocom`
+* `setserial`
+* `cu -l /dev/ttyS0 -s 9600`
+
+More info: <https://unix.stackexchange.com/questions/22545/how-to-connect-to-a-serial-port-as-simple-as-using-ssh>
 
 ## Files
 
