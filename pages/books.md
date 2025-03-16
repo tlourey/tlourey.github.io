@@ -1,6 +1,6 @@
 ---
 title: Books
-description: TBA
+description: Books I've read, recommend or been recommended
 published: true
 categories:
     - NotTech
@@ -9,7 +9,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-14T04:23:25.235Z
-lastmod: 2025-03-16T02:19:55.562Z
+lastmod: 2025-03-16T02:23:39.221Z
 tags:
     - Books
     - Management
@@ -26,6 +26,7 @@ preview: ""
 * [Non-Fiction](#non-fiction)
   * [Tech](#tech)
     * [Programming and Scripting](#programming-and-scripting)
+    * [General](#general)
       * [PowerShell](#powershell)
       * [Python](#python)
       * [Bash](#bash)
@@ -50,12 +51,18 @@ preview: ""
 
 #### Programming and Scripting
 
+#### General
+
+* Head First Programming - David Griffiths, Paul Barry
+
 ##### PowerShell
 
 * Learn PowerShell Toolmaking in a Month of Lunches - Don Jones and Jeffery D. Hicks: This is really really good
 * The PowerShell Scripting and Toolmaking Book - Don Jones and Jeff Hicks
 
 ##### Python
+
+* Head First Programming - David Griffiths, Paul Barry
 
 ##### Bash
 
