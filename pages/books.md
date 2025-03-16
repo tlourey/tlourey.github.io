@@ -9,7 +9,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-14T04:23:25.235Z
-lastmod: 2025-03-14T04:58:23.746Z
+lastmod: 2025-03-16T02:19:55.562Z
 tags:
     - Books
     - Management
@@ -31,7 +31,8 @@ preview: ""
       * [Bash](#bash)
       * [Ansible](#ansible)
     * [Hardware](#hardware)
-  * [Cloud](#cloud)
+    * [Cloud](#cloud)
+    * [Data](#data)
     * [Networks](#networks)
     * [Misc](#misc)
   * [Management](#management)
@@ -66,7 +67,11 @@ preview: ""
 
 * Hacking The Xbox: An Introduction to Reverse Engineering Paperback - Andrew 'BUNNIE' Huang
 
-### Cloud
+#### Cloud
+
+#### Data
+
+Data Modeling: A Beginner's Guide - Andy Oppel
 
 #### Networks
 
@@ -76,13 +81,16 @@ preview: ""
 
 #### Misc
 
-* The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win - Gene Kim, Kevin Behr, George Spaffordd
+* The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win - Gene Kim, Kevin Behr, George Spafford
+* Home Theater Hacks - McLaughlin
 
 ### Management
 
 * The Phoenix Project: A Novel about IT, DevOps, and Helping Your Business Win - Gene Kim, Kevin Behr, George Spafford
 
 ### Soft Skills
+
+* The Decision Book: Fifty Models for Strategic Thinking  - Mikael Krogerus and Roman Tschappeler
 
 ### Funny
 
@@ -91,6 +99,9 @@ preview: ""
 * I Hope They Serve Beer In Hell - Tucker Max: Hilarity Ensues, do rate.
 * Hilarity Ensues - Tucker Max: Same again
 * Sloppy Seconds: The Tucker Max Leftovers - Tucker Max: again awesome book
+* Cyanide & Happiness - Kris Wilson, Rob, Matt, Dave
+* Ice Cream and Sadness: Cyanide and Happiness Vol 2 - Kris Wilson, Rob, Matt, Dave
+* Punching Zoo - Cyanide and Happiness Vol 3 - Kris Wilson, Rob, Matt, Dave
 
 ### Project Management
 
