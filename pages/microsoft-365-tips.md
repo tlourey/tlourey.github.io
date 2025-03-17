@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-12T00:37:58.057Z
+lastmod: 2025-03-17T02:45:21.496Z
 ---
 
 <!--- cSpell:disable --->
@@ -29,10 +29,11 @@ lastmod: 2025-03-12T00:37:58.057Z
   * [App Specific URLs](#app-specific-urls)
   * [Logout URLs](#logout-urls)
   * [References](#references)
-* [SharePoint Language Settings for end user](#sharepoint-language-settings-for-end-user)
-* [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
   * [Configuring Language and regional settings for new users](#configuring-language-and-regional-settings-for-new-users)
+  * [Exchange Language Settings for end user](#exchange-language-settings-for-end-user)
+  * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
+  * [SharePoint Language Settings for end user](#sharepoint-language-settings-for-end-user)
 * [Exchange Email Header References](#exchange-email-header-references)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
@@ -49,6 +50,10 @@ lastmod: 2025-03-12T00:37:58.057Z
 ## Compliance and Security
 
 [Microsoft Information Protection Deployment Accelerator Guide](https://microsoft.github.io/ComplianceCxE/dag/)
+
+[Use Keyword Query Language to create search queries in eDiscovery](https://learn.microsoft.com/en-us/purview/edisc-keyword-query-language) - aka KeyQL\
+[Use the condition builder to create search queries in eDiscovery](https://learn.microsoft.com/en-au/purview/edisc-condition-builder)\
+[Keyword queries and search conditions for eDiscovery](https://learn.microsoft.com/en-au/purview/ediscovery-keyword-queries-and-search-conditions) - classic eDiscovery only apparently
 
 ## URLs and Landing Zones
 
@@ -91,25 +96,15 @@ Office.com
 
 ### References
 
-* [End-user experiences for applications - Microsoft Entra ID | Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/end-user-experiences)
-* [Add custom tiles to the app launcher - Microsoft 365 admin | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/customize-the-app-launcher?view=o365-worldwide)
-* [Pin apps to your users' app launcher - Microsoft 365 admin | Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/pin-apps-to-app-launcher?view=o365-worldwide)
+* [End-user experiences for applications - Microsoft Entra ID - Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/end-user-experiences)\
+* [Add custom tiles to the app launcher - Microsoft 365 admin - Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/customize-the-app-launcher?view=o365-worldwide)
+* [Pin apps to your users' app launcher - Microsoft 365 admin - Microsoft Learn](https://learn.microsoft.com/en-us/microsoft-365/admin/manage/pin-apps-to-app-launcher?view=o365-worldwide)
 * [Office 365 URLS and IP Address ranges](https://support.office.com/en-us/article/Office-365-URLs-and-IP-address-ranges-8548a211-3fe7-47cb-abb1-355ea5aa88a2?ui=en-US&rs=en-US&ad=US&fromAR=1) [AKA](https://aka.ms/o365endpoints)
 * <https://github.com/adamfowlerit/msportals.io/issues/122#issuecomment-823661332>
 * <https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/configure-authentication-for-federated-users-portal#domain-hints>
 * <https://techcommunity.microsoft.com/t5/azure-active-directory-identity/using-azure-ad-to-land-users-on-their-custom-login-page-from/ba-p/243900>
 * 12/10/23: MORE <https://learn.microsoft.com/bs-latn-ba/azure/active-directory/manage-apps/end-user-experiences#direct-sign-on-links> from
-  * [End-user experiences for applications - Microsoft Entra | Microsoft Learn](https://learn.microsoft.com/bs-latn-ba/azure/active-directory/manage-apps/end-user-experiences)
-
-## SharePoint Language Settings for end user
-
-Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-language-settings-0f6a477a-dcab-4462-9d0c-e3b53d138183> - this article isn't update for copilot. you need to click the 'You can add more profile information here.' link. Will take you to go <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
-
-This can affect things like validation. Refer to [Validation Tips](sharepoint-references.html#validation-tips)
-
-## OneDrive Language Settings for end user
-
-<https://tenant-name-here-my.sharepoint.com/?p=22&setting=1>
+  * [End-user experiences for applications - Microsoft Entra - Microsoft Learn](https://learn.microsoft.com/bs-latn-ba/azure/active-directory/manage-apps/end-user-experiences)
 
 ## Microsoft 365 Language Settings
 
@@ -120,7 +115,7 @@ This can affect things like validation. Refer to [Validation Tips](sharepoint-re
 <https://learn.microsoft.com/en-au/microsoft-365/troubleshoot/access-management/set-language-and-region>
 
 ```powershell
-# Update the User's Preferred Language details
+# Update the User's Preferred Language details. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
 Import-Module Microsoft.Graph.Users
 
 Connect-MgGraph  -Scopes 'User.ReadWrite.All'
@@ -131,7 +126,7 @@ Update-MgUser -UserId $userId.Id -PreferredLanguage $preferredLanguage
 ```
 
 ```powershell
-# Update User's Usage Location details
+# Update User's Usage Location details. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
 Import-Module Microsoft.Graph.Users
 
 Connect-MgGraph  -Scopes 'User.ReadWrite.All'
@@ -141,8 +136,32 @@ $userId = Get-MgUser -UserId user1@contoso.com
 Update-MgUser -UserId $userId.Id -Usagelocation $usageLocation
 ```
 
-For Exchange: `Set-MailboxRegionalConfiguration -Identity $upn -Language 3081 -TimeZone "AUS Eastern Standard Time" -DateFormat "d/MM/yyyy"`\
+See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-modules) and [Module Management in PowerShell Commands](powershell-commands.md#module-management)
+
+### Exchange Language Settings for end user
+
+`Set-MailboxRegionalConfiguration -Identity $upn -Language 3081 -TimeZone "AUS Eastern Standard Time" -DateFormat "d/MM/yyyy"`\
 <https://learn.microsoft.com/en-au/powershell/module/exchange/set-mailboxregionalconfiguration?view=exchange-ps>
+
+> [!TIP] TIP
+> Graph may be able to do the same but I haven't looked into it yet. For those who are keen you can look into: [Update-MgUserMailboxSetting](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.users/update-mgusermailboxsetting?view=graph-powershell-1.0)
+
+### OneDrive Language Settings for end user
+
+<https://tenant-name-here-my.sharepoint.com/?p=22&setting=1> and click 'Regional Settings'
+
+### SharePoint Language Settings for end user
+
+1. Go to <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
+2. Select the 3 dots next to 'Details'
+3. Select 'Language and Region'
+
+> [!TIP] TIP
+> If you do the [Configuring Language and regional settings for new users](#configuring-language-and-regional-settings-for-new-users), then the [Exchange Language Settings for end user](#exchange-language-settings-for-end-user) then [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user) first, this one should already be done for you!
+
+Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-language-settings-0f6a477a-dcab-4462-9d0c-e3b53d138183> - this article isn't updated for CoPilot additions/changes. You need to click the 'You can add more profile information here.' link. Will end up taking you to <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
+
+This can affect things like validation. Refer to [Validation Tips](sharepoint-references.html#validation-tips)
 
 ## Exchange Email Header References
 

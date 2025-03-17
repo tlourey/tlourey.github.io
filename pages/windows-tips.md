@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-05T03:48:39.150Z
-lastmod: 2025-03-05T12:36:54.931Z
+lastmod: 2025-03-13T23:02:16.842Z
 tags:
     - Windows
     - Tips
@@ -21,6 +21,7 @@ preview: ""
 * [Keyboard Shortcuts](#keyboard-shortcuts)
 * [Windows Settings Shortcuts](#windows-settings-shortcuts)
 * [Other Windows URIs](#other-windows-uris)
+* [Windows Emergency restart](#windows-emergency-restart)
 <!--- cSpell:enable --->
 
 ## Keyboard Shortcuts
@@ -42,4 +43,9 @@ Which can be used in hyperlinks, like this: <a href="ms-settings:bluetooth">Blue
 
 <https://learn.microsoft.com/en-us/windows/apps/develop/launch/>
 
-* [ ] add emergency restart info
+## Windows Emergency restart
+
+1. <kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd>
+2. <kbd>CTRL</kbd> and <kbd>Left Click</kbd> on Power button in the bottom right, you'll be greeted by a prompt that says the following:
+3. Emergency restart: Click OK to immediately restart. Any unsaved data will be lost. Use this only as a last resort. <kbd>Left-Click</kbd> on OK.
+s

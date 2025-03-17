@@ -3,14 +3,14 @@ title: Raspberry Pi Tips
 description: Tips and tricks for the PI.
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-03-04T11:22:33.527Z
+lastmod: 2025-03-12T06:49:45.339Z
 tags:
-  - RaspberryPi
-  - Tips
+    - RaspberryPi
+    - Tips
 isdraft: true
 fmContentType: pages
 mermaid: "false"
@@ -18,6 +18,7 @@ preview: ""
 ---
 
 <!--- cSpell:disable --->
+* [Read only SD Card](#read-only-sd-card)
 * [vcgencmd](#vcgencmd)
 * [Controlling a Raspberry Pi Fan](#controlling-a-raspberry-pi-fan)
   * [Checking settings](#checking-settings)
@@ -25,6 +26,35 @@ preview: ""
 * [rfkill](#rfkill)
 * [Pairing a Bluetooth Keyboard](#pairing-a-bluetooth-keyboard)
 <!--- cSpell:enable --->
+
+## Read only SD Card
+
+<https://core-electronics.com.au/guides/read-only-raspberry-pi/>
+
+To Enable:
+
+1. `sudo raspi-config`
+2. Select Performance Options
+3. Select Overlay File System
+4. When prompted "Would you like the overlay file system to be enabled?" select 'Yes'
+5. wait while /boot/initrd is generated
+6. Press Ok for overlay
+7. When prompted "Would you like the boot partition to be write protected" select Yes
+8. Select ok when advised "the boot partition is read only"
+
+To Revert back:
+
+1. `sudo raspi-config`
+2. Select Performance Options
+3. Select Overlay File System
+4. When prompted "Would you like the overlay file system to be enabled?" select 'No'
+5. Press Ok when advised the overlay file system is disabled
+6. You will then be advised that the current partition is read only and you need to reboot
+7. Then go to disable it again.
+8. This time you will be asked "would you like the boot partition to be write protected?" Select 'No'
+9. Press ok. You may have to reboot again
+
+Script I found to do this while googing: <https://github.com/ghollingworth/overlayfs/blob/master/overctl> and also <https://yagrebu.net/unix/rpi-overlay.md#:~:text=Finishing%20Touches-,Read%2DOnly%20/boot,-The%20/boot%20filesystem>
 
 ## vcgencmd
 

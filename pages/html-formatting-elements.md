@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-12T02:31:01.751Z
-lastmod: 2025-03-12T02:48:23.721Z
+lastmod: 2025-03-12T06:21:52.982Z
 tags:
     - Language
     - References
@@ -65,7 +65,7 @@ The `<strong>` tag is used to define text with **strong** importance. The conten
 
 ## Underline
 
-The `<u>` tag represents some text that is unarticulated and styled differently from normal text, such as misspelled words or proper names in Chinese text. The content inside is typically displayed with an underline. You can change this with CSS (see example below).
+The `<u>` tag represents some text that is unarticulated and styled differently from normal text, such as misspelled words or proper names in Chinese text. The content inside is typically displayed with an <ins>underline</ins>. You can change this with CSS (see example below).
 
 Tip: Avoid using the `<u>` element where it could be confused for a hyperlink!
 
@@ -77,6 +77,9 @@ Tip: Avoid using the `<u>` element where it could be confused for a hyperlink!
 
 This is what <small>small</small> looks like.
 
+> [!NOTE]
+> This doesn't seem to work in the github native markdown viewer
+
 ## Strikethrough
 
-This is what <del>small</del> looks like.
+This is what <del>strikethrough</del> looks like.

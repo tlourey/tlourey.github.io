@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: false
 date: 2025-01-17T13:40:00
-lastmod: 2025-03-04T23:00:21.284Z
+lastmod: 2025-03-13T22:51:14.902Z
 tags:
     - Language
     - References
@@ -22,6 +22,7 @@ tags:
   * [Code Blocks](#code-blocks)
   * [Alerts](#alerts)
     * [Issue with Alert Titles](#issue-with-alert-titles)
+  * [Keyboard tags](#keyboard-tags)
   * [Github Pages](#github-pages)
   * [Wikis](#wikis)
 * [Not important things to remember](#not-important-things-to-remember)
@@ -129,6 +130,41 @@ But an alert with a title does not get rended in github correctly.
 <https://github.com/orgs/community/discussions/16925> - where alerts first got introduced\
 <https://github.com/orgs/community/discussions/48797>\
 <https://github.com/orgs/community/discussions/103219>
+
+### Keyboard tags
+
+> *The \<kbd\> element represents user input (typically keyboard input, although it may also be used to represent other input, such as voice commands).*\
+> \- <https://www.w3.org/TR/2017/REC-html52-20171214/textlevel-semantics.html#the-kbd-element>
+
+Also: <https://developer.mozilla.org/en-US/docs/Web/HTML/Element/kbd>
+
+```markdown
+<kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd> + <kbd>Left-Click</kbd>
+```
+
+<kbd>CTRL</kbd> + <kbd>ALT</kbd> + <kbd>DEL</kbd>
+
+To describe an input comprised of multiple keystrokes, you can nest multiple \<kbd\> elements, with an outer \<kbd\> element representing the overall input and each individual keystroke or component of the input enclosed within its own <kbd>.
+
+```markdown
+You can also create a new document using the <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> keyboard shortcut.
+```
+
+You can also create a new document using the <kbd><kbd>Ctrl</kbd>+<kbd>N</kbd></kbd> keyboard shortcut.
+
+<!-- markdownlint-disable MD033-->
+Nesting a \<kbd\> element inside a \<samp\> element represents input that has been echoed back to the user by the system.
+
+```markdown
+<kbd><kbd><samp>File</samp></kbd>⇒<kbd><samp>New Document</samp></kbd></kbd>
+```
+
+<kbd><kbd><samp>File</samp></kbd>⇒<kbd><samp>New Document</samp></kbd></kbd>
+
+[\<samp\>: The Sample Output element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/samp)
+<!-- markdownlint-enable MD033-->
+
+Want a whole Keyboard? copy from this comment <https://meta.stackexchange.com/a/311579>
 
 ### Github Pages
 

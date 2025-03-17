@@ -11,10 +11,11 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-12T00:35:18.492Z
+lastmod: 2025-03-13T04:42:21.046Z
 ---
 
-<!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS -->
+<!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS Vesa -->
+<!--- cSpell:ignore Nirsoft cyrilbois Deview pyrexp Keji -->
 
 <!--- cSpell:disable --->
 * [Network Tools](#network-tools)
@@ -25,6 +26,8 @@ lastmod: 2025-03-12T00:35:18.492Z
 * [PowerShell Tools](#powershell-tools)
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
+  * [Hardware](#hardware)
+    * [Video Cables](#video-cables)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
 * [Misc Web Tools](#misc-web-tools)
 * [Security Tools](#security-tools)
@@ -82,7 +85,8 @@ lastmod: 2025-03-12T00:35:18.492Z
 
 ## Software Tools
 
-[regex101](https://regex101.com/)
+[regex101](https://regex101.com/)\
+[pyrexp](https://pythonium.net/regex) - Thanks to [@cyrilbois](https://github.com/cyrilbois) for the PR and making the tool!
 
 ## KQL Tools
 
@@ -109,6 +113,20 @@ lastmod: 2025-03-12T00:35:18.492Z
 **[Total Commander](https://www.ghisler.com/)** - THE PIMP!\
 <https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandwagon yet but its not shit.
 
+### Hardware
+
+**[USBDeview](https://www.nirsoft.net/utils/usb_devices_view.html)** - really good tool. Shows info about USB device drivers and USB Devices (also nearly everything from Nirsoft is awesome)\
+[DevManView](https://www.nirsoft.net/utils/device_manager_view.html) - Alternative to device manager of Windows (have not used it but everything from Nirsoft is awesome)
+
+#### Video Cables
+
+Somewhat specific cables I often buy and want to remember.
+
+[Keji 4K HDMI Cable 5m](https://www.officeworks.com.au/shop/officeworks/p/keji-4k-hdmi-cable-5m-kejihdmi5m) - cheapish for 5M\
+[StarTech.com 3m 10 ft White Mini DisplayPort to DisplayPort 1.2 Adapter Cable M/M - DisplayPort 4k with HBR2 Support - Mini DP to DP Cable](https://www.amazon.com.au/dp/B0081ZBNCA)\
+[Club3D CAC-2067 DisplayPort to DisplayPort 1.4/Hbr3/ HDR Support Cable DP 1.4 8K 60Hz 1 Meter/3.28 Feet Black Vesa Certified](https://www.amazon.com.au/dp/B076D6GGG8)\
+Active DisplayPort to HDMI for Lenovo Docks that you prefer: [CableCreation Active DisplayPort to HDMI 4K 60Hz Cable 2.4M(8FT) Support Multi-Screen Display, DP to HDMI HDR Monitor Cable Unidirectional, DP Cable 1.4 to HDMI Support 4K 30Hz, 2K/1080P 144Hz, 120Hz](https://www.amazon.com.au/CableCreation-Unidirectional-DisplayPort-Eyefinity-Multi-Display/dp/B082CXMBCQ?ref_=ast_sto_dp&th=1)
+
 ## Chrome or Edge Extensions
 
 * Session Buddy:
@@ -133,7 +151,8 @@ lastmod: 2025-03-12T00:35:18.492Z
 **<https://crt.sh/>**\
 <https://search.censys.io>\
 <https://www.talosintelligence.com/reputation_center/>\
-<https://www.talosintelligence.com/reputation_center/lookup?search=example.com> - lookup string
+<https://www.talosintelligence.com/reputation_center/lookup?search=example.com> - lookup string\
+<https://www.ssllabs.com/ssltest/> - does a bit more than just an SSL test but thats it main function
 
 <https://dicepass.org>\
 <https://github.com/onetimesecret/onetimesecret> / <https://onetimesecret.com/>\
