@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-17T05:14:29.071Z
+lastmod: 2025-03-17T12:11:00.160Z
 ---
 
 <!--- cSpell:disable --->
@@ -77,22 +77,22 @@ Office.com
 
 <https://portal.office.com/onedrive> - NEW Entry!\
 <https://mytenantname-my.sharepoint.com/_layouts/15/MyBraryFirstRun.aspx?FirstRunStage=waiting> - first run of OneDrive to setup\
-<https://www.office.com/launch/sharepoint?auth=2> - NEW 2021
-<https://www.office.com/launch/onedrive>
-<https://www.office.com/launch/onenote>
-<https://www.office.com/launch/forms>
-<https://www.office.com/launch/word>
-<https://www.office.com/launch/excel>
-<https://www.office.com/launch/powerpoint>
+<https://www.office.com/launch/sharepoint?auth=2> - NEW 2021\
+<https://www.office.com/launch/onedrive>\
+<https://www.office.com/launch/onenote>\
+<https://www.office.com/launch/forms>\
+<https://www.office.com/launch/word>\
+<https://www.office.com/launch/excel>\
+<https://www.office.com/launch/powerpoint>\
 <https://www.office.com/launch/onenote>
 
 <https://outlook.com/myemaildomain.com>\
 
 ### Logout URLs
 
-<https://login.microsoftonline.com/common/oauth2/logoutsession>
-<https://www.office.com/estslogout?ru=%2F>
-<https://login.microsoftonline.com/logout.srf>
+<https://login.microsoftonline.com/common/oauth2/logoutsession>\
+<https://www.office.com/estslogout?ru=%2F>\
+<https://login.microsoftonline.com/logout.srf>\
 <https://login.microsoftonline.com/common/oauth2/logout?post_logout_redirect_uri=https://www.office.com/signin?domain_hint=myemaildomain.com>
 
 ### References
