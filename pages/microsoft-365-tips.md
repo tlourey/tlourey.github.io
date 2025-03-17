@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-17T02:45:21.496Z
+lastmod: 2025-03-17T03:13:28.156Z
 ---
 
 <!--- cSpell:disable --->
@@ -34,6 +34,7 @@ lastmod: 2025-03-17T02:45:21.496Z
   * [Exchange Language Settings for end user](#exchange-language-settings-for-end-user)
   * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
   * [SharePoint Language Settings for end user](#sharepoint-language-settings-for-end-user)
+* [Force user to chagne password at next login](#force-user-to-chagne-password-at-next-login)
 * [Exchange Email Header References](#exchange-email-header-references)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
@@ -162,6 +163,18 @@ See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-module
 Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-language-settings-0f6a477a-dcab-4462-9d0c-e3b53d138183> - this article isn't updated for CoPilot additions/changes. You need to click the 'You can add more profile information here.' link. Will end up taking you to <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
 
 This can affect things like validation. Refer to [Validation Tips](sharepoint-references.html#validation-tips)
+
+## Force user to chagne password at next login
+
+```powershell
+# Set user account to change password on next login. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
+Import-Module Microsoft.Graph.Users
+
+Connect-MgGraph  -Scopes 'User.ReadWrite.All'
+$userId = Get-MgUser -UserId "user1@contoso.com"
+
+Update-MgUser -UserId $userid.id -PasswordProfile @{ ForceChangePasswordNextSignIn = $true }
+```
 
 ## Exchange Email Header References
 
