@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-16T22:07:38.766Z
+lastmod: 2025-03-17T05:50:09.927Z
 tags:
     - Commands
     - Linux
@@ -146,7 +146,7 @@ ps aux | grep <Process ID from above>
 * otherwise: sort by ctime, newest first
 
 -X: sort by extensions
--x: lines instead of colums
+-x: lines instead of columns
 
 ### Finding large directories and large files
 
