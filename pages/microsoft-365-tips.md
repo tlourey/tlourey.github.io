@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-17T12:11:00.160Z
+lastmod: 2025-03-17T12:12:00.180Z
 ---
 
 <!--- cSpell:disable --->
@@ -60,7 +60,7 @@ lastmod: 2025-03-17T12:11:00.160Z
 
 ### Login, Signin and App Specific URLs
 
-Office.com
+Office.com\
 <https://myapps.microsoft.com/>\
 <https://portal.office.com/myapps>\
 <https://www.office.com/login?domain_hint=myemaildomain.com>\
