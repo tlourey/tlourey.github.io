@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-17T02:05:48.585Z
+lastmod: 2025-03-17T02:10:20.532Z
 ---
 
 <!--- cSpell:disable --->
@@ -125,7 +125,7 @@ This can affect things like validation. Refer to [Validation Tips](sharepoint-re
 <https://learn.microsoft.com/en-au/microsoft-365/troubleshoot/access-management/set-language-and-region>
 
 ```powershell
-# Update the User's Preferred Language details
+# Update the User's Preferred Language details. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
 Import-Module Microsoft.Graph.Users
 
 Connect-MgGraph  -Scopes 'User.ReadWrite.All'
@@ -136,7 +136,7 @@ Update-MgUser -UserId $userId.Id -PreferredLanguage $preferredLanguage
 ```
 
 ```powershell
-# Update User's Usage Location details
+# Update User's Usage Location details. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
 Import-Module Microsoft.Graph.Users
 
 Connect-MgGraph  -Scopes 'User.ReadWrite.All'
@@ -145,6 +145,8 @@ $usageLocation = 'AU'
 $userId = Get-MgUser -UserId user1@contoso.com
 Update-MgUser -UserId $userId.Id -Usagelocation $usageLocation
 ```
+
+See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-modules) and [Module Management in PowerShell Commands](powershell-commands.md#module-management)
 
 ### Exchange Language Settings for end user
 
