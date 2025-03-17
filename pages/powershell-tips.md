@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2025-03-05T12:13:47.960Z
+lastmod: 2025-03-17T02:11:08.138Z
 tags:
     - Tips
     - PowerShell
@@ -31,6 +31,12 @@ preview: ""
 ## Installing Modules
 
 Unless you're working on a server, a PAW, with a lot of different local profiles, or with an automation solution, strongly consider always installing modules to CurrentUser scope. Its easier to maintain, update, etc
+
+```powershell
+Install-Module <<MODULENAME>> -Scope CurrentUser
+```
+
+See [Module Management in PowerShell Commands](powershell-commands.md#module-management) for more commands.
 
 ## Terminal Emulator Quake Mode on startup
 
