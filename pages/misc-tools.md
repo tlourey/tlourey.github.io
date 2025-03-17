@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-17T05:55:17.764Z
+lastmod: 2025-03-17T11:39:56.452Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS Vesa -->
@@ -22,6 +22,8 @@ lastmod: 2025-03-17T05:55:17.764Z
   * [Speedtest](#speedtest)
 * [Linux Tools](#linux-tools)
 * [Software Tools](#software-tools)
+  * [Python](#python)
+    * [Maker Varients](#maker-varients)
 * [KQL Tools](#kql-tools)
 * [PowerShell Tools](#powershell-tools)
 * [Microsoft 365 Tools](#microsoft-365-tools)
@@ -87,6 +89,14 @@ lastmod: 2025-03-17T05:55:17.764Z
 
 [regex101](https://regex101.com/)\
 [pyrexp](https://pythonium.net/regex) - Thanks to [@cyrilbois](https://github.com/cyrilbois) for the PR and making the tool!
+
+### Python
+
+#### Maker Varients
+
+<https://micropython.org/> - lean version of python for microcontrollers, like arduino\
+<https://circuitpython.org/> - beginner / easier to user version of the above for microcontrollers\
+<https://circuitpython.org/blinka> - use circuitpython on SBCs like the Raspberry Pi
 
 ## KQL Tools
 
