@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-17T02:01:37.109Z
+lastmod: 2025-03-17T02:05:48.585Z
 ---
 
 <!--- cSpell:disable --->
@@ -33,6 +33,7 @@ lastmod: 2025-03-17T02:01:37.109Z
 * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
   * [Configuring Language and regional settings for new users](#configuring-language-and-regional-settings-for-new-users)
+  * [Exchange Language Settings for end user](#exchange-language-settings-for-end-user)
 * [Exchange Email Header References](#exchange-email-header-references)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
@@ -145,7 +146,12 @@ $userId = Get-MgUser -UserId user1@contoso.com
 Update-MgUser -UserId $userId.Id -Usagelocation $usageLocation
 ```
 
-For Exchange: `Set-MailboxRegionalConfiguration -Identity $upn -Language 3081 -TimeZone "AUS Eastern Standard Time" -DateFormat "d/MM/yyyy"`\
+### Exchange Language Settings for end user
+
+> [!TIP] TIP
+> This may already be configured by the graph command above
+
+`Set-MailboxRegionalConfiguration -Identity $upn -Language 3081 -TimeZone "AUS Eastern Standard Time" -DateFormat "d/MM/yyyy"`\
 <https://learn.microsoft.com/en-au/powershell/module/exchange/set-mailboxregionalconfiguration?view=exchange-ps>
 
 ## Exchange Email Header References
