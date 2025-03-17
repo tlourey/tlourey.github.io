@@ -29,7 +29,7 @@
       <a href="/" class="btn">Home</a>
       <a href="./" class="btn">Up</a>
       <p class="main-content" style="text-align: left;">First Published: {{ page.date | date: "%B %-d, %Y" }} | Last Modified: {{ page.lastmod | date: "%B %-d, %Y" }}<br>
-      Categories: {% for category in page.categories %}{%- if forloop.length > 0 -%}{{ category }}{% unless forloop.last %}, {% endunless -%}{% endif %}{% endfor %} | Tags: {% for tag in page.tags %}{%- if forloop.length > 0 -%}{{ tag }}{% unless forloop.last %}, {% endunless -%}{% endif %}{% endfor %}</p>
+      Categories: {% for category in page.categories %}{%- if forloop.length > 0 -%}<a href="/pages/#{{ category}}">{{ category }}</a>{% unless forloop.last %}, {% endunless -%}{% endif %}{% endfor %} | Tags: {% for tag in page.tags %}{%- if forloop.length > 0 -%}<a href="/pages/tags.html#{{ tag }}">{{ tag }}</a>{% unless forloop.last %}, {% endunless -%}{% endif %}{% endfor %}</p>
       {% if page.isdraft %}<p class="main-content"><strong>This page is a draft!</strong></p>{% endif %}
     </header>
     <main id="content" class="main-content" role="main">
