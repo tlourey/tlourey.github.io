@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-03-17T05:52:24.409Z
+lastmod: 2025-03-17T05:53:26.204Z
 tags:
     - References
     - Tools
@@ -41,7 +41,8 @@ preview: ""
 ## Tech News
 
 **<https://hckrnews.com/>** - a nicer way to read [Hacker News](https://news.ycombinator.com/)\
-<https://feedly.com/i/my/me>
+<https://feedly.com/i/my/me>\
+<https://www.itnews.com.au/> - very 'traditional' style media
 
 ## Web Development
 
