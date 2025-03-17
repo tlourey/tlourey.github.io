@@ -1,7 +1,7 @@
 ---
 title: My first Post
 date: 2024-12-27 12:00:00 +1100
-lastmod: 2025-03-04T11:24:11.530Z
+lastmod: 2025-03-04T11:27:45.773Z
 categories:
     - NotTech
 description: My first post description
