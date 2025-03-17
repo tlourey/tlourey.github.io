@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-13T04:42:21.046Z
+lastmod: 2025-03-17T05:55:17.764Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS Vesa -->
@@ -183,7 +183,8 @@ Active DisplayPort to HDMI for Lenovo Docks that you prefer: [CableCreation Acti
 **<https://dns.google>**
 
 <http://www.webdnstools.com/dnstools/domain_check>\
-<https://lookup.icann.org/en>
+<https://lookup.icann.org/en> - RDAP (whois repacement)\
+RDAP Client from ICANN: <https://github.com/icann/icann-rdap/wiki/RDAP-command>
 
 <https://docs.wpvip.com/domains/check-dns-record-time-to-live/#:~:text=Run%20dig%20%40%20%2B,current%20TTL%20for%20the%20domain.>
 
