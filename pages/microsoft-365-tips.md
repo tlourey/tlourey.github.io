@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-17T02:38:50.042Z
+lastmod: 2025-03-17T02:45:21.496Z
 ---
 
 <!--- cSpell:disable --->
@@ -29,11 +29,11 @@ lastmod: 2025-03-17T02:38:50.042Z
   * [App Specific URLs](#app-specific-urls)
   * [Logout URLs](#logout-urls)
   * [References](#references)
-* [SharePoint Language Settings for end user](#sharepoint-language-settings-for-end-user)
-* [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
   * [Configuring Language and regional settings for new users](#configuring-language-and-regional-settings-for-new-users)
   * [Exchange Language Settings for end user](#exchange-language-settings-for-end-user)
+  * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
+  * [SharePoint Language Settings for end user](#sharepoint-language-settings-for-end-user)
 * [Exchange Email Header References](#exchange-email-header-references)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
@@ -106,16 +106,6 @@ Office.com
 * 12/10/23: MORE <https://learn.microsoft.com/bs-latn-ba/azure/active-directory/manage-apps/end-user-experiences#direct-sign-on-links> from
   * [End-user experiences for applications - Microsoft Entra - Microsoft Learn](https://learn.microsoft.com/bs-latn-ba/azure/active-directory/manage-apps/end-user-experiences)
 
-## SharePoint Language Settings for end user
-
-Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-language-settings-0f6a477a-dcab-4462-9d0c-e3b53d138183> - this article isn't update for copilot. you need to click the 'You can add more profile information here.' link. Will take you to go <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
-
-This can affect things like validation. Refer to [Validation Tips](sharepoint-references.html#validation-tips)
-
-## OneDrive Language Settings for end user
-
-<https://tenant-name-here-my.sharepoint.com/?p=22&setting=1> and click 'Regional Settings'
-
 ## Microsoft 365 Language Settings
 
 <https://myaccount.microsoft.com/settingsandprivacy/language>
@@ -155,6 +145,23 @@ See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-module
 
 > [!TIP] TIP
 > Graph may be able to do the same but I haven't looked into it yet. For those who are keen you can look into: [Update-MgUserMailboxSetting](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.users/update-mgusermailboxsetting?view=graph-powershell-1.0)
+
+### OneDrive Language Settings for end user
+
+<https://tenant-name-here-my.sharepoint.com/?p=22&setting=1> and click 'Regional Settings'
+
+### SharePoint Language Settings for end user
+
+1. Go to <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
+2. Select the 3 dots next to 'Details'
+3. Select 'Language and Region'
+
+> [!TIP] TIP
+> If you do the [Configuring Language and regional settings for new users](#configuring-language-and-regional-settings-for-new-users), then the [Exchange Language Settings for end user](#exchange-language-settings-for-end-user) then [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user) first, this one should already be done for you!
+
+Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-language-settings-0f6a477a-dcab-4462-9d0c-e3b53d138183> - this article isn't updated for CoPilot additions/changes. You need to click the 'You can add more profile information here.' link. Will end up taking you to <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
+
+This can affect things like validation. Refer to [Validation Tips](sharepoint-references.html#validation-tips)
 
 ## Exchange Email Header References
 
