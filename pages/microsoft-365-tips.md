@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-17T03:13:28.156Z
+lastmod: 2025-03-17T05:13:48.072Z
 ---
 
 <!--- cSpell:disable --->
@@ -200,8 +200,8 @@ More Mail tools under [Postmaster Tools in Misc Tools](misc-tools.md#postmaster)
 Also:
 <https://learn.microsoft.com/en-us/microsoftteams/cqd-upload-tenant-building-data>\
 [Call Quality Dashboard Tenant Data Upload](https://cqd.teams.microsoft.com/spd/#/TenantDataUpload)
-
-<https://learn.microsoft.com/en-us/microsoftteams/location-based-routing-configure-network-settings> - while this is more for teams routing i've found it gives other parts of teams more context about issues.
+<!--- cSpell:words PSTN -->
+<https://learn.microsoft.com/en-us/microsoftteams/location-based-routing-configure-network-settings> - while this is more for teams calling (PSTN Voice), I've found it gives other parts of teams more context about issues.
 
 ## DSC
 
@@ -225,5 +225,5 @@ Also:
 ## Diag Tools
 
 [Enterprise Version of Microsoft Support and Recovery Assistant](https://www.microsoft.com/en-au/download/details.aspx?id=103391)\
-<https://support.microsoft.com/en-au/windows/microsoft-365-troubleshooters-486d7956-6a21-4c75-bc4f-0704077c583c> - NEW SARA
+<https://support.microsoft.com/en-au/windows/microsoft-365-troubleshooters-486d7956-6a21-4c75-bc4f-0704077c583c> - NEW SARA\
 <https://support.microsoft.com/en-au/windows/running-troubleshooters-in-get-help-23bddffd-5495-47f6-a419-7efe166bf1a8> - Other MS Troubleshooters some of which may be still useful
