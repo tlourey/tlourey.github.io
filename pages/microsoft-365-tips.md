@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-17T02:10:20.532Z
+lastmod: 2025-03-17T02:38:50.042Z
 ---
 
 <!--- cSpell:disable --->
@@ -114,7 +114,7 @@ This can affect things like validation. Refer to [Validation Tips](sharepoint-re
 
 ## OneDrive Language Settings for end user
 
-<https://tenant-name-here-my.sharepoint.com/?p=22&setting=1>
+<https://tenant-name-here-my.sharepoint.com/?p=22&setting=1> and click 'Regional Settings'
 
 ## Microsoft 365 Language Settings
 
@@ -150,11 +150,11 @@ See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-module
 
 ### Exchange Language Settings for end user
 
-> [!TIP] TIP
-> This may already be configured by the graph command above
-
 `Set-MailboxRegionalConfiguration -Identity $upn -Language 3081 -TimeZone "AUS Eastern Standard Time" -DateFormat "d/MM/yyyy"`\
 <https://learn.microsoft.com/en-au/powershell/module/exchange/set-mailboxregionalconfiguration?view=exchange-ps>
+
+> [!TIP] TIP
+> Graph may be able to do the same but I haven't looked into it yet. For those who are keen you can look into: [Update-MgUserMailboxSetting](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.users/update-mgusermailboxsetting?view=graph-powershell-1.0)
 
 ## Exchange Email Header References
 
