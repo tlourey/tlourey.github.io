@@ -44,7 +44,7 @@
           <h1>Pages</h1>
           <p><a href="https://tlourey.github.io/pages/">View all pages (by category) and more details</a><br>
             <a href="https://tlourey.github.io/pages/tags.html">View all pages (by tag) and more details</a><br>
-            Sorted by Last Modified Decending.<br>
+            Sorted by Last Modified Decending:<br>
             {% assign doclist = site.pages | sort: 'lastmod' | reverse %}
             <ul>
             {% for item in doclist %}
@@ -58,7 +58,7 @@
         </div>
         <div class="column">
           <h1>Posts</h1>
-          Sorted by Published Date Decending.<br>
+          Sorted by Published Date Decending:<br>
           <p>{% assign doclist = site.posts | sort: 'date' | reverse %}
             <ul>
             {% for item in doclist %}
