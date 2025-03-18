@@ -42,8 +42,7 @@
       <div class="row">
         <div class="column">
           <h1>Pages</h1>
-          <p>Sorted by Last Modified.<br>
-            <a href="https://tlourey.github.io/pages/">View all pages (by category) and more details</a><br>
+          <p><a href="https://tlourey.github.io/pages/">View all pages (by category) and more details</a><br>
             <a href="https://tlourey.github.io/pages/tags.html">View all pages (by tag) and more details</a><br>
             {% assign doclist = site.pages | sort: 'lastmod' | reverse %}
             <ul>
@@ -54,7 +53,8 @@
                 {%- endfor %})</li>
               {% endif %}
             {% endfor %}
-            </ul></p>
+            </ul><br>
+            Sorted by Last Modified.</p>
         </div>
         <div class="column">
           <h1>Posts</h1>
