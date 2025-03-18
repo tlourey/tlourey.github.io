@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-17T12:12:00.180Z
+lastmod: 2025-03-18T02:29:30.287Z
 ---
 
 <!--- cSpell:disable --->
@@ -213,6 +213,7 @@ Also:
 > This section may become big enough that it will become its own page.
 
 <https://entra.news/>\
+<https://entra.news/p/entra-mind-maps> - entra mind map\
 <https://github.com/merill/awesome-entra> - Github awesome list for Entra\
 <https://azuread.github.io/MSIdentityTools/>\
 <https://graphxray.merill.net/>
