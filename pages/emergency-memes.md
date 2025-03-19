@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-03-04T12:06:13.691Z
+lastmod: 2025-03-19T05:53:58.002Z
 ---
 
 <!--- cSpell:disable --->
@@ -49,6 +49,7 @@ lastmod: 2025-03-04T12:06:13.691Z
 * [Quality Bait](#quality-bait)
 * [Cool Story Bro](#cool-story-bro)
 * [Are you high](#are-you-high)
+* [Kirk is offended or loves gossip](#kirk-is-offended-or-loves-gossip)
 * [Leo memes](#leo-memes)
   * [Leo biting hand](#leo-biting-hand)
   * [Leo Clapping](#leo-clapping)
@@ -294,6 +295,12 @@ Excellent Quality:
 ## Are you high
 
 [![Picture](/assets/images/are-you-high-carmen-barton.gif)](/assets/images/are-you-high-carmen-barton.gif)
+
+[Top](#content)
+
+## Kirk is offended or loves gossip
+
+[![Picture](/assets/images/kirk-offended.webp)](/assets/images/kirk-offended.webp)
 
 [Top](#content)
 
