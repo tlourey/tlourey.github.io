@@ -510,6 +510,39 @@
           "default": ""
         }
       ]
+    },
+    "Insert Meme": {
+      "description": "Insert Meme into emergency-memes.md",
+      "body": [
+        "## [[Meme Title]]",
+        "",
+        "[![Picture](/assets/images/[[FileName]])](/assets/images/[[FileName]])",
+        "",
+        "[Top](#content)"
+      ],
+      "fields": [
+        {
+          "name": "Meme Title",
+          "title": "Meme Title",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "FileName",
+          "title": "FileName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        },
+        {
+          "name": "FileName",
+          "title": "FileName",
+          "type": "string",
+          "single": true,
+          "default": ""
+        }
+      ]
     }
   }
 }
