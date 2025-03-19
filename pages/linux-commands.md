@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-19T04:46:46.700Z
+lastmod: 2025-03-19T04:50:06.203Z
 tags:
     - Commands
     - Linux
@@ -229,6 +229,11 @@ zegrep
 ```
 
 Note that some of the z commands don't support some of the options the regular utility does. eg: `zgrep` doesn't support `--recursive (-r)`. Check the man pages for more info.
+
+Some examples:
+
+`zless SwitchName.log.* | grep ab:cd:ef:12:34:56`: search a compressed switch log for a mac address\
+`zcat 192.168.1.2_abcdef123456.log.* | grep 2025-03-19 | grep 12:34:56:ab:cd:ef`: search a compressed UniFi AP log file for a mac address on a specific date
 
 ## Hardware
 
