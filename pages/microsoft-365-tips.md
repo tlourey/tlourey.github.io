@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-19T09:30:40.592Z
+lastmod: 2025-03-19T09:32:46.280Z
 ---
 
 <!--- cSpell:disable --->
@@ -54,9 +54,10 @@ lastmod: 2025-03-19T09:30:40.592Z
 
 [Use Keyword Query Language to create search queries in eDiscovery](https://learn.microsoft.com/en-us/purview/edisc-keyword-query-language) - aka KeyQL (Doesn't looks to be the same as [KQL](kql-queries.md))\
 [Use the condition builder to create search queries in eDiscovery](https://learn.microsoft.com/en-au/purview/edisc-condition-builder)\
-[Keyword queries and search conditions for eDiscovery](https://learn.microsoft.com/en-au/purview/ediscovery-keyword-queries-and-search-conditions) - classic eDiscovery only apparently
-
+[Keyword queries and search conditions for eDiscovery](https://learn.microsoft.com/en-au/purview/ediscovery-keyword-queries-and-search-conditions) - classic eDiscovery only apparently\
 New Purview eDiscovery Guide: <https://mslearn.cloudguides.com/guides/Get%20started%20with%20Microsoft%20Purview%20eDiscovery>
+
+More Info: [Learn about eDiscovery](https://learn.microsoft.com/en-au/purview/edisc)
 
 ## URLs and Landing Zones
 
