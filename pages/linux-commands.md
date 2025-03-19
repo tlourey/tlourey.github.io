@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-19T03:58:41.951Z
+lastmod: 2025-03-19T04:46:46.700Z
 tags:
     - Commands
     - Linux
@@ -28,6 +28,7 @@ isdraft: false
   * [ls options often forgotten](#ls-options-often-forgotten)
   * [Finding large directories and large files](#finding-large-directories-and-large-files)
   * [Compressing and Decompressing files](#compressing-and-decompressing-files)
+  * [Compressed Log Files](#compressed-log-files)
 * [Hardware](#hardware)
   * [Hardware Info](#hardware-info)
   * [rfkill](#rfkill)
@@ -205,6 +206,29 @@ Options:
 -a: only works on windows. uses ASCII to convert end-of-line characters using local conversion.
 
 More options are available. Look at: <https://www.geeksforgeeks.org/gunzip-command-in-linux-with-examples/>
+
+Other Zip Commands:
+
+```bash
+zipdetails
+zipinfo
+```
+
+### Compressed Log Files
+
+When using things like logrotate that compress log files you don't want to have to uncompress them every time to run the usual commands against them. You can try these commands when working with compressed log files:
+
+```bash
+zgrep
+zcat
+zless
+zmore
+zdiff
+zcmp
+zegrep
+```
+
+Note that some of the z commands don't support some of the options the regular utility does. eg: `zgrep` doesn't support `--recursive (-r)`. Check the man pages for more info.
 
 ## Hardware
 
