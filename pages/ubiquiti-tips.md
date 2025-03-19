@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-19T04:32:41.253Z
+lastmod: 2025-03-19T04:53:38.452Z
 tags:
     - Commands
     - References
@@ -16,10 +16,12 @@ tags:
     - Ubiquiti
 ---
 
-
+<!--- cSpell:words UniFi macaddress UISP UNMS --->
+<!--- cSpell:ignore procs --->
 <!--- cSpell:disable --->
 * [UniFi](#unifi)
   * [Logs](#logs)
+  * [Searching AP Log files](#searching-ap-log-files)
   * [Monitoring](#monitoring)
   * [Odd Issues](#odd-issues)
     * [AP/Client Signal Balance: Poor](#apclient-signal-balance-poor)
@@ -42,6 +44,12 @@ If you log to the 'Network Application' and not syslog, you can find the files i
 
 If you are having trouble accessing that folder you may need to use `sudo` or `sudo -s`
 
+### Searching AP Log files
+
+`cat 192.168.1.2_abcdef123456.log | grep 2025-03-19 | grep 12:34:56:ab:cd:ef`: search a UniFi AP log file for a mac address on a specific date
+
+Other commands for searching logs and compressed files in [Linux Commands](linux-commands.md)
+
 ### Monitoring
 
 Nagios command to check number of process on UniFi Self hosted. In this case, warn when more than 5 and critical when more than 7 but it also reports when there are 0.
@@ -63,7 +71,7 @@ Getting this when uploading a config: "There was an error upgrading the configur
 Something like this: [Restore Config - Upload failed](https://community.ui.com/questions/Restore-Config-Upload-failed/29cab3a5-4220-4d29-a398-e0c624b10260)
 
 1. Try a different browser (not safari - either firefox or chrome.)
-2. Try turning off darkmode in browser and/or OS
+2. Try turning off dark mode in browser and/or OS
 3. Try clearing cache
 
 If all else fails you can look into [uploading a config using SSH/SFTP](https://help.uisp.com/hc/en-us/articles/22591188157079-EdgeRouter-Archiving-and-Managing-the-Configuration-Files)
