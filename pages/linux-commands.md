@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-17T05:50:09.927Z
+lastmod: 2025-03-19T03:58:41.951Z
 tags:
     - Commands
     - Linux
@@ -75,6 +75,8 @@ watch
 less
 wc
 column
+tail
+tail -f
 ```
 
 ### Aliases
