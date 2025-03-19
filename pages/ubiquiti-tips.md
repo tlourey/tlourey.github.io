@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-19T03:47:21.090Z
+lastmod: 2025-03-19T04:32:41.253Z
 tags:
     - Commands
     - References
@@ -21,6 +21,8 @@ tags:
 * [UniFi](#unifi)
   * [Logs](#logs)
   * [Monitoring](#monitoring)
+  * [Odd Issues](#odd-issues)
+    * [AP/Client Signal Balance: Poor](#apclient-signal-balance-poor)
 * [EdgeRouter](#edgerouter)
   * [Strange issues when uploading firmware](#strange-issues-when-uploading-firmware)
   * [MAC Address Searching on command line](#mac-address-searching-on-command-line)
@@ -45,6 +47,12 @@ If you are having trouble accessing that folder you may need to use `sudo` or `s
 Nagios command to check number of process on UniFi Self hosted. In this case, warn when more than 5 and critical when more than 7 but it also reports when there are 0.
 
 `check_procs -a "-a /usr/lib/unifi/lib/ace.jar -w 5 -c 1:7"`
+
+### Odd Issues
+
+#### AP/Client Signal Balance: Poor
+
+<https://community.ui.com/questions/AP-Client-Signal-Balance-Poor/921859fe-98eb-4677-a385-0e657030fed6>
 
 ## EdgeRouter
 
