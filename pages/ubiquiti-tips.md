@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-10T04:31:51.723Z
+lastmod: 2025-03-19T03:47:21.090Z
 tags:
     - Commands
     - References
@@ -36,7 +36,9 @@ tags:
 
 ### Logs
 
-If you log to the 'Network Application' and not system, you can find the files in `/var/logs/unifi/remote` on linux machines with a file for each device in the format of `ipaddress_macaddress.log`
+If you log to the 'Network Application' and not syslog, you can find the files in `/var/logs/unifi/remote` on linux machines with a file for each device in the format of `ipaddress_macaddress.log` where ipaddress is the IP Address of the access point / UniFi device.
+
+If you are having trouble accessing that folder you may need to use `sudo` or `sudo -s`
 
 ### Monitoring
 
