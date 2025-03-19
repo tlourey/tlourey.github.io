@@ -102,6 +102,8 @@ lastmod: 2025-03-17T11:39:56.452Z
 
 <https://www.kqlsearch.com/>
 
+Check out [Misc KQL References and Resources](kql-queries.md#misc-kql-references-and-resources)
+
 ## PowerShell Tools
 
 [PowerShell Module Browser](https://learn.microsoft.com/en-us/powershell/module/)
