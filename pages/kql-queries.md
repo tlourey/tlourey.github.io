@@ -15,7 +15,7 @@ tags:
     - Security
     - Commands
 date: 2025-01-18T16:51:00
-lastmod: 2025-03-19T10:25:01.108Z
+lastmod: 2025-03-19T10:33:14.639Z
 fmContentType: pages
 ---
 
@@ -170,7 +170,7 @@ _GetWatchlist('NetworkAddresses')
 
 ### Query Packs
 
-* [ ] Add info about Query Packs
+<https://learn.microsoft.com/en-us/azure/azure-monitor/logs/query-packs>
 
 ### Export and Import Saved Queries
 
