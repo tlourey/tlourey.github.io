@@ -15,10 +15,11 @@ tags:
     - Security
     - Commands
 date: 2025-01-18T16:51:00
-lastmod: 2025-03-12T02:50:45.412Z
+lastmod: 2025-03-19T02:22:25.235Z
 fmContentType: pages
 ---
 
+ <!--- cSpell: ignore Kusto --->
  <!--- cSpell:disable --->
 * [KQL Language](#kql-language)
   * [Overview](#overview)
@@ -29,6 +30,9 @@ fmContentType: pages
 * [KQL Queries](#kql-queries)
   * [LAW Table Usage](#law-table-usage)
   * [Get Watch List](#get-watch-list)
+* [Manage KQL Queries](#manage-kql-queries)
+  * [Query Packs](#query-packs)
+  * [Export and Import Saved Queries](#export-and-import-saved-queries)
 * [Misc KQL References and Resources](#misc-kql-references-and-resources)
 <!--- cSpell:enable --->
 
@@ -120,11 +124,21 @@ _GetWatchlist('NetworkAddresses')
 | project IPSubnet,RangeName
 ```
 
+## Manage KQL Queries
+
+### Query Packs
+
+* [ ] Add info about Query Packs
+
+### Export and Import Saved Queries
+
+<https://techcommunity.microsoft.com/discussions/microsoftsentinel/export-and-import-saved-queries-and-functions-from-one-sentinel-workspace-to-ano/1910930>
+
 ## Misc KQL References and Resources
 
 Notes about KQL for Transformations: [Supported KQL features in Azure Monitor transformations](https://learn.microsoft.com/en-au/azure/azure-monitor/essentials/data-collection-transformations-kql)\
-<https://github.com/rod-trent/MustLearnKQL>\
-<https://github.com/reprise99/Sentinel-Queries>\
+<https://github.com/rod-trent/MustLearnKQL> - Highly Recommended\
+<https://github.com/reprise99/Sentinel-Queries> - Highly Recommended\
 <https://github.com/reprise99/awesome-kql-sentinel>\
 <https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules>\
 <https://www.kqlsearch.com/>
