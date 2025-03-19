@@ -29,7 +29,7 @@ fmContentType: pages
 * [KQL Queries](#kql-queries)
   * [LAW Table Usage](#law-table-usage)
   * [Get Watch List](#get-watch-list)
-* [Misc References](#misc-references)
+* [Misc KQL References and Resources](#misc-kql-references-and-resources)
 <!--- cSpell:enable --->
 
 ## KQL Language
@@ -120,7 +120,7 @@ _GetWatchlist('NetworkAddresses')
 | project IPSubnet,RangeName
 ```
 
-## Misc References
+## Misc KQL References and Resources
 
 Notes about KQL for Transformations: [Supported KQL features in Azure Monitor transformations](https://learn.microsoft.com/en-au/azure/azure-monitor/essentials/data-collection-transformations-kql)\
 <https://github.com/rod-trent/MustLearnKQL>\
