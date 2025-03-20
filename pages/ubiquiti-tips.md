@@ -8,12 +8,18 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-19T04:53:38.452Z
+lastmod: 2025-03-20T23:28:46.987Z
 tags:
     - Commands
     - References
     - Tips
     - Ubiquiti
+keywords:
+    - EdgeRouter
+    - Ubiquiti
+    - Unifi
+    - UNMS
+    - UISP
 ---
 
 <!--- cSpell:words UniFi macaddress UISP UNMS --->
