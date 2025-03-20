@@ -1,13 +1,13 @@
 ---
 title: Mail Headers
 description: ""
-published: false
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-03-17T23:34:50.024Z
-lastmod: 2025-03-18T03:02:13.083Z
+lastmod: 2025-03-20T11:14:14.573Z
 tags:
     - Email
 isdraft: true
