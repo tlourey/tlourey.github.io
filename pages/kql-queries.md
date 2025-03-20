@@ -14,7 +14,7 @@ tags:
     - References
     - Security
 date: 2025-01-18T16:51:00
-lastmod: 2025-03-19T10:59:59.430Z
+lastmod: 2025-03-20T08:10:41.632Z
 fmContentType: pages
 ---
 
@@ -22,6 +22,7 @@ fmContentType: pages
  <!--- cSpell:disable --->
 * [KQL Language](#kql-language)
   * [Overview](#overview)
+  * [Getting Started Queries](#getting-started-queries)
   * [Tabular operators](#tabular-operators)
     * [summarize operator](#summarize-operator)
     * [distinct operator](#distinct-operator)
@@ -57,6 +58,18 @@ fmContentType: pages
 
 [Syntax conventions for reference documentation](https://learn.microsoft.com/en-au/kusto/query/syntax-conventions?view=azure-monitor) - brings the menu to the right place for browsing\
 [Best practices for Kusto Query Language queries](https://learn.microsoft.com/en-au/kusto/query/best-practices?view=azure-monitor)
+
+### Getting Started Queries
+
+**<https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries>**
+
+* [Structure a query](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#structure-a-query)
+* [Sort query results](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#sort-results)
+* [Filter query results](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#filter-results)
+* [Specify a time range](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#specify-a-time-range)
+* [Include or exclude columns in query results](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#include-or-exclude-columns-in-query-results) - also see [project operator](#project-operator)
+* [Define and use custom fields](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#define-and-use-custom-fields)
+* [Aggregate and group results](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#aggregate-and-group-results)
 
 ### Tabular operators
 
