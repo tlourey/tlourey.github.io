@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-20T23:28:46.987Z
+lastmod: 2025-03-20T23:36:14.109Z
 tags:
     - Commands
     - References
@@ -23,7 +23,7 @@ keywords:
 ---
 
 <!--- cSpell:words UniFi macaddress UISP UNMS --->
-<!--- cSpell:ignore procs --->
+<!--- cSpell:ignore procs WiFiman lcire1 RSSI --->
 <!--- cSpell:disable --->
 * [UniFi](#unifi)
   * [Logs](#logs)
@@ -66,7 +66,18 @@ Nagios command to check number of process on UniFi Self hosted. In this case, wa
 
 #### AP/Client Signal Balance: Poor
 
-<https://community.ui.com/questions/AP-Client-Signal-Balance-Poor/921859fe-98eb-4677-a385-0e657030fed6>
+Answer 1: <https://community.ui.com/questions/AP-Client-Signal-Balance-Poor/921859fe-98eb-4677-a385-0e657030fed6#answer/7bf03596-b7d8-47ea-8997-df06bcc541ab>\
+More details: <https://community.ui.com/questions/AP-Client-Signal-Balance-Poor/921859fe-98eb-4677-a385-0e657030fed6#answer/1483eb78-2c5f-4ead-9e8e-b90ddce534a1>\
+Full post: <https://community.ui.com/questions/AP-Client-Signal-Balance-Poor/921859fe-98eb-4677-a385-0e657030fed6>
+
+Post is more detailed and better written but very briefly summarised:
+
+* Reduce Output Power of Aps that are near each other
+* Use WiFiman app on phone to see exactly what APs
+* Increase Channel width (more so for 5Ghz than 2.5Ghz)
+* Consider Minimum RSSI on some APs for 2.5 or 5Ghz (will force clients with lower signals to disconnect)
+* Run Optimise
+* Read the post especially those by user 'lcire1'
 
 ## EdgeRouter
 
