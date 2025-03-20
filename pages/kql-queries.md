@@ -14,7 +14,7 @@ tags:
     - References
     - Security
 date: 2025-01-18T16:51:00
-lastmod: 2025-03-20T08:10:41.632Z
+lastmod: 2025-03-20T08:13:14.281Z
 fmContentType: pages
 ---
 
@@ -187,6 +187,8 @@ _GetWatchlist('NetworkAddresses')
 ### Export and Import Saved Queries
 
 <https://techcommunity.microsoft.com/discussions/microsoftsentinel/export-and-import-saved-queries-and-functions-from-one-sentinel-workspace-to-ano/1910930>
+
+Exporting ARM Template: If the query packs are accessible in the Azure Portal site, try exporting the ARM template
 
 ## Accessing KQL
 
