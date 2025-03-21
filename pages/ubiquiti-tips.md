@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-20T23:36:14.109Z
+lastmod: 2025-03-21T01:01:23.596Z
 tags:
     - Commands
     - References
@@ -40,6 +40,7 @@ keywords:
   * [Paths](#paths)
   * [Help Refs](#help-refs)
   * [UNMS CLI](#unms-cli)
+* [WiFiman](#wifiman)
 <!--- cSpell:enable --->
 
 ## UniFi
@@ -210,3 +211,14 @@ UISP Console commands:
   restore-console-backup-discard [--no-start]
     - Discard pending UISP Console backup restore.
 ```
+
+## WiFiman
+
+Its not *that* great a speed test but it does give good network details, port scan and AP details.
+
+Web Browser Version: <https://wifiman.com>\
+Desktop Clients (Windows, Mac, Linux): <https://ui.com/download/app/wifiman-desktop>\
+WiFiman App for iOS: <https://itunes.apple.com/AU/app/id1385561119>
+WiFiman App for Android: <https://play.google.com/store/apps/details?id=com.ubnt.usurvey&hl=AU>
+
+UISP is supposed to have some integration with wifiman but I can't find any info about it.
