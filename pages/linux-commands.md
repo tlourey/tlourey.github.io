@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-19T04:50:06.203Z
+lastmod: 2025-03-20T11:40:42.879Z
 tags:
     - Commands
     - Linux
@@ -39,6 +39,7 @@ isdraft: false
 * [Cron](#cron)
 * [Accounts and Groups](#accounts-and-groups)
 * [Apt](#apt)
+* [dnf](#dnf)
 * [Main SystemD Commands](#main-systemd-commands)
   * [Important Commands](#important-commands)
     * [systemctl](#systemctl)
@@ -356,6 +357,11 @@ TBC
 * [ ] apt vs apt-get vs aptitude vs dpkg
 * [ ] link out to reference and guidance
 --->
+
+## dnf
+
+`sudo dnf upgrade`: update packages\
+`sudo dnf system-upgrade`: update os to latest releaase
 
 ## Main SystemD Commands
 
