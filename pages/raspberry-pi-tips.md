@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-03-22T13:52:29.866Z
+lastmod: 2025-03-22T13:54:58.733Z
 tags:
     - RaspberryPi
     - Tips
@@ -56,6 +56,9 @@ nmcli con show
 # sudo nmcli con mod "Your Connection Name" ipv4.addresses "192.168.1.100/24" ipv4.gateway "192.168.1.1" ipv4.dns "8.8.8.8" ipv4.method manual
 sudo nmcli con mod "Wired connection 1" ipv4.addresses 192.168.1.22/24 ipv4.gateway 192.168.1.1 ipv4.dns 192.168.1.1 ipv4.method manual
 sudo nmcli con mod "Wired connection 1" -ipv4.address "192.168.1.100/24"
+nmcli device wifi list
+nmcli device wifi connect "$SSID" password "$PASSWORD"
+nmcli --ask device wifi connect "$SSID"
 sudo systemctl restart NetworkManager
 ```
 
