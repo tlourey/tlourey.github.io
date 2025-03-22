@@ -1,13 +1,13 @@
 ---
 title: HTML Formatting Elements
 description: TBA
-published: false
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-03-12T02:31:01.751Z
-lastmod: 2025-03-12T06:21:52.982Z
+lastmod: 2025-03-22T14:39:29.947Z
 tags:
     - Language
     - References
