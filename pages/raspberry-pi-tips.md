@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-03-22T13:22:13.117Z
+lastmod: 2025-03-22T13:47:31.363Z
 tags:
     - RaspberryPi
     - Tips
@@ -46,13 +46,15 @@ Crappy but seems offical: <https://www.raspberrypi.com/documentation/computers/c
 
 ### Network Manager
 
-<https://networkmanager.dev/docs/api/latest/nmcli.html>
+<https://networkmanager.dev/docs/api/latest/nmcli.html>\
+<https://networkmanager.dev/docs/api/latest/nmcli-examples.html>
 
 ```bash
 sudo nmcli c show
 nmcli con show
 # sudo nmcli con mod "Your Connection Name" ipv4.addresses "192.168.1.100/24" ipv4.gateway "192.168.1.1" ipv4.dns "8.8.8.8" ipv4.method manual
 sudo nmcli con mod "Wired connection 1" ipv4.addresses 192.168.1.22/24 ipv4.gateway 192.168.1.1 ipv4.dns 192.168.1.1 ipv4.method manual
+sudo nmcli con mod "Wired connection 1" -ipv4.address "192.168.1.100/24"
 sudo systemctl restart NetworkManager
 ```
 
