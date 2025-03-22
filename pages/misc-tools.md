@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-21T06:07:11.194Z
+lastmod: 2025-03-22T03:23:47.409Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS Vesa -->
@@ -30,6 +30,9 @@ lastmod: 2025-03-21T06:07:11.194Z
 * [Windows Tools](#windows-tools)
   * [Hardware](#hardware)
     * [Video Cables](#video-cables)
+* [Development Tools](#development-tools)
+  * [Vagrant](#vagrant)
+  * [VSCode](#vscode)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
 * [Misc Web Tools](#misc-web-tools)
 * [Security Tools](#security-tools)
@@ -139,6 +142,33 @@ Somewhat specific cables I often buy and want to remember.
 [Club3D CAC-2067 DisplayPort to DisplayPort 1.4/Hbr3/ HDR Support Cable DP 1.4 8K 60Hz 1 Meter/3.28 Feet Black Vesa Certified](https://www.amazon.com.au/dp/B076D6GGG8)\
 Active DisplayPort to HDMI for Lenovo Docks that you prefer: [CableCreation Active DisplayPort to HDMI 4K 60Hz Cable 2.4M(8FT) Support Multi-Screen Display, DP to HDMI HDR Monitor Cable Unidirectional, DP Cable 1.4 to HDMI Support 4K 30Hz, 2K/1080P 144Hz, 120Hz](https://www.amazon.com.au/CableCreation-Unidirectional-DisplayPort-Eyefinity-Multi-Display/dp/B082CXMBCQ?ref_=ast_sto_dp&th=1)
 
+## Development Tools
+
+### Vagrant
+
+**<https://portal.cloud.hashicorp.com/vagrant/discover>** - vagrant boxes search\
+<https://www.vagrantup.com/>\
+<https://developer.hashicorp.com/vagrant/docs>\
+**<https://developer.hashicorp.com/vagrant/docs/cli>**
+
+Common Vagrant Commands:
+
+```bash
+mkdir nameforproject
+vagrant init ubuntu/jammy64
+vagrant up
+vagrant snapshot save
+vagrant snapshot restore
+vagrant halt
+vagrant destory
+vagrant box list
+vagrant box remove box/name
+```
+
+### VSCode
+
+[VSCode Settings and Extensions](vscode-settings-and-extensions.md)
+
 ## Chrome or Edge Extensions
 
 * Session Buddy:
@@ -191,8 +221,12 @@ Active DisplayPort to HDMI for Lenovo Docks that you prefer: [CableCreation Acti
 
 **<https://www.whatsmydns.net>** - DNS Replication Check\
 **<http://dns.squish.net>** - DNS Traversal Check\
-<https://developers.cloudflare.com/dns/reference/recommended-third-party-tools/>\
-**<https://dns.google>**
+**<https://dns.google>**\
+<https://developers.cloudflare.com/dns/reference/recommended-third-party-tools/>:
+
+* [DNSViz](https://dnsviz.net/): A web-based tool for visualizing the status of a DNS zone to understand and troubleshoot the deployment of DNS Security Extensions (DNSSEC)
+* [Dig Web Interface](https://digwebinterface.com/): An online DNS lookup tool based on the command line interface dig. Users can skip the process of entering commands with complicated parameters in the terminal by entering the same information in this web tool and getting the same results.
+* [Mess with DNS](https://messwithdns.net/): An educational resource that encourages users to experiment with DNS records by providing users with a domain where they are free to play around and break things during the learning process.
 
 <http://www.webdnstools.com/dnstools/domain_check>\
 <https://lookup.icann.org/en> - RDAP (whois repacement)\
