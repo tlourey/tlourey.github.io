@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-03-22T13:47:31.363Z
+lastmod: 2025-03-22T13:52:29.866Z
 tags:
     - RaspberryPi
     - Tips
@@ -47,6 +47,7 @@ Crappy but seems offical: <https://www.raspberrypi.com/documentation/computers/c
 ### Network Manager
 
 <https://networkmanager.dev/docs/api/latest/nmcli.html>\
+<https://networkmanager.dev/docs/api/latest/nmcli.html#:~:text=Examples,-This%20section%20presents>\
 <https://networkmanager.dev/docs/api/latest/nmcli-examples.html>
 
 ```bash
