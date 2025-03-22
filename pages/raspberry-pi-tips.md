@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-03-12T06:49:45.339Z
+lastmod: 2025-03-22T13:22:13.117Z
 tags:
     - RaspberryPi
     - Tips
@@ -18,6 +18,12 @@ preview: ""
 ---
 
 <!--- cSpell:disable --->
+* [Documentation](#documentation)
+* [Setting a static IP on a Pi using Bookworm](#setting-a-static-ip-on-a-pi-using-bookworm)
+  * [Use a DHCP Reservation](#use-a-dhcp-reservation)
+  * [Network Manager](#network-manager)
+  * [/etc/network/interfaces](#etcnetworkinterfaces)
+* [raspi-config non-interactive](#raspi-config-non-interactive)
 * [Read only SD Card](#read-only-sd-card)
 * [vcgencmd](#vcgencmd)
 * [Controlling a Raspberry Pi Fan](#controlling-a-raspberry-pi-fan)
@@ -25,7 +31,46 @@ preview: ""
   * [Modifying RPM Config](#modifying-rpm-config)
 * [rfkill](#rfkill)
 * [Pairing a Bluetooth Keyboard](#pairing-a-bluetooth-keyboard)
+* [Tools](#tools)
 <!--- cSpell:enable --->
+
+## Documentation
+
+<https://www.raspberrypi.com/documentation/>
+
+## Setting a static IP on a Pi using Bookworm
+
+### Use a DHCP Reservation
+
+Crappy but seems offical: <https://www.raspberrypi.com/documentation/computers/configuration.html#assign-a-static-ip-address>
+
+### Network Manager
+
+<https://networkmanager.dev/docs/api/latest/nmcli.html>
+
+```bash
+sudo nmcli c show
+nmcli con show
+# sudo nmcli con mod "Your Connection Name" ipv4.addresses "192.168.1.100/24" ipv4.gateway "192.168.1.1" ipv4.dns "8.8.8.8" ipv4.method manual
+sudo nmcli con mod "Wired connection 1" ipv4.addresses 192.168.1.22/24 ipv4.gateway 192.168.1.1 ipv4.dns 192.168.1.1 ipv4.method manual
+sudo systemctl restart NetworkManager
+```
+
+### /etc/network/interfaces
+
+```ini
+iface eth0 inet static
+address 192.168.1.100        # Your desired static IP address
+netmask 255.255.255.0        # Your subnet mask
+gateway 192.168.1.1          # Your gateway (router) IP address
+dns-nameservers 8.8.8.8      # DNS server(s) - You can add multiple servers
+```
+
+Also consider setting up configs in source `/etc/network/interfaces.d/*`
+
+## raspi-config non-interactive
+
+<https://www.raspberrypi.com/documentation/computers/configuration.html#raspi-config-cli>
 
 ## Read only SD Card
 
@@ -135,3 +180,7 @@ Some extra Commands inside bluetoothctl to help:\
 `power off`: turn the bluetooth controlled off (this isn't rfkill)
 
 More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.html>
+
+## Tools
+
+[Raspberry Pi SD Card Image Manager](https://github.com/gitbls/sdm)
