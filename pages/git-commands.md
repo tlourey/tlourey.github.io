@@ -8,10 +8,14 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-03-22T13:35:14.211Z
+lastmod: 2025-03-23T20:30:24.106Z
 tags:
     - Commands
     - References
+keywords:
+    - cli
+    - git
+    - config
 ---
 
 
@@ -39,9 +43,9 @@ git config --global user.name "Mona Lisa"
 git config --global user.email "YOUR_EMAIL"
 ```
 
-* -global applies to ~/.gitconfig
-* -system applies to /etc/gitconfig
-* -local applies to the current repo
+* `-global` applies to ~/.gitconfig
+* `-system` applies to /etc/gitconfig
+* `-local` applies to the current repo
 
 Note about Github emails: <https://docs.github.com/en/account-and-profile/setting-up-and-managing-your-personal-account-on-github/managing-email-preferences/setting-your-commit-email-address>
 
