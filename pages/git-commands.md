@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-03-23T20:30:24.106Z
+lastmod: 2025-03-23T20:35:13.770Z
 tags:
     - Commands
     - References
@@ -37,10 +37,10 @@ keywords:
 ### git config
 
 ```bash
-git config --global user.name
-git config --global user.email
-git config --global user.name "Mona Lisa"
-git config --global user.email "YOUR_EMAIL"
+git config --global user.name # get current value of user.name config
+git config --global user.email # get current value of user.email config
+git config --global user.name "Mona Lisa" # set value of user.name config
+git config --global user.email "YOUR_EMAIL" # set current value of user.email config
 ```
 
 * `-global` applies to ~/.gitconfig
@@ -53,11 +53,16 @@ Note about Github emails: <https://docs.github.com/en/account-and-profile/settin
 
 Install: <https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/install.md>
 
+CLI:
+
 ```bash
 git credential-manager configure
 git credential-manager unconfigure
 git credential-manager get
 ```
+
+More CLI Options: <https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/usage.md>
+Configuration: <https://github.com/git-ecosystem/git-credential-manager/blob/release/docs/configuration.md>
 
 ## Internet References
 
