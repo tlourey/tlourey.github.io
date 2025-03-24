@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-03-05T02:48:09.469Z
+lastmod: 2025-03-19T04:39:14.516Z
 tags:
     - Commands
     - Networks
@@ -606,6 +606,13 @@ There are some settings that don't get changed in configure mode, but instead ge
 * ip ssh server enable
 * sshcon timeout 30
 * no ip telnet server enable
+
+> [!TIP] New default ports
+> AV UI Default HTTP Port is: 80\
+> AV UI Default HTTPS Port is: 443\
+> Main/Full UI default HTTP Port is: 49151\
+> Main/Full UI default HTTPS Port is: 49152
+
 
 ## References
 

@@ -13,23 +13,34 @@ tags:
     - Language
     - References
     - Security
-    - Commands
 date: 2025-01-18T16:51:00
-lastmod: 2025-03-12T02:50:45.412Z
+lastmod: 2025-03-20T08:13:14.281Z
 fmContentType: pages
 ---
 
+ <!--- cSpell: ignore Kusto --->
  <!--- cSpell:disable --->
 * [KQL Language](#kql-language)
   * [Overview](#overview)
-  * [count](#count)
-  * [count\_distinct](#count_distinct)
-  * [isnotempty](#isnotempty)
-  * [project](#project)
+  * [Getting Started Queries](#getting-started-queries)
+  * [Tabular operators](#tabular-operators)
+    * [summarize operator](#summarize-operator)
+    * [distinct operator](#distinct-operator)
+    * [project operator](#project-operator)
+    * [count operator](#count-operator)
+  * [aggregation function](#aggregation-function)
+    * [count aggregation function](#count-aggregation-function)
+    * [count\_distinct aggregation function](#count_distinct-aggregation-function)
+  * [Scalar functions](#scalar-functions)
+    * [isnotempty scalar functions](#isnotempty-scalar-functions)
 * [KQL Queries](#kql-queries)
   * [LAW Table Usage](#law-table-usage)
   * [Get Watch List](#get-watch-list)
-* [Misc References](#misc-references)
+* [Manage KQL Queries](#manage-kql-queries)
+  * [Query Packs](#query-packs)
+  * [Export and Import Saved Queries](#export-and-import-saved-queries)
+* [Accessing KQL](#accessing-kql)
+* [Misc KQL References and Resources](#misc-kql-references-and-resources)
 <!--- cSpell:enable --->
 
 ## KQL Language
@@ -45,45 +56,42 @@ fmContentType: pages
 [KQL Regex](https://learn.microsoft.com/en-us/kusto/query/regex?view=azure-monitor)\
 [KQL Timezones](https://learn.microsoft.com/en-us/kusto/query/timezone?view=azure-monitor)
 
-### count
+[Syntax conventions for reference documentation](https://learn.microsoft.com/en-au/kusto/query/syntax-conventions?view=azure-monitor) - brings the menu to the right place for browsing\
+[Best practices for Kusto Query Language queries](https://learn.microsoft.com/en-au/kusto/query/best-practices?view=azure-monitor)
+
+### Getting Started Queries
+
+**<https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries>**
+
+* [Structure a query](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#structure-a-query)
+* [Sort query results](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#sort-results)
+* [Filter query results](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#filter-results)
+* [Specify a time range](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#specify-a-time-range)
+* [Include or exclude columns in query results](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#include-or-exclude-columns-in-query-results) - also see [project operator](#project-operator)
+* [Define and use custom fields](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#define-and-use-custom-fields)
+* [Aggregate and group results](https://learn.microsoft.com/en-au/azure/azure-monitor/logs/get-started-queries?tabs=kql#aggregate-and-group-results)
+
+### Tabular operators
+
+#### summarize operator
 
 ```kql
 StormEvents
-| summarize Count=count() by State
+| summarize by EventType
 ```
 
-```kql
-CommonSecurityLog
-| summarize Count=count() by DeviceVendor
-```
+<https://learn.microsoft.com/en-au/kusto/query/summarize-operator?view=azure-monitor>
 
-<https://learn.microsoft.com/en-au/kusto/query/count-aggregation-function?view=microsoft-fabric>
-
-### count_distinct
+#### distinct operator
 
 ```kql
 StormEvents
-| summarize UniqueEvents=count_distinct(EventType) by State
-| top 5 by UniqueEvents
+| distinct EventType
 ```
 
-<https://learn.microsoft.com/en-au/kusto/query/count-distinct-aggregation-function?view=azure-monitor>
-<!--- cSpell:disable --->
-### isnotempty
-<!--- cSpell:enable --->
-```kql
-StormEvents
-| where isnotempty(BeginLat) and isnotempty(BeginLon)
-```
+<https://learn.microsoft.com/en-au/kusto/query/distinct-operator?view=azure-monitor>
 
-```kql
-CommonSecurityLog
-| where isnotempty(DeviceVendor)
-```
-
-<https://learn.microsoft.com/en-au/kusto/query/isnotempty-function?view=azure-monitor>
-
-### project
+#### project operator
 
 Allows limiting of columns
 
@@ -100,6 +108,56 @@ Other project related operators:
 * [project-keep-operator](https://learn.microsoft.com/en-au/kusto/query/project-keep-operator?view=azure-monitor)
 * [project-rename-operator](https://learn.microsoft.com/en-au/kusto/query/project-rename-operator?view=azure-monitor)
 * [project-reorder-operator](https://learn.microsoft.com/en-au/kusto/query/project-reorder-operator?view=azure-monitor)
+
+#### count operator
+
+```kql
+StormEvents | count
+```
+
+<https://learn.microsoft.com/en-au/kusto/query/count-operator?view=azure-monitor>
+
+### aggregation function
+
+#### count aggregation function
+
+```kql
+StormEvents
+| summarize Count=count() by State
+```
+
+```kql
+CommonSecurityLog
+| summarize Count=count() by DeviceVendor
+```
+
+<https://learn.microsoft.com/en-au/kusto/query/count-aggregation-function?view=azure-monitor>
+
+#### count_distinct aggregation function
+
+```kql
+StormEvents
+| summarize UniqueEvents=count_distinct(EventType) by State
+| top 5 by UniqueEvents
+```
+
+<https://learn.microsoft.com/en-au/kusto/query/count-distinct-aggregation-function?view=azure-monitor>
+<!--- cSpell:disable --->
+### Scalar functions
+
+#### isnotempty scalar functions
+<!--- cSpell:enable --->
+```kql
+StormEvents
+| where isnotempty(BeginLat) and isnotempty(BeginLon)
+```
+
+```kql
+CommonSecurityLog
+| where isnotempty(DeviceVendor)
+```
+
+<https://learn.microsoft.com/en-au/kusto/query/isnotempty-function?view=azure-monitor>
 
 ## KQL Queries
 
@@ -120,11 +178,40 @@ _GetWatchlist('NetworkAddresses')
 | project IPSubnet,RangeName
 ```
 
-## Misc References
+## Manage KQL Queries
 
-Notes about KQL for Transformations: [Supported KQL features in Azure Monitor transformations](https://learn.microsoft.com/en-au/azure/azure-monitor/essentials/data-collection-transformations-kql)\
-<https://github.com/rod-trent/MustLearnKQL>\
-<https://github.com/reprise99/Sentinel-Queries>\
-<https://github.com/reprise99/awesome-kql-sentinel>\
-<https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules>\
-<https://www.kqlsearch.com/>
+### Query Packs
+
+<https://learn.microsoft.com/en-us/azure/azure-monitor/logs/query-packs>
+
+### Export and Import Saved Queries
+
+<https://techcommunity.microsoft.com/discussions/microsoftsentinel/export-and-import-saved-queries-and-functions-from-one-sentinel-workspace-to-ano/1910930>
+
+Exporting ARM Template: If the query packs are accessible in the Azure Portal site, try exporting the ARM template
+
+## Accessing KQL
+
+* [Kusto.Explorer](https://learn.microsoft.com/en-au/kusto/tools/kusto-explorer)
+  * [Installing Kusto.Explorer](https://aka.ms/ke)
+* [](https://learn.microsoft.com/en-au/kusto/tools/kusto-cli?view=microsoft-fabric)
+* [Az.Operational Insights PowerShell Module](https://learn.microsoft.com/en-us/powershell/module/az.operationalinsights/) - namely:
+  * [Invoke-AzOperationalInsightsQuery](https://learn.microsoft.com/en-us/powershell/module/az.operationalinsights/invoke-azoperationalinsightsquery)
+  * [Get-AzOperationalInsightsSavedSearch](https://learn.microsoft.com/en-us/powershell/module/az.operationalinsights/get-azoperationalinsightssavedsearch)
+  * [New-AzOperationalInsightsSavedSearch](https://learn.microsoft.com/en-us/powershell/module/az.operationalinsights/new-azoperationalinsightssavedsearch)
+* [Azure PowerShell](https://learn.microsoft.com/en-au/powershell/azure/) - see [Access methods Azure VM Tips](azure-vm-tips.md#access-methods)
+* **[Log Analytics Workspaces in Azure Portal](https://portal.azure.com/#blade/HubsExtension/BrowseResourceBlade/resourceType/Microsoft.OperationalInsights%2Fworkspaces)** - where I do most of my stuff
+* [Log Analytics REST API Reference](https://learn.microsoft.com/en-us/rest/api/loganalytics/?view=rest-loganalytics-2025-02-01)
+* [Azure Data Explorer](https://dataexplorer.azure.com/) - Web based client (there is also a downloadable client)
+* [Advanced Hunting in Microsoft Defender Portal](https://security.microsoft.com/v2/advanced-hunting)
+
+[Using KQL in PowerShell](https://learningbydoing.cloud/blog/query-log-analytics-with-kql-from-powershell/#query-log-analytics-from-powershell)
+
+## Misc KQL References and Resources
+
+* Notes about KQL for Transformations: [Supported KQL features in Azure Monitor transformations](https://learn.microsoft.com/en-au/azure/azure-monitor/essentials/data-collection-transformations-kql)
+* **<https://github.com/rod-trent/MustLearnKQL>** - Highly Recommended
+* <https://github.com/reprise99/Sentinel-Queries> - Highly Recommended
+* <https://github.com/reprise99/awesome-kql-sentinel>
+* <https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules>
+**<https://www.kqlsearch.com/>**

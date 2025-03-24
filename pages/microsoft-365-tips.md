@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-17T05:14:29.071Z
+lastmod: 2025-03-19T09:32:46.280Z
 ---
 
 <!--- cSpell:disable --->
@@ -52,15 +52,18 @@ lastmod: 2025-03-17T05:14:29.071Z
 
 [Microsoft Information Protection Deployment Accelerator Guide](https://microsoft.github.io/ComplianceCxE/dag/)
 
-[Use Keyword Query Language to create search queries in eDiscovery](https://learn.microsoft.com/en-us/purview/edisc-keyword-query-language) - aka KeyQL\
+[Use Keyword Query Language to create search queries in eDiscovery](https://learn.microsoft.com/en-us/purview/edisc-keyword-query-language) - aka KeyQL (Doesn't looks to be the same as [KQL](kql-queries.md))\
 [Use the condition builder to create search queries in eDiscovery](https://learn.microsoft.com/en-au/purview/edisc-condition-builder)\
-[Keyword queries and search conditions for eDiscovery](https://learn.microsoft.com/en-au/purview/ediscovery-keyword-queries-and-search-conditions) - classic eDiscovery only apparently
+[Keyword queries and search conditions for eDiscovery](https://learn.microsoft.com/en-au/purview/ediscovery-keyword-queries-and-search-conditions) - classic eDiscovery only apparently\
+New Purview eDiscovery Guide: <https://mslearn.cloudguides.com/guides/Get%20started%20with%20Microsoft%20Purview%20eDiscovery>
+
+More Info: [Learn about eDiscovery](https://learn.microsoft.com/en-au/purview/edisc)
 
 ## URLs and Landing Zones
 
 ### Login, Signin and App Specific URLs
 
-Office.com
+Office.com\
 <https://myapps.microsoft.com/>\
 <https://portal.office.com/myapps>\
 <https://www.office.com/login?domain_hint=myemaildomain.com>\
@@ -77,22 +80,22 @@ Office.com
 
 <https://portal.office.com/onedrive> - NEW Entry!\
 <https://mytenantname-my.sharepoint.com/_layouts/15/MyBraryFirstRun.aspx?FirstRunStage=waiting> - first run of OneDrive to setup\
-<https://www.office.com/launch/sharepoint?auth=2> - NEW 2021
-<https://www.office.com/launch/onedrive>
-<https://www.office.com/launch/onenote>
-<https://www.office.com/launch/forms>
-<https://www.office.com/launch/word>
-<https://www.office.com/launch/excel>
-<https://www.office.com/launch/powerpoint>
+<https://www.office.com/launch/sharepoint?auth=2> - NEW 2021\
+<https://www.office.com/launch/onedrive>\
+<https://www.office.com/launch/onenote>\
+<https://www.office.com/launch/forms>\
+<https://www.office.com/launch/word>\
+<https://www.office.com/launch/excel>\
+<https://www.office.com/launch/powerpoint>\
 <https://www.office.com/launch/onenote>
 
 <https://outlook.com/myemaildomain.com>\
 
 ### Logout URLs
 
-<https://login.microsoftonline.com/common/oauth2/logoutsession>
-<https://www.office.com/estslogout?ru=%2F>
-<https://login.microsoftonline.com/logout.srf>
+<https://login.microsoftonline.com/common/oauth2/logoutsession>\
+<https://www.office.com/estslogout?ru=%2F>\
+<https://login.microsoftonline.com/logout.srf>\
 <https://login.microsoftonline.com/common/oauth2/logout?post_logout_redirect_uri=https://www.office.com/signin?domain_hint=myemaildomain.com>
 
 ### References
@@ -213,6 +216,7 @@ Also:
 > This section may become big enough that it will become its own page.
 
 <https://entra.news/>\
+<https://entra.news/p/entra-mind-maps> - entra mind map\
 <https://github.com/merill/awesome-entra> - Github awesome list for Entra\
 <https://azuread.github.io/MSIdentityTools/>\
 <https://graphxray.merill.net/>

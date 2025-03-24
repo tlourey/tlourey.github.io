@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-17T05:50:09.927Z
+lastmod: 2025-03-20T11:40:42.879Z
 tags:
     - Commands
     - Linux
@@ -28,6 +28,7 @@ isdraft: false
   * [ls options often forgotten](#ls-options-often-forgotten)
   * [Finding large directories and large files](#finding-large-directories-and-large-files)
   * [Compressing and Decompressing files](#compressing-and-decompressing-files)
+  * [Compressed Log Files](#compressed-log-files)
 * [Hardware](#hardware)
   * [Hardware Info](#hardware-info)
   * [rfkill](#rfkill)
@@ -38,6 +39,7 @@ isdraft: false
 * [Cron](#cron)
 * [Accounts and Groups](#accounts-and-groups)
 * [Apt](#apt)
+* [dnf](#dnf)
 * [Main SystemD Commands](#main-systemd-commands)
   * [Important Commands](#important-commands)
     * [systemctl](#systemctl)
@@ -75,6 +77,8 @@ watch
 less
 wc
 column
+tail
+tail -f
 ```
 
 ### Aliases
@@ -204,6 +208,34 @@ Options:
 
 More options are available. Look at: <https://www.geeksforgeeks.org/gunzip-command-in-linux-with-examples/>
 
+Other Zip Commands:
+
+```bash
+zipdetails
+zipinfo
+```
+
+### Compressed Log Files
+
+When using things like logrotate that compress log files you don't want to have to uncompress them every time to run the usual commands against them. You can try these commands when working with compressed log files:
+
+```bash
+zgrep
+zcat
+zless
+zmore
+zdiff
+zcmp
+zegrep
+```
+
+Note that some of the z commands don't support some of the options the regular utility does. eg: `zgrep` doesn't support `--recursive (-r)`. Check the man pages for more info.
+
+Some examples:
+
+`zless SwitchName.log.* | grep ab:cd:ef:12:34:56`: search a compressed switch log for a mac address\
+`zcat 192.168.1.2_abcdef123456.log.* | grep 2025-03-19 | grep 12:34:56:ab:cd:ef`: search a compressed UniFi AP log file for a mac address on a specific date
+
 ## Hardware
 
 ### Hardware Info
@@ -325,6 +357,11 @@ TBC
 * [ ] apt vs apt-get vs aptitude vs dpkg
 * [ ] link out to reference and guidance
 --->
+
+## dnf
+
+`sudo dnf upgrade`: update packages\
+`sudo dnf system-upgrade`: update os to latest releaase
 
 ## Main SystemD Commands
 

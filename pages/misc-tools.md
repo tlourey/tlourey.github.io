@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-17T05:55:17.764Z
+lastmod: 2025-03-22T03:23:47.409Z
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS Vesa -->
@@ -22,12 +22,17 @@ lastmod: 2025-03-17T05:55:17.764Z
   * [Speedtest](#speedtest)
 * [Linux Tools](#linux-tools)
 * [Software Tools](#software-tools)
+  * [Python](#python)
+    * [Maker Varients](#maker-varients)
 * [KQL Tools](#kql-tools)
 * [PowerShell Tools](#powershell-tools)
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
   * [Hardware](#hardware)
     * [Video Cables](#video-cables)
+* [Development Tools](#development-tools)
+  * [Vagrant](#vagrant)
+  * [VSCode](#vscode)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
 * [Misc Web Tools](#misc-web-tools)
 * [Security Tools](#security-tools)
@@ -88,9 +93,19 @@ lastmod: 2025-03-17T05:55:17.764Z
 [regex101](https://regex101.com/)\
 [pyrexp](https://pythonium.net/regex) - Thanks to [@cyrilbois](https://github.com/cyrilbois) for the PR and making the tool!
 
+### Python
+
+#### Maker Varients
+
+<https://micropython.org/> - lean version of python for microcontrollers, like arduino\
+<https://circuitpython.org/> - beginner / easier to user version of the above for microcontrollers\
+<https://circuitpython.org/blinka> - use circuitpython on SBCs like the Raspberry Pi
+
 ## KQL Tools
 
 <https://www.kqlsearch.com/>
+
+Check out [Misc KQL References and Resources](kql-queries.md#misc-kql-references-and-resources)
 
 ## PowerShell Tools
 
@@ -126,6 +141,33 @@ Somewhat specific cables I often buy and want to remember.
 [StarTech.com 3m 10 ft White Mini DisplayPort to DisplayPort 1.2 Adapter Cable M/M - DisplayPort 4k with HBR2 Support - Mini DP to DP Cable](https://www.amazon.com.au/dp/B0081ZBNCA)\
 [Club3D CAC-2067 DisplayPort to DisplayPort 1.4/Hbr3/ HDR Support Cable DP 1.4 8K 60Hz 1 Meter/3.28 Feet Black Vesa Certified](https://www.amazon.com.au/dp/B076D6GGG8)\
 Active DisplayPort to HDMI for Lenovo Docks that you prefer: [CableCreation Active DisplayPort to HDMI 4K 60Hz Cable 2.4M(8FT) Support Multi-Screen Display, DP to HDMI HDR Monitor Cable Unidirectional, DP Cable 1.4 to HDMI Support 4K 30Hz, 2K/1080P 144Hz, 120Hz](https://www.amazon.com.au/CableCreation-Unidirectional-DisplayPort-Eyefinity-Multi-Display/dp/B082CXMBCQ?ref_=ast_sto_dp&th=1)
+
+## Development Tools
+
+### Vagrant
+
+**<https://portal.cloud.hashicorp.com/vagrant/discover>** - vagrant boxes search\
+<https://www.vagrantup.com/>\
+<https://developer.hashicorp.com/vagrant/docs>\
+**<https://developer.hashicorp.com/vagrant/docs/cli>**
+
+Common Vagrant Commands:
+
+```bash
+mkdir nameforproject
+vagrant init ubuntu/jammy64
+vagrant up
+vagrant snapshot save
+vagrant snapshot restore
+vagrant halt
+vagrant destory
+vagrant box list
+vagrant box remove box/name
+```
+
+### VSCode
+
+[VSCode Settings and Extensions](vscode-settings-and-extensions.md)
 
 ## Chrome or Edge Extensions
 
@@ -179,8 +221,12 @@ Active DisplayPort to HDMI for Lenovo Docks that you prefer: [CableCreation Acti
 
 **<https://www.whatsmydns.net>** - DNS Replication Check\
 **<http://dns.squish.net>** - DNS Traversal Check\
-<https://developers.cloudflare.com/dns/reference/recommended-third-party-tools/>\
-**<https://dns.google>**
+**<https://dns.google>**\
+<https://developers.cloudflare.com/dns/reference/recommended-third-party-tools/>:
+
+* [DNSViz](https://dnsviz.net/): A web-based tool for visualizing the status of a DNS zone to understand and troubleshoot the deployment of DNS Security Extensions (DNSSEC)
+* [Dig Web Interface](https://digwebinterface.com/): An online DNS lookup tool based on the command line interface dig. Users can skip the process of entering commands with complicated parameters in the terminal by entering the same information in this web tool and getting the same results.
+* [Mess with DNS](https://messwithdns.net/): An educational resource that encourages users to experiment with DNS records by providing users with a domain where they are free to play around and break things during the learning process.
 
 <http://www.webdnstools.com/dnstools/domain_check>\
 <https://lookup.icann.org/en> - RDAP (whois repacement)\
@@ -224,7 +270,7 @@ Also often includes abuse functions
 [RIPE Network Coordination Centre](https://www.ripe.net)\
 [Looking Glasses](https://www.ausnog.net/tools/lg)
 
-<https://www.peeringdb.com>\
+**<https://www.peeringdb.com>**\
 <https://www.internetexchangemap.com>\
 <https://ixpdb.euro-ix.net/en/>
 

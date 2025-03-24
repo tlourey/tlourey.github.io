@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-03-17T05:53:26.204Z
+lastmod: 2025-03-17T11:41:29.482Z
 tags:
     - References
     - Tools
@@ -101,8 +101,11 @@ Windy Help Videos (still haven't watched them)\
 
 <https://www.adafruit.com>\
 <https://core-electronics.com.au>\
+
+* <https://forum.core-electronics.com.au/> - REALLY good forums
+
 <https://store-usa.arduino.cc>\
 <https://raspberry.piaustralia.com.au> / <https://littlebirdelectronics.com.au>
 
-<https://www.mouser.com>\
+<https://www.mouser.com> / <https://au.mouser.com>\
 <https://www.pakronics.com.au>
