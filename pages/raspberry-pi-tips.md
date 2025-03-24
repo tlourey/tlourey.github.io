@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-03-22T13:54:58.733Z
+lastmod: 2025-03-24T10:06:09.410Z
 tags:
     - RaspberryPi
     - Tips
@@ -24,6 +24,7 @@ preview: ""
   * [Network Manager](#network-manager)
   * [/etc/network/interfaces](#etcnetworkinterfaces)
 * [raspi-config non-interactive](#raspi-config-non-interactive)
+* [Firmware Upgrade](#firmware-upgrade)
 * [Read only SD Card](#read-only-sd-card)
 * [vcgencmd](#vcgencmd)
 * [Controlling a Raspberry Pi Fan](#controlling-a-raspberry-pi-fan)
@@ -77,6 +78,26 @@ Also consider setting up configs in source `/etc/network/interfaces.d/*`
 ## raspi-config non-interactive
 
 <https://www.raspberrypi.com/documentation/computers/configuration.html#raspi-config-cli>
+
+## Firmware Upgrade
+
+> [!WARNING]
+> Pre-release versions of software are not guaranteed to work. Do not use rpi-update on any system unless recommended to do so by a Raspberry Pi engineer. It could leave your system unreliable or broken. **Do not use rpi-update as part of any regular update process**.
+
+Uses apt package: `raspi3-firmware`
+
+<https://www.raspberrypi.com/documentation/computers/os.html#rpi-update>
+
+rpi-update downloads the latest pre-release version of the Linux kernel, its matching modules, device tree files, and the latest versions of the VideoCore firmware. It then installs these files into an existing Raspberry Pi OS install.
+
+```bash
+sudo rpi-update
+sudo reboot
+```
+
+White paper on firmware updates: <https://pip.raspberrypi.com/categories/685-whitepapers-app-notes/documents/RP-003476-WP/Updating-Pi-firmware.pdf>
+
+[Downgrade firmware to the last stable release](https://www.raspberrypi.com/documentation/computers/os.html#downgrade-firmware-to-the-last-stable-release)
 
 ## Read only SD Card
 
