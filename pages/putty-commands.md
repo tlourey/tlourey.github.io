@@ -1,28 +1,30 @@
 ---
 title: PuTTY Commands
-description: description
+description: CLI Commands for PuTTY
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
-isdraft: true
+isdraft: false
 date: 2025-01-17T15:31:00
 lastmod: 2025-03-04T11:22:33.519Z
 tags:
-  - Commands
-  - References
+    - Commands
+    - References
+keywords:
+    - PuTTY
 ---
 
 
 <!--- cSpell:disable --->
-* [Latest Download Links](#latest-download-links)
+* [Latest PuTTY Download Links](#latest-putty-download-links)
 * [Basics](#basics)
 * [Port Fowrarding](#port-fowrarding)
 * [More Help](#more-help)
 <!--- cSpell:enable --->
 
-## Latest Download Links
+## Latest PuTTY Download Links
 
 <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>\
 <https://the.earth.li/~sgtatham/putty/latest/w64/putty.exe>\
