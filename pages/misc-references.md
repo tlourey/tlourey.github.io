@@ -10,7 +10,7 @@ isdraft: true
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-21T06:05:39.857Z
+lastmod: 2025-03-24T11:58:25.465Z
 fmContentType: pages
 ---
 
@@ -146,6 +146,7 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 [StarLink Enterprise Guide](https://starlink-enterprise-guide.readme.io/)\
 [StarLink API Documentation](https://starlink.readme.io/)
 
+Also see [StarLink Tips](starlink-tips.md)
 
 ## Windows
 
