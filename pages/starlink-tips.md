@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-24T11:47:32.173Z
-lastmod: 2025-03-24T12:40:41.691Z
+lastmod: 2025-03-24T12:47:52.797Z
 tags:
     - Internet
     - References
@@ -118,4 +118,5 @@ More Info: [How do I stow my Starlink?](https://www.starlink.com/au/support/arti
 [StarLink Help Centre](https://www.starlink.com/au/support)\
 [StarLink Enterprise Guide](https://starlink-enterprise-guide.readme.io/)\
 [StarLink API Documentation](https://starlink.readme.io/)\
-[StarLink POPs](https://www.peeringdb.com/net/18747)
+[StarLink POPs](https://www.peeringdb.com/net/18747)\
+[StarLink Public IP Ranges](public-ip-ranges.md#starlink)
