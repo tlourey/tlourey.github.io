@@ -6,12 +6,14 @@ categories:
   - Tech
 type: pages
 layout: pages
-isdraft: true
+isdraft: false
 date: 2025-01-15T14:05:00
 lastmod: 2025-03-04T11:22:33.478Z
 tags:
-  - Azure
-  - Tips
+    - Azure
+    - Tips
+keywords:
+    - Azure
 ---
 
 
