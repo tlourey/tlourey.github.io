@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:34:00
-lastmod: 2025-03-04T11:45:03.253Z
+lastmod: 2025-03-24T12:16:28.417Z
 tags:
     - Networks
     - References
@@ -26,6 +26,7 @@ isdraft: false
 * [Cloudflare](#cloudflare)
 * [Omnissa](#omnissa)
 * [Salesforce](#salesforce)
+* [Starlink](#starlink)
 * [CGNAT](#cgnat)
 * [Misc Providers](#misc-providers)
 * [Misc Sources](#misc-sources)
@@ -85,6 +86,11 @@ isdraft: false
 * <https://ip-ranges.salesforce.com/ip-ranges.json>\
 * <https://help.tableau.com/current/online/en-us/to_keep_data_fresh.htm#new-ip-addresses-after-hyperforce-migration>\
 * <https://my.slack.com/help/urls>
+
+## Starlink
+
+[All Starlink IP Subnets and geolocation mapping](https://geoip.starlinkisp.net/)\
+CSV Feed: <https://geoip.starlinkisp.net/feed.csv>
 
 ## CGNAT
 
