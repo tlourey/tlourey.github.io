@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-17T03:22:32.074Z
-lastmod: 2025-03-24T12:58:03.009Z
+lastmod: 2025-03-25T10:25:10.919Z
 tags:
     - Comics
     - Memes
@@ -29,3 +29,4 @@ keywords:
 [The Far Side](https://www.thefarside.com/)\
 [The OatMeal - Latest](https://theoatmeal.com/comics)\
 [Effin' Birds](https://effinbirds.com/)
+[Drawtism (Instagram)](https://www.instagram.com/draw_tism/) / [Drawtism (Linktree)](https://linktr.ee/drawtism) / [Drawtism (Twitter)](http://www.twitter.com/DrawtismArt/) / [Drawtism (Youtube)](https://www.youtube.com/c/drawtism/)
