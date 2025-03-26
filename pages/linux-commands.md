@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-26T04:07:08.356Z
+lastmod: 2025-03-26T08:34:59.727Z
 tags:
     - Commands
     - Linux
@@ -67,10 +67,29 @@ isdraft: false
 
 ## Operating System Commands
 
-`lsb_release -a`:tba\
+Distro Version:
+
+`cat /etc/os-release`:TBA\
+`cat /etc/*-release`: TBA\
+`cat /etc/issue`:TBA\
+`hostnamectl`:TBA - see more in [Main SystemD Commands](#main-systemd-commands)\
+`lsb_release -a`:tba - may not exist on some Redhat machines by default
+
 `cat /etc/debian_version`:TBA\
+`cat /etc/redhat-release`:TBA
+
+Kernel Version:
 `uname`:TBA\
-`uname -a`:TBA
+`uname -a`:TBA\
+`uname -r`:TBA\
+`uname -mrs`:TBA\
+`cat /proc/version`:TBA
+
+More:
+
+* <https://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/>
+* <https://www.cyberciti.biz/faq/how-do-i-determine-rhel-version/>
+* <https://www.cyberciti.biz/faq/how-to-check-ubuntu-version-in-linux-command-line/>
 
 ### man pages
 
