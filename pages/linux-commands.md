@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-26T04:00:55.626Z
+lastmod: 2025-03-26T04:07:08.356Z
 tags:
     - Commands
     - Linux
@@ -40,6 +40,7 @@ isdraft: false
 * [Cron](#cron)
 * [Accounts and Groups](#accounts-and-groups)
 * [Apt](#apt)
+  * [changelog](#changelog)
 * [dnf](#dnf)
 * [Main SystemD Commands](#main-systemd-commands)
   * [Important Commands](#important-commands)
@@ -370,6 +371,14 @@ TBC
 * [ ] apt vs apt-get vs aptitude vs dpkg
 * [ ] link out to reference and guidance
 --->
+
+### changelog
+
+TBC
+<!---
+* [ ] cover apt changelog /apt-get changelog
+* [ ] consider text about urgency / cve matching
+-->
 
 ## dnf
 
