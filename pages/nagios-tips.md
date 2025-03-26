@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-03-14T07:46:26.334Z
+lastmod: 2025-03-26T04:00:09.633Z
 tags:
     - Monitoring
     - Nagios
@@ -122,7 +122,7 @@ define host {
 <https://nagios-plugins.org/doc/extra-opts.html>\
 <https://nagios-plugins.org/development/>\
 
-<https://www.monitoring-plugins.org/doc/man/index.html>\
+**<https://www.monitoring-plugins.org/doc/man/index.html>**\
 <https://www.monitoring-plugins.org/doc/guidelines.html>\
 <https://www.monitoring-plugins.org/doc/man/check_http.html>
 

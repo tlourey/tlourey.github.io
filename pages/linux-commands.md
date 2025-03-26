@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-20T11:40:42.879Z
+lastmod: 2025-03-26T08:34:59.727Z
 tags:
     - Commands
     - Linux
@@ -18,6 +18,7 @@ isdraft: false
 
 <!--- cSpell:disable --->
 * [Operating System Commands](#operating-system-commands)
+  * [man pages](#man-pages)
 * [Terminal Stuff](#terminal-stuff)
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
   * [Aliases](#aliases)
@@ -39,6 +40,7 @@ isdraft: false
 * [Cron](#cron)
 * [Accounts and Groups](#accounts-and-groups)
 * [Apt](#apt)
+  * [changelog](#changelog)
 * [dnf](#dnf)
 * [Main SystemD Commands](#main-systemd-commands)
   * [Important Commands](#important-commands)
@@ -56,6 +58,8 @@ isdraft: false
   * [OpenSSL Links](#openssl-links)
 * [SSH](#ssh)
 * [SSH Client](#ssh-client)
+  * [Port Forwarding](#port-forwarding)
+  * [Reverse Port Forwarding](#reverse-port-forwarding)
 * [SSH Keys](#ssh-keys)
   * [SSHD](#sshd)
 * [Misc System Commands](#misc-system-commands)
@@ -63,10 +67,39 @@ isdraft: false
 
 ## Operating System Commands
 
-`lsb_release -a`:tba\
+Distro Version:
+
+`cat /etc/os-release`:TBA\
+`cat /etc/*-release`: TBA\
+`cat /etc/issue`:TBA\
+`hostnamectl`:TBA - see more in [Main SystemD Commands](#main-systemd-commands)\
+`lsb_release -a`:tba - may not exist on some Redhat machines by default
+
 `cat /etc/debian_version`:TBA\
+`cat /etc/redhat-release`:TBA
+
+Kernel Version:
 `uname`:TBA\
-`uname -a`:TBA
+`uname -a`:TBA\
+`uname -r`:TBA\
+`uname -mrs`:TBA\
+`cat /proc/version`:TBA
+
+More:
+
+* <https://www.cyberciti.biz/faq/find-linux-distribution-name-version-number/>
+* <https://www.cyberciti.biz/faq/how-do-i-determine-rhel-version/>
+* <https://www.cyberciti.biz/faq/how-to-check-ubuntu-version-in-linux-command-line/>
+
+### man pages
+
+`man topic`
+
+Web based man pages:
+
+* **<https://linux.die.net/man/>**
+* <https://www.man7.org/linux/man-pages/>
+* <https://wiki.archlinux.org/title/Man_page>
 
 ## Terminal Stuff
 
@@ -358,6 +391,14 @@ TBC
 * [ ] link out to reference and guidance
 --->
 
+### changelog
+
+TBC
+<!---
+* [ ] cover apt changelog /apt-get changelog
+* [ ] consider text about urgency / cve matching
+-->
+
 ## dnf
 
 `sudo dnf upgrade`: update packages\
@@ -582,7 +623,75 @@ To use a lower version of TLS (Results may vary in newer versions): <https://ask
 
 ## SSH Client
 
-* [ ] add in common ssh client commands needed
+`ssh username@host`\
+`ssh username@host -p customportno`\
+`ssh username@host -i /path/to/identitykey`\
+`ssh username@host -J jumpusername@jumphost:jumpport`\
+`ssh username@host -B eth0`: bind to an interface\
+`ssh username@host -b 192.168.1.25`: bind to an ip address\
+`ssh username@host -v`: verbose - useful for diagnosing automation and auth issues.
+
+* [x] port forwading commands
+* [x] reverse port forward commands
+* [ ] * [ ] add in commands and info for control socket connection sharing (ControlPath and ControlMaster)
+* [ ] tunnel commands
+
+### Port Forwarding
+
+To forward a local port (say 5110) to a remote destination (say popserver.example.com port 110), you can write something like one of these:
+
+```bash
+ssh username@host -L 5110:popserver.example.com:110
+ssh username@host -L 8080:webserver.example.com:80
+ssh username@host -L 8443:192.168.1.1:443
+```
+
+To specify an IP address for the listening end of the tunnel, prepend it to the argument:
+
+`ssh username@host -L 127.0.0.5:23:localhost:23 myhost`
+
+From the SSH man page:
+
+> ```bash
+> ssh username@host -L [bind_address:]port:host:hostport
+> ssh username@host -L [bind_address:]port:remote_socket
+> ssh username@host -L local_socket:host:hostport
+> ssh username@host -L local_socket:remote_socket
+> ```
+>
+> Specifies that connections to the given TCP port or Unix socket on the local (client) host are to be forwarded to the given host and port, or Unix socket, on the remote side.  This works by allocating a socket to listen to either a TCP port on the local side, optionally bound to the specified bind_address, or to a Unix socket.  Whenever a connection is made to the local port or socket, the connection is forwarded over the secure channel, and a connection is made to either host port hostport, or the Unix socket remote_socket, from the remote machine.
+>
+> Port forwardings can also be specified in the configuration file.  Only the superuser can forward privileged ports.  IPv6 addresses can be specified by enclosing the address in square brackets.
+>
+> By default, the local port is bound in accordance with the GatewayPorts setting.  However, an explicit bind_address may be used to bind the connection to a specific address.  The bind_address of "localhost" indicates that the listening port be bound for local use only, while an empty address or '*' indicates that the port should be available from all interfaces.
+
+### Reverse Port Forwarding
+
+To forward a remote port to a local destination, just use the -R option instead of -L:
+
+```bash
+ssh username@host -R 5023:mytelnetserver.myhouse.org:23
+```
+
+From the SSH man page:
+
+> ```bash
+> ssh username@host -R [bind_address:]port:host:hostport
+> ssh username@host -R [bind_address:]port:local_socket
+> ssh username@host -R remote_socket:host:hostport
+> ssh username@host -R remote_socket:local_socket
+> ssh username@host -R [bind_address:]port
+> ```
+>
+> Specifies that connections to the given TCP port or Unix socket on the remote (server) host are to be forwarded to the local side.
+>
+> This works by allocating a socket to listen to either a TCP port or to a Unix socket on the remote side.  Whenever a connection is made to this port or Unix socket, the connection is forwarded over the secure channel, and a connection is made from the local machine to either an explicit destination specified by host port hostport, or local_socket, or, if no explicit destination was specified, ssh will act as a SOCKS 4/5 proxy and forward connections to the destinations requested by the remote SOCKS client.
+>
+> Port forwardings can also be specified in the configuration file. Privileged ports can be forwarded only when logging in as root on the remote machine.  IPv6 addresses can be specified by enclosing the address in square brackets.
+>
+> By default, TCP listening sockets on the server will be bound to the loopback interface only.  This may be overridden by specifying a bind_address.  An empty bind_address, or the address '*', indicates that the remote socket should listen on all interfaces.  Specifying a remote bind_address will only succeed if the server's GatewayPorts option is enabled (see sshd_config(5)).
+>
+> If the port argument is '0', the listen port will be dynamically allocated on the server and reported to the client at run time.  When used together with -O forward, the allocated port will be printed to the standard output.
 
 ## SSH Keys
 

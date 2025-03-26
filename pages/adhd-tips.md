@@ -1,13 +1,13 @@
 ---
 title: ADHD Tips
-description: Tools, Tips & Techniques
+description: Tools, Apps & Tips for people with ADHD
 published: false
 categories:
     - NotTech
 type: pages
 layout: pages
 date: 2025-03-23T20:07:11.946Z
-lastmod: 2025-03-23T20:25:51.773Z
+lastmod: 2025-03-24T12:54:00.576Z
 tags:
     - Tips
     - Tools
@@ -18,19 +18,17 @@ mermaid: false
 preview: ""
 keywords:
     - ADHD
-    - Techniques
-    - Tips
-    - Tools
     - Apps
+    - Tools
 ---
 <!-- cspell: words pomodoro -->
 <!--- cSpell:disable --->
-* [Simple Tools and Apps](#simple-tools-and-apps)
+* [Simple Tools and Apps for ADHD](#simple-tools-and-apps-for-adhd)
 * [Note taking and second brain](#note-taking-and-second-brain)
-* [Configurations that help](#configurations-that-help)
+* [Configurations that can help people with ADHD](#configurations-that-can-help-people-with-adhd)
 <!--- cSpell:enable --->
 
-## Simple Tools and Apps
+## Simple Tools and Apps for ADHD
 
 [goblin.tools](https://goblin.tools/): A bunch of tools for ADHD People such as:
 
@@ -58,7 +56,7 @@ keywords:
 
 * [ ] second Brain / lists / my note taking setup
 
-## Configurations that help
+## Configurations that can help people with ADHD
 
 * [ ] Finish this section
 
