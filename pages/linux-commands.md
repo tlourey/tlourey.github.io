@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-26T08:34:59.727Z
+lastmod: 2025-03-26T23:35:08.742Z
 tags:
     - Commands
     - Linux
@@ -396,7 +396,17 @@ TBC
 TBC
 <!---
 * [ ] cover apt changelog /apt-get changelog
+* [ ] cover apt-listchanges - see https://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages
+  * may need to be installed
+* [ ] cover apt-show-versions - see https://askubuntu.com/a/556399/443835
+  * Needs to be installed
+  * Can be used with regex like: apt-show-versions | grep upgradeable | grep security
+  * or apt-show-versions -u, or apt-show-versions -u -b | grep security
+  * apt-show-versions listed a package as being -seurity when it wasn't using other tools like apt list --upgradable or apt-check
+* [ ] cover apt-check - https://askubuntu.com/questions/441921/why-does-usr-lib-update-notifier-apt-check-not-agree-with-apt-get-upgrade
 * [ ] consider text about urgency / cve matching
+* [ ] link in with nagios check_apt critical options and critical regex
+* [ ] cover which of the above are included with ubuntu vs being 3rd party
 -->
 
 ## dnf
