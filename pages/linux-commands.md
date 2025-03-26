@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-26T23:35:08.742Z
+lastmod: 2025-03-26T23:39:10.477Z
 tags:
     - Commands
     - Linux
@@ -398,6 +398,7 @@ TBC
 * [ ] cover apt changelog /apt-get changelog
 * [ ] cover apt-listchanges - see https://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages
   * may need to be installed
+  * can use a oneliner to get changelogs that doesn't need sudo: (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges *.deb)
 * [ ] cover apt-show-versions - see https://askubuntu.com/a/556399/443835
   * Needs to be installed
   * Can be used with regex like: apt-show-versions | grep upgradeable | grep security
