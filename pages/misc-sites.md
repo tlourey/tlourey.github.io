@@ -1,6 +1,6 @@
 ---
 title: Misc Sites
-description: TBA
+description: Collection of Misc Websites I recommend, and try to remember that dont really sit anywhere else.
 published: true
 categories:
     - Tech
@@ -12,9 +12,11 @@ lastmod: 2025-03-17T11:41:29.482Z
 tags:
     - References
     - Tools
-isdraft: true
+isdraft: false
 fmContentType: pages
 preview: ""
+keywords:
+    - Sites
 ---
 
 <!--- cSpell:disable --->

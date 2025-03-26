@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-24T12:56:46.798Z
+lastmod: 2025-03-26T13:01:00.532Z
 keywords:
     - Tools
 ---
@@ -31,7 +31,8 @@ keywords:
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
   * [Hardware](#hardware)
-    * [Video Cables](#video-cables)
+  * [Provisioning and Deployment Tools](#provisioning-and-deployment-tools)
+* [Video Cables](#video-cables)
 * [Development Tools](#development-tools)
   * [Vagrant](#vagrant)
   * [VSCode](#vscode)
@@ -135,7 +136,11 @@ Check out [Misc KQL References and Resources](kql-queries.md#misc-kql-references
 **[USBDeview](https://www.nirsoft.net/utils/usb_devices_view.html)** - really good tool. Shows info about USB device drivers and USB Devices (also nearly everything from Nirsoft is awesome)\
 [DevManView](https://www.nirsoft.net/utils/device_manager_view.html) - Alternative to device manager of Windows (have not used it but everything from Nirsoft is awesome)
 
-#### Video Cables
+### Provisioning and Deployment Tools
+
+<https://github.com/CodingWonders/DISMTools>
+
+## Video Cables
 
 Somewhat specific cables I often buy and want to remember.
 

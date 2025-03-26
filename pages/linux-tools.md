@@ -5,7 +5,7 @@ categories:
     - Tech
 type: pages
 layout: pages
-isdraft: true
+isdraft: false
 published: true
 date: 2025-01-11T16:40:00
 lastmod: 2025-03-04T23:00:11.563Z
@@ -14,7 +14,6 @@ tags:
     - References
     - Tools
 ---
-
 
 <!--- cSpell:disable --->
 * [etckeeper](#etckeeper)

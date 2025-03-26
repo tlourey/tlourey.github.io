@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-24T12:55:06.644Z
+lastmod: 2025-03-26T11:23:08.990Z
 fmContentType: pages
 ---
 
@@ -121,6 +121,8 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 **[Ubuntu Server Documentation](https://documentation.ubuntu.com/server/)**\
 [official Ubuntu Documentation](https://help.ubuntu.com/) - older documentation landing portal\
 [Ubuntu Wiki](https://wiki.ubuntu.com/) - community edited, not well maintained.
+
+[The Ubuntu Security Guide](https://ubuntu.com/security/certifications/docs/usg) - free to read but requires ubuntu pro subscription for tooling
 
 ## Microsoft Platforms
 

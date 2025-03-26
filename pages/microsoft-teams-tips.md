@@ -1,26 +1,33 @@
 ---
 title: Microsoft Teams Tips
-description: ""
+description: Tips, tricks and shortcuts for MS Teams
 published: false
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-03-04T11:22:33.627Z
+lastmod: 2025-03-26T12:56:57.678Z
 tags:
-  - Microsoft365
-  - Teams
-  - Tips
+    - Microsoft365
+    - Teams
+    - Tips
 isdraft: true
 fmContentType: pages
 preview: ""
+keywords:
+    - Teams
 ---
 
 <!--- cSpell:disable --->
+* [Keyboard Shortcuts](#keyboard-shortcuts)
 * [Social Share to Teams](#social-share-to-teams)
 * [Network and Location Data](#network-and-location-data)
 <!--- cSpell:enable --->
+
+## Keyboard Shortcuts
+
+<https://support.microsoft.com/en-au/office/keyboard-shortcuts-for-microsoft-teams-2e8e2a70-e8d8-4a19-949b-4c36dd5292d2>
 
 ## Social Share to Teams
 
