@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-26T23:39:10.477Z
+lastmod: 2025-03-26T23:53:59.950Z
 tags:
     - Commands
     - Linux
@@ -65,6 +65,11 @@ isdraft: false
 * [Misc System Commands](#misc-system-commands)
 <!--- cSpell:enable --->
 
+<!---
+* [ ] needsreboot package - also consider if it should be documented in linux-tools.md
+
+-->
+
 ## Operating System Commands
 
 Distro Version:
@@ -93,13 +98,30 @@ More:
 
 ### man pages
 
-`man topic`
+`man topic`\
+`man man` to know more about the man command itself.
+
+Some tips on the man command: <https://www.redhat.com/en/blog/top-five-man-options>
 
 Web based man pages:
 
 * **<https://linux.die.net/man/>**
 * <https://www.man7.org/linux/man-pages/>
 * <https://wiki.archlinux.org/title/Man_page>
+
+* <https://manpages.ubuntu.com/>
+* <https://manpages.debian.org/>
+
+> [!NOTE] Man page sections
+> 1 - Executable programs or shell commands
+> 2 - System calls (functions provided by the kernel)
+> 3 - Library calls (functions within program libraries)
+> 4 - Special files (usually found in /dev)
+> 5 - File formats and conventions, e.g. /etc/passwd
+> 6 - Games
+> 7 - Miscellaneous (including macro packages and conventions), e.g., man(7), groff(7)
+> 8 - System administration commands (usually only for root)
+> 9 - Kernel routines [Non-standard]
 
 ## Terminal Stuff
 
@@ -399,6 +421,16 @@ TBC
 * [ ] cover apt-listchanges - see https://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages
   * may need to be installed
   * can use a oneliner to get changelogs that doesn't need sudo: (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges *.deb)
+  * ubuntu lts 20 doesn't support apt-listchanges --latest. For versions that do the following has pretty good output: 
+    ```
+    (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges -h --latest=1 *.deb) | grep urgency
+    WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+    WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+    linux (5.15.0-135.146) jammy; urgency=medium
+    tzdata (2025a-0ubuntu0.22.04) jammy; urgency=medium
+    ```
 * [ ] cover apt-show-versions - see https://askubuntu.com/a/556399/443835
   * Needs to be installed
   * Can be used with regex like: apt-show-versions | grep upgradeable | grep security
