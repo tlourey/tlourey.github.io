@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2025-03-17T02:11:08.138Z
+lastmod: 2025-03-27T21:29:40.413Z
 tags:
     - Tips
     - PowerShell
@@ -25,7 +25,8 @@ preview: ""
 * [Authentication Methods](#authentication-methods)
   * [Using Single Browser with Multple profiles](#using-single-browser-with-multple-profiles)
 * [Tools](#tools)
-* [Traps](#traps)
+* [Traps and Gotchas](#traps-and-gotchas)
+  * [Invoke-WebRequest and Invoke-RestMethod on PS5](#invoke-webrequest-and-invoke-restmethod-on-ps5)
 <!--- cSpell:enable --->
 
 ## Installing Modules
@@ -94,6 +95,15 @@ Windows PowerShell 5.1:
 
 Also check [Misc Tools](misc-tools.md)
 
-## Traps
+## Traps and Gotchas
 
 <https://github.com/nightroman/PowerShellTraps>
+
+### Invoke-WebRequest and Invoke-RestMethod on PS5
+
+`Invoke-WebRequest` and `Invoke-RestMethod` on Windows PowerShell 5.1 does not have the Paramater `-Authentication`, Only PowerShell7 does. This means you have to manually construct the header to include authentication.
+
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1>\
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.5#-authentication>\
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-5.1>\
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.5#-authentication>
