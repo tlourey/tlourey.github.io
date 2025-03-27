@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-26T23:53:59.950Z
+lastmod: 2025-03-27T11:45:24.343Z
 tags:
     - Commands
     - Linux
@@ -421,7 +421,7 @@ TBC
 * [ ] cover apt-listchanges - see https://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages
   * may need to be installed
   * can use a oneliner to get changelogs that doesn't need sudo: (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges *.deb)
-  * ubuntu lts 20 doesn't support apt-listchanges --latest. For versions that do the following has pretty good output: 
+  * ubuntu lts 20 doesn't support apt-listchanges --latest. For versions that do the following has pretty good output:
     ```
     (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges -h --latest=1 *.deb) | grep urgency
     WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
@@ -676,7 +676,7 @@ To use a lower version of TLS (Results may vary in newer versions): <https://ask
 
 * [x] port forwading commands
 * [x] reverse port forward commands
-* [ ] * [ ] add in commands and info for control socket connection sharing (ControlPath and ControlMaster)
+* [ ] add in commands and info for control socket connection sharing (ControlPath and ControlMaster)
 * [ ] tunnel commands
 
 ### Port Forwarding
