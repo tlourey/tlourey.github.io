@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-19T09:32:46.280Z
+lastmod: 2025-03-27T08:06:24.303Z
 ---
 
 <!--- cSpell:disable --->
@@ -30,7 +30,8 @@ lastmod: 2025-03-19T09:32:46.280Z
   * [Logout URLs](#logout-urls)
   * [References](#references)
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
-  * [Configuring Language and regional settings for new users](#configuring-language-and-regional-settings-for-new-users)
+  * [Configuring Preferred Language for users](#configuring-preferred-language-for-users)
+  * [Setting Data Storage Location for users](#setting-data-storage-location-for-users)
   * [Exchange Language Settings for end user](#exchange-language-settings-for-end-user)
   * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
   * [SharePoint Language Settings for end user](#sharepoint-language-settings-for-end-user)
@@ -114,9 +115,9 @@ Office.com\
 
 <https://myaccount.microsoft.com/settingsandprivacy/language>
 
-### Configuring Language and regional settings for new users
+### Configuring Preferred Language for users
 
-<https://learn.microsoft.com/en-au/microsoft-365/troubleshoot/access-management/set-language-and-region>
+**<https://learn.microsoft.com/en-au/microsoft-365/troubleshoot/access-management/set-language-and-region>**
 
 ```powershell
 # Update the User's Preferred Language details. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
@@ -128,6 +129,15 @@ $preferredLanguage = 'en-au'
 $userId = Get-MgUser -UserId user1@contoso.com
 Update-MgUser -UserId $userId.Id -PreferredLanguage $preferredLanguage
 ```
+
+> [!IMPORTANT] Synchronized identity model
+> If you are using ADSync or AD Connect Sync or Entra Connect Sync or whatever the hell they are calling it now, you **can't** set the above setting in M365.
+> It must be set in AD (but I don't think its a drop down option). Per the MS KB Above you can use this:
+> `Set-ADUser samacccountname –replace @{PreferredLanguage="en-au"}` then wait for it to sync to 365
+
+See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-modules) and [Module Management in PowerShell Commands](powershell-commands.md#module-management)
+
+### Setting Data Storage Location for users
 
 ```powershell
 # Update User's Usage Location details. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
@@ -182,10 +192,12 @@ Update-MgUser -UserId $userid.id -PasswordProfile @{ ForceChangePasswordNextSign
 ## Exchange Email Header References
 
 <https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo>\
-<https://learn.microsoft.com/en-us/exchange/header-firewall-exchange-2013-help>
+<https://learn.microsoft.com/en-us/exchange/header-firewall-exchange-2013-help>\
 <https://learn.microsoft.com/en-us/exchange/anti-spam-stamps-exchange-2013-help>
 
 **<https://mha.azurewebsites.net>**
+
+More Mail header info at [Mail Headers](mail-headers.md)
 
 More Mail tools under [Postmaster Tools in Misc Tools](misc-tools.md#postmaster) and Standards links under [SMTP in Misc References](misc-references.md#smtp)
 
