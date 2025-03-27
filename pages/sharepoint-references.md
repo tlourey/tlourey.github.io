@@ -3,15 +3,15 @@ title: SharePoint References
 description: '"SharePoint is old pig in lipstick, wearing trendy clothes and trying to fit in with the young kids" - Me'
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 isdraft: true
 tags:
-  - SharePoint
-  - References
+    - SharePoint
+    - References
 fmContentType: pages
-lastmod: 2025-03-04T11:22:33.653Z
+lastmod: 2025-03-27T08:24:53.455Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -182,6 +182,9 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 
 > [!TIP] Gallery Module Easier
 > Rather than download and install the MSI its easier to install and manage the SharePoint Online PowerShell Module via PowerShell Gallery
+
+> [!NOTE] PS5 Only?
+> Not sure 100% sure but I think this module may only work in Windows PowerShell 5.1.
 
 #### Install SharePoint Online PowerShell
 
