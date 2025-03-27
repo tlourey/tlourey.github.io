@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-27T11:45:24.343Z
+lastmod: 2025-03-27T11:50:45.873Z
 tags:
     - Commands
     - Linux
@@ -498,9 +498,9 @@ You can have systemd override files (which apparently are like files in /etc/def
 
 #### journalctl
 
-`sudo journalctl -xe` most common use. jumps to end of journal logs and shows extra info about log entries
+**`sudo journalctl -xe`** most common use. jumps to end of journal logs and shows extra info about log entries
 
-`sudo journalctl -e` jumps to the end
+`sudo journalctl -e` jumps to the end\
 `sudo journalctl -u service_name` show logs about a particular service\
 `sudo journalctl --no-pager` don't page logs\
 `sudo journalctl -r` show logs in reverse order\
@@ -510,7 +510,7 @@ You can have systemd override files (which apparently are like files in /etc/def
 `sudo journalctl -k` # Kernal messages only\
 `sudo journalctl --since=yesterday --until=now`\
 `sudo journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"`\
-`sudo journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot\
+`sudo journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot
 
 #### timedatectl
 
@@ -591,9 +591,9 @@ Netplan:
 `sudo netstat -lanp`: show active and listening\
 `sudo netstat -lanp | grep 22`: grep active and listening for port 22
 
-`nslookup`
-`dig`
-`hostname`
+`nslookup`\
+`dig`\
+`hostname`\
 `dnsdomainname`
 
 `nc`: netcat: <https://manpages.org/nc>
