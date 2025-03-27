@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-27T08:06:24.303Z
+lastmod: 2025-03-27T08:28:06.871Z
 ---
 
 <!--- cSpell:disable --->
@@ -35,6 +35,7 @@ lastmod: 2025-03-27T08:06:24.303Z
   * [Exchange Language Settings for end user](#exchange-language-settings-for-end-user)
   * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
   * [SharePoint Language Settings for end user](#sharepoint-language-settings-for-end-user)
+* [Pre-create a users OneDrive](#pre-create-a-users-onedrive)
 * [Force user to change password at next login](#force-user-to-change-password-at-next-login)
 * [Exchange Email Header References](#exchange-email-header-references)
 * [Network Details Upload](#network-details-upload)
@@ -176,6 +177,25 @@ See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-module
 Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-language-settings-0f6a477a-dcab-4462-9d0c-e3b53d138183> - this article isn't updated for CoPilot additions/changes. You need to click the 'You can add more profile information here.' link. Will end up taking you to <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
 
 This can affect things like validation. Refer to [Validation Tips](sharepoint-references.html#validation-tips)
+
+## Pre-create a users OneDrive
+
+<https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/request-spopersonalsite?view=sharepoint-ps>
+
+```powershell
+Import-Module Microsoft.Online.SharePoint.PowerShell
+Connect-SPOService -Url https://<<YOUR_TENANT_NAME>>-admin.sharepoint.com
+
+$emails = "user1@contoso.com", "user2@contoso.com"
+Request-SPOPersonalSite -UserEmails $emails
+Disconnect-SPOService
+```
+
+* Max 200 Users
+* Variable cannot have any empty strings
+* Not MultiGeo aware
+
+See more info about SharePoint PowerShell in [SharePoint References](sharepoint-references.md#connect-via-sharepoint-online-powershell)
 
 ## Force user to change password at next login
 
