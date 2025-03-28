@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-28T04:26:11.571Z
+lastmod: 2025-03-28T10:43:06.446Z
 tags:
     - Commands
     - Linux
@@ -113,14 +113,14 @@ Web based man pages:
 * <https://manpages.debian.org/>
 
 > [!NOTE] Man page sections
-> 1 - Executable programs or shell commands
-> 2 - System calls (functions provided by the kernel)
-> 3 - Library calls (functions within program libraries)
-> 4 - Special files (usually found in /dev)
-> 5 - File formats and conventions, e.g. /etc/passwd
-> 6 - Games
-> 7 - Miscellaneous (including macro packages and conventions), e.g., man(7), groff(7)
-> 8 - System administration commands (usually only for root)
+> 1 - Executable programs or shell commands\
+> 2 - System calls (functions provided by the kernel)\
+> 3 - Library calls (functions within program libraries)\
+> 4 - Special files (usually found in /dev)\
+> 5 - File formats and conventions, e.g. /etc/passwd\
+> 6 - Games\
+> 7 - Miscellaneous (including macro packages and conventions), e.g., man(7), groff(7)\
+> 8 - System administration commands (usually only for root)\
 > 9 - Kernel routines [Non-standard]
 
 ## Terminal Stuff
@@ -186,25 +186,25 @@ ps aux | grep <Process ID from above>
 
 ### ls options often forgotten
 
--t: sort by time, newest first
--h: human readable sizes
--S: sort by file size, largest first
--r: reverse
--R: recursive
+-t: sort by time, newest first\
+-h: human readable sizes\
+-S: sort by file size, largest first\
+-r: reverse\
+-R: recursive\
 --time: options are:
 
-* access time (-u): atime, access, use;
-* change time (-c): ctime, status;
-* birth time: birth, creation;
+* access time (-u): atime, access, use
+* change time (-c): ctime, status
+* birth time: birth, creation
 
--u: sort by access time
+-u: sort by access time\
 -c:
 
-* with -lt: sort by, and show, ctime (time of last modification of file status information);
-* with -l: show ctime and sort by name;
+* with -lt: sort by, and show, ctime (time of last modification of file status information)
+* with -l: show ctime and sort by name
 * otherwise: sort by ctime, newest first
 
--X: sort by extensions
+-X: sort by extensions\
 -x: lines instead of columns
 
 ### Finding large directories and large files
