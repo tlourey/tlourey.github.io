@@ -9,7 +9,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-14T04:23:25.235Z
-lastmod: 2025-03-16T02:23:39.221Z
+lastmod: 2025-03-28T11:12:29.148Z
 tags:
     - Books
     - Management
@@ -63,6 +63,7 @@ preview: ""
 ##### Python
 
 * Head First Programming - David Griffiths, Paul Barry
+* [Architecture Patterns with Python: Enabling Test-Driven Development, Domain-Driven Design, and Event-Driven Microservices](https://www.cosmicpython.com/book/preface.html) - Harry Percival and Bob Gregory: Look good, can be read online for free.
 
 ##### Bash
 
