@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-27T08:28:06.871Z
+lastmod: 2025-03-28T00:33:42.872Z
 ---
 
 <!--- cSpell:disable --->
@@ -31,16 +31,18 @@ lastmod: 2025-03-27T08:28:06.871Z
   * [References](#references)
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
   * [Configuring Preferred Language for users](#configuring-preferred-language-for-users)
-  * [Setting Data Storage Location for users](#setting-data-storage-location-for-users)
-  * [Exchange Language Settings for end user](#exchange-language-settings-for-end-user)
-  * [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user)
-  * [SharePoint Language Settings for end user](#sharepoint-language-settings-for-end-user)
+  * [Exchange Language Settings for end user via PowerShell](#exchange-language-settings-for-end-user-via-powershell)
+  * [OneDrive Language Settings for end user via Web](#onedrive-language-settings-for-end-user-via-web)
+  * [SharePoint Language Settings for end user via web](#sharepoint-language-settings-for-end-user-via-web)
+  * [SharePoint or OneDrive Language Settings for enduser via PowerShell](#sharepoint-or-onedrive-language-settings-for-enduser-via-powershell)
 * [Pre-create a users OneDrive](#pre-create-a-users-onedrive)
 * [Force user to change password at next login](#force-user-to-change-password-at-next-login)
 * [Exchange Email Header References](#exchange-email-header-references)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
 * [Entra](#entra)
+* [Microsoft Graph](#microsoft-graph)
+  * [Setting Data Storage Location for users](#setting-data-storage-location-for-users)
 * [Diag Tools](#diag-tools)
 <!--- cSpell:enable --->
 
@@ -138,22 +140,7 @@ Update-MgUser -UserId $userId.Id -PreferredLanguage $preferredLanguage
 
 See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-modules) and [Module Management in PowerShell Commands](powershell-commands.md#module-management)
 
-### Setting Data Storage Location for users
-
-```powershell
-# Update User's Usage Location details. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
-Import-Module Microsoft.Graph.Users
-
-Connect-MgGraph  -Scopes 'User.ReadWrite.All'
-
-$usageLocation = 'AU'
-$userId = Get-MgUser -UserId user1@contoso.com
-Update-MgUser -UserId $userId.Id -Usagelocation $usageLocation
-```
-
-See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-modules) and [Module Management in PowerShell Commands](powershell-commands.md#module-management)
-
-### Exchange Language Settings for end user
+### Exchange Language Settings for end user via PowerShell
 
 `Set-MailboxRegionalConfiguration -Identity $upn -Language 3081 -TimeZone "AUS Eastern Standard Time" -DateFormat "d/MM/yyyy"`\
 <https://learn.microsoft.com/en-au/powershell/module/exchange/set-mailboxregionalconfiguration?view=exchange-ps>
@@ -161,22 +148,28 @@ See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-module
 > [!TIP] TIP
 > Graph may be able to do the same but I haven't looked into it yet. For those who are keen you can look into: [Update-MgUserMailboxSetting](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.users/update-mgusermailboxsetting?view=graph-powershell-1.0)
 
-### OneDrive Language Settings for end user
+### OneDrive Language Settings for end user via Web
 
 <https://tenant-name-here-my.sharepoint.com/?p=22&setting=1> and click 'Regional Settings'
 
-### SharePoint Language Settings for end user
+### SharePoint Language Settings for end user via web
 
 1. Go to <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
 2. Select the 3 dots next to 'Details'
 3. Select 'Language and Region'
 
 > [!TIP] TIP
-> If you do the [Configuring Language and regional settings for new users](#configuring-language-and-regional-settings-for-new-users), then the [Exchange Language Settings for end user](#exchange-language-settings-for-end-user) then [OneDrive Language Settings for end user](#onedrive-language-settings-for-end-user) first, this one should already be done for you!
+> If you do the [Configuring Preferred Language for users](#configuring-preferred-language-for-users), then the [Exchange Language Settings for end user via PowerShell](#exchange-language-settings-for-end-user via PowerShell) then [OneDrive Language Settings for end user via web](#onedrive-language-settings-for-end-user-via-web) first, this one should already be done for you!
 
 Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-language-settings-0f6a477a-dcab-4462-9d0c-e3b53d138183> - this article isn't updated for CoPilot additions/changes. You need to click the 'You can add more profile information here.' link. Will end up taking you to <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
 
 This can affect things like validation. Refer to [Validation Tips](sharepoint-references.html#validation-tips)
+
+### SharePoint or OneDrive Language Settings for enduser via PowerShell
+
+<https://pnp.github.io/script-samples/spo-set-sharepoint-regional-settings/README.html?tabs=pnpps>
+
+Refer to [PnP PowerShell in SharePoint References](sharepoint-references.md#pnp-powershell) for more info on PnPPowerShell
 
 ## Pre-create a users OneDrive
 
@@ -257,6 +250,31 @@ Also:
 <https://github.com/MicrosoftDocs/entra-docs/blob/main/.docutune/dictionaries/known-guids.json> - Github List of known IDs\
 <https://github.com/merill/microsoft-info/> - contains app GUIDs and permission GUIDs\
 <https://raw.githubusercontent.com/merill/microsoft-info/main/_info/MicrosoftApps.json>
+
+## Microsoft Graph
+
+**<https://aka.ms/GE> - MS Graph Explorer**
+
+* [ ] Add in MS Graph Stuff
+
+Places you will see graph references:
+
+* [PowerShell Commands](powershell-commands.md)
+
+### Setting Data Storage Location for users
+
+```powershell
+# Update User's Usage Location details. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
+Import-Module Microsoft.Graph.Users
+
+Connect-MgGraph  -Scopes 'User.ReadWrite.All'
+
+$usageLocation = 'AU'
+$userId = Get-MgUser -UserId user1@contoso.com
+Update-MgUser -UserId $userId.Id -Usagelocation $usageLocation
+```
+
+See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-modules) and [Module Management in PowerShell Commands](powershell-commands.md#module-management)
 
 ## Diag Tools
 
