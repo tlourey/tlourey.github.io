@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-28T00:42:28.629Z
+lastmod: 2025-03-28T02:08:00.198Z
 ---
 
 <!--- cSpell:disable --->
@@ -41,6 +41,8 @@ lastmod: 2025-03-28T00:42:28.629Z
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
 * [Entra](#entra)
+  * [Microsoft Entra Connect Sync](#microsoft-entra-connect-sync)
+  * [Microsoft Entra Cloud Sync](#microsoft-entra-cloud-sync)
 * [Microsoft Graph](#microsoft-graph)
   * [Setting Data Storage Location for users](#setting-data-storage-location-for-users)
 * [Diag Tools](#diag-tools)
@@ -252,6 +254,41 @@ Also:
 <https://github.com/MicrosoftDocs/entra-docs/blob/main/.docutune/dictionaries/known-guids.json> - Github List of known IDs\
 <https://github.com/merill/microsoft-info/> - contains app GUIDs and permission GUIDs\
 <https://raw.githubusercontent.com/merill/microsoft-info/main/_info/MicrosoftApps.json>
+
+### Microsoft Entra Connect Sync
+
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/whatis-azure-ad-connect-v2>\
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-adsync>
+
+Syncs:
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-adsync#start-adsyncsynccycle>\
+**Force Delta Sync: `Start-AdSyncSyncCycle -PolicyType Delta`**\
+Full Sync: `Start-AdSyncSyncCycle -PolicyType Delta` - I don't know why but I don't like doing full syncs from PowerShell, only from the interface.\
+<https://techcommunity.microsoft.com/blog/itopstalkblog/powershell-basics-how-to-force-azuread-connect-to-sync/887043>\
+<https://lazyadmin.nl/it/force-azure-ad-sync-delta/>
+
+* [ ] Add in guidance and abuse notes around this.
+
+AutoUpgrade:
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/how-to-connect-install-automatic-upgrade> - contains overview and troubleshooting details - including event log events to look out for.
+
+> [!TIP] Azure AD Connect Upgrade Event source
+> If you can't find the event log source `Microsoft Entra Connect Upgrade` it might be under its oldername `Azure AD Connect Upgrade`
+
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-adsync#get-adsyncautoupgrade>\
+`Get-ADSyncAutoUpgrade`\
+`Get-ADSyncAutoUpgrade -Detail`\
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-adsync#set-adsyncautoupgrade>
+`Set-ADSyncAutoUpgrade -AutoUpgradeState Enabled`
+`Set-ADSyncAutoUpgrade [-AutoUpgradeState] <AutoUpgradeConfigurationState> [[-SuspensionReason] <String>] [<CommonParameters>]`
+
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-version-history>\
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-health-version-history>\
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-version-history-archive>
+
+### Microsoft Entra Cloud Sync
+
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/cloud-sync/what-is-cloud-sync>
 
 ## Microsoft Graph
 
