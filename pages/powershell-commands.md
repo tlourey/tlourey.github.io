@@ -467,3 +467,4 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 ## Other resources to add
 
 * [ ] Implement oneliners from comments
+* [ ] Add MSGraph PowerShell stuff
