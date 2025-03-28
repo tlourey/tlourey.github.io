@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-28T02:08:00.198Z
+lastmod: 2025-03-28T03:34:20.090Z
 ---
 
 <!--- cSpell:disable --->
@@ -74,8 +74,8 @@ Office.com\
 <https://portal.office.com/myapps>\
 <https://www.office.com/login?domain_hint=myemaildomain.com>\
 <https://www.office.com/signin?domain_hint=myemaildomain.com> ? I think login is better\
-<https://www.office.com/?auth=2&home=1&username=myusername%40yourtenantname.onmicrosoft.com&from=ShellLogo>\
-<https://admin.microsoft.com/?auth_upn=myusename%40yourtenantname.onmicrosoft.com&source=applauncher>\
+<https://www.office.com/?auth=2&home=1&username=myusername%40your-tenant-name.onmicrosoft.com&from=ShellLogo>\
+<https://admin.microsoft.com/?auth_upn=myusename%40your-tenant-name.onmicrosoft.com&source=applauncher>\
 <https://go.microsoft.com/fwlink/?LinkId=309629&tenantIdentifier=TENANTGUIDHERE>
 
 <https://myapps.microsoft.com/myemaildomain.com>\
@@ -85,7 +85,7 @@ Office.com\
 ### App Specific URLs
 
 <https://portal.office.com/onedrive> - NEW Entry!\
-<https://mytenantname-my.sharepoint.com/_layouts/15/MyBraryFirstRun.aspx?FirstRunStage=waiting> - first run of OneDrive to setup\
+<https://Your-Tenant-Name-my.sharepoint.com/_layouts/15/MyBraryFirstRun.aspx?FirstRunStage=waiting> - first run of OneDrive to setup\
 <https://www.office.com/launch/sharepoint?auth=2> - NEW 2021\
 <https://www.office.com/launch/onedrive>\
 <https://www.office.com/launch/onenote>\
@@ -138,7 +138,7 @@ Update-MgUser -UserId $userId.Id -PreferredLanguage $preferredLanguage
 > [!IMPORTANT] Synchronized identity model
 > If you are using ADSync or AD Connect Sync or Entra Connect Sync or whatever the hell they are calling it now, you **can't** set the above setting in M365.
 > It must be set in AD (but I don't think its a drop down option). Per the MS KB Above you can use this:
-> `Set-ADUser samacccountname –replace @{PreferredLanguage="en-au"}` then wait for it to sync to 365
+> `Set-ADUser samacccountname -replace @{PreferredLanguage="en-au"}` then wait for it to sync to 365
 
 See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-modules) and [Module Management in PowerShell Commands](powershell-commands.md#module-management)
 
@@ -152,18 +152,18 @@ See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-module
 
 ### OneDrive Language Settings for end user via Web
 
-<https://tenant-name-here-my.sharepoint.com/?p=22&setting=1> and click 'Regional Settings'
+<https://Your-Tenant-Name-my.sharepoint.com/?p=22&setting=1> and click 'Regional Settings'
 
 ### SharePoint Language Settings for end user via web
 
-1. Go to <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
+1. Go to <https://Your-Tenant-Name-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
 2. Select the 3 dots next to 'Details'
 3. Select 'Language and Region'
 
 > [!TIP] TIP
 > If you do the [Configuring Preferred Language for users](#configuring-preferred-language-for-users), then the [Exchange Language Settings for end user via PowerShell](#exchange-language-settings-for-end-user via PowerShell) then [OneDrive Language Settings for end user via web](#onedrive-language-settings-for-end-user-via-web) first, this one should already be done for you!
 
-Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-language-settings-0f6a477a-dcab-4462-9d0c-e3b53d138183> - this article isn't updated for CoPilot additions/changes. You need to click the 'You can add more profile information here.' link. Will end up taking you to <https://tenant-name-here-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
+Based off <https://support.microsoft.com/en-US/office/change-sharepoint-online-language-settings-0f6a477a-dcab-4462-9d0c-e3b53d138183> - this article isn't updated for CoPilot additions/changes. You need to click the 'You can add more profile information here.' link. Will end up taking you to <https://Your-Tenant-Name-my.sharepoint.com/_layouts/15/editprofile.aspx?UserSettingsProvider=dfb95e82-8132-404b-b693-25418fdac9b6>
 
 This can affect things like validation. Refer to [Validation Tips](sharepoint-references.html#validation-tips)
 

@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-03-28T00:57:28.139Z
+lastmod: 2025-03-28T03:32:32.482Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -226,7 +226,7 @@ If it hasn't been used in the tenant before
 
 ```powershell
 Import-Module PnP.PowerShell
-Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [yourtennantnamehere].onmicrosoft.com -Interactive
+Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [Your-Tenant-Name].onmicrosoft.com -Interactive
 ```
 
 > [!TIP] Whats in a name
@@ -237,9 +237,9 @@ Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [
 <https://pnp.github.io/powershell/articles/authentication.html>
 
 ```powershell
-Connect-PnPOnline [yourtenant].sharepoint.com -Interactive -ClientId <client id of your Entra ID Application Registration>
+Connect-PnPOnline [Your-Tenant-Name].sharepoint.com -Interactive -ClientId <client id of your Entra ID Application Registration>
 # OR
-Connect-PnPOnline [yourtenant].sharepoint.com -DeviceLogin -Tenant <tenant>.onmicrosoft.com -ClientId <client id of your Entra ID Application Registration>
+Connect-PnPOnline [Your-Tenant-Name].sharepoint.com -DeviceLogin -Tenant Your-Tenant-Name.onmicrosoft.com -ClientId <client id of your Entra ID Application Registration>
 ```
 
 ### PnP Provisioning Engine
@@ -302,7 +302,7 @@ Something you can also consier setting is the redirection URL but it is a **tena
 
 Have to be set a root site and applies to all sites.
 
-<https://\<\<TENANTNAME\>\>.sharepoint.com/_layouts/15/ProjectPolicies.aspx>
+<https://Your-Tenant-Name.sharepoint.com/_layouts/15/ProjectPolicies.aspx>
 
 <https://learn.microsoft.com/en-us/sharepoint/sites/site-policy-overview> - note this page is about SharePoint server, but some of these should still apply to Office 365
 
@@ -366,9 +366,9 @@ To disable comments and/or the social bar for a **specific site only** and not f
 
 ```powershell
 Import-Module PnP.PowerShell
-$SiteURL = https://tenantname.sharepoint.com/sites/comms-site-i-want-comments-and-likes-disabled-on
+$SiteURL = https://Your-Tenant-Name.sharepoint.com/sites/comms-site-i-want-comments-and-likes-disabled-on
 # Ensure Site URL does *not* have a trailing slash
-connect-PnPOnline $siteUrl -DeviceLogin -Tenant yourtenantnamehere.onmicrosoft.com -ClientId <<PnP App ID GUID for your AAD here>>
+connect-PnPOnline $siteUrl -DeviceLogin -Tenant Your-Tenant-Name.onmicrosoft.com -ClientId <<PnP App ID GUID for your AAD here>>
 
 Set-PnPSite -Identity $SiteURL -SocialBarOnSitePagesDisabled $True -CommentsOnSitePagesDisabled $True
 ```
