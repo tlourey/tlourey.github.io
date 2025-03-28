@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-27T11:50:45.873Z
+lastmod: 2025-03-28T04:26:11.571Z
 tags:
     - Commands
     - Linux
@@ -289,7 +289,8 @@ Note that some of the z commands don't support some of the options the regular u
 Some examples:
 
 `zless SwitchName.log.* | grep ab:cd:ef:12:34:56`: search a compressed switch log for a mac address\
-`zcat 192.168.1.2_abcdef123456.log.* | grep 2025-03-19 | grep 12:34:56:ab:cd:ef`: search a compressed UniFi AP log file for a mac address on a specific date
+`zcat 192.168.1.2_abcdef123456.log.* | grep 2025-03-19 | grep 12:34:56:ab:cd:ef`: search a compressed UniFi AP log file for a mac address on a specific date\
+`zgrep searchstring /var/log/apache2/access.log.*`: search for `searchstring` in `/var/log/apache2/access.log.*` (which includes files in like `access.log.4.gz`)
 
 ## Hardware
 
