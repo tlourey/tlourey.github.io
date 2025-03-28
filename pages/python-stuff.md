@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-03-28T11:09:54.006Z
+lastmod: 2025-03-28T11:16:31.894Z
 tags:
     - Language
     - Python
@@ -26,7 +26,7 @@ preview: ""
 
 ## Books
 
-<https://www.cosmicpython.com/book/preface.html>
+See [Python in Books](books.md#python)
 
 <!-- cSpell:ignore toolname -->
 <!--
