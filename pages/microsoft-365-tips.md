@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-28T03:34:20.090Z
+lastmod: 2025-03-28T03:37:06.328Z
 ---
 
 <!--- cSpell:disable --->
@@ -278,8 +278,8 @@ AutoUpgrade:
 <https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-adsync#get-adsyncautoupgrade>\
 `Get-ADSyncAutoUpgrade`\
 `Get-ADSyncAutoUpgrade -Detail`\
-<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-adsync#set-adsyncautoupgrade>
-`Set-ADSyncAutoUpgrade -AutoUpgradeState Enabled`
+<https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-adsync#set-adsyncautoupgrade>\
+`Set-ADSyncAutoUpgrade -AutoUpgradeState Enabled`\
 `Set-ADSyncAutoUpgrade [-AutoUpgradeState] <AutoUpgradeConfigurationState> [[-SuspensionReason] <String>] [<CommonParameters>]`
 
 <https://learn.microsoft.com/en-us/entra/identity/hybrid/connect/reference-connect-version-history>\
