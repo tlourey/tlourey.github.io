@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-03-27T08:24:53.455Z
+lastmod: 2025-03-28T00:57:28.139Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -38,7 +38,9 @@ date: 2025-01-28T05:47:28.059Z
   * [PnP Provisioning Engine](#pnp-provisioning-engine)
   * [CSOM](#csom)
 * [Permissions](#permissions)
+* [Lockdown Sites](#lockdown-sites)
 * [Site Collection Features](#site-collection-features)
+* [Site policies](#site-policies)
 * [Formatting](#formatting)
   * [Lists and Views](#lists-and-views)
     * [Formatting JSON Schemas](#formatting-json-schemas)
@@ -276,9 +278,35 @@ More Info:\
 > [!NOTE] NOTE
 > To change the default link type for a Teams private or shared channel site, you must use the [Set-SPOSite](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps) PowerShell cmdlet.
 
+## Lockdown Sites
+
+<https://learn.microsoft.com/en-au/sharepoint/manage-lock-status>
+
+`Set-SPOSite -Identity "<SiteURL>" -LockState "<State>"`
+
+LockState options:
+
+* Unlock to unlock the site and make it available to users.
+* ReadOnly to prevent users from adding, updating, or deleting content. A message will appear on the site stating that the site is under maintenance and is read-only.
+* NoAccess to prevent users from accessing the site and its content. If you've provided a NoAccessRedirectUrl value for your organization (below), traffic will be redirected to the URL you specified. If you haven't set this URL, a 403 error will be displayed.
+
+<https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps#-lockstate>
+
+Something you can also consier setting is the redirection URL but it is a **tenant level setting**: <https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps#-noaccessredirecturl>
+
 ## Site Collection Features
 
 <https://support.microsoft.com/en-au/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04>
+
+## Site policies
+
+Have to be set a root site and applies to all sites.
+
+<https://\<\<TENANTNAME\>\>.sharepoint.com/_layouts/15/ProjectPolicies.aspx>
+
+<https://learn.microsoft.com/en-us/sharepoint/sites/site-policy-overview> - note this page is about SharePoint server, but some of these should still apply to Office 365
+
+* [ ] Add a Goverance section and put in MS Supplied stuff and my own thoughts.
 
 ## Formatting
 
