@@ -18,7 +18,7 @@ tags:
     - Tips
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-28T00:33:42.872Z
+lastmod: 2025-03-28T00:42:28.629Z
 ---
 
 <!--- cSpell:disable --->
@@ -167,7 +167,9 @@ This can affect things like validation. Refer to [Validation Tips](sharepoint-re
 
 ### SharePoint or OneDrive Language Settings for enduser via PowerShell
 
-<https://pnp.github.io/script-samples/spo-set-sharepoint-regional-settings/README.html?tabs=pnpps>
+<https://pnp.github.io/script-samples/spo-set-sharepoint-regional-settings/README.html?tabs=pnpps>\
+
+<https://pkbullock.com/blog/2020/the-many-ways-to-set-uk-locale-in-sharepoint/> - I think this example has a bug or two but its where the above but it gives you an idea on other options.
 
 Refer to [PnP PowerShell in SharePoint References](sharepoint-references.md#pnp-powershell) for more info on PnPPowerShell
 
