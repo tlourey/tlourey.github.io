@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-28T00:34:39.314Z
+lastmod: 2025-03-28T03:11:28.505Z
 fmContentType: pages
 ---
 
@@ -175,6 +175,9 @@ Also check [Windows Tips](windows-tips.md)
 <https://www.hanselman.com/blog/>
 
 <https://www.jsnover.com/> - Father of PowerShell
+
+<https://devblogs.microsoft.com/oldnewthing/author/oldnewthing> - Raymond Chen - old MS Developer with some good stories\
+<https://devblogs.microsoft.com/oldnewthing/>
 
 ## Misc Misc Misc
 
