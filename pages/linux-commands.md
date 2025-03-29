@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-29T04:11:55.902Z
+lastmod: 2025-03-29T07:01:33.268Z
 tags:
     - Commands
     - Linux
@@ -50,6 +50,9 @@ isdraft: false
     * [timedatectl](#timedatectl)
     * [resolvectl](#resolvectl)
   * [Misc SystemD Commands](#misc-systemd-commands)
+  * [SystemD Reference Info](#systemd-reference-info)
+    * [SystemD Paths](#systemd-paths)
+    * [SystemD Timers](#systemd-timers)
   * [SystemD Links](#systemd-links)
 * [Network Commands](#network-commands)
   * [Netplan](#netplan)
@@ -574,12 +577,80 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 * machinectl???
 * [bluetoothctl (refer above)](#bluetoothctl)
 
+### SystemD Reference Info
+
+This isn't really a command section but it will stay here until I find a better place for it.
+
+#### SystemD Paths
+
+`/usr/lib/systemd/system/`: units provided by installed packages\
+`/etc/systemd/system/`: units installed by the system administrator\
+`/etc/systemd/servicename.conf`: service config if it doesn't have its own folder
+`/etc/systemd/system/servicename.service.d`: service that has its own folder. Could be used for a number of things but one thing it is used for is override files for servicename. SystemD concept of files in `/etc/default`\
+
+#### SystemD Timers
+
+From **<https://wiki.archlinux.org/title/Systemd/Timers>**:
+
+> *Timers are systemd unit files whose name ends in .timer that control .service files or events. Timers can be used as an alternative to cron (read [#As a cron replacement](https://wiki.archlinux.org/title/Systemd/Timers#As_a_cron_replacement)). Timers have built-in support for calendar time events, monotonic time events, and can be run asynchronously.*
+
+>Timers are systemd unit files with a suffix of .timer. Timers are like other unit configuration files and are loaded from the same paths but include a [Timer] section which defines when and how the timer activates. Timers are defined as one of two types:
+
+> * Realtime timers (a.k.a. wallclock timers) activate on a calendar event, the same way that cronjobs do. The option `OnCalendar=` is used to define them.
+> * Monotonic timers activate after a time span relative to a varying starting point. They stop if the computer is temporarily suspended or shut down. There are number of different monotonic timers but all have the form: On*Type*Sec=. Common monotonic timers include `OnBootSec` and `OnUnitActiveSec`.
+
+> For a full explanation of timer options, see the [systemd.timer(5)](https://man.archlinux.org/man/systemd.timer.5). The argument syntax for calendar events and time spans is defined in [systemd.time(7)](https://man.archlinux.org/man/systemd.time.7).
+
+Notes:
+
+* For each .timer file, a matching .service file exists (e.g. foo.timer and foo.service).
+* The .timer file activates and controls the .service file.
+* The .service does not require an [Install] section as it is the timer units that are enabled.
+* If necessary, it is possible to control a differently-named unit using the Unit= option in the timer's [Timer] section.
+
+See [systemctl](#systemctl) for timer commands.\
+
+Monotonic timer Example: A timer which will start 15 minutes after boot and again every week while the system is running.
+
+/etc/systemd/system/foo.timer:
+
+```systemd
+[Unit]
+Description=Run foo weekly and on boot
+
+[Timer]
+OnBootSec=15min
+OnUnitActiveSec=1w
+
+[Install]
+WantedBy=timers.target
+```
+
+Realtime timer example: A timer which starts once a week (at 12:00am on Monday). When activated, it triggers the service immediately if it missed the last start time (option Persistent=true), for example due to the system being powered off:
+
+/etc/systemd/system/foo.timer:
+
+```systemd
+[Unit]
+Description=Run foo weekly
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+```
+
+More: <https://wiki.archlinux.org/title/Systemd/Timers#As_a_cron_replacement>
+
 ### SystemD Links
 
 <https://systemd.io/>\
 <https://commons.wikimedia.org/wiki/File:Systemd_components.svg>
 
 * <https://www.freedesktop.org/software/systemd/man/latest/>
+* <https://wiki.archlinux.org/title/Systemd>
 * <https://www.man7.org/linux/man-pages/man1/systemd.1.html>
 * <https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal>
 * <https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs>
@@ -588,7 +659,6 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 * <https://linuxhandbook.com/journalctl-command/>
 * <https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux>
 * <https://www.redhat.com/sysadmin/systemd-commands>
-* <https://wiki.archlinux.org/title/Systemd>
 
 Also see [rfkill](#rfkill)
 
