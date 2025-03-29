@@ -52,6 +52,8 @@ isdraft: false
   * [Misc SystemD Commands](#misc-systemd-commands)
   * [SystemD Links](#systemd-links)
 * [Network Commands](#network-commands)
+  * [Netplan](#netplan)
+  * [nmcli](#nmcli)
   * [netstat](#netstat)
   * [tcpdump](#tcpdump)
   * [Network Reference](#network-reference)
@@ -592,13 +594,34 @@ Also see [rfkill](#rfkill)
 
 ## Network Commands
 
-Netplan:
+`ethtool`: Is a program that displays and changes Ethernet card settings such as auto-negotiation, port speed, duplex mode, and Wake-on-LAN. <https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/#ethernet-interface-settings>\
+
+### Netplan
+
 `sudo netplan try`: applies the netplan configs but will revert after X seconds if you don't press enter to confirm.\
 `sudo netplan apply`: applies the netplan configs (have fun!)\
 <https://documentation.ubuntu.com/server/explanation/networking/about-netplan/>\
 <https://netplan.readthedocs.io/en/stable/howto/>
 
-`ethtool`: Is a program that displays and changes Ethernet card settings such as auto-negotiation, port speed, duplex mode, and Wake-on-LAN. <https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/#ethernet-interface-settings>\
+### nmcli
+
+<https://networkmanager.dev/docs/api/latest/nmcli.html>\
+<https://networkmanager.dev/docs/api/latest/nmcli.html#:~:text=Examples,-This%20section%20presents>\
+<https://networkmanager.dev/docs/api/latest/nmcli-examples.html>
+
+```bash
+sudo nmcli c show
+nmcli con show
+# sudo nmcli con mod "Your Connection Name" ipv4.addresses "192.168.1.100/24" ipv4.gateway "192.168.1.1" ipv4.dns "8.8.8.8" ipv4.method manual
+sudo nmcli con mod "Wired connection 1" ipv4.addresses 192.168.1.22/24 ipv4.gateway 192.168.1.1 ipv4.dns 192.168.1.1 ipv4.method manual
+sudo nmcli con mod "Wired connection 1" -ipv4.address "192.168.1.100/24"
+nmcli device wifi list
+nmcli device wifi connect "$SSID" password "$PASSWORD"
+nmcli --ask device wifi connect "$SSID"
+sudo systemctl restart NetworkManager
+```
+
+Also see [Network Manager in RaspberryPi Tips](raspberry-pi-tips.md#network-manager)
 
 ### netstat
 
