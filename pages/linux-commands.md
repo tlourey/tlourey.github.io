@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-28T10:43:06.446Z
+lastmod: 2025-03-29T04:11:55.902Z
 tags:
     - Commands
     - Linux
@@ -19,6 +19,7 @@ isdraft: false
 <!--- cSpell:disable --->
 * [Operating System Commands](#operating-system-commands)
   * [man pages](#man-pages)
+* [Kernel](#kernel)
 * [Terminal Stuff](#terminal-stuff)
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
   * [Aliases](#aliases)
@@ -122,6 +123,24 @@ Web based man pages:
 > 7 - Miscellaneous (including macro packages and conventions), e.g., man(7), groff(7)\
 > 8 - System administration commands (usually only for root)\
 > 9 - Kernel routines [Non-standard]
+
+## Kernel
+
+```bash
+lsmod
+lsmod | grep -i <modulename>
+modprobe
+insmod
+rmmod
+modinfo
+```
+
+<https://en.wikipedia.org/wiki/Modprobe>\
+<https://linux.die.net/man/8/modprobe>\
+<https://linux.die.net/man/5/modprobe.conf>\
+<https://linux.die.net/man/5/modules.dep>\
+
+<https://web.archive.org/web/20160911181750/https://www.centos.org/docs/5/html/5.1/Deployment_Guide/s1-kernel-module-utils.html>
 
 ## Terminal Stuff
 
@@ -508,7 +527,7 @@ You can have systemd override files (which apparently are like files in /etc/def
 `sudo journalctl -n 25` show most recent 25 lines\
 `sudo journalctl -f` follow logs live\
 `sudo journalctl --utc` if you want them in utc\
-`sudo journalctl -k` # Kernal messages only\
+`sudo journalctl -k` # Kernel messages only\
 `sudo journalctl --since=yesterday --until=now`\
 `sudo journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"`\
 `sudo journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot
