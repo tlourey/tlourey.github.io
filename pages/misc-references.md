@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-30T20:28:11.161Z
+lastmod: 2025-03-30T20:29:42.604Z
 fmContentType: pages
 ---
 
@@ -170,6 +170,8 @@ Also check [Windows Tips](windows-tips.md)
 ## Search Tools
 
 ### Google
+
+<https://www.google.com.au/advanced_search>
 
 <https://ahrefs.com/blog/google-advanced-search-operators/>\
 Refine Goolge Searches (search terms: )<https://support.google.com/websearch/answer/2466433>\
