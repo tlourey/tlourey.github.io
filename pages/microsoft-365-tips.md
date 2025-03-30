@@ -1,6 +1,6 @@
 ---
 title: Microsoft 365 Tips
-description: Bottomless pit
+description: Bottomless pit of Microsoft 365, Office 365, Exchange, and even some Entra/Azure AD Tips
 published: true
 categories:
     - Tech
@@ -16,9 +16,15 @@ tags:
     - References
     - SharePoint
     - Tips
+    - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-28T03:37:06.328Z
+lastmod: 2025-03-30T20:47:31.005Z
+keywords:
+    - Entra
+    - Exchange
+    - Microsoft 365
+    - Tips
 ---
 
 <!--- cSpell:disable --->
