@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-26T13:01:00.532Z
+lastmod: 2025-03-30T20:30:55.925Z
 keywords:
     - Tools
 ---
@@ -193,7 +193,8 @@ vagrant box remove box/name
 [Network Calculators](https://subnetmask.info) - now seems to redirect to <https://web.archive.org/web/20240429134052if_/https://subnetmask.info/>\
 [The Most Accurate Online Ruler](https://www.ginifab.com/feeds/cm_to_inch/actual_size_ruler.html)\
 [Actual size of Online Ruler (cm/mm)](https://www.piliapp.com/actual-size/cm-ruler/)\
-<https://www.drawio.com/> / <http://draw.io/>
+<https://www.drawio.com/> / <http://draw.io/>\
+<https://www.google.com.au/advanced_search> - also check out [Search Tools in Misc References](misc-references.md#search-tools)
 
 ## Security Tools
 
