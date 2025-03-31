@@ -1,13 +1,13 @@
 ---
 title: Linux References
-description: ""
+description: This may not be the right place for this.
 published: false
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-03-26T11:59:52.184Z
+lastmod: 2025-03-27T12:06:36.759Z
 tags:
     - Linux
     - Security
@@ -19,6 +19,10 @@ preview: ""
 
 <!--- cSpell:disable --->
 * [Ubuntu and Debian Package Urgency](#ubuntu-and-debian-package-urgency)
+  * [Using the urgency value](#using-the-urgency-value)
+    * [apt-listchanges](#apt-listchanges)
+    * [apt-show-versions](#apt-show-versions)
+    * [apt-check](#apt-check)
 <!--- cSpell:enable --->
 
 ## Ubuntu and Debian Package Urgency
@@ -37,3 +41,65 @@ From <https://www.debian.org/doc/debian-policy/ch-controlfields.html#id27>:
 > Other urgency values are supported with configuration changes in the archive software but are not used in Debian. The urgency affects how quickly a package will be considered for inclusion into the `testing` distribution and gives an indication of the importance of any fixes included in the upload. `Emergency` and `critical` are treated as synonymous.
 
 Ubuntu ref: <https://canonical-ubuntu-packaging-guide.readthedocs-hosted.com/en/latest/reference/debian-dir-overview/>
+
+**Question: Does the urgency value relate to the ubuntu security notice value?**
+
+* [ ] consider text about urgency / cve matching
+
+### Using the urgency value
+
+* [ ] link in with nagios check_apt critical options and critical regex
+* [ ] cover which of the above are included with ubuntu vs being 3rd party
+
+
+#### apt-listchanges
+
+Install: `sudo apt install apt-listchanges`
+
+Run this oneliner:
+
+```bash
+(cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges -h --latest=1 *.deb) | grep urgency
+```
+
+May need to do some stderr/stdout finagling
+Doesn't need sudo
+
+> [!NOTE] Ubuntu LTS 20
+> apt-listchanges for Ubuntu LTS 20 does not support `--latest` option.
+
+From <https://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages>
+
+Example:
+
+```bash
+(cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges -h --latest=1 *.deb) | grep urgency
+```
+
+```text
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+linux (5.15.0-135.146) jammy; urgency=medium
+tzdata (2025a-0ubuntu0.22.04) jammy; urgency=medium
+```
+
+#### apt-show-versions
+
+Install: `sudo apt install apt-show-versions`
+
+```bash
+apt-show-versions | grep upgradeable | grep security
+# OR
+apt-show-versions -u, or apt-show-versions -u -b | grep security
+```
+
+> [!NOTE] security or not?
+> I noticed that `apt-show-versions` listed a package as being `-security` when it wasn't using `security` in other tools like `apt list --upgradable` or `apt-check`
+
+From: <https://askubuntu.com/a/556399/443835>
+
+#### apt-check
+
+* [ ] cover apt-check - <https://askubuntu.com/questions/441921/why-does-usr-lib-update-notifier-apt-check-not-agree-with-apt-get-upgrade>

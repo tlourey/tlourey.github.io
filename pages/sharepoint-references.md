@@ -3,15 +3,15 @@ title: SharePoint References
 description: '"SharePoint is old pig in lipstick, wearing trendy clothes and trying to fit in with the young kids" - Me'
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 isdraft: true
 tags:
-  - SharePoint
-  - References
+    - SharePoint
+    - References
 fmContentType: pages
-lastmod: 2025-03-04T11:22:33.653Z
+lastmod: 2025-03-28T03:32:32.482Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -38,7 +38,9 @@ date: 2025-01-28T05:47:28.059Z
   * [PnP Provisioning Engine](#pnp-provisioning-engine)
   * [CSOM](#csom)
 * [Permissions](#permissions)
+* [Lockdown Sites](#lockdown-sites)
 * [Site Collection Features](#site-collection-features)
+* [Site policies](#site-policies)
 * [Formatting](#formatting)
   * [Lists and Views](#lists-and-views)
     * [Formatting JSON Schemas](#formatting-json-schemas)
@@ -183,6 +185,9 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 > [!TIP] Gallery Module Easier
 > Rather than download and install the MSI its easier to install and manage the SharePoint Online PowerShell Module via PowerShell Gallery
 
+> [!NOTE] PS5 Only?
+> Not sure 100% sure but I think this module may only work in Windows PowerShell 5.1.
+
 #### Install SharePoint Online PowerShell
 
 > [!TIP] PS5 not PS7
@@ -221,7 +226,7 @@ If it hasn't been used in the tenant before
 
 ```powershell
 Import-Module PnP.PowerShell
-Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [yourtennantnamehere].onmicrosoft.com -Interactive
+Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [Your-Tenant-Name].onmicrosoft.com -Interactive
 ```
 
 > [!TIP] Whats in a name
@@ -232,9 +237,9 @@ Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [
 <https://pnp.github.io/powershell/articles/authentication.html>
 
 ```powershell
-Connect-PnPOnline [yourtenant].sharepoint.com -Interactive -ClientId <client id of your Entra ID Application Registration>
+Connect-PnPOnline [Your-Tenant-Name].sharepoint.com -Interactive -ClientId <client id of your Entra ID Application Registration>
 # OR
-Connect-PnPOnline [yourtenant].sharepoint.com -DeviceLogin -Tenant <tenant>.onmicrosoft.com -ClientId <client id of your Entra ID Application Registration>
+Connect-PnPOnline [Your-Tenant-Name].sharepoint.com -DeviceLogin -Tenant Your-Tenant-Name.onmicrosoft.com -ClientId <client id of your Entra ID Application Registration>
 ```
 
 ### PnP Provisioning Engine
@@ -273,9 +278,35 @@ More Info:\
 > [!NOTE] NOTE
 > To change the default link type for a Teams private or shared channel site, you must use the [Set-SPOSite](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps) PowerShell cmdlet.
 
+## Lockdown Sites
+
+<https://learn.microsoft.com/en-au/sharepoint/manage-lock-status>
+
+`Set-SPOSite -Identity "<SiteURL>" -LockState "<State>"`
+
+LockState options:
+
+* Unlock to unlock the site and make it available to users.
+* ReadOnly to prevent users from adding, updating, or deleting content. A message will appear on the site stating that the site is under maintenance and is read-only.
+* NoAccess to prevent users from accessing the site and its content. If you've provided a NoAccessRedirectUrl value for your organization (below), traffic will be redirected to the URL you specified. If you haven't set this URL, a 403 error will be displayed.
+
+<https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps#-lockstate>
+
+Something you can also consier setting is the redirection URL but it is a **tenant level setting**: <https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps#-noaccessredirecturl>
+
 ## Site Collection Features
 
 <https://support.microsoft.com/en-au/office/enable-or-disable-site-collection-features-a2f2a5c2-093d-4897-8b7f-37f86d83df04>
+
+## Site policies
+
+Have to be set a root site and applies to all sites.
+
+<https://Your-Tenant-Name.sharepoint.com/_layouts/15/ProjectPolicies.aspx>
+
+<https://learn.microsoft.com/en-us/sharepoint/sites/site-policy-overview> - note this page is about SharePoint server, but some of these should still apply to Office 365
+
+* [ ] Add a Goverance section and put in MS Supplied stuff and my own thoughts.
 
 ## Formatting
 
@@ -335,9 +366,9 @@ To disable comments and/or the social bar for a **specific site only** and not f
 
 ```powershell
 Import-Module PnP.PowerShell
-$SiteURL = https://tenantname.sharepoint.com/sites/comms-site-i-want-comments-and-likes-disabled-on
+$SiteURL = https://Your-Tenant-Name.sharepoint.com/sites/comms-site-i-want-comments-and-likes-disabled-on
 # Ensure Site URL does *not* have a trailing slash
-connect-PnPOnline $siteUrl -DeviceLogin -Tenant yourtenantnamehere.onmicrosoft.com -ClientId <<PnP App ID GUID for your AAD here>>
+connect-PnPOnline $siteUrl -DeviceLogin -Tenant Your-Tenant-Name.onmicrosoft.com -ClientId <<PnP App ID GUID for your AAD here>>
 
 Set-PnPSite -Identity $SiteURL -SocialBarOnSitePagesDisabled $True -CommentsOnSitePagesDisabled $True
 ```

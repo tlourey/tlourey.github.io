@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-26T08:34:59.727Z
+lastmod: 2025-03-29T07:01:33.268Z
 tags:
     - Commands
     - Linux
@@ -19,6 +19,7 @@ isdraft: false
 <!--- cSpell:disable --->
 * [Operating System Commands](#operating-system-commands)
   * [man pages](#man-pages)
+* [Kernel](#kernel)
 * [Terminal Stuff](#terminal-stuff)
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
   * [Aliases](#aliases)
@@ -49,8 +50,13 @@ isdraft: false
     * [timedatectl](#timedatectl)
     * [resolvectl](#resolvectl)
   * [Misc SystemD Commands](#misc-systemd-commands)
+  * [SystemD Reference Info](#systemd-reference-info)
+    * [SystemD Paths](#systemd-paths)
+    * [SystemD Timers](#systemd-timers)
   * [SystemD Links](#systemd-links)
 * [Network Commands](#network-commands)
+  * [Netplan](#netplan)
+  * [nmcli](#nmcli)
   * [netstat](#netstat)
   * [tcpdump](#tcpdump)
   * [Network Reference](#network-reference)
@@ -64,6 +70,11 @@ isdraft: false
   * [SSHD](#sshd)
 * [Misc System Commands](#misc-system-commands)
 <!--- cSpell:enable --->
+
+<!---
+* [ ] needsreboot package - also consider if it should be documented in linux-tools.md
+
+-->
 
 ## Operating System Commands
 
@@ -93,13 +104,48 @@ More:
 
 ### man pages
 
-`man topic`
+`man topic`\
+`man man` to know more about the man command itself.
+
+Some tips on the man command: <https://www.redhat.com/en/blog/top-five-man-options>
 
 Web based man pages:
 
 * **<https://linux.die.net/man/>**
 * <https://www.man7.org/linux/man-pages/>
 * <https://wiki.archlinux.org/title/Man_page>
+
+* <https://manpages.ubuntu.com/>
+* <https://manpages.debian.org/>
+
+> [!NOTE] Man page sections
+> 1 - Executable programs or shell commands\
+> 2 - System calls (functions provided by the kernel)\
+> 3 - Library calls (functions within program libraries)\
+> 4 - Special files (usually found in /dev)\
+> 5 - File formats and conventions, e.g. /etc/passwd\
+> 6 - Games\
+> 7 - Miscellaneous (including macro packages and conventions), e.g., man(7), groff(7)\
+> 8 - System administration commands (usually only for root)\
+> 9 - Kernel routines [Non-standard]
+
+## Kernel
+
+```bash
+lsmod
+lsmod | grep -i <modulename>
+modprobe
+insmod
+rmmod
+modinfo
+```
+
+<https://en.wikipedia.org/wiki/Modprobe>\
+<https://linux.die.net/man/8/modprobe>\
+<https://linux.die.net/man/5/modprobe.conf>\
+<https://linux.die.net/man/5/modules.dep>\
+
+<https://web.archive.org/web/20160911181750/https://www.centos.org/docs/5/html/5.1/Deployment_Guide/s1-kernel-module-utils.html>
 
 ## Terminal Stuff
 
@@ -164,25 +210,25 @@ ps aux | grep <Process ID from above>
 
 ### ls options often forgotten
 
--t: sort by time, newest first
--h: human readable sizes
--S: sort by file size, largest first
--r: reverse
--R: recursive
+-t: sort by time, newest first\
+-h: human readable sizes\
+-S: sort by file size, largest first\
+-r: reverse\
+-R: recursive\
 --time: options are:
 
-* access time (-u): atime, access, use;
-* change time (-c): ctime, status;
-* birth time: birth, creation;
+* access time (-u): atime, access, use
+* change time (-c): ctime, status
+* birth time: birth, creation
 
--u: sort by access time
+-u: sort by access time\
 -c:
 
-* with -lt: sort by, and show, ctime (time of last modification of file status information);
-* with -l: show ctime and sort by name;
+* with -lt: sort by, and show, ctime (time of last modification of file status information)
+* with -l: show ctime and sort by name
 * otherwise: sort by ctime, newest first
 
--X: sort by extensions
+-X: sort by extensions\
 -x: lines instead of columns
 
 ### Finding large directories and large files
@@ -267,7 +313,8 @@ Note that some of the z commands don't support some of the options the regular u
 Some examples:
 
 `zless SwitchName.log.* | grep ab:cd:ef:12:34:56`: search a compressed switch log for a mac address\
-`zcat 192.168.1.2_abcdef123456.log.* | grep 2025-03-19 | grep 12:34:56:ab:cd:ef`: search a compressed UniFi AP log file for a mac address on a specific date
+`zcat 192.168.1.2_abcdef123456.log.* | grep 2025-03-19 | grep 12:34:56:ab:cd:ef`: search a compressed UniFi AP log file for a mac address on a specific date\
+`zgrep searchstring /var/log/apache2/access.log.*`: search for `searchstring` in `/var/log/apache2/access.log.*` (which includes files in like `access.log.4.gz`)
 
 ## Hardware
 
@@ -396,7 +443,28 @@ TBC
 TBC
 <!---
 * [ ] cover apt changelog /apt-get changelog
+* [ ] cover apt-listchanges - see https://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages
+  * may need to be installed
+  * can use a oneliner to get changelogs that doesn't need sudo: (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges *.deb)
+  * ubuntu lts 20 doesn't support apt-listchanges --latest. For versions that do the following has pretty good output:
+    ```
+    (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges -h --latest=1 *.deb) | grep urgency
+    WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+    WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+    linux (5.15.0-135.146) jammy; urgency=medium
+    tzdata (2025a-0ubuntu0.22.04) jammy; urgency=medium
+    ```
+* [ ] cover apt-show-versions - see https://askubuntu.com/a/556399/443835
+  * Needs to be installed
+  * Can be used with regex like: apt-show-versions | grep upgradeable | grep security
+  * or apt-show-versions -u, or apt-show-versions -u -b | grep security
+  * apt-show-versions listed a package as being -seurity when it wasn't using other tools like apt list --upgradable or apt-check
+* [ ] cover apt-check - https://askubuntu.com/questions/441921/why-does-usr-lib-update-notifier-apt-check-not-agree-with-apt-get-upgrade
 * [ ] consider text about urgency / cve matching
+* [ ] link in with nagios check_apt critical options and critical regex
+* [ ] cover which of the above are included with ubuntu vs being 3rd party
 -->
 
 ## dnf
@@ -455,19 +523,19 @@ You can have systemd override files (which apparently are like files in /etc/def
 
 #### journalctl
 
-`sudo journalctl -xe` most common use. jumps to end of journal logs and shows extra info about log entries
+**`sudo journalctl -xe`** most common use. jumps to end of journal logs and shows extra info about log entries
 
-`sudo journalctl -e` jumps to the end
+`sudo journalctl -e` jumps to the end\
 `sudo journalctl -u service_name` show logs about a particular service\
 `sudo journalctl --no-pager` don't page logs\
 `sudo journalctl -r` show logs in reverse order\
 `sudo journalctl -n 25` show most recent 25 lines\
 `sudo journalctl -f` follow logs live\
 `sudo journalctl --utc` if you want them in utc\
-`sudo journalctl -k` # Kernal messages only\
+`sudo journalctl -k` # Kernel messages only\
 `sudo journalctl --since=yesterday --until=now`\
 `sudo journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"`\
-`sudo journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot\
+`sudo journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot
 
 #### timedatectl
 
@@ -509,12 +577,80 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 * machinectl???
 * [bluetoothctl (refer above)](#bluetoothctl)
 
+### SystemD Reference Info
+
+This isn't really a command section but it will stay here until I find a better place for it.
+
+#### SystemD Paths
+
+`/usr/lib/systemd/system/`: units provided by installed packages\
+`/etc/systemd/system/`: units installed by the system administrator\
+`/etc/systemd/servicename.conf`: service config if it doesn't have its own folder
+`/etc/systemd/system/servicename.service.d`: service that has its own folder. Could be used for a number of things but one thing it is used for is override files for servicename. SystemD concept of files in `/etc/default`\
+
+#### SystemD Timers
+
+From **<https://wiki.archlinux.org/title/Systemd/Timers>**:
+
+> *Timers are systemd unit files whose name ends in .timer that control .service files or events. Timers can be used as an alternative to cron (read [#As a cron replacement](https://wiki.archlinux.org/title/Systemd/Timers#As_a_cron_replacement)). Timers have built-in support for calendar time events, monotonic time events, and can be run asynchronously.*
+
+>Timers are systemd unit files with a suffix of .timer. Timers are like other unit configuration files and are loaded from the same paths but include a [Timer] section which defines when and how the timer activates. Timers are defined as one of two types:
+
+> * Realtime timers (a.k.a. wallclock timers) activate on a calendar event, the same way that cronjobs do. The option `OnCalendar=` is used to define them.
+> * Monotonic timers activate after a time span relative to a varying starting point. They stop if the computer is temporarily suspended or shut down. There are number of different monotonic timers but all have the form: On*Type*Sec=. Common monotonic timers include `OnBootSec` and `OnUnitActiveSec`.
+
+> For a full explanation of timer options, see the [systemd.timer(5)](https://man.archlinux.org/man/systemd.timer.5). The argument syntax for calendar events and time spans is defined in [systemd.time(7)](https://man.archlinux.org/man/systemd.time.7).
+
+Notes:
+
+* For each .timer file, a matching .service file exists (e.g. foo.timer and foo.service).
+* The .timer file activates and controls the .service file.
+* The .service does not require an [Install] section as it is the timer units that are enabled.
+* If necessary, it is possible to control a differently-named unit using the Unit= option in the timer's [Timer] section.
+
+See [systemctl](#systemctl) for timer commands.\
+
+Monotonic timer Example: A timer which will start 15 minutes after boot and again every week while the system is running.
+
+/etc/systemd/system/foo.timer:
+
+```systemd
+[Unit]
+Description=Run foo weekly and on boot
+
+[Timer]
+OnBootSec=15min
+OnUnitActiveSec=1w
+
+[Install]
+WantedBy=timers.target
+```
+
+Realtime timer example: A timer which starts once a week (at 12:00am on Monday). When activated, it triggers the service immediately if it missed the last start time (option Persistent=true), for example due to the system being powered off:
+
+/etc/systemd/system/foo.timer:
+
+```systemd
+[Unit]
+Description=Run foo weekly
+
+[Timer]
+OnCalendar=weekly
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+```
+
+More: <https://wiki.archlinux.org/title/Systemd/Timers#As_a_cron_replacement>
+
 ### SystemD Links
 
 <https://systemd.io/>\
 <https://commons.wikimedia.org/wiki/File:Systemd_components.svg>
 
 * <https://www.freedesktop.org/software/systemd/man/latest/>
+* <https://wiki.archlinux.org/title/Systemd>
 * <https://www.man7.org/linux/man-pages/man1/systemd.1.html>
 * <https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal>
 * <https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs>
@@ -523,19 +659,39 @@ DNS Config: To force systemd-resolved to use the name servers you want to: `sudo
 * <https://linuxhandbook.com/journalctl-command/>
 * <https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux>
 * <https://www.redhat.com/sysadmin/systemd-commands>
-* <https://wiki.archlinux.org/title/Systemd>
 
 Also see [rfkill](#rfkill)
 
 ## Network Commands
 
-Netplan:
+`ethtool`: Is a program that displays and changes Ethernet card settings such as auto-negotiation, port speed, duplex mode, and Wake-on-LAN. <https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/#ethernet-interface-settings>\
+
+### Netplan
+
 `sudo netplan try`: applies the netplan configs but will revert after X seconds if you don't press enter to confirm.\
 `sudo netplan apply`: applies the netplan configs (have fun!)\
 <https://documentation.ubuntu.com/server/explanation/networking/about-netplan/>\
 <https://netplan.readthedocs.io/en/stable/howto/>
 
-`ethtool`: Is a program that displays and changes Ethernet card settings such as auto-negotiation, port speed, duplex mode, and Wake-on-LAN. <https://documentation.ubuntu.com/server/explanation/networking/configuring-networks/#ethernet-interface-settings>\
+### nmcli
+
+<https://networkmanager.dev/docs/api/latest/nmcli.html>\
+<https://networkmanager.dev/docs/api/latest/nmcli.html#:~:text=Examples,-This%20section%20presents>\
+<https://networkmanager.dev/docs/api/latest/nmcli-examples.html>
+
+```bash
+sudo nmcli c show
+nmcli con show
+# sudo nmcli con mod "Your Connection Name" ipv4.addresses "192.168.1.100/24" ipv4.gateway "192.168.1.1" ipv4.dns "8.8.8.8" ipv4.method manual
+sudo nmcli con mod "Wired connection 1" ipv4.addresses 192.168.1.22/24 ipv4.gateway 192.168.1.1 ipv4.dns 192.168.1.1 ipv4.method manual
+sudo nmcli con mod "Wired connection 1" -ipv4.address "192.168.1.100/24"
+nmcli device wifi list
+nmcli device wifi connect "$SSID" password "$PASSWORD"
+nmcli --ask device wifi connect "$SSID"
+sudo systemctl restart NetworkManager
+```
+
+Also see [Network Manager in RaspberryPi Tips](raspberry-pi-tips.md#network-manager)
 
 ### netstat
 
@@ -548,9 +704,9 @@ Netplan:
 `sudo netstat -lanp`: show active and listening\
 `sudo netstat -lanp | grep 22`: grep active and listening for port 22
 
-`nslookup`
-`dig`
-`hostname`
+`nslookup`\
+`dig`\
+`hostname`\
 `dnsdomainname`
 
 `nc`: netcat: <https://manpages.org/nc>
@@ -633,7 +789,7 @@ To use a lower version of TLS (Results may vary in newer versions): <https://ask
 
 * [x] port forwading commands
 * [x] reverse port forward commands
-* [ ] * [ ] add in commands and info for control socket connection sharing (ControlPath and ControlMaster)
+* [ ] add in commands and info for control socket connection sharing (ControlPath and ControlMaster)
 * [ ] tunnel commands
 
 ### Port Forwarding

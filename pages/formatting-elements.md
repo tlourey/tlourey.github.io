@@ -1,13 +1,13 @@
 ---
-title: HTML Formatting Elements
-description: TBA
+title: Formatting Elements
+description: Grammer, Language, Writing Tips
 published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-03-12T02:31:01.751Z
-lastmod: 2025-03-22T14:39:29.947Z
+lastmod: 2025-03-28T10:23:50.128Z
 tags:
     - Language
     - References
@@ -22,12 +22,13 @@ preview: ""
 
 <!--- cSpell:disable --->
 * [Common Elements](#common-elements)
-* [Italics](#italics)
-* [Strong, Mark and Bold](#strong-mark-and-bold)
-* [Underline](#underline)
-* [Highlight](#highlight)
-* [Small](#small)
-* [Strikethrough](#strikethrough)
+  * [Italics](#italics)
+  * [Strong, Mark and Bold](#strong-mark-and-bold)
+  * [Underline](#underline)
+  * [Highlight](#highlight)
+  * [Small](#small)
+  * [Strikethrough](#strikethrough)
+* [Grammer](#grammer)
 <!--- cSpell:enable --->
 
 <!--<!-- markdownlint-disable-file MD033 -->
@@ -49,11 +50,11 @@ Formatting elements were designed to display special types of text:
 <sup> - Superscript text
 ```
 
-## Italics
+### Italics
 
 *Italics* is for emphasized text in a doc - `<em>` tag
 
-## Strong, Mark and Bold
+### Strong, Mark and Bold
 
 The `<strong>` tag is used to define text with **strong** importance. The content inside is *typically* displayed in **bold**.
 
@@ -63,23 +64,28 @@ The `<strong>` tag is used to define text with **strong** importance. The conten
 > [!NOTE] NOTE
 > According to the HTML5 specification, the `<b>` tag should be used as a <ins>LAST</ins> resort when no other tag is more appropriate. The specification states that headings should be denoted with the `<h1>` to `<h6>` tags, emphasized text should be denoted with the `<em>` tag, important text should be denoted with the `<strong>` tag, and marked/highlighted text should be denoted with the `<mark>` tag.
 
-## Underline
+### Underline
 
 The `<u>` tag represents some text that is unarticulated and styled differently from normal text, such as misspelled words or proper names in Chinese text. The content inside is typically displayed with an <ins>underline</ins>. You can change this with CSS (see example below).
 
 Tip: Avoid using the `<u>` element where it could be confused for a hyperlink!
 
-## Highlight
+### Highlight
 
 `<mark>` to <mark>highlight</mark>
 
-## Small
+### Small
 
 This is what <small>small</small> looks like.
 
 > [!NOTE]
 > This doesn't seem to work in the github native markdown viewer
 
-## Strikethrough
+### Strikethrough
 
 This is what <del>strikethrough</del> looks like.
+
+## Grammer
+
+[How to Use Em Dashes (—), En Dashes (–) , and Hyphens (-)](https://www.merriam-webster.com/grammar/em-dash-en-dash-how-to-use)
+More on above: <https://news.ycombinator.com/item?id=43497719>
