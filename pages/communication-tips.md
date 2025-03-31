@@ -14,7 +14,7 @@ tags:
     - Writing
 fmContentType: pages
 date: 2024-11-02T11:39:00
-lastmod: 2025-03-12T02:28:04.759Z
+lastmod: 2025-03-31T05:37:47.891Z
 mermaid: false
 ---
 
@@ -27,6 +27,8 @@ mermaid: false
 * [Audiences](#audiences)
   * [Execs](#execs)
   * [Managers](#managers)
+* [Misc Tips](#misc-tips)
+  * [Perceptual Positioning](#perceptual-positioning)
 <!--- cSpell:enable --->
 
 ## Techniques
@@ -76,3 +78,38 @@ Consider the way people process information - don't force them to use a lot of e
   * an aside that looked like snipe - thinly disguised snip
   * don't loop back over conversation
 * consider if some reply's should just be a phone call
+
+## Misc Tips
+
+### Perceptual Positioning
+
+1st - I, me, & my
+2nd - You, Your
+3rd - We, us, our, they and them
+
+Give people a sense of choice:
+
+* "What name would you like me to call you?"
+* "Where do you want to meet?"
+* "Does that make sense?" instead of "Do you understand?"
+
+<!--- 
+  • Capitalise Aboriginal
+  • Capitalise Indigenous
+  • Err on over capitalisation
+  • Consider capitalisation of C in Country
+
+  • Aboriginal person, not Aborigine
+
+  • Always try to choose word that has the most possible acceptance
+
+  • First Nations  or First nations person
+
+  • Try to use the language the recipient(s) uses
+
+  • More respectful not to use acronyms
+  • Don't use ATSI
+  • Don't abbreviate Aboriginal
+
+  • Say Does that make sense instead of do you understand
+-->
