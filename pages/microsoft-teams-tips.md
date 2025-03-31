@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-03-31T03:11:06.577Z
+lastmod: 2025-03-31T04:06:49.884Z
 tags:
     - Microsoft365
     - Teams
@@ -159,6 +159,9 @@ If that doesn't work maybe this will
 > [!WARNING] Still reading
 > I'm still reading about this section so its still a bit of a work in progress.
 
+> [!TIP] Set up Mailboxes first
+> all of the below steps and info may be slightly easier if you have already started entering metadata using the `Set-Place` command from the Exchange PowerShell for your meeting rooms, etc.
+
 <https://learn.microsoft.com/en-au/microsoftteams/rooms/bookable-desks>\
 <https://learn.microsoft.com/en-au/powershell/module/teams/new-csteamsworklocationdetectionpolicy?view=teams-ps>\
 <https://learn.microsoft.com/en-au/microsoft-365/places/configure-desk-booking?branch=main#configure-desk-pools>\
@@ -179,7 +182,8 @@ If that doesn't work maybe this will
 5. Review and adjust the csv and adjust as per <https://learn.microsoft.com/en-us/microsoft-365/places/get-started/quick-setup-buildings-floors#step-2---review-and-revise-the-csv>
 6. Upload the finalised CSV
 7. **Other Steps TBC**
-8. Add Services to buildings
+8. [Add Services to buildings](#add-services-to-buildings)
+9. `Set-PlacesSettings -PlacesFinderEnabled 'Default:true'`
 
 You can consider a manual setup: <https://learn.microsoft.com/en-us/microsoft-365/places/get-started/quick-setup-buildings-floors#alternative---manual-setup>
 
