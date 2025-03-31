@@ -70,7 +70,9 @@
 				"details",
 				"summary",
 				"ins",
-				"kbd"
+				"kbd",
+				"sup",
+				"br"
 			]
         },
         "MD028": false
