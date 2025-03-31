@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-30T20:47:31.005Z
+lastmod: 2025-03-31T05:15:39.946Z
 keywords:
     - Entra
     - Exchange
@@ -44,6 +44,7 @@ keywords:
 * [Pre-create a users OneDrive](#pre-create-a-users-onedrive)
 * [Force user to change password at next login](#force-user-to-change-password-at-next-login)
 * [Exchange Email Header References](#exchange-email-header-references)
+* [Finding the owner of a specifc MS Form](#finding-the-owner-of-a-specifc-ms-form)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
 * [Entra](#entra)
@@ -223,6 +224,12 @@ Update-MgUser -UserId $userid.id -PasswordProfile @{ ForceChangePasswordNextSign
 More Mail header info at [Mail Headers](mail-headers.md)
 
 More Mail tools under [Postmaster Tools in Misc Tools](misc-tools.md#postmaster) and Standards links under [SMTP in Misc References](misc-references.md#smtp)
+
+## Finding the owner of a specifc MS Form
+
+<https://itspartlycloudy.com/2022/01/20/who-created-this-microsoft-form/>\
+<https://techcommunity.microsoft.com/discussions/microsoftforms/how-to-find-out-who-created-a-form/1325365/replies/4014059>
+<https://techcommunity.microsoft.com/discussions/microsoftforms/how-to-find-out-who-created-a-form/1325365/replies/3050250#M10414>
 
 ## Network Details Upload
 
