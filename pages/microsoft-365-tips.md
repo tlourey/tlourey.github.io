@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-31T05:15:39.946Z
+lastmod: 2025-04-02T04:36:35.000Z
 keywords:
     - Entra
     - Exchange
@@ -48,6 +48,8 @@ keywords:
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
 * [Entra](#entra)
+  * [3rd Party Resources](#3rd-party-resources)
+  * [Entra Apps](#entra-apps)
   * [Microsoft Entra Connect Sync](#microsoft-entra-connect-sync)
   * [Microsoft Entra Cloud Sync](#microsoft-entra-cloud-sync)
 * [Microsoft Graph](#microsoft-graph)
@@ -71,6 +73,21 @@ keywords:
 New Purview eDiscovery Guide: <https://mslearn.cloudguides.com/guides/Get%20started%20with%20Microsoft%20Purview%20eDiscovery>
 
 More Info: [Learn about eDiscovery](https://learn.microsoft.com/en-au/purview/edisc)
+
+**[Search for and delete email messages](https://learn.microsoft.com/en-us/purview/ediscovery-search-for-and-delete-email-messages)**\
+[Connect to Security & Compliance PowerShell](https://learn.microsoft.com/en-us/powershell/exchange/connect-to-scc-powershell?view=exchange-ps) - needed to complete above.
+
+```powershell
+Import-Module ExchangeOnlineManagement # Assumes its already installed
+Connect-IPPSSession -UserPrincipalName myadminaccount@your-tenant-name.onmicrosoft.com
+$Search=New-ComplianceSearch -Name "Remove Phishing Message" -ExchangeLocation All -ContentMatchQuery '(Received:4/13/2016..4/14/2016) AND (Subject:"Action required")'
+Start-ComplianceSearch -Identity $Search.Identity
+# You can also create a search in purview instead of using powershell if easier.
+New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
+# OR
+New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType HardDelete
+Disconnect-ExchangeOnline
+```
 
 ## URLs and Landing Zones
 
@@ -257,16 +274,28 @@ Also:
 > [!NOTE] Size
 > This section may become big enough that it will become its own page.
 
+### 3rd Party Resources
+
 <https://entra.news/>\
 <https://entra.news/p/entra-mind-maps> - entra mind map\
 <https://github.com/merill/awesome-entra> - Github awesome list for Entra\
 <https://azuread.github.io/MSIdentityTools/>\
 <https://graphxray.merill.net/>
 
-<https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/governance/verify-first-party-apps-sign-in> Verify First Party App ID's\
-<https://github.com/MicrosoftDocs/entra-docs/blob/main/.docutune/dictionaries/known-guids.json> - Github List of known IDs\
-<https://github.com/merill/microsoft-info/> - contains app GUIDs and permission GUIDs\
-<https://raw.githubusercontent.com/merill/microsoft-info/main/_info/MicrosoftApps.json>
+### Entra Apps
+
+App IDs:
+
+* <https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/governance/verify-first-party-apps-sign-in> Verify First Party App ID's\
+* <https://github.com/MicrosoftDocs/entra-docs/blob/main/.docutune/dictionaries/known-guids.json> - Github List of known IDs\
+* <https://github.com/merill/microsoft-info/> - contains app GUIDs and permission GUIDs\
+* <https://raw.githubusercontent.com/merill/microsoft-info/main/_info/MicrosoftApps.json>
+
+App Management (Secrets, Certs and Registrations):
+
+* <https://learn.microsoft.com/en-au/entra/identity/enterprise-apps/app-management-powershell-samples>
+* **<https://learn.microsoft.com/en-au/entra/identity/enterprise-apps/scripts/powershell-export-apps-with-expiring-secrets>**
+* **<https://learn.microsoft.com/en-au/entra/identity/enterprise-apps/scripts/powershell-export-enterprise-apps-with-expiring-secrets>**
 
 ### Microsoft Entra Connect Sync
 
