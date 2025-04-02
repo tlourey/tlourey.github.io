@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-04-02T00:43:46.822Z
+lastmod: 2025-04-02T04:36:35.000Z
 keywords:
     - Entra
     - Exchange
@@ -48,6 +48,8 @@ keywords:
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
 * [Entra](#entra)
+  * [3rd Party Resources](#3rd-party-resources)
+  * [Entra Apps](#entra-apps)
   * [Microsoft Entra Connect Sync](#microsoft-entra-connect-sync)
   * [Microsoft Entra Cloud Sync](#microsoft-entra-cloud-sync)
 * [Microsoft Graph](#microsoft-graph)
@@ -272,16 +274,28 @@ Also:
 > [!NOTE] Size
 > This section may become big enough that it will become its own page.
 
+### 3rd Party Resources
+
 <https://entra.news/>\
 <https://entra.news/p/entra-mind-maps> - entra mind map\
 <https://github.com/merill/awesome-entra> - Github awesome list for Entra\
 <https://azuread.github.io/MSIdentityTools/>\
 <https://graphxray.merill.net/>
 
-<https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/governance/verify-first-party-apps-sign-in> Verify First Party App ID's\
-<https://github.com/MicrosoftDocs/entra-docs/blob/main/.docutune/dictionaries/known-guids.json> - Github List of known IDs\
-<https://github.com/merill/microsoft-info/> - contains app GUIDs and permission GUIDs\
-<https://raw.githubusercontent.com/merill/microsoft-info/main/_info/MicrosoftApps.json>
+### Entra Apps
+
+App IDs:
+
+* <https://learn.microsoft.com/en-us/troubleshoot/entra/entra-id/governance/verify-first-party-apps-sign-in> Verify First Party App ID's\
+* <https://github.com/MicrosoftDocs/entra-docs/blob/main/.docutune/dictionaries/known-guids.json> - Github List of known IDs\
+* <https://github.com/merill/microsoft-info/> - contains app GUIDs and permission GUIDs\
+* <https://raw.githubusercontent.com/merill/microsoft-info/main/_info/MicrosoftApps.json>
+
+App Management (Secrets, Certs and Registrations):
+
+* <https://learn.microsoft.com/en-au/entra/identity/enterprise-apps/app-management-powershell-samples>
+* **<https://learn.microsoft.com/en-au/entra/identity/enterprise-apps/scripts/powershell-export-apps-with-expiring-secrets>**
+* **<https://learn.microsoft.com/en-au/entra/identity/enterprise-apps/scripts/powershell-export-enterprise-apps-with-expiring-secrets>**
 
 ### Microsoft Entra Connect Sync
 
