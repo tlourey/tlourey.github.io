@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-03-31T05:15:39.946Z
+lastmod: 2025-04-02T00:43:46.822Z
 keywords:
     - Entra
     - Exchange
@@ -71,6 +71,21 @@ keywords:
 New Purview eDiscovery Guide: <https://mslearn.cloudguides.com/guides/Get%20started%20with%20Microsoft%20Purview%20eDiscovery>
 
 More Info: [Learn about eDiscovery](https://learn.microsoft.com/en-au/purview/edisc)
+
+**[Search for and delete email messages](https://learn.microsoft.com/en-us/purview/ediscovery-search-for-and-delete-email-messages)**\
+[Connect to Security & Compliance PowerShell](https://learn.microsoft.com/en-us/powershell/exchange/connect-to-scc-powershell?view=exchange-ps) - needed to complete above.
+
+```powershell
+Import-Module ExchangeOnlineManagement # Assumes its already installed
+Connect-IPPSSession -UserPrincipalName myadminaccount@your-tenant-name.onmicrosoft.com
+$Search=New-ComplianceSearch -Name "Remove Phishing Message" -ExchangeLocation All -ContentMatchQuery '(Received:4/13/2016..4/14/2016) AND (Subject:"Action required")'
+Start-ComplianceSearch -Identity $Search.Identity
+# You can also create a search in purview instead of using powershell if easier.
+New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
+# OR
+New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType HardDelete
+Disconnect-ExchangeOnline
+```
 
 ## URLs and Landing Zones
 
