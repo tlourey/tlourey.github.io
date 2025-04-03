@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-03-31T04:06:49.884Z
+lastmod: 2025-04-03T03:38:05.607Z
 tags:
     - Microsoft365
     - Teams
@@ -148,6 +148,8 @@ If that doesn't work maybe this will
 > [!NOTE] Multiple Tools
 > Microsoft Places stiches together a number of technology sets. This content may move between this page, an Exchange page and/or [Microsoft 365 Tips](microsoft-365-tips.md).
 > While parts of this are more teams related it also uses Workspace Calendar
+
+Microsoft Places App: <https://aka.ms/places>
 
 <https://support.microsoft.com/en-au/office/first-things-to-know-about-bookable-desks-in-microsoft-teams-5d10c217-1205-48a1-a883-ff4533f4ae71>\
 <https://support.microsoft.com/en-au/office/set-your-work-location-in-microsoft-teams-6c14a0f5-3cd6-427d-b1d2-aa0365aebf88>\
