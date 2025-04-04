@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-20T06:58:16.807Z
-lastmod: 2025-04-02T22:41:17.603Z
+lastmod: 2025-04-04T03:04:07.290Z
 tags:
     - References
     - Tips
@@ -15,12 +15,6 @@ isdraft: true
 fmContentType: pages
 preview: ""
 ---
-
-<!--- cSpell:disable --->
-* [Terms](#terms)
-<!--- cSpell:enable --->
-
-## Terms
 
 <!-- markdownlint-disable-file MD033 MD037 -->
 
@@ -35,3 +29,10 @@ preview: ""
 | Pulse-Width Modulation | PWM | any method of representing a signal as a rectangular wave with a varying duty cycle (and for some methods also a varying period) | * Electronics | &quot;PWM is useful for controlling the average power or amplitude delivered by an electrical signal&quot;. Good for controller servos | [Wikipedia](https://en.wikipedia.org/wiki/Pulse-width_modulation) |
 | Data Universal Numbering System \[number\] | DUNS or D-U-N-S | a proprietary system developed and managed by Dun & Bradstreet (D&B) that assigns a unique numeric identifier, referred to as a "DUNS number" to a single business entity.| * Registers/Registries  <br/> * Business | Used when applying for Apple Business Manager| <https://www.dnb.com/en-us/smb/duns.html> |
 | Your Milage May Very | YMMY | You may see different results | TBC | TBC | TBC |
+| Expression of Interest| EOI | a formal, non-binding statement of interest in a specific opportunity, project, or program, often used to demonstrate capabilities and eligibility before a formal application or tender | * Contracts <br/> * Tenders | | |
+| Request for Proposal | RFP |a business document used to solicit bids or proposals from potential suppliers or contractors for a specific project, service, or product. | * Contracts <br/> * Tenders  | | |
+| Request for Information| RFI |a formal document used to gather information about potential suppliers, products, or services before initiating a full procurement process | * Contracts <br/> * Tenders | | |
+| Request for Tender | RFT | An RFT is a formal and structured invitation to potential suppliers to submit bids for the supply of goods, services, or works, allowing organizations to evaluate proposals and select the most suitable provider. | * Contracts <br/> * Tenders  | | |
+| Request for Quotation | RFQ | RFQ is a formal document used by businesses to solicit price quotes from potential suppliers for specific products or services, allowing them to compare offers and make informed purchasing decisions | * Contracts <br/> * Tenders  | | |
+| Competitive tension | | The pressure or strain felt by a company or individual when they are aware of competition and potentially multiple rivals vying for the same resources or goals, leading to actions aimed at gaining an advantage |  * Contracts <br/> * Tenders | | |
+| | | | | | |
