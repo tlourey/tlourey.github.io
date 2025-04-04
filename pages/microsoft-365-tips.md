@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-04-02T04:36:35.000Z
+lastmod: 2025-04-04T06:56:32.496Z
 keywords:
     - Entra
     - Exchange
@@ -44,6 +44,7 @@ keywords:
 * [Pre-create a users OneDrive](#pre-create-a-users-onedrive)
 * [Force user to change password at next login](#force-user-to-change-password-at-next-login)
 * [Exchange Email Header References](#exchange-email-header-references)
+* [Exchange Room and Workspace setup tasks](#exchange-room-and-workspace-setup-tasks)
 * [Finding the owner of a specifc MS Form](#finding-the-owner-of-a-specifc-ms-form)
 * [Network Details Upload](#network-details-upload)
 * [DSC](#dsc)
@@ -241,6 +242,30 @@ Update-MgUser -UserId $userid.id -PasswordProfile @{ ForceChangePasswordNextSign
 More Mail header info at [Mail Headers](mail-headers.md)
 
 More Mail tools under [Postmaster Tools in Misc Tools](misc-tools.md#postmaster) and Standards links under [SMTP in Misc References](misc-references.md#smtp)
+
+## Exchange Room and Workspace setup tasks
+
+> [!IMPORTANT] Draft
+> This section is being thrown together very quickly given work on another page.
+
+1. Using [Configure rooms and workspaces for Room Finder in Outlook](https://learn.microsoft.com/en-us/outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces), Create Rooms, Workspaces
+2. Create Room Lists (also in [Configure rooms and workspaces for Room Finder in Outlook](https://learn.microsoft.com/en-us/outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces))
+3. Add rooms and workspaces to Room Lists
+4. Use [Set-Place](https://learn.microsoft.com/en-us/powershell/module/exchange/set-place?view=exchange-ps) Exchange Command to fill in metadata about rooms.
+
+> [!IMPORTANT] Room Finder Requirements
+> For Room finder to work, the rooms/workspaces need to be in a room list, and the rooms/workspaces needs the following metadata filled in via the `Set-Place` command:
+>
+> * City
+> * Floor
+> * FloorLabel
+> * Capacity
+
+> [!TIP] Ground Floor
+> You can put in 0 for Floor value for Ground Floor. You can have the text "Ground Floor" in Floor Label. I also think Floor can have negative numbers for basement, etc
+
+> [!TIP] Extra Info
+> You can use Set-Place command to fill in extra info like AudioDeviceName, VideoDeviceName, and others! Check out [Set-Place](https://learn.microsoft.com/en-us/powershell/module/exchange/set-place?view=exchange-ps)
 
 ## Finding the owner of a specifc MS Form
 
