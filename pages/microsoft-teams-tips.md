@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-04-03T03:38:05.607Z
+lastmod: 2025-04-04T06:11:47.770Z
 tags:
     - Microsoft365
     - Teams
@@ -166,7 +166,9 @@ Microsoft Places App: <https://aka.ms/places>
 
 <https://learn.microsoft.com/en-au/microsoftteams/rooms/bookable-desks>\
 <https://learn.microsoft.com/en-au/powershell/module/teams/new-csteamsworklocationdetectionpolicy?view=teams-ps>\
+<https://learn.microsoft.com/en-us/powershell/module/teams/grant-csteamsworklocationdetectionpolicy?view=teams-ps>\
 <https://learn.microsoft.com/en-au/microsoft-365/places/configure-desk-booking?branch=main#configure-desk-pools>\
+<https://learn.microsoft.com/en-au/microsoft-365/places/enabling-places-finder#understanding-the-differences-between-room-finder-and-places-finder>
 <https://learn.microsoft.com/en-us/microsoft-365/places/get-started/quick-setup-buildings-floors>\
 <https://gist.github.com/adthom/b703078806adeb71fe860929df0bd4c1>
 
@@ -177,15 +179,25 @@ Microsoft Places App: <https://aka.ms/places>
 > When using the MicrosoftPlaces cmdlets, building and floor setups appear quickly in teams where as rooms, desks and workspaces may take 24 hours.
 > *"New buildings, floors, and sections should be visible in Microsoft Places right away. However, any changes made to rooms, and workspaces may take up to 24 hours to update."*
 
-1. Install/Import MicrosoftPlaces Teams module
+1. Install/Import MicrosoftPlaces and MicrosoftTeams module
 2. `connect-microsoftplaces`
 3. `Initialize-Places`
 4. Choose Option 1 to export a csv
 5. Review and adjust the csv and adjust as per <https://learn.microsoft.com/en-us/microsoft-365/places/get-started/quick-setup-buildings-floors#step-2---review-and-revise-the-csv>
 6. Upload the finalised CSV
-7. **Other Steps TBC**
-8. [Add Services to buildings](#add-services-to-buildings)
-9. `Set-PlacesSettings -PlacesFinderEnabled 'Default:true'`
+7. `Set-PlacesSettings -PlacesFinderEnabled 'Default:true'`: Enable Places Finder. It can be limited to a specific group
+8. Deploy MS Places app in outlook: <https://learn.microsoft.com/en-us/microsoft-365/admin/manage/teams-apps-work-on-outlook-and-m365?view=o365-worldwide>
+9. Consider pre-installing in MS Teams by adjusting app setup policies: <https://learn.microsoft.com/en-us/microsoftteams/teams-app-setup-policies#add-apps-to-your-teams-client>
+10. You need individual desks or desk pools (aka workspaces) setup. Indivudal desks needs teams premium.
+11. **Other Steps TBC**
+12. [Add Services to buildings](#add-services-to-buildings)
+13. `Set-PlacesSettings -PlacesFinderEnabled 'Default:true'`
+14. `Disconnect-MicrosoftPlaces`
+15. `import-module MicrosoftTeams`
+16. `Connect-MicrosoftTeams`
+17. `New-CsTeamsWorkLocationDetectionPolicy -Identity wld-test-policy -EnableWorkLocationDetection $true` (These commands may need to be in a seperate set of steps)
+18. `Grant-CsTeamsWorkLocationDetectionPolicy -PolicyName wld-test-policy -Identity testuser@test.onmicrosoft.com`: (you can set a policy to a group or Globally)
+19. `Disconnect-MicrosoftTeams`
 
 You can consider a manual setup: <https://learn.microsoft.com/en-us/microsoft-365/places/get-started/quick-setup-buildings-floors#alternative---manual-setup>
 
