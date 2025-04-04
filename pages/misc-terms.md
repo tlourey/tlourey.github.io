@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-20T06:58:16.807Z
-lastmod: 2025-04-04T03:04:07.290Z
+lastmod: 2025-04-04T03:22:49.327Z
 tags:
     - References
     - Tips
@@ -35,4 +35,6 @@ preview: ""
 | Request for Tender | RFT | An RFT is a formal and structured invitation to potential suppliers to submit bids for the supply of goods, services, or works, allowing organizations to evaluate proposals and select the most suitable provider. | * Contracts <br/> * Tenders  | | |
 | Request for Quotation | RFQ | RFQ is a formal document used by businesses to solicit price quotes from potential suppliers for specific products or services, allowing them to compare offers and make informed purchasing decisions | * Contracts <br/> * Tenders  | | |
 | Competitive tension | | The pressure or strain felt by a company or individual when they are aware of competition and potentially multiple rivals vying for the same resources or goals, leading to actions aimed at gaining an advantage |  * Contracts <br/> * Tenders | | |
+| Turnover | | Turnover, also called net sales, is the pure income from sales a company makes. <br/> A few of the terms used synonymously for turnover include: <br/> * Net Sales <br/> * Net Revenue <br/> * Topline  | * Finance | Turnover = Gross sales - Returns - Allowances - Discounts <br/> Net sales = gross sales - (returns + allowances + discounts) <br/> Net revenue = gross revenue - discounts - returns - commissions | [Turnover vs. Profit: What's the Difference?](https://www.indeed.com/career-advice/career-development/turnover-vs-profit) <br/> <https://en.wikipedia.org/wiki/Index_of_accounting_articles> |
+| Profit | | Profit is the total turnover remaining after the organization accounts for all expenses, both variable and fixed. <br/> Some of the other names for Profit are: <br/> * Net earnings <br/> * Net income <br/> * Sales profit <br/> * Total comprehensive income <br/> * Bottom line | * Finance |Profit = All income - All expenses <br/> Net income = (net sales + other income sources) - all expenses | [Turnover vs. Profit: What's the Difference?](https://www.indeed.com/career-advice/career-development/turnover-vs-profit) <br/> <https://en.wikipedia.org/wiki/Index_of_accounting_articles> |
 | | | | | | |
