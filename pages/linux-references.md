@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-02T22:45:38.932Z
+lastmod: 2025-04-04T02:55:52.367Z
 tags:
     - Linux
     - Security
@@ -23,6 +23,9 @@ preview: ""
     * [apt-listchanges](#apt-listchanges)
     * [apt-show-versions](#apt-show-versions)
     * [apt-check](#apt-check)
+* [Unattended Upgrade Options](#unattended-upgrade-options)
+  * [Block a package](#block-a-package)
+  * [SystemD Timers](#systemd-timers)
 <!--- cSpell:enable --->
 
 * [ ] Consider placement: This may not be the right place for this. Maybe this page should be Linux Tips or it shoud be put into Linux Tools.
@@ -95,7 +98,7 @@ Install: `sudo apt install apt-show-versions`
 apt-show-versions | grep upgradeable | grep security
 # OR
 apt-show-versions -u
-# OR 
+# OR
 apt-show-versions -u -b | grep security
 ```
 
@@ -109,3 +112,95 @@ From: <https://askubuntu.com/a/556399/443835>
 `/usr/lib/update-notifier/apt-check`
 
 * [ ] cover apt-check - <https://askubuntu.com/questions/441921/why-does-usr-lib-update-notifier-apt-check-not-agree-with-apt-get-upgrade>
+
+## Unattended Upgrade Options
+
+<https://documentation.ubuntu.com/server/how-to/software/automatic-updates/>\
+<https://documentation.ubuntu.com/server/how-to/software/package-management/#automatic-updates>\
+<https://pimylifeup.com/unattended-upgrades-debian-ubuntu/>
+
+`/etc/apt/apt.conf.d/50unattended-upgrades`:
+
+Enable/Disable Updating and Upgrading:
+
+> [!NOTE] Defaults
+> Default is for both to be enabled
+
+```python
+APT::Periodic::Update-Package-Lists "1";
+APT::Periodic::Unattended-Upgrade "1";
+```
+
+Reboots:
+
+See <https://documentation.ubuntu.com/server/how-to/software/automatic-updates/#reboots>
+
+Default is false. Change to true if it should autoreboot the server.
+If changing to true consider if `Automatic-Reboot-WithUsers` and/or `Unattended-Upgrade::Automatic-Reboot-Time` should be changed.
+
+```python
+Unattended-Upgrade::Automatic-Reboot "false";
+Unattended-Upgrade::Automatic-Reboot-WithUsers "true";
+Unattended-Upgrade::Automatic-Reboot-Time "now";
+```
+
+Email Updates:
+
+See <https://documentation.ubuntu.com/server/how-to/software/automatic-updates/#notifications>
+
+```python
+Unattended-Upgrade::Mail "it-notifications-extra@careflight.org";
+Unattended-Upgrade::MailReport "always";
+```
+
+> [!IMPORTANT]
+> Just adding another package repository to an Ubuntu system WILL NOT make unattended-upgrades consider it for updates!
+
+To adjust repos: <https://documentation.ubuntu.com/server/how-to/software/automatic-updates/#where-to-pick-updates-from>
+
+### Block a package
+
+<https://documentation.ubuntu.com/server/how-to/software/automatic-updates/#how-to-block-certain-packages>
+
+Uses Python Regex: <https://docs.python.org/3/howto/regex.html>
+
+Exclude Kernel Updates:
+
+```python
+Unattended-Upgrade::Package-Blacklist {
+      "linux-headers";
+      "linux-image";
+      "linux-generic";
+      "linux-modules";
+};
+```
+
+OR
+
+```python
+Unattended-Upgrade::Package-Blacklist {
+      "linux-*";
+};
+```
+
+Block a package:
+
+```python
+Unattended-Upgrade::Package-Blacklist {
+      "unifi*";
+};
+```
+
+### SystemD Timers
+
+> Systemd timer units, `apt-daily.timer` and `apt-daily-upgrade.timer`, trigger these actions at a scheduled time with a random delay. These timers activate services that execute the `/usr/lib/apt/apt.systemd.daily` script.
+> However, it may happen that if the server is off at the time the timer unit elapses, the timer may be triggered immediately at the next startup (still subject to the `RandomizedDelaySec` value). As a result, they may often run on system startup and thereby cause immediate activity and prevent other package operations from taking place at that time. For example, if another package has to be installed, it would have to wait until the upgrades are completed.
+>
+> In many cases this is beneficial, but in some cases it might be counter-productive; examples are administrators with many shut-down machines or VM images that are only started for some quick action, which is delayed or even blocked by the unattended upgrades. To change this behaviour, we can change/override the configuration of both APT's timer units `apt-daily-upgrade.timer` and `apt-daily.timer`. To do so, use systemctl edit `<timer_unit>` and override the *Persistent* attribute setting it to *false*:
+>
+> ```text
+> [Timer]
+> Persistent=false
+> ```
+>
+> With this change, the timer will trigger the service only on the next scheduled time. In other words, it won't catch up to the run it missed while the system was off. See the explanation for the *Persistent* option in [systemd.timer](https://manpages.ubuntu.com/manpages/noble/en/man5/systemd.timer.5.html) manpage for more details.
