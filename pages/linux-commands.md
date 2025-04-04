@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-03T21:51:48.351Z
+lastmod: 2025-04-04T02:18:10.633Z
 tags:
     - Commands
     - Linux
@@ -383,6 +383,7 @@ REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 * `sudo faillog -l 60 olivia`: lock out Olivia for 60 mins
 * `sudo less /var/log/boot.log`: boot log
 * `cat /var/log/apt/history.log`: Apt history
+* `/var/log/dpkg.log`: dpkg history
 
 Some Tips to test/evaluate syslog message via the network are in [Microsoft Sentinel Tips](/pages/microsoft-sentinel-tips.md#syslog-connector-testing)
 
@@ -431,6 +432,8 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `sudo passwd XXX`: if you need to change user's password
 
 ## Apt
+
+[Apt Guide](https://www.debian.org/doc/manuals/apt-guide/index.en.html)
 
 TBC
 <!---
@@ -600,6 +603,8 @@ From **<https://wiki.archlinux.org/title/Systemd/Timers>**:
 > * Monotonic timers activate after a time span relative to a varying starting point. They stop if the computer is temporarily suspended or shut down. There are number of different monotonic timers but all have the form: On*Type*Sec=. Common monotonic timers include `OnBootSec` and `OnUnitActiveSec`.
 
 > For a full explanation of timer options, see the [systemd.timer(5)](https://man.archlinux.org/man/systemd.timer.5). The argument syntax for calendar events and time spans is defined in [systemd.time(7)](https://man.archlinux.org/man/systemd.time.7).
+
+See Also: <https://manpages.ubuntu.com/manpages/plucky/en/man5/systemd.timer.5.html>
 
 Notes:
 
