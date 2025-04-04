@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-03T21:24:58.915Z
-lastmod: 2025-04-03T21:51:11.808Z
+lastmod: 2025-04-04T02:22:38.042Z
 tags:
     - Linux
     - Windows
@@ -114,6 +114,8 @@ From the SSH man page:
 ## SSHD
 
 `sudo sshd -T`:Show sshd current **running** config
+
+<https://documentation.ubuntu.com/server/how-to/security/openssh-server/>
 
 ### AllowGroups
 
