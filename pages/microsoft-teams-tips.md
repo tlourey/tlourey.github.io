@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-04-04T06:11:47.770Z
+lastmod: 2025-04-04T06:38:44.864Z
 tags:
     - Microsoft365
     - Teams
@@ -155,6 +155,10 @@ Microsoft Places App: <https://aka.ms/places>
 <https://support.microsoft.com/en-au/office/set-your-work-location-in-microsoft-teams-6c14a0f5-3cd6-427d-b1d2-aa0365aebf88>\
 <https://support.microsoft.com/en-au/office/set-your-work-location-in-microsoft-teams-6c14a0f5-3cd6-427d-b1d2-aa0365aebf88>\
 <https://support.microsoft.com/en-au/office/show-your-hybrid-work-location-availability-to-meet-work-hours-and-more-c861198d-f82e-41d7-88ec-c2e716be5ede>
+
+> [!NOTE] Room and Workspace Mailboxes
+> You should consider having Room and workspace mailboxes setup and working before doing MS Places
+> See [Configure rooms and workspaces for Room Finder in Outlook](https://learn.microsoft.com/en-us/outlook/troubleshoot/calendaring/configure-room-finder-rooms-workspaces)
 
 ### Microsoft Places Setup
 
