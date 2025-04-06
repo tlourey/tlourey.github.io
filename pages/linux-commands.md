@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-04T02:18:10.633Z
+lastmod: 2025-04-06T01:05:21.962Z
 tags:
     - Commands
     - Linux
@@ -87,7 +87,8 @@ Distro Version:
 `lsb_release -a`:tba - may not exist on some Redhat machines by default
 
 `cat /etc/debian_version`:TBA\
-`cat /etc/redhat-release`:TBA
+`cat /etc/redhat-release`:TBA\
+`cat /etc/rpi-issue`: Raspberry OS Version
 
 Kernel Version:
 `uname`:TBA\
