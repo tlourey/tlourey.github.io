@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T08:13:44.845Z
-lastmod: 2025-04-09T08:34:35.772Z
+lastmod: 2025-04-09T08:54:39.168Z
 tags:
     - Office
 isdraft: true
@@ -21,6 +21,7 @@ preview: ""
   * [Subtotal instead of sum](#subtotal-instead-of-sum)
   * [Xlookup instead of just Vlookup](#xlookup-instead-of-just-vlookup)
   * [Rounding](#rounding)
+  * [Search Cell for Text](#search-cell-for-text)
   * [Timestamp and Timezone conversions](#timestamp-and-timezone-conversions)
 * [Formatting](#formatting)
   * [Custom Formatting](#custom-formatting)
@@ -36,6 +37,10 @@ preview: ""
 ### Xlookup instead of just Vlookup
 
 ### Rounding
+
+### Search Cell for Text
+
+`=ISNUMBER(SEARCH("substringtosearchfor",A2))`: search another cell for text and return a true or false
 
 ### Timestamp and Timezone conversions
 
