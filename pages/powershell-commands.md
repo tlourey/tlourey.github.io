@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-04-09T12:45:14.449Z
+lastmod: 2025-04-09T13:00:48.618Z
 tags:
     - Commands
     - Exchange
@@ -46,6 +46,9 @@ isdraft: true
   * [Archive Mailbox](#archive-mailbox)
   * [Mailbox Access Checks](#mailbox-access-checks)
   * [Mailbox Access](#mailbox-access)
+  * [Exchange Audit Log search](#exchange-audit-log-search)
+    * [Searching for Exchange Rule Changes](#searching-for-exchange-rule-changes)
+    * [Searxhing for Exchange Connector Changes](#searxhing-for-exchange-connector-changes)
 * [Local System Management](#local-system-management)
   * [File and Space Management OneLiners](#file-and-space-management-oneliners)
   * [Uptime, wake on lan, reboot](#uptime-wake-on-lan-reboot)
@@ -525,6 +528,16 @@ Set-DistributionGroup -Identity printersupport@contoso.com -GrantSendOnBehalfTo 
 # This will only remove administrator
 Set-DynamicDistributionGroup "All Employees" -GrantSendOnBehalfTo @{Remove="Administrator"}
 ```
+
+### Exchange Audit Log search
+
+#### Searching for Exchange Rule Changes
+
+`Search-UnifiedAuditLog -StartDate 25/11/2024 -EndDate 27/11/2024 -Operations New-TransportRule, Set-TransportRule, Enable-TransportRule, Disable-TransportRule, Remove-TransportRule | Format-Table`
+
+#### Searxhing for Exchange Connector Changes
+
+`Search-UnifiedAuditLog -StartDate -StartDate 25/11/2024 -EndDate 27/11/2024 -Operations "New-InboundConnector","Set-InboundConnector","Remove-InboundConnector`
 
 ## Local System Management
 
