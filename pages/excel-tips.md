@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T08:13:44.845Z
-lastmod: 2025-04-09T08:33:32.787Z
+lastmod: 2025-04-09T08:34:35.772Z
 tags:
     - Office
 isdraft: true
@@ -52,7 +52,7 @@ Also add some time (10 hours to convert to AEST): `=(DATEVALUE(MID(A2,1,10))+TIM
 ### Custom Formatting
 
 `d/mm/yyyy h:mm`: date and time with 24h time\
-`d/mm/yyyy h:mm AM/PM`: Date and time with 12h time
+`d/mm/yyyy h:mm AM/PM`: Date and time with 12h time **(Non-Standard)**
 
 ## Pivots
 
