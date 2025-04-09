@@ -1,13 +1,13 @@
 ---
 title: Exchange Commands
 description: Mostly Exchange Online but some legacy onprem stuff as well
-published: false
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-04-09T13:03:20.971Z
-lastmod: 2025-04-09T13:10:53.062Z
+lastmod: 2025-04-09T13:46:37.923Z
 tags:
     - Exchange
     - PowerShell
