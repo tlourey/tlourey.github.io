@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T08:13:44.845Z
-lastmod: 2025-04-09T08:54:39.168Z
+lastmod: 2025-04-09T09:02:45.579Z
 tags:
     - Office
 isdraft: true
@@ -23,6 +23,7 @@ preview: ""
   * [Rounding](#rounding)
   * [Search Cell for Text](#search-cell-for-text)
   * [Timestamp and Timezone conversions](#timestamp-and-timezone-conversions)
+  * [Date Stuff](#date-stuff)
 * [Formatting](#formatting)
   * [Custom Formatting](#custom-formatting)
 * [Pivots](#pivots)
@@ -51,6 +52,10 @@ Also add some time (10 hours to convert to AEST): `=(DATEVALUE(MID(A2,1,10))+TIM
 > Don't forget the [Custom Formatting](#custom-formatting)
 
 [^1]: <https://stackoverflow.com/questions/4896116/parsing-an-iso8601-date-time-including-timezone-in-excel>
+
+### Date Stuff
+
+`=DATEDIF` - older formula
 
 ## Formatting
 
