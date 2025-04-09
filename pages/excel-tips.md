@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T08:13:44.845Z
-lastmod: 2025-04-09T09:02:45.579Z
+lastmod: 2025-04-09T14:09:22.758Z
 tags:
     - Office
 isdraft: true
@@ -35,9 +35,45 @@ preview: ""
 
 ### Subtotal instead of sum
 
+<https://support.microsoft.com/en-au/office/subtotal-function-7b027003-f060-4ade-9040-e478765b9939>
+
+* Represents a partial sum or total of a specific group or section within a larger set of data.
+* Used when you want to calculate a total for a portion of the data, before calculating the overall total.
+* Example: "The subtotal of the first three items is $100".
+* In Excel, the SUBTOTAL function can be used to calculate subtotals, even when rows are hidden, making it useful for filtered data.
+
+Example: `=SUBTOTAL(9,C1,C2:C3)`: Sums the ranges
+
+`=SUBTOTAL(function_num,ref1,[ref2],...)`
+
+The SUBTOTAL function syntax has the following arguments:
+
+* Function_num: Required. The number 1-11 or 101-111 that specifies the function to use for the subtotal. 1-11 includes manually-hidden rows, while 101-111 excludes them; filtered-out cells are always excluded.
+
+|Function_num\ (includes hidden rows)| Function_num\ (ignores hidden rows) | Function|
+|-|-|-|
+|1|101|AVERAGE|
+|2|102|COUNT|
+|3|103|COUNTA|
+|4|104|MAX|
+|5|105|MIN|
+|6|106|PRODUCT|
+|7|107|STDEV|
+|8|108|STDEVP|
+|9|109|SUM|
+|10|110|VAR|
+|11|111|VARP|
+
+* Ref1     Required. The first named range or reference for which you want the subtotal.
+* Ref2,...     Optional. Named ranges or references 2 to 254 for which you want the subtotal.
+
 ### Xlookup instead of just Vlookup
 
+* [ ] Xlookup
+
 ### Rounding
+
+* [ ] Rounding
 
 ### Search Cell for Text
 
@@ -57,6 +93,8 @@ Also add some time (10 hours to convert to AEST): `=(DATEVALUE(MID(A2,1,10))+TIM
 
 `=DATEDIF` - older formula
 
+* [ ] More Date Stuff
+
 ## Formatting
 
 ### Custom Formatting
@@ -66,6 +104,10 @@ Also add some time (10 hours to convert to AEST): `=(DATEVALUE(MID(A2,1,10))+TIM
 
 ## Pivots
 
+* [ ] Add PivotTable Stuff
+
 ## OfficeScript instead of Macros
+
+* [ ] Add OfficeScript
 
 ## Misc Office Links
