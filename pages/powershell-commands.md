@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-03-12T02:45:43.479Z
+lastmod: 2025-04-09T07:29:10.406Z
 tags:
     - Commands
     - Exchange
@@ -29,7 +29,7 @@ isdraft: true
     * [Dates](#dates)
     * [Times and TimeZones](#times-and-timezones)
   * [-WhatIf](#-whatif)
-  * [Force](#force)
+  * [-Force](#-force)
 * [Module Management](#module-management)
   * [PowerShellGet and PSResourceGet](#powershellget-and-psresourceget)
 * [Oneliners](#oneliners)
@@ -88,20 +88,39 @@ isdraft: true
 
 #### Dates
 
-`-gt`: TBC\
-`-lt`: TBC
+`-gt`: TBA\
+`-lt`: TBA
 
 #### Times and TimeZones
 
 TBC
 
+* [ ] Finish Get-Date Stuff
+
+[Get-Date for PowerShell 5.1](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1)\
+[Get-Date for PowerShell 7.4 (LTS)](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.4)
+
+`get-date`: Get current date and time in **local** timezone\
+`(get-date "2021-08-26 16:44:42").ToLocalTime()`: Get a specific date (**assumes** UTC) and convert it to local time\
+`(get-date "2021-08-26 16:44:42").ToUniversalTime()`: Get a specific date (**assumes** local) and convert it to UTC time\
+`get-date "2021-08-26Z16:44:42"`: Adding a z makes it explicit that its UTC
+
+> [!NOTE] PS5 vs 7
+> There are some differences in `Get-Date` between versions, like the `-asutc` Parameters
+
+`Get-TimeZone`: Tells you current timezone
+
 ### -WhatIf
 
 TBC
 
-### Force
+* [ ] Fill in -whatif section
+
+### -Force
 
 TBC
+
+* [ ] Fill in -Force section
 
 ## Module Management
 
@@ -282,6 +301,49 @@ Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).Ad
 #To expand the trace details
 Get-MessageTrace -RecipientAddress john.doe@domain.com -StartDate ((get-date).AddDays(-1)) -EndDate (get-date) -SenderAddress joe.blogs@domain.com | get-messagetracedetail | fl
 ```
+
+Searches:
+
+```powershell
+# See previous searches (larger traces)
+Get-HistoricalSearch
+Get-HistoricalSearch | fl
+
+# Start a new searches
+Start-HistoricalSearch
+     -EndDate <DateTime>
+     -ReportTitle <String>
+     -ReportType <HistoricalSearchReportType>
+     -StartDate <DateTime>
+     [-BlockStatus <String>]
+     [-CompressFile <Boolean>]
+     [-ConnectorType <String>]
+     [-DeliveryStatus <String>]
+     [-Direction <MessageDirection>]
+     [-DLPPolicy <MultiValuedProperty>]
+     [-EncryptionTemplate <String>]
+     [-EncryptionType <String>]
+     [-Locale <CultureInfo>]
+     [-MessageID <MultiValuedProperty>]
+     [-NetworkMessageID <MultiValuedProperty>]
+     [-NotifyAddress <MultiValuedProperty>]
+     [-OriginalClientIP <String>]
+     [-RecipientAddress <MultiValuedProperty>]
+     [-SenderAddress <MultiValuedProperty>]
+     [-SmtpSecurityError <String>]
+     [-TLSUsed <String>]
+     [-TransportRule <MultiValuedProperty>]
+     [-Url <String>]
+     [<CommonParameters>]
+
+# Example
+Start-HistoricalSearch -ReportTitle "Fabrikam Search" -StartDate 1/1/2023 -EndDate 1/7/2023 -ReportType MessageTrace -SenderAddress michelle@fabrikam.com -NotifyAddress chris@contoso.com
+
+# Stop
+Stop-HistoricalSearch -JobId <<GUID>>
+```
+
+**<https://learn.microsoft.com/en-us/powershell/module/exchange/start-historicalsearch?view=exchange-ps>**
 
 ### Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)
 
