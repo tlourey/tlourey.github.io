@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T08:13:44.845Z
-lastmod: 2025-04-09T14:21:52.732Z
+lastmod: 2025-04-09T14:42:46.223Z
 tags:
     - Office
 isdraft: true
@@ -62,7 +62,7 @@ The SUBTOTAL function syntax has the following arguments:
 * Function_num: Required. The number 1-11 or 101-111 that specifies the function to use for the subtotal. 1-11 includes manually-hidden rows, while 101-111 excludes them; filtered-out cells are always excluded.
 
 |Function_num\ (includes hidden rows)| Function_num\ (ignores hidden rows) | Function|
-|-|-|-|
+|---|---|---|
 |1|101|AVERAGE|
 |2|102|COUNT|
 |3|103|COUNTA|
@@ -89,7 +89,7 @@ The SUBTOTAL function syntax has the following arguments:
 [ROUND](https://support.microsoft.com/en-au/office/round-function-c018c5d8-40fb-4053-90b1-b3e7f61a213c): `=ROUND(number, num_digits)`
 
 |Formula|Description|Result|
-|-|-|-|
+|---|---|---|
 |=ROUND(2.15, 1)|Rounds 2.15 to one decimal place|2.2|
 |=ROUND(2.149, 1)|Rounds 2.149 to one decimal place|2.1|
 |=ROUND(-1.475, 2)|Rounds -1.475 to two decimal places|-1.48|
