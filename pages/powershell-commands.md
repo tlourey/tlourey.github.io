@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-04-09T07:29:10.406Z
+lastmod: 2025-04-09T08:12:42.614Z
 tags:
     - Commands
     - Exchange
@@ -25,6 +25,7 @@ isdraft: true
 * [PowerShell Basics](#powershell-basics)
   * [Commands and Help](#commands-and-help)
   * [Common Pipeline Modifiers](#common-pipeline-modifiers)
+  * [Useful Expression Modifiers](#useful-expression-modifiers)
   * [Comparison Operators](#comparison-operators)
     * [Dates](#dates)
     * [Times and TimeZones](#times-and-timezones)
@@ -41,7 +42,7 @@ isdraft: true
   * [Setup](#setup)
   * [Removing OWA Signatures from Email](#removing-owa-signatures-from-email)
   * [Mail tracing](#mail-tracing)
-  * [Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)](#temporarily-increase-mailbox-size-this-assumes-you-never-give-users-their-full-mailbox-in-the-first-place)
+  * [Temporarily increase mailbox size](#temporarily-increase-mailbox-size)
   * [Archive Mailbox](#archive-mailbox)
   * [Mailbox Access Checks](#mailbox-access-checks)
   * [Mailbox Access](#mailbox-access)
@@ -73,11 +74,39 @@ isdraft: true
 
 ### Common Pipeline Modifiers
 
+[Using Format commands to change output view](https://learn.microsoft.com/en-us/powershell/scripting/samples/using-format-commands-to-change-output-view?view=powershell-7.5)
+
+**`ft` - [`format-table`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table)**\
 `fl` - [`format-list`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-list)\
-`ft` - [`format-table`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-table)\
-`sort` - [`sort-objects`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object)\
+`fw` - [`format-wide`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/format-wide) - I don't use this much\
+**`sort` - [`sort-objects`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/sort-object)**\
 `select` - [`select-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-object)\
-`where` - [`where-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/where-object)
+**`where` - [`where-object`](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/where-object)**
+
+There is also `format-custom` and `format-hex` but I have never used them. Custom looks interesting...
+
+### Useful Expression Modifiers
+
+Based off:
+
+* <https://stackoverflow.com/questions/46862290/time-format-in-powershell/46862871#46862871>
+* <https://4sysops.com/archives/add-a-calculated-property-with-select-object-in-powershell/>
+
+```powershell
+Get-Something | Format-Table @{Label="Date"; Expression={$_.ConvertToDateTime($_.CreationTime) |Get-Date -Format "dd/mm/yyyy HH:mm"}}
+```
+
+```powershell
+Get-MessageTrace -SenderAddress sender@domain.tld -StartDate ((Get-Date).AddDays(-1)) -EndDate (get-date) | Format-Table @{Label="Received"; Expression={($_.Received).ToLocalTime()}}
+```
+
+```powershell
+Get-MessageTrace -SenderAddress sender@domain.tld -StartDate ((Get-Date).AddDays(-1)) -EndDate (get-date) | Select-Object @{Label="Received"; Expression={($_.Received).ToLocalTime()}},* | Format-Table
+```
+
+The last example works but includes all columns which you may not want. If thats the space, specify the columns you want instead of specifying `*`.
+
+* [ ] extrapolate above example for timezones using `Get-MessageTrace`
 
 ### Comparison Operators
 
@@ -88,6 +117,8 @@ isdraft: true
 
 #### Dates
 
+<https://www.sharepointdiary.com/2021/11/date-format-in-powershell.html> maybe useful
+
 `-gt`: TBA\
 `-lt`: TBA
 
@@ -96,6 +127,8 @@ isdraft: true
 TBC
 
 * [ ] Finish Get-Date Stuff
+
+<https://www.sharepointdiary.com/2021/11/date-format-in-powershell.html> maybe useful
 
 [Get-Date for PowerShell 5.1](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1)\
 [Get-Date for PowerShell 7.4 (LTS)](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.4)
@@ -345,7 +378,10 @@ Stop-HistoricalSearch -JobId <<GUID>>
 
 **<https://learn.microsoft.com/en-us/powershell/module/exchange/start-historicalsearch?view=exchange-ps>**
 
-### Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)
+### Temporarily increase mailbox size
+
+> [!IMPORTANT] ASSUMPTION!
+> This assumes you never give users their full mailbox in the first place.
 
 ```powershell
 Set-Mailbox -id <<email@domain.com>> -ProhibitSendQuota <<Value>> -ProhibitSendReceiveQuota <<Value>>
@@ -519,6 +555,8 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 `Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content#-wait>\
 `Select-String`: kind of like grep (need to check if it does work like grep)\
 `Out-GridView`: really cool wait view tables/rows. -passthru is also really awesome. You should read the help page in full esp the Notes stuff: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview>
+
+[Redirecting Output](https://learn.microsoft.com/en-us/powershell/scripting/samples/redirecting-data-with-out---cmdlets?view=powershell-7.5)
 
 ## Additional Resources
 
