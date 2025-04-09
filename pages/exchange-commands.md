@@ -7,11 +7,12 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T13:03:20.971Z
-lastmod: 2025-04-09T13:46:37.923Z
+lastmod: 2025-04-09T13:52:28.769Z
 tags:
     - Exchange
-    - PowerShell
     - Microsoft365
+    - PowerShell
+    - Email
 isdraft: true
 fmContentType: pages
 mermaid: false
