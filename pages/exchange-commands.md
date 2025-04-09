@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-29T07:27:17.598Z
-lastmod: 2025-03-05T06:24:31.203Z
+lastmod: 2025-04-09T12:58:13.028Z
 tags:
     - Exchange
     - PowerShell
@@ -35,7 +35,7 @@ preview: ""
   * [Setup](powershell-commands.md#setup)
   * [Removing OWA Signatures from Email](powershell-commands.md#removing-owa-signatures-from-email)
   * [Mail tracing](powershell-commands.md#mail-tracing)
-  * [Temporarily increase mailbox size (This assumes you never give users their full mailbox in the first place)](powershell-commands.md#temporarily-increase-mailbox-size-this-assumes-you-never-give-users-their-full-mailbox-in-the-first-place)
+  * [Temporarily increase mailbox size](powershell-commands.md#temporarily-increase-mailbox-size)
   * [Archive Mailbox](powershell-commands.md#archive-mailbox)
   * [Mailbox Access Checks](powershell-commands.md#mailbox-access-checks)
   * [Mailbox Access](powershell-commands.md#mailbox-access)
