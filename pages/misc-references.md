@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-03-30T20:29:42.604Z
+lastmod: 2025-04-04T02:11:23.066Z
 fmContentType: pages
 ---
 
@@ -116,7 +116,8 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 [The Debian Administrators Handbook](https://www.debian.org/doc/manuals/debian-handbook/index.en.html)\
 [Debian Reference](https://www.debian.org/doc/manuals/debian-reference/index.en.html)\
 [Securing Debian Manual](https://www.debian.org/doc/manuals/securing-debian-manual/index.en.html)\
-<https://www.debian.org/doc/>
+<https://www.debian.org/doc/>\
+[Apt Guide](https://www.debian.org/doc/manuals/apt-guide/index.en.html)
 
 ### Ubuntu Manuals
 

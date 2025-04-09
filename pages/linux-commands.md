@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-03-29T07:01:33.268Z
+lastmod: 2025-04-06T01:05:21.962Z
 tags:
     - Commands
     - Linux
@@ -63,10 +63,10 @@ isdraft: false
 * [OpenSSL Commands](#openssl-commands)
   * [OpenSSL Links](#openssl-links)
 * [SSH](#ssh)
-* [SSH Client](#ssh-client)
-  * [Port Forwarding](#port-forwarding)
-  * [Reverse Port Forwarding](#reverse-port-forwarding)
-* [SSH Keys](#ssh-keys)
+  * [SSH Client](#ssh-client)
+    * [Port Forwarding](#port-forwarding)
+    * [Reverse Port Forwarding](#reverse-port-forwarding)
+  * [SSH Keys](#ssh-keys)
   * [SSHD](#sshd)
 * [Misc System Commands](#misc-system-commands)
 <!--- cSpell:enable --->
@@ -87,7 +87,8 @@ Distro Version:
 `lsb_release -a`:tba - may not exist on some Redhat machines by default
 
 `cat /etc/debian_version`:TBA\
-`cat /etc/redhat-release`:TBA
+`cat /etc/redhat-release`:TBA\
+`cat /etc/rpi-issue`: Raspberry OS Version
 
 Kernel Version:
 `uname`:TBA\
@@ -383,6 +384,7 @@ REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 * `sudo faillog -l 60 olivia`: lock out Olivia for 60 mins
 * `sudo less /var/log/boot.log`: boot log
 * `cat /var/log/apt/history.log`: Apt history
+* `/var/log/dpkg.log`: dpkg history
 
 Some Tips to test/evaluate syslog message via the network are in [Microsoft Sentinel Tips](/pages/microsoft-sentinel-tips.md#syslog-connector-testing)
 
@@ -431,6 +433,8 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `sudo passwd XXX`: if you need to change user's password
 
 ## Apt
+
+[Apt Guide](https://www.debian.org/doc/manuals/apt-guide/index.en.html)
 
 TBC
 <!---
@@ -600,6 +604,8 @@ From **<https://wiki.archlinux.org/title/Systemd/Timers>**:
 > * Monotonic timers activate after a time span relative to a varying starting point. They stop if the computer is temporarily suspended or shut down. There are number of different monotonic timers but all have the form: On*Type*Sec=. Common monotonic timers include `OnBootSec` and `OnUnitActiveSec`.
 
 > For a full explanation of timer options, see the [systemd.timer(5)](https://man.archlinux.org/man/systemd.timer.5). The argument syntax for calendar events and time spans is defined in [systemd.time(7)](https://man.archlinux.org/man/systemd.time.7).
+
+See Also: <https://manpages.ubuntu.com/manpages/plucky/en/man5/systemd.timer.5.html>
 
 Notes:
 
@@ -777,7 +783,9 @@ To use a lower version of TLS (Results may vary in newer versions): <https://ask
 
 ## SSH
 
-## SSH Client
+This section is being moved to [SSH Tips and Tricks](ssh-tips-and-tricks.md)
+
+### SSH Client
 
 `ssh username@host`\
 `ssh username@host -p customportno`\
@@ -792,7 +800,7 @@ To use a lower version of TLS (Results may vary in newer versions): <https://ask
 * [ ] add in commands and info for control socket connection sharing (ControlPath and ControlMaster)
 * [ ] tunnel commands
 
-### Port Forwarding
+#### Port Forwarding
 
 To forward a local port (say 5110) to a remote destination (say popserver.example.com port 110), you can write something like one of these:
 
@@ -821,7 +829,7 @@ From the SSH man page:
 >
 > By default, the local port is bound in accordance with the GatewayPorts setting.  However, an explicit bind_address may be used to bind the connection to a specific address.  The bind_address of "localhost" indicates that the listening port be bound for local use only, while an empty address or '*' indicates that the port should be available from all interfaces.
 
-### Reverse Port Forwarding
+#### Reverse Port Forwarding
 
 To forward a remote port to a local destination, just use the -R option instead of -L:
 
@@ -849,7 +857,7 @@ From the SSH man page:
 >
 > If the port argument is '0', the listen port will be dynamically allocated on the server and reported to the client at run time.  When used together with -O forward, the allocated port will be printed to the standard output.
 
-## SSH Keys
+### SSH Keys
 
 * [ ] Add in SSH Keygen stuff
 * [ ] Add in ssh key copy stuff
