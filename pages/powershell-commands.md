@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-04-09T08:12:42.614Z
+lastmod: 2025-04-09T12:45:14.449Z
 tags:
     - Commands
     - Exchange
@@ -134,9 +134,46 @@ TBC
 [Get-Date for PowerShell 7.4 (LTS)](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-7.4)
 
 `get-date`: Get current date and time in **local** timezone\
+`get-date "2021-08-26Z16:44:42"`: Adding a z makes it explicit that its UTC\
+
+Get-Date uses OS Culture: `(Get-Culture).DateTimeFormat`
+
+Parameters:
+
+`Get-Date -DisplayHint Date`: Example: Tuesday, June 25, 2019\
+`Get-Date -DisplayHint Time`: Example: 10:24:11 PM\
+`Get-Date -DisplayHint DateTime`: Example: Wednesday 9 April 2025 10:23:48 PM
+
+`Get-Date -Format "dddd MM/dd/yyyy HH:mm K"`: Specifies format you want date returned. Example: Tuesday 06/25/2019 16:17 -07:00\
+Uses .Net Formats. See [Custom date and time format strings.](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)\
+`Get-Date -UFormat "%A %m/%d/%Y %R %Z"`: Exmple: Tuesday 06/25/2019 16:19 -07\
+[UFormat notes](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1#notes)\
+`Get-Date -UnixTimeSeconds`: Date and time represented in seconds since January 1, 1970, 0:00:00 (Added in PS7)
+
+Properties and Methods:
+
+`((Get-Date).AddDays(-1))`: Take current time and go back 1 day\
+`((Get-Date).AddHours(30))`: Add 30 hours to curren time\
+Other Add Methods:
+
+```powershell
+Name                 MemberType     Definition
+----                 ----------     ----------
+Add                  Method         datetime Add(timespan value)
+AddDays              Method         datetime AddDays(double value)
+AddHours             Method         datetime AddHours(double value)
+AddMicroseconds      Method         datetime AddMicroseconds(double value)
+AddMilliseconds      Method         datetime AddMilliseconds(double value)
+AddMinutes           Method         datetime AddMinutes(double value)
+AddMonths            Method         datetime AddMonths(int months)
+AddSeconds           Method         datetime AddSeconds(double value)
+AddTicks             Method         datetime AddTicks(long value)
+AddYears             Method         datetime AddYears(int value)
+```
+
+`(get-date) | Get-Member`: Show all methods\
 `(get-date "2021-08-26 16:44:42").ToLocalTime()`: Get a specific date (**assumes** UTC) and convert it to local time\
-`(get-date "2021-08-26 16:44:42").ToUniversalTime()`: Get a specific date (**assumes** local) and convert it to UTC time\
-`get-date "2021-08-26Z16:44:42"`: Adding a z makes it explicit that its UTC
+`(get-date "2021-08-26 16:44:42").ToUniversalTime()`: Get a specific date (**assumes** local) and convert it to UTC time
 
 > [!NOTE] PS5 vs 7
 > There are some differences in `Get-Date` between versions, like the `-asutc` Parameters
