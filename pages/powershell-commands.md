@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-04-09T13:51:17.090Z
+lastmod: 2025-04-09T13:52:05.981Z
 tags:
     - Commands
     - Language
@@ -286,7 +286,6 @@ Disabled Managers Direct Reports
 # change the 3rd disabled managerts direct reports to another manager
 (get-aduser -filter {(Enabled -eq $false) -and (directreports -like "*")} -Properties directreports)[2].directreports | set-aduser -manager (get-aduser -id newmanagerfirstname.lastname)
 ```
-
 
 ## Local System Management
 
