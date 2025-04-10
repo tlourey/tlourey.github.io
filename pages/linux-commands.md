@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-10T09:18:47.084Z
+lastmod: 2025-04-10T13:02:31.654Z
 tags:
     - Commands
     - Linux
@@ -286,15 +286,16 @@ Options:
 `gunzip file.gz`: unzip file.gz and then delete file.gz leaving only file.txt
 
 Options:
--h: show all options
--c: view text in file
--f: force (not sure why)
--k: keep original file after (un)zipping
--l: give details on filename
--r: recursive
--v: verbose
--t: test if file is valid
--a: only works on windows. uses ASCII to convert end-of-line characters using local conversion.
+
+* -h: show all options
+* -c: view text in file
+* -f: force (not sure why)
+* -k: keep original file after (un)zipping
+* -l: give details on filename
+* -r: recursive
+* -v: verbose
+* -t: test if file is valid
+* -a: only works on windows. uses ASCII to convert end-of-line characters using local conversion.
 
 More options are available. Look at: <https://www.geeksforgeeks.org/gunzip-command-in-linux-with-examples/>
 
