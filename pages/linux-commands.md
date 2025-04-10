@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-10T08:33:14.868Z
+lastmod: 2025-04-10T09:18:47.084Z
 tags:
     - Commands
     - Linux
@@ -24,6 +24,7 @@ isdraft: false
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
   * [Aliases](#aliases)
   * [TMUX](#tmux)
+    * [screen](#screen)
   * [Serial Stuff](#serial-stuff)
 * [Files](#files)
   * [What process is using a file](#what-process-is-using-a-file)
@@ -185,6 +186,14 @@ To make permanent, add alias to:
 * [ ] TMUX
 * [ ] Byobu
 * [ ] screen
+
+#### screen
+
+`screen -S my-session-name`: create session and name it my session name\
+`screen -r`: resume sessions\
+`screen -r my-session-name`: reconnect to my session name\
+`screen -ls`: Show screens
+`screen -S my-session-name -dm "~/myscript.sh"`: create screen called my session name, run `~/myscript.sh` then detach
 
 ### Serial Stuff
 
