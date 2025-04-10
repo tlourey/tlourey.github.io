@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-06T01:05:21.962Z
+lastmod: 2025-04-10T08:33:14.868Z
 tags:
     - Commands
     - Linux
@@ -58,6 +58,7 @@ isdraft: false
   * [Netplan](#netplan)
   * [nmcli](#nmcli)
   * [netstat](#netstat)
+  * [netcat](#netcat)
   * [tcpdump](#tcpdump)
   * [Network Reference](#network-reference)
 * [OpenSSL Commands](#openssl-commands)
@@ -715,7 +716,11 @@ Also see [Network Manager in RaspberryPi Tips](raspberry-pi-tips.md#network-mana
 `hostname`\
 `dnsdomainname`
 
+### netcat
+
 `nc`: netcat: <https://manpages.org/nc>
+
+`nc hostname port`
 
 <https://nc110.sourceforge.io/>
 
