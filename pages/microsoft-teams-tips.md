@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-04-04T06:44:04.098Z
+lastmod: 2025-04-09T14:43:06.459Z
 tags:
     - Microsoft365
     - Teams
@@ -35,7 +35,7 @@ keywords:
 **<https://support.microsoft.com/en-au/office/keyboard-shortcuts-for-microsoft-teams-2e8e2a70-e8d8-4a19-949b-4c36dd5292d2>**
 
 |Area|Function|Desktop Shortcut|Webapp shortcut|
-|-|-|-|-|
+|---|---|---|---|
 |Meetings & Calls|Temporarly unmute|<kbd>CTRL</kbd>+<kbd>Spacebar</kbd>|<kbd>CTRL</kbd>+<kbd>Spacebar</kbd>|
 |Meetings & Calls|Ummute|<kbd>Win+Alt+K</kbd> or <br> <kbd>Ctrl+Shift+M</kbd>| <kbd>Win+Alt+K</kbd> or <br> <kbd>Ctrl+Shift+M</kbd> |
 |Meetings & Calls|End audio or video call|<kbd>Ctrl+Shift+H</kbd>|<kbd>Ctrl+Shift+H</kbd>|

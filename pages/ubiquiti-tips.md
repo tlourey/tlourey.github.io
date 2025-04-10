@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-03-21T06:55:45.641Z
+lastmod: 2025-04-09T14:43:55.274Z
 tags:
     - Commands
     - References
@@ -95,7 +95,7 @@ Note: We strongly recommend staying with the stable release.\
 "Testing" refers to the next generation release, which is not released to the general public yet. "Stable" refers to the current stable release, which is supported by Ubiquiti and described in this article. "Old Stable" is the previous stable release, which has been replaced by the new stable release.
 
 |Suite Name|Code Name|Archived Code Names|
-|-|-|-|
+|---|---|---|
 |oldstable|unifi-5.10|These code names have been archived and are no longer supported|
 |stable|unifi-5.11|These code names have been archived and are no longer supported|
 |testing|*| unifi3, unifi4, unifi-5.3, unifi-5.4, unifi-5.5, unifi-5.6, unifi-5.7, unifi-5.8, unifi-5.9|

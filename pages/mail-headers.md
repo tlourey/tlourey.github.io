@@ -1,15 +1,16 @@
 ---
 title: Mail Headers
-description: ""
+description: TBC
 published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-03-17T23:34:50.024Z
-lastmod: 2025-03-20T11:14:14.573Z
+lastmod: 2025-04-09T13:53:57.254Z
 tags:
     - Email
+    - Exchange
 isdraft: true
 fmContentType: pages
 mermaid: false
@@ -103,9 +104,10 @@ Usually a [MIME Type](https://en.wikipedia.org/wiki/MIME)
 ### Exchange Email Header References
 
 <https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo>\
-<https://learn.microsoft.com/en-us/exchange/header-firewall-exchange-2013-help>
+<https://learn.microsoft.com/en-us/exchange/header-firewall-exchange-2013-help>\
 <https://learn.microsoft.com/en-us/exchange/anti-spam-stamps-exchange-2013-help>
 
 ## Tools
 
-[Postmaster Tools in Misc Tools](misc-tools.md#postmaster)
+[Postmaster Tools in Misc Tools](misc-tools.md#postmaster)\
+[Exchange Commands](exchange-commands.md)

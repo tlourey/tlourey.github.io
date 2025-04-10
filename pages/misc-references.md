@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-04-04T02:11:23.066Z
+lastmod: 2025-04-09T14:44:21.247Z
 fmContentType: pages
 ---
 
@@ -219,7 +219,7 @@ From: <https://ahrefs.com/blog/google-advanced-search-operators/>
 >Unreliable:
 >
 > |Search operator|What it does|Example|
-> |-|-|-|
+> |---|---|---|
 > |\# ..\#|Search within a range of numbers. |iphone case $50..$60|
 > |inanchor:|Search for pages with backlinks containing specific anchor text. |inanchor:apple|
 > |allinanchor:|Search for pages with backlinks containing multiple words in their anchor text. |allinanchor:apple iphone|
