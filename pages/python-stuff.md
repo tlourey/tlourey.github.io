@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-03-30T20:40:40.425Z
+lastmod: 2025-04-10T09:11:16.603Z
 tags:
     - Language
     - Python
@@ -20,6 +20,8 @@ preview: ""
 <!--- cSpell:disable --->
 * [Standards](#standards)
 * [Variants](#variants)
+* [Tricks](#tricks)
+  * [Running python script from interactive shell](#running-python-script-from-interactive-shell)
 * [Books](#books)
 * [Resources of NOTE](#resources-of-note)
 <!--- cSpell:enable --->
@@ -35,6 +37,17 @@ preview: ""
 
 <https://micropython.org/> - lean version of python for microcontrollers, like arduino\
 <https://circuitpython.org/> - beginner / easier to user version of the above for microcontrollers\
+
+## Tricks
+
+### Running python script from interactive shell
+
+<https://stackoverflow.com/questions/17247471/how-to-run-a-python-script-from-idle-interactive-shell>
+
+```bash
+python3
+exec(open('./app/filename.py').read())
+```
 
 ## Books
 
