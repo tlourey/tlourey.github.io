@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-06T01:13:44.538Z
+lastmod: 2025-04-10T16:43:39.435Z
 tags:
     - RaspberryPi
     - Tips
@@ -36,6 +36,7 @@ preview: ""
 * [vclog](#vclog)
 * [rfkill](#rfkill)
 * [Pairing a Bluetooth Keyboard](#pairing-a-bluetooth-keyboard)
+* [Sound](#sound)
 * [Tools](#tools)
 <!--- cSpell:enable --->
 
@@ -246,6 +247,13 @@ Some extra Commands inside bluetoothctl to help:\
 `power off`: turn the bluetooth controlled off (this isn't rfkill)
 
 More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.html>
+
+## Sound
+
+`aplay -l`: list sound devices via ALSA\
+`alsamixer`: set volume level and output
+
+<https://www.alsa-project.org/wiki/Asoundrc>
 
 ## Tools
 
