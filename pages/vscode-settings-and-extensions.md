@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-03-05T03:08:16.725Z
+lastmod: 2025-04-11T06:25:40.712Z
 tags:
     - VSCode
     - Tools
@@ -48,7 +48,12 @@ preview: ""
 ## Settings
 
 `"editor.renderWhitespace": "all",` \
-`"editor.renderControlCharacters": true,`: useful for rendering UNICODE Characters that sometimes are not good including invisible characters
+`"editor.renderControlCharacters": true,`: useful for rendering UNICODE Characters that sometimes are not good including invisible characters\
+`"files.eol": "\n"`: set end of line format aka CFLF or LF aka part of the Unix/Windows format (from [How to set default line endings in Visual Studio Code?](https://stackoverflow.com/questions/71240918/how-to-set-default-line-endings-in-visual-studio-code))
+
+> [!TIP] Check git settings
+> Git also has CRLF settings that matter, esp. if working between windows and non-windows machines. the setting is `autocrlf`. See [Git](git-commands.md#git-config)
+
 
 ## Custom Keyboard Shortcuts
 

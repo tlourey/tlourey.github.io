@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-03-23T21:13:10.557Z
+lastmod: 2025-04-11T07:04:55.216Z
 tags:
     - Commands
     - References
@@ -22,11 +22,12 @@ keywords:
 <!--- cSpell:disable --->
 * [Common Git Aliases](#common-git-aliases)
 * [Git CLI Setup](#git-cli-setup)
-  * [git config](#git-config)
+  * [git user config](#git-user-config)
   * [Git Credential Stuff](#git-credential-stuff)
     * [Git Credential Storage](#git-credential-storage)
     * [Git Credential Manager](#git-credential-manager)
       * [Github Device flow](#github-device-flow)
+  * [autocrlf](#autocrlf)
 * [Internet References](#internet-references)
 * [Copy a single file from one branch to another](#copy-a-single-file-from-one-branch-to-another)
 <!--- cSpell:enable --->
@@ -37,7 +38,7 @@ keywords:
 
 ## Git CLI Setup
 
-### git config
+### git user config
 
 ```bash
 git config --global user.name # get current value of user.name config
@@ -102,6 +103,33 @@ Useful for when login isn't associated with default browser
 2. Get code
 3. Go to <http://github.com/login/device>
 4. Enter code
+
+### autocrlf
+
+`git config core.autocrlf`: set up CRLF settings. Can be set per repo or globally.
+
+In theory it should be set to automatic during install but you may need to adjust.
+
+More Info:
+
+* <https://stackoverflow.com/a/20653073>: awesome stackoverflow on how it works, what it matters and how to address.
+* <https://git-scm.com/docs/gitattributes#_end_of_line_conversion>
+* <https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreautocrlf>
+
+> [!IMPORTANT] Git with Windows
+> This matters a lot work working with git on windows and linux machines. I don't know if things need to be changed from their defaults but an understanding should be sought.
+
+You can also look into `--renormalize` Option in git. <ins>I haven't</ins>, but here is a suggested answer: <https://stackoverflow.com/questions/7156694/git-how-to-renormalize-line-endings-in-all-files-in-all-revisions>
+
+> [!TIP] Set your Editor
+> Some settings also need to be configured in your editor. Look into how you can set it. See [`files.eol` under Settings in VSCode Settings and Extensions](vscode-settings-and-extensions.md#settings)
+
+There *may* be some value in looking up these settings:
+
+* `core.eol`: <https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreeol>
+* `core.safecrlf`: <https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresafecrlf>
+* <https://git-scm.com/docs/gitattributes#_eol>
+* <https://git-scm.com/docs/gitattributes#_end_of_line_conversion>
 
 ## Internet References
 
