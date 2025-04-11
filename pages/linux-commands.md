@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-11T01:09:30.653Z
+lastmod: 2025-04-11T02:08:48.447Z
 tags:
     - Commands
     - Linux
@@ -57,6 +57,7 @@ isdraft: false
   * [Misc SystemD Commands](#misc-systemd-commands)
   * [SystemD Reference Info](#systemd-reference-info)
     * [SystemD Paths](#systemd-paths)
+    * [systemd-halt.service](#systemd-haltservice)
     * [SystemD Timers](#systemd-timers)
   * [SystemD Links](#systemd-links)
 * [Network Commands](#network-commands)
@@ -548,6 +549,10 @@ by 'most' remember a service can be:
 * enabled/disabled
 * masked/unmasked - which changes pointers to /dev/null I think
 
+`sudo systemctl poweroff`: actual command run by `sudo poweroff` - see [systemd-halt.service](#systemd-haltservice)\
+`sudo systemctl reboot`: actual command run by `sudo reboot` - see [systemd-halt.service](#systemd-haltservice)\
+`sudo systemctl halt`: actual command run by `sudo halt` - see [systemd-halt.service](#systemd-haltservice)\
+
 You can have systemd override files (which apparently are like files in /etc/default/). these are supposed to be stored in: `/etc/systemd/system/snmptrapd.service.d/` for the snmptrapd.service
 
 [https://wiki.archlinux.org/title/Systemd](https://wiki.archlinux.org/title/Systemd)
@@ -616,8 +621,20 @@ This isn't really a command section but it will stay here until I find a better 
 
 `/usr/lib/systemd/system/`: units provided by installed packages\
 `/etc/systemd/system/`: units installed by the system administrator\
-`/etc/systemd/servicename.conf`: service config if it doesn't have its own folder
+`/etc/systemd/servicename.conf`: service config if it doesn't have its own folder\
 `/etc/systemd/system/servicename.service.d`: service that has its own folder. Could be used for a number of things but one thing it is used for is override files for servicename. SystemD concept of files in `/etc/default`\
+`/lib/systemd/system-shutdown/`/`/lib/systemd/system-shutdown/`: place to put shutdown scripts but has no services. See [systemd-halt.service](#systemd-haltservice)
+
+#### systemd-halt.service
+
+<https://www.freedesktop.org/software/systemd/man/latest/systemd-halt.service.html>
+
+> [!IMPORTANT] Sounds too good to be true because it is
+> Has no services available
+
+> *"Shortly before executing the actual system power-off/halt/reboot/kexec, systemd-shutdown will run all executables in `/usr/lib/systemd/system-shutdown/` and pass one arguments to them: either "poweroff", "halt", "reboot", or "kexec", depending on the chosen action. All executables in this directory are executed in parallel, and execution of the action is not continued before all executables finished. (A safety timeout of 90s is applied however.) Note that these executables are run <ins>after all services have been shut down, and after most mounts have been unmounted</ins> (the root file system as well as `/run/` and various API file systems are still around though). This means any programs dropped into this directory must be prepared to run in such a limited execution environment and not rely on external services or hierarchies such as `/var/` to be around (or writable)."*
+
+See also <https://www.freedesktop.org/software/systemd/man/latest/systemd-soft-reboot.service.html>
 
 #### SystemD Timers
 
