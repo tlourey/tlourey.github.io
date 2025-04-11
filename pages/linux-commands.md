@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-11T03:00:03.012Z
+lastmod: 2025-04-11T03:11:07.380Z
 tags:
     - Commands
     - Linux
@@ -624,7 +624,7 @@ This isn't really a command section but it will stay here until I find a better 
 `/etc/systemd/system/`: units installed by the system administrator\
 `/etc/systemd/servicename.conf`: service config if it doesn't have its own folder\
 `/etc/systemd/system/servicename.service.d`: service that has its own folder. Could be used for a number of things but one thing it is used for is override files for servicename. SystemD concept of files in `/etc/default`\
-`/lib/systemd/system-shutdown/`/`/lib/systemd/system-shutdown/`: place to put shutdown scripts but has no services. See [systemd-halt.service](#systemd-haltservice)
+`/lib/systemd/system-shutdown/`/`/usr/lib/systemd/system-shutdown/`: place to put shutdown scripts **but** gets run at the end and won't have any services or mounts. See [systemd-halt.service](#systemd-haltservice)
 
 #### systemd-halt.service
 
