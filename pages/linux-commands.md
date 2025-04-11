@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-10T09:18:47.084Z
+lastmod: 2025-04-11T01:09:30.653Z
 tags:
     - Commands
     - Linux
@@ -22,6 +22,10 @@ isdraft: false
 * [Kernel](#kernel)
 * [Terminal Stuff](#terminal-stuff)
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
+  * [Process Stuff](#process-stuff)
+    * [ps](#ps)
+    * [top](#top)
+    * [kill and killall](#kill-and-killall)
   * [Aliases](#aliases)
   * [TMUX](#tmux)
     * [screen](#screen)
@@ -162,6 +166,19 @@ column
 tail
 tail -f
 ```
+
+### Process Stuff
+
+#### ps
+
+#### top
+
+#### kill and killall
+
+`kill process_id`: send SIGTERM signal to process_id (aka: end yourself gracefully)\
+`kill -9 process_id`: send SIGKILL signal to process_id (aka forcekill)\
+`killall process_name`: send SIGTERM signal to **ALL** processes named process_name. This can be dangerous\
+`killall -9 process_name`: send SIGKILL (aka forcekill) signal to **ALL** processes named process_name. This is even more dangious
 
 ### Aliases
 
