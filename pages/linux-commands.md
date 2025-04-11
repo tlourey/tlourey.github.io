@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-11T03:27:21.672Z
+lastmod: 2025-04-11T15:04:48.977Z
 tags:
     - Commands
     - Linux
@@ -560,14 +560,17 @@ You can have systemd override files (which apparently are like files in /etc/def
 
 #### journalctl
 
-**`sudo journalctl -xe`** most common use. jumps to end of journal logs and shows extra info about log entries
+**`sudo journalctl -xe`** most common use. jumps to end of journal logs and shows extra info about log entries\
+**`sudo journalctl -ef`** 2nd most common use case. Jump to end and follow for more\
+`sudo journalctl -xef` 3rd most common use case. Jump to end and follow for more, and give extra info
 
 `sudo journalctl -e` jumps to the end\
+`sudo journalctl -x` gives extra info\
+`sudo journalctl -f` follow logs live\
 `sudo journalctl -u service_name` show logs about a particular service\
 `sudo journalctl --no-pager` don't page logs\
 `sudo journalctl -r` show logs in reverse order\
 `sudo journalctl -n 25` show most recent 25 lines\
-`sudo journalctl -f` follow logs live\
 `sudo journalctl --utc` if you want them in utc\
 `sudo journalctl -k` # Kernel messages only\
 `sudo journalctl --since=yesterday --until=now`\
