@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-11T02:12:57.445Z
+lastmod: 2025-04-11T02:26:18.924Z
 tags:
     - Commands
     - Linux
@@ -703,10 +703,11 @@ More: <https://wiki.archlinux.org/title/Systemd/Timers#As_a_cron_replacement>
 * <https://www.freedesktop.org/software/systemd/man/latest/>
 * <https://wiki.archlinux.org/title/Systemd>
 * <https://www.man7.org/linux/man-pages/man1/systemd.1.html>
+* <https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html>: Unit file explanation and some syntax from man page
+* <https://www.freedesktop.org/software/systemd/man/latest/systemd.syntax.html#>: systemd.syntax - General syntax of systemd configuration files
+* <https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files>
 * <https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal>
 * <https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs>
-* <https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files>
-* <https://www.freedesktop.org/software/systemd/man/latest/>
 * <https://linuxhandbook.com/journalctl-command/>
 * <https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux>
 * <https://www.redhat.com/sysadmin/systemd-commands>
