@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-11T07:54:04.528Z
+lastmod: 2025-04-11T07:54:36.375Z
 tags:
     - Linux
     - References
@@ -72,9 +72,9 @@ See also [man pages in Linux Commands](linux-commands.md#man-pages)
 * <https://unix.stackexchange.com/questions/5642/what-if-kill-9-does-not-work> (this is not so much required reading but it is inslightful)
 
 SIGKILL: FORCE QUIT NO MATTER WHAT - CANNOT BE IGNORED\
-SIGINT: <kbd><kbd>Ctrl</kbd>+<kbd>C</kbd></kbd> in a terminal. "stop what you're doing right now and wait for further user input". Non-interactive programs usually treat it like SIGTERM
-SIGTERM: Normal Kill signal. "App exit cleanly"
-SIGHUP: SIGTERM but occurs when you disconnect from terminal. For daemons, this should mean "reload your configuration"
+SIGINT: <kbd><kbd>Ctrl</kbd>+<kbd>C</kbd></kbd> in a terminal. "stop what you're doing right now and wait for further user input". Non-interactive programs usually treat it like SIGTERM\
+SIGTERM: Normal Kill signal. "App exit cleanly"\
+SIGHUP: SIGTERM but occurs when you disconnect from terminal. For daemons, this should mean "reload your configuration"\
 SIGQUIT: harshest of the ignorable signals. App is misbehaving and should bekilled now, also leave a core dump if configured. Apps can set a handler as something is pretty wrong.
 
 <!-- markdownlint-disable MD033 -->
