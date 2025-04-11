@@ -1,24 +1,32 @@
 ---
-title: Linux References
-description: This may not be the right place for this.
+title: Linux Tips
+description: Tips and Tricks
 published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-11T02:11:55.807Z
+lastmod: 2025-04-11T03:27:03.968Z
 tags:
     - Linux
+    - References
     - Security
+    - Tips
 isdraft: true
 fmContentType: pages
 mermaid: false
 preview: ""
+keywords:
+    - Linux
+    - Tips
+    - Tricks
+    - Security
 ---
 
 <!--- cSpell:disable --->
 * [Man Page sections](#man-page-sections)
+* [Running scripts at shutdown or reboot via SystemD](#running-scripts-at-shutdown-or-reboot-via-systemd)
 * [Ubuntu and Debian Package Urgency](#ubuntu-and-debian-package-urgency)
   * [Using the urgency value](#using-the-urgency-value)
     * [apt-listchanges](#apt-listchanges)
@@ -29,9 +37,9 @@ preview: ""
   * [SystemD Timers](#systemd-timers)
 <!--- cSpell:enable --->
 
-* [ ] Consider placement or naming: This may not be the right place for this. Maybe this page should be Linux Tips or it shoud be put into Linux Tools.
-
 ## Man Page sections
+
+* [ ] Consider placement of this topic as its more of a reference.
 
 1 - Executable programs or shell commands\
 2 - System calls (functions provided by the kernel)\
@@ -53,6 +61,23 @@ Web based man pages:
 * <https://manpages.debian.org/>
 
 See also [man pages in Linux Commands](linux-commands.md#man-pages)
+
+## Running scripts at shutdown or reboot via SystemD
+
+If you have seen a tip that suggests you put a script you want run at shutdown/reboot/poweroff/halt in `/lib/systemd/system-shutdown/` or `/usr/lib/systemd/system-shutdown/` and it doesn't work, there is a **big catch!**
+
+From <https://www.freedesktop.org/software/systemd/man/latest/systemd-halt.service.html>:
+
+> *"Shortly before executing the actual system power-off/halt/reboot/kexec, systemd-shutdown will run all executables in `/usr/lib/systemd/system-shutdown/` and pass one arguments to them: either "poweroff", "halt", "reboot", or "kexec", depending on the chosen action. All executables in this directory are executed in parallel, and execution of the action is not continued before all executables finished. (A safety timeout of 90s is applied however.) Note that these executables are run <ins>after all services have been shut down, and after most mounts have been unmounted</ins> (the root file system as well as `/run/` and various API file systems are still around though). This means any programs dropped into this directory must be prepared to run in such a limited execution environment and not rely on external services or hierarchies such as `/var/` to be around (or writable)."*
+
+This means if your script needs certin things it may fail.
+
+Alternatives are:
+
+* [systemd-soft-reboot.service](https://www.freedesktop.org/software/systemd/man/latest/systemd-soft-reboot.service.html) - I haven't looked into this, not sure how useful it is as it only reboots userspace.
+* Create a SystemD Service to run your script at shutdown ([REF](https://raspberrypi.stackexchange.com/questions/89732/run-a-script-at-shutdown-on-raspbian#:~:text=EDIT%3A%20If%20it%27s%20not%20working%20try%20this%20one%3A))
+
+Based off: <https://raspberrypi.stackexchange.com/questions/89732/run-a-script-at-shutdown-on-raspbian>
 
 ## Ubuntu and Debian Package Urgency
 

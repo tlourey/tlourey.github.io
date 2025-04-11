@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-11T03:11:07.380Z
+lastmod: 2025-04-11T03:27:21.672Z
 tags:
     - Commands
     - Linux
@@ -631,11 +631,11 @@ This isn't really a command section but it will stay here until I find a better 
 <https://www.freedesktop.org/software/systemd/man/latest/systemd-halt.service.html>
 
 > [!IMPORTANT] Sounds too good to be true because it is
-> Has no services available
+> Has no services or mounts available. See [Running scripts at shutdown or reboot via SystemD](linux-tips.md#running-scripts-at-shutdown-or-reboot-via-systemd) for more info and alternatives.
 
-> *"Shortly before executing the actual system power-off/halt/reboot/kexec, systemd-shutdown will run all executables in `/usr/lib/systemd/system-shutdown/` and pass one arguments to them: either "poweroff", "halt", "reboot", or "kexec", depending on the chosen action. All executables in this directory are executed in parallel, and execution of the action is not continued before all executables finished. (A safety timeout of 90s is applied however.) Note that these executables are run <ins>after all services have been shut down, and after most mounts have been unmounted</ins> (the root file system as well as `/run/` and various API file systems are still around though). This means any programs dropped into this directory must be prepared to run in such a limited execution environment and not rely on external services or hierarchies such as `/var/` to be around (or writable)."*
+Amonsgt other things, it runs scripts in `/lib/systemd/system-shutdown/`/`/usr/lib/systemd/system-shutdown/` when shutting donw **but** they get run at the end and won't have any services or mounts. See [Running scripts at shutdown or reboot via SystemD](linux-tips.md#running-scripts-at-shutdown-or-reboot-via-systemd) for more info and alternatives.
 
-See also <https://www.freedesktop.org/software/systemd/man/latest/systemd-soft-reboot.service.html>
+See also <https://www.freedesktop.org/software/systemd/man/latest/systemd-soft-reboot.service.html> - not sure how helpful it is
 
 #### SystemD Timers
 
