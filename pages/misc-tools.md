@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-03-30T20:30:55.925Z
+lastmod: 2025-04-11T02:58:57.328Z
 keywords:
     - Tools
 ---
@@ -124,11 +124,19 @@ Check out [Misc KQL References and Resources](kql-queries.md#misc-kql-references
 
 **<https://learn.microsoft.com/en-us/windows/powertoys/>**\
 **<https://cmder.app/>**\
-<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html>\
+<https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html> - see also: [PuTTY Commands](putty-commands.md)\
 **<https://learn.microsoft.com/en-us/sysinternals/>**\
 **<https://www.vandyke.com/products/securecrt/windows.html> - Its not free but its good.**\
 <https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
-**[Total Commander](https://www.ghisler.com/)** - THE PIMP!\
+**[Total Commander](https://www.ghisler.com/)** - THE PIMP!
+
+* <https://www.ghisler.ch/wiki/index.php?title=Main_Page>: Total Commander Wiki (not sure if offical)
+* [Useful External Tools for Total Commander](https://www.ghisler.com/tools.htm)
+* **[Total Commander Plugiuns](https://www.ghisler.com/plugins.htm)**
+
+  > [!TIP] SFTP
+  > Note to self: When you forget, *again*, how to access an SSH Connection via the plugin: Its not in FTP Connections, its in Network Neighbourhood
+
 <https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandwagon yet but its not shit.
 
 ### Hardware
