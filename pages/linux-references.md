@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-04T02:55:52.367Z
+lastmod: 2025-04-11T02:11:55.807Z
 tags:
     - Linux
     - Security
@@ -18,6 +18,7 @@ preview: ""
 ---
 
 <!--- cSpell:disable --->
+* [Man Page sections](#man-page-sections)
 * [Ubuntu and Debian Package Urgency](#ubuntu-and-debian-package-urgency)
   * [Using the urgency value](#using-the-urgency-value)
     * [apt-listchanges](#apt-listchanges)
@@ -28,7 +29,30 @@ preview: ""
   * [SystemD Timers](#systemd-timers)
 <!--- cSpell:enable --->
 
-* [ ] Consider placement: This may not be the right place for this. Maybe this page should be Linux Tips or it shoud be put into Linux Tools.
+* [ ] Consider placement or naming: This may not be the right place for this. Maybe this page should be Linux Tips or it shoud be put into Linux Tools.
+
+## Man Page sections
+
+1 - Executable programs or shell commands\
+2 - System calls (functions provided by the kernel)\
+3 - Library calls (functions within program libraries)\
+4 - Special files (usually found in /dev)\
+5 - File formats and conventions, e.g. /etc/passwd\
+6 - Games\
+7 - Miscellaneous (including macro packages and conventions), e.g., man(7), groff(7)\
+8 - System administration commands (usually only for root)\
+9 - Kernel routines [Non-standard]
+
+Web based man pages:
+
+* **<https://linux.die.net/man/>**
+* <https://www.man7.org/linux/man-pages/>
+* <https://wiki.archlinux.org/title/Man_page>
+
+* <https://manpages.ubuntu.com/>
+* <https://manpages.debian.org/>
+
+See also [man pages in Linux Commands](linux-commands.md#man-pages)
 
 ## Ubuntu and Debian Package Urgency
 
