@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-04-09T14:44:21.247Z
+lastmod: 2025-04-12T07:21:49.730Z
 fmContentType: pages
 ---
 
@@ -35,6 +35,7 @@ fmContentType: pages
 * [Networking](#networking)
 * [Windows](#windows)
 * [Active Directory](#active-directory)
+* [Regex and Similar](#regex-and-similar)
 * [Search Tools](#search-tools)
   * [Google](#google)
 * [People](#people)
@@ -167,6 +168,14 @@ Also check [Windows Tips](windows-tips.md)
 ## Active Directory
 
 <https://admx.help/> - good group policy reference - except for all the ads
+
+## Regex and Similar
+
+* Regex for GUID/UUID that Notepad++ likes: `[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}`. From <https://stackoverflow.com/a/6640851>
+* Regexes for specific GUID/UUID Versions: <https://stackoverflow.com/a/38191078>
+
+For Useful Excel Formulas see [Excel Tips](excel-tips.md)\
+For very useful Regex Tools see [Software in Misc Tools](misc-tools.md#software-tools)
 
 ## Search Tools
 

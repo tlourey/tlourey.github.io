@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-10T09:11:16.603Z
+lastmod: 2025-04-12T07:22:58.980Z
 tags:
     - Language
     - Python
@@ -20,6 +20,7 @@ preview: ""
 <!--- cSpell:disable --->
 * [Standards](#standards)
 * [Variants](#variants)
+* [Tools](#tools)
 * [Tricks](#tricks)
   * [Running python script from interactive shell](#running-python-script-from-interactive-shell)
 * [Books](#books)
@@ -37,6 +38,10 @@ preview: ""
 
 <https://micropython.org/> - lean version of python for microcontrollers, like arduino\
 <https://circuitpython.org/> - beginner / easier to user version of the above for microcontrollers\
+
+## Tools
+
+See Regex Tools that cover Python in [Software Tools in Misc Tools](misc-tools.md#software-tools)
 
 ## Tricks
 
