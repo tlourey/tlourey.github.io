@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-11T07:56:05.186Z
+lastmod: 2025-04-12T00:59:55.315Z
 tags:
     - Linux
     - References
@@ -24,6 +24,7 @@ keywords:
     - Security
 ---
 
+<!--- cSpell:ignore kexec listchanges poweroff groff -->
 <!--- cSpell:disable --->
 * [Man Page sections](#man-page-sections)
 * [Termination Signals](#termination-signals)
@@ -69,13 +70,13 @@ See also [man pages in Linux Commands](linux-commands.md#man-pages)
 
 * **<https://unix.stackexchange.com/questions/251195/difference-between-less-violent-kill-signal-hup-1-int-2-and-term-15>**
 * <https://www.gnu.org/software/libc/manual/html_node/Termination-Signals.html>
-* <https://unix.stackexchange.com/questions/5642/what-if-kill-9-does-not-work> (this is not so much required reading but it is inslightful)
+* <https://unix.stackexchange.com/questions/5642/what-if-kill-9-does-not-work> (this is not so much required reading but it is insightful)
 
 SIGKILL: FORCE QUIT NO MATTER WHAT - CANNOT BE IGNORED\
-SIGINT: <kbd><kbd>Ctrl</kbd>+<kbd>C</kbd></kbd> in a terminal. "stop what you're doing right now and wait for further user input". Non-interactive programs usually treat it like SIGTERM\
+SIGINT: <kbd>Ctrl</kbd>+<kbd>C</kbd> in a terminal. "stop what you're doing right now and wait for further user input". Non-interactive programs usually treat it like SIGTERM\
 SIGTERM: Normal Kill signal. "App exit cleanly"\
 SIGHUP: SIGTERM but occurs when you disconnect from terminal. For daemons, this should mean "reload your configuration"\
-SIGQUIT: harshest of the ignorable signals. App is misbehaving and should bekilled now, also leave a core dump if configured. Apps can set a handler as something is pretty wrong.
+SIGQUIT: harshest of the ignorable signals. App is misbehaving and should be killed now, also leave a core dump if configured. Apps can set a handler as something is pretty wrong.
 
 <!-- markdownlint-disable MD033 -->
 <details>
@@ -105,11 +106,11 @@ From <https://www.freedesktop.org/software/systemd/man/latest/systemd-halt.servi
 
 > *"Shortly before executing the actual system power-off/halt/reboot/kexec, systemd-shutdown will run all executables in `/usr/lib/systemd/system-shutdown/` and pass one arguments to them: either "poweroff", "halt", "reboot", or "kexec", depending on the chosen action. All executables in this directory are executed in parallel, and execution of the action is not continued before all executables finished. (A safety timeout of 90s is applied however.) Note that these executables are run <ins>after all services have been shut down, and after most mounts have been unmounted</ins> (the root file system as well as `/run/` and various API file systems are still around though). This means any programs dropped into this directory must be prepared to run in such a limited execution environment and not rely on external services or hierarchies such as `/var/` to be around (or writable)."*
 
-This means if your script needs certin things it may fail.
+This means if your script needs certain things it may fail.
 
 Alternatives are:
 
-* [systemd-soft-reboot.service](https://www.freedesktop.org/software/systemd/man/latest/systemd-soft-reboot.service.html) - I haven't looked into this, not sure how useful it is as it only reboots userspace.
+* [systemd-soft-reboot.service](https://www.freedesktop.org/software/systemd/man/latest/systemd-soft-reboot.service.html) - I haven't looked into this, not sure how useful it is as it only reboots user-space.
 * Create a SystemD Service to run your script at shutdown ([REF](https://raspberrypi.stackexchange.com/questions/89732/run-a-script-at-shutdown-on-raspbian#:~:text=EDIT%3A%20If%20it%27s%20not%20working%20try%20this%20one%3A))
 
 Based off: <https://raspberrypi.stackexchange.com/questions/89732/run-a-script-at-shutdown-on-raspbian>
@@ -146,7 +147,7 @@ From <https://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be
 
 Install: `sudo apt install apt-listchanges`
 
-Run this oneliner:
+Run this one-liner:
 
 ```bash
 (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges -h --latest=1 *.deb) | grep urgency
@@ -219,7 +220,7 @@ Reboots:
 
 See <https://documentation.ubuntu.com/server/how-to/software/automatic-updates/#reboots>
 
-Default is false. Change to true if it should autoreboot the server.
+Default is false. Change to true if it should auto-reboot the server.
 If changing to true consider if `Automatic-Reboot-WithUsers` and/or `Unattended-Upgrade::Automatic-Reboot-Time` should be changed.
 
 ```python
