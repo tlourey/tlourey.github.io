@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-12T00:44:41.185Z
+lastmod: 2025-04-12T14:05:04.337Z
 tags:
     - RaspberryPi
     - Tips
@@ -49,7 +49,7 @@ keywords:
 
 <https://www.raspberrypi.com/documentation/>
 
-<!-- 
+<!--
 Reference or tip?
 -->
 
@@ -160,7 +160,7 @@ Script I found to do this while googing: <https://github.com/ghollingworth/overl
 
 ## config.txt
 
-<!-- 
+<!--
 More a reference than tip
 -->
 
@@ -175,7 +175,7 @@ Before bookworm it was in `/boot/config.txt`
 
 ## cmdline.txt
 
-<!-- 
+<!--
 More a reference than tip
 -->
 
@@ -210,6 +210,7 @@ dtparam=poe_fan_temp2=75000
 dtparam=poe_fan_temp3=80000
 ```
 
+<!-- markdownlint-disable MD029 -->
 7. Press 'Control+X' on your keyboard to exit
 8. Press 'Y' on your keyboard to agree to overwriting the file
 9. Press 'Enter' to confirm
@@ -217,6 +218,7 @@ dtparam=poe_fan_temp3=80000
 11. reboot your pi using the command
 12. sudo reboot
 13. The fan should work with your new settings now
+<!-- markdownlint-enable MD029 -->
 
 ## vcgencmd
 
@@ -283,7 +285,43 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 
 `aplay -l`: list sound devices via ALSA. <https://linux.die.net/man/1/aplay>\
 `alsamixer`: Interactive TUI mixer for setting volume levels. <https://linux.die.net/man/1/alsamixer>\
-`amixer`: cmdline mixer for ALSA. <https://linux.die.net/man/1/amixer>\
+`amixer`: cmdline mixer for ALSA. <https://linux.die.net/man/1/amixer>:\
+
+* `amixer -c <CARDNAME> info`: show the info about a mixer device for CARDNAME. CARDNAME can be a friendly name like HDMI or a USB Speaker device name, or a card number.
+* `amixer -c <CARDNAME> scontrols`: Show me the simple controls for CARDNAME.
+* `amixer -c <CARDNAME> scontents`: show me the simple controls and some more details about them for CARDNAME
+* `amixer -c <CARDNAME> get <SCONTROL>`: get the current simple control value (`get` is an alias `sget`)
+* `amixer -c <CARDNAME> set <SCONTROL> <PARAMETER>`: set the current simple control parameter. (`set` is an alias of `sset`):
+  > Sets the simple mixer control contents. The parameter can be the volume either as a percentage from 0% to 100% with % suffix, a dB gain with *dB* suffix (like -12.5dB), or an exact hardware value. The dB gain can be used only for the mixer elements with available dB information. When plus(+) or minus(-) letter is appended after volume value, the volume is incremented or decremented from the current value, respectively.
+  >
+  > The parameters *cap, nocap, mute, unmute, toggle* are used to change capture (recording) and muting for the group specified.
+  >
+  > The optional modifiers can be put as extra parameters to specify the stream direction or channels to apply. The modifiers *playback* and *capture* specify the stream, and the modifiers *front, rear, center, woofer* are used to specify channels to be changed.
+  >
+  > A simple mixer control must be specified. Only one device can be controlled at a time.
+* `amixer -c <CARDNAME> controls`: show me the controls for CARDNAME. This will show you the numid's you can use for this card.
+* `amixer -c <CARDNAME> contents`: show me the controls and some more details about them for CARDNAME. This will show you the numids for this card and their values and how they work.
+* `amixer -c <CARDNAME> cget <CONTROL>`: get the current control value
+* `amixer -c <CARDNAME> cset <CONTROL> <PARAMETER>`: set the current control paramater\
+
+  Examples from man page:
+  > `amixer -c 1 sset Line,0 80%,40% unmute cap`: will set the second soundcard's left line input volume to 80% and right line input to 40%, unmute it, and select it as a source for capture (recording).\
+  > `amixer -c 1 -- sset Master playback -20dB`: will set the master volume of the second card to -20dB. If the master has multiple channels, all channels are set to the same value.\
+  > `amixer -c 1 set PCM 2dB+`: will increase the PCM volume of the second card with 2dB. When both playback and capture volumes exist, this is applied to both volumes.\
+  > `amixer -c 2 cset iface=MIXER,name='Line Playback Volume",index=1 40%`: will set the third soundcard's second line playback volume(s) to 40%\
+  > `amixer -c 2 cset numid=34 40%`: will set the 34th soundcard element to 40%
+
+  My examples:
+
+  ```bash
+  sudo amixer -c Ego set ummute
+  sudo amixer -c Ego set PCM 75%
+  sudo amixer -c Ego set PCM unmute playback 50%
+
+  sudo amixer -c Ego cset numid=5 50%,50%
+  sudo amixer -c Ego cset numid=5 12,12
+   ```
+
 `sudo speaker-test -c2 -D <devicename>`: test the speakers. May need sudo. <https://linux.die.net/man/1/speaker-test>
 
 `~/.asoundrc` file syntax: <https://www.alsa-project.org/wiki/Asoundrc>
