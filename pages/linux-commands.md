@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-11T15:04:48.977Z
+lastmod: 2025-04-12T07:49:15.044Z
 tags:
     - Commands
     - Linux
@@ -207,8 +207,8 @@ To make permanent, add alias to:
 
 #### screen
 
-`screen -S my-session-name`: create session and name it my session name\
 `screen -r`: resume sessions\
+`screen -S my-session-name`: create session and name it my session name\
 `screen -r my-session-name`: reconnect to my session name\
 `screen -ls`: Show screens
 `screen -S my-session-name -dm "~/myscript.sh"`: create screen called my session name, run `~/myscript.sh` then detach
