@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2024-12-12T18:04:19.415Z
-lastmod: 2025-04-12T07:27:48.036Z
+lastmod: 2025-04-12T07:31:02.387Z
 tags:
     - DNS
     - Security
@@ -422,6 +422,7 @@ Extra Instance Blocking Info: <>
 * [ ] salesforce
 * [ ] liveramp
 * [ ] Microsoft
+* [ ] Shopify
 
 ### Unknown
 
