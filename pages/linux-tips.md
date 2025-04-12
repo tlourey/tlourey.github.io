@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-12T00:59:55.315Z
+lastmod: 2025-04-12T09:20:50.861Z
 tags:
     - Linux
     - References
@@ -28,6 +28,7 @@ keywords:
 <!--- cSpell:disable --->
 * [Man Page sections](#man-page-sections)
 * [Termination Signals](#termination-signals)
+* [Aliases](#aliases)
 * [Running scripts at shutdown or reboot via SystemD](#running-scripts-at-shutdown-or-reboot-via-systemd)
 * [Ubuntu and Debian Package Urgency](#ubuntu-and-debian-package-urgency)
   * [Using the urgency value](#using-the-urgency-value)
@@ -97,6 +98,13 @@ SIGQUIT: harshest of the ignorable signals. App is misbehaving and should be kil
 >
 </details>
 <!-- markdownlint-enable MD033 -->
+
+## Aliases
+
+**Aliases can be a double edged sword.**
+
+When setting up aliases, consider that: If you add an option to a command as an alias, when you remote to a new system, it may not have that alias.\
+\Consider the usefulness of a permanent alias vs the gain in muscle memory
 
 ## Running scripts at shutdown or reboot via SystemD
 
