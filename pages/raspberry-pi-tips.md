@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-12T14:05:04.337Z
+lastmod: 2025-04-12T16:20:17.180Z
 tags:
     - RaspberryPi
     - Tips
@@ -282,6 +282,18 @@ Some extra Commands inside bluetoothctl to help:\
 More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.html>
 
 ## Sound
+
+`alsactl`: advanced controls for ALSA soundcard driver. <https://linux.die.net/man/1/alsactl>:\
+
+* `sudo alsactl store`: stores current settings in `/var/lib/alsa/asound.state`
+* `alsactl --file ~/.config/asound.state store`
+* `alsactl --file ~/.config/asound.state restore`
+* More commands from: <https://askubuntu.com/questions/50067/how-to-save-alsamixer-settings>
+  > 1. `sudo alsamixer`
+  > 2. do not exit alsamixer
+  > 3. in a new terminal `sudo alsactl store`
+* `sudo alsactl dump-state`
+* `sudo alsactl dump-cfg`
 
 `aplay -l`: list sound devices via ALSA. <https://linux.die.net/man/1/aplay>\
 `alsamixer`: Interactive TUI mixer for setting volume levels. <https://linux.die.net/man/1/alsamixer>\
