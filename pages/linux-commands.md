@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-12T07:49:15.044Z
+lastmod: 2025-04-12T09:18:37.619Z
 tags:
     - Commands
     - Linux
@@ -21,6 +21,8 @@ isdraft: false
   * [man pages](#man-pages)
 * [Kernel](#kernel)
 * [Terminal Stuff](#terminal-stuff)
+  * [Built in bash commands](#built-in-bash-commands)
+  * [Redirection](#redirection)
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
   * [Process Stuff](#process-stuff)
     * [ps](#ps)
@@ -156,6 +158,49 @@ modinfo
 <https://web.archive.org/web/20160911181750/https://www.centos.org/docs/5/html/5.1/Deployment_Guide/s1-kernel-module-utils.html>
 
 ## Terminal Stuff
+
+### Built in bash commands
+
+More info and options for the commands below: <https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html>
+
+```bash
+disown
+alias
+bind
+builtin
+caller
+command
+declare
+echo
+enable
+help
+let
+local
+logout
+mapfile
+printf
+read
+readarray
+source
+type
+typeset
+ulimit
+unalias
+```
+
+### Redirection
+
+```bash
+command &
+command > filename.txt
+command >> filename.txt
+```
+
+Redirect stdout to one file and stderr to another file: `command > out 2>error`\
+Redirect stdout to a file (>out), and then redirect stderr to stdout (2>&1): `command >out 2>&1`
+Redirect both to a file (this isn't supported by all shells, `bash` and `zsh` support it, for example, but `sh` and `ksh` do not): `command &> out`
+
+* [ ] this section needs more fleshing out and other examples
 
 ### Terminal Filtering and Monitoring
 
