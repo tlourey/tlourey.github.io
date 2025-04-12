@@ -1,20 +1,23 @@
 ---
 title: Raspberry Pi Tips
-description: Tips and tricks for the PI.
+description: Tips, tricks and things to remember for the PI.
 published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-10T16:43:39.435Z
+lastmod: 2025-04-12T00:44:41.185Z
 tags:
     - RaspberryPi
     - Tips
+    - Linux
 isdraft: true
 fmContentType: pages
-mermaid: "false"
+mermaid: false
 preview: ""
+keywords:
+    - Raspberry Pi
 ---
 
 <!--- cSpell:disable --->
@@ -29,6 +32,7 @@ preview: ""
 * [raspi-config non-interactive](#raspi-config-non-interactive)
 * [Read only SD Card](#read-only-sd-card)
 * [config.txt](#configtxt)
+* [cmdline.txt](#cmdlinetxt)
 * [Controlling a Raspberry Pi Fan](#controlling-a-raspberry-pi-fan)
   * [Checking settings](#checking-settings)
   * [Modifying RPM Config](#modifying-rpm-config)
@@ -38,11 +42,16 @@ preview: ""
 * [Pairing a Bluetooth Keyboard](#pairing-a-bluetooth-keyboard)
 * [Sound](#sound)
 * [Tools](#tools)
+* [Misc References](#misc-references)
 <!--- cSpell:enable --->
 
 ## Documentation
 
 <https://www.raspberrypi.com/documentation/>
+
+<!-- 
+Reference or tip?
+-->
 
 ## Differenes between RaspberryPi OS Editions
 
@@ -151,12 +160,29 @@ Script I found to do this while googing: <https://github.com/ghollingworth/overl
 
 ## config.txt
 
+<!-- 
+More a reference than tip
+-->
+
 RaspberryPi BIOS Settings
 
 For bookworm onwards its located in: `/boot/firmware/config.txt`\
 Before bookworm it was in `/boot/config.txt`
 
 <https://www.raspberrypi.com/documentation/computers/config_txt.html#what-is-config-txt>
+
+<https://elinux.org/RPiconfig>
+
+## cmdline.txt
+
+<!-- 
+More a reference than tip
+-->
+
+<https://elinux.org/RPi_cmdline.txt>
+
+For bookworm onwards its located in: `/boot/firmware/cmdline.txt`\
+Before bookworm it was in `/boot/cmdline.txt`
 
 ## Controlling a Raspberry Pi Fan
 
@@ -195,7 +221,12 @@ dtparam=poe_fan_temp3=80000
 ## vcgencmd
 
 `vcgencmd measure_temp`: Get temp of Pi\
-`vcgencmd get_config`: show config.txt settings. see <https://www.raspberrypi.com/documentation/computers/config_txt.html#what-is-config-txt>\
+`vcgencmd get_config <command>`: show config.txt settings. see <https://www.raspberrypi.com/documentation/computers/config_txt.html#what-is-config-txt>
+
+* `vcgencmd get_config <config>` - lists a specific config value. E.g. vcgencmd get_config arm_freq\
+* `vcgencmd get_config int` - lists all the integer config options that are set (non-zero)\
+* `vcgencmd get_config str` - lists all the string config options that are set (non-null)\
+
 `vcgencmd commands`: show other vcgencmd commands
 
 More info:
@@ -250,12 +281,21 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 
 ## Sound
 
-`aplay -l`: list sound devices via ALSA\
-`alsamixer`: set volume level and output
+`aplay -l`: list sound devices via ALSA. <https://linux.die.net/man/1/aplay>\
+`alsamixer`: Interactive TUI mixer for setting volume levels. <https://linux.die.net/man/1/alsamixer>\
+`amixer`: cmdline mixer for ALSA. <https://linux.die.net/man/1/amixer>\
+`sudo speaker-test -c2 -D <devicename>`: test the speakers. May need sudo. <https://linux.die.net/man/1/speaker-test>
 
-<https://www.alsa-project.org/wiki/Asoundrc>
+`~/.asoundrc` file syntax: <https://www.alsa-project.org/wiki/Asoundrc>
+
+`ls /proc/asound/cards`\
+`ls /proc/asound/card2`
 
 ## Tools
 
 [Raspberry Pi SD Card Image Manager](https://github.com/gitbls/sdm)\
 [Pi-Gen](https://github.com/RPi-Distro/pi-gen): Tool used to create the official Raspberry Pi OS images (can also create custom images)
+
+## Misc References
+
+[Embedded Linux Wiki](https://elinux.org/Main_Page)
