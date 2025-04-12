@@ -1,105 +1,106 @@
 {
-	"cSpell.dictionaries": [
-		"markdown",
-		"ruby"
-	],
-	"cSpell.words": [
-		"bootvar",
-		"cmder",
-		"Contenttype",
-		"cslint",
-		"CSOM",
-		"DMARC",
-		"dpkg",
-		"Entra",
-		"giscus",
-		"lastmod",
-		"MPLS",
-		"Netgear",
-		"NGAV",
-		"NGFW",
-		"Omnissa",
-		"SIEM",
-		"TAXII",
-		"Telco",
-		"tftpboot",
-		"Ubiquiti",
-		"VLSM"
-	],
-	"cSpell.languageSettings": [
-      {
-          // use with Markdown files
-          "languageId": "markdown",
-          // Exclude code.
-          "ignoreRegExpList": [
-              "/^\\s*```[\\s\\S]*?^\\s*```/gm"
-          ]
-      }
-  	],
-	"todo-tree.tree.scanMode": "workspace only",
-	"files.defaultLanguage": "markdown",
-	// "[markdown]": {
-	// 	"editor.fontSize": 14,
-	// 	"editor.lineHeight": 26,
-	// 	"editor.wordWrap": "wordWrapColumn",
-	// 	"editor.wordWrapColumn": 64,
-	// 	"editor.lineNumbers": "off",
-	// 	"editor.quickSuggestions": false,
-	// 	"editor.minimap.enabled": false
-	// },
-	"markdown.extension.preview.autoShowPreviewToSide": false,
-	"cSpell.enabled": true,
-	"cSpell.ignoreWords": [
-		"BLUF",
-		"Contoso",
-		"Fastly",
-		"OneLiners",
-		"SNMP",
-		"azuremonitoragent",
-		"endfor",
-		"frontmatter",
-		"hostgroups",
-		"isdraft",
-		"lastmod",
-		"omfwd",
-		"sshcon"
-	],    
-	"markdownlint.config": {
+    "cSpell.dictionaries": [
+        "markdown",
+        "ruby"
+    ],
+    "cSpell.words": [
+        "bootvar",
+        "cmder",
+        "Contenttype",
+        "cslint",
+        "CSOM",
+        "DMARC",
+        "dpkg",
+        "Entra",
+        "giscus",
+        "lastmod",
+        "MPLS",
+        "Netgear",
+        "NGAV",
+        "NGFW",
+        "Omnissa",
+        "SIEM",
+        "TAXII",
+        "Telco",
+        "tftpboot",
+        "Ubiquiti",
+        "VLSM"
+    ],
+    "cSpell.languageSettings": [
+        {
+            // use with Markdown files
+            "languageId": "markdown",
+            // Exclude code.
+            "ignoreRegExpList": [
+                "/^\\s*```[\\s\\S]*?^\\s*```/gm",
+                "`[^`]*`"
+            ]
+        }
+    ],
+    "todo-tree.tree.scanMode": "workspace only",
+    "files.defaultLanguage": "markdown",
+    // "[markdown]": {
+    // 	"editor.fontSize": 14,
+    // 	"editor.lineHeight": 26,
+    // 	"editor.wordWrap": "wordWrapColumn",
+    // 	"editor.wordWrapColumn": 64,
+    // 	"editor.lineNumbers": "off",
+    // 	"editor.quickSuggestions": false,
+    // 	"editor.minimap.enabled": false
+    // },
+    "markdown.extension.preview.autoShowPreviewToSide": false,
+    "cSpell.enabled": true,
+    "cSpell.ignoreWords": [
+        "BLUF",
+        "Contoso",
+        "Fastly",
+        "OneLiners",
+        "SNMP",
+        "azuremonitoragent",
+        "endfor",
+        "frontmatter",
+        "hostgroups",
+        "isdraft",
+        "lastmod",
+        "omfwd",
+        "sshcon"
+    ],    
+    "markdownlint.config": {
         "MD033": {
             "allowed_elements": [
-				"details",
-				"summary",
-				"ins",
-				"kbd",
-				"sup",
-				"br"
-			]
+                "details",
+                "summary",
+                "ins",
+                "kbd",
+                "sup",
+                "br"
+            ]
         },
         "MD028": false
     },
-	"git.branchProtectionPrompt": "alwaysCommit",
-	"frontMatter.content.grouping": [
+    "git.branchProtectionPrompt": "alwaysCommit",
+    "frontMatter.content.grouping": [
         {
-			"title": "type", "name": "type" 
-		},
-		{
-			"title": "isdraft", "name": "isdraft"
-		},
-		{
-			"title": "published", "name": "published"
-		},
-		{
-			"title": "categories", "name": "categories"
-		},
-		{
-			"title": "tags", "name": "tags"
-		}
-	],
-	"frontMatter.dashboard.openOnStart": true,
-	"frontMatter.git.enabled": true,
-	// "frontMatter.global.timezone": "AEST",
-	"frontMatter.site.baseURL": "https://tlourey.github.io",
-	"frontMatter.templates.enabled": true,
-	"frontMatter.panel.openOnSupportedFile": true
+            "title": "type", "name": "type" 
+        },
+        {
+            "title": "isdraft", "name": "isdraft"
+        },
+        {
+            "title": "published", "name": "published"
+        },
+        {
+            "title": "categories", "name": "categories"
+        },
+        {
+            "title": "tags", "name": "tags"
+        }
+    ],
+    "frontMatter.dashboard.openOnStart": true,
+    "frontMatter.git.enabled": true,
+    // "frontMatter.global.timezone": "AEST",
+    "frontMatter.site.baseURL": "https://tlourey.github.io",
+    "frontMatter.templates.enabled": true,
+    "frontMatter.panel.openOnSupportedFile": true
 
 }
