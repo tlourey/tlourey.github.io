@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T13:05:00
-lastmod: 2025-04-13T07:41:48.905Z
+lastmod: 2025-04-13T07:57:41.404Z
 tags:
     - Language
     - Linux
@@ -51,6 +51,8 @@ fi
 
 ### debugging bash scripts
 
+Based off: <https://unix.stackexchange.com/questions/155551/how-to-debug-a-bash-script>
+
 `bash -x ./script.sh` OR\
 add `set -x` in your script to see debug output. You can also use `set` to only debug sections:
 
@@ -75,9 +77,9 @@ PS4='$LINENO: '
 
 See <https://unix.stackexchange.com/questions/155551/how-to-debug-a-bash-script> for examples of using the logger command in your script.
 
-From <https://unix.stackexchange.com/questions/155551/how-to-debug-a-bash-script>
-
 If you really want better logging in your bash script, you could look into [log4bash](https://github.com/fredpalmer/log4bash)
+
+TLDP Debugging Guide: <https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_02_03.html>
 
 ### Misc
 
