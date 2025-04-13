@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-12T07:22:58.980Z
+lastmod: 2025-04-13T07:22:00.774Z
 tags:
     - Language
     - Python
@@ -23,6 +23,7 @@ preview: ""
 * [Tools](#tools)
 * [Tricks](#tricks)
   * [Running python script from interactive shell](#running-python-script-from-interactive-shell)
+* [Quirks to remember](#quirks-to-remember)
 * [Books](#books)
 * [Resources of NOTE](#resources-of-note)
 <!--- cSpell:enable --->
@@ -53,6 +54,12 @@ See Regex Tools that cover Python in [Software Tools in Misc Tools](misc-tools.m
 python3
 exec(open('./app/filename.py').read())
 ```
+
+## Quirks to remember
+
+`os.environ.get('ENVVAR', 'value if env missing)` always returns as a string object. Cast it as an int (or other type) if required. eg: `int(os.environ.get('ENVVAR', 'value if env missing))`
+
+Yes this is a pertty basic concept but its here to more remember what 'os.environ.get()` returns as.
 
 ## Books
 
