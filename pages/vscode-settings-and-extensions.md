@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-04-12T01:08:36.210Z
+lastmod: 2025-04-13T07:51:27.783Z
 tags:
     - VSCode
     - Tools
@@ -53,7 +53,7 @@ preview: ""
 `"files.eol": "\n"`: set end of line format aka CRLF or LF aka part of the Unix/Windows format (from [How to set default line endings in Visual Studio Code?](https://stackoverflow.com/questions/71240918/how-to-set-default-line-endings-in-visual-studio-code))
 
 > [!TIP] Check git settings
-> Git also has CRLF settings that matter, esp. if working between windows and non-windows machines. the setting is `autocrlf`. See [Git](git-commands.md#git-config)
+> Git also has CRLF settings that matter, esp. if working between windows and non-windows machines. the setting is `autocrlf`. See [autocrlf in Git Commands](git-commands.md#autocrlf)
 
 ## Custom Keyboard Shortcuts
 
