@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-12T09:18:37.619Z
+lastmod: 2025-04-13T06:14:59.277Z
 tags:
     - Commands
     - Linux
@@ -22,6 +22,7 @@ isdraft: false
 * [Kernel](#kernel)
 * [Terminal Stuff](#terminal-stuff)
   * [Built in bash commands](#built-in-bash-commands)
+  * [Environment Variables](#environment-variables)
   * [Redirection](#redirection)
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
   * [Process Stuff](#process-stuff)
@@ -161,32 +162,112 @@ modinfo
 
 ### Built in bash commands
 
-More info and options for the commands below: <https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html>
-
 ```bash
-disown
 alias
+bg
 bind
+break
 builtin
 caller
+cd
 command
+compgen
+complete
+compopt
+continue
 declare
+dirs
+disown
 echo
 enable
+eval
+exec
+exit
+export
+false
+fc
+fg
+getopts
+hash
 help
+history
+jobs
+kill
 let
 local
 logout
 mapfile
+popd
 printf
+pushd
+pwd
 read
 readarray
+readonly
+return
+set
+shift
+shopt
 source
+suspend
+test
+times
+trap
+true
 type
 typeset
 ulimit
+umask
 unalias
+unset
+wait
 ```
+
+More info on the commands above:
+
+* <https://linux.die.net/man/1/bash#:~:text=the%20event%20line.-,Shell%20Builtin%20Commands,-Unless%20otherwise%20noted> - some but not all
+* <https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html> - some but not all
+
+* See <https://linux.die.net/man/1/bash>
+
+### Environment Variables
+
+To see **ALL** current environment variables and their values: `env`\
+To see the value of a specific environment variable:\
+
+* `printenv VARIABLE_NAME`
+* `echo $VARIABLE_NAME`
+
+To set an environment variable **for the current user only**: `export VARIABLE_NAME=value` - more info at <https://www.man7.org/linux/man-pages/man1/export.1p.html>\
+To make the change permanent, add the line to your shell's startup file (e.g., .bashrc, .bash_profile):
+
+1. Open `~/.bashrc` for editing: `editor ~/.bashrc`
+2. At appropiate point, normally the very bottom add `export VARIABLE_NAME=value` substituting your variable name and value.
+3. Save the file
+4. To make it take effect type `source .bashrc` or start a new session
+5. If needed type `printenv VARIABLE_NAME` to check its in place.
+
+* [ ] Confirm if and when speech marks are needed and adjust above.
+
+To set a global environment variable that is accessible by all users: `export GLOBAL_VARIABLENAME="This is a global variable"`\
+To make the change permanent:
+
+1. Open `/etc/environment` for editing: `sudo editor /etc/environment`
+2. At the bottom of the file, add `GLOBAL_VARIABLENAME="This is a global variable"`
+3. Save the file
+4. To make it take effect type `/etc/environment`
+5. Open `/etc/profile` for editing: `sudo editor /etc/profile`
+6. At the bottom of the file, add `export GLOBAL_VARIABLENAME="This is a global variable"`
+
+> [!NOTE] `/etc/environment` vs `/etc/profile/`
+> `/etc/environment`: Used by PAM (login systems)
+> `/etc/profile/`: Gets read by shells like bash when logging in
+> More info: <https://superuser.com/questions/664169/what-is-the-difference-between-etc-environment-and-etc-profile>
+
+* [ ] Confirm if and when speech marks are needed and adjust above.
+* [ ] Adjust above for systemd `environment.d` impacts (see [this comment](https://superuser.com/questions/664169/what-is-the-difference-between-etc-environment-and-etc-profile#comment2460849_664236) and the [environment.d man page](https://www.man7.org/linux/man-pages/man5/environment.d.5.html))
+
+<https://www.freecodecamp.org/news/how-to-set-an-environment-variable-in-linux/> (im not sure if this guide is as good as I first thought it was)
 
 ### Redirection
 
@@ -224,7 +305,7 @@ tail -f
 `kill process_id`: send SIGTERM signal to process_id (aka: end yourself gracefully)\
 `kill -9 process_id`: send SIGKILL signal to process_id (aka forcekill)\
 `killall process_name`: send SIGTERM signal to **ALL** processes named process_name. This can be dangerous\
-`killall -9 process_name`: send SIGKILL (aka forcekill) signal to **ALL** processes named process_name. This is even more dangious
+`killall -9 process_name`: send SIGKILL (aka forcekill) signal to **ALL** processes named process_name. This is even more dangerous
 
 ### Aliases
 
@@ -523,7 +604,7 @@ TBC
 * [ ] cover apt changelog /apt-get changelog
 * [ ] cover apt-listchanges - see https://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages
   * may need to be installed
-  * can use a oneliner to get changelogs that doesn't need sudo: (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges *.deb)
+  * can use a one-liner to get changelogs that doesn't need sudo: (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges *.deb)
   * ubuntu lts 20 doesn't support apt-listchanges --latest. For versions that do the following has pretty good output:
     ```
     (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges -h --latest=1 *.deb) | grep urgency
@@ -681,7 +762,7 @@ This isn't really a command section but it will stay here until I find a better 
 > [!IMPORTANT] Sounds too good to be true because it is
 > Has no services or mounts available. See [Running scripts at shutdown or reboot via SystemD](linux-tips.md#running-scripts-at-shutdown-or-reboot-via-systemd) for more info and alternatives.
 
-Amonsgt other things, it runs scripts in `/lib/systemd/system-shutdown/`/`/usr/lib/systemd/system-shutdown/` when shutting donw **but** they get run at the end and won't have any services or mounts. See [Running scripts at shutdown or reboot via SystemD](linux-tips.md#running-scripts-at-shutdown-or-reboot-via-systemd) for more info and alternatives.
+amongst other things, it runs scripts in `/lib/systemd/system-shutdown/`/`/usr/lib/systemd/system-shutdown/` when shutting down **but** they get run at the end and won't have any services or mounts. See [Running scripts at shutdown or reboot via SystemD](linux-tips.md#running-scripts-at-shutdown-or-reboot-via-systemd) for more info and alternatives.
 
 See also <https://www.freedesktop.org/software/systemd/man/latest/systemd-soft-reboot.service.html> - not sure how helpful it is
 
@@ -840,7 +921,7 @@ Also see [Network Manager in RaspberryPi Tips](raspberry-pi-tips.md#network-mana
 
 <https://www.tcpdump.org/manpages/tcpdump.1.html>
 
-tcpdump exmaples:
+tcpdump examples:
 
 * <https://github.com/tcpdump-examples/how-to-use-tcpdump>
 * <https://danielmiessler.com/blog/tcpdump>
@@ -893,7 +974,7 @@ This section is being moved to [SSH Tips and Tricks](ssh-tips-and-tricks.md)
 `ssh username@host -b 192.168.1.25`: bind to an ip address\
 `ssh username@host -v`: verbose - useful for diagnosing automation and auth issues.
 
-* [x] port forwading commands
+* [x] port forwarding commands
 * [x] reverse port forward commands
 * [ ] add in commands and info for control socket connection sharing (ControlPath and ControlMaster)
 * [ ] tunnel commands
