@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-13T06:14:59.277Z
+lastmod: 2025-04-13T06:23:29.325Z
 tags:
     - Commands
     - Linux
@@ -266,6 +266,7 @@ To make the change permanent:
 
 * [ ] Confirm if and when speech marks are needed and adjust above.
 * [ ] Adjust above for systemd `environment.d` impacts (see [this comment](https://superuser.com/questions/664169/what-is-the-difference-between-etc-environment-and-etc-profile#comment2460849_664236) and the [environment.d man page](https://www.man7.org/linux/man-pages/man5/environment.d.5.html))
+* [ ] Review this as well (<https://askubuntu.com/questions/866161/setting-path-variable-in-etc-environment-vs-profile>)
 
 <https://www.freecodecamp.org/news/how-to-set-an-environment-variable-in-linux/> (im not sure if this guide is as good as I first thought it was)
 
