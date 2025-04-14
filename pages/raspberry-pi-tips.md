@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-12T16:20:17.180Z
+lastmod: 2025-04-14T00:25:04.309Z
 tags:
     - RaspberryPi
     - Tips
@@ -23,6 +23,7 @@ keywords:
 <!--- cSpell:disable --->
 * [Documentation](#documentation)
 * [Differenes between RaspberryPi OS Editions](#differenes-between-raspberrypi-os-editions)
+  * [Automount](#automount)
 * [Setting a static IP on a Pi using Bookworm](#setting-a-static-ip-on-a-pi-using-bookworm)
   * [Use a DHCP Reservation](#use-a-dhcp-reservation)
   * [Network Manager](#network-manager)
@@ -56,6 +57,24 @@ Reference or tip?
 ## Differenes between RaspberryPi OS Editions
 
 <https://forums.raspberrypi.com/viewtopic.php?t=339721>
+
+### Automount
+
+Raspberry Pi OS Lite does **not** automount removable media unlike the full edition.
+
+From [https://pimylifeup.com/raspberry-pi-mount-usb-drive/](https://pimylifeup.com/raspberry-pi-mount-usb-drive/#:~:text=It%E2%80%99s%20important%20to%20know%20that%20Raspberry%20Pi%20OS%20lite%20currently%20does%20not%20automatically%20mount%20your%20drives.%20So%20you%20will%20need%20to%20either%20set%20it%20up%20manually%20or%20install%20the%20software%20package%20to%20have%20it%20automatically%20mount.)
+
+> *"It's important to know that Raspberry Pi OS lite currently does not automatically mount your drives. So you will need to either set it up manually or install the software package to have it automatically mount."*
+
+Packages for common file system support
+
+NTFS: `sudo apt install ntfs-3g`\
+See [NTFS on the Raspberry Pi](https://pimylifeup.com/raspberry-pi-ntfs/) for more details. (note site has too many ads)
+
+exFAT:\
+`sudo apt install exfat-fuse`\
+`sudo apt install exfat-utils`\
+See [exFAT on the Raspberry Pi](https://pimylifeup.com/raspberry-pi-exfat/) for more details. (note site has too many ads)
 
 ## Setting a static IP on a Pi using Bookworm
 

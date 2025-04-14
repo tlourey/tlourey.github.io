@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-13T06:23:29.325Z
+lastmod: 2025-04-13T23:57:00.713Z
 tags:
     - Commands
     - Linux
@@ -527,6 +527,8 @@ lsblk
 blkid
 fdisk
 cat /etc/fstab
+mount
+sudo cat /proc/mounts
 ```
 
 ### MDADM
