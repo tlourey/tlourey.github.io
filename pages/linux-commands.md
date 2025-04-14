@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-13T23:57:00.713Z
+lastmod: 2025-04-14T01:58:45.937Z
 tags:
     - Commands
     - Linux
@@ -689,22 +689,25 @@ You can have systemd override files (which apparently are like files in /etc/def
 
 #### journalctl
 
-**`sudo journalctl -xe`** most common use. jumps to end of journal logs and shows extra info about log entries\
-**`sudo journalctl -ef`** 2nd most common use case. Jump to end and follow for more\
-`sudo journalctl -xef` 3rd most common use case. Jump to end and follow for more, and give extra info
+> [!IMPORTANT] sudo
+> Many examples of journalctl start with `sudo`. Not sure if it is acturally required for journalctl or not
 
-`sudo journalctl -e` jumps to the end\
-`sudo journalctl -x` gives extra info\
-`sudo journalctl -f` follow logs live\
-`sudo journalctl -u service_name` show logs about a particular service\
-`sudo journalctl --no-pager` don't page logs\
-`sudo journalctl -r` show logs in reverse order\
-`sudo journalctl -n 25` show most recent 25 lines\
-`sudo journalctl --utc` if you want them in utc\
-`sudo journalctl -k` # Kernel messages only\
-`sudo journalctl --since=yesterday --until=now`\
-`sudo journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"`\
-`sudo journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot
+**`journalctl -xe`** most common use. jumps to end of journal logs and shows extra info about log entries\
+**`journalctl -ef`** 2nd most common use case. Jump to end and follow for more\
+`journalctl -xef` 3rd most common use case. Jump to end and follow for more, and give extra info
+
+`journalctl -e` jumps to the end\
+`journalctl -x` gives extra info\
+`journalctl -f` follow logs live\
+`journalctl -u service_name` show logs about a particular service\
+`journalctl --no-pager` don't page logs\
+`journalctl -r` show logs in reverse order\
+`journalctl -n 25` show most recent 25 lines\
+`journalctl --utc` if you want them in utc\
+`journalctl -k` # Kernel messages only\
+`journalctl --since=yesterday --until=now`\
+`journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"`\
+`journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot
 
 #### timedatectl
 
