@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-13T07:22:00.774Z
+lastmod: 2025-04-14T05:55:39.265Z
 tags:
     - Language
     - Python
@@ -21,6 +21,7 @@ preview: ""
 * [Standards](#standards)
 * [Variants](#variants)
 * [Tools](#tools)
+  * [venv](#venv)
 * [Tricks](#tricks)
   * [Running python script from interactive shell](#running-python-script-from-interactive-shell)
 * [Quirks to remember](#quirks-to-remember)
@@ -43,6 +44,19 @@ preview: ""
 ## Tools
 
 See Regex Tools that cover Python in [Software Tools in Misc Tools](misc-tools.md#software-tools)
+
+### venv
+
+More info on activation: <https://docs.python.org/3/library/venv.html#how-venvs-work>
+
+| Platform | Shell       | Command to activate virtual environment                               |
+|----------|-------------|------------------------------------------------------------------------|
+| POSIX    | bash/zsh    | `$ source <venv>/bin/activate`                                         |
+| POSIX    | fish        | `$ source <venv>/bin/activate.fish`                                    |
+| POSIX    | csh/tcsh    | `$ source <venv>/bin/activate.csh`                                     |
+| POSIX    | pwsh        | `$ <venv>/bin/Activate.ps1`                                            |
+| Windows  | cmd.exe     | `C:\> <venv>\Scripts\activate.bat`                                     |
+| Windows  | PowerShell  | `PS C:\> <venv>\Scripts\Activate.ps1`                                  |
 
 ## Tricks
 
