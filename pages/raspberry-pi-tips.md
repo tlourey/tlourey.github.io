@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-14T00:25:04.309Z
+lastmod: 2025-04-14T00:26:20.278Z
 tags:
     - RaspberryPi
     - Tips
@@ -98,6 +98,21 @@ nmcli device wifi list
 nmcli device wifi connect "$SSID" password "$PASSWORD"
 nmcli --ask device wifi connect "$SSID"
 sudo systemctl restart NetworkManager
+```
+
+Using NMCLI as a hotspot:\
+From <https://www.raspberrypi.com/documentation/computers/configuration.html#host-a-wireless-network-from-your-raspberry-pi>
+
+```bash
+# enable hotspot
+sudo nmcli device wifi hotspot ssid <example-network-name> password <example-password>
+
+# disable hotspot
+## To disable the hotspot network and resume use of your Pi as a wireless client, run the following command:
+sudo nmcli device disconnect wlan0
+
+## After disabling the network, run the following command to reconnect to another Wi-Fi network:
+sudo nmcli device up wlan0
 ```
 
 ### /etc/network/interfaces
@@ -198,10 +213,13 @@ Before bookworm it was in `/boot/config.txt`
 More a reference than tip
 -->
 
-<https://elinux.org/RPi_cmdline.txt>
+The Linux kernel accepts a collection of command line parameters during boot. On the Raspberry Pi, this command line is defined in a file in the boot partition, called cmdline.txt. You can edit this text file with any text editor.
 
 For bookworm onwards its located in: `/boot/firmware/cmdline.txt`\
 Before bookworm it was in `/boot/cmdline.txt`
+
+<https://elinux.org/RPi_cmdline.txt>\
+<https://www.raspberrypi.com/documentation/computers/configuration.html#kernel-command-line-cmdline-txt>
 
 ## Controlling a Raspberry Pi Fan
 
