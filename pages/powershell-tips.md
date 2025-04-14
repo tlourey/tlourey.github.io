@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2025-03-27T21:29:40.413Z
+lastmod: 2025-04-14T05:44:20.132Z
 tags:
     - Tips
     - PowerShell
@@ -48,8 +48,9 @@ The idea is that you will use a very quick keyboard shortcut (normally CTRL + ~)
 ## Commands often forgotten
 
 `Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content#-wait>\
-`Select-String`: kind of like grep (need to check if it does work like grep)\
-`Out-GridView`: really cool wait view tables/rows. -passthru is also really awesome. You should read the help page in full esp the Notes stuff: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview>
+`Select-String`: kind of like `grep` (need to check if it does work like grep)\
+`Out-GridView`: really cool wait view tables/rows. -passthru is also really awesome. You should read the help page in full esp the Notes stuff: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview>\
+`New-Item -ItemType File -Path .\filename.ext -Force`: cloest thing in powershell to linux `touch`
 
 Also check [PowerShell Commands often forgotten](powershell-commands.md#commands-often-forgotten)
 
