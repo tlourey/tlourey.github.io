@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-14T05:55:39.265Z
+lastmod: 2025-04-14T06:31:44.534Z
 tags:
     - Language
     - Python
@@ -19,6 +19,7 @@ preview: ""
 
 <!--- cSpell:disable --->
 * [Standards](#standards)
+  * [Standards of note](#standards-of-note)
 * [Variants](#variants)
 * [Tools](#tools)
   * [venv](#venv)
@@ -35,6 +36,10 @@ preview: ""
 > Not sure if 'standards' is the right heading here
 
 <https://peps.python.org/>
+
+### Standards of note
+
+[PEP8](https://www.python.org/dev/peps/pep-0008/#imports) details how imports should be organized. This helps keep your code both readable and maintainable. Auto-sorting will structure your Python imports first by their source (e.g. standard library, third-party, local application) then alphabetically within those sections.\
 
 ## Variants
 
