@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-14T00:26:20.278Z
+lastmod: 2025-04-14T01:30:56.537Z
 tags:
     - RaspberryPi
     - Tips
@@ -24,6 +24,7 @@ keywords:
 * [Documentation](#documentation)
 * [Differenes between RaspberryPi OS Editions](#differenes-between-raspberrypi-os-editions)
   * [Automount](#automount)
+    * [Packages for common file system support](#packages-for-common-file-system-support)
 * [Setting a static IP on a Pi using Bookworm](#setting-a-static-ip-on-a-pi-using-bookworm)
   * [Use a DHCP Reservation](#use-a-dhcp-reservation)
   * [Network Manager](#network-manager)
@@ -66,7 +67,16 @@ From [https://pimylifeup.com/raspberry-pi-mount-usb-drive/](https://pimylifeup.c
 
 > *"It's important to know that Raspberry Pi OS lite currently does not automatically mount your drives. So you will need to either set it up manually or install the software package to have it automatically mount."*
 
-Packages for common file system support
+Solutions:
+
+* udiskie, manually started as a deamon: <https://github.com/coldfix/udiskie>
+* udev rules: <https://blog.jasonantman.com/2009/11/running-a-script-on-usb-drive-insertion/>
+* autofs (maybe - can't quickly find solid answer on if it automounts?)
+* fstab (note if storage is not attached at raspberrypi bootup, it add an extra 90 seconds to timeout): [Automatically mount a storage device - Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#automatically-mount-a-storage-device)
+
+See also [External Storage - Offical Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#external-storage)
+
+#### Packages for common file system support
 
 NTFS: `sudo apt install ntfs-3g`\
 See [NTFS on the Raspberry Pi](https://pimylifeup.com/raspberry-pi-ntfs/) for more details. (note site has too many ads)
@@ -385,4 +395,6 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 
 ## Misc References
 
-[Embedded Linux Wiki](https://elinux.org/Main_Page)
+[Embedded Linux Wiki](https://elinux.org/Main_Page)\
+[STICKY: Using fstab A Beginner's Guide](https://forums.raspberrypi.com/viewtopic.php?t=302752)
+[Offical Documentation](#documentation)
