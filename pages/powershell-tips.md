@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2025-04-14T05:44:20.132Z
+lastmod: 2025-04-14T05:51:04.654Z
 tags:
     - Tips
     - PowerShell
@@ -19,7 +19,7 @@ preview: ""
 <!--- cSpell:disable --->
 * [Installing Modules](#installing-modules)
 * [Terminal Emulator Quake Mode on startup](#terminal-emulator-quake-mode-on-startup)
-* [Commands often forgotten](#commands-often-forgotten)
+* [Often forgotten](#often-forgotten)
 * [File Locations of PS Components](#file-locations-of-ps-components)
   * [Modules](#modules)
 * [Authentication Methods](#authentication-methods)
@@ -45,14 +45,10 @@ Use a shell/terminal emulator that you can start on startup and that supports wh
 
 The idea is that you will use a very quick keyboard shortcut (normally CTRL + ~) to bring up the shell and hide it (but not close it) again and often, so its quickly available for you. By reducing the time to get to the shell and also your brain becoming more aware that its quicker to get to, you will start using it more often, thus getting you more experience.
 
-## Commands often forgotten
+## Often forgotten
 
-`Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content#-wait>\
-`Select-String`: kind of like `grep` (need to check if it does work like grep)\
-`Out-GridView`: really cool wait view tables/rows. -passthru is also really awesome. You should read the help page in full esp the Notes stuff: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview>\
-`New-Item -ItemType File -Path .\filename.ext -Force`: cloest thing in powershell to linux `touch`
-
-Also check [PowerShell Commands often forgotten](powershell-commands.md#commands-often-forgotten)
+Checkout [Commands often forgotten in PowerShell Commands](powershell-commands.md#commands-often-forgotten)\
+Checkout [Variables often forgotten in PowerShell Commands](powershell-commands.md#variables-often-forgotten)
 
 ## File Locations of PS Components
 

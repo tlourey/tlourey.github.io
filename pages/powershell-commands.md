@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-04-09T13:52:05.981Z
+lastmod: 2025-04-14T05:51:36.516Z
 tags:
     - Commands
     - Language
@@ -43,6 +43,7 @@ isdraft: true
 * [SharePoint PowerShell](#sharepoint-powershell)
 * [Exchange PowerShell](#exchange-powershell)
 * [Commands often forgotten](#commands-often-forgotten)
+* [Variables often forgotten](#variables-often-forgotten)
 * [Additional Resources](#additional-resources)
 * [Other resources to add](#other-resources-to-add)
 <!--- cSpell:enable --->
@@ -356,12 +357,22 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 ## Commands often forgotten
 
 `Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content#-wait>\
-`Select-String`: kind of like grep (need to check if it does work like grep)\
-`Out-GridView`: really cool wait view tables/rows. -passthru is also really awesome. You should read the help page in full esp the Notes stuff: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview>
+`Select-String`: kind of like `grep` (need to check if it does work like grep)\
+`Out-GridView`: really cool wait view tables/rows. -passthru is also really awesome. You should read the help page in full esp the Notes stuff: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview>\
+`New-Item -ItemType File -Path .\filename.ext -Force`: cloest thing in powershell to linux `touch`
+`. $profile`: reload powershell profile (assumes its in the current folder)
 
 [Redirecting Output](https://learn.microsoft.com/en-us/powershell/scripting/samples/redirecting-data-with-out---cmdlets?view=powershell-7.5)
 
+## Variables often forgotten
+
+`$PSVersionTable`: shows powershell version\
+`$profile`: Show where current powershell profile is\
+`. $profile`: reload powershell profile (assumes its in the current folder)
+
 ## Additional Resources
+
+[PowerShell Tips](powershell-tips.md)
 
 [PowerShell Module Browser - PowerShell - Microsoft Learn](https://learn.microsoft.com/en-au/powershell/module/)\
 [Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Graph PowerShell](https://learn.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map?view=graph-powershell-1.0&pivots=azure-ad-powershell)\
