@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-14T01:30:56.537Z
+lastmod: 2025-04-14T01:51:49.876Z
 tags:
     - RaspberryPi
     - Tips
@@ -70,6 +70,9 @@ From [https://pimylifeup.com/raspberry-pi-mount-usb-drive/](https://pimylifeup.c
 Solutions:
 
 * udiskie, manually started as a deamon: <https://github.com/coldfix/udiskie>
+  > [!IMPORTANT] udiskie may need a polkit config
+  > For udiskie to run as pi, you may need to follow [these](https://github.com/coldfix/udiskie/wiki/Permissions) polkit insturcionts
+
 * udev rules: <https://blog.jasonantman.com/2009/11/running-a-script-on-usb-drive-insertion/>
 * autofs (maybe - can't quickly find solid answer on if it automounts?)
 * fstab (note if storage is not attached at raspberrypi bootup, it add an extra 90 seconds to timeout): [Automatically mount a storage device - Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#automatically-mount-a-storage-device)
