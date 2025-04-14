@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-14T06:31:44.534Z
+lastmod: 2025-04-14T09:17:29.083Z
 tags:
     - Language
     - Python
@@ -23,6 +23,7 @@ preview: ""
 * [Variants](#variants)
 * [Tools](#tools)
   * [venv](#venv)
+  * [vscode](#vscode)
 * [Tricks](#tricks)
   * [Running python script from interactive shell](#running-python-script-from-interactive-shell)
 * [Quirks to remember](#quirks-to-remember)
@@ -62,6 +63,12 @@ More info on activation: <https://docs.python.org/3/library/venv.html#how-venvs-
 | POSIX    | pwsh        | `$ <venv>/bin/Activate.ps1`                                            |
 | Windows  | cmd.exe     | `C:\> <venv>\Scripts\activate.bat`                                     |
 | Windows  | PowerShell  | `PS C:\> <venv>\Scripts\Activate.ps1`                                  |
+
+### vscode
+
+<https://code.visualstudio.com/docs/python/debugging#_command-line-debugging>
+
+Also look at remote debugging using debugpy module.
 
 ## Tricks
 
