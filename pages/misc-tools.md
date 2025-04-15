@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-04-15T00:56:58.699Z
+lastmod: 2025-04-15T01:40:59.556Z
 keywords:
     - Tools
 ---
@@ -262,6 +262,7 @@ Also often includes abuse functions
 <https://sendersupport.olc.protection.outlook.com/snds/JMRP.aspx> - Junk email reporting program - works if you host your own email/own the IP Addresses.
 
 **<https://mha.azurewebsites.net>** - Microsoft Message Header Analyzer - really good header analyzer\
+<https://toolbox.googleapps.com/apps/messageheader/> - Google Message Header Analyzer\
 **<https://mxtoolbox.com/SuperTool.aspx>**\
 **<https://mxtoolbox.com/EmailHeaders.aspx>**\
 **<https://mxtoolbox.com/emailhealth>** - good email health overview for a specific domain\
