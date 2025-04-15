@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-17T23:34:50.024Z
-lastmod: 2025-04-09T13:53:57.254Z
+lastmod: 2025-04-15T01:44:21.538Z
 tags:
     - Email
     - Exchange
@@ -32,6 +32,7 @@ preview: ""
 * [References](#references)
   * [Standards](#standards)
   * [Exchange Email Header References](#exchange-email-header-references)
+  * [End user guides](#end-user-guides)
 * [Tools](#tools)
 <!--- cSpell:enable --->
 
@@ -107,7 +108,12 @@ Usually a [MIME Type](https://en.wikipedia.org/wiki/MIME)
 <https://learn.microsoft.com/en-us/exchange/header-firewall-exchange-2013-help>\
 <https://learn.microsoft.com/en-us/exchange/anti-spam-stamps-exchange-2013-help>
 
+### End user guides
+
+[View internet message headers in Outlook - Microsoft Support](https://support.microsoft.com/en-au/office/view-internet-message-headers-in-outlook-cd039382-dc6e-4264-ac74-c048563d212c) - End user instructions for gettign headers out of outlook.\
+[Trace an email with its full header - Gmail Help](https://support.google.com/mail/answer/29436?hl=en)
+
 ## Tools
 
-[Postmaster Tools in Misc Tools](misc-tools.md#postmaster)\
+[Postmaster Tools in Misc Tools](misc-tools.md#postmaster) - including some great header analyzers\
 [Exchange Commands](exchange-commands.md)
