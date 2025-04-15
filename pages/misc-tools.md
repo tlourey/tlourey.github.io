@@ -11,7 +11,7 @@ tags:
     - Tools
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-04-11T02:58:57.328Z
+lastmod: 2025-04-15T00:56:58.699Z
 keywords:
     - Tools
 ---
@@ -25,7 +25,7 @@ keywords:
 * [Linux Tools](#linux-tools)
 * [Software Tools](#software-tools)
   * [Python](#python)
-    * [Maker Varients](#maker-varients)
+    * [Maker Variants](#maker-variants)
 * [KQL Tools](#kql-tools)
 * [PowerShell Tools](#powershell-tools)
 * [Microsoft 365 Tools](#microsoft-365-tools)
@@ -98,7 +98,7 @@ keywords:
 
 ### Python
 
-#### Maker Varients
+#### Maker Variants
 
 <https://micropython.org/> - lean version of python for microcontrollers, like arduino\
 <https://circuitpython.org/> - beginner / easier to user version of the above for microcontrollers\
@@ -130,9 +130,9 @@ Check out [Misc KQL References and Resources](kql-queries.md#misc-kql-references
 <https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
 **[Total Commander](https://www.ghisler.com/)** - THE PIMP!
 
-* <https://www.ghisler.ch/wiki/index.php?title=Main_Page>: Total Commander Wiki (not sure if offical)
+* <https://www.ghisler.ch/wiki/index.php?title=Main_Page>: Total Commander Wiki (not sure if official)
 * [Useful External Tools for Total Commander](https://www.ghisler.com/tools.htm)
-* **[Total Commander Plugiuns](https://www.ghisler.com/plugins.htm)**
+* **[Total Commander plugins](https://www.ghisler.com/plugins.htm)**
 
   > [!TIP] SFTP
   > Note to self: When you forget, *again*, how to access an SSH Connection via the plugin: Its not in FTP Connections, its in Network Neighbourhood
@@ -245,7 +245,7 @@ vagrant box remove box/name
 * [Mess with DNS](https://messwithdns.net/): An educational resource that encourages users to experiment with DNS records by providing users with a domain where they are free to play around and break things during the learning process.
 
 <http://www.webdnstools.com/dnstools/domain_check>\
-<https://lookup.icann.org/en> - RDAP (whois repacement)\
+<https://lookup.icann.org/en> - RDAP (whois replacement)\
 RDAP Client from ICANN: <https://github.com/icann/icann-rdap/wiki/RDAP-command>
 
 <https://docs.wpvip.com/domains/check-dns-record-time-to-live/#:~:text=Run%20dig%20%40%20%2B,current%20TTL%20for%20the%20domain.>
@@ -254,18 +254,19 @@ RDAP Client from ICANN: <https://github.com/icann/icann-rdap/wiki/RDAP-command>
 
 Also often includes abuse functions
 
-**<https://gmail.com/postmaster/>**\
-<https://senders.yahooinc.com>\
+**<https://gmail.com/postmaster/>** - if you have a domain you can sign up and should\
+<https://senders.yahooinc.com> - if you have a domain you can sign up - not as useful as google postmaster but still good\
 <https://blog.postmaster.yahooinc.com>\
 <https://sendersupport.olc.protection.outlook.com/pm/Postmaster>\
-<https://sendersupport.olc.protection.outlook.com/snds/>
+<https://sendersupport.olc.protection.outlook.com/snds/>\
+<https://sendersupport.olc.protection.outlook.com/snds/JMRP.aspx> - Junk email reporting program - works if you host your own email/own the IP Addresses.
 
-**<https://mha.azurewebsites.net>**\
+**<https://mha.azurewebsites.net>** - Microsoft Message Header Analyzer - really good header analyzer\
 **<https://mxtoolbox.com/SuperTool.aspx>**\
 **<https://mxtoolbox.com/EmailHeaders.aspx>**\
-**<https://mxtoolbox.com/emailhealth>** - good overview for a specific domain\
+**<https://mxtoolbox.com/emailhealth>** - good email health overview for a specific domain\
 **<https://mxtoolbox.com/dmarc.aspx>**\
-**<https://mxtoolbox.com>**\
+**<https://mxtoolbox.com>** - really great site with lots of email tools\
 **<https://dmarcian.com/dmarc-tools/>**\
 <https://dmarcly.com/tools/>\
 <https://www.appmaildev.com>
