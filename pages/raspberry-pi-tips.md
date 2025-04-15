@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-14T01:51:49.876Z
+lastmod: 2025-04-15T07:19:54.944Z
 tags:
     - RaspberryPi
     - Tips
@@ -345,7 +345,9 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 * `sudo alsactl dump-state`
 * `sudo alsactl dump-cfg`
 
-`aplay -l`: list sound devices via ALSA. <https://linux.die.net/man/1/aplay>\
+`aplay -l`: List all soundcards and digital audio devices via ALSA. <https://linux.die.net/man/1/aplay>\
+`aplay -L`: List all PCMs defined\
+`aplay -D plughw:CARD=UACDemoV10 /usr/share/sounds/alsa/Front_Center.wav`: play this sound on this PCM device
 `alsamixer`: Interactive TUI mixer for setting volume levels. <https://linux.die.net/man/1/alsamixer>\
 `amixer`: cmdline mixer for ALSA. <https://linux.die.net/man/1/amixer>:\
 
