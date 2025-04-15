@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2025-04-14T05:51:04.654Z
+lastmod: 2025-04-15T01:34:14.976Z
 tags:
     - Tips
     - PowerShell
@@ -23,10 +23,11 @@ preview: ""
 * [File Locations of PS Components](#file-locations-of-ps-components)
   * [Modules](#modules)
 * [Authentication Methods](#authentication-methods)
-  * [Using Single Browser with Multple profiles](#using-single-browser-with-multple-profiles)
+  * [Using Single Browser with multiple profiles](#using-single-browser-with-multiple-profiles)
 * [Tools](#tools)
 * [Traps and Gotchas](#traps-and-gotchas)
   * [Invoke-WebRequest and Invoke-RestMethod on PS5](#invoke-webrequest-and-invoke-restmethod-on-ps5)
+* [PowerShell Resources](#powershell-resources)
 <!--- cSpell:enable --->
 
 ## Installing Modules
@@ -71,7 +72,7 @@ Windows PowerShell 5.1:
 * Modules installed in the CurrentUser scope are stored in `$HOME\Documents\WindowsPowerShell\Modules`.
 * Modules installed in the AllUsers scope are stored in `$env:ProgramFiles\WindowsPowerShell\Modules`.
 * Modules that ship with Windows PowerShell stored in `$PSHOME\Modules`, which is `$env:SystemRoot\System32\WindowsPowerShell\1.0\Modules`.
-* `$HOME\OneDrive - Contoso\Documents\WindowsPowerShell\Modules`: Windows PowerShell 5.1 Modules for current user but you have OneDrive known Office folder move on. There are some hiccups and a little pain with this but its managable.\
+* `$HOME\OneDrive - Contoso\Documents\WindowsPowerShell\Modules`: Windows PowerShell 5.1 Modules for current user but you have OneDrive known Office folder move on. There are some hiccups and a little pain with this but its manageable.\
 
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_psmodulepath?view=powershell-5.1>
 
@@ -81,16 +82,16 @@ Windows PowerShell 5.1:
 
 `-Interactive`
 
-### Using Single Browser with Multple profiles
+### Using Single Browser with multiple profiles
 
 * [ ] Type up tip about moving tabs when using `-devicelogin`
 
 ## Tools
 
-**<https://cmder.app/>**: Nice terminal emulater that has a bunch of great inclues.
-<https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandagon yet but its not shit.
+**<https://cmder.app/>**: Nice terminal emulator that has a bunch of great includes.
+<https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal bandwagon yet but its not shit.
 
-Also check [Misc Tools](misc-tools.md)
+Also check [Misc Tools](misc-tools.md#powershell-tools)
 
 ## Traps and Gotchas
 
@@ -98,9 +99,13 @@ Also check [Misc Tools](misc-tools.md)
 
 ### Invoke-WebRequest and Invoke-RestMethod on PS5
 
-`Invoke-WebRequest` and `Invoke-RestMethod` on Windows PowerShell 5.1 does not have the Paramater `-Authentication`, Only PowerShell7 does. This means you have to manually construct the header to include authentication.
+`Invoke-WebRequest` and `Invoke-RestMethod` on Windows PowerShell 5.1 does not have the parameter `-Authentication`, Only PowerShell7 does. This means you have to manually construct the header to include authentication.
 
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-5.1>\
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.5#-authentication>\
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-5.1>\
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.5#-authentication>
+
+## PowerShell Resources
+
+**<https://github.com/janikvonrotz/awesome-powershell>**\
