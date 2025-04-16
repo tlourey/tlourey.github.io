@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-12T09:20:50.861Z
+lastmod: 2025-04-16T00:20:05.686Z
 tags:
     - Linux
     - References
@@ -39,6 +39,9 @@ keywords:
   * [Block a package](#block-a-package)
   * [SystemD Timers](#systemd-timers)
 <!--- cSpell:enable --->
+
+> [!NOTE] Linux and Bash
+> Some of the below are bash related but may sit better in this page than the [Linux Commands](linux-commands.md) or [Bash Tips](bash-tips.md) pages, and vice versa.
 
 ## Man Page sections
 
