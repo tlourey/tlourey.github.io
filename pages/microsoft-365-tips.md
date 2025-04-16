@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-04-04T06:56:32.496Z
+lastmod: 2025-04-16T06:52:33.989Z
 keywords:
     - Entra
     - Exchange
@@ -56,6 +56,7 @@ keywords:
 * [Microsoft Graph](#microsoft-graph)
   * [Setting Data Storage Location for users](#setting-data-storage-location-for-users)
 * [Diag Tools](#diag-tools)
+* [Other Resources, Tools and links](#other-resources-tools-and-links)
 <!--- cSpell:enable --->
 
 ## Licensing
@@ -387,3 +388,7 @@ See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-module
 [Enterprise Version of Microsoft Support and Recovery Assistant](https://www.microsoft.com/en-au/download/details.aspx?id=103391)\
 <https://support.microsoft.com/en-au/windows/microsoft-365-troubleshooters-486d7956-6a21-4c75-bc4f-0704077c583c> - NEW SARA\
 <https://support.microsoft.com/en-au/windows/running-troubleshooters-in-get-help-23bddffd-5495-47f6-a419-7efe166bf1a8> - Other MS Troubleshooters some of which may be still useful
+
+## Other Resources, Tools and links
+
+[Microsoft 365 Message Center Archive](https://mc.merill.net/) - by <Merill.net>. See [Misc References](misc-references.md#people) for more of his stuff.
