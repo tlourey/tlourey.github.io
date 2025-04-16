@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-15T07:19:54.944Z
+lastmod: 2025-04-16T04:31:28.755Z
 tags:
     - RaspberryPi
     - Tips
@@ -24,7 +24,8 @@ keywords:
 * [Documentation](#documentation)
 * [Differenes between RaspberryPi OS Editions](#differenes-between-raspberrypi-os-editions)
   * [Automount](#automount)
-    * [Packages for common file system support](#packages-for-common-file-system-support)
+  * [Packages for common file system support](#packages-for-common-file-system-support)
+* [Raspberry Pi Imager](#raspberry-pi-imager)
 * [Setting a static IP on a Pi using Bookworm](#setting-a-static-ip-on-a-pi-using-bookworm)
   * [Use a DHCP Reservation](#use-a-dhcp-reservation)
   * [Network Manager](#network-manager)
@@ -79,7 +80,7 @@ Solutions:
 
 See also [External Storage - Offical Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#external-storage)
 
-#### Packages for common file system support
+### Packages for common file system support
 
 NTFS: `sudo apt install ntfs-3g`\
 See [NTFS on the Raspberry Pi](https://pimylifeup.com/raspberry-pi-ntfs/) for more details. (note site has too many ads)
@@ -88,6 +89,15 @@ exFAT:\
 `sudo apt install exfat-fuse`\
 `sudo apt install exfat-utils`\
 See [exFAT on the Raspberry Pi](https://pimylifeup.com/raspberry-pi-exfat/) for more details. (note site has too many ads)
+
+## Raspberry Pi Imager
+
+Pre-defined os settings:
+
+On RPiOS it is at: `~/.config/Raspberry Pi/Imager.conf`
+On windows it might be in the registry at: `HKCU\Software\Raspberry Pi\Imager`
+
+From <https://forums.raspberrypi.com/viewtopic.php?t=339566>
 
 ## Setting a static IP on a Pi using Bookworm
 
