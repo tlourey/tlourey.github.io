@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-16T00:29:22.497Z
+lastmod: 2025-04-16T06:40:58.389Z
 tags:
     - Commands
     - Linux
@@ -34,6 +34,7 @@ isdraft: false
   * [TMUX](#tmux)
     * [screen](#screen)
   * [Serial Stuff](#serial-stuff)
+* [Misc Terminal Tools](#misc-terminal-tools)
 * [Files](#files)
   * [What process is using a file](#what-process-is-using-a-file)
   * [ls options often forgotten](#ls-options-often-forgotten)
@@ -375,6 +376,10 @@ Consider:
 * `cu -l /dev/ttyS0 -s 9600`
 
 More info: <https://unix.stackexchange.com/questions/22545/how-to-connect-to-a-serial-port-as-simple-as-using-ssh>
+
+## Misc Terminal Tools
+
+`whiptail`: Message box system used by RaspberryPi and Debian using newt instead of ncurses: More info: <https://en.wikibooks.org/wiki/Bash_Shell_Scripting/Whiptail>
 
 ## Files
 
@@ -1082,8 +1087,8 @@ From the SSH man page:
 `sysctl -w net.ipv4.ip_forward=0` also set it temporarily\
 `sudo vi /etc/sysctl.conf` and add:
 
-```bash
-net.ipv4.ip_forward = 1
-```
+  ```bash
+  net.ipv4.ip_forward = 1
+  ```
 
 `sudo sysctl -p` to make it permanent.

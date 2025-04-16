@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-16T04:31:28.755Z
+lastmod: 2025-04-16T06:30:29.319Z
 tags:
     - RaspberryPi
     - Tips
@@ -26,6 +26,7 @@ keywords:
   * [Automount](#automount)
   * [Packages for common file system support](#packages-for-common-file-system-support)
 * [Raspberry Pi Imager](#raspberry-pi-imager)
+* [On First Boot after new image](#on-first-boot-after-new-image)
 * [Setting a static IP on a Pi using Bookworm](#setting-a-static-ip-on-a-pi-using-bookworm)
   * [Use a DHCP Reservation](#use-a-dhcp-reservation)
   * [Network Manager](#network-manager)
@@ -98,6 +99,21 @@ On RPiOS it is at: `~/.config/Raspberry Pi/Imager.conf`
 On windows it might be in the registry at: `HKCU\Software\Raspberry Pi\Imager`
 
 From <https://forums.raspberrypi.com/viewtopic.php?t=339566>
+
+## On First Boot after new image
+
+After Raspberry Pi Imager is complete but before first boot, the [`cmdline.txt`](#cmdlinetxt) file has something like this:
+
+> [!IMPORTANT] Circa 2016
+> The below example is from circa 2020 per the article. The script in question refers to also refers to `/boot/cmdline.txt` instead of `/boot/firmware/cmdline.txt`
+
+```text
+console=serial0,115200 console=tty1 root=PARTUUID=067e19d7-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet init=/usr/lib/raspi-config/init_resize.sh
+```
+
+The `/usr/lib/raspi-config/init_resize.sh` runs on first run and at the end modifies `cmdline.txt` so it doesn't run again.
+
+From: <https://gijs-de-jong.nl/posts/raspberry-pi-file-system-resize-on-first-boot/>, specifically: <https://gijs-de-jong.nl/posts/raspberry-pi-file-system-resize-on-first-boot/#:~:text=How%20the%20automatic%20file%20system%20expansion%20is%20implemented>
 
 ## Setting a static IP on a Pi using Bookworm
 
