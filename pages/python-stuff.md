@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-14T09:17:29.083Z
+lastmod: 2025-04-16T00:12:54.309Z
 tags:
     - Language
     - Python
@@ -26,6 +26,9 @@ preview: ""
   * [vscode](#vscode)
 * [Tricks](#tricks)
   * [Running python script from interactive shell](#running-python-script-from-interactive-shell)
+* [Useful Snippets](#useful-snippets)
+  * [Exit Handler](#exit-handler)
+  * [Termination Signal Capture](#termination-signal-capture)
 * [Quirks to remember](#quirks-to-remember)
 * [Books](#books)
 * [Resources of NOTE](#resources-of-note)
@@ -79,6 +82,42 @@ Also look at remote debugging using debugpy module.
 ```bash
 python3
 exec(open('./app/filename.py').read())
+```
+
+## Useful Snippets
+
+### Exit Handler
+
+```python
+import atexit
+
+@atexit.register
+def cleaup():
+    print("Exiting via atexit...")
+```
+
+### Termination Signal Capture
+
+```python
+import signal
+
+def handle_sigterm(signum, frame):
+    print("Received SIGTERM. Shutting down gracefully...")
+    sys.exit(0)
+
+# Register the signal handler
+signal.signal(signal.SIGTERM, handle_sigterm)
+
+try: 
+  something
+
+except KeyboardInterrupt:
+  print("Received KeyboardInterrupt. Exiting...")
+  sys.exit(1)
+
+finally:
+  print("Exiting via finally...")
+  sys.exit(0)
 ```
 
 ## Quirks to remember
