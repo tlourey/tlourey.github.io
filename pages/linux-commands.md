@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-14T01:58:45.937Z
+lastmod: 2025-04-16T00:29:22.497Z
 tags:
     - Commands
     - Linux
@@ -24,6 +24,7 @@ isdraft: false
   * [Built in bash commands](#built-in-bash-commands)
   * [Environment Variables](#environment-variables)
   * [Redirection](#redirection)
+  * [Jobs, Foreground and Background](#jobs-foreground-and-background)
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
   * [Process Stuff](#process-stuff)
     * [ps](#ps)
@@ -242,7 +243,7 @@ To set an environment variable **for the current user only**: `export VARIABLE_N
 To make the change permanent, add the line to your shell's startup file (e.g., .bashrc, .bash_profile):
 
 1. Open `~/.bashrc` for editing: `editor ~/.bashrc`
-2. At appropiate point, normally the very bottom add `export VARIABLE_NAME=value` substituting your variable name and value.
+2. At appropriate point, normally the very bottom add `export VARIABLE_NAME=value` substituting your variable name and value.
 3. Save the file
 4. To make it take effect type `source .bashrc` or start a new session
 5. If needed type `printenv VARIABLE_NAME` to check its in place.
@@ -273,7 +274,6 @@ To make the change permanent:
 ### Redirection
 
 ```bash
-command &
 command > filename.txt
 command >> filename.txt
 ```
@@ -282,7 +282,23 @@ Redirect stdout to one file and stderr to another file: `command > out 2>error`\
 Redirect stdout to a file (>out), and then redirect stderr to stdout (2>&1): `command >out 2>&1`
 Redirect both to a file (this isn't supported by all shells, `bash` and `zsh` support it, for example, but `sh` and `ksh` do not): `command &> out`
 
+<https://www.howtogeek.com/how-to-pipe-and-redirect-like-a-pro-in-the-linux-command-line/>
+
 * [ ] this section needs more fleshing out and other examples
+
+### Jobs, Foreground and Background
+
+<https://www.redhat.com/en/blog/jobs-bg-fg>
+
+```bash
+jobs
+sleep
+fg
+bg
+```
+
+Also: Running a command with `&` at the end: If a command is terminated by the control operator `&`, the shell executes the command in the background in
+a subshell. The shell does not wait for the command to finish, and the return status is 0.
 
 ### Terminal Filtering and Monitoring
 
@@ -299,7 +315,13 @@ tail -f
 
 #### ps
 
+TBC
+
+* [ ] Add PS Stuff
+
 #### top
+
+* [ ] Add Top Stuff
 
 #### kill and killall
 
