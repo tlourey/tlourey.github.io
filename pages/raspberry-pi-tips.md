@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-16T06:30:29.319Z
+lastmod: 2025-04-16T07:16:35.390Z
 tags:
     - RaspberryPi
     - Tips
@@ -102,18 +102,19 @@ From <https://forums.raspberrypi.com/viewtopic.php?t=339566>
 
 ## On First Boot after new image
 
-After Raspberry Pi Imager is complete but before first boot, the [`cmdline.txt`](#cmdlinetxt) file has something like this:
-
-> [!IMPORTANT] Circa 2016
-> The below example is from circa 2020 per the article. The script in question refers to also refers to `/boot/cmdline.txt` instead of `/boot/firmware/cmdline.txt`
+After Raspberry Pi Imager is complete but before first boot, the [`cmdline.txt`](#cmdlinetxt) file has something like this in 2022:
 
 ```text
 console=serial0,115200 console=tty1 root=PARTUUID=067e19d7-02 rootfstype=ext4 elevator=deadline fsck.repair=yes rootwait quiet init=/usr/lib/raspi-config/init_resize.sh
 ```
 
-The `/usr/lib/raspi-config/init_resize.sh` runs on first run and at the end modifies `cmdline.txt` so it doesn't run again.
+The `/usr/lib/raspi-config/init_resize.sh` runs on first run and at the end modifies `cmdline.txt` so it doesn't run again. From: <https://gijs-de-jong.nl/posts/raspberry-pi-file-system-resize-on-first-boot/>, specifically: <https://gijs-de-jong.nl/posts/raspberry-pi-file-system-resize-on-first-boot/#:~:text=How%20the%20automatic%20file%20system%20expansion%20is%20implemented>
 
-From: <https://gijs-de-jong.nl/posts/raspberry-pi-file-system-resize-on-first-boot/>, specifically: <https://gijs-de-jong.nl/posts/raspberry-pi-file-system-resize-on-first-boot/#:~:text=How%20the%20automatic%20file%20system%20expansion%20is%20implemented>
+Here is one from 2025 with Bookworm:
+
+```text
+console=serial0,115200 console=tty1 root=PARTUUID=067e19d7-02 rootfstype=ext4 fsck.repair=yes rootwait quiet init=/usr/lib/raspberrypi-sys-mods/firstboot cfg80211.ieee80211_regdom=US systemd.run=/boot/firstrun.sh systemd.run_success_action=reboot systemd.unit=kernel-command-line.target
+```
 
 ## Setting a static IP on a Pi using Bookworm
 
@@ -257,8 +258,9 @@ The Linux kernel accepts a collection of command line parameters during boot. On
 For bookworm onwards its located in: `/boot/firmware/cmdline.txt`\
 Before bookworm it was in `/boot/cmdline.txt`
 
+<https://www.raspberrypi.com/documentation/computers/configuration.html#kernel-command-line-cmdline-txt>\
 <https://elinux.org/RPi_cmdline.txt>\
-<https://www.raspberrypi.com/documentation/computers/configuration.html#kernel-command-line-cmdline-txt>
+<https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html> - lots of them
 
 ## Controlling a Raspberry Pi Fan
 

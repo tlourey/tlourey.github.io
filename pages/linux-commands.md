@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-16T06:40:58.389Z
+lastmod: 2025-04-16T07:15:51.485Z
 tags:
     - Commands
     - Linux
@@ -159,6 +159,10 @@ modinfo
 <https://linux.die.net/man/5/modules.dep>\
 
 <https://web.archive.org/web/20160911181750/https://www.centos.org/docs/5/html/5.1/Deployment_Guide/s1-kernel-module-utils.html>
+
+<https://www.kernel.org/doc/html/latest/>\
+<https://www.kernel.org/doc/html/latest/admin-guide/index.html>\
+<https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html>
 
 ## Terminal Stuff
 
