@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-04-13T07:59:00.315Z
+lastmod: 2025-04-20T06:27:49.313Z
 fmContentType: pages
 ---
 
@@ -25,6 +25,7 @@ fmContentType: pages
   * [SNMP](#snmp)
     * [RFC1628 - Generic UPS Management Information Base](#rfc1628---generic-ups-management-information-base)
   * [Markdown](#markdown)
+  * [Linux Standards](#linux-standards)
   * [Misc](#misc)
 * [Linux](#linux)
   * [Debian Manuals](#debian-manuals)
@@ -101,6 +102,11 @@ APC Support: <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeE
 <https://dillinger.io/>
 
 Refer to [Markdown Tips](./markdown-tips.html)
+
+### Linux Standards
+
+* [ ] Put POSIX Stuff here\
+**<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>**
 
 ### Misc
 
