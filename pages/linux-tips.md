@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-20T06:51:16.743Z
+lastmod: 2025-04-20T08:48:55.706Z
 tags:
     - Linux
     - References
@@ -135,6 +135,8 @@ Ram based temporary file system in modern linux kernels used in major distros
 > -<https://en.wikipedia.org/wiki/Shared_memory#:~:text=Linux%20distributions%20based,%5B7%5D>
 
 Guidance: <https://superuser.com/questions/45342/when-should-i-use-dev-shm-and-when-should-i-use-tmp>
+
+It is auto clearing - the OS(?) will auto clear it as programs that created the files exit and the contents are no longer needed.
 
 [^1]: <https://www.kernel.org/doc/Documentation/filesystems/tmpfs.txt>
 
