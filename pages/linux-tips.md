@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-16T00:20:05.686Z
+lastmod: 2025-04-20T06:51:16.743Z
 tags:
     - Linux
     - References
@@ -30,6 +30,7 @@ keywords:
 * [Termination Signals](#termination-signals)
 * [Aliases](#aliases)
 * [Running scripts at shutdown or reboot via SystemD](#running-scripts-at-shutdown-or-reboot-via-systemd)
+* [/dev/shm](#devshm)
 * [Ubuntu and Debian Package Urgency](#ubuntu-and-debian-package-urgency)
   * [Using the urgency value](#using-the-urgency-value)
     * [apt-listchanges](#apt-listchanges)
@@ -125,6 +126,17 @@ Alternatives are:
 * Create a SystemD Service to run your script at shutdown ([REF](https://raspberrypi.stackexchange.com/questions/89732/run-a-script-at-shutdown-on-raspbian#:~:text=EDIT%3A%20If%20it%27s%20not%20working%20try%20this%20one%3A))
 
 Based off: <https://raspberrypi.stackexchange.com/questions/89732/run-a-script-at-shutdown-on-raspbian>
+
+## /dev/shm
+
+Ram based temporary file system in modern linux kernels used in major distros
+
+> *"Linux distributions based on the 2.6 kernel and later offer /dev/shm as shared memory in the form of a RAM disk, more specifically as a world-writable directory (a directory in which every user of the system can create files) that is stored in memory. Both the RedHat and Debian based distributions include it by default. Support for this type of RAM disk is completely optional within the kernel configuration file.[^1]"*
+> -<https://en.wikipedia.org/wiki/Shared_memory#:~:text=Linux%20distributions%20based,%5B7%5D>
+
+Guidance: <https://superuser.com/questions/45342/when-should-i-use-dev-shm-and-when-should-i-use-tmp>
+
+[^1]: <https://www.kernel.org/doc/Documentation/filesystems/tmpfs.txt>
 
 ## Ubuntu and Debian Package Urgency
 
