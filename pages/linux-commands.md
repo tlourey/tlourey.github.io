@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-16T07:15:51.485Z
+lastmod: 2025-04-21T23:38:55.080Z
 tags:
     - Commands
     - Linux
@@ -574,6 +574,8 @@ REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 * `sudo less /var/log/boot.log`: boot log
 * `cat /var/log/apt/history.log`: Apt history
 * `/var/log/dpkg.log`: dpkg history
+
+Also see `/var/log/syslog` replacement under [journalctl](#journalctl).
 
 Some Tips to test/evaluate syslog message via the network are in [Microsoft Sentinel Tips](/pages/microsoft-sentinel-tips.md#syslog-connector-testing)
 
