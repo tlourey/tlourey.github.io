@@ -53,7 +53,7 @@ isdraft: false
 * [Apt](#apt)
   * [changelog](#changelog)
 * [dnf](#dnf)
-* [Main SystemD Commands](#main-systemd-commands)
+* [SystemD](#systemd)
   * [Important Commands](#important-commands)
     * [systemctl](#systemctl)
     * [journalctl](#journalctl)
@@ -665,7 +665,7 @@ TBC
 `sudo dnf upgrade`: update packages\
 `sudo dnf system-upgrade`: update os to latest releaase
 
-## Main SystemD Commands
+## SystemD
 
 <https://systemd.io/>\
 <https://commons.wikimedia.org/wiki/File:Systemd_components.svg>\
