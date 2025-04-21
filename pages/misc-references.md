@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-04-20T06:27:49.313Z
+lastmod: 2025-04-21T23:48:00.279Z
 fmContentType: pages
 ---
 
@@ -106,7 +106,11 @@ Refer to [Markdown Tips](./markdown-tips.html)
 ### Linux Standards
 
 * [ ] Put POSIX Stuff here\
-**<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>**
+**<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>** - see also
+
+* <https://man7.org/linux/man-pages/man7/file-hierarchy.7.html>
+* <https://linux.die.net/man/7/hier>
+* <https://www.freedesktop.org/software/systemd/man/latest/file-hierarchy.html>
 
 ### Misc
 
