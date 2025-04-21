@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-03-13T22:30:23.613Z
+lastmod: 2025-04-21T23:03:25.248Z
 tags:
     - Commands
     - References
@@ -70,12 +70,12 @@ Find Uptime from System Info
 > Task Manager shows you the 'duration' of your uptime from this date, not the actual duration - ie hibernation doesn't stop this
 
 ```bat
-systeminfo | find “System Boot Time”
+systeminfo | find "System Boot Time"
 ```
 
 Get Uptime from CIM via Powershell
 
-```bat
+```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object LastBootUpTime
 ```
 
