@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-04-22T04:11:47.936Z
+lastmod: 2025-04-22T04:17:32.385Z
 tags:
     - Commands
     - Language
@@ -24,6 +24,7 @@ isdraft: true
   * [Commands and Help](#commands-and-help)
   * [Common Pipeline Modifiers](#common-pipeline-modifiers)
   * [Useful Expression Modifiers](#useful-expression-modifiers)
+  * [Regular Expressions](#regular-expressions)
   * [Comparison Operators](#comparison-operators)
     * [Dates](#dates)
     * [Times and TimeZones](#times-and-timezones)
@@ -99,6 +100,13 @@ Get-MessageTrace -SenderAddress sender@domain.tld -StartDate ((Get-Date).AddDays
 The last example works but includes all columns which you may not want. If thats the space, specify the columns you want instead of specifying `*`.
 
 * [ ] extrapolate above example for timezones using `Get-MessageTrace`
+
+### Regular Expressions
+
+[about Regular Expressions (Windows PowerShell 5.1)](https://learn.microsoft.com/en-au/powershell/module/microsoft.powershell.core/about/about_regular_expressions?view=powershell-5.1)\
+[about Regular Expressions (PowerShell 7.4)](https://learn.microsoft.com/en-au/powershell/module/microsoft.powershell.core/about/about_regular_expressions?view=powershell-7.4)
+
+* [ ] Add in key notes on regular expressions and some examples.
 
 ### Comparison Operators
 
