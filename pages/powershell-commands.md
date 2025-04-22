@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-04-14T05:51:36.516Z
+lastmod: 2025-04-22T04:11:47.936Z
 tags:
     - Commands
     - Language
@@ -138,7 +138,7 @@ Parameters:
 
 `Get-Date -Format "dddd MM/dd/yyyy HH:mm K"`: Specifies format you want date returned. Example: Tuesday 06/25/2019 16:17 -07:00\
 Uses .Net Formats. See [Custom date and time format strings.](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)\
-`Get-Date -UFormat "%A %m/%d/%Y %R %Z"`: Exmple: Tuesday 06/25/2019 16:19 -07\
+`Get-Date -UFormat "%A %m/%d/%Y %R %Z"`: Example: Tuesday 06/25/2019 16:19 -07\
 [UFormat notes](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1#notes)\
 `Get-Date -UnixTimeSeconds`: Date and time represented in seconds since January 1, 1970, 0:00:00 (Added in PS7)
 
@@ -357,9 +357,9 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 ## Commands often forgotten
 
 `Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content#-wait>\
-`Select-String`: kind of like `grep` (need to check if it does work like grep)\
+`Select-String`: kind of like `grep` (need to check if it does work like grep).See: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-string?view=powershell-7.5>\
 `Out-GridView`: really cool wait view tables/rows. -passthru is also really awesome. You should read the help page in full esp the Notes stuff: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview>\
-`New-Item -ItemType File -Path .\filename.ext -Force`: cloest thing in powershell to linux `touch`
+`New-Item -ItemType File -Path .\filename.ext -Force`: closest thing in powershell to linux `touch`
 `. $profile`: reload powershell profile (assumes its in the current folder)
 
 [Redirecting Output](https://learn.microsoft.com/en-us/powershell/scripting/samples/redirecting-data-with-out---cmdlets?view=powershell-7.5)
