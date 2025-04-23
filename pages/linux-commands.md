@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-21T23:38:55.080Z
+lastmod: 2025-04-23T08:56:13.118Z
 tags:
     - Commands
     - Linux
@@ -509,7 +509,7 @@ Some examples:
 ### Hardware Info
 
 ```bash
-lshw
+lshw # Doesn't seem to be installed on Raspberry Pi OS
 lshw | less
 lshw --short
 lscpu
