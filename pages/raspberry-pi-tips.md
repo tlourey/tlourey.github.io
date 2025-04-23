@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-23T09:19:27.117Z
+lastmod: 2025-04-23T09:21:26.610Z
 tags:
     - RaspberryPi
     - Tips
@@ -84,13 +84,13 @@ Solutions:
 
 * udiskie, manually started as a deamon: <https://github.com/coldfix/udiskie>
   > [!IMPORTANT] udiskie may need a polkit config
-  > For udiskie to run as pi, you may need to follow [these](https://github.com/coldfix/udiskie/wiki/Permissions) polkit insturcionts
+  > For udiskie to run as pi, you may need to follow [these](https://github.com/coldfix/udiskie/wiki/Permissions) polkit instructions
 
 * udev rules: <https://blog.jasonantman.com/2009/11/running-a-script-on-usb-drive-insertion/>
 * autofs (maybe - can't quickly find solid answer on if it automounts?)
 * fstab (note if storage is not attached at raspberrypi bootup, it add an extra 90 seconds to timeout): [Automatically mount a storage device - Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#automatically-mount-a-storage-device)
 
-See also [External Storage - Offical Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#external-storage)
+See also [External Storage - Official Raspberry Pi Documentation](https://www.raspberrypi.com/documentation/computers/configuration.html#external-storage)
 
 ### Packages for common file system support
 
@@ -153,7 +153,7 @@ firstrun.sh generation links from github:
 
 ### Use a DHCP Reservation
 
-Crappy but seems offical: <https://www.raspberrypi.com/documentation/computers/configuration.html#assign-a-static-ip-address>
+Crappy but seems official: <https://www.raspberrypi.com/documentation/computers/configuration.html#assign-a-static-ip-address>
 
 ### Network Manager
 
@@ -427,7 +427,7 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 * `amixer -c <CARDNAME> controls`: show me the controls for CARDNAME. This will show you the numid's you can use for this card.
 * `amixer -c <CARDNAME> contents`: show me the controls and some more details about them for CARDNAME. This will show you the numids for this card and their values and how they work.
 * `amixer -c <CARDNAME> cget <CONTROL>`: get the current control value
-* `amixer -c <CARDNAME> cset <CONTROL> <PARAMETER>`: set the current control paramater\
+* `amixer -c <CARDNAME> cset <CONTROL> <PARAMETER>`: set the current control parameter\
 
   Examples from man page:
   > `amixer -c 1 sset Line,0 80%,40% unmute cap`: will set the second soundcard's left line input volume to 80% and right line input to 40%, unmute it, and select it as a source for capture (recording).\
@@ -465,4 +465,4 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 [STICKY: Using fstab A Beginner's Guide](https://forums.raspberrypi.com/viewtopic.php?t=302752)\
 [Raspberry Pi Pinout Guide](https://pinout.xyz/) - interactive reference to the Raspberry Pi GPIO pins, and a guide to the Raspberry Pi's GPIO interfaces - also see the `pinout` command.\
 [RPi GPIO Python Module Info](https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/)\
-[Offical Documentation](#documentation)
+[Official Documentation](#documentation)
