@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-23T00:44:22.048Z
+lastmod: 2025-04-23T07:08:46.824Z
 tags:
     - RaspberryPi
     - Tips
@@ -25,7 +25,7 @@ keywords:
 * [Differenes between RaspberryPi OS Editions](#differenes-between-raspberrypi-os-editions)
   * [Automount](#automount)
   * [Packages for common file system support](#packages-for-common-file-system-support)
-* [Raspberry Pi Imager](#raspberry-pi-imager)
+* [Raspberry Pi Imager Custom Settings](#raspberry-pi-imager-custom-settings)
 * [On First Boot after new image](#on-first-boot-after-new-image)
 * [Setting a static IP on a Pi using Bookworm](#setting-a-static-ip-on-a-pi-using-bookworm)
   * [Use a DHCP Reservation](#use-a-dhcp-reservation)
@@ -91,7 +91,7 @@ exFAT:\
 `sudo apt install exfat-utils`\
 See [exFAT on the Raspberry Pi](https://pimylifeup.com/raspberry-pi-exfat/) for more details. (note site has too many ads)
 
-## Raspberry Pi Imager
+## Raspberry Pi Imager Custom Settings
 
 Pre-defined os settings:
 
@@ -115,6 +115,28 @@ Here is one from 2025 with Bookworm:
 ```text
 console=serial0,115200 console=tty1 root=PARTUUID=067e19d7-02 rootfstype=ext4 fsck.repair=yes rootwait quiet init=/usr/lib/raspberrypi-sys-mods/firstboot cfg80211.ieee80211_regdom=US systemd.run=/boot/firstrun.sh systemd.run_success_action=reboot systemd.unit=kernel-command-line.target
 ```
+
+> [!WARNING] WIP
+> The below first run order list is still very much a **Work In Progress**
+
+So the order for bookworm seems to be:
+
+1. <https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/bookworm/usr/lib/raspberrypi-sys-mods/firstboot>
+   1. [`Modify /boot/firmware/cmdline.txt` so firstboot doesn't run again.](https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/93ab67567a088b6adbb0a8ec9d09655af52c14e4/usr/lib/raspberrypi-sys-mods/firstboot#L112)
+   2. [call](https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/93ab67567a088b6adbb0a8ec9d09655af52c14e4/usr/lib/raspberrypi-sys-mods/firstboot#L121) the [main function](https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/93ab67567a088b6adbb0a8ec9d09655af52c14e4/usr/lib/raspberrypi-sys-mods/firstboot#L80)
+   3. Generate SSH Keys by mounting the root partition and then running [/usr/lib/raspberrypi-sys-mods/regenerate_ssh_host_keys](https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/bookworm/usr/lib/raspberrypi-sys-mods/regenerate_ssh_host_keys)
+   4. If `/boot/firmware/custom.toml` is found, call apply_custom function, telling it to use `/boot/firmware/custom.toml`
+      1. Run `python3 -c "import toml"`
+      2. If it doesn't fail run [`/usr/lib/raspberrypi-sys-mods/init_config` supplying the toml firle as an argument](https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/93ab67567a088b6adbb0a8ec9d09655af52c14e4/usr/lib/raspberrypi-sys-mods/firstboot#L65).
+         1. **TBA**
+   5. Fix PartUUID
+   6. Reboot if there is no failure reason determined.
+2. `systemd.run=/boot/firstrun.sh` - this is dynamically created by the Raspberry Pi Imager depending on the configration you set (see [Raspberry Pi Imager Custom Settings](#raspberry-pi-imager-custom-settings)). See below for First Run Github links
+
+firstrun.sh generation links from github:
+
+* <https://github.com/raspberrypi/rpi-imager/blob/qml/src/downloadthread.cpp>
+* <https://github.com/raspberrypi/rpi-imager/blob/qml/src/OptionsPopup.qml>
 
 ## Setting a static IP on a Pi using Bookworm
 
