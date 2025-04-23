@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-16T07:16:35.390Z
+lastmod: 2025-04-23T00:44:22.048Z
 tags:
     - RaspberryPi
     - Tips
@@ -429,5 +429,7 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 ## Misc References
 
 [Embedded Linux Wiki](https://elinux.org/Main_Page)\
-[STICKY: Using fstab A Beginner's Guide](https://forums.raspberrypi.com/viewtopic.php?t=302752)
+[STICKY: Using fstab A Beginner's Guide](https://forums.raspberrypi.com/viewtopic.php?t=302752)\
+[Raspberry Pi Pinout Guide](https://pinout.xyz/) - interactive reference to the Raspberry Pi GPIO pins, and a guide to the Raspberry Pi's GPIO interfaces\
+[RPi GPIO Python Module Info](https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/)\
 [Offical Documentation](#documentation)
