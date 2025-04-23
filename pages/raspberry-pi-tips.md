@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-23T07:08:46.824Z
+lastmod: 2025-04-23T09:19:27.117Z
 tags:
     - RaspberryPi
     - Tips
@@ -22,7 +22,8 @@ keywords:
 
 <!--- cSpell:disable --->
 * [Documentation](#documentation)
-* [Differenes between RaspberryPi OS Editions](#differenes-between-raspberrypi-os-editions)
+* [Determine which Pi model you have from the command line](#determine-which-pi-model-you-have-from-the-command-line)
+* [Differences between RaspberryPi OS Editions](#differences-between-raspberrypi-os-editions)
   * [Automount](#automount)
   * [Packages for common file system support](#packages-for-common-file-system-support)
 * [Raspberry Pi Imager Custom Settings](#raspberry-pi-imager-custom-settings)
@@ -57,7 +58,17 @@ keywords:
 Reference or tip?
 -->
 
-## Differenes between RaspberryPi OS Editions
+## Determine which Pi model you have from the command line
+
+`cat /sys/firmware/devicetree/base/model`: Example: `Raspberry Pi 4 Model B Rev 1.1`\
+`cat /proc/device-tree/model`: Example: `Raspberry Pi 3 Model B Plus Rev 1.3`\
+`pinout`: Gives a visual representation of the Raspberry Pi Pins but also, gives the model number and revision.
+`cat /proc/cpuinfo`: Gives CPU Info. You can then check some of the information again <https://elinux.org/RPi_Hardware>
+
+> [!NOTE] No lshw
+> seems Raspberry Pi OS doesn't have lshw installed
+
+## Differences between RaspberryPi OS Editions
 
 <https://forums.raspberrypi.com/viewtopic.php?t=339721>
 
@@ -452,6 +463,6 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 
 [Embedded Linux Wiki](https://elinux.org/Main_Page)\
 [STICKY: Using fstab A Beginner's Guide](https://forums.raspberrypi.com/viewtopic.php?t=302752)\
-[Raspberry Pi Pinout Guide](https://pinout.xyz/) - interactive reference to the Raspberry Pi GPIO pins, and a guide to the Raspberry Pi's GPIO interfaces\
+[Raspberry Pi Pinout Guide](https://pinout.xyz/) - interactive reference to the Raspberry Pi GPIO pins, and a guide to the Raspberry Pi's GPIO interfaces - also see the `pinout` command.\
 [RPi GPIO Python Module Info](https://sourceforge.net/p/raspberry-gpio-python/wiki/Home/)\
 [Offical Documentation](#documentation)
