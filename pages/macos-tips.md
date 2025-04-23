@@ -3,14 +3,14 @@ title: Mac OS Tips
 description: Tips for Mac OS
 published: true
 categories:
-  - Tech
+    - Tech
 type: pages
 layout: pages
 date: 2025-02-25T04:41:08.679Z
-lastmod: 2025-03-04T11:22:33.496Z
+lastmod: 2025-04-23T06:50:43.670Z
 tags:
-  - MacOS
-  - Tips
+    - MacOS
+    - Tips
 isdraft: true
 fmContentType: pages
 preview: ""
@@ -19,6 +19,7 @@ preview: ""
 <!--- cSpell:disable --->
 * [Mouse Scrolling](#mouse-scrolling)
 * [Time doesn't update](#time-doesnt-update)
+* [Property Lists](#property-lists)
 * [Other Tips](#other-tips)
 <!--- cSpell:enable --->
 
@@ -47,6 +48,12 @@ Caveats:
 
 * Issue with MacOS Sonoma
 * Should be fixed in 14.5 but I had it occur again on 14.7
+
+## Property Lists
+
+Not exactly like the windows registry but maybe sorted.
+
+* [ ] Research and create notes about MacOS Property List.
 
 ## Other Tips
 
