@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T13:05:00
-lastmod: 2025-04-13T07:57:41.404Z
+lastmod: 2025-04-23T11:15:08.513Z
 tags:
     - Language
     - Linux
@@ -91,3 +91,5 @@ TLDP Debugging Guide: <https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_02_03
 
 See [Aliases in Linux Commands](linux-commands.md#aliases)
 See [Builtin Bash Commands in Linux Commands](linux-commands.md#built-in-bash-commands)
+
+[Linux Bash Shell Scripting Tutorial Wiki](https://bash.cyberciti.biz/guide/Main_Page)

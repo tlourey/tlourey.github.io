@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-04-21T23:48:00.279Z
+lastmod: 2025-04-23T11:11:48.216Z
 fmContentType: pages
 ---
 
@@ -121,7 +121,10 @@ Refer to [Markdown Tips](./markdown-tips.html)
 
 Crontab: Best website for refining crontab timings: [Crontab.guru - The cron schedule expression generator](https://crontab.guru/) - more in [Linux Commands](linux-commands.md)\
 [Arch Linux Wiki](https://wiki.archlinux.org/title/Main_page) - Contains a lot more up to date resources for linux, even for non-arch users. I **don't** use arch by the way :grin:\
-[The Linux Documentation Project](https://tldp.org/): Older resrouce but still has a fair bit of stuff. Doesn't come up as much in Google these days but worth remembering.
+[The Linux Documentation Project](https://tldp.org/): Older resrouce but still has a fair bit of stuff. Doesn't come up as much in Google these days but worth remembering.\
+**[nixCraft - Linux Tips, Hacks, Tutorials, And Ideas In Blog](https://www.cyberciti.biz/)**: Vivek Gite and one of the best Linux websites around.\
+**[Linux Audit](https://linux-audit.com/)**: I only found this very recently but it looks good.\
+
 
 ### Debian Manuals
 
