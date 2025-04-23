@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-23T08:56:13.118Z
+lastmod: 2025-04-23T10:58:31.848Z
 tags:
     - Commands
     - Linux
@@ -622,6 +622,18 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `sudo adduser XXX sudo`: if user also needs sudo\
 `sudo useradd -m -G sshlogin,sudo XXX -s /bin/bash`: sets a users shell, shouldn't be needed much these days\
 `sudo passwd XXX`: if you need to change user's password
+
+> [!NOTE] useradd vs adduser
+> `useradd` is a low level utility for adding users. On Debian, administrators should usually use [`adduser`(8)](https://manpages.ubuntu.com/manpages/latest/man8/adduser.8.html) instead.
+
+See:
+
+* <https://manpages.ubuntu.com/manpages/latest/man8/adduser.8.html>
+* <https://manpages.ubuntu.com/manpages/plucky/man8/addgroup.8.html>
+* <https://manpages.ubuntu.com/manpages/latest/man5/adduser.conf.5.html>
+* <https://manpages.ubuntu.com/manpages/latest/man8/useradd.8.html> - NB:
+
+You can also create system users by using the `--system` parameter of adduser. See <https://manpages.ubuntu.com/manpages/xenial/man8/adduser.8.html#:~:text=version%20of%20adduser.)-,Add%20a%20system%20user,-If%20called%20with> for more specifics.
 
 ## Apt
 
