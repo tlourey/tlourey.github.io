@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-23T09:21:26.610Z
+lastmod: 2025-04-23T09:42:58.420Z
 tags:
     - RaspberryPi
     - Tips
@@ -26,7 +26,9 @@ keywords:
 * [Differences between RaspberryPi OS Editions](#differences-between-raspberrypi-os-editions)
   * [Automount](#automount)
   * [Packages for common file system support](#packages-for-common-file-system-support)
-* [Raspberry Pi Imager Custom Settings](#raspberry-pi-imager-custom-settings)
+* [Raspberry Pi Imager](#raspberry-pi-imager)
+  * [Raspberry Pi Imager Custom Settings](#raspberry-pi-imager-custom-settings)
+  * [Raspberry Pi bootloader changes](#raspberry-pi-bootloader-changes)
 * [On First Boot after new image](#on-first-boot-after-new-image)
 * [Setting a static IP on a Pi using Bookworm](#setting-a-static-ip-on-a-pi-using-bookworm)
   * [Use a DHCP Reservation](#use-a-dhcp-reservation)
@@ -102,7 +104,9 @@ exFAT:\
 `sudo apt install exfat-utils`\
 See [exFAT on the Raspberry Pi](https://pimylifeup.com/raspberry-pi-exfat/) for more details. (note site has too many ads)
 
-## Raspberry Pi Imager Custom Settings
+## Raspberry Pi Imager
+
+### Raspberry Pi Imager Custom Settings
 
 Pre-defined os settings:
 
@@ -110,6 +114,18 @@ On RPiOS it is at: `~/.config/Raspberry Pi/Imager.conf`
 On windows it might be in the registry at: `HKCU\Software\Raspberry Pi\Imager`
 
 From <https://forums.raspberrypi.com/viewtopic.php?t=339566>
+
+### Raspberry Pi bootloader changes
+
+If you want to change your boot order or the bootloader you need to use Raspberry Pi Imager. See [Update the bootloader](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#bootloader_update_stable)
+
+For bootloader confiuguration changes see [Update the bootloader configuraiton](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#update-the-bootloader-configuration)
+
+`sudo rpi-eeprom-update` will show you the current and available versions, and the current policy. You may need to reconfigure it to see latest using instructions [Update the bootloader configuraiton](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#update-the-bootloader-configuration)
+
+`ls -la /usr/lib/firmware/raspberrypi/bootloader-2711/default`: Show default firmware versions already available on current Pi.\
+`ls -la /usr/lib/firmware/raspberrypi/bootloader-2711/latest/`: Show latest version of firwmare downloaded.\
+`less /usr/lib/firmware/raspberrypi/bootloader-2711/release-notes.md`: Release notes of versions.
 
 ## On First Boot after new image
 
@@ -279,6 +295,8 @@ Before bookworm it was in `/boot/config.txt`
 <https://www.raspberrypi.com/documentation/computers/config_txt.html#what-is-config-txt>
 
 <https://elinux.org/RPiconfig>
+
+Note that if you want to change your boot order or the bootloader you need to use Raspberry Pi Imager. See [Raspberry Pi Imager](#raspberry-pi-imager).
 
 ## cmdline.txt
 
