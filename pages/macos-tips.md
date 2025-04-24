@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-25T04:41:08.679Z
-lastmod: 2025-04-23T06:50:43.670Z
+lastmod: 2025-04-24T00:28:54.816Z
 tags:
     - MacOS
     - Tips
@@ -20,6 +20,7 @@ preview: ""
 * [Mouse Scrolling](#mouse-scrolling)
 * [Time doesn't update](#time-doesnt-update)
 * [Property Lists](#property-lists)
+* [Offical Guides](#offical-guides)
 * [Other Tips](#other-tips)
 <!--- cSpell:enable --->
 
@@ -51,9 +52,35 @@ Caveats:
 
 ## Property Lists
 
-Not exactly like the windows registry but maybe sorted.
+Not exactly like the windows registry but maybe sorta.
 
-* [ ] Research and create notes about MacOS Property List.
+You can adjust properity lists via:
+
+* `defaults` tool on MacOS. See [Edit property lists in Terminal on Mac](https://support.apple.com/en-au/guide/terminal/apda49a1bb2-577e-4721-8f25-ffc0836f6997/mac).
+* `plutil` command on MacOS. See [plutil man page from xode](https://keith.github.io/xcode-man-pages/plutil.1.html) - I get the feeling `defaults` is better than `plutil`
+
+Background:
+
+> *"In the macOS, iOS, NeXTSTEP, and GNUstep programming frameworks, property list files are files that store serialized objects. Property list files use the filename extension .plist, and thus are often referred to as p-list files."*
+>
+> \- *<https://en.wikipedia.org/wiki/Property_list>*
+
+> Preference and configuration files in macOS use property lists (plists) to specify the attributes, or properties, of an app or process. An example is the preferences plist for the Finder in the Library/Preferences/ folder of a user's home folder. The file is named com.apple.finder.plist. The default naming convention for a plist includes the distributor's reverse DNS name prepended to the app or process name, followed by a .plist extension.
+>
+> To edit property lists, use the defaults command-line tool. The defaults command is a powerful tool and, when you know the specific key and value in a property list you want to change, the defaults tool is very efficient.
+>
+> The defaults tool works directly with the macOS preferences subsystem and is used by many apps in macOS to manage preferences and other settings. It can be built into shell scripts and lets you access preferences in the multiple domains that exist on a given computer.
+>
+> \- *[Edit property lists in Terminal on Mac](https://support.apple.com/en-au/guide/terminal/apda49a1bb2-577e-4721-8f25-ffc0836f6997/mac)*
+
+## Offical Guides
+
+[MacOS User Guide](https://support.apple.com/en-au/guide/mac-help/welcome/mac)\
+[iPhoneOS User Guide](https://support.apple.com/en-au/guide/iphone/welcome/ios)
+[iPadOS User Guide](https://support.apple.com/en-us/guide/ipad/welcome/ipados)\
+[Terminal User Guide](https://support.apple.com/en-au/guide/terminal/welcome/mac)
+
+[Manuals, Specs and Downloads](https://support.apple.com/en-au/docs)
 
 ## Other Tips
 
