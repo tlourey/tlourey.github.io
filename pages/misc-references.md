@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-04-23T11:11:48.216Z
+lastmod: 2025-04-24T00:05:11.964Z
 fmContentType: pages
 ---
 
@@ -188,6 +188,11 @@ Also check [Windows Tips](windows-tips.md)
 
 * Regex for GUID/UUID that Notepad++ likes: `[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}`. From <https://stackoverflow.com/a/6640851>
 * Regexes for specific GUID/UUID Versions: <https://stackoverflow.com/a/38191078>
+* Regex for finding codeblocks right after markdown alerts (put into codeblock for formatting):
+
+```regex
+> \[!\w+\][^\n]*\n>[^\n]*\n\n\```
+```
 
 For Useful Excel Formulas see [Excel Tips](excel-tips.md)\
 For very useful Regex Tools see [Software in Misc Tools](misc-tools.md#software-tools)
