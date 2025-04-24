@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-23T09:42:58.420Z
+lastmod: 2025-04-24T15:23:49.215Z
 tags:
     - RaspberryPi
     - Tips
@@ -34,7 +34,7 @@ keywords:
   * [Use a DHCP Reservation](#use-a-dhcp-reservation)
   * [Network Manager](#network-manager)
   * [/etc/network/interfaces](#etcnetworkinterfaces)
-* [full-update](#full-update)
+* [full-upgrade](#full-upgrade)
 * [Firmware Upgrade](#firmware-upgrade)
 * [raspi-config non-interactive](#raspi-config-non-interactive)
 * [Read only SD Card](#read-only-sd-card)
@@ -216,7 +216,7 @@ dns-nameservers 8.8.8.8      # DNS server(s) - You can add multiple servers
 
 Also consider setting up configs in source `/etc/network/interfaces.d/*`
 
-## full-update
+## full-upgrade
 
 From: <https://www.raspberrypi.com/documentation/computers/os.html#manage-software-packages-with-apt>
 
