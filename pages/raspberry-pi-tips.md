@@ -223,9 +223,11 @@ From: <https://www.raspberrypi.com/documentation/computers/os.html#manage-softwa
 > [!TIP]
 > Unlike Debian, Raspberry Pi OS is under continual development. As a result, package dependencies sometimes change, so you should always use `full-upgrade` instead of the standard `upgrade`.
 
+full-update commands:
+
 ```bash
-sudo apt update
-sudo apt full-upgrade
+sudo apt update # -y
+sudo apt full-upgrade # -y
 ```
 
 ## Firmware Upgrade

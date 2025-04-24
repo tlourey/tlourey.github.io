@@ -193,6 +193,8 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 > [!TIP] PS5 not PS7
 > this module only seems to work in PS5/Windows PowerShell.
 
+Commands to Install or update module
+
 ```powershell
 Install-Module -Name Microsoft.Online.SharePoint.PowerShell
 # OR for no admin rights

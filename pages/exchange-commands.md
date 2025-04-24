@@ -162,6 +162,8 @@ Stop-HistoricalSearch -JobId <<GUID>>
 > [!IMPORTANT] ASSUMPTION!
 > This assumes you never give users their full mailbox in the first place.
 
+Commands to increase space:
+
 ```powershell
 Set-Mailbox -id <<email@domain.com>> -ProhibitSendQuota <<Value>> -ProhibitSendReceiveQuota <<Value>>
 

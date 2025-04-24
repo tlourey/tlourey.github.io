@@ -229,12 +229,13 @@ From: <https://askubuntu.com/a/556399/443835>
 <https://documentation.ubuntu.com/server/how-to/software/package-management/#automatic-updates>\
 <https://pimylifeup.com/unattended-upgrades-debian-ubuntu/>
 
-`/etc/apt/apt.conf.d/50unattended-upgrades`:
-
-Enable/Disable Updating and Upgrading:
 
 > [!NOTE] Defaults
 > Default is for both to be enabled
+
+Enable/Disable Updating and Upgrading:
+
+`/etc/apt/apt.conf.d/50unattended-upgrades`:
 
 ```python
 APT::Periodic::Update-Package-Lists "1";
