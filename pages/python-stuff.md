@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-16T00:12:54.309Z
+lastmod: 2025-04-25T02:47:39.231Z
 tags:
     - Language
     - Python
@@ -16,8 +16,11 @@ fmContentType: pages
 mermaid: false
 preview: ""
 ---
+<!--- cSpell:words -->
+<!--- cSpell:ignore debugpy tcsh -->
 
 <!--- cSpell:disable --->
+* [Escape Sequences](#escape-sequences)
 * [Standards](#standards)
   * [Standards of note](#standards-of-note)
 * [Variants](#variants)
@@ -31,8 +34,15 @@ preview: ""
   * [Termination Signal Capture](#termination-signal-capture)
 * [Quirks to remember](#quirks-to-remember)
 * [Books](#books)
+* [Official Documentation and References](#official-documentation-and-references)
 * [Resources of NOTE](#resources-of-note)
 <!--- cSpell:enable --->
+
+## Escape Sequences
+
+<https://docs.python.org/3/reference/lexical_analysis.html#escape-sequences>\
+<https://www.w3schools.com/python/gloss_python_escape_characters.asp> - has examples and place to try them\
+<https://www.geeksforgeeks.org/python-escape-characters/>: same thing but static has examples
 
 ## Standards
 
@@ -124,11 +134,16 @@ finally:
 
 `os.environ.get('ENVVAR', 'value if env missing)` always returns as a string object. Cast it as an int (or other type) if required. eg: `int(os.environ.get('ENVVAR', 'value if env missing))`
 
-Yes this is a pertty basic concept but its here to more remember what 'os.environ.get()` returns as.
+Yes this is a pretty basic concept but its here to more remember what 'os.environ.get()` returns as.
 
 ## Books
 
 See [Python in Books](books.md#python)
+
+## Official Documentation and References
+
+<https://docs.python.org/>\
+<https://wiki.python.org/moin/>
 
 ## Resources of NOTE
 
