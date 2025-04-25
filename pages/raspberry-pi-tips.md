@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-24T15:23:49.215Z
+lastmod: 2025-04-25T05:42:34.681Z
 tags:
     - RaspberryPi
     - Tips
@@ -48,6 +48,7 @@ keywords:
 * [rfkill](#rfkill)
 * [Pairing a Bluetooth Keyboard](#pairing-a-bluetooth-keyboard)
 * [Sound](#sound)
+* [XScreensaver](#xscreensaver)
 * [Tools](#tools)
 * [Misc References](#misc-references)
 <!--- cSpell:enable --->
@@ -473,6 +474,10 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 
 `ls /proc/asound/cards`\
 `ls /proc/asound/card2`
+
+## XScreensaver
+
+Activate now: `xscreensaver-command -activate`
 
 ## Tools
 
