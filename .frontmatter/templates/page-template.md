@@ -12,7 +12,8 @@ isdraft: true
 fmContentType: pages
 mermaid: false
 ---
-
+<!--- cSpell:words -->
+<!--- cSpell:ignore -->
 <!--- cSpell:disable --->
 * [Heading](#heading)
 <!--- cSpell:enable --->
