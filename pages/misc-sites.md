@@ -1,6 +1,6 @@
 ---
 title: Misc Sites
-description: Collection of Misc Websites I recommend, and try to remember that dont really sit anywhere else.
+description: Collection of Misc Websites I recommend, and try to remember that don't really sit anywhere else.
 published: true
 categories:
     - Tech
@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-03-17T11:41:29.482Z
+lastmod: 2025-04-25T02:47:44.558Z
 tags:
     - References
     - Tools
@@ -22,7 +22,7 @@ keywords:
 <!--- cSpell:disable --->
 * [Time and date and clocks](#time-and-date-and-clocks)
 * [Tech News](#tech-news)
-* [Web Development](#web-development)
+* [Development](#development)
 * [Weather](#weather)
   * [Weather Sites](#weather-sites)
   * [Misc Weather Sites](#misc-weather-sites)
@@ -46,10 +46,11 @@ keywords:
 <https://feedly.com/i/my/me>\
 <https://www.itnews.com.au/> - very 'traditional' style media
 
-## Web Development
+## Development
 
 **<https://www.w3schools.com/>**\
-<https://csszengarden.com/>
+**<https://www.geeksforgeeks.org/>**\
+<https://csszengarden.com/> - older examples of fancy css
 
 ## Weather
 

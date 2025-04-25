@@ -8,34 +8,42 @@ layout: pages
 isdraft: false
 published: true
 tags:
+    - Email
+    - Linux
+    - Microsoft365
+    - Networks
+    - Python
+    - Security
     - Tools
+    - Windows
+    - Provisioning
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-04-16T00:25:44.721Z
+lastmod: 2025-04-25T02:47:03.650Z
 keywords:
     - Tools
 ---
 
-<!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS Vesa microcontrollers circuitpython DNSSEC RDAP ICANN -->
+<!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS Vesa microcontrollers circuitpython DNSSEC RDAP ICANN byobu -->
 <!--- cSpell:ignore Nirsoft cyrilbois Deview pyrexp Keji -->
 
 <!--- cSpell:disable --->
 * [Network Tools](#network-tools)
   * [Speedtest](#speedtest)
 * [Linux Tools](#linux-tools)
-* [Software Tools](#software-tools)
+* [Software Language Tools](#software-language-tools)
   * [Python](#python)
     * [Maker Variants](#maker-variants)
-* [KQL Tools](#kql-tools)
-* [PowerShell Tools](#powershell-tools)
+  * [KQL Tools](#kql-tools)
+  * [PowerShell Tools](#powershell-tools)
+* [Development Tools](#development-tools)
+  * [Vagrant](#vagrant)
+  * [VSCode](#vscode)
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
   * [Hardware](#hardware)
   * [Provisioning and Deployment Tools](#provisioning-and-deployment-tools)
 * [Video Cables](#video-cables)
-* [Development Tools](#development-tools)
-  * [Vagrant](#vagrant)
-  * [VSCode](#vscode)
 * [Chrome or Edge Extensions](#chrome-or-edge-extensions)
 * [Misc Web Tools](#misc-web-tools)
 * [Security Tools](#security-tools)
@@ -89,9 +97,22 @@ keywords:
 
 ## Linux Tools
 
-<https://explainshell.com/>
+<https://explainshell.com/> - paste in a shell command and understand what it does\
+[Byobu](https://www.byobu.org/) - Open source text-based window manager and terminal multiplexer. Can use tmux or screen underneath. Nicer than native tmux. May not be installed everywhere so consider learning tmux as well.
 
-## Software Tools
+* [Byobu Help when using TMUX](https://github.com/dustinkirkland/byobu/blob/master/usr/share/doc/byobu/help.tmux.txt)
+* [Byobu Help when using screen](https://github.com/dustinkirkland/byobu/blob/master/usr/share/doc/byobu/help.screen.txt)
+* [Older Byobu cheat sheet](https://gist.github.com/inhumantsar/bf86ff1961cccdf8be06)
+
+> [!TIP] Keyboard shortcuts to remember
+> Exit Scrollback mode:
+
+> * <kbd>ESC</kbd>
+> * <kbd>q</kbd>
+> * <kbd>Ctrl</kbd> + <kbd>c</kbd>
+> * <kbd>ENTER</kbd>
+
+## Software Language Tools
 
 [regex101](https://regex101.com/)\
 [pyrexp](https://pythonium.net/regex) - Thanks to [@cyrilbois](https://github.com/cyrilbois) for the PR and making the tool!
@@ -104,15 +125,42 @@ keywords:
 <https://circuitpython.org/> - beginner / easier to user version of the above for microcontrollers\
 <https://circuitpython.org/blinka> - use circuitpython on SBCs like the Raspberry Pi
 
-## KQL Tools
+### KQL Tools
 
 <https://www.kqlsearch.com/>
 
 Check out [Misc KQL References and Resources](kql-queries.md#misc-kql-references-and-resources)
 
-## PowerShell Tools
+### PowerShell Tools
 
 [PowerShell Module Browser](https://learn.microsoft.com/en-us/powershell/module/)
+
+## Development Tools
+
+### Vagrant
+
+**<https://portal.cloud.hashicorp.com/vagrant/discover>** - vagrant boxes search\
+<https://www.vagrantup.com/>\
+<https://developer.hashicorp.com/vagrant/docs>\
+**<https://developer.hashicorp.com/vagrant/docs/cli>**
+
+Common Vagrant Commands:
+
+```bash
+mkdir nameforproject
+vagrant init ubuntu/jammy64
+vagrant up
+vagrant snapshot save
+vagrant snapshot restore
+vagrant halt
+vagrant destory
+vagrant box list
+vagrant box remove box/name
+```
+
+### VSCode
+
+[VSCode Settings and Extensions](vscode-settings-and-extensions.md)
 
 ## Microsoft 365 Tools
 
@@ -128,6 +176,7 @@ Check out [Misc KQL References and Resources](kql-queries.md#misc-kql-references
 **<https://learn.microsoft.com/en-us/sysinternals/>**\
 **<https://www.vandyke.com/products/securecrt/windows.html> - Its not free but its good.**\
 <https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
+[Cygwin](https://www.cygwin.com/) - Linux env for Windows, somewhat natively.\
 **[Total Commander](https://www.ghisler.com/)** - THE PIMP!
 
 * <https://www.ghisler.ch/wiki/index.php?title=Main_Page>: Total Commander Wiki (not sure if official)
@@ -156,33 +205,6 @@ Somewhat specific cables I often buy and want to remember.
 [StarTech.com 3m 10 ft White Mini DisplayPort to DisplayPort 1.2 Adapter Cable M/M - DisplayPort 4k with HBR2 Support - Mini DP to DP Cable](https://www.amazon.com.au/dp/B0081ZBNCA)\
 [Club3D CAC-2067 DisplayPort to DisplayPort 1.4/Hbr3/ HDR Support Cable DP 1.4 8K 60Hz 1 Meter/3.28 Feet Black Vesa Certified](https://www.amazon.com.au/dp/B076D6GGG8)\
 Active DisplayPort to HDMI for Lenovo Docks that you prefer: [CableCreation Active DisplayPort to HDMI 4K 60Hz Cable 2.4M(8FT) Support Multi-Screen Display, DP to HDMI HDR Monitor Cable Unidirectional, DP Cable 1.4 to HDMI Support 4K 30Hz, 2K/1080P 144Hz, 120Hz](https://www.amazon.com.au/CableCreation-Unidirectional-DisplayPort-Eyefinity-Multi-Display/dp/B082CXMBCQ?ref_=ast_sto_dp&th=1)
-
-## Development Tools
-
-### Vagrant
-
-**<https://portal.cloud.hashicorp.com/vagrant/discover>** - vagrant boxes search\
-<https://www.vagrantup.com/>\
-<https://developer.hashicorp.com/vagrant/docs>\
-**<https://developer.hashicorp.com/vagrant/docs/cli>**
-
-Common Vagrant Commands:
-
-```bash
-mkdir nameforproject
-vagrant init ubuntu/jammy64
-vagrant up
-vagrant snapshot save
-vagrant snapshot restore
-vagrant halt
-vagrant destory
-vagrant box list
-vagrant box remove box/name
-```
-
-### VSCode
-
-[VSCode Settings and Extensions](vscode-settings-and-extensions.md)
 
 ## Chrome or Edge Extensions
 
