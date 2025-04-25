@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-20T06:58:16.807Z
-lastmod: 2025-04-09T14:37:22.742Z
+lastmod: 2025-04-25T02:08:28.109Z
 tags:
     - References
     - Tips
@@ -43,4 +43,4 @@ preview: ""
 | Profit | | Profit is the total turnover remaining after the organization accounts for all expenses, both variable and fixed. <br/> Some of the other names for Profit are: <br/> * Net earnings <br/> * Net income <br/> * Sales profit <br/> * Total comprehensive income <br/> * Bottom line | * Finance |Profit = All income - All expenses <br/> Net income = (net sales + other income sources) - all expenses | [Turnover vs. Profit: What's the Difference?](https://www.indeed.com/career-advice/career-development/turnover-vs-profit) <br/> <https://en.wikipedia.org/wiki/Index_of_accounting_articles> |
 |Market capitalization | Market Cap |the value of a company that is traded on the stock market, calculated by multiplying the total number of shares by the present share price. | * Finance <br/> * Shares/Stocks | | [Wikipedia](https://en.wikipedia.org/wiki/Market_capitalization) |
 |Stock Market Percentage Points | Percentage Points | In the stock market, "percentage points" often refer to the change in percentage terms, or basis points (bps), which represent 1/100th of 1%. Understanding these concepts helps investors analyze the performance and volatility of their investment | * Finance <br/> * Shares/Stocks  | * A basis point is a unit of measure representing 0.01% or 1/100th of a percentage point. <br/> * For example, an increase of 1% is equivalent to 100 basis points. <br/> * They are commonly used to express changes in interest rates, bond yields, or other financial instruments. | [Investopedia](https://www.investopedia.com/ask/answers/stock-points-meaning/) |
-| | | | | | |
+| Read-eval-print loop | REPL | A read-eval-print loop (REPL), also termed an interactive toplevel or language shell, is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user; a program written in a REPL environment is executed piecewise. | * Systems <br/> * Shells | Python Shell is an REPL. There are others | [Wikipedia](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) |
