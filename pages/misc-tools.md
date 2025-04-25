@@ -19,7 +19,7 @@ tags:
     - Provisioning
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-04-25T02:47:03.650Z
+lastmod: 2025-04-25T04:35:52.725Z
 keywords:
     - Tools
 ---
@@ -41,6 +41,7 @@ keywords:
   * [VSCode](#vscode)
 * [Microsoft 365 Tools](#microsoft-365-tools)
 * [Windows Tools](#windows-tools)
+  * [Windows package manager aka winget](#windows-package-manager-aka-winget)
   * [Hardware](#hardware)
   * [Provisioning and Deployment Tools](#provisioning-and-deployment-tools)
 * [Video Cables](#video-cables)
@@ -187,6 +188,17 @@ vagrant box remove box/name
   > Note to self: When you forget, *again*, how to access an SSH Connection via the plugin: Its not in FTP Connections, its in Network Neighbourhood
 
 <https://aka.ms/terminal> / <https://github.com/microsoft/terminal> - i'm not totally on the Windows Terminal Bandwagon yet but its not shit.
+
+### Windows package manager aka winget
+
+[Windows Package Manager](https://learn.microsoft.com/en-us/windows/package-manager/)\
+**[Use the WinGet tool to install and manage applications](https://learn.microsoft.com/en-us/windows/package-manager/winget/)** - winget contains commands\
+**[Rego with packages](https://github.com/microsoft/winget-pkgs)**
+
+Install using PowerShell: `Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe`\
+Install using MS Store Web Site: <https://apps.microsoft.com/detail/9NBLGGH4NNS1>\
+<!--- <!-- markdownlint-disable-next-line MD033-->
+<a href="ms-windows-store://pdp/?ProductId=9NBLGGH4NNS1">Open MS Store to app directly</a>
 
 ### Hardware
 

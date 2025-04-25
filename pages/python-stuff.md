@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-25T02:47:39.231Z
+lastmod: 2025-04-25T02:58:58.214Z
 tags:
     - Language
     - Python
@@ -142,8 +142,14 @@ See [Python in Books](books.md#python)
 
 ## Official Documentation and References
 
-<https://docs.python.org/>\
-<https://wiki.python.org/moin/>
+[Python Documentation Resources](https://www.python.org/doc/)\
+[Latest Stable Python Version Documentation](https://docs.python.org/)\
+[Latest Stable Python Version FAQ](https://docs.python.org/faq/)\
+[Python Module Index](https://docs.python.org/py-modindex.html)\
+[The Python Tutorial](https://docs.python.org/tutorial)
+
+[The Python Wiki](https://wiki.python.org/moin/)\
+[Beginner's Guide to Python](https://wiki.python.org/moin/BeginnersGuide)
 
 ## Resources of NOTE
 
