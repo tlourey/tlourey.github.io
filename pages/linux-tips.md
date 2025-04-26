@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-20T08:48:55.706Z
+lastmod: 2025-04-25T13:55:02.226Z
 tags:
     - Linux
     - References
@@ -39,6 +39,7 @@ keywords:
 * [Unattended Upgrade Options](#unattended-upgrade-options)
   * [Block a package](#block-a-package)
   * [SystemD Timers](#systemd-timers)
+  * [Update notifications](#update-notifications)
 <!--- cSpell:enable --->
 
 > [!NOTE] Linux and Bash
@@ -229,7 +230,6 @@ From: <https://askubuntu.com/a/556399/443835>
 <https://documentation.ubuntu.com/server/how-to/software/package-management/#automatic-updates>\
 <https://pimylifeup.com/unattended-upgrades-debian-ubuntu/>
 
-
 > [!NOTE] Defaults
 > Default is for both to be enabled
 
@@ -315,3 +315,21 @@ Unattended-Upgrade::Package-Blacklist {
 > ```
 >
 > With this change, the timer will trigger the service only on the next scheduled time. In other words, it won't catch up to the run it missed while the system was off. See the explanation for the *Persistent* option in [systemd.timer](https://manpages.ubuntu.com/manpages/noble/en/man5/systemd.timer.5.html) manpage for more details.
+
+### Update notifications
+
+Working backwards it seems to be:
+
+1. `/var/run/reboot-required` and `/var/run/reboot-required.pks` indicate an update is required. They are created by:
+   1. `/etc/kernel/postinst.d/unattended-upgrades` which comes from the
+      1. [`unattended-upgrades` package](https://packages.debian.org/unattended-upgrades) depending on the
+         1. `APT::Periodic::Unattended-Upgrade` setting in
+            1. `/etc/apt/apt.conf.d/20auto-upgrades` which is created by running
+               1. `dpkg-reconfigure unattended-upgrades` OR
+               2. By running these commands:
+                  1. echo unattended-upgrades unattended-upgrades/enable_auto_updates boolean true | debconf-set-selections
+                  2. dpkg-reconfigure -f noninteractive unattended-upgrades
+
+You can manually run it: `sudo unattended-upgrade -d`
+
+<https://wiki.debian.org/UnattendedUpgrades>
