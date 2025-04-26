@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-25T05:42:34.681Z
+lastmod: 2025-04-26T03:35:43.176Z
 tags:
     - RaspberryPi
     - Tips
@@ -460,13 +460,29 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
   My examples:
 
   ```bash
-  sudo amixer -c Ego set ummute
-  sudo amixer -c Ego set PCM 75%
-  sudo amixer -c Ego set PCM unmute playback 50%
+  aplay -l # get list of hardware to find name
+  amixer -c CARDNAME info # get info on card
 
-  sudo amixer -c Ego cset numid=5 50%,50%
-  sudo amixer -c Ego cset numid=5 12,12
-   ```
+  # Simple Controls
+  amixer -c CARDNAME scontrols # show the ALL the simple controls on the card
+  amixer -c CARDNAME scontents # show the current simple contents of ALL simple controls on the card
+  amixer -c CARDNAME sget <CONTROLNAME> # simple get the simple content of an indivudal simple control specified
+  amixer -c CARDNAME sset <CONTROLNAME> <PARAMETER> # simple set the individual simple control specified with parameter. examples:
+    amixer -c CARDNAME sget PCM
+    amixer -c CARDNAME sset PCM mute # mute PCM control
+    amixer -c CARDNAME sset PCM 75% # set PCM Control to 75%
+    amixer -c CARDNAME sset PCM unmute playback 50% # Unmute PCM, and set playback volume on PCM to 50%
+
+  # Full Controls
+  amixer -c CARDNAME controls # show the ALL the full controls on the card
+  amixer -c CARDNAME contents # show the current full contents of ALL full controls on the card
+  amixer -c CARDNAME cget <CONTROLNAME> # regular get the full content of the full control specified
+  amixer -c CARDNAME cset <CONTROLNAME> <PARAMETER> # regular set the full control specified with parameter. examples:
+    amixer -c CARDNAME cget numid=1
+    amixer -c CARDNAME cget numid=2
+    amixer -c CARDNAME sset numid=1 mute # mute PCM control
+    amixer -c CARDNAME sset numid=2 75%,30% # set left pcm volume to 75% and right PCM volume to 30%
+  ```
 
 `sudo speaker-test -c2 -D <devicename>`: test the speakers. May need sudo. <https://linux.die.net/man/1/speaker-test>
 
