@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-04-27T05:28:48.318Z
+lastmod: 2025-04-27T13:29:01.663Z
 tags:
     - References
     - Tools
@@ -29,6 +29,7 @@ keywords:
 * [Music](#music)
 * [Reviews and Ratings](#reviews-and-ratings)
 * [Notes and Learnings](#notes-and-learnings)
+* [Australian Politiics](#australian-politiics)
 * [Parts and Components](#parts-and-components)
 <!--- cSpell:enable --->
 
@@ -77,7 +78,7 @@ keywords:
 <https://earth.nullschool.net/> - *"a visualization of global weather conditions, forecast by supercomputers, updated every three hours"* - very very cool looking map of weather across the globe.
 
 <https://community.windy.com/> - very active community\
-Windy Help Videos (still haven't watched them)\
+Windy Help Videos (still haven't watched them):
 
 * <https://www.youtube.com/watch?v=GtA5AKR5kU0&list=PLtQvpetRUMteS4UtvOqXqkf_I2MZD5ghI>
 * <https://www.youtube.com/playlist?list=PLtQvpetRUMteS4UtvOqXqkf_I2MZD5ghI>
@@ -88,7 +89,7 @@ Windy Help Videos (still haven't watched them)\
 
 ## Reviews and Ratings
 
-<https://www.rtings.com/>\
+<https://www.rtings.com>\
 <https://www.whathifi.com/au>\
 <https://www.nytimes.com/wirecutter/electronics/>
 
@@ -96,20 +97,28 @@ Windy Help Videos (still haven't watched them)\
 
 <https://renenyffenegger.ch/notes/index.html>
 
+## Australian Politiics
+
+[ABC Vote Compass](https://www.abc.net.au/news/vote-compass)\
+[They vote for you](https://theyvoteforyou.org.au)\
+[Open Australia (Beta)](https://www.openaustralia.org.au)\
+[Democracy Sausage](https://democracysausage.org)
+
 ## Parts and Components
 
 <https://www.element14.com>\
 <https://www.jaycar.com.au>\
-<https://www.rs-online.com>
+<https://www.rs-online.com>\
+<https://core-electronics.com.au>
+
+* <https://forum.core-electronics.com.au> - REALLY good forums
+
+<https://littlebirdelectronics.com.au> / <https://raspberry.piaustralia.com.au>
 
 <https://www.adafruit.com>\
-<https://core-electronics.com.au>\
-
-* <https://forum.core-electronics.com.au/> - REALLY good forums
+<https://www.sparkfun.com>
 
 <https://store-usa.arduino.cc>\
-<https://raspberry.piaustralia.com.au> / <https://littlebirdelectronics.com.au>
-
-<https://www.mouser.com> / <https://au.mouser.com>\
+<https://www.freetronics.com.au>\
 <https://www.pakronics.com.au>\
-<https://www.freetronics.com.au/>
+<https://www.mouser.com> / <https://au.mouser.com>
