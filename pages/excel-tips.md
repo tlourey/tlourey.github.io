@@ -1,15 +1,17 @@
 ---
 title: Excel Tips
 description: Random things to remember with Excel
-published: false
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-04-09T08:13:44.845Z
-lastmod: 2025-04-09T14:42:46.223Z
+lastmod: 2025-04-27T13:34:38.448Z
 tags:
     - Office
+    - Tips
+    - References
 isdraft: true
 fmContentType: pages
 mermaid: false
