@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-25T02:58:58.214Z
+lastmod: 2025-04-27T05:26:52.987Z
 tags:
     - Language
     - Python
@@ -58,7 +58,9 @@ preview: ""
 ## Variants
 
 <https://micropython.org/> - lean version of python for microcontrollers, like arduino\
-<https://circuitpython.org/> - beginner / easier to user version of the above for microcontrollers\
+<https://circuitpython.org/> - beginner / easier to user version of the above for Adafruit microcontrollers and also their parts\
+
+[CircuitPython vs MicroPython: Key Differences](https://core-electronics.com.au/videos/circuitpython-vs-micropython-key-differences) - a video and transcript comparing the two with more info (and perhaps a slight bias)
 
 ## Tools
 
