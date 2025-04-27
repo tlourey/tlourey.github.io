@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-04-25T02:47:44.558Z
+lastmod: 2025-04-27T05:28:48.318Z
 tags:
     - References
     - Tools
@@ -111,4 +111,5 @@ Windy Help Videos (still haven't watched them)\
 <https://raspberry.piaustralia.com.au> / <https://littlebirdelectronics.com.au>
 
 <https://www.mouser.com> / <https://au.mouser.com>\
-<https://www.pakronics.com.au>
+<https://www.pakronics.com.au>\
+<https://www.freetronics.com.au/>
