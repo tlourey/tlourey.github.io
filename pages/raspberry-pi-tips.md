@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-26T03:35:43.176Z
+lastmod: 2025-04-28T06:47:12.908Z
 tags:
     - RaspberryPi
     - Tips
@@ -48,7 +48,7 @@ keywords:
 * [rfkill](#rfkill)
 * [Pairing a Bluetooth Keyboard](#pairing-a-bluetooth-keyboard)
 * [Sound](#sound)
-* [XScreensaver](#xscreensaver)
+* [XScreensaver and xset](#xscreensaver-and-xset)
 * [Tools](#tools)
 * [Misc References](#misc-references)
 <!--- cSpell:enable --->
@@ -322,7 +322,7 @@ Before bookworm it was in `/boot/cmdline.txt`
 
 `cat /sys/class/hwmon/hwmon0/pwm1`\
 `cat /sys/class/thermal/thermal_zone0/trip_point_0_temp`\
-`cat /sys/class/thermal/thermal_zone0/trip_point_1_temp`\
+`cat /sys/class/thermal/thermal_zone0/trip_point_1_temp`
 
 ### Modifying RPM Config
 
@@ -357,9 +357,9 @@ dtparam=poe_fan_temp3=80000
 `vcgencmd measure_temp`: Get temp of Pi\
 `vcgencmd get_config <command>`: show config.txt settings. see <https://www.raspberrypi.com/documentation/computers/config_txt.html#what-is-config-txt>
 
-* `vcgencmd get_config <config>` - lists a specific config value. E.g. vcgencmd get_config arm_freq\
-* `vcgencmd get_config int` - lists all the integer config options that are set (non-zero)\
-* `vcgencmd get_config str` - lists all the string config options that are set (non-null)\
+* `vcgencmd get_config <config>` - lists a specific config value. E.g. vcgencmd get_config arm_freq
+* `vcgencmd get_config int` - lists all the integer config options that are set (non-zero)
+* `vcgencmd get_config str` - lists all the string config options that are set (non-null)
 
 `vcgencmd commands`: show other vcgencmd commands
 
@@ -415,7 +415,7 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 
 ## Sound
 
-`alsactl`: advanced controls for ALSA soundcard driver. <https://linux.die.net/man/1/alsactl>:\
+`alsactl`: advanced controls for ALSA soundcard driver. <https://linux.die.net/man/1/alsactl>:
 
 * `sudo alsactl store`: stores current settings in `/var/lib/alsa/asound.state`
 * `alsactl --file ~/.config/asound.state store`
@@ -431,7 +431,7 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 `aplay -L`: List all PCMs defined\
 `aplay -D plughw:CARD=UACDemoV10 /usr/share/sounds/alsa/Front_Center.wav`: play this sound on this PCM device
 `alsamixer`: Interactive TUI mixer for setting volume levels. <https://linux.die.net/man/1/alsamixer>\
-`amixer`: cmdline mixer for ALSA. <https://linux.die.net/man/1/amixer>:\
+`amixer`: cmdline mixer for ALSA. <https://linux.die.net/man/1/amixer>:
 
 * `amixer -c <CARDNAME> info`: show the info about a mixer device for CARDNAME. CARDNAME can be a friendly name like HDMI or a USB Speaker device name, or a card number.
 * `amixer -c <CARDNAME> scontrols`: Show me the simple controls for CARDNAME.
@@ -448,7 +448,7 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 * `amixer -c <CARDNAME> controls`: show me the controls for CARDNAME. This will show you the numid's you can use for this card.
 * `amixer -c <CARDNAME> contents`: show me the controls and some more details about them for CARDNAME. This will show you the numids for this card and their values and how they work.
 * `amixer -c <CARDNAME> cget <CONTROL>`: get the current control value
-* `amixer -c <CARDNAME> cset <CONTROL> <PARAMETER>`: set the current control parameter\
+* `amixer -c <CARDNAME> cset <CONTROL> <PARAMETER>`: set the current control parameter
 
   Examples from man page:
   > `amixer -c 1 sset Line,0 80%,40% unmute cap`: will set the second soundcard's left line input volume to 80% and right line input to 40%, unmute it, and select it as a source for capture (recording).\
@@ -491,9 +491,19 @@ More commends: <https://manpages.debian.org/unstable/bluez/bluetoothctl.1.en.htm
 `ls /proc/asound/cards`\
 `ls /proc/asound/card2`
 
-## XScreensaver
+## XScreensaver and xset
 
-Activate now: `xscreensaver-command -activate`
+[Man page for `xscreensaver-command`](https://linux.die.net/man/1/xscreensaver-command)
+
+Activate now: `xscreensaver-command -activate`\
+Deactivate now: `xscreensaver-command -deactivate`
+
+[Man page for `xset`](https://linux.die.net/man/1/xset)
+
+Force monitor to turn off with: `xset dpms force off`
+
+> [!NOTE] No Remote
+> `xset dpms force off` command doesn't seem to work over ssh whereas the xscreensaver-command above does
 
 ## Tools
 
