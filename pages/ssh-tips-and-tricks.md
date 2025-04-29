@@ -1,7 +1,7 @@
 ---
 title: SSH Tips and Tricks
 description: "Awful Joke: What do you call a group of people who use SSH without passwords? An open party!"
-published: false
+published: true
 categories:
     - Tech
 type: pages
