@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-04-27T13:29:01.663Z
+lastmod: 2025-04-29T07:09:23.953Z
 tags:
     - References
     - Tools
@@ -31,6 +31,8 @@ keywords:
 * [Notes and Learnings](#notes-and-learnings)
 * [Australian Politiics](#australian-politiics)
 * [Parts and Components](#parts-and-components)
+  * [Electronics](#electronics)
+  * [Communications and Networking](#communications-and-networking)
 <!--- cSpell:enable --->
 
 ## Time and date and clocks
@@ -106,6 +108,8 @@ Windy Help Videos (still haven't watched them):
 
 ## Parts and Components
 
+### Electronics
+
 <https://www.element14.com>\
 <https://www.jaycar.com.au>\
 <https://www.rs-online.com>\
@@ -122,3 +126,10 @@ Windy Help Videos (still haven't watched them):
 <https://www.freetronics.com.au>\
 <https://www.pakronics.com.au>\
 <https://www.mouser.com> / <https://au.mouser.com>
+
+### Communications and Networking
+
+<https://powertec.com.au/brands/nextivity/>\
+<https://www.accesscomms.com.au/>\
+<https://www.comnet.com.au/>\
+<https://wisp.net.au/>
