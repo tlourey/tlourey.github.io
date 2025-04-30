@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-27T05:26:52.987Z
+lastmod: 2025-04-30T05:04:33.259Z
 tags:
     - Language
     - Python
@@ -26,6 +26,9 @@ preview: ""
 * [Variants](#variants)
 * [Tools](#tools)
   * [venv](#venv)
+    * [venv activation](#venv-activation)
+    * [venv setup](#venv-setup)
+    * [venv usage with sudo](#venv-usage-with-sudo)
   * [vscode](#vscode)
 * [Tricks](#tricks)
   * [Running python script from interactive shell](#running-python-script-from-interactive-shell)
@@ -68,6 +71,11 @@ See Regex Tools that cover Python in [Software Tools in Misc Tools](misc-tools.m
 
 ### venv
 
+<https://docs.python.org/3/library/venv.html>\
+<https://virtualenv.pypa.io/en/latest/>
+
+#### venv activation
+
 More info on activation: <https://docs.python.org/3/library/venv.html#how-venvs-work>
 
 | Platform | Shell       | Command to activate virtual environment                               |
@@ -78,6 +86,20 @@ More info on activation: <https://docs.python.org/3/library/venv.html#how-venvs-
 | POSIX    | pwsh        | `$ <venv>/bin/Activate.ps1`                                            |
 | Windows  | cmd.exe     | `C:\> <venv>\Scripts\activate.bat`                                     |
 | Windows  | PowerShell  | `PS C:\> <venv>\Scripts\Activate.ps1`                                  |
+
+<https://docs.python.org/3/tutorial/venv.html>\
+<https://realpython.com/python-virtual-environments-a-primer/>
+
+#### venv setup
+
+`python -m venv venvname`: sets up a venv called venvname in the current directory\
+`python -m venv --system-site-packages venvname`: sets up a venv called venvname in the current directory using the system site packages\
+
+<https://learn.adafruit.com/python-virtual-environment-usage-on-raspberry-pi/more-venv-details>
+
+#### venv usage with sudo
+
+<https://learn.adafruit.com/python-virtual-environment-usage-on-raspberry-pi/usage-with-sudo>
 
 ### vscode
 
@@ -120,7 +142,7 @@ def handle_sigterm(signum, frame):
 # Register the signal handler
 signal.signal(signal.SIGTERM, handle_sigterm)
 
-try: 
+try:
   something
 
 except KeyboardInterrupt:
