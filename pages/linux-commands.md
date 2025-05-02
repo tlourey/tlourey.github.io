@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-23T10:58:31.848Z
+lastmod: 2025-05-02T08:55:04.417Z
 tags:
     - Commands
     - Linux
@@ -694,7 +694,8 @@ TBC
 `systemctl list-unit-files` list unit files (even those not enabled)\
 `systemctl list-unit-files | grep enabled`\
 `systemctl list-unit-files --all | grep packagename`\
-`systemctl list-unit-files --state=masked`: list masked units
+`systemctl list-unit-files --state=masked`: list masked units\
+`systemctl list-units --type=target`: list the targets available\
 `sudo systemctl list-timers` list timers registered\
 `sudo systemctl list-timers --all` list all timers\
 `sudo systemctl cat mdcheck_start.timer`  show the unit file for the timer\
