@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-02T08:55:04.417Z
+lastmod: 2025-05-06T03:57:49.445Z
 tags:
     - Commands
     - Linux
@@ -300,10 +300,32 @@ jobs
 sleep
 fg
 bg
+disown
+```
+
+```text
+disown: disown [-h] [-ar] [jobspec ... | pid ...]
+    Remove jobs from current shell.
+
+    Removes each JOBSPEC argument from the table of active jobs.  Without
+    any JOBSPECs, the shell uses its notion of the current job.
+
+    Options:
+      -a        remove all jobs if JOBSPEC is not supplied
+      -h        mark each JOBSPEC so that SIGHUP is not sent to the job if the
+                shell receives a SIGHUP
+      -r        remove only running jobs
+
+    Exit Status:
+    Returns success unless an invalid option or JOBSPEC is given.
 ```
 
 Also: Running a command with `&` at the end: If a command is terminated by the control operator `&`, the shell executes the command in the background in
 a subshell. The shell does not wait for the command to finish, and the return status is 0.
+
+See **[Difference between nohup, disown and &](https://unix.stackexchange.com/a/148698)** which looks like it covers most if not all the above
+
+Also, see *Process Tricks with Screen* in [Linux Tips](linux-tips.md#process-tricks-with-screen)
 
 ### Terminal Filtering and Monitoring
 

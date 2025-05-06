@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-04-25T13:55:02.226Z
+lastmod: 2025-05-06T03:57:45.265Z
 tags:
     - Linux
     - References
@@ -29,6 +29,7 @@ keywords:
 * [Man Page sections](#man-page-sections)
 * [Termination Signals](#termination-signals)
 * [Aliases](#aliases)
+* [Process Tricks with Screen](#process-tricks-with-screen)
 * [Running scripts at shutdown or reboot via SystemD](#running-scripts-at-shutdown-or-reboot-via-systemd)
 * [/dev/shm](#devshm)
 * [Ubuntu and Debian Package Urgency](#ubuntu-and-debian-package-urgency)
@@ -110,6 +111,12 @@ SIGQUIT: harshest of the ignorable signals. App is misbehaving and should be kil
 
 When setting up aliases, consider that: If you add an option to a command as an alias, when you remote to a new system, it may not have that alias.\
 \Consider the usefulness of a permanent alias vs the gain in muscle memory
+
+## Process Tricks with Screen
+
+`screen -S MySessionName -dm "/home/user/script.sh"`: Run /home/user/script.sh via screen in a detached state
+
+Also see *Jobs, Foreground and Background* in [Linux Commands](linux-commands.md#jobs-foreground-and-background)
 
 ## Running scripts at shutdown or reboot via SystemD
 
