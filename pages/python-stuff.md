@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-28T11:09:24.108Z
-lastmod: 2025-04-30T05:04:33.259Z
+lastmod: 2025-05-06T00:20:12.837Z
 tags:
     - Language
     - Python
@@ -71,7 +71,13 @@ See Regex Tools that cover Python in [Software Tools in Misc Tools](misc-tools.m
 
 ### venv
 
-<https://docs.python.org/3/library/venv.html>\
+<https://docs.python.org/3/library/venv.html>
+
+> [!IMPORTANT] venv ≠ virtualenv
+> "Virtualenv is a tool that was specifically made for creating isolated Python environments. It's been a long-time favorite within the Python community and <ins>precedes the built-in venv module</ins>."
+> "The package is a superset of venv, which allows you to do everything that you can do using venv, and more."
+> [More Info](https://realpython.com/python-virtual-environments-a-primer/#the-virtualenv-project)
+
 <https://virtualenv.pypa.io/en/latest/>
 
 #### venv activation
