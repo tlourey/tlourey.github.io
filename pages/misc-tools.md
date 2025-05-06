@@ -19,7 +19,7 @@ tags:
     - Provisioning
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-04-25T04:35:52.725Z
+lastmod: 2025-05-06T01:32:07.103Z
 keywords:
     - Tools
 ---
@@ -236,6 +236,7 @@ Active DisplayPort to HDMI for Lenovo Docks that you prefer: [CableCreation Acti
 [The Most Accurate Online Ruler](https://www.ginifab.com/feeds/cm_to_inch/actual_size_ruler.html)\
 [Actual size of Online Ruler (cm/mm)](https://www.piliapp.com/actual-size/cm-ruler/)\
 <https://www.drawio.com/> / <http://draw.io/>\
+<https://www.mermaidchart.com/play> - web based mermaid play pen\
 <https://www.google.com.au/advanced_search> - also check out [Search Tools in Misc References](misc-references.md#search-tools)
 
 ## Security Tools
