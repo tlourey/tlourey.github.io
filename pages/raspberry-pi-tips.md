@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-05-06T01:29:15.456Z
+lastmod: 2025-05-06T02:23:34.949Z
 tags:
     - RaspberryPi
     - Tips
@@ -116,6 +116,11 @@ On windows it might be in the registry at: `HKCU\Software\Raspberry Pi\Imager`
 
 From <https://forums.raspberrypi.com/viewtopic.php?t=339566>
 
+Code references to where its generated:
+
+* <https://github.com/raspberrypi/rpi-imager/blob/qml/src/downloadthread.cpp>
+* <https://github.com/raspberrypi/rpi-imager/blob/qml/src/OptionsPopup.qml>
+
 ### Raspberry Pi bootloader changes
 
 If you want to change your boot order or the bootloader you need to use Raspberry Pi Imager. See [Update the bootloader](https://www.raspberrypi.com/documentation/computers/raspberry-pi.html#bootloader_update_stable)
@@ -129,6 +134,50 @@ For bootloader confiuguration changes see [Update the bootloader configuraiton](
 `less /usr/lib/firmware/raspberrypi/bootloader-2711/release-notes.md`: Release notes of versions.
 
 ## On First Boot after new image
+
+```mermaid
+flowchart LR
+ subgraph firstboot["firstboot"]
+    direction LR
+        /boot/firmware/cmdline.txt@{ label: "Modify /boot/firmware/cmdline.txt` so firstboot doesn't run again." }
+        /usr/lib/raspberrypi-sys-mods/firstboot["/usr/lib/raspberrypi-sys-mods/firstboot"]
+        main["call main function"]
+        generate-ssh-keys["Generate SSH Keys by mounting the root partition and then running /usr/lib/raspberrypi-sys-mods/regenerate_ssh_host_keys"]
+        apply_custom["apply_custom /boot/firmware/custom.toml"]
+        /boot/firmware/custom.toml["If /boot/firmware/custom.toml is found, call apply_custom function, telling it to use /boot/firmware/custom.toml"]
+        /usr/lib/raspberrypi-sys-mods/init_config@{ label: "If it doesn't fail run /usr/lib/raspberrypi-sys-mods/init_config /boot/firmware/custom.toml" }
+        python3_-c_import_toml@{ label: "python3 -c 'import toml'" }
+        Fix_Partuuid["Fix_Partuuid"]
+        Reboot["Reboot"]
+  end
+ subgraph firstrun["firstrun"]
+    direction LR
+        /boot/firstrun.sh["/boot/firstrun.sh"]
+        kerneloption["systemd.run="]
+  end
+    bootloader["bootloader"] --> cmdline.txt["cmdline.txt"]
+    cmdline.txt --> /usr/lib/raspberrypi-sys-mods/firstboot & kerneloption
+    /usr/lib/raspberrypi-sys-mods/firstboot --> /boot/firmware/cmdline.txt & main & generate-ssh-keys & /boot/firmware/custom.toml & Fix_Partuuid & Reboot
+    /boot/firmware/custom.toml --> apply_custom
+    apply_custom --> python3_-c_import_toml
+    python3_-c_import_toml --> /usr/lib/raspberrypi-sys-mods/init_config
+    /usr/lib/raspberrypi-sys-mods/init_config --> TBA["TBA"]
+    kerneloption --> /boot/firstrun.sh
+    /boot/firstrun.sh --> TBA
+
+    /boot/firmware/cmdline.txt@{ shape: rect}
+    /usr/lib/raspberrypi-sys-mods/init_config@{ shape: rect}
+    python3_-c_import_toml@{ shape: rect}
+    click /boot/firmware/cmdline.txt "#firstboot"
+    click /usr/lib/raspberrypi-sys-mods/firstboot "https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/bookworm/usr/lib/raspberrypi-sys-mods/firstboot"
+    click main "https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/93ab67567a088b6adbb0a8ec9d09655af52c14e4/usr/lib/raspberrypi-sys-mods/firstboot#L80"
+    click generate-ssh-keys "https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/bookworm/usr/lib/raspberrypi-sys-mods/regenerate_ssh_host_keys"
+    click /usr/lib/raspberrypi-sys-mods/init_config "https://github.com/RPi-Distro/raspberrypi-sys-mods/blob/93ab67567a088b6adbb0a8ec9d09655af52c14e4/usr/lib/raspberrypi-sys-mods/firstboot#L65"
+    click /boot/firstrun.sh "#raspberry-pi-imager-custom-settings"
+    click kerneloption "https://www.freedesktop.org/software/systemd/man/latest/kernel-command-line.html#systemd.run="
+    click bootloader "#raspberry-pi-bootloader-changes"
+    click cmdline.txt "#cmdlinetxt"
+```
 
 After Raspberry Pi Imager is complete but before first boot, the [`cmdline.txt`](#cmdlinetxt) file has something like this in 2022:
 
@@ -167,38 +216,6 @@ firstrun.sh generation links from github:
 
 * <https://github.com/raspberrypi/rpi-imager/blob/qml/src/downloadthread.cpp>
 * <https://github.com/raspberrypi/rpi-imager/blob/qml/src/OptionsPopup.qml>
-
-```mermaid
-flowchart LR
- subgraph firstboot["firstboot"]
-    direction LR
-        /boot/firmware/cmdline.txt["/boot/firmware/cmdline.txt"]
-        /usr/lib/raspberrypi-sys-mods/firstboot["/usr/lib/raspberrypi-sys-mods/firstboot"]
-        main["main"]
-        generate-ssh-keys["generate-ssh-keys"]
-        apply_custom["apply_custom"]
-        /boot/firmware/custom.toml["/boot/firmware/custom.toml"]
-        /usr/lib/raspberrypi-sys-mods/init_config["/usr/lib/raspberrypi-sys-mods/init_config"]
-        python3_-c_import_toml["python3_-c_import_toml"]
-        Fix_Partuuid["Fix_Partuuid"]
-        Reboot["Reboot"]
-  end
- subgraph firstrun["firstrun"]
-    direction LR
-        /boot/firstrun.sh["/boot/firstrun.sh"]
-        kerneloption["kerneloption"]
-  end
-    bootloader["bootloader"] --> cmdline.txt["cmdline.txt"]
-    cmdline.txt --> /usr/lib/raspberrypi-sys-mods/firstboot & /boot/firstrun.sh
-    /usr/lib/raspberrypi-sys-mods/firstboot --> /boot/firmware/cmdline.txt & main & generate-ssh-keys & /boot/firmware/custom.toml & Fix_Partuuid & Reboot
-    /boot/firmware/custom.toml --> apply_custom
-    apply_custom --> python3_-c_import_toml
-    python3_-c_import_toml --> /usr/lib/raspberrypi-sys-mods/init_config
-    /usr/lib/raspberrypi-sys-mods/init_config --> TBA["TBA"]
-    kerneloption --> /boot/firstrun.sh
-    /boot/firstrun.sh --> TBA
-```
-
 
 ## Setting a static IP on a Pi using Bookworm
 
