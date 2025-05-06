@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-06T03:57:49.445Z
+lastmod: 2025-05-06T03:59:44.374Z
 tags:
     - Commands
     - Linux
@@ -95,7 +95,7 @@ Distro Version:
 `cat /etc/os-release`:TBA\
 `cat /etc/*-release`: TBA\
 `cat /etc/issue`:TBA\
-`hostnamectl`:TBA - see more in [Main SystemD Commands](#main-systemd-commands)\
+`hostnamectl`:TBA - see more in [SystemD](#systemd)\
 `lsb_release -a`:tba - may not exist on some Redhat machines by default
 
 `cat /etc/debian_version`:TBA\
@@ -319,6 +319,8 @@ disown: disown [-h] [-ar] [jobspec ... | pid ...]
     Exit Status:
     Returns success unless an invalid option or JOBSPEC is given.
 ```
+
+[The disown Linux Command With 5 Use Cases](https://medium.com/@redswitches/the-disown-linux-command-with-5-use-cases-fc78526fe7ae)
 
 Also: Running a command with `&` at the end: If a command is terminated by the control operator `&`, the shell executes the command in the background in
 a subshell. The shell does not wait for the command to finish, and the return status is 0.
