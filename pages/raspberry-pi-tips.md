@@ -7,14 +7,14 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-05-06T00:56:07.007Z
+lastmod: 2025-05-06T01:29:15.456Z
 tags:
     - RaspberryPi
     - Tips
     - Linux
 isdraft: true
 fmContentType: pages
-mermaid: false
+mermaid: true
 preview: ""
 keywords:
     - Raspberry Pi
@@ -161,12 +161,44 @@ So the order for bookworm seems to be:
    6. Reboot if there is no failure reason determined.
 2. `systemd.run=/boot/firstrun.sh`:
    1. `systemd.run` is a kernel option for systemd. see [system.run in kernel-command-line](https://www.freedesktop.org/software/systemd/man/latest/kernel-command-line.html#systemd.run=). They are options for [systemd-run-generator man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-run-generator.html)
-   2. `/boot/firshrun.sh`: this is dynamically created by the Raspberry Pi Imager depending on the configration you set (see [Raspberry Pi Imager Custom Settings](#raspberry-pi-imager-custom-settings)). See below for First Run Github links
+   2. `/boot/firstrun.sh`: this is dynamically created by the Raspberry Pi Imager depending on the configration you set (see [Raspberry Pi Imager Custom Settings](#raspberry-pi-imager-custom-settings)). See below for First Run Github links
 
 firstrun.sh generation links from github:
 
 * <https://github.com/raspberrypi/rpi-imager/blob/qml/src/downloadthread.cpp>
 * <https://github.com/raspberrypi/rpi-imager/blob/qml/src/OptionsPopup.qml>
+
+```mermaid
+flowchart LR
+ subgraph firstboot["firstboot"]
+    direction LR
+        /boot/firmware/cmdline.txt["/boot/firmware/cmdline.txt"]
+        /usr/lib/raspberrypi-sys-mods/firstboot["/usr/lib/raspberrypi-sys-mods/firstboot"]
+        main["main"]
+        generate-ssh-keys["generate-ssh-keys"]
+        apply_custom["apply_custom"]
+        /boot/firmware/custom.toml["/boot/firmware/custom.toml"]
+        /usr/lib/raspberrypi-sys-mods/init_config["/usr/lib/raspberrypi-sys-mods/init_config"]
+        python3_-c_import_toml["python3_-c_import_toml"]
+        Fix_Partuuid["Fix_Partuuid"]
+        Reboot["Reboot"]
+  end
+ subgraph firstrun["firstrun"]
+    direction LR
+        /boot/firstrun.sh["/boot/firstrun.sh"]
+        kerneloption["kerneloption"]
+  end
+    bootloader["bootloader"] --> cmdline.txt["cmdline.txt"]
+    cmdline.txt --> /usr/lib/raspberrypi-sys-mods/firstboot & /boot/firstrun.sh
+    /usr/lib/raspberrypi-sys-mods/firstboot --> /boot/firmware/cmdline.txt & main & generate-ssh-keys & /boot/firmware/custom.toml & Fix_Partuuid & Reboot
+    /boot/firmware/custom.toml --> apply_custom
+    apply_custom --> python3_-c_import_toml
+    python3_-c_import_toml --> /usr/lib/raspberrypi-sys-mods/init_config
+    /usr/lib/raspberrypi-sys-mods/init_config --> TBA["TBA"]
+    kerneloption --> /boot/firstrun.sh
+    /boot/firstrun.sh --> TBA
+```
+
 
 ## Setting a static IP on a Pi using Bookworm
 
