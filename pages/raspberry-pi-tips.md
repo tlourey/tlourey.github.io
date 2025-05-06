@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-02T12:22:10.320Z
-lastmod: 2025-04-28T06:47:12.908Z
+lastmod: 2025-05-06T00:56:07.007Z
 tags:
     - RaspberryPi
     - Tips
@@ -159,7 +159,9 @@ So the order for bookworm seems to be:
          1. **TBA**
    5. Fix PartUUID
    6. Reboot if there is no failure reason determined.
-2. `systemd.run=/boot/firstrun.sh` - this is dynamically created by the Raspberry Pi Imager depending on the configration you set (see [Raspberry Pi Imager Custom Settings](#raspberry-pi-imager-custom-settings)). See below for First Run Github links
+2. `systemd.run=/boot/firstrun.sh`:
+   1. `systemd.run` is a kernel option for systemd. see [system.run in kernel-command-line](https://www.freedesktop.org/software/systemd/man/latest/kernel-command-line.html#systemd.run=). They are options for [systemd-run-generator man page](https://www.freedesktop.org/software/systemd/man/latest/systemd-run-generator.html)
+   2. `/boot/firshrun.sh`: this is dynamically created by the Raspberry Pi Imager depending on the configration you set (see [Raspberry Pi Imager Custom Settings](#raspberry-pi-imager-custom-settings)). See below for First Run Github links
 
 firstrun.sh generation links from github:
 
