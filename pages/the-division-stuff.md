@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-25T02:28:07.426Z
-lastmod: 2025-03-10T06:50:24.255Z
+lastmod: 2025-04-09T13:50:18.704Z
 tags:
     - The_Division_2
 isdraft: true
@@ -55,6 +55,7 @@ From: <https://www.reddit.com/r/thedivision/comments/sabzjq/i_dont_understand_sh
 ## Tips
 
 * White Control Point: Unclaimed
+* Looking for Legacy Alloys: Bounties
 
 ## Misc
 

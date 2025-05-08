@@ -7,15 +7,13 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T10:54:00
-lastmod: 2025-04-09T13:12:25.344Z
+lastmod: 2025-04-22T04:17:32.385Z
 tags:
     - Commands
-    - Exchange
     - Language
     - Microsoft365
     - PowerShell
     - References
-    - SharePoint
     - Windows
 isdraft: true
 ---
@@ -26,6 +24,7 @@ isdraft: true
   * [Commands and Help](#commands-and-help)
   * [Common Pipeline Modifiers](#common-pipeline-modifiers)
   * [Useful Expression Modifiers](#useful-expression-modifiers)
+  * [Regular Expressions](#regular-expressions)
   * [Comparison Operators](#comparison-operators)
     * [Dates](#dates)
     * [Times and TimeZones](#times-and-timezones)
@@ -45,6 +44,7 @@ isdraft: true
 * [SharePoint PowerShell](#sharepoint-powershell)
 * [Exchange PowerShell](#exchange-powershell)
 * [Commands often forgotten](#commands-often-forgotten)
+* [Variables often forgotten](#variables-often-forgotten)
 * [Additional Resources](#additional-resources)
 * [Other resources to add](#other-resources-to-add)
 <!--- cSpell:enable --->
@@ -101,6 +101,13 @@ The last example works but includes all columns which you may not want. If thats
 
 * [ ] extrapolate above example for timezones using `Get-MessageTrace`
 
+### Regular Expressions
+
+[about Regular Expressions (Windows PowerShell 5.1)](https://learn.microsoft.com/en-au/powershell/module/microsoft.powershell.core/about/about_regular_expressions?view=powershell-5.1)\
+[about Regular Expressions (PowerShell 7.4)](https://learn.microsoft.com/en-au/powershell/module/microsoft.powershell.core/about/about_regular_expressions?view=powershell-7.4)
+
+* [ ] Add in key notes on regular expressions and some examples.
+
 ### Comparison Operators
 
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_comparison_operators>
@@ -139,7 +146,7 @@ Parameters:
 
 `Get-Date -Format "dddd MM/dd/yyyy HH:mm K"`: Specifies format you want date returned. Example: Tuesday 06/25/2019 16:17 -07:00\
 Uses .Net Formats. See [Custom date and time format strings.](https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings)\
-`Get-Date -UFormat "%A %m/%d/%Y %R %Z"`: Exmple: Tuesday 06/25/2019 16:19 -07\
+`Get-Date -UFormat "%A %m/%d/%Y %R %Z"`: Example: Tuesday 06/25/2019 16:19 -07\
 [UFormat notes](https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/get-date?view=powershell-5.1#notes)\
 `Get-Date -UnixTimeSeconds`: Date and time represented in seconds since January 1, 1970, 0:00:00 (Added in PS7)
 
@@ -289,7 +296,6 @@ Disabled Managers Direct Reports
 (get-aduser -filter {(Enabled -eq $false) -and (directreports -like "*")} -Properties directreports)[2].directreports | set-aduser -manager (get-aduser -id newmanagerfirstname.lastname)
 ```
 
-
 ## Local System Management
 
 ### File and Space Management OneLiners
@@ -359,12 +365,22 @@ Refer to [RemoteDesktop Powershell Module and Commands - Microsoft Learn](https:
 ## Commands often forgotten
 
 `Get-Content -Path c:\temp\my-log-file.log -wait`: like cat. using -wait makes it like tail -f: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.management/get-content#-wait>\
-`Select-String`: kind of like grep (need to check if it does work like grep)\
-`Out-GridView`: really cool wait view tables/rows. -passthru is also really awesome. You should read the help page in full esp the Notes stuff: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview>
+`Select-String`: kind of like `grep` (need to check if it does work like grep).See: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/select-string?view=powershell-7.5>\
+`Out-GridView`: really cool wait view tables/rows. -passthru is also really awesome. You should read the help page in full esp the Notes stuff: <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/out-gridview>\
+`New-Item -ItemType File -Path .\filename.ext -Force`: closest thing in powershell to linux `touch`
+`. $profile`: reload powershell profile (assumes its in the current folder)
 
 [Redirecting Output](https://learn.microsoft.com/en-us/powershell/scripting/samples/redirecting-data-with-out---cmdlets?view=powershell-7.5)
 
+## Variables often forgotten
+
+`$PSVersionTable`: shows powershell version\
+`$profile`: Show where current powershell profile is\
+`. $profile`: reload powershell profile (assumes its in the current folder)
+
 ## Additional Resources
+
+[PowerShell Tips](powershell-tips.md)
 
 [PowerShell Module Browser - PowerShell - Microsoft Learn](https://learn.microsoft.com/en-au/powershell/module/)\
 [Find Azure AD PowerShell and MSOnline cmdlets in Microsoft Graph PowerShell](https://learn.microsoft.com/en-us/powershell/microsoftgraph/azuread-msoline-cmdlet-map?view=graph-powershell-1.0&pivots=azure-ad-powershell)\

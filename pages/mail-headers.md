@@ -1,15 +1,16 @@
 ---
 title: Mail Headers
-description: ""
+description: TBC
 published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-03-17T23:34:50.024Z
-lastmod: 2025-03-20T11:14:14.573Z
+lastmod: 2025-04-15T01:44:21.538Z
 tags:
     - Email
+    - Exchange
 isdraft: true
 fmContentType: pages
 mermaid: false
@@ -31,6 +32,7 @@ preview: ""
 * [References](#references)
   * [Standards](#standards)
   * [Exchange Email Header References](#exchange-email-header-references)
+  * [End user guides](#end-user-guides)
 * [Tools](#tools)
 <!--- cSpell:enable --->
 
@@ -103,9 +105,15 @@ Usually a [MIME Type](https://en.wikipedia.org/wiki/MIME)
 ### Exchange Email Header References
 
 <https://learn.microsoft.com/en-us/defender-office-365/message-headers-eop-mdo>\
-<https://learn.microsoft.com/en-us/exchange/header-firewall-exchange-2013-help>
+<https://learn.microsoft.com/en-us/exchange/header-firewall-exchange-2013-help>\
 <https://learn.microsoft.com/en-us/exchange/anti-spam-stamps-exchange-2013-help>
+
+### End user guides
+
+[View internet message headers in Outlook - Microsoft Support](https://support.microsoft.com/en-au/office/view-internet-message-headers-in-outlook-cd039382-dc6e-4264-ac74-c048563d212c) - End user instructions for gettign headers out of outlook.\
+[Trace an email with its full header - Gmail Help](https://support.google.com/mail/answer/29436?hl=en)
 
 ## Tools
 
-[Postmaster Tools in Misc Tools](misc-tools.md#postmaster)
+[Postmaster Tools in Misc Tools](misc-tools.md#postmaster) - including some great header analyzers\
+[Exchange Commands](exchange-commands.md)

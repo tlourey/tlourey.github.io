@@ -8,7 +8,7 @@ layout: pages
 isdraft: false
 published: true
 date: 2025-01-11T16:40:00
-lastmod: 2025-03-04T23:00:11.563Z
+lastmod: 2025-04-16T00:26:30.825Z
 tags:
     - Linux
     - References
@@ -37,6 +37,7 @@ tags:
   * [logrotate Notes](#logrotate-notes)
   * [logrotate Tips](#logrotate-tips)
   * [logrotate References](#logrotate-references)
+* [See Also](#see-also)
 <!--- cSpell:enable --->
 
 ## etckeeper
@@ -73,7 +74,7 @@ tags:
 * uncomment `CONFFILES_LIST=/var/lib/changetrack/all_conffiles.txt` so it takes affect
 * change `AUTO_TRACK_ALL_CONFFILES` to yes
 
-`sudo vi /etc/changetrack.conf`: my suggetestions of changes:\
+`sudo vi /etc/changetrack.conf`: my suggestions of changes:\
 
 ```bash
 /boot/grub/*
@@ -276,3 +277,9 @@ From: <https://serverfault.com/questions/55610/logrotate-and-open-files>
 
 <>
 -->
+
+## See Also
+
+[Linux Commands](linux-commands.md)\
+[Linux Tips](linux-tips.md)\
+[Misc Tools](misc-tools.md)

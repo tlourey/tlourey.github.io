@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-03-13T22:30:23.613Z
+lastmod: 2025-04-21T23:31:45.879Z
 tags:
     - Commands
     - References
@@ -69,13 +69,15 @@ Find Uptime from System Info
 > If you have FastBoot enabled, it doesn't reset.
 > Task Manager shows you the 'duration' of your uptime from this date, not the actual duration - ie hibernation doesn't stop this
 
+Get Uptime from Command Prompt
+
 ```bat
-systeminfo | find “System Boot Time”
+systeminfo | find "System Boot Time"
 ```
 
 Get Uptime from CIM via Powershell
 
-```bat
+```powershell
 Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object LastBootUpTime
 ```
 

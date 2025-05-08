@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-04-06T01:05:21.962Z
+lastmod: 2025-05-07T02:37:35.544Z
 tags:
     - Commands
     - Linux
@@ -21,10 +21,20 @@ isdraft: false
   * [man pages](#man-pages)
 * [Kernel](#kernel)
 * [Terminal Stuff](#terminal-stuff)
+  * [Built in bash commands](#built-in-bash-commands)
+  * [Environment Variables](#environment-variables)
+  * [Redirection](#redirection)
+  * [Jobs, Foreground and Background](#jobs-foreground-and-background)
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
+  * [Process Stuff](#process-stuff)
+    * [ps](#ps)
+    * [top](#top)
+    * [kill and killall](#kill-and-killall)
   * [Aliases](#aliases)
   * [TMUX](#tmux)
+    * [screen](#screen)
   * [Serial Stuff](#serial-stuff)
+* [Misc Terminal Tools](#misc-terminal-tools)
 * [Files](#files)
   * [What process is using a file](#what-process-is-using-a-file)
   * [ls options often forgotten](#ls-options-often-forgotten)
@@ -43,7 +53,7 @@ isdraft: false
 * [Apt](#apt)
   * [changelog](#changelog)
 * [dnf](#dnf)
-* [Main SystemD Commands](#main-systemd-commands)
+* [SystemD](#systemd)
   * [Important Commands](#important-commands)
     * [systemctl](#systemctl)
     * [journalctl](#journalctl)
@@ -52,12 +62,14 @@ isdraft: false
   * [Misc SystemD Commands](#misc-systemd-commands)
   * [SystemD Reference Info](#systemd-reference-info)
     * [SystemD Paths](#systemd-paths)
+    * [systemd-halt.service](#systemd-haltservice)
     * [SystemD Timers](#systemd-timers)
   * [SystemD Links](#systemd-links)
 * [Network Commands](#network-commands)
   * [Netplan](#netplan)
   * [nmcli](#nmcli)
   * [netstat](#netstat)
+  * [netcat](#netcat)
   * [tcpdump](#tcpdump)
   * [Network Reference](#network-reference)
 * [OpenSSL Commands](#openssl-commands)
@@ -83,7 +95,7 @@ Distro Version:
 `cat /etc/os-release`:TBA\
 `cat /etc/*-release`: TBA\
 `cat /etc/issue`:TBA\
-`hostnamectl`:TBA - see more in [Main SystemD Commands](#main-systemd-commands)\
+`hostnamectl`:TBA - see more in [SystemD](#systemd)\
 `lsb_release -a`:tba - may not exist on some Redhat machines by default
 
 `cat /etc/debian_version`:TBA\
@@ -148,7 +160,174 @@ modinfo
 
 <https://web.archive.org/web/20160911181750/https://www.centos.org/docs/5/html/5.1/Deployment_Guide/s1-kernel-module-utils.html>
 
+<https://www.kernel.org/doc/html/latest/>\
+<https://www.kernel.org/doc/html/latest/admin-guide/index.html>\
+<https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html>
+
 ## Terminal Stuff
+
+### Built in bash commands
+
+```bash
+alias
+bg
+bind
+break
+builtin
+caller
+cd
+command
+compgen
+complete
+compopt
+continue
+declare
+dirs
+disown
+echo
+enable
+eval
+exec
+exit
+export
+false
+fc
+fg
+getopts
+hash
+help
+history
+jobs
+kill
+let
+local
+logout
+mapfile
+popd
+printf
+pushd
+pwd
+read
+readarray
+readonly
+return
+set
+shift
+shopt
+source
+suspend
+test
+times
+trap
+true
+type
+typeset
+ulimit
+umask
+unalias
+unset
+wait
+```
+
+More info on the commands above:
+
+* <https://linux.die.net/man/1/bash#:~:text=the%20event%20line.-,Shell%20Builtin%20Commands,-Unless%20otherwise%20noted> - some but not all
+* <https://www.gnu.org/software/bash/manual/html_node/Bash-Builtins.html> - some but not all
+
+* See <https://linux.die.net/man/1/bash>
+
+### Environment Variables
+
+To see **ALL** current environment variables and their values: `env`\
+To see the value of a specific environment variable:\
+
+* `printenv VARIABLE_NAME`
+* `echo $VARIABLE_NAME`
+
+To set an environment variable **for the current user only**: `export VARIABLE_NAME=value` - more info at <https://www.man7.org/linux/man-pages/man1/export.1p.html>\
+To make the change permanent, add the line to your shell's startup file (e.g., .bashrc, .bash_profile):
+
+1. Open `~/.bashrc` for editing: `editor ~/.bashrc`
+2. At appropriate point, normally the very bottom add `export VARIABLE_NAME=value` substituting your variable name and value.
+3. Save the file
+4. To make it take effect type `source .bashrc` or start a new session
+5. If needed type `printenv VARIABLE_NAME` to check its in place.
+
+* [ ] Confirm if and when speech marks are needed and adjust above.
+
+To set a global environment variable that is accessible by all users: `export GLOBAL_VARIABLENAME="This is a global variable"`\
+To make the change permanent:
+
+1. Open `/etc/environment` for editing: `sudo editor /etc/environment`
+2. At the bottom of the file, add `GLOBAL_VARIABLENAME="This is a global variable"`
+3. Save the file
+4. To make it take effect type `/etc/environment`
+5. Open `/etc/profile` for editing: `sudo editor /etc/profile`
+6. At the bottom of the file, add `export GLOBAL_VARIABLENAME="This is a global variable"`
+
+> [!NOTE] `/etc/environment` vs `/etc/profile/`
+> `/etc/environment`: Used by PAM (login systems)
+> `/etc/profile/`: Gets read by shells like bash when logging in
+> More info: <https://superuser.com/questions/664169/what-is-the-difference-between-etc-environment-and-etc-profile>
+
+* [ ] Confirm if and when speech marks are needed and adjust above.
+* [ ] Adjust above for systemd `environment.d` impacts (see [this comment](https://superuser.com/questions/664169/what-is-the-difference-between-etc-environment-and-etc-profile#comment2460849_664236) and the [environment.d man page](https://www.man7.org/linux/man-pages/man5/environment.d.5.html))
+* [ ] Review this as well (<https://askubuntu.com/questions/866161/setting-path-variable-in-etc-environment-vs-profile>)
+
+<https://www.freecodecamp.org/news/how-to-set-an-environment-variable-in-linux/> (im not sure if this guide is as good as I first thought it was)
+
+### Redirection
+
+```bash
+command > filename.txt
+command >> filename.txt
+```
+
+Redirect stdout to one file and stderr to another file: `command > out 2>error`\
+Redirect stdout to a file (>out), and then redirect stderr to stdout (2>&1): `command >out 2>&1`
+Redirect both to a file (this isn't supported by all shells, `bash` and `zsh` support it, for example, but `sh` and `ksh` do not): `command &> out`
+
+<https://www.howtogeek.com/how-to-pipe-and-redirect-like-a-pro-in-the-linux-command-line/>
+
+* [ ] this section needs more fleshing out and other examples
+
+### Jobs, Foreground and Background
+
+<https://www.redhat.com/en/blog/jobs-bg-fg>
+
+```bash
+jobs
+sleep
+fg
+bg
+disown
+```
+
+```text
+disown: disown [-h] [-ar] [jobspec ... | pid ...]
+    Remove jobs from current shell.
+
+    Removes each JOBSPEC argument from the table of active jobs.  Without
+    any JOBSPECs, the shell uses its notion of the current job.
+
+    Options:
+      -a        remove all jobs if JOBSPEC is not supplied
+      -h        mark each JOBSPEC so that SIGHUP is not sent to the job if the
+                shell receives a SIGHUP
+      -r        remove only running jobs
+
+    Exit Status:
+    Returns success unless an invalid option or JOBSPEC is given.
+```
+
+[The disown Linux Command With 5 Use Cases](https://medium.com/@redswitches/the-disown-linux-command-with-5-use-cases-fc78526fe7ae)
+
+Also: Running a command with `&` at the end: If a command is terminated by the control operator `&`, the shell executes the command in the background in
+a subshell. The shell does not wait for the command to finish, and the return status is 0.
+
+See **[Difference between nohup, disown and &](https://unix.stackexchange.com/a/148698)** which looks like it covers most if not all the above
+
+Also, see *Process Tricks with Screen* in [Linux Tips](linux-tips.md#process-tricks-with-screen)
 
 ### Terminal Filtering and Monitoring
 
@@ -160,6 +339,25 @@ column
 tail
 tail -f
 ```
+
+### Process Stuff
+
+#### ps
+
+TBC
+
+* [ ] Add PS Stuff
+
+#### top
+
+* [ ] Add Top Stuff
+
+#### kill and killall
+
+`kill process_id`: send SIGTERM signal to process_id (aka: end yourself gracefully)\
+`kill -9 process_id`: send SIGKILL signal to process_id (aka forcekill)\
+`killall process_name`: send SIGTERM signal to **ALL** processes named process_name. This can be dangerous\
+`killall -9 process_name`: send SIGKILL (aka forcekill) signal to **ALL** processes named process_name. This is even more dangerous
 
 ### Aliases
 
@@ -185,6 +383,14 @@ To make permanent, add alias to:
 * [ ] Byobu
 * [ ] screen
 
+#### screen
+
+`screen -r`: resume sessions\
+`screen -S my-session-name`: create session and name it my session name\
+`screen -r my-session-name`: reconnect to my session name\
+`screen -ls`: Show screens
+`screen -S my-session-name -dm "~/myscript.sh"`: create screen called my session name, run `~/myscript.sh` then detach
+
 ### Serial Stuff
 
 Query comms / serial port settings: `stty < /dev/ttyS0`\
@@ -198,6 +404,10 @@ Consider:
 * `cu -l /dev/ttyS0 -s 9600`
 
 More info: <https://unix.stackexchange.com/questions/22545/how-to-connect-to-a-serial-port-as-simple-as-using-ssh>
+
+## Misc Terminal Tools
+
+`whiptail`: Message box system used by RaspberryPi and Debian using newt instead of ncurses: More info: <https://en.wikibooks.org/wiki/Bash_Shell_Scripting/Whiptail>
 
 ## Files
 
@@ -276,17 +486,23 @@ Options:
 `gunzip file.gz`: unzip file.gz and then delete file.gz leaving only file.txt
 
 Options:
--h: show all options
--c: view text in file
--f: force (not sure why)
--k: keep original file after (un)zipping
--l: give details on filename
--r: recursive
--v: verbose
--t: test if file is valid
--a: only works on windows. uses ASCII to convert end-of-line characters using local conversion.
+
+* -h: show all options
+* -c: view text in file
+* -f: force (not sure why)
+* -k: keep original file after (un)zipping
+* -l: give details on filename
+* -r: recursive
+* -v: verbose
+* -t: test if file is valid
+* -a: only works on windows. uses ASCII to convert end-of-line characters using local conversion.
 
 More options are available. Look at: <https://www.geeksforgeeks.org/gunzip-command-in-linux-with-examples/>
+
+`unzip`\
+`zip`
+
+`unzip -d destinationdirectory`: unzip files to destination directory.
 
 Other Zip Commands:
 
@@ -322,7 +538,7 @@ Some examples:
 ### Hardware Info
 
 ```bash
-lshw
+lshw # Doesn't seem to be installed on Raspberry Pi OS
 lshw | less
 lshw --short
 lscpu
@@ -371,6 +587,8 @@ lsblk
 blkid
 fdisk
 cat /etc/fstab
+mount
+sudo cat /proc/mounts
 ```
 
 ### MDADM
@@ -385,6 +603,8 @@ REF: <https://www.ducea.com/2009/03/08/mdadm-cheat-sheet/>
 * `sudo less /var/log/boot.log`: boot log
 * `cat /var/log/apt/history.log`: Apt history
 * `/var/log/dpkg.log`: dpkg history
+
+Also see `/var/log/syslog` replacement under [journalctl](#journalctl).
 
 Some Tips to test/evaluate syslog message via the network are in [Microsoft Sentinel Tips](/pages/microsoft-sentinel-tips.md#syslog-connector-testing)
 
@@ -432,6 +652,18 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `sudo useradd -m -G sshlogin,sudo XXX -s /bin/bash`: sets a users shell, shouldn't be needed much these days\
 `sudo passwd XXX`: if you need to change user's password
 
+> [!NOTE] useradd vs adduser
+> `useradd` is a low level utility for adding users. On Debian, administrators should usually use [`adduser`(8)](https://manpages.ubuntu.com/manpages/latest/man8/adduser.8.html) instead.
+
+See:
+
+* <https://manpages.ubuntu.com/manpages/latest/man8/adduser.8.html>
+* <https://manpages.ubuntu.com/manpages/plucky/man8/addgroup.8.html>
+* <https://manpages.ubuntu.com/manpages/latest/man5/adduser.conf.5.html>
+* <https://manpages.ubuntu.com/manpages/latest/man8/useradd.8.html> - NB:
+
+You can also create system users by using the `--system` parameter of adduser. See <https://manpages.ubuntu.com/manpages/xenial/man8/adduser.8.html#:~:text=version%20of%20adduser.)-,Add%20a%20system%20user,-If%20called%20with> for more specifics.
+
 ## Apt
 
 [Apt Guide](https://www.debian.org/doc/manuals/apt-guide/index.en.html)
@@ -449,7 +681,7 @@ TBC
 * [ ] cover apt changelog /apt-get changelog
 * [ ] cover apt-listchanges - see https://askubuntu.com/questions/272215/seeing-apt-get-changelogs-for-to-be-upgraded-packages
   * may need to be installed
-  * can use a oneliner to get changelogs that doesn't need sudo: (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges *.deb)
+  * can use a one-liner to get changelogs that doesn't need sudo: (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges *.deb)
   * ubuntu lts 20 doesn't support apt-listchanges --latest. For versions that do the following has pretty good output:
     ```
     (cd $(mktemp -d) && apt download $(apt list -qq --upgradable | cut -f1 -d"/") && apt-listchanges -h --latest=1 *.deb) | grep urgency
@@ -476,7 +708,7 @@ TBC
 `sudo dnf upgrade`: update packages\
 `sudo dnf system-upgrade`: update os to latest releaase
 
-## Main SystemD Commands
+## SystemD
 
 <https://systemd.io/>\
 <https://commons.wikimedia.org/wiki/File:Systemd_components.svg>\
@@ -491,7 +723,8 @@ TBC
 `systemctl list-unit-files` list unit files (even those not enabled)\
 `systemctl list-unit-files | grep enabled`\
 `systemctl list-unit-files --all | grep packagename`\
-`systemctl list-unit-files --state=masked`: list masked units
+`systemctl list-unit-files --state=masked`: list masked units\
+`systemctl list-units --type=target`: list the targets available\
 `sudo systemctl list-timers` list timers registered\
 `sudo systemctl list-timers --all` list all timers\
 `sudo systemctl cat mdcheck_start.timer`  show the unit file for the timer\
@@ -521,25 +754,35 @@ by 'most' remember a service can be:
 * enabled/disabled
 * masked/unmasked - which changes pointers to /dev/null I think
 
+`sudo systemctl poweroff`: actual command run by `sudo poweroff` - see [systemd-halt.service](#systemd-haltservice)\
+`sudo systemctl reboot`: actual command run by `sudo reboot` - see [systemd-halt.service](#systemd-haltservice)\
+`sudo systemctl halt`: actual command run by `sudo halt` - see [systemd-halt.service](#systemd-haltservice)\
+
 You can have systemd override files (which apparently are like files in /etc/default/). these are supposed to be stored in: `/etc/systemd/system/snmptrapd.service.d/` for the snmptrapd.service
 
 [https://wiki.archlinux.org/title/Systemd](https://wiki.archlinux.org/title/Systemd)
 
 #### journalctl
 
-**`sudo journalctl -xe`** most common use. jumps to end of journal logs and shows extra info about log entries
+> [!IMPORTANT] sudo
+> Many examples of journalctl start with `sudo`. Not sure if it is acturally required for journalctl or not
 
-`sudo journalctl -e` jumps to the end\
-`sudo journalctl -u service_name` show logs about a particular service\
-`sudo journalctl --no-pager` don't page logs\
-`sudo journalctl -r` show logs in reverse order\
-`sudo journalctl -n 25` show most recent 25 lines\
-`sudo journalctl -f` follow logs live\
-`sudo journalctl --utc` if you want them in utc\
-`sudo journalctl -k` # Kernel messages only\
-`sudo journalctl --since=yesterday --until=now`\
-`sudo journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"`\
-`sudo journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot
+**`journalctl -xe`** most common use. jumps to end of journal logs and shows extra info about log entries\
+**`journalctl -ef`** 2nd most common use case. Jump to end and follow for more\
+`journalctl -xef` 3rd most common use case. Jump to end and follow for more, and give extra info
+
+`journalctl -e` jumps to the end\
+`journalctl -x` gives extra info\
+`journalctl -f` follow logs live\
+`journalctl -u service_name` show logs about a particular service\
+`journalctl --no-pager` don't page logs\
+`journalctl -r` show logs in reverse order\
+`journalctl -n 25` show most recent 25 lines\
+`journalctl --utc` if you want them in utc\
+`journalctl -k` # Kernel messages only\
+`journalctl --since=yesterday --until=now`\
+`journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"`\
+`journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot
 
 #### timedatectl
 
@@ -589,8 +832,20 @@ This isn't really a command section but it will stay here until I find a better 
 
 `/usr/lib/systemd/system/`: units provided by installed packages\
 `/etc/systemd/system/`: units installed by the system administrator\
-`/etc/systemd/servicename.conf`: service config if it doesn't have its own folder
+`/etc/systemd/servicename.conf`: service config if it doesn't have its own folder\
 `/etc/systemd/system/servicename.service.d`: service that has its own folder. Could be used for a number of things but one thing it is used for is override files for servicename. SystemD concept of files in `/etc/default`\
+`/lib/systemd/system-shutdown/`/`/usr/lib/systemd/system-shutdown/`: place to put shutdown scripts **but** gets run at the end and won't have any services or mounts. See [systemd-halt.service](#systemd-haltservice)
+
+#### systemd-halt.service
+
+<https://www.freedesktop.org/software/systemd/man/latest/systemd-halt.service.html>
+
+> [!IMPORTANT] Sounds too good to be true because it is
+> Has no services or mounts available. See [Running scripts at shutdown or reboot via SystemD](linux-tips.md#running-scripts-at-shutdown-or-reboot-via-systemd) for more info and alternatives.
+
+amongst other things, it runs scripts in `/lib/systemd/system-shutdown/`/`/usr/lib/systemd/system-shutdown/` when shutting down **but** they get run at the end and won't have any services or mounts. See [Running scripts at shutdown or reboot via SystemD](linux-tips.md#running-scripts-at-shutdown-or-reboot-via-systemd) for more info and alternatives.
+
+See also <https://www.freedesktop.org/software/systemd/man/latest/systemd-soft-reboot.service.html> - not sure how helpful it is
 
 #### SystemD Timers
 
@@ -658,10 +913,11 @@ More: <https://wiki.archlinux.org/title/Systemd/Timers#As_a_cron_replacement>
 * <https://www.freedesktop.org/software/systemd/man/latest/>
 * <https://wiki.archlinux.org/title/Systemd>
 * <https://www.man7.org/linux/man-pages/man1/systemd.1.html>
+* <https://www.freedesktop.org/software/systemd/man/latest/systemd.unit.html>: Unit file explanation and some syntax from man page
+* <https://www.freedesktop.org/software/systemd/man/latest/systemd.syntax.html>: systemd.syntax - General syntax of systemd configuration files
+* <https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files>
 * <https://www.digitalocean.com/community/tutorials/systemd-essentials-working-with-services-units-and-the-journal>
 * <https://www.digitalocean.com/community/tutorials/how-to-use-journalctl-to-view-and-manipulate-systemd-logs>
-* <https://www.digitalocean.com/community/tutorials/understanding-systemd-units-and-unit-files>
-* <https://www.freedesktop.org/software/systemd/man/latest/>
 * <https://linuxhandbook.com/journalctl-command/>
 * <https://linuxconfig.org/how-to-schedule-tasks-with-systemd-timers-in-linux>
 * <https://www.redhat.com/sysadmin/systemd-commands>
@@ -715,7 +971,11 @@ Also see [Network Manager in RaspberryPi Tips](raspberry-pi-tips.md#network-mana
 `hostname`\
 `dnsdomainname`
 
+### netcat
+
 `nc`: netcat: <https://manpages.org/nc>
+
+`nc hostname port`
 
 <https://nc110.sourceforge.io/>
 
@@ -742,7 +1002,7 @@ Also see [Network Manager in RaspberryPi Tips](raspberry-pi-tips.md#network-mana
 
 <https://www.tcpdump.org/manpages/tcpdump.1.html>
 
-tcpdump exmaples:
+tcpdump examples:
 
 * <https://github.com/tcpdump-examples/how-to-use-tcpdump>
 * <https://danielmiessler.com/blog/tcpdump>
@@ -795,7 +1055,7 @@ This section is being moved to [SSH Tips and Tricks](ssh-tips-and-tricks.md)
 `ssh username@host -b 192.168.1.25`: bind to an ip address\
 `ssh username@host -v`: verbose - useful for diagnosing automation and auth issues.
 
-* [x] port forwading commands
+* [x] port forwarding commands
 * [x] reverse port forward commands
 * [ ] add in commands and info for control socket connection sharing (ControlPath and ControlMaster)
 * [ ] tunnel commands
@@ -875,8 +1135,8 @@ From the SSH man page:
 `sysctl -w net.ipv4.ip_forward=0` also set it temporarily\
 `sudo vi /etc/sysctl.conf` and add:
 
-```bash
-net.ipv4.ip_forward = 1
-```
+  ```bash
+  net.ipv4.ip_forward = 1
+  ```
 
 `sudo sysctl -p` to make it permanent.

@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: false
 date: 2025-01-17T13:40:00
-lastmod: 2025-03-13T22:51:14.902Z
+lastmod: 2025-04-24T00:07:26.357Z
 tags:
     - Language
     - References
@@ -22,6 +22,7 @@ tags:
   * [Code Blocks](#code-blocks)
   * [Alerts](#alerts)
     * [Issue with Alert Titles](#issue-with-alert-titles)
+    * [Issues with Codeblocks after Alerts](#issues-with-codeblocks-after-alerts)
   * [Keyboard tags](#keyboard-tags)
   * [Github Pages](#github-pages)
   * [Wikis](#wikis)
@@ -111,7 +112,7 @@ From: <https://docs.github.com/en/get-started/writing-on-github/working-with-adv
 
 #### Issue with Alert Titles
 
-27/01/25: With absolute 0 research, I think i've found a bug with Markdown alerts on Github (not github pages which won't render them unless you use a plugin).
+27/01/25: With absolutely 0 research, I think i've found a bug with Markdown alerts on Github (not github pages which won't render them unless you use a plugin).
 
 An alert with no title gets rended in Github correctly.
 
@@ -130,6 +131,18 @@ But an alert with a title does not get rended in github correctly.
 <https://github.com/orgs/community/discussions/16925> - where alerts first got introduced\
 <https://github.com/orgs/community/discussions/48797>\
 <https://github.com/orgs/community/discussions/103219>
+
+#### Issues with Codeblocks after Alerts
+
+22/04/25: With absolutely 0 research, if you have a codeblock **right** after an alert it doesn't seem to render in Jekyll (at least with cayman). This may be more of an issue with Jekyll & Cayman than markdown or github but I'm putting it here for now.
+
+This code block doesn't render: <https://github.com/tlourey/tlourey.github.io/blob/ffcdcdc5d37ded1578c40316a725cd5427cd886f/pages/windows-commands.md?plain=1#L72> in Jekyll. Not sure if its cause its type of bat or because its right after a code block
+
+Here is a regex to find where this happens in VSCode (javascript based regex)
+
+```regex
+> \[!\w+\][^\n]*\n>[^\n]*\n\n```
+```
 
 ### Keyboard tags
 

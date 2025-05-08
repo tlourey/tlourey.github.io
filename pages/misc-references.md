@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-04-04T02:11:23.066Z
+lastmod: 2025-04-27T05:41:44.436Z
 fmContentType: pages
 ---
 
@@ -25,6 +25,7 @@ fmContentType: pages
   * [SNMP](#snmp)
     * [RFC1628 - Generic UPS Management Information Base](#rfc1628---generic-ups-management-information-base)
   * [Markdown](#markdown)
+  * [Linux Standards](#linux-standards)
   * [Misc](#misc)
 * [Linux](#linux)
   * [Debian Manuals](#debian-manuals)
@@ -35,6 +36,7 @@ fmContentType: pages
 * [Networking](#networking)
 * [Windows](#windows)
 * [Active Directory](#active-directory)
+* [Regex and Similar](#regex-and-similar)
 * [Search Tools](#search-tools)
   * [Google](#google)
 * [People](#people)
@@ -101,6 +103,15 @@ APC Support: <https://www.apc.com/us/en/faqs/FA156148/?r=65&other.LCC_KnowledgeE
 
 Refer to [Markdown Tips](./markdown-tips.html)
 
+### Linux Standards
+
+* [ ] Put POSIX Stuff here\
+**<https://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard>** - see also
+
+* <https://man7.org/linux/man-pages/man7/file-hierarchy.7.html>
+* <https://linux.die.net/man/7/hier>
+* <https://www.freedesktop.org/software/systemd/man/latest/file-hierarchy.html>
+
 ### Misc
 
 <https://en.wikipedia.org/wiki/Well-known_URI>\
@@ -109,7 +120,11 @@ Refer to [Markdown Tips](./markdown-tips.html)
 ## Linux
 
 Crontab: Best website for refining crontab timings: [Crontab.guru - The cron schedule expression generator](https://crontab.guru/) - more in [Linux Commands](linux-commands.md)\
-[Arch Linux Wiki](https://wiki.archlinux.org/title/Main_page) - Contains a lot more up to date resources for linux, even for non-arch users. I **don't** use arch by the way :grin:
+[Arch Linux Wiki](https://wiki.archlinux.org/title/Main_page) - Contains a lot more up to date resources for linux, even for non-arch users. I **don't** use arch by the way :grin:\
+[The Linux Documentation Project](https://tldp.org/): Older resrouce but still has a fair bit of stuff. Doesn't come up as much in Google these days but worth remembering.\
+**[nixCraft - Linux Tips, Hacks, Tutorials, And Ideas In Blog](https://www.cyberciti.biz/)**: Vivek Gite and one of the best Linux websites around.\
+**[Linux Audit](https://linux-audit.com/)**: I only found this very recently but it looks good.\
+
 
 ### Debian Manuals
 
@@ -122,6 +137,7 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 ### Ubuntu Manuals
 
 **[Ubuntu Server Documentation](https://documentation.ubuntu.com/server/)**\
+[Ubuntu Documentation](https://docs.ubuntu.com/) - slowing replacing the next link over time. Gives a good overview of their products & platforms\
 [official Ubuntu Documentation](https://help.ubuntu.com/) - older documentation landing portal\
 [Ubuntu Wiki](https://wiki.ubuntu.com/) - community edited, not well maintained.
 
@@ -167,6 +183,19 @@ Also check [Windows Tips](windows-tips.md)
 ## Active Directory
 
 <https://admx.help/> - good group policy reference - except for all the ads
+
+## Regex and Similar
+
+* Regex for GUID/UUID that Notepad++ likes: `[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}`. From <https://stackoverflow.com/a/6640851>
+* Regexes for specific GUID/UUID Versions: <https://stackoverflow.com/a/38191078>
+* Regex for finding codeblocks right after markdown alerts (put into codeblock for formatting):
+
+```regex
+> \[!\w+\][^\n]*\n>[^\n]*\n\n\```
+```
+
+For Useful Excel Formulas see [Excel Tips](excel-tips.md)\
+For very useful Regex Tools see [Software in Misc Tools](misc-tools.md#software-tools)
 
 ## Search Tools
 
@@ -219,7 +248,7 @@ From: <https://ahrefs.com/blog/google-advanced-search-operators/>
 >Unreliable:
 >
 > |Search operator|What it does|Example|
-> |-|-|-|
+> |---|---|---|
 > |\# ..\#|Search within a range of numbers. |iphone case $50..$60|
 > |inanchor:|Search for pages with backlinks containing specific anchor text. |inanchor:apple|
 > |allinanchor:|Search for pages with backlinks containing multiple words in their anchor text. |allinanchor:apple iphone|
@@ -241,6 +270,8 @@ From: <https://ahrefs.com/blog/google-advanced-search-operators/>
 
 <https://devblogs.microsoft.com/oldnewthing/author/oldnewthing> - Raymond Chen - old MS Developer with some good stories\
 <https://devblogs.microsoft.com/oldnewthing/>
+
+<https://www.superhouse.tv/>
 
 ## Misc Misc Misc
 

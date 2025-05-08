@@ -1,17 +1,18 @@
 ---
 title: Exchange Commands
 description: Mostly Exchange Online but some legacy onprem stuff as well
-published: false
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-04-09T13:03:20.971Z
-lastmod: 2025-04-09T13:10:53.062Z
+lastmod: 2025-04-09T13:52:28.769Z
 tags:
     - Exchange
-    - PowerShell
     - Microsoft365
+    - PowerShell
+    - Email
 isdraft: true
 fmContentType: pages
 mermaid: false
@@ -160,6 +161,8 @@ Stop-HistoricalSearch -JobId <<GUID>>
 
 > [!IMPORTANT] ASSUMPTION!
 > This assumes you never give users their full mailbox in the first place.
+
+Commands to increase space:
 
 ```powershell
 Set-Mailbox -id <<email@domain.com>> -ProhibitSendQuota <<Value>> -ProhibitSendReceiveQuota <<Value>>

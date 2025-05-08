@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-03-05T03:08:16.725Z
+lastmod: 2025-04-13T07:51:27.783Z
 tags:
     - VSCode
     - Tools
@@ -16,7 +16,7 @@ fmContentType: pages
 preview: ""
 ---
 
-<!-- cSpell:ignore ignoreword,ignorewords,yzhang -->
+<!-- cSpell:ignore ignoreword,ignorewords,yzhang Anson -->
 
 <!--- cSpell:disable --->
 * [Settings](#settings)
@@ -28,6 +28,7 @@ preview: ""
     * [vscode-spell-checker Commands](#vscode-spell-checker-commands)
     * [vscode-spell-checker Notes](#vscode-spell-checker-notes)
     * [vscode-spell-checker Tips](#vscode-spell-checker-tips)
+      * [vscode-spell-checker Tips for Markdown](#vscode-spell-checker-tips-for-markdown)
     * [vscode-spell-checker References](#vscode-spell-checker-references)
   * [Markdown all in one](#markdown-all-in-one)
     * [Markdown all in one Commands](#markdown-all-in-one-commands)
@@ -48,7 +49,11 @@ preview: ""
 ## Settings
 
 `"editor.renderWhitespace": "all",` \
-`"editor.renderControlCharacters": true,`: useful for rendering UNICODE Characters that sometimes are not good including invisible characters
+`"editor.renderControlCharacters": true,`: useful for rendering UNICODE Characters that sometimes are not good including invisible characters\
+`"files.eol": "\n"`: set end of line format aka CRLF or LF aka part of the Unix/Windows format (from [How to set default line endings in Visual Studio Code?](https://stackoverflow.com/questions/71240918/how-to-set-default-line-endings-in-visual-studio-code))
+
+> [!TIP] Check git settings
+> Git also has CRLF settings that matter, esp. if working between windows and non-windows machines. the setting is `autocrlf`. See [autocrlf in Git Commands](git-commands.md#autocrlf)
 
 ## Custom Keyboard Shortcuts
 
@@ -126,6 +131,24 @@ keybindings.json:
 * While I don't do this, there is some mention of creating a cspell.json in your repo with some of the settings. This allows other IDEs that use cspell to get the correct dictionaries, language, settings, etc - even if they don't use VSCode.
 * Spend some time configuring parts of vscode-spell-checker at both user and repo level things like
   * Disable programming languages/supported filetypes at user level that you don't use `cSpell.enableFiletypes`
+
+##### vscode-spell-checker Tips for Markdown
+
+Consider configuring cspell to ignore codeblocks and any text between backticks \` for markdown
+
+```json
+    "cSpell.languageSettings": [
+        {
+            // use with Markdown files
+            "languageId": "markdown",
+            // Exclude code.
+            "ignoreRegExpList": [
+                "/^\\s*```[\\s\\S]*?^\\s*```/gm",
+                "`[^`]*`"
+            ]
+        }
+    ],
+```
 
 #### vscode-spell-checker References
 

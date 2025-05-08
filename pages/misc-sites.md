@@ -1,6 +1,6 @@
 ---
 title: Misc Sites
-description: Collection of Misc Websites I recommend, and try to remember that dont really sit anywhere else.
+description: Collection of Misc Websites I recommend, and try to remember that don't really sit anywhere else.
 published: true
 categories:
     - Tech
@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-03-17T11:41:29.482Z
+lastmod: 2025-04-29T07:09:23.953Z
 tags:
     - References
     - Tools
@@ -22,14 +22,17 @@ keywords:
 <!--- cSpell:disable --->
 * [Time and date and clocks](#time-and-date-and-clocks)
 * [Tech News](#tech-news)
-* [Web Development](#web-development)
+* [Development](#development)
 * [Weather](#weather)
   * [Weather Sites](#weather-sites)
   * [Misc Weather Sites](#misc-weather-sites)
 * [Music](#music)
 * [Reviews and Ratings](#reviews-and-ratings)
 * [Notes and Learnings](#notes-and-learnings)
+* [Australian Politiics](#australian-politiics)
 * [Parts and Components](#parts-and-components)
+  * [Electronics](#electronics)
+  * [Communications and Networking](#communications-and-networking)
 <!--- cSpell:enable --->
 
 ## Time and date and clocks
@@ -46,10 +49,11 @@ keywords:
 <https://feedly.com/i/my/me>\
 <https://www.itnews.com.au/> - very 'traditional' style media
 
-## Web Development
+## Development
 
 **<https://www.w3schools.com/>**\
-<https://csszengarden.com/>
+**<https://www.geeksforgeeks.org/>**\
+<https://csszengarden.com/> - older examples of fancy css
 
 ## Weather
 
@@ -76,7 +80,7 @@ keywords:
 <https://earth.nullschool.net/> - *"a visualization of global weather conditions, forecast by supercomputers, updated every three hours"* - very very cool looking map of weather across the globe.
 
 <https://community.windy.com/> - very active community\
-Windy Help Videos (still haven't watched them)\
+Windy Help Videos (still haven't watched them):
 
 * <https://www.youtube.com/watch?v=GtA5AKR5kU0&list=PLtQvpetRUMteS4UtvOqXqkf_I2MZD5ghI>
 * <https://www.youtube.com/playlist?list=PLtQvpetRUMteS4UtvOqXqkf_I2MZD5ghI>
@@ -87,7 +91,7 @@ Windy Help Videos (still haven't watched them)\
 
 ## Reviews and Ratings
 
-<https://www.rtings.com/>\
+<https://www.rtings.com>\
 <https://www.whathifi.com/au>\
 <https://www.nytimes.com/wirecutter/electronics/>
 
@@ -95,19 +99,37 @@ Windy Help Videos (still haven't watched them)\
 
 <https://renenyffenegger.ch/notes/index.html>
 
+## Australian Politiics
+
+[ABC Vote Compass](https://www.abc.net.au/news/vote-compass)\
+[They vote for you](https://theyvoteforyou.org.au)\
+[Open Australia (Beta)](https://www.openaustralia.org.au)\
+[Democracy Sausage](https://democracysausage.org)
+
 ## Parts and Components
+
+### Electronics
 
 <https://www.element14.com>\
 <https://www.jaycar.com.au>\
-<https://www.rs-online.com>
+<https://www.rs-online.com>\
+<https://core-electronics.com.au>
+
+* <https://forum.core-electronics.com.au> - REALLY good forums
+
+<https://littlebirdelectronics.com.au> / <https://raspberry.piaustralia.com.au>
 
 <https://www.adafruit.com>\
-<https://core-electronics.com.au>\
-
-* <https://forum.core-electronics.com.au/> - REALLY good forums
+<https://www.sparkfun.com>
 
 <https://store-usa.arduino.cc>\
-<https://raspberry.piaustralia.com.au> / <https://littlebirdelectronics.com.au>
+<https://www.freetronics.com.au>\
+<https://www.pakronics.com.au>\
+<https://www.mouser.com> / <https://au.mouser.com>
 
-<https://www.mouser.com> / <https://au.mouser.com>\
-<https://www.pakronics.com.au>
+### Communications and Networking
+
+<https://powertec.com.au/brands/nextivity/>\
+<https://www.accesscomms.com.au/>\
+<https://www.comnet.com.au/>\
+<https://wisp.net.au/>
