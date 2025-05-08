@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-06T03:59:44.374Z
+lastmod: 2025-05-07T02:37:35.544Z
 tags:
     - Commands
     - Linux
@@ -498,6 +498,11 @@ Options:
 * -a: only works on windows. uses ASCII to convert end-of-line characters using local conversion.
 
 More options are available. Look at: <https://www.geeksforgeeks.org/gunzip-command-in-linux-with-examples/>
+
+`unzip`\
+`zip`
+
+`unzip -d destinationdirectory`: unzip files to destination directory.
 
 Other Zip Commands:
 
