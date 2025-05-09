@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2024-12-12T18:04:19.415Z
-lastmod: 2025-05-09T00:20:35.122Z
+lastmod: 2025-05-09T00:21:45.404Z
 tags:
     - DNS
     - Security
@@ -373,6 +373,7 @@ Extra Instance Blocking Info:
 
 * <https://www.canva.com/help/set-up-sso/>
 * <https://www.canva.com/help/domain-verification-notification/>
+* <https://www.canva.com/help/domain-report-for-enterprise/>
 
 ### VMWare
 
