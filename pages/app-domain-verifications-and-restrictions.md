@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2024-12-12T18:04:19.415Z
-lastmod: 2025-04-12T07:31:02.387Z
+lastmod: 2025-05-09T00:20:35.122Z
 tags:
     - DNS
     - Security
@@ -368,8 +368,11 @@ Record Name: @\
 Record Type: TXT\
 Record Value Format: `canva-site-verification=<random characters>`
 
-Extra Instance Blocking Available: TBA
-Extra Instance Blocking Info: <>
+Extra Instance Blocking Available: Yes - Account centralisation
+Extra Instance Blocking Info:
+
+* <https://www.canva.com/help/set-up-sso/>
+* <https://www.canva.com/help/domain-verification-notification/>
 
 ### VMWare
 
@@ -436,3 +439,5 @@ Extra Instance Blocking Info: <>
 * <https://www.netspi.com/blog/technical-blog/network-pentesting/analyzing-dns-txt-records-to-fingerprint-service-providers/>
 * <https://en.wikipedia.org/wiki/TXT_record>
 * <https://en.wikipedia.org/wiki/Well-known_URI>
+* <http://ssotax.org/>
+* <https://sso.tax/>
