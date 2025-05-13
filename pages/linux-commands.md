@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-13T10:57:42.892Z
+lastmod: 2025-05-13T11:59:04.574Z
 tags:
     - Commands
     - Linux
@@ -635,7 +635,7 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 
 `getent passwd`: shows current accounts (`/etc/passwd`) - format: [Understanding /etc/passwd File Format - nixCraft](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)\
 `getent groups`: shows current groups (`/etc/groups`)\
-`genent shadow`: shows shadow file (`/etc/shadow`)\
+`genent shadow`: shows shadow file (`/etc/shadow`)- format: [Understanding /etc/shadow file format on Linux - nixCraft](https://www.cyberciti.biz/faq/understanding-etcshadow-file/)\
 See `getent` in [Misc System Commands](#misc-system-commands)
 
 `passwd -S USERNAME` shows the date and status of a users password.
@@ -655,7 +655,8 @@ See `getent` in [Misc System Commands](#misc-system-commands)
 `sudo adduser XXX sshlogin`: add other users group\
 `sudo adduser XXX sudo`: if user also needs sudo\
 `sudo useradd -m -G sshlogin,sudo XXX -s /bin/bash`: sets a users shell, shouldn't be needed much these days\
-`sudo passwd XXX`: if you need to change user's password
+`sudo passwd XXX`: if you need to change user's password\
+`sudo deluser XXX`: deletes a user, not their home folder. See this [note](https://documentation.ubuntu.com/server/how-to/security/user-management/#delete-a-user) about deleting home folders
 
 > [!NOTE] useradd vs adduser
 > `useradd` is a low level utility for adding users. On Debian, administrators should usually use [`adduser`(8)](https://manpages.ubuntu.com/manpages/latest/man8/adduser.8.html) instead.
