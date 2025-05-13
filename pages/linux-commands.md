@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-07T02:37:35.544Z
+lastmod: 2025-05-13T10:01:51.851Z
 tags:
     - Commands
     - Linux
@@ -633,6 +633,8 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 
 ## Accounts and Groups
 
+`getent passwd`: shows current accounts
+
 `passwd -S USERNAME` shows the date and status of a users password.
 > Display account status information. The status information consists of 7 fields. The first field is the user's login name. The second field indicates if the user account has a locked password (L), has no password (NP), or has a usable password (P). The third field gives the date of the last password change. The next four fields are the minimum age, maximum age, warning period, and inactivity period for the password. These ages are expressed in days.
 
@@ -1139,4 +1141,5 @@ From the SSH man page:
   net.ipv4.ip_forward = 1
   ```
 
-`sudo sysctl -p` to make it permanent.
+`sudo sysctl -p` to make it permanent.\
+`getent`: get entries from Name Service Switch libraries (`/etc/nsswitch.conf`)
