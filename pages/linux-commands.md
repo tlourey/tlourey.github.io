@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-13T10:01:51.851Z
+lastmod: 2025-05-13T10:57:42.892Z
 tags:
     - Commands
     - Linux
@@ -633,7 +633,10 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 
 ## Accounts and Groups
 
-`getent passwd`: shows current accounts
+`getent passwd`: shows current accounts (`/etc/passwd`) - format: [Understanding /etc/passwd File Format - nixCraft](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)\
+`getent groups`: shows current groups (`/etc/groups`)\
+`genent shadow`: shows shadow file (`/etc/shadow`)\
+See `getent` in [Misc System Commands](#misc-system-commands)
 
 `passwd -S USERNAME` shows the date and status of a users password.
 > Display account status information. The status information consists of 7 fields. The first field is the user's login name. The second field indicates if the user account has a locked password (L), has no password (NP), or has a usable password (P). The third field gives the date of the last password change. The next four fields are the minimum age, maximum age, warning period, and inactivity period for the password. These ages are expressed in days.
@@ -743,6 +746,7 @@ TBC
 `sudo systemctl reenable mdcheck_start.service`: disables and re-enableds a unit (useful if units \[install\] section has changed)\
 `sudo systemctl mask mdcheck_start.service`: Mask a unit to make it impossible to start both manually and as a dependency, which makes masking dangerous. It makes a sim link of the unit file to /dev/null meaning it will never start.\
 `sudo systemctl unmask mdcheck_start.service`: unmask a unit (there are more steps)\
+`sudo systemctl edit mdcheck_start`: create an override file/folder for a systemd unit file (preferred method from [ubuntu doco](https://documentation.ubuntu.com/server/explanation/software/changing-package-files/#systemd-files))\
 `systemctl show --property=UnitPath`: show paths to unit files\
 The main Unit paths are (listed from lowest to highest precedence):
 

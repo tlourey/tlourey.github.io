@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-05-06T04:09:18.514Z
+lastmod: 2025-05-13T11:00:43.458Z
 tags:
     - Linux
     - References
@@ -31,6 +31,7 @@ keywords:
 * [Aliases](#aliases)
 * [Running scripts at shutdown or reboot via SystemD](#running-scripts-at-shutdown-or-reboot-via-systemd)
 * [/dev/shm](#devshm)
+* [Restoring configuration files via dpkg](#restoring-configuration-files-via-dpkg)
 * [Ubuntu and Debian Package Urgency](#ubuntu-and-debian-package-urgency)
   * [Using the urgency value](#using-the-urgency-value)
     * [apt-listchanges](#apt-listchanges)
@@ -140,6 +141,10 @@ Guidance: <https://superuser.com/questions/45342/when-should-i-use-dev-shm-and-w
 It is auto clearing - the OS(?) will auto clear it as programs that created the files exit and the contents are no longer needed.
 
 [^1]: <https://www.kernel.org/doc/Documentation/filesystems/tmpfs.txt>
+
+## Restoring configuration files via dpkg
+
+See [Restoring configuration files](https://documentation.ubuntu.com/server/explanation/software/changing-package-files/#restoring-configuration-files)
 
 ## Ubuntu and Debian Package Urgency
 
