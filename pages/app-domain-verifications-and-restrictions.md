@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2024-12-12T18:04:19.415Z
-lastmod: 2025-05-09T00:21:45.404Z
+lastmod: 2025-05-13T14:23:32.463Z
 tags:
     - DNS
     - Security
@@ -362,7 +362,7 @@ Extra Instance Blocking Info: <>
 
 ### Canva
 
-KB: <>
+KB: <https://www.canva.com/help/set-up-sso/>
 
 Record Name: @\
 Record Type: TXT\
@@ -427,6 +427,7 @@ Extra Instance Blocking Info: <>
 * [ ] liveramp
 * [ ] Microsoft
 * [ ] Shopify
+* [ ] Logmein
 
 ### Unknown
 
