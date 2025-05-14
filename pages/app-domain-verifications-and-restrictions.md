@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2024-12-12T18:04:19.415Z
-lastmod: 2025-05-13T14:23:32.463Z
+lastmod: 2025-05-14T00:19:54.949Z
 tags:
     - DNS
     - Security
@@ -57,6 +57,7 @@ keywords:
   * [Docker](#docker)
   * [Canva](#canva)
   * [VMWare](#vmware)
+  * [Access Group](#access-group)
   * [Fastly](#fastly)
     * [Fastly Domain Delegation](#fastly-domain-delegation)
     * [Fastly Verification](#fastly-verification)
@@ -385,6 +386,18 @@ Record Value Format: `vmware-cloud-verification-<GUID>`
 
 > [!NOTE] One of these is not like most others...
 > VMWare seem to use a `-` instead of an `=`
+
+Extra Instance Blocking Available: TBA
+Extra Instance Blocking Info: <>
+
+### Access Group
+
+KB: <https://identity.accessacloud.com/manage/domainverificationhelp>\
+Link: <https://identity.accessacloud.com/manage/domains>
+
+Record Name: @\
+Record Type: TXT\
+Record Value Format: `access-domain-verification=random`
 
 Extra Instance Blocking Available: TBA
 Extra Instance Blocking Info: <>
