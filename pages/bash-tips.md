@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T13:05:00
-lastmod: 2025-05-06T01:04:22.524Z
+lastmod: 2025-05-15T08:32:37.564Z
 tags:
     - Language
     - Linux
@@ -19,6 +19,7 @@ tags:
 
 
 <!--- cSpell:disable --->
+* [Bash History](#bash-history)
 * [Bash Scripts](#bash-scripts)
   * [Running as a user](#running-as-a-user)
   * [debugging bash scripts](#debugging-bash-scripts)
@@ -26,6 +27,51 @@ tags:
   * [Misc](#misc)
 * [Other pages](#other-pages)
 <!--- cSpell:enable --->
+
+## Bash History
+
+<https://unix.stackexchange.com/a/163406/738908>
+
+Mainly controlled by Environment Variables:
+
+* HISTFILESIZE: The maximum number of lines contained in the history file:
+  * Default: 2000
+  * 0: the history file is truncated to zero size
+  * Non-numeric values and numeric values less than zero inhibit truncation.
+* HISTSIZE: The number of commands to remember in the command history
+  * If the value is 0, commands are not saved in the history list.
+  * Numeric values less than zero result in every command being saved on the history list (there is no limit).
+  * The shell sets the default value to 100 after reading any startup files.
+* HISTIGNORE : This allows you to ignore certain common commands that are rarely of interest. eg: `export HISTIGNORE="pwd:df:du"`
+* HISTCONTROL : This one lets you choose how the history works:
+  * ignoredups: save duplicated commands only once
+  * ignorespace ignore commands starting with whitespace
+  * erasedups: causes all previous lines matching the current line to be removed from the history list before that line is saved
+  * ignoreboth: shorthand for ignorespace and ignoredups
+* HISTTIMEFORMAT: set the time format of the history file - see man bash
+
+Fine tuning by bash options:
+
+* histappend: the history list is appended to the file named by the value of the HISTFILE variable when the shell exits, rather than overwriting the file. Allows you to combine the histories of different sessions (think different terminals for example).
+  * `shopt -s histappend` OR
+  * adding above command to your `~/.bashrc`
+* The `history` command has two useful options:
+  * `history -a` : causes the last command to be written to the history file automatically
+  * `history -r` : imports the history file into the current session.
+
+You could, for example, add these two commands to your `PROMPT_COMMAND` (which is executed each time your shell shows the prompt, so whenever you start a new shell and after each command you run in it):
+```export PROMPT_COMMAND='history -a;history -r;'```
+Combined, they ensure that any new terminal you open will immediately import the history of any other shell sessions. The result is a common history across all terminals/shell sessions.
+
+More `history` commands which are useful when you have unlimted bash history.
+
+`history`: displays a numbered list of the commands in the history list
+`history -c`: clears the history list
+`!!`: runs the last command in the history list
+`!n`: runs the nth command stored in history
+`CTRL + R`: searches through the history list interactively. To clarify, Bash starts displaying matches as soon as we begin typing what we're looking for.
+
+From: <https://www.baeldung.com/linux/bash-configure-unlimited-history>
 
 ## Bash Scripts
 
