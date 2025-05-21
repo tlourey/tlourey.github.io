@@ -11,11 +11,13 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-03-19T05:53:58.002Z
+lastmod: 2025-05-21T07:18:44.004Z
 ---
 
 <!--- cSpell:disable --->
-* [Homer Simpsons Fire on console](#homer-simpsons-fire-on-console)
+* [Homer Simpson Fire on console](#homer-simpson-fire-on-console)
+* [Homer Simpson burning bridge](#homer-simpson-burning-bridge)
+* [Homer backing away](#homer-backing-away)
 * [Dumpster fire](#dumpster-fire)
 * [This is fine](#this-is-fine)
 * [Sarcastic Kid Laughing](#sarcastic-kid-laughing)
@@ -37,7 +39,6 @@ lastmod: 2025-03-19T05:53:58.002Z
 * [That ain't funny](#that-aint-funny)
 * [JFC](#jfc)
 * [This will not end well](#this-will-not-end-well)
-* [Homer backing away](#homer-backing-away)
 * [If he dies, he dies](#if-he-dies-he-dies)
 * [Computer says no](#computer-says-no)
 * [Naked Gun Facepalm](#naked-gun-facepalm)
@@ -59,7 +60,7 @@ lastmod: 2025-03-19T05:53:58.002Z
 <!--- cSpell:enable --->
 <!--- <!-- markdownlint-disable MD051 -->
 
-## Homer Simpsons Fire on console
+## Homer Simpson Fire on console
 
 [![Picture](/assets/images/homer-water-console.gif)](/assets/images/homer-water-console.gif)\
 <https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Fndt668s03bcd1.gif>\
@@ -67,10 +68,25 @@ lastmod: 2025-03-19T05:53:58.002Z
 
 [Top](#content)
 
+## Homer Simpson burning bridge
+
+[![Picture](/assets/images/homer-burning-bridge.gif)](/assets/images/homer-burning-bridge.gif)\
+<https://imgur.com/gallery/homer-burns-bridge-DVQhIzP>\
+
+## Homer backing away
+
+[![Picture](/assets/images/homer-backing-away.gif)](/assets/images/homer-backing-away.gif)\
+<https://knowyourmeme.com/memes/homer-simpson-backs-into-bushes>
+
+[Top](#content)
+
 ## Dumpster fire
 
 [![Picture](/assets/images/dumpsterfire.gif)](/assets/images/dumpsterfire.gif)\
 <https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW11eWhsZ2xrdDVxNzJ2ZW5wbWR1ZmdvZWVwNXJpMWoxYXd5YW9xcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/853jNve3ljqrYrcSOK/giphy.gif>
+
+[![Picture](/assets/images/dumpsterfire-cartoon.gif)](/assets/images/dumpsterfire-cartoon.gif.gif)\
+<https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3F6cTBsbXNmdzJ5bjZiM2FvcWdzOTY0dWRpNWxobGtrcTRrcGlrMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tZyxxR4lUIRnTgIzl9/giphy.gif>
 
 [Top](#content)
 
@@ -212,13 +228,6 @@ The PG Version:
 
 [![Picture](/assets/images/this-will-not-end-well.jpg)](/assets/images/this-will-not-end-well.jpg)\
 <https://www.flickr.com/photos/195096636@N06/52262564989/>
-
-[Top](#content)
-
-## Homer backing away
-
-[![Picture](/assets/images/homer-backing-away.gif)](/assets/images/homer-backing-away.gif)\
-<https://knowyourmeme.com/memes/homer-simpson-backs-into-bushes>
 
 [Top](#content)
 
