@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-03T21:24:58.915Z
-lastmod: 2025-05-24T05:48:56.826Z
+lastmod: 2025-05-24T06:00:40.912Z
 tags:
     - Linux
     - Windows
@@ -128,7 +128,13 @@ sudo chown otheruser:otheruser /home/otheruser/.ssh/
 sudo chmod 0700 /home/otheruser/.ssh/
 sudo mv ~/otheruser-authorized_keys /home/otheruser/.ssh/authorized_keys
 sudo chown otheruser:otheruser /home/otheruser/.ssh/authorized_keys
-sudo chmod 0500 /home/othersuer/.ssh/authorized_keys
+sudo chmod 0600 /home/othersuer/.ssh/authorized_keys
+
+# on host - never logged in before (suggestion from a friend)
+sudo install -d -m 700 -o otheruser -g otheruser /home/otheruser/.ssh
+echo "ssh-ed25519 AAAA... comment" | sudo tee /home/otheruser/.ssh/authorized_keys > /dev/null
+sudo chown otheruser:otheruser /home/otheruser/.ssh/authorized_keys
+sudo chmod 600 /home/otheruser/.ssh/authorized_keys
 ```
 
 This answer has a lot: <https://askubuntu.com/a/875058/443835>
