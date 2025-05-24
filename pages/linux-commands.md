@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-13T11:59:04.574Z
+lastmod: 2025-05-24T02:13:09.256Z
 tags:
     - Commands
     - Linux
@@ -669,6 +669,15 @@ See:
 * <https://manpages.ubuntu.com/manpages/latest/man8/useradd.8.html> - NB:
 
 You can also create system users by using the `--system` parameter of adduser. See <https://manpages.ubuntu.com/manpages/xenial/man8/adduser.8.html#:~:text=version%20of%20adduser.)-,Add%20a%20system%20user,-If%20called%20with> for more specifics.
+
+last: [^1]
+
+`last username`: see the last time a specific user logged in\
+`last`: see all the last sucessful attempts since wtmp file creation\
+`sudo lastb username`: see the last time a specific user had a bad login\
+`sudo lasb`: see all bad logins
+
+[^1]: Most of last section from (or based on) <https://www.cyberciti.biz/faq/unix-linux-check-last-time-user-loggedin-command/>
 
 ## Apt
 
