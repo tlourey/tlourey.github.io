@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-24T02:13:09.256Z
+lastmod: 2025-05-24T02:13:38.108Z
 tags:
     - Commands
     - Linux
@@ -339,6 +339,14 @@ column
 tail
 tail -f
 ```
+
+> [!TIP] cat line numbers
+> `cat -n myfile`
+
+`less -N myfile`
+
+> [!TIP] line numbers inside less
+> While viewing a file in less type <kbd>-n</kbd> and press <kbd>Enter</kbd>
 
 ### Process Stuff
 
