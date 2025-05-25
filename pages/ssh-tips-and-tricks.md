@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-03T21:24:58.915Z
-lastmod: 2025-05-24T06:00:40.912Z
+lastmod: 2025-05-25T04:50:22.623Z
 tags:
     - Linux
     - Windows
@@ -44,7 +44,7 @@ keywords:
 `ssh username@host -b 192.168.1.25`: bind to an ip address\
 `ssh username@host -v`: verbose - useful for diagnosing automation and auth issues.
 
-* [x] port forwading commands
+* [x] port forwarding commands
 * [x] reverse port forward commands
 * [ ] add in commands and info for control socket connection sharing (ControlPath and ControlMaster)
 * [ ] tunnel commands

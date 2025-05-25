@@ -19,7 +19,7 @@ tags:
     - Provisioning
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-05-06T01:32:07.103Z
+lastmod: 2025-05-25T04:49:55.285Z
 keywords:
     - Tools
 ---
@@ -172,13 +172,19 @@ vagrant box remove box/name
 ## Windows Tools
 
 **<https://learn.microsoft.com/en-us/windows/powertoys/>**\
-**<https://cmder.app/>**\
+**<https://cmder.app/>** really good terminal emulator app for windows for all kinds of Windows & Linux shells as well as hooking into other tools like SecureCRT and PuTTY!
+
+* Note to self, remember the [Keyboard Shortcuts](https://cmder.app/#:~:text=(Cmder.exe)-,Keyboard%20shortcuts,-Tab%20manipulation)
+* [Cmder wiki](https://github.com/cmderdev/cmder/wiki)
+* [Main readme.md](https://github.com/cmderdev/cmder/blob/master/README.md)
+
 <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html> - see also: [PuTTY Commands](putty-commands.md)\
 **<https://learn.microsoft.com/en-us/sysinternals/>**\
 **<https://www.vandyke.com/products/securecrt/windows.html> - Its not free but its good.**\
 <https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
 [Cygwin](https://www.cygwin.com/) - Linux env for Windows, somewhat natively.\
-**[Total Commander](https://www.ghisler.com/)** - THE PIMP!
+<https://www.farmanager.com/> - Clone of Norton Commander/Midnight Commander but for windows, still getting updates and has plenty of features
+**[Total Commander](https://www.ghisler.com/)** - THE PIMP! One of the best tools you can have if you work in IT or with lots of files, a lot.
 
 * <https://www.ghisler.ch/wiki/index.php?title=Main_Page>: Total Commander Wiki (not sure if official)
 * [Useful External Tools for Total Commander](https://www.ghisler.com/tools.htm)
