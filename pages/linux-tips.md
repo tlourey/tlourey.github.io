@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-05-28T02:36:29.986Z
+lastmod: 2025-05-28T02:37:06.535Z
 tags:
     - Linux
     - References
@@ -146,6 +146,8 @@ It is auto clearing - the OS(?) will auto clear it as programs that created the 
 ## VIM Tips
 
 This should go somewhere else but its here for now.
+
+From: <https://www.reddit.com/r/commandline/comments/1kx075l/comment/mumbcg9/>
 
 ```text
 Open /
