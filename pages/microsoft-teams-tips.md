@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-04-09T14:43:06.459Z
+lastmod: 2025-05-28T07:27:47.142Z
 tags:
     - Microsoft365
     - Teams
@@ -23,6 +23,10 @@ keywords:
 * [Keyboard Shortcuts](#keyboard-shortcuts)
 * [Slash Commands](#slash-commands)
 * [Social Share to Teams](#social-share-to-teams)
+* [Teams Backgrounds](#teams-backgrounds)
+  * [Image Format](#image-format)
+  * [With premium](#with-premium)
+  * [Without Premium via GPO](#without-premium-via-gpo)
 * [Microsoft Places](#microsoft-places)
   * [Microsoft Places Setup](#microsoft-places-setup)
     * [Add Services to buildings](#add-services-to-buildings)
@@ -139,6 +143,38 @@ javascript:(function()%7Bvar url %3D document.URL %3B%0A%0Awindow.location.href 
 If that doesn't work maybe this will
 
 <a href="javascript:(function()%7Bvar url %3D document.URL %3B%0A%0Awindow.location.href %3D "https%3A%2F%2Fteams.microsoft.com%2Fshare%3Fhref%3D"%0A                        %2B url %3B%7D)()%3B">Share to Teams</a>
+
+## Teams Backgrounds
+
+### Image Format
+
+* PNG and JPEG image formats of your images.
+* Images with a minimum dimension of 360 px X 360 px.
+* Images with a maximum dimension of 3840 px X 2160 px.
+* A maximum of 50 custom background images.
+* For frosted glass backgrounds: a transparent png image.
+
+From: <https://learn.microsoft.com/en-us/microsoftteams/custom-meeting-backgrounds#add-custom-background-images>
+
+### With premium
+
+<https://learn.microsoft.com/en-us/microsoftteams/custom-meeting-backgrounds>
+
+### Without Premium via GPO
+
+1. Create a Teams meeting and join with your account
+2. In the meeting, go to "More --> Video effects," then "Add new" to upload your custom background.
+3. Navigate to %localappdata%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\Backgrounds\Uploads to find your uploaded image and its thumbnail. (Dont rename them, the naming is Important)
+4. GPO Deployment:
+   1. Copy the image and thumbnail files to a folder on your Domain Controller that is accessible for GPO deployment.
+   2. Create a new Group Policy Object (GPO).
+   3. In the GPO, go to User Configuration --> Preferences --> Windows Settings --> Files, and add a new file.
+   4. Set the source to your chosen folder path (\domain.example\SYSVOL\image.png).
+   5. Set the destination to %LocalAppData%\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams\Backgrounds\Uploads\image.png.
+5. Repeat for the thumbnail file, so you always have 2 PGO's per Picture.
+6. Apply the GPO to the OU containing your users.
+
+From: <https://www.reddit.com/r/sysadmin/comments/1egl07m/deploying_custom_backgrounds_in_new_teams_via_gpo/>
 
 ## Microsoft Places
 
