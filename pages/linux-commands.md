@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-24T02:13:38.108Z
+lastmod: 2025-05-28T01:41:22.154Z
 tags:
     - Commands
     - Linux
@@ -20,6 +20,7 @@ isdraft: false
 * [Operating System Commands](#operating-system-commands)
   * [man pages](#man-pages)
 * [Kernel](#kernel)
+  * [dmesg](#dmesg)
 * [Terminal Stuff](#terminal-stuff)
   * [Built in bash commands](#built-in-bash-commands)
   * [Environment Variables](#environment-variables)
@@ -151,6 +152,7 @@ modprobe
 insmod
 rmmod
 modinfo
+dmesg
 ```
 
 <https://en.wikipedia.org/wiki/Modprobe>\
@@ -163,6 +165,16 @@ modinfo
 <https://www.kernel.org/doc/html/latest/>\
 <https://www.kernel.org/doc/html/latest/admin-guide/index.html>\
 <https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html>
+
+### dmesg
+
+dmesg - print or control the kernel ring buffer
+
+`dmesg -T`: Show events in human readable time\
+`dmesg --console-off`: disable printing of messages to console\
+`dmesg --console-on`: enable printing of messages to console\
+`dmesg --facility list`: Restrict output to the given (comma-separated) list of facilities.  For example: `dmesg --facility=daemon`. Check `dmesg --help` for supported facilities.\
+`dmesg -w`: follow (like tail -f)
 
 ## Terminal Stuff
 
@@ -682,6 +694,7 @@ last: [^1]
 
 `last username`: see the last time a specific user logged in\
 `last`: see all the last sucessful attempts since wtmp file creation\
+`last -n 1 reboot`: not user related but shows last reboot\
 `sudo lastb username`: see the last time a specific user had a bad login\
 `sudo lasb`: see all bad logins
 
