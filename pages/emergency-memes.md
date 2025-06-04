@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-05-21T07:18:44.004Z
+lastmod: 2025-06-04T23:58:08.261Z
 ---
 
 <!--- cSpell:disable --->
@@ -22,7 +22,8 @@ lastmod: 2025-05-21T07:18:44.004Z
 * [This is fine](#this-is-fine)
 * [Sarcastic Kid Laughing](#sarcastic-kid-laughing)
 * [Sarcastic Yay](#sarcastic-yay)
-* [Unimpressed](#unimpressed)
+* [Unimpressed Guy](#unimpressed-guy)
+* [Not amused boy](#not-amused-boy)
 * [Snappy Response](#snappy-response)
 * [Go away](#go-away)
 * [Jackie Chan](#jackie-chan)
@@ -111,12 +112,17 @@ lastmod: 2025-05-21T07:18:44.004Z
 
 [Top](#content)
 
-## Unimpressed
+## Unimpressed Guy
 
 [![Picture](/assets/images/unimpressed.jpeg)](/assets/images/unimpressed.jpeg)\
 <https://www.vice.com/en/article/disappointed-cricket-fan-meme/>
 
 [Top](#content)
+
+## Not amused boy
+
+[![Picture](/assets/images/not-amused-boy.gif)](/assets/images/not-amused-boy.gif)\
+<https://tenor.com/en-AU/view/not-amused-boy-blink-not-in-the-mood-gif-16085593>
 
 ## Snappy Response
 
