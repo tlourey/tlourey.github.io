@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-04-21T23:31:45.879Z
+lastmod: 2025-06-04T05:59:38.981Z
 tags:
     - Commands
     - References
@@ -24,6 +24,8 @@ keywords:
 * [Uptime](#uptime)
 * [User Profile Management](#user-profile-management)
 * [Bitlocker Status](#bitlocker-status)
+* [Netsh](#netsh)
+  * [Common Netsh oneliners](#common-netsh-oneliners)
 * [Unformatted to add above](#unformatted-to-add-above)
 * [Additional Resources](#additional-resources)
 <!--- cSpell:enable --->
@@ -100,6 +102,39 @@ Check Bitlocker Status
 ```bat
 manage-bde -status
 ```
+
+## Netsh
+
+<https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh>\
+<https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts>\
+<https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/netsh>
+
+```text
+netsh
+netsh [-a AliasFile] [-c Context] [-r RemoteMachine] [-u [DomainName\]UserName] [-p Password | *] [Command | -f ScriptFile]
+```
+
+|Parameter|Description|
+|-|-|
+|-a|Specifies that you're returned to the netsh shell after running AliasFile.|
+|AliasFile|Specifies the name of the text file that contains one or more netsh commands.|
+|-c|Specifies that netsh enters the specified netsh context.|
+|Context|Specifies the netsh context that you want to enter.|
+|-r|Specifies that you want the command to run on a remote computer. The Remote Registry service must be running on the remote computer. If it's not running, Windows displays a "Network Path Not Found" error message.|
+|RemoteComputer|Specifies the remote computer that you want to configure.|
+|-u|Specifies that you want to run the netsh command under a user account.|
+|DomainName\\ |Specifies the domain where the user account is located. The default is the local domain if DomainName\ isn't specified.|
+|UserName|Specifies the user account name.|
+|-p|Specifies that you want to provide a password for the user account.|
+|Password|Specifies the password for the user account that you specified with -u UserName.|
+|Command|Specifies the netsh command that you want to run.|
+|-f|Exits netsh after running the script that you designate with ScriptFile.|
+|ScriptFile|Specifies the script that you want to run.|
+
+### Common Netsh oneliners
+
+Show connected WiFi Network: `netsh WLAN show interfaces`\
+Show all WiFi Profiles: `netsh wlan show profiles`\
 
 ## Unformatted to add above
 
