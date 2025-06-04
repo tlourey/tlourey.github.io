@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-26T11:43:45.306Z
-lastmod: 2025-05-28T02:37:06.535Z
+lastmod: 2025-06-04T07:13:06.415Z
 tags:
     - Linux
     - References
@@ -154,11 +154,11 @@ Open /
 Save / Exit
 :w Save File
 :q Quit
-:q! Really quit, don’t just talk about it.
+:q! Really quit, don't just talk about it.
 :wq Quit, but save first, cause who really wants to do
 something in vim more than once?
-:x Pretty much the same as the above, but it doesn’t save
-if you don’t need to. This makes more sense, and it’s one keystroke
+:x Pretty much the same as the above, but it doesn't save
+if you don't need to. This makes more sense, and it's one keystroke
 shorter.
 ESC Go back to command mode
 
@@ -174,34 +174,24 @@ b beginning of the word.
 $ End of a line
 H kinda like Home, takes you to the top left
 L also means loser, takes you to the bottom of the screen.
-:88 takes you to line . Don’t try this with any line
-other than 88.
-i insert text. This is one of the only keys you need to
-know.
-x delete the character you are standing on. This is the
-other character you really need to know.
-cw delete the current word and start inserting. means “Change Word”. Thanks Quinn!
+:88 takes you to line . Don't try this with any line other than 88.
+i insert text. This is one of the only keys you need to know.
+x delete the character you are standing on. This is the other character you really need to know.
+cw delete the current word and start inserting. means "Change Word". Thanks Quinn!
 r overwrite a single character. I like this one.
 R replace lots of characters.
 o Make a new line below and start insert mode
 O Make a new line above and start insert mode
-a append right here. You’ll probably use i more.
+a append right here. You'll probably use i more.
 A Appends at the end of the line. I use this a lot.
 dd delete the entire line.
-9dd delete 9 lines. This only works for 9 lines. You
-couldn’t say, use this to delete 8 lines by doing ‘8dd’. No way would
-that work.
-yy yank the current line to the clipboard, or
-whatever they call it in vim terms.
-5y yank 5 lines to the clipboard.
-p paste the line you just yanked.
+9dd delete 9 lines. This only works for 9 lines. You couldn't say, use this to delete 8 lines by doing '8dd'. No way would that work.
+yy yank the current line to the clipboard, or whatever they call it in vim terms.
+5y yank 5 lines to the clipboard. p paste the line you just yanked.
 u Undo. This app actually has undo? very cool.
-/pattern search for the pattern “pattern” Kinda redundant
-example.
-n Works like F3 does in windows, takes you to the next
-search result.
-N works like F3 doesn’t in windows, and takes you to the
-previous search result.
+/pattern search for the pattern "pattern" Kinda redundant example.
+n Works like F3 does in windows, takes you to the next search result.
+N works like F3 doesn't in windows, and takes you to the previous search result.
 %s/stuff/toreplace/g Replace stuff with toreplace everywhere in the file.
 G Go to the end of the file (thanks Q!)
 ```
