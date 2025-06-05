@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T13:03:20.971Z
-lastmod: 2025-04-09T13:52:28.769Z
+lastmod: 2025-06-05T01:14:37.191Z
 tags:
     - Exchange
     - Microsoft365
@@ -31,6 +31,7 @@ keywords:
   * [Archive Mailbox](#archive-mailbox)
   * [Mailbox Access Checks](#mailbox-access-checks)
   * [Mailbox Access](#mailbox-access)
+  * [Shared Mailbox Sent Items settings](#shared-mailbox-sent-items-settings)
   * [Exchange Audit Log search](#exchange-audit-log-search)
     * [Searching for Exchange Rule Changes](#searching-for-exchange-rule-changes)
     * [Searxhing for Exchange Connector Changes](#searxhing-for-exchange-connector-changes)
@@ -269,6 +270,20 @@ Set-DistributionGroup -Identity printersupport@contoso.com -GrantSendOnBehalfTo 
 # This will only remove administrator
 Set-DynamicDistributionGroup "All Employees" -GrantSendOnBehalfTo @{Remove="Administrator"}
 ```
+
+### Shared Mailbox Sent Items settings
+
+From <https://www.slipstick.com/exchange/save-items-shared-mailbox-exchange-server-cmdlet/#:~:text=Cmdlet%20for%20Exchange%202013%20CU9%20and%20Office%20365>
+
+```powershell
+# To enable copying for emails sent as the shared mailbox: 
+Set-Mailbox <sharedmailboxname> -MessageCopyForSentAsEnabled $True
+
+# To enable copying for emails sent on behalf of the shared mailbox:
+Set-Mailbox <sharedmailboxname> -MessageCopyForSendOnBehalfEnabled $True
+```
+
+More <https://learn.microsoft.com/en-us/powershell/module/exchange/set-mailbox?view=exchange-ps>
 
 ### Exchange Audit Log search
 
