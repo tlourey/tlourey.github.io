@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-04-11T07:04:55.216Z
+lastmod: 2025-06-15T03:27:02.390Z
 tags:
     - Commands
     - References
@@ -28,6 +28,7 @@ keywords:
     * [Git Credential Manager](#git-credential-manager)
       * [Github Device flow](#github-device-flow)
   * [autocrlf](#autocrlf)
+* [Quick Github Auth](#quick-github-auth)
 * [Internet References](#internet-references)
 * [Copy a single file from one branch to another](#copy-a-single-file-from-one-branch-to-another)
 <!--- cSpell:enable --->
@@ -130,6 +131,14 @@ There *may* be some value in looking up these settings:
 * `core.safecrlf`: <https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresafecrlf>
 * <https://git-scm.com/docs/gitattributes#_eol>
 * <https://git-scm.com/docs/gitattributes#_end_of_line_conversion>
+
+## Quick Github Auth
+
+Create secure correctly scoped github personal access token
+
+* [ ] Add link to guide about PATs
+
+Then type: `git clone https://<username>:<PAT>@github.com/<owner>/<repository>.git`
 
 ## Internet References
 
