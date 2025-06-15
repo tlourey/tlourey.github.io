@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-06-15T06:43:19.454Z
+lastmod: 2025-06-15T07:12:50.022Z
 tags:
     - Commands
     - References
@@ -30,6 +30,11 @@ keywords:
   * [autocrlf](#autocrlf)
 * [Quick Github Auth](#quick-github-auth)
 * [Copy a single file from one branch to another](#copy-a-single-file-from-one-branch-to-another)
+* [Special Git Repo files \& folders](#special-git-repo-files--folders)
+  * [.gitignore](#gitignore)
+  * [.gitattributes](#gitattributes)
+  * [.gitmodules](#gitmodules)
+  * [.github](#github)
 * [Internet References](#internet-references)
 <!--- cSpell:enable --->
 
@@ -151,6 +156,32 @@ git add path/to/file
 git commit -m "Copy file from source-branch to target-branch"
 git push origin target-branch
 ```
+
+## Special Git Repo files & folders
+
+### .gitignore
+
+<https://git-scm.com/docs/gitignore>
+
+### .gitattributes
+
+* The file: <https://git-scm.com/docs/gitattributes>
+* A check command: <https://git-scm.com/docs/git-check-attr>
+
+### .gitmodules
+
+For Git submodules.
+
+* An overview: <https://git-scm.com/docs/gitsubmodules>
+* The file: <https://git-scm.com/docs/gitmodules>
+* The command: <https://git-scm.com/docs/git-submodule>
+* From the git book: <https://git-scm.com/book/en/v2/Git-Tools-Submodules>
+
+### .github
+
+<https://stackoverflow.com/a/61301254/5435742>
+
+TBC
 
 ## Internet References
 
