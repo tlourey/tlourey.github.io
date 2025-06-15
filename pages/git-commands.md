@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-06-15T03:27:02.390Z
+lastmod: 2025-06-15T03:28:57.221Z
 tags:
     - Commands
     - References
@@ -134,7 +134,7 @@ There *may* be some value in looking up these settings:
 
 ## Quick Github Auth
 
-Create secure correctly scoped github personal access token
+Create secure correctly scoped github personal access token here: <https://github.com/settings/personal-access-tokens>
 
 * [ ] Add link to guide about PATs
 
