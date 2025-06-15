@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-06-15T03:28:57.221Z
+lastmod: 2025-06-15T06:43:19.454Z
 tags:
     - Commands
     - References
@@ -29,8 +29,8 @@ keywords:
       * [Github Device flow](#github-device-flow)
   * [autocrlf](#autocrlf)
 * [Quick Github Auth](#quick-github-auth)
-* [Internet References](#internet-references)
 * [Copy a single file from one branch to another](#copy-a-single-file-from-one-branch-to-another)
+* [Internet References](#internet-references)
 <!--- cSpell:enable --->
 
 ## Common Git Aliases
@@ -113,7 +113,7 @@ In theory it should be set to automatic during install but you may need to adjus
 
 More Info:
 
-* <https://stackoverflow.com/a/20653073>: awesome stackoverflow on how it works, what it matters and how to address.
+* <https://stackoverflow.com/a/20653073>: awesome StackOverflow on how it works, what it matters and how to address.
 * <https://git-scm.com/docs/gitattributes#_end_of_line_conversion>
 * <https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreautocrlf>
 
@@ -140,11 +140,6 @@ Create secure correctly scoped github personal access token here: <https://githu
 
 Then type: `git clone https://<username>:<PAT>@github.com/<owner>/<repository>.git`
 
-## Internet References
-
-<https://www.reddit.com/r/git/comments/1htmt9k/the_top_1120_commands_you_need_to_recover_from/>\
-<https://ohshitgit.com/>
-
 ## Copy a single file from one branch to another
 
 From <https://betterstack.com/community/questions/how-do-i-copy-version-of-single-file-from-one-branch-another/>
@@ -156,3 +151,8 @@ git add path/to/file
 git commit -m "Copy file from source-branch to target-branch"
 git push origin target-branch
 ```
+
+## Internet References
+
+<https://www.reddit.com/r/git/comments/1htmt9k/the_top_1120_commands_you_need_to_recover_from/>\
+<https://ohshitgit.com/>
