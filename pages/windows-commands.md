@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-06-04T05:59:38.981Z
+lastmod: 2025-06-16T05:17:14.151Z
 tags:
     - Commands
     - References
@@ -135,6 +135,7 @@ netsh [-a AliasFile] [-c Context] [-r RemoteMachine] [-u [DomainName\]UserName] 
 
 Show connected WiFi Network: `netsh WLAN show interfaces`\
 Show all WiFi Profiles: `netsh wlan show profiles`\
+Connect a Wifi interface using a profile name: `netsh wlan connect name="ProfileName" interface="InterfaceName"`
 
 ## Unformatted to add above
 
