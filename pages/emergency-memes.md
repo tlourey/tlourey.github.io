@@ -11,13 +11,14 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-06-04T23:58:08.261Z
+lastmod: 2025-06-16T02:06:20.465Z
 ---
 
 <!--- cSpell:disable --->
 * [Homer Simpson Fire on console](#homer-simpson-fire-on-console)
 * [Homer Simpson burning bridge](#homer-simpson-burning-bridge)
 * [Homer backing away](#homer-backing-away)
+* [Grandpa Abe bitch bitch bitch](#grandpa-abe-bitch-bitch-bitch)
 * [Dumpster fire](#dumpster-fire)
 * [This is fine](#this-is-fine)
 * [Sarcastic Kid Laughing](#sarcastic-kid-laughing)
@@ -80,6 +81,11 @@ lastmod: 2025-06-04T23:58:08.261Z
 <https://knowyourmeme.com/memes/homer-simpson-backs-into-bushes>
 
 [Top](#content)
+
+## Grandpa Abe bitch bitch bitch
+
+[![Picture](/assets/images/grandpa-simpson-bitchbitchbitch.gif)](/assets/images/grandpa-simpson-bitchbitchbitch.gif)\
+<https://tenor.com/en-AU/view/simpsons-grandpa-simpson-bitch-bitch-bitch-oh-bitch-bitch-bitch-gif-27585057>
 
 ## Dumpster fire
 
