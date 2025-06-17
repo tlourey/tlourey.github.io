@@ -19,7 +19,7 @@ tags:
     - Provisioning
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-05-25T04:49:55.285Z
+lastmod: 2025-06-17T04:10:54.335Z
 keywords:
     - Tools
 ---
@@ -307,14 +307,17 @@ Also often includes abuse functions
 
 **<https://mha.azurewebsites.net>** - Microsoft Message Header Analyzer - really good header analyzer\
 <https://toolbox.googleapps.com/apps/messageheader/> - Google Message Header Analyzer\
-**<https://mxtoolbox.com/SuperTool.aspx>**\
-**<https://mxtoolbox.com/EmailHeaders.aspx>**\
-**<https://mxtoolbox.com/emailhealth>** - good email health overview for a specific domain\
-**<https://mxtoolbox.com/dmarc.aspx>**\
 **<https://mxtoolbox.com>** - really great site with lots of email tools\
-**<https://dmarcian.com/dmarc-tools/>**\
+
+* **<https://mxtoolbox.com/SuperTool.aspx>**\
+* **<https://mxtoolbox.com/EmailHeaders.aspx>**\
+* **<https://mxtoolbox.com/emailhealth>** - good email health overview for a specific domain\
+* **<https://mxtoolbox.com/dmarc.aspx>**\
+* **<https://mxtoolbox.com/spf.aspx>** - allows you to specify a domain AND an IP Address to see if the SPF record is in it (without manually figuring that out)\
+
+**<https://dmarcian.com/dmarc-tools/>** - there are a bunch of tools here that I recommend\
 <https://dmarcly.com/tools/>\
-<https://www.appmaildev.com>
+**<https://www.appmaildev.com>** - haven't used much but it seems to be getting better and better
 
 > [!TIP] TIP
 > Links to Exchange and Exchange Online Header Messages are in [Microsoft 365 Tips](microsoft-365-tips.md#exchange-email-header-references)
