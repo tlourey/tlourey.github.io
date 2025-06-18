@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-04-16T06:52:33.989Z
+lastmod: 2025-06-18T02:55:57.233Z
 keywords:
     - Entra
     - Exchange
@@ -85,9 +85,18 @@ Connect-IPPSSession -UserPrincipalName myadminaccount@your-tenant-name.onmicroso
 $Search=New-ComplianceSearch -Name "Remove Phishing Message" -ExchangeLocation All -ContentMatchQuery '(Received:4/13/2016..4/14/2016) AND (Subject:"Action required")'
 Start-ComplianceSearch -Identity $Search.Identity
 # You can also create a search in purview instead of using powershell if easier.
+# ------
+# Get status of search
+Get-ComplianceSearch "Remove Phishing Message"
+# Get more stats of search
+(Get-ComplianceSearch "Remove Phishing Message").Items
+Get-ComplianceSearch "Remove Phishing Message" | fl
+# When ready issue one of the compliance search actions
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType SoftDelete
 # OR
 New-ComplianceSearchAction -SearchName "Remove Phishing Message" -Purge -PurgeType HardDelete
+# Want to see its progress? Try the below. NB: The _Purge is added when you issue one of the above commands
+Get-ComplianceSearchAction "Remove Phishing Message_Purge"
 Disconnect-ExchangeOnline
 ```
 
