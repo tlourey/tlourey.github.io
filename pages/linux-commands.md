@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-28T01:41:22.154Z
+lastmod: 2025-06-18T01:26:05.248Z
 tags:
     - Commands
     - Linux
@@ -695,6 +695,7 @@ last: [^1]
 `last username`: see the last time a specific user logged in\
 `last`: see all the last sucessful attempts since wtmp file creation\
 `last -n 1 reboot`: not user related but shows last reboot\
+`last -x reboot shutdown | head`: not user related, but shows last reboot and if it was clean or not\
 `sudo lastb username`: see the last time a specific user had a bad login\
 `sudo lasb`: see all bad logins
 
@@ -819,7 +820,9 @@ You can have systemd override files (which apparently are like files in /etc/def
 `journalctl -k` # Kernel messages only\
 `journalctl --since=yesterday --until=now`\
 `journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"`\
-`journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot
+`journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot\
+`journalctl -b -1` (or `journalctl -b -1 -r` for reversed order): shows logs from the previous boot. You can navigate to older boots using -2 for the one before that, and so on.\
+`journalctl -r`: show logs in reverse order
 
 #### timedatectl
 
