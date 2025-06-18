@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-06-18T01:26:05.248Z
+lastmod: 2025-06-18T01:53:21.184Z
 tags:
     - Commands
     - Linux
@@ -768,13 +768,16 @@ TBC
 `sudo systemctl cat mdcheck_start.service` show the unit file for the service\
 `sudo systemctl status mdcheck_start.service` check the status of a service\
 `sudo systemctl restart mdcheck_start.service` restarts a service now\
+`sudo systemctl try-restart mdcheck_start.service`: Stop and then start one or more units specified on the command line if the units are running. This does nothing if units are not running.\
 `sudo systemctl stop mdcheck_start.service` stops a service now\
 `sudo systemctl start mdcheck_start.service` starts a service now. Can also be used to run a timer manually unless timer is configured with `RefuseManualStart=yes` or `RefuseManualStop=yes`\
 `sudo systemctl disable mdcheck_start.service` prevents a service from running at startup\
 `sudo systemctl enable mdcheck_start.service` allows a service to run at startup\
 `sudo systemctl enable --now mdcheck_start.service` allows a service to run at startup and also starts it now\
-`sudo systemctl daemon-reload`: scan for new or changed units\
+`sudo systemctl daemon-reload`: scan for new or changed systemd units and their config\
 `sudo systemctl reload mdcheck_start.service`: reloads a unit and its configuration\
+`sudo systemctl reload-or-restart mdcheck_start.service`: Reload one or more units if they support it. If not, stop and then start them instead. If the units are not running yet, they will be started.\
+`sudo systemctl try-reload-or-restart mdcheck_start.service`: Reload one or more units if they support it. If not, stop and then start them instead. This does nothing if the units are not running.\
 `sudo systemctl reenable mdcheck_start.service`: disables and re-enableds a unit (useful if units \[install\] section has changed)\
 `sudo systemctl mask mdcheck_start.service`: Mask a unit to make it impossible to start both manually and as a dependency, which makes masking dangerous. It makes a sim link of the unit file to /dev/null meaning it will never start.\
 `sudo systemctl unmask mdcheck_start.service`: unmask a unit (there are more steps)\
