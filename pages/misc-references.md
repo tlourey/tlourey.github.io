@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-04-27T05:41:44.436Z
+lastmod: 2025-06-20T05:46:57.727Z
 fmContentType: pages
 ---
 
@@ -121,10 +121,10 @@ Refer to [Markdown Tips](./markdown-tips.html)
 
 Crontab: Best website for refining crontab timings: [Crontab.guru - The cron schedule expression generator](https://crontab.guru/) - more in [Linux Commands](linux-commands.md)\
 [Arch Linux Wiki](https://wiki.archlinux.org/title/Main_page) - Contains a lot more up to date resources for linux, even for non-arch users. I **don't** use arch by the way :grin:\
-[The Linux Documentation Project](https://tldp.org/): Older resrouce but still has a fair bit of stuff. Doesn't come up as much in Google these days but worth remembering.\
+[The Linux Documentation Project](https://tldp.org/): Older resource but still has a fair bit of stuff. Doesn't come up as much in Google these days but worth remembering.\
 **[nixCraft - Linux Tips, Hacks, Tutorials, And Ideas In Blog](https://www.cyberciti.biz/)**: Vivek Gite and one of the best Linux websites around.\
 **[Linux Audit](https://linux-audit.com/)**: I only found this very recently but it looks good.\
-
+**<https://ss64.com/>** - amazing command line reference resource for Windows, PowerShell, Mac, Linux and more
 
 ### Debian Manuals
 
@@ -178,6 +178,8 @@ Also see [StarLink Tips](starlink-tips.md)
 * <kbd>CTRL</kbd> + <kbd>Esc</kbd>: Start menu
 * <kbd>Left Alt</kbd> + <kbd>Left Shift</kbd> + <kbd>Num Lock</kbd>: Turn on mouse keys
 
+**<https://ss64.com/>** - amazing command line reference resource for Windows, PowerShell, Mac, Linux and more
+
 Also check [Windows Tips](windows-tips.md)
 
 ## Active Directory
@@ -204,7 +206,7 @@ For very useful Regex Tools see [Software in Misc Tools](misc-tools.md#software-
 <https://www.google.com.au/advanced_search>
 
 <https://ahrefs.com/blog/google-advanced-search-operators/>\
-Refine Goolge Searches (search terms: )<https://support.google.com/websearch/answer/2466433>\
+Refine Google Searches (search terms: )<https://support.google.com/websearch/answer/2466433>\
 Google Advanced Search: <https://support.google.com/websearch/answer/35890>
 
 <https://blog.google/products/search/how-were-improving-search-results-when-you-use-quotes/>
