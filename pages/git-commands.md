@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-06-15T07:12:50.022Z
+lastmod: 2025-06-20T08:45:30.660Z
 tags:
     - Commands
     - References
@@ -30,6 +30,7 @@ keywords:
   * [autocrlf](#autocrlf)
 * [Quick Github Auth](#quick-github-auth)
 * [Copy a single file from one branch to another](#copy-a-single-file-from-one-branch-to-another)
+* [Restore/Rehydrate/Reinflate a repo with just the .git folder](#restorerehydratereinflate-a-repo-with-just-the-git-folder)
 * [Special Git Repo files \& folders](#special-git-repo-files--folders)
   * [.gitignore](#gitignore)
   * [.gitattributes](#gitattributes)
@@ -156,6 +157,18 @@ git add path/to/file
 git commit -m "Copy file from source-branch to target-branch"
 git push origin target-branch
 ```
+
+## Restore/Rehydrate/Reinflate a repo with just the .git folder
+
+Useful for browsing/using etckeeper backups or when something goes wrong and you just have the .git folder.
+
+On a machine with Git installed:
+
+1. Create a copy folder somewhere outside of the repo, download folder, that is clean, temporary but safe
+2. Copy into that new folder the .git folder. If it is named something like MyRepoName.git, rename the folder to just .git once copied
+3. open up command prompt/terminal, etc to the folder created in step 1
+4. Type `git init`
+5. Type `git reset --hard branchname` but change branchname to master, main or whatever branch you want to get back to
 
 ## Special Git Repo files & folders
 
