@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-06-20T04:03:07.431Z
+lastmod: 2025-06-20T05:37:20.448Z
 tags:
     - Commands
     - References
@@ -144,4 +144,7 @@ TBC
 
 ## Additional Resources
 
-[Command-line reference A-Z - Windows commands - Microsoft Learn](https://learn.microsoft.com/en-au/windows-server/administration/windows-commands/windows-commands#command-line-reference-a-z)
+[Command-line reference A-Z - Windows commands - Microsoft Learn](https://learn.microsoft.com/en-au/windows-server/administration/windows-commands/windows-commands#command-line-reference-a-z)\
+[Netsh Commands for Wireless Local Area Network (WLAN) in Windows Server 2008 R2](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd744890(v=ws.10))
+
+<https://superuser.com/questions/991457/how-do-i-display-a-list-of-wi-fi-connections-using-netsh>
