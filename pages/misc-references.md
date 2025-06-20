@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-06-20T05:46:57.727Z
+lastmod: 2025-06-20T05:49:14.876Z
 fmContentType: pages
 ---
 
@@ -111,6 +111,8 @@ Refer to [Markdown Tips](./markdown-tips.html)
 * <https://man7.org/linux/man-pages/man7/file-hierarchy.7.html>
 * <https://linux.die.net/man/7/hier>
 * <https://www.freedesktop.org/software/systemd/man/latest/file-hierarchy.html>
+
+**<https://ss64.com/>** - amazing command line reference resource for Windows, PowerShell, Mac, Linux and more
 
 ### Misc
 
