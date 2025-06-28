@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T08:13:44.845Z
-lastmod: 2025-04-27T13:34:38.448Z
+lastmod: 2025-06-28T06:08:40.247Z
 tags:
     - Office
     - Tips
@@ -16,6 +16,12 @@ isdraft: true
 fmContentType: pages
 mermaid: false
 preview: ""
+keywords:
+    - Excel
+    - Formulas
+    - Office
+    - Tips
+    - Tools
 ---
 
 <!--- cSpell:disable --->
@@ -30,6 +36,8 @@ preview: ""
   * [Custom Formatting](#custom-formatting)
 * [Pivots](#pivots)
 * [OfficeScript instead of Macros](#officescript-instead-of-macros)
+* [Misc Office Tools](#misc-office-tools)
+  * [Spreadsheet Compare](#spreadsheet-compare)
 * [Misc Office Links](#misc-office-links)
 <!--- cSpell:enable --->
 
@@ -135,4 +143,18 @@ Also add some time (10 hours to convert to AEST): `=(DATEVALUE(MID(A2,1,10))+TIM
 
 * [ ] Add OfficeScript
 
+## Misc Office Tools
+
+### Spreadsheet Compare
+
+There is a special external utility to compare two spreadsheets and its very in depth, very cool and often forgotten.
+
+"SPREADSHEETCOMPARE.EXE"\
+"C:\Program Files\Microsoft Office\root\Client\AppVLP.exe" "C:\Program Files (x86)\Microsoft Office\Office16\DCF\SPREADSHEETCOMPARE.EXE"
+
+[Overview of Spreadsheet Compare](https://support.microsoft.com/en-au/office/overview-of-spreadsheet-compare-13fafa61-62aa-451b-8674-242ce5f2c986)\
+[Compare two versions of a workbook by using Spreadsheet Compare](https://support.microsoft.com/en-us/office/compare-two-versions-of-a-workbook-by-using-spreadsheet-compare-0e1627fd-ce14-4c33-9ab1-8ea82c6a5a7e)
+
 ## Misc Office Links
+
+TBA
