@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-06-18T02:55:57.233Z
+lastmod: 2025-06-30T00:31:12.752Z
 keywords:
     - Entra
     - Exchange
@@ -299,6 +299,8 @@ Also:
 [Call Quality Dashboard Tenant Data Upload](https://cqd.teams.microsoft.com/spd/#/TenantDataUpload)
 <!--- cSpell:words PSTN -->
 <https://learn.microsoft.com/en-us/microsoftteams/location-based-routing-configure-network-settings> - while this is more for teams calling (PSTN Voice), I've found it gives other parts of teams more context about issues.
+
+There is also the Teams '[Network Planner](https://learn.microsoft.com/en-au/microsoftteams/network-planner)'
 
 ## DSC
 

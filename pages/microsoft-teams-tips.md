@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-05-28T07:27:47.142Z
+lastmod: 2025-06-30T00:31:16.914Z
 tags:
     - Microsoft365
     - Teams
@@ -276,6 +276,8 @@ Also:
 [Call Quality Dashboard Tenant Data Upload](https://cqd.teams.microsoft.com/spd/#/TenantDataUpload)
 
 <https://learn.microsoft.com/en-us/microsoftteams/location-based-routing-configure-network-settings> - while this is more for teams routing i've found it gives other parts of teams more context about issues.
+
+There is also the Teams '[Network Planner](https://learn.microsoft.com/en-au/microsoftteams/network-planner)'
 
 Also see [Network Detail Upload in Microsoft 365 Tips](microsoft-365-tips.md#network-details-upload)
 
