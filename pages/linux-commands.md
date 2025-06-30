@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-06-18T01:53:21.184Z
+lastmod: 2025-06-30T03:39:35.212Z
 tags:
     - Commands
     - Linux
@@ -1038,8 +1038,9 @@ Also see [Network Manager in RaspberryPi Tips](raspberry-pi-tips.md#network-mana
 `sudo tcpdump -n udp port 514 -A -vv`: Capture UDP Port 512 AND show me all the details in verbose.\
 `sudo tcpdump -i eth0 proto 17`: capture protocol 17 (udp) on eth0\
 `sudo tcpdump -i any port 514 -A -vv`: capture on any interface port 514 and show me all the details in verbose\
-`sudo tcpdump -i eth0 ip 192.168.1.10`: captures traffic to or from 192.168.1.10 on eth0\
-`sudo tcpdump -i eth0 dst 10.10.1.20`: capture traffic on eth0 going to 10.10.1.20\
+`sudo tcpdump -i eth0 ip host 192.168.1.10`: captures traffic to or from 192.168.1.10 on eth0\
+`sudo tcpdump -i eth0 dst host 10.10.1.20`: capture traffic on eth0 going to 10.10.1.20\
+`sudo tcpdump -i eth0 src host 10.10.1.20`: capture traffic on eth0 coming from 10.10.1.20\
 `sudo tcpdump -i eth0 -s0 -w test.pcap`: capture all traffic on eth0 (snap length) and write it to a packet capture file\
 `tcpdump -i eth0 -U -w - 'host 192.168.2.29 and (port 22222 or port 22221 or port 80)'`: uses and & or statements. Using in brackets is better to prevent shell getting in the way. (()) in zsh (mac)
 
