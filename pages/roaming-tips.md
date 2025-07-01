@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T03:22:07.372Z
-lastmod: 2025-03-06T13:04:22.611Z
+lastmod: 2025-07-01T08:56:51.724Z
 tags:
     - Roaming
     - Travel
@@ -126,11 +126,12 @@ Having no physical sim and 2 eSims *active* is only available on some devices. (
 These are some eSim providers I am aware of **that at least seem legit**
 
 > [!IMPORTANT] Not Recommendations
-> The below list is not complete, full or any kind of recommendation or endorsement. In most cases I haven't even used them.
+> The below list is not complete, full or any kind of recommendation or endorsement. In most cases I haven't even used them. This list was last updated 1/07/2025.
 <!-- cSpell:ignore tripsim -->
-* [Sally (NordVPN)](https://saily.com/) - also has an app
-* [tripsim by Syd](https://tripsim.com.au/) - related to sydney airport corporation
-
+* [Sally (NordVPN)](https://saily.com/) - also has an app - but only does data, no voice.
+* [tripsim by Syd](https://tripsim.com.au/) - related to sydney airport corporation - but only does data, no voice. No app, uses a website
+* [Airalo Global eSIMs](https://www.airalo.com/global-esim) - they do data and voice on their global esims only (you need to select the toggle from data to data/voice/text). Has an app. Supports $AUD.
+* [WorldSIM International eSIM Pro](https://www.worldsim.com/international-esim-card) - must be the 'International eSIM Pro' plans/sims as they are the only ones with voice.
 <!-- cSpell:ignore DSDA DSDS -->
 
 ## Using vs Simultaneously Using (aka DSDA vs DSDS)
