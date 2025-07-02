@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-07-02T05:50:52.484Z
+lastmod: 2025-07-02T07:23:48.080Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -38,6 +38,8 @@ date: 2025-01-28T05:47:28.059Z
   * [PnP Provisioning Engine](#pnp-provisioning-engine)
   * [CSOM](#csom)
 * [Permissions](#permissions)
+  * [External Sharing Settings](#external-sharing-settings)
+    * [Get External Sharing Settings via PowerShell](#get-external-sharing-settings-via-powershell)
 * [Lockdown Sites](#lockdown-sites)
 * [Site Collection Features](#site-collection-features)
 * [Site policies](#site-policies)
@@ -283,6 +285,25 @@ More Info:\
 > [!NOTE] NOTE
 > To change the default link type for a Teams private or shared channel site, you must use the [Set-SPOSite](https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps) PowerShell cmdlet.
 
+### External Sharing Settings
+
+This topic has a lot of twists and turns but i'm just making a note here of some SharePoint PowerShell stuff
+
+#### Get External Sharing Settings via PowerShell
+
+See [Connect via SharePoint Online PowerShell](#connect-via-sharepoint-online-powershell) for how to connect.
+
+`Get-SPOSite | Select-object url,sharingcapability | sort sharingcapability` shows the external sharing setting for all existing sites.
+
+The result codes don't exactly match whats in the drop down.
+
+|PowerShell sharingcapability result|External Sharing Drop Down value|
+|--|--|
+|ExternalUserAndGuestSharing| Anyone|
+|ExternalUserSharingOnly | New and Existing Guests|
+|ExistingExternalUserSharingOnly | Existing Guests|
+| Disabed | Only People in your Organisation|
+
 ## Lockdown Sites
 
 <https://learn.microsoft.com/en-au/sharepoint/manage-lock-status>
@@ -298,6 +319,8 @@ LockState options:
 <https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-sposite?view=sharepoint-ps#-lockstate>
 
 Something you can also consier setting is the redirection URL but it is a **tenant level setting**: <https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenant?view=sharepoint-ps#-noaccessredirecturl>
+
+See [Connect via SharePoint Online PowerShell](#connect-via-sharepoint-online-powershell) for connecting.
 
 ## Site Collection Features
 
