@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-03-28T03:32:32.482Z
+lastmod: 2025-07-02T05:50:52.484Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -207,7 +207,10 @@ Update-Module -Name Microsoft.Online.SharePoint.PowerShell
 
 With MFA:
 
-`Connect-SPOService -Url https://contoso-admin.sharepoint.com`
+```powershell
+Import-Module Microsoft.Online.SharePoint.PowerShell
+Connect-SPOService -Url https://contoso-admin.sharepoint.com
+```
 
 > [!NOTE] NOTE
 > There is a known issue between the SharePoint Online Management Shell module and SharePoint Client Components SDK where the module will fail to load if both are installed on the same computer. If you encounter this issue, uninstall the SharePoint Client Components SDK.
