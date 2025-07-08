@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T13:03:20.971Z
-lastmod: 2025-06-05T01:14:37.191Z
+lastmod: 2025-07-08T05:12:52.344Z
 tags:
     - Exchange
     - Microsoft365
@@ -33,8 +33,8 @@ keywords:
   * [Mailbox Access](#mailbox-access)
   * [Shared Mailbox Sent Items settings](#shared-mailbox-sent-items-settings)
   * [Exchange Audit Log search](#exchange-audit-log-search)
-    * [Searching for Exchange Rule Changes](#searching-for-exchange-rule-changes)
-    * [Searxhing for Exchange Connector Changes](#searxhing-for-exchange-connector-changes)
+    * [Searching for Exchange Transport Rule Changes](#searching-for-exchange-transport-rule-changes)
+    * [Searxhing for Exchange Transport Connector Changes](#searxhing-for-exchange-transport-connector-changes)
 * [Eseutil](#eseutil)
 * [Other References](#other-references)
 <!--- cSpell:enable --->
@@ -276,7 +276,7 @@ Set-DynamicDistributionGroup "All Employees" -GrantSendOnBehalfTo @{Remove="Admi
 From <https://www.slipstick.com/exchange/save-items-shared-mailbox-exchange-server-cmdlet/#:~:text=Cmdlet%20for%20Exchange%202013%20CU9%20and%20Office%20365>
 
 ```powershell
-# To enable copying for emails sent as the shared mailbox: 
+# To enable copying for emails sent as the shared mailbox:
 Set-Mailbox <sharedmailboxname> -MessageCopyForSentAsEnabled $True
 
 # To enable copying for emails sent on behalf of the shared mailbox:
@@ -287,11 +287,17 @@ More <https://learn.microsoft.com/en-us/powershell/module/exchange/set-mailbox?v
 
 ### Exchange Audit Log search
 
-#### Searching for Exchange Rule Changes
+#### Searching for Exchange Transport Rule Changes
+
+> [!NOTE] Not Inbox Rules
+> This more not looking for Inbox Rules. Transport rules are different to Inbox rules. Have a look into [Get-InboxRule](https://learn.microsoft.com/en-au/powershell/module/exchange/get-inboxrule?view=exchange-ps)
 
 `Search-UnifiedAuditLog -StartDate 25/11/2024 -EndDate 27/11/2024 -Operations New-TransportRule, Set-TransportRule, Enable-TransportRule, Disable-TransportRule, Remove-TransportRule | Format-Table`
 
-#### Searxhing for Exchange Connector Changes
+#### Searxhing for Exchange Transport Connector Changes
+
+> [!NOTE] Not Inbox Rules
+> This more not looking for Inbox Rules. Transport rules are different to Inbox rules. Have a look into [Get-InboxRule](https://learn.microsoft.com/en-au/powershell/module/exchange/get-inboxrule?view=exchange-ps)
 
 `Search-UnifiedAuditLog -StartDate -StartDate 25/11/2024 -EndDate 27/11/2024 -Operations "New-InboundConnector","Set-InboundConnector","Remove-InboundConnector`
 
