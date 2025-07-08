@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-06-20T08:45:30.660Z
+lastmod: 2025-07-08T08:21:21.302Z
 tags:
     - Commands
     - References
@@ -36,6 +36,9 @@ keywords:
   * [.gitattributes](#gitattributes)
   * [.gitmodules](#gitmodules)
   * [.github](#github)
+* [Git fixs (most of them dangerious)](#git-fixs-most-of-them-dangerious)
+  * [Force Reset Local worktree to remote](#force-reset-local-worktree-to-remote)
+  * [Undoing and redoing commits](#undoing-and-redoing-commits)
 * [Internet References](#internet-references)
 <!--- cSpell:enable --->
 
@@ -195,6 +198,34 @@ For Git submodules.
 <https://stackoverflow.com/a/61301254/5435742>
 
 TBC
+
+## Git fixs (most of them dangerious)
+
+### Force Reset Local worktree to remote
+
+From: <https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches>
+
+`git reset --hard origin/main`
+
+### Undoing and redoing commits
+
+> [!NOTE] Revert vs Undo
+> Revert and Undo are two different things
+
+From: <https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git>
+
+```bash
+$ git commit -m "Something terribly misguided" # (0: Your Accident)
+$ git reset HEAD~                              # (1)
+# === If you just want to undo the commit, stop here! ===
+[ edit files as necessary ]                    # (2)
+$ git add .                                    # (3)
+$ git commit -c ORIG_HEAD                      # (4)
+```
+
+See <https://stackoverflow.com/a/927386/5435742>
+
+You may need to `git push -f` to overwrite if you have already pushed
 
 ## Internet References
 
