@@ -19,13 +19,13 @@ tags:
     - Provisioning
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-06-17T04:10:54.335Z
+lastmod: 2025-07-12T03:53:07.403Z
 keywords:
     - Tools
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS Vesa microcontrollers circuitpython DNSSEC RDAP ICANN byobu -->
-<!--- cSpell:ignore Nirsoft cyrilbois Deview pyrexp Keji -->
+<!--- cSpell:ignore Nirsoft cyrilbois Deview pyrexp Keji mfcmapi MAPI winget NBLGGH -->
 
 <!--- cSpell:disable --->
 * [Network Tools](#network-tools)
@@ -40,6 +40,7 @@ keywords:
   * [Vagrant](#vagrant)
   * [VSCode](#vscode)
 * [Microsoft 365 Tools](#microsoft-365-tools)
+* [Outlook and Exchange Tools](#outlook-and-exchange-tools)
 * [Windows Tools](#windows-tools)
   * [Windows package manager aka winget](#windows-package-manager-aka-winget)
   * [Hardware](#hardware)
@@ -168,6 +169,15 @@ vagrant box remove box/name
 <https://microsoft365dsc.com/>\
 <https://aka.ms/m365dscwhitepaper>\
 <https://microsoft365dsc.com/resources/overview/>
+
+## Outlook and Exchange Tools
+
+[NK2Edit - Edit AutoComplete files of Microsoft Outlook](https://www.nirsoft.net/utils/outlook_nk2_edit.html)\
+[OutlookAttachView - View / Extract / Save Outlook Attachments from command-line or GUI](https://www.nirsoft.net/utils/outlook_attachment.html)\
+[MS-Outlook/Office Related software](https://www.nirsoft.net/outlook_office_software.html) - more from the maker of the above (Nirsoft)\
+[mfcmapi](https://github.com/microsoft/mfcmapi) - MFCMAPI provides access to MAPI stores to facilitate investigation of Exchange and Outlook issues and to provide developers with a sample for MAPI development. See also [mfcmapi website](https://microsoft.github.io/mfcmapi/)
+
+Also see [Exchange And Outlook Tips](exchange-and-outlook-tips.md#outlook-and-exchange-tools)
 
 ## Windows Tools
 
