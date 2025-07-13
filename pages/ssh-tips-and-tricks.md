@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-03T21:24:58.915Z
-lastmod: 2025-04-04T02:22:38.042Z
+lastmod: 2025-05-25T04:50:22.623Z
 tags:
     - Linux
     - Windows
@@ -25,6 +25,7 @@ keywords:
   * [Port Forwarding](#port-forwarding)
   * [Reverse Port Forwarding](#reverse-port-forwarding)
 * [SSH Keys](#ssh-keys)
+  * [Copying others authorized\_keys file](#copying-others-authorized_keys-file)
 * [SSHD](#sshd)
   * [AllowGroups](#allowgroups)
 * [SSH on Windows](#ssh-on-windows)
@@ -43,7 +44,7 @@ keywords:
 `ssh username@host -b 192.168.1.25`: bind to an ip address\
 `ssh username@host -v`: verbose - useful for diagnosing automation and auth issues.
 
-* [x] port forwading commands
+* [x] port forwarding commands
 * [x] reverse port forward commands
 * [ ] add in commands and info for control socket connection sharing (ControlPath and ControlMaster)
 * [ ] tunnel commands
@@ -108,8 +109,35 @@ From the SSH man page:
 ## SSH Keys
 
 * [ ] Add in SSH Keygen stuff
-* [ ] Add in ssh key copy stuff
+* [ ] Add in ssh-copy-id stuff
 * [ ] Add in authorised keys file management tips
+* [ ] ssh agent key forwarding stuff but also ssh agent key forwarding security risks
+
+### Copying others authorized_keys file
+
+```bash
+# on host 1:
+sudo scp /home/otheruser/.ssh/authorized_keys myusername@host2:/home/myusername/otheruser-authorized_keys
+
+# on host 2 - Updating existing authorized_keys file:
+sudo cat /home/myusername/otheruser-authorized_keys >> /home/otheruser/.ssh/authorized_keys
+
+# on host 2 - never logged in before authorized_keys file:
+sudo mkdir /home/otheruser/.ssh/
+sudo chown otheruser:otheruser /home/otheruser/.ssh/
+sudo chmod 0700 /home/otheruser/.ssh/
+sudo mv ~/otheruser-authorized_keys /home/otheruser/.ssh/authorized_keys
+sudo chown otheruser:otheruser /home/otheruser/.ssh/authorized_keys
+sudo chmod 0600 /home/othersuer/.ssh/authorized_keys
+
+# on host - never logged in before (suggestion from a friend)
+sudo install -d -m 700 -o otheruser -g otheruser /home/otheruser/.ssh
+echo "ssh-ed25519 AAAA... comment" | sudo tee /home/otheruser/.ssh/authorized_keys > /dev/null
+sudo chown otheruser:otheruser /home/otheruser/.ssh/authorized_keys
+sudo chmod 600 /home/otheruser/.ssh/authorized_keys
+```
+
+This answer has a lot: <https://askubuntu.com/a/875058/443835>
 
 ## SSHD
 

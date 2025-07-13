@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-05-07T02:37:35.544Z
+lastmod: 2025-06-30T03:39:35.212Z
 tags:
     - Commands
     - Linux
@@ -20,6 +20,7 @@ isdraft: false
 * [Operating System Commands](#operating-system-commands)
   * [man pages](#man-pages)
 * [Kernel](#kernel)
+  * [dmesg](#dmesg)
 * [Terminal Stuff](#terminal-stuff)
   * [Built in bash commands](#built-in-bash-commands)
   * [Environment Variables](#environment-variables)
@@ -151,6 +152,7 @@ modprobe
 insmod
 rmmod
 modinfo
+dmesg
 ```
 
 <https://en.wikipedia.org/wiki/Modprobe>\
@@ -163,6 +165,16 @@ modinfo
 <https://www.kernel.org/doc/html/latest/>\
 <https://www.kernel.org/doc/html/latest/admin-guide/index.html>\
 <https://www.kernel.org/doc/html/latest/admin-guide/kernel-parameters.html>
+
+### dmesg
+
+dmesg - print or control the kernel ring buffer
+
+`dmesg -T`: Show events in human readable time\
+`dmesg --console-off`: disable printing of messages to console\
+`dmesg --console-on`: enable printing of messages to console\
+`dmesg --facility list`: Restrict output to the given (comma-separated) list of facilities.  For example: `dmesg --facility=daemon`. Check `dmesg --help` for supported facilities.\
+`dmesg -w`: follow (like tail -f)
 
 ## Terminal Stuff
 
@@ -339,6 +351,14 @@ column
 tail
 tail -f
 ```
+
+> [!TIP] cat line numbers
+> `cat -n myfile`
+
+`less -N myfile`
+
+> [!TIP] line numbers inside less
+> While viewing a file in less type <kbd>-n</kbd> and press <kbd>Enter</kbd>
 
 ### Process Stuff
 
@@ -633,6 +653,11 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 
 ## Accounts and Groups
 
+`getent passwd`: shows current accounts (`/etc/passwd`) - format: [Understanding /etc/passwd File Format - nixCraft](https://www.cyberciti.biz/faq/understanding-etcpasswd-file-format/)\
+`getent groups`: shows current groups (`/etc/groups`)\
+`genent shadow`: shows shadow file (`/etc/shadow`)- format: [Understanding /etc/shadow file format on Linux - nixCraft](https://www.cyberciti.biz/faq/understanding-etcshadow-file/)\
+See `getent` in [Misc System Commands](#misc-system-commands)
+
 `passwd -S USERNAME` shows the date and status of a users password.
 > Display account status information. The status information consists of 7 fields. The first field is the user's login name. The second field indicates if the user account has a locked password (L), has no password (NP), or has a usable password (P). The third field gives the date of the last password change. The next four fields are the minimum age, maximum age, warning period, and inactivity period for the password. These ages are expressed in days.
 
@@ -650,7 +675,8 @@ Also refer to [systemctl](#systemctl) commands for times and the links in [Syste
 `sudo adduser XXX sshlogin`: add other users group\
 `sudo adduser XXX sudo`: if user also needs sudo\
 `sudo useradd -m -G sshlogin,sudo XXX -s /bin/bash`: sets a users shell, shouldn't be needed much these days\
-`sudo passwd XXX`: if you need to change user's password
+`sudo passwd XXX`: if you need to change user's password\
+`sudo deluser XXX`: deletes a user, not their home folder. See this [note](https://documentation.ubuntu.com/server/how-to/security/user-management/#delete-a-user) about deleting home folders
 
 > [!NOTE] useradd vs adduser
 > `useradd` is a low level utility for adding users. On Debian, administrators should usually use [`adduser`(8)](https://manpages.ubuntu.com/manpages/latest/man8/adduser.8.html) instead.
@@ -663,6 +689,17 @@ See:
 * <https://manpages.ubuntu.com/manpages/latest/man8/useradd.8.html> - NB:
 
 You can also create system users by using the `--system` parameter of adduser. See <https://manpages.ubuntu.com/manpages/xenial/man8/adduser.8.html#:~:text=version%20of%20adduser.)-,Add%20a%20system%20user,-If%20called%20with> for more specifics.
+
+last: [^1]
+
+`last username`: see the last time a specific user logged in\
+`last`: see all the last sucessful attempts since wtmp file creation\
+`last -n 1 reboot`: not user related but shows last reboot\
+`last -x reboot shutdown | head`: not user related, but shows last reboot and if it was clean or not\
+`sudo lastb username`: see the last time a specific user had a bad login\
+`sudo lasb`: see all bad logins
+
+[^1]: Most of last section from (or based on) <https://www.cyberciti.biz/faq/unix-linux-check-last-time-user-loggedin-command/>
 
 ## Apt
 
@@ -731,16 +768,20 @@ TBC
 `sudo systemctl cat mdcheck_start.service` show the unit file for the service\
 `sudo systemctl status mdcheck_start.service` check the status of a service\
 `sudo systemctl restart mdcheck_start.service` restarts a service now\
+`sudo systemctl try-restart mdcheck_start.service`: Stop and then start one or more units specified on the command line if the units are running. This does nothing if units are not running.\
 `sudo systemctl stop mdcheck_start.service` stops a service now\
 `sudo systemctl start mdcheck_start.service` starts a service now. Can also be used to run a timer manually unless timer is configured with `RefuseManualStart=yes` or `RefuseManualStop=yes`\
 `sudo systemctl disable mdcheck_start.service` prevents a service from running at startup\
 `sudo systemctl enable mdcheck_start.service` allows a service to run at startup\
 `sudo systemctl enable --now mdcheck_start.service` allows a service to run at startup and also starts it now\
-`sudo systemctl daemon-reload`: scan for new or changed units\
+`sudo systemctl daemon-reload`: scan for new or changed systemd units and their config\
 `sudo systemctl reload mdcheck_start.service`: reloads a unit and its configuration\
+`sudo systemctl reload-or-restart mdcheck_start.service`: Reload one or more units if they support it. If not, stop and then start them instead. If the units are not running yet, they will be started.\
+`sudo systemctl try-reload-or-restart mdcheck_start.service`: Reload one or more units if they support it. If not, stop and then start them instead. This does nothing if the units are not running.\
 `sudo systemctl reenable mdcheck_start.service`: disables and re-enableds a unit (useful if units \[install\] section has changed)\
 `sudo systemctl mask mdcheck_start.service`: Mask a unit to make it impossible to start both manually and as a dependency, which makes masking dangerous. It makes a sim link of the unit file to /dev/null meaning it will never start.\
 `sudo systemctl unmask mdcheck_start.service`: unmask a unit (there are more steps)\
+`sudo systemctl edit mdcheck_start`: create an override file/folder for a systemd unit file (preferred method from [ubuntu doco](https://documentation.ubuntu.com/server/explanation/software/changing-package-files/#systemd-files))\
 `systemctl show --property=UnitPath`: show paths to unit files\
 The main Unit paths are (listed from lowest to highest precedence):
 
@@ -782,7 +823,9 @@ You can have systemd override files (which apparently are like files in /etc/def
 `journalctl -k` # Kernel messages only\
 `journalctl --since=yesterday --until=now`\
 `journalctl --since "2020-07-10 15:10:00" --until "2020-07-12"`\
-`journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot
+`journalctl -p 3 -xb` show only priority 3 (which is error) -b since last boot\
+`journalctl -b -1` (or `journalctl -b -1 -r` for reversed order): shows logs from the previous boot. You can navigate to older boots using -2 for the one before that, and so on.\
+`journalctl -r`: show logs in reverse order
 
 #### timedatectl
 
@@ -995,8 +1038,9 @@ Also see [Network Manager in RaspberryPi Tips](raspberry-pi-tips.md#network-mana
 `sudo tcpdump -n udp port 514 -A -vv`: Capture UDP Port 512 AND show me all the details in verbose.\
 `sudo tcpdump -i eth0 proto 17`: capture protocol 17 (udp) on eth0\
 `sudo tcpdump -i any port 514 -A -vv`: capture on any interface port 514 and show me all the details in verbose\
-`sudo tcpdump -i eth0 ip 192.168.1.10`: captures traffic to or from 192.168.1.10 on eth0\
-`sudo tcpdump -i eth0 dst 10.10.1.20`: capture traffic on eth0 going to 10.10.1.20\
+`sudo tcpdump -i eth0 ip host 192.168.1.10`: captures traffic to or from 192.168.1.10 on eth0\
+`sudo tcpdump -i eth0 dst host 10.10.1.20`: capture traffic on eth0 going to 10.10.1.20\
+`sudo tcpdump -i eth0 src host 10.10.1.20`: capture traffic on eth0 coming from 10.10.1.20\
 `sudo tcpdump -i eth0 -s0 -w test.pcap`: capture all traffic on eth0 (snap length) and write it to a packet capture file\
 `tcpdump -i eth0 -U -w - 'host 192.168.2.29 and (port 22222 or port 22221 or port 80)'`: uses and & or statements. Using in brackets is better to prevent shell getting in the way. (()) in zsh (mac)
 
@@ -1139,4 +1183,5 @@ From the SSH man page:
   net.ipv4.ip_forward = 1
   ```
 
-`sudo sysctl -p` to make it permanent.
+`sudo sysctl -p` to make it permanent.\
+`getent`: get entries from Name Service Switch libraries (`/etc/nsswitch.conf`)

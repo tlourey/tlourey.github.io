@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-04-13T07:51:27.783Z
+lastmod: 2025-05-13T10:09:15.200Z
 tags:
     - VSCode
     - Tools
@@ -20,6 +20,7 @@ preview: ""
 
 <!--- cSpell:disable --->
 * [Settings](#settings)
+* [Shortcuts often forgotten](#shortcuts-often-forgotten)
 * [Custom Keyboard Shortcuts](#custom-keyboard-shortcuts)
   * [CTRL+U: Underline in Markdown](#ctrlu-underline-in-markdown)
   * [References](#references)
@@ -54,6 +55,13 @@ preview: ""
 
 > [!TIP] Check git settings
 > Git also has CRLF settings that matter, esp. if working between windows and non-windows machines. the setting is `autocrlf`. See [autocrlf in Git Commands](git-commands.md#autocrlf)
+
+## Shortcuts often forgotten
+
+<kbd>CTRL</kbd>+<kbd>R</kbd>: Open different repo\
+<kbd>CTRL</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>: show outline/symbol list\
+<kbd>F1</kbd> then <kbd>Backspace</kbd>: search current repo/workspace files\
+<kbd>F1</kbd> then <kbd>Backspace</kbd> then <kbd>%</kbd>: search for text in files in current repo/workspace
 
 ## Custom Keyboard Shortcuts
 

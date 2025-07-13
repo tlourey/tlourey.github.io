@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-04-21T23:31:45.879Z
+lastmod: 2025-06-20T05:37:20.448Z
 tags:
     - Commands
     - References
@@ -24,6 +24,8 @@ keywords:
 * [Uptime](#uptime)
 * [User Profile Management](#user-profile-management)
 * [Bitlocker Status](#bitlocker-status)
+* [Netsh](#netsh)
+  * [Common Netsh oneliners](#common-netsh-oneliners)
 * [Unformatted to add above](#unformatted-to-add-above)
 * [Additional Resources](#additional-resources)
 <!--- cSpell:enable --->
@@ -101,10 +103,48 @@ Check Bitlocker Status
 manage-bde -status
 ```
 
+## Netsh
+
+<https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh>\
+<https://learn.microsoft.com/en-us/windows-server/networking/technologies/netsh/netsh-contexts>\
+<https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/netsh>
+
+```text
+netsh
+netsh [-a AliasFile] [-c Context] [-r RemoteMachine] [-u [DomainName\]UserName] [-p Password | *] [Command | -f ScriptFile]
+```
+
+|Parameter|Description|
+|-|-|
+|-a|Specifies that you're returned to the netsh shell after running AliasFile.|
+|AliasFile|Specifies the name of the text file that contains one or more netsh commands.|
+|-c|Specifies that netsh enters the specified netsh context.|
+|Context|Specifies the netsh context that you want to enter.|
+|-r|Specifies that you want the command to run on a remote computer. The Remote Registry service must be running on the remote computer. If it's not running, Windows displays a "Network Path Not Found" error message.|
+|RemoteComputer|Specifies the remote computer that you want to configure.|
+|-u|Specifies that you want to run the netsh command under a user account.|
+|DomainName\\ |Specifies the domain where the user account is located. The default is the local domain if DomainName\ isn't specified.|
+|UserName|Specifies the user account name.|
+|-p|Specifies that you want to provide a password for the user account.|
+|Password|Specifies the password for the user account that you specified with -u UserName.|
+|Command|Specifies the netsh command that you want to run.|
+|-f|Exits netsh after running the script that you designate with ScriptFile.|
+|ScriptFile|Specifies the script that you want to run.|
+
+### Common Netsh oneliners
+
+Show connected WiFi Network: `netsh WLAN show interfaces`\
+Show all WiFi Networks: `netsh wlan show networks`\
+Show all WiFi Profiles: `netsh wlan show profiles`\
+Connect a Wifi interface using a profile name: `netsh wlan connect name="ProfileName" interface="InterfaceName"`
+
 ## Unformatted to add above
 
 TBC
 
 ## Additional Resources
 
-[Command-line reference A-Z - Windows commands - Microsoft Learn](https://learn.microsoft.com/en-au/windows-server/administration/windows-commands/windows-commands#command-line-reference-a-z)
+[Command-line reference A-Z - Windows commands - Microsoft Learn](https://learn.microsoft.com/en-au/windows-server/administration/windows-commands/windows-commands#command-line-reference-a-z)\
+[Netsh Commands for Wireless Local Area Network (WLAN) in Windows Server 2008 R2](https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd744890(v=ws.10))
+
+<https://superuser.com/questions/991457/how-do-i-display-a-list-of-wi-fi-connections-using-netsh>

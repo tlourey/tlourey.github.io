@@ -19,13 +19,13 @@ tags:
     - Provisioning
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-05-06T01:32:07.103Z
+lastmod: 2025-07-12T03:53:07.403Z
 keywords:
     - Tools
 ---
 
 <!--- cSpell:words Hostmaster Hostmasters APNIC WHOIS Vesa microcontrollers circuitpython DNSSEC RDAP ICANN byobu -->
-<!--- cSpell:ignore Nirsoft cyrilbois Deview pyrexp Keji -->
+<!--- cSpell:ignore Nirsoft cyrilbois Deview pyrexp Keji mfcmapi MAPI winget NBLGGH -->
 
 <!--- cSpell:disable --->
 * [Network Tools](#network-tools)
@@ -40,6 +40,7 @@ keywords:
   * [Vagrant](#vagrant)
   * [VSCode](#vscode)
 * [Microsoft 365 Tools](#microsoft-365-tools)
+* [Outlook and Exchange Tools](#outlook-and-exchange-tools)
 * [Windows Tools](#windows-tools)
   * [Windows package manager aka winget](#windows-package-manager-aka-winget)
   * [Hardware](#hardware)
@@ -169,16 +170,31 @@ vagrant box remove box/name
 <https://aka.ms/m365dscwhitepaper>\
 <https://microsoft365dsc.com/resources/overview/>
 
+## Outlook and Exchange Tools
+
+[NK2Edit - Edit AutoComplete files of Microsoft Outlook](https://www.nirsoft.net/utils/outlook_nk2_edit.html)\
+[OutlookAttachView - View / Extract / Save Outlook Attachments from command-line or GUI](https://www.nirsoft.net/utils/outlook_attachment.html)\
+[MS-Outlook/Office Related software](https://www.nirsoft.net/outlook_office_software.html) - more from the maker of the above (Nirsoft)\
+[mfcmapi](https://github.com/microsoft/mfcmapi) - MFCMAPI provides access to MAPI stores to facilitate investigation of Exchange and Outlook issues and to provide developers with a sample for MAPI development. See also [mfcmapi website](https://microsoft.github.io/mfcmapi/)
+
+Also see [Exchange And Outlook Tips](exchange-and-outlook-tips.md#outlook-and-exchange-tools)
+
 ## Windows Tools
 
 **<https://learn.microsoft.com/en-us/windows/powertoys/>**\
-**<https://cmder.app/>**\
+**<https://cmder.app/>** really good terminal emulator app for windows for all kinds of Windows & Linux shells as well as hooking into other tools like SecureCRT and PuTTY!
+
+* Note to self, remember the [Keyboard Shortcuts](https://cmder.app/#:~:text=(Cmder.exe)-,Keyboard%20shortcuts,-Tab%20manipulation)
+* [Cmder wiki](https://github.com/cmderdev/cmder/wiki)
+* [Main readme.md](https://github.com/cmderdev/cmder/blob/master/README.md)
+
 <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html> - see also: [PuTTY Commands](putty-commands.md)\
 **<https://learn.microsoft.com/en-us/sysinternals/>**\
 **<https://www.vandyke.com/products/securecrt/windows.html> - Its not free but its good.**\
 <https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
 [Cygwin](https://www.cygwin.com/) - Linux env for Windows, somewhat natively.\
-**[Total Commander](https://www.ghisler.com/)** - THE PIMP!
+<https://www.farmanager.com/> - Clone of Norton Commander/Midnight Commander but for windows, still getting updates and has plenty of features
+**[Total Commander](https://www.ghisler.com/)** - THE PIMP! One of the best tools you can have if you work in IT or with lots of files, a lot.
 
 * <https://www.ghisler.ch/wiki/index.php?title=Main_Page>: Total Commander Wiki (not sure if official)
 * [Useful External Tools for Total Commander](https://www.ghisler.com/tools.htm)
@@ -301,14 +317,17 @@ Also often includes abuse functions
 
 **<https://mha.azurewebsites.net>** - Microsoft Message Header Analyzer - really good header analyzer\
 <https://toolbox.googleapps.com/apps/messageheader/> - Google Message Header Analyzer\
-**<https://mxtoolbox.com/SuperTool.aspx>**\
-**<https://mxtoolbox.com/EmailHeaders.aspx>**\
-**<https://mxtoolbox.com/emailhealth>** - good email health overview for a specific domain\
-**<https://mxtoolbox.com/dmarc.aspx>**\
 **<https://mxtoolbox.com>** - really great site with lots of email tools\
-**<https://dmarcian.com/dmarc-tools/>**\
+
+* **<https://mxtoolbox.com/SuperTool.aspx>**\
+* **<https://mxtoolbox.com/EmailHeaders.aspx>**\
+* **<https://mxtoolbox.com/emailhealth>** - good email health overview for a specific domain\
+* **<https://mxtoolbox.com/dmarc.aspx>**\
+* **<https://mxtoolbox.com/spf.aspx>** - allows you to specify a domain AND an IP Address to see if the SPF record is in it (without manually figuring that out)\
+
+**<https://dmarcian.com/dmarc-tools/>** - there are a bunch of tools here that I recommend\
 <https://dmarcly.com/tools/>\
-<https://www.appmaildev.com>
+**<https://www.appmaildev.com>** - haven't used much but it seems to be getting better and better
 
 > [!TIP] TIP
 > Links to Exchange and Exchange Online Header Messages are in [Microsoft 365 Tips](microsoft-365-tips.md#exchange-email-header-references)

@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-01-28T00:56:46.164Z
-lastmod: 2025-03-26T04:00:09.633Z
+lastmod: 2025-06-17T03:58:39.497Z
 tags:
     - Monitoring
     - Nagios
@@ -29,8 +29,11 @@ fmContentType: pages
   * [Ticks](#ticks)
   * [Uptime oids](#uptime-oids)
   * [Macros](#macros)
+  * [MIB Installation](#mib-installation)
+  * [MIB Formats](#mib-formats)
   * [MIB Downloads](#mib-downloads)
 * [Vendor Refs](#vendor-refs)
+  * [Draytek](#draytek)
   * [Synology](#synology)
   * [Netgear](#netgear)
   * [APC](#apc)
@@ -168,7 +171,7 @@ For the service or check:
 $_HOSTSNMPCOMMUNITY$
 ```
 
-### MIB Downloads
+### MIB Installation
 
 > [!CAUTION] CAUTION
 > I pasted the below to have it handy in the future but you should understand the implications before installing the package, running the program or editing snmp.conf
@@ -185,7 +188,23 @@ Either way mibs need to end up in `/usr/share/mibs/` or `/usr/share/snmp/mibs/` 
 
 You may also need to consider editing `/etc/snmp/snmp.conf` to comment out the to comment out the `mibs` line (apparently)
 
+### MIB Formats
+
+This whole section needs fleshing out more.
+
+MIB
+OID
+
+### MIB Downloads
+
+**<https://mibs.observium.org/>** - Haven't used it but it looks really good
+
 ## Vendor Refs
+
+### Draytek
+
+MIB Guide: <https://www.draytek.com/support/knowledge-base/5517> - Link at bottom of page to download MIB file\
+SNMP Guide: <https://faq.draytek.com.au/docs/how-to-test-snmp-on-draytek-routers/>\
 
 ### Synology
 

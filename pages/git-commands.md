@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-04-11T07:04:55.216Z
+lastmod: 2025-07-08T08:21:21.302Z
 tags:
     - Commands
     - References
@@ -28,8 +28,18 @@ keywords:
     * [Git Credential Manager](#git-credential-manager)
       * [Github Device flow](#github-device-flow)
   * [autocrlf](#autocrlf)
-* [Internet References](#internet-references)
+* [Quick Github Auth](#quick-github-auth)
 * [Copy a single file from one branch to another](#copy-a-single-file-from-one-branch-to-another)
+* [Restore/Rehydrate/Reinflate a repo with just the .git folder](#restorerehydratereinflate-a-repo-with-just-the-git-folder)
+* [Special Git Repo files \& folders](#special-git-repo-files--folders)
+  * [.gitignore](#gitignore)
+  * [.gitattributes](#gitattributes)
+  * [.gitmodules](#gitmodules)
+  * [.github](#github)
+* [Git fixs (most of them dangerious)](#git-fixs-most-of-them-dangerious)
+  * [Force Reset Local worktree to remote](#force-reset-local-worktree-to-remote)
+  * [Undoing and redoing commits](#undoing-and-redoing-commits)
+* [Internet References](#internet-references)
 <!--- cSpell:enable --->
 
 ## Common Git Aliases
@@ -112,7 +122,7 @@ In theory it should be set to automatic during install but you may need to adjus
 
 More Info:
 
-* <https://stackoverflow.com/a/20653073>: awesome stackoverflow on how it works, what it matters and how to address.
+* <https://stackoverflow.com/a/20653073>: awesome StackOverflow on how it works, what it matters and how to address.
 * <https://git-scm.com/docs/gitattributes#_end_of_line_conversion>
 * <https://git-scm.com/docs/git-config#Documentation/git-config.txt-coreautocrlf>
 
@@ -131,10 +141,13 @@ There *may* be some value in looking up these settings:
 * <https://git-scm.com/docs/gitattributes#_eol>
 * <https://git-scm.com/docs/gitattributes#_end_of_line_conversion>
 
-## Internet References
+## Quick Github Auth
 
-<https://www.reddit.com/r/git/comments/1htmt9k/the_top_1120_commands_you_need_to_recover_from/>\
-<https://ohshitgit.com/>
+Create secure correctly scoped github personal access token here: <https://github.com/settings/personal-access-tokens>
+
+* [ ] Add link to guide about PATs
+
+Then type: `git clone https://<username>:<PAT>@github.com/<owner>/<repository>.git`
 
 ## Copy a single file from one branch to another
 
@@ -147,3 +160,74 @@ git add path/to/file
 git commit -m "Copy file from source-branch to target-branch"
 git push origin target-branch
 ```
+
+## Restore/Rehydrate/Reinflate a repo with just the .git folder
+
+Useful for browsing/using etckeeper backups or when something goes wrong and you just have the .git folder.
+
+On a machine with Git installed:
+
+1. Create a copy folder somewhere outside of the repo, download folder, that is clean, temporary but safe
+2. Copy into that new folder the .git folder. If it is named something like MyRepoName.git, rename the folder to just .git once copied
+3. open up command prompt/terminal, etc to the folder created in step 1
+4. Type `git init`
+5. Type `git reset --hard branchname` but change branchname to master, main or whatever branch you want to get back to
+
+## Special Git Repo files & folders
+
+### .gitignore
+
+<https://git-scm.com/docs/gitignore>
+
+### .gitattributes
+
+* The file: <https://git-scm.com/docs/gitattributes>
+* A check command: <https://git-scm.com/docs/git-check-attr>
+
+### .gitmodules
+
+For Git submodules.
+
+* An overview: <https://git-scm.com/docs/gitsubmodules>
+* The file: <https://git-scm.com/docs/gitmodules>
+* The command: <https://git-scm.com/docs/git-submodule>
+* From the git book: <https://git-scm.com/book/en/v2/Git-Tools-Submodules>
+
+### .github
+
+<https://stackoverflow.com/a/61301254/5435742>
+
+TBC
+
+## Git fixs (most of them dangerious)
+
+### Force Reset Local worktree to remote
+
+From: <https://stackoverflow.com/questions/2452226/master-branch-and-origin-master-have-diverged-how-to-undiverge-branches>
+
+`git reset --hard origin/main`
+
+### Undoing and redoing commits
+
+> [!NOTE] Revert vs Undo
+> Revert and Undo are two different things
+
+From: <https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git>
+
+```bash
+$ git commit -m "Something terribly misguided" # (0: Your Accident)
+$ git reset HEAD~                              # (1)
+# === If you just want to undo the commit, stop here! ===
+[ edit files as necessary ]                    # (2)
+$ git add .                                    # (3)
+$ git commit -c ORIG_HEAD                      # (4)
+```
+
+See <https://stackoverflow.com/a/927386/5435742>
+
+You may need to `git push -f` to overwrite if you have already pushed
+
+## Internet References
+
+<https://www.reddit.com/r/git/comments/1htmt9k/the_top_1120_commands_you_need_to_recover_from/>\
+<https://ohshitgit.com/>

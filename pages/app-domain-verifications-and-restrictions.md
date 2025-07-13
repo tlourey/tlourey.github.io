@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2024-12-12T18:04:19.415Z
-lastmod: 2025-04-12T07:31:02.387Z
+lastmod: 2025-07-13T15:35:14.237Z
 tags:
     - DNS
     - Security
@@ -57,6 +57,7 @@ keywords:
   * [Docker](#docker)
   * [Canva](#canva)
   * [VMWare](#vmware)
+  * [Access Group](#access-group)
   * [Fastly](#fastly)
     * [Fastly Domain Delegation](#fastly-domain-delegation)
     * [Fastly Verification](#fastly-verification)
@@ -362,14 +363,18 @@ Extra Instance Blocking Info: <>
 
 ### Canva
 
-KB: <>
+KB: <https://www.canva.com/help/set-up-sso/>
 
 Record Name: @\
 Record Type: TXT\
 Record Value Format: `canva-site-verification=<random characters>`
 
-Extra Instance Blocking Available: TBA
-Extra Instance Blocking Info: <>
+Extra Instance Blocking Available: Yes - Account centralisation
+Extra Instance Blocking Info:
+
+* <https://www.canva.com/help/set-up-sso/>
+* <https://www.canva.com/help/domain-verification-notification/>
+* <https://www.canva.com/help/domain-report-for-enterprise/>
 
 ### VMWare
 
@@ -381,6 +386,18 @@ Record Value Format: `vmware-cloud-verification-<GUID>`
 
 > [!NOTE] One of these is not like most others...
 > VMWare seem to use a `-` instead of an `=`
+
+Extra Instance Blocking Available: TBA
+Extra Instance Blocking Info: <>
+
+### Access Group
+
+KB: <https://identity.accessacloud.com/manage/domainverificationhelp>\
+Link: <https://identity.accessacloud.com/manage/domains>
+
+Record Name: @\
+Record Type: TXT\
+Record Value Format: `access-domain-verification=random`
 
 Extra Instance Blocking Available: TBA
 Extra Instance Blocking Info: <>
@@ -423,6 +440,7 @@ Extra Instance Blocking Info: <>
 * [ ] liveramp
 * [ ] Microsoft
 * [ ] Shopify
+* [ ] Logmein
 
 ### Unknown
 
@@ -436,3 +454,5 @@ Extra Instance Blocking Info: <>
 * <https://www.netspi.com/blog/technical-blog/network-pentesting/analyzing-dns-txt-records-to-fingerprint-service-providers/>
 * <https://en.wikipedia.org/wiki/TXT_record>
 * <https://en.wikipedia.org/wiki/Well-known_URI>
+* <http://ssotax.org/>
+* <https://sso.tax/>

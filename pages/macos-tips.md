@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-25T04:41:08.679Z
-lastmod: 2025-04-24T00:28:54.816Z
+lastmod: 2025-06-15T03:04:17.130Z
 tags:
     - MacOS
     - Tips
@@ -19,8 +19,9 @@ preview: ""
 <!--- cSpell:disable --->
 * [Mouse Scrolling](#mouse-scrolling)
 * [Time doesn't update](#time-doesnt-update)
+* [Authentication is Disabled when bound to MS AD Domain](#authentication-is-disabled-when-bound-to-ms-ad-domain)
 * [Property Lists](#property-lists)
-* [Offical Guides](#offical-guides)
+* [Official Guides](#official-guides)
 * [Other Tips](#other-tips)
 <!--- cSpell:enable --->
 
@@ -50,6 +51,38 @@ Caveats:
 * Issue with MacOS Sonoma
 * Should be fixed in 14.5 but I had it occur again on 14.7
 
+## Authentication is Disabled when bound to MS AD Domain
+
+TL;DR: Corrupt secure token.
+
+Scenario:
+
+* MacOS 15.5
+* Intel CPU
+* Bound to MS Ad Domain
+* Mobile AD user without admin rights trying to install software
+* Not in line of sight of domain
+* Uses creds of local admin user
+* Not long after upgrading to 15.5 from 14.7
+* Not 100% clean machine
+
+When completing various re-auths or up-auths and you are bound to a Windows Domain, you may encounter an issue where a local admin user account gets "Authentication is disabled". There are other situations where this could apply. A bunch.
+
+It was origionally all on M CPUs and not Intel based macs (and there appears to be an unrelated issue with M CPUs and secure chip stuff - but that isn't what this post is about)
+
+Fix per below article is:
+
+```bash
+#Check if your account has securetoken enabled, (it probably does)
+# Disable it then reenable it.
+sysadminctl -secureTokenStatus <username>
+sysadminctl -secureTokenOff <username> -password - -adminUser <adminusername> -adminPassword -
+sysadminctl -secureTokenOn <username> -password - -adminUser <adminusername> -adminPassword -
+diskutil apfs UpdatePreboot /
+```
+
+Source: <https://community.jamf.com/t5/jamf-pro/softwareupdate-is-trying-to-authenticate-user-authentication-is/m-p/245357>
+
 ## Property Lists
 
 Not exactly like the windows registry but maybe sorta.
@@ -73,7 +106,7 @@ Background:
 >
 > \- *[Edit property lists in Terminal on Mac](https://support.apple.com/en-au/guide/terminal/apda49a1bb2-577e-4721-8f25-ffc0836f6997/mac)*
 
-## Offical Guides
+## Official Guides
 
 [MacOS User Guide](https://support.apple.com/en-au/guide/mac-help/welcome/mac)\
 [iPhoneOS User Guide](https://support.apple.com/en-au/guide/iphone/welcome/ios)

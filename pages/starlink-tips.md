@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-03-24T11:47:32.173Z
-lastmod: 2025-03-24T12:47:52.797Z
+lastmod: 2025-06-16T07:24:46.915Z
 tags:
     - Internet
     - References
@@ -109,7 +109,8 @@ More Info: [How do I stow my Starlink?](https://www.starlink.com/au/support/arti
 ## Misc Articles
 
 [What ports does Starlink block?](https://www.starlink.com/au/support/article/c3caacdf-1c1f-98db-b821-bbb36ca9d89b) - ports blocked over the Internet\
-[Does Starlink provide time synchronization or NTP servers?](https://www.starlink.com/au/support/article/0873e885-831a-9f4e-4808-2838a28f2e69)
+[Does Starlink provide time synchronization or NTP servers?](https://www.starlink.com/au/support/article/0873e885-831a-9f4e-4808-2838a28f2e69)\
+[What is a Starlink identifier?](https://www.starlink.com/au/support/article/2802431a-135f-0671-4c1b-4cedb65b291a)
 
 [More detailed technical specs](https://starlink-enterprise-guide.readme.io/docs/technical-specs)
 
