@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-06-16T02:06:20.465Z
+lastmod: 2025-07-27T04:08:19.925Z
 ---
 
 <!--- cSpell:disable --->
@@ -27,6 +27,7 @@ lastmod: 2025-06-16T02:06:20.465Z
 * [Not amused boy](#not-amused-boy)
 * [Snappy Response](#snappy-response)
 * [Go away](#go-away)
+* [Rimmer Explosion](#rimmer-explosion)
 * [Jackie Chan](#jackie-chan)
 * [Ba dum tisss](#ba-dum-tisss)
 * [Technically correct](#technically-correct)
@@ -139,6 +140,12 @@ lastmod: 2025-06-16T02:06:20.465Z
 ## Go away
 
 [![Picture](/assets/images/noob.jpg)](/assets/images/noob.jpg)
+
+[Top](#content)
+
+## Rimmer Explosion
+
+[![Picture](/assets/images/rimmer-explosion.gif)](/assets/images/rimmer-explosion.gif)
 
 [Top](#content)
 
