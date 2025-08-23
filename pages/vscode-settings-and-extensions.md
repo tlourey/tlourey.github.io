@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-02T03:50:07.720Z
-lastmod: 2025-05-13T10:09:15.200Z
+lastmod: 2025-08-23T04:53:34.499Z
 tags:
     - VSCode
     - Tools
@@ -24,6 +24,7 @@ preview: ""
 * [Custom Keyboard Shortcuts](#custom-keyboard-shortcuts)
   * [CTRL+U: Underline in Markdown](#ctrlu-underline-in-markdown)
   * [References](#references)
+  * [Known Issues](#known-issues)
 * [Extensions](#extensions)
   * [vscode-spell-checker](#vscode-spell-checker)
     * [vscode-spell-checker Commands](#vscode-spell-checker-commands)
@@ -101,6 +102,10 @@ keybindings.json:
 [Linux PDF](https://go.microsoft.com/fwlink/?linkid=832144)
 
 [when clause contexts for keyboard shortcuts](https://code.visualstudio.com/api/references/when-clause-contexts)
+
+### Known Issues
+
+[Github Copilot and VSCode Snippets conflict](https://github.com/orgs/community/discussions/7012)
 
 ## Extensions
 

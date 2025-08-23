@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-07-08T08:21:21.302Z
+lastmod: 2025-08-23T05:02:53.289Z
 tags:
     - Commands
     - References
@@ -29,14 +29,16 @@ keywords:
       * [Github Device flow](#github-device-flow)
   * [autocrlf](#autocrlf)
 * [Quick Github Auth](#quick-github-auth)
-* [Copy a single file from one branch to another](#copy-a-single-file-from-one-branch-to-another)
-* [Restore/Rehydrate/Reinflate a repo with just the .git folder](#restorerehydratereinflate-a-repo-with-just-the-git-folder)
+* [Misc Git Tips and Tricks](#misc-git-tips-and-tricks)
+  * [Copy a single file from one branch to another](#copy-a-single-file-from-one-branch-to-another)
+  * [Restore/Rehydrate/Reinflate a repo with just the .git folder](#restorerehydratereinflate-a-repo-with-just-the-git-folder)
+  * [Date Branch Created](#date-branch-created)
 * [Special Git Repo files \& folders](#special-git-repo-files--folders)
   * [.gitignore](#gitignore)
   * [.gitattributes](#gitattributes)
   * [.gitmodules](#gitmodules)
   * [.github](#github)
-* [Git fixs (most of them dangerious)](#git-fixs-most-of-them-dangerious)
+* [Git fix's (most of them dangerous)](#git-fixs-most-of-them-dangerous)
   * [Force Reset Local worktree to remote](#force-reset-local-worktree-to-remote)
   * [Undoing and redoing commits](#undoing-and-redoing-commits)
 * [Internet References](#internet-references)
@@ -149,7 +151,9 @@ Create secure correctly scoped github personal access token here: <https://githu
 
 Then type: `git clone https://<username>:<PAT>@github.com/<owner>/<repository>.git`
 
-## Copy a single file from one branch to another
+## Misc Git Tips and Tricks
+
+### Copy a single file from one branch to another
 
 From <https://betterstack.com/community/questions/how-do-i-copy-version-of-single-file-from-one-branch-another/>
 
@@ -161,7 +165,7 @@ git commit -m "Copy file from source-branch to target-branch"
 git push origin target-branch
 ```
 
-## Restore/Rehydrate/Reinflate a repo with just the .git folder
+### Restore/Rehydrate/Reinflate a repo with just the .git folder
 
 Useful for browsing/using etckeeper backups or when something goes wrong and you just have the .git folder.
 
@@ -172,6 +176,10 @@ On a machine with Git installed:
 3. open up command prompt/terminal, etc to the folder created in step 1
 4. Type `git init`
 5. Type `git reset --hard branchname` but change branchname to master, main or whatever branch you want to get back to
+
+### Date Branch Created
+
+`git reflog --date=local <branchname>`
 
 ## Special Git Repo files & folders
 
@@ -197,9 +205,15 @@ For Git submodules.
 
 <https://stackoverflow.com/a/61301254/5435742>
 
+copilot-instructions.md:
+
+* [VSCode](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=vscode)
+* [WebUI](https://docs.github.com/en/copilot/how-tos/configure-custom-instructions/add-repository-instructions?tool=webui)
+* Other IDEs support check one of the above links for other options
+
 TBC
 
-## Git fixs (most of them dangerious)
+## Git fix's (most of them dangerous)
 
 ### Force Reset Local worktree to remote
 
@@ -230,4 +244,6 @@ You may need to `git push -f` to overwrite if you have already pushed
 ## Internet References
 
 <https://www.reddit.com/r/git/comments/1htmt9k/the_top_1120_commands_you_need_to_recover_from/>\
+<https://www.reddit.com/r/commandline/comments/1m95blj/hidden_git_config_gems_you_probably_arent_using/>\
+[Git Gud: Setting Up a Better Git Config](https://micahkepe.com/blog/gitconfig/)\
 <https://ohshitgit.com/>
