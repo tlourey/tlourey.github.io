@@ -14,7 +14,7 @@ tags:
     - References
     - Security
 date: 2025-01-18T16:51:00
-lastmod: 2025-09-10T00:49:41.719Z
+lastmod: 2025-09-10T01:02:40.386Z
 fmContentType: pages
 ---
 
@@ -22,6 +22,7 @@ fmContentType: pages
  <!--- cSpell:disable --->
 * [KQL Language](#kql-language)
   * [Overview](#overview)
+    * [Syntax Notes](#syntax-notes)
   * [Getting Started Queries](#getting-started-queries)
   * [Tabular operators](#tabular-operators)
     * [summarize operator](#summarize-operator)
@@ -49,15 +50,26 @@ fmContentType: pages
 
 [Kusto](https://learn.microsoft.com/en-us/kusto/?view=azure-monitor)\
 [KQL](https://learn.microsoft.com/en-us/kusto/query/?view=azure-monitor)\
-[KQL Quick Reference](https://learn.microsoft.com/en-us/kusto/query/kql-quick-reference?view=azure-monitor)\
+**[KQL Quick Reference](https://learn.microsoft.com/en-us/kusto/query/kql-quick-reference?view=azure-monitor)**\
 [KQL Learning Resources](https://learn.microsoft.com/en-us/kusto/query/kql-learning-resources?view=azure-monitor)\
 [Learn Common Operators](https://learn.microsoft.com/en-us/kusto/query/tutorials/learn-common-operators?view=azure-monitor)\
 [SQL to KQL Cheat Sheet](https://learn.microsoft.com/en-us/kusto/query/sql-cheat-sheet?view=azure-monitor)\
 [KQL Regex](https://learn.microsoft.com/en-us/kusto/query/regex?view=azure-monitor)\
 [KQL Timezones](https://learn.microsoft.com/en-us/kusto/query/timezone?view=azure-monitor)
 
-[Syntax conventions for reference documentation](https://learn.microsoft.com/en-au/kusto/query/syntax-conventions?view=azure-monitor) - brings the menu to the right place for browsing\
+**[Syntax conventions for reference documentation](https://learn.microsoft.com/en-au/kusto/query/syntax-conventions?view=azure-monitor)** - brings the menu to the right place for browsing\
 [Best practices for Kusto Query Language queries](https://learn.microsoft.com/en-au/kusto/query/best-practices?view=azure-monitor)
+
+#### Syntax Notes
+
+Order: `Get Data | Filter | Summarize | Sort | Select`
+
+|Convention|Description|
+|---|---|
+| // | Comment out |
+| \| | Part of query syntax (pipeline)|
+
+[More Conventions](https://learn.microsoft.com/en-au/kusto/query/syntax-conventions?view=azure-monitor#syntax-conventions)
 
 ### Getting Started Queries
 
@@ -218,3 +230,4 @@ Exporting ARM Template: If the query packs are accessible in the Azure Portal si
 * <https://github.com/reprise99/awesome-kql-sentinel>
 * <https://github.com/Bert-JanP/Hunting-Queries-Detection-Rules>
 **<https://www.kqlsearch.com/>**
+* <https://learn.microsoft.com/en-us/kusto/debug-inline-python?view=microsoft-fabric> - use Python in KQL in MS Fabric and Azure Data Explorer
