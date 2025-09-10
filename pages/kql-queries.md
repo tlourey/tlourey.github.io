@@ -14,7 +14,7 @@ tags:
     - References
     - Security
 date: 2025-01-18T16:51:00
-lastmod: 2025-03-20T08:13:14.281Z
+lastmod: 2025-09-10T00:47:23.021Z
 fmContentType: pages
 ---
 
@@ -120,6 +120,9 @@ StormEvents | count
 ### aggregation function
 
 #### count aggregation function
+
+> [!TIP] Commonly needed
+> The count aggregation is one more the more commonly needed functions, esp for simple counts when in a rush!
 
 ```kql
 StormEvents
