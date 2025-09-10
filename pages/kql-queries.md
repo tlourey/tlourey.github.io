@@ -14,7 +14,7 @@ tags:
     - References
     - Security
 date: 2025-01-18T16:51:00
-lastmod: 2025-09-10T00:47:23.021Z
+lastmod: 2025-09-10T00:49:41.719Z
 fmContentType: pages
 ---
 
@@ -121,9 +121,6 @@ StormEvents | count
 
 #### count aggregation function
 
-> [!TIP] Commonly needed
-> The count aggregation is one more the more commonly needed functions, esp for simple counts when in a rush!
-
 ```kql
 StormEvents
 | summarize Count=count() by State
@@ -133,6 +130,9 @@ StormEvents
 CommonSecurityLog
 | summarize Count=count() by DeviceVendor
 ```
+
+> [!TIP] Commonly used
+> The count aggregation is one more the more commonly needed functions, esp for simple counts when in a rush!
 
 <https://learn.microsoft.com/en-au/kusto/query/count-aggregation-function?view=azure-monitor>
 
