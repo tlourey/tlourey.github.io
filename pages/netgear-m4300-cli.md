@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-09-12T04:08:11.933Z
+lastmod: 2025-09-12T06:01:57.430Z
 tags:
     - Commands
     - Networks
@@ -363,7 +363,7 @@ From the Netgear M4200 and M4300 Series ProSAFE - Managed SwitchesCLI - Command 
 
 ### Port Security
 
-setting up mac address security:
+setting up mac address security in full:
 
 ```cisco
 en
@@ -378,6 +378,15 @@ description 'DD/MM/YY-IT-XXXXX-port description-MACLOCKED'
 exit
 exit
 write memory
+ ```
+
+move dynamicly learned mac address to static on a port:
+
+```cisco
+en
+configure
+interface 1/0/X
+port-security mac-address move 
  ```
 
 > [!NOTE] NOTE
