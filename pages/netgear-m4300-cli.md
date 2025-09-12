@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-03-19T04:39:14.516Z
+lastmod: 2025-09-12T04:08:11.933Z
 tags:
     - Commands
     - Networks
@@ -371,6 +371,7 @@ show running-config interface 1/0/X
 configure
 interface 1/0/X
 port-security
+port-security max-dynamic 0
 port-security violation shutdown
 port-security mac-address 00:02:D1:8D:F8:AC 99
 description 'DD/MM/YY-IT-XXXXX-port description-MACLOCKED'
@@ -383,6 +384,12 @@ write memory
 >
 > * always do `show running-config interface 1/0/X` of the interface you are going to secure its not a trunk or something special
 > * write memory if you are saving it
+
+show ports shutdown due to port-security:
+
+```cisco
+show interfaces status err-disabled
+```
 
 show ports with port-security:
 
