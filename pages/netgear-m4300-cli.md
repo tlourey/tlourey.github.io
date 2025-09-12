@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-09-12T06:01:57.430Z
+lastmod: 2025-09-12T06:13:13.429Z
 tags:
     - Commands
     - Networks
@@ -380,7 +380,7 @@ exit
 write memory
  ```
 
-move dynamicly learned mac address to static on a port:
+move dynamicly learned mac address to static on a port in 1 hit (if port security already enabled on port):
 
 ```cisco
 en
@@ -388,6 +388,14 @@ configure
 interface 1/0/X
 port-security mac-address move 
  ```
+
+An order of events to do it gradually:
+
+1. Enabled Global Port Security: `port-security` (Note all other commands are done at interface level)
+2. Enabled Interface Port Security: `port-security` (NOTE THIS WILL CAUSE THE PORT TO BOUNCE)
+3. Once mac addresses are know (hours, days, weeks), move dynamicly leared macs to static mac list: `port-security mac-address move`
+4. Enable port to be shutdown if mac list quantities are reached: `port-security violation shutdown`
+5. Set number of Max-dynamic MAC address for the port to be 0: `port-security max-dynamic 0`
 
 > [!NOTE] NOTE
 >
