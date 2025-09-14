@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-09-12T06:13:13.429Z
+lastmod: 2025-09-12T07:15:49.511Z
 tags:
     - Commands
     - Networks
@@ -386,7 +386,7 @@ move dynamicly learned mac address to static on a port in 1 hit (if port securit
 en
 configure
 interface 1/0/X
-port-security mac-address move 
+port-security mac-address move
  ```
 
 An order of events to do it gradually:
