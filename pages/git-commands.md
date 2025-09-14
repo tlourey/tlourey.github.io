@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-08-23T05:02:53.289Z
+lastmod: 2025-09-14T07:44:31.248Z
 tags:
     - Commands
     - References
@@ -33,6 +33,7 @@ keywords:
   * [Copy a single file from one branch to another](#copy-a-single-file-from-one-branch-to-another)
   * [Restore/Rehydrate/Reinflate a repo with just the .git folder](#restorerehydratereinflate-a-repo-with-just-the-git-folder)
   * [Date Branch Created](#date-branch-created)
+  * [Change the number of diff context lines shown in git settings](#change-the-number-of-diff-context-lines-shown-in-git-settings)
 * [Special Git Repo files \& folders](#special-git-repo-files--folders)
   * [.gitignore](#gitignore)
   * [.gitattributes](#gitattributes)
@@ -180,6 +181,12 @@ On a machine with Git installed:
 ### Date Branch Created
 
 `git reflog --date=local <branchname>`
+
+### Change the number of diff context lines shown in git settings
+
+Changes the default number of context lines (lines nearby that haven't changed) that git-diff will show. Default is 3 per [git-diff doco](https://git-scm.com/docs/git-diff#Documentation/git-diff.txt-diffcontext).
+
+`git config --global diff.context 5`
 
 ## Special Git Repo files & folders
 
