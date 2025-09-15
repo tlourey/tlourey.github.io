@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-09-12T07:15:49.511Z
+lastmod: 2025-09-15T06:12:11.945Z
 tags:
     - Commands
     - Networks
@@ -421,6 +421,11 @@ show port-security dynamic 1/0/4
 
 show port-security violation 1/0/4
 ```
+
+Want to move a port???
+
+> [!IMPORTANT] Remove static macs if moving devices
+> If you need to move a device to a different port to the same switch you will need to remove the port-security on the old port before the device will work on the new port
 
 ### Interface browsing / searching
 
