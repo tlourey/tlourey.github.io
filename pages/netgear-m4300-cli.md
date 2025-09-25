@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-09-25T06:57:25.606Z
+lastmod: 2025-09-25T07:52:59.075Z
 tags:
     - Commands
     - Networks
@@ -494,7 +494,22 @@ show trunks:
 show interfaces switchport trunk
 ```
 
-* [ ] Adding and changing vlans on trunks
+Modifying allowed vlans on an existing trunk:
+
+```cisco
+config
+interface 1/0/X
+! to add allowed vlans
+switchport trunk allowed vlan add 2,3,4
+
+! to remove allowed vlans
+switchport trunk allowed vlan remove 3,4
+
+! to set all vlans - NB: THIS CAN BE DISRUPTIVE AND SHOULD NOT BE DONE
+switchport trunk allowed vlan 1,2,3,4
+```
+
+you can also use `except` & `all`.
 
 ### VLAN
 
