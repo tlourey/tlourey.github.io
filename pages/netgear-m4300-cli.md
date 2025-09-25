@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-09-15T06:12:11.945Z
+lastmod: 2025-09-25T06:57:25.606Z
 tags:
     - Commands
     - Networks
@@ -22,6 +22,7 @@ Contents:
 <!--- cSpell:disable --->
 * [CLI Environment Command Modes and Basic commands](#cli-environment-command-modes-and-basic-commands)
 * [Config/Device Management](#configdevice-management)
+  * [Nondisruptive Configuration Management feature (CLI only)](#nondisruptive-configuration-management-feature-cli-only)
 * [Firmware Upgrades and Image Management](#firmware-upgrades-and-image-management)
 * [Port Commands](#port-commands)
   * [Up, Down, PoE Commands](#up-down-poe-commands)
@@ -166,6 +167,15 @@ interface                Display the running config for specified interface on
 
 > [!TIP] show running-config all
 > This command can show you the full config including defaults that are not specified in your config file, which can be **very very useful**
+
+### Nondisruptive Configuration Management feature (CLI only)
+
+Will apparently resolve differences rather than sending deltas or a full reload.
+
+```cisco
+copy tftp://<<IPADDRESS>>/Filename.txt nvram:script scriptname.scr
+reload configuration scriptname.scr
+```
 
 ## Firmware Upgrades and Image Management
 
