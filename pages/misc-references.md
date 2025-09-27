@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-06-20T05:49:14.876Z
+lastmod: 2025-09-27T08:18:32.123Z
 fmContentType: pages
 ---
 
@@ -170,6 +170,9 @@ Crontab: Best website for refining crontab timings: [Crontab.guru - The cron sch
 [StarLink API Documentation](https://starlink.readme.io/)
 
 Also see [StarLink Tips](starlink-tips.md)
+
+[4G Signal Statistics Explained](https://www.netvault.net.au/netmon-4g-signal-statistics-explained/)\
+[Guide to Mobile Networks 4G LTE Signal Strength Reference Guide](https://www.telcoantennas.com.au/blog/guide-to-mobile-networks/4g-lte-signal-strength-reference-guide/)
 
 ## Windows
 
