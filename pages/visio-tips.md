@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-05-22T03:37:31.678Z
-lastmod: 2025-05-22T04:15:44.298Z
+lastmod: 2025-09-28T09:14:42.470Z
 tags:
     - Office
     - Tips
@@ -52,6 +52,8 @@ keywords:
 <https://www.visiocafe.com/links.htm>\
 <https://www.visiocafe.com/templates.htm>\
 <https://www.visiocafe.com/various.htm>
+
+<https://www.shapesource.com/>
 
 ## Visio Consultants
 
