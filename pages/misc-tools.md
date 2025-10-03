@@ -19,7 +19,7 @@ tags:
     - Provisioning
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-07-12T03:53:07.403Z
+lastmod: 2025-10-03T03:12:37.048Z
 keywords:
     - Tools
 ---
@@ -189,7 +189,12 @@ Also see [Exchange And Outlook Tips](exchange-and-outlook-tips.md#outlook-and-ex
 * [Main readme.md](https://github.com/cmderdev/cmder/blob/master/README.md)
 
 <https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html> - see also: [PuTTY Commands](putty-commands.md)\
-**<https://learn.microsoft.com/en-us/sysinternals/>**\
+**<https://learn.microsoft.com/en-us/sysinternals/>** - the whole sysinternals suite is amazing but some of the forgotten ones are\
+
+* [PSPing](https://learn.microsoft.com/en-us/sysinternals/downloads/psping): PsPing implements Ping functionality, TCP ping, latency and bandwidth measurement.
+* [ADExplorer](https://learn.microsoft.com/en-us/sysinternals/downloads/adexplorer)
+* [ZoomIT](https://learn.microsoft.com/en-us/sysinternals/downloads/zoomit)
+
 **<https://www.vandyke.com/products/securecrt/windows.html> - Its not free but its good.**\
 <https://mobaxterm.mobatek.net/> - i'm not a massive fan but it comes in useful with the portable edition, including cygwin, quick port forwarding, and some other niceties.\
 [Cygwin](https://www.cygwin.com/) - Linux env for Windows, somewhat natively.\
