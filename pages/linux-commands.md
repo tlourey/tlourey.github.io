@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-06-30T03:39:35.212Z
+lastmod: 2025-10-11T04:39:03.052Z
 tags:
     - Commands
     - Linux
@@ -27,6 +27,7 @@ isdraft: false
   * [Redirection](#redirection)
   * [Jobs, Foreground and Background](#jobs-foreground-and-background)
   * [Terminal Filtering and Monitoring](#terminal-filtering-and-monitoring)
+    * [grep's to remember](#greps-to-remember)
   * [Process Stuff](#process-stuff)
     * [ps](#ps)
     * [top](#top)
@@ -350,6 +351,7 @@ wc
 column
 tail
 tail -f
+grep
 ```
 
 > [!TIP] cat line numbers
@@ -359,6 +361,19 @@ tail -f
 
 > [!TIP] line numbers inside less
 > While viewing a file in less type <kbd>-n</kbd> and press <kbd>Enter</kbd>
+
+#### grep's to remember
+
+`grep -c pattern`: gives count of matches\
+`grep -i pattern`: ignore case\
+`grep -v pattern`: invert match\
+`grep -n pattern`: print line number of match\
+`grep -A 10 pattern`: print the next 10 lines after a match\
+`grep -B 10 pattern`: print the previous 10 lines before a match\
+`grep -C 10 pattern`: print 10 lines of context around the match (5 before, 5 after?)
+
+<https://linux.die.net/man/1/grep>\
+<https://linux.die.net/Bash-Beginners-Guide/sect_04_02.html>
 
 ### Process Stuff
 
