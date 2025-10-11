@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-10-11T04:39:03.052Z
+lastmod: 2025-10-11T05:30:14.376Z
 tags:
     - Commands
     - Linux
@@ -374,6 +374,10 @@ grep
 
 <https://linux.die.net/man/1/grep>\
 <https://linux.die.net/Bash-Beginners-Guide/sect_04_02.html>
+
+Some other examples are in:
+
+[Useful Grep Lines for Log files in Netgear Fully Managed Switch M4300 CLI Reference](netgear-m4300-cli.md#useful-grep-lines-for-log-files)
 
 ### Process Stuff
 
@@ -821,7 +825,7 @@ You can have systemd override files (which apparently are like files in /etc/def
 #### journalctl
 
 > [!IMPORTANT] sudo
-> Many examples of journalctl start with `sudo`. Not sure if it is acturally required for journalctl or not
+> Many examples of journalctl start with `sudo`. Not sure if it is actually required for journalctl or not
 
 **`journalctl -xe`** most common use. jumps to end of journal logs and shows extra info about log entries\
 **`journalctl -ef`** 2nd most common use case. Jump to end and follow for more\
