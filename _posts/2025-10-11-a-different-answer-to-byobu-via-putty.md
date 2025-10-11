@@ -7,7 +7,7 @@ categories:
 type: posts
 layout: posts
 date: 2025-10-11T01:57:34.454Z
-lastmod: 2025-10-11T04:11:53.432Z
+lastmod: 2025-10-11T06:40:26.238Z
 tags:
     - Tips
     - Tools
@@ -87,6 +87,7 @@ The end.
 
 ## Misc References on this site
 
+* A bunch of Byobu notes and keyboard shortcuts in [Linux Commands](../pages/linux-commands.md#byobu)
 * [PuTTY Commands](../pages/putty-commands.md)
 * [SSH Tips and Tricks](../pages/ssh-tips-and-tricks.md)
 * [Bash Tips](../pages/bash-tips.md)
