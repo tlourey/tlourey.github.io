@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-10-11T08:04:53.351Z
+lastmod: 2025-10-11T11:22:52.193Z
 tags:
     - Commands
     - Networks
@@ -691,7 +691,7 @@ Show number of link up/link down events per hour for Oct 10:  `awk '/Oct 10/ {pr
 
 Show number of link up/link down events per day in the log file: `awk '/Link Down/ {down=$0} /Link Up/ && down {print down "\n" $0; down=""}' /path/to/external-device-log-files/My-Switch-Name-1.log | cut -d' ' -f1,2 | cut -d':' -f1,2 | sort | uniq -c`
 
-Show number of actual link flapping detections per port from the log file for Oct 11: ```grep "Oct 11" /path/to/external-device-log-files/My-Switch-Name-1.log | grep "Link flapping detected on port" | awk -F'port ' '{print $2}' | cut -d',' -f1 | sort | uniq -c | sort -nr`
+Show number of actual link flapping detections per port from the log file for Oct 11: `grep "Oct 11" /path/to/external-device-log-files/My-Switch-Name-1.log | grep "Link flapping detected on port" | awk -F'port ' '{print $2}' | cut -d',' -f1 | sort | uniq -c | sort -nr`
 
 See also [Grep's to remember in Linux Commands](linux-commands.md#greps-to-remember)
 
