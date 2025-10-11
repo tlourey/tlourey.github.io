@@ -11,9 +11,11 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-07-27T04:08:19.925Z
+lastmod: 2025-10-11T02:24:15.847Z
 ---
 
+<!--- cSpell:words -->
+<!--- cSpell:ignore tisss Imma daaaaaamn -->
 <!--- cSpell:disable --->
 * [Homer Simpson Fire on console](#homer-simpson-fire-on-console)
 * [Homer Simpson burning bridge](#homer-simpson-burning-bridge)
@@ -54,6 +56,7 @@ lastmod: 2025-07-27T04:08:19.925Z
 * [Cool Story Bro](#cool-story-bro)
 * [Are you high](#are-you-high)
 * [Kirk is offended or loves gossip](#kirk-is-offended-or-loves-gossip)
+* [It works on my machine](#it-works-on-my-machine)
 * [Leo memes](#leo-memes)
   * [Leo biting hand](#leo-biting-hand)
   * [Leo Clapping](#leo-clapping)
@@ -329,6 +332,15 @@ Excellent Quality:
 ## Kirk is offended or loves gossip
 
 [![Picture](/assets/images/kirk-offended.webp)](/assets/images/kirk-offended.webp)
+
+[Top](#content)
+
+## It works on my machine
+
+[![Picture](/assets/images/it-works-on-my-machine.jpg)](/assets/images/it-works-on-my-machine.jpg)
+
+<https://images.teepublic.com/derived/production/designs/2305863_0/1516825854/i_p:c_ffffff,s_630,q_90.jpg>\
+<https://www.teepublic.com/t-shirt/2305863-programmer-t-shirt-it-works-on-my-machine>
 
 [Top](#content)
 
