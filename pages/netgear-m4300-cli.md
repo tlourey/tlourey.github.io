@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-09-25T07:52:59.075Z
+lastmod: 2025-10-11T04:22:12.873Z
 tags:
     - Commands
     - Networks
@@ -22,13 +22,14 @@ Contents:
 <!--- cSpell:disable --->
 * [CLI Environment Command Modes and Basic commands](#cli-environment-command-modes-and-basic-commands)
 * [Config/Device Management](#configdevice-management)
-  * [Nondisruptive Configuration Management feature (CLI only)](#nondisruptive-configuration-management-feature-cli-only)
+  * [Non-disruptive Configuration Management feature (CLI only)](#non-disruptive-configuration-management-feature-cli-only)
 * [Firmware Upgrades and Image Management](#firmware-upgrades-and-image-management)
 * [Port Commands](#port-commands)
   * [Up, Down, PoE Commands](#up-down-poe-commands)
   * [Counters and Stats](#counters-and-stats)
   * [Cable Status](#cable-status)
   * [Port Security](#port-security)
+  * [Link Debouncing](#link-debouncing)
   * [Interface browsing / searching](#interface-browsing--searching)
   * [MAC Address browsing / searching](#mac-address-browsing--searching)
   * [Bulk Changes](#bulk-changes)
@@ -168,7 +169,7 @@ interface                Display the running config for specified interface on
 > [!TIP] show running-config all
 > This command can show you the full config including defaults that are not specified in your config file, which can be **very very useful**
 
-### Nondisruptive Configuration Management feature (CLI only)
+### Non-disruptive Configuration Management feature (CLI only)
 
 Will apparently resolve differences rather than sending deltas or a full reload.
 
@@ -390,7 +391,7 @@ exit
 write memory
  ```
 
-move dynamicly learned mac address to static on a port in 1 hit (if port security already enabled on port):
+move dynamically learned mac address to static on a port in 1 hit (if port security already enabled on port):
 
 ```cisco
 en
@@ -403,7 +404,7 @@ An order of events to do it gradually:
 
 1. Enabled Global Port Security: `port-security` (Note all other commands are done at interface level)
 2. Enabled Interface Port Security: `port-security` (NOTE THIS WILL CAUSE THE PORT TO BOUNCE)
-3. Once mac addresses are know (hours, days, weeks), move dynamicly leared macs to static mac list: `port-security mac-address move`
+3. Once mac addresses are know (hours, days, weeks), move dynamically learned macs to static mac list: `port-security mac-address move`
 4. Enable port to be shutdown if mac list quantities are reached: `port-security violation shutdown`
 5. Set number of Max-dynamic MAC address for the port to be 0: `port-security max-dynamic 0`
 
@@ -436,6 +437,18 @@ Want to move a port???
 
 > [!IMPORTANT] Remove static macs if moving devices
 > If you need to move a device to a different port to the same switch you will need to remove the port-security on the old port before the device will work on the new port
+
+### Link Debouncing
+
+```cisco
+link debounce time <millisecond>
+
+link debounce time 500
+
+no link debounce time
+
+show interface debounce
+```
 
 ### Interface browsing / searching
 
