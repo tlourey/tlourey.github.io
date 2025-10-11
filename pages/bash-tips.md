@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T13:05:00
-lastmod: 2025-05-15T08:32:37.564Z
+lastmod: 2025-10-11T21:49:08.551Z
 tags:
     - Language
     - Linux
@@ -67,9 +67,9 @@ More `history` commands which are useful when you have unlimted bash history.
 
 `history`: displays a numbered list of the commands in the history list
 `history -c`: clears the history list
-`!!`: runs the last command in the history list
-`!n`: runs the nth command stored in history
-`CTRL + R`: searches through the history list interactively. To clarify, Bash starts displaying matches as soon as we begin typing what we're looking for.
+**`!!`: runs the last command in the history list**
+**`!n`: runs the nth command stored in history**
+**`CTRL + R`: searches through the history list interactively**. To clarify, Bash starts displaying matches as soon as we begin typing what we're looking for.
 
 From: <https://www.baeldung.com/linux/bash-configure-unlimited-history>
 
