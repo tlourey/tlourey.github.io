@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-03T21:24:58.915Z
-lastmod: 2025-05-25T04:50:22.623Z
+lastmod: 2025-10-11T06:24:53.545Z
 tags:
     - Linux
     - Windows
@@ -24,6 +24,7 @@ keywords:
 * [SSH Client](#ssh-client)
   * [Port Forwarding](#port-forwarding)
   * [Reverse Port Forwarding](#reverse-port-forwarding)
+  * [SSH Break Commands](#ssh-break-commands)
 * [SSH Keys](#ssh-keys)
   * [Copying others authorized\_keys file](#copying-others-authorized_keys-file)
 * [SSHD](#sshd)
@@ -105,6 +106,25 @@ From the SSH man page:
 > By default, TCP listening sockets on the server will be bound to the loopback interface only.  This may be overridden by specifying a bind_address.  An empty bind_address, or the address '*', indicates that the remote socket should listen on all interfaces.  Specifying a remote bind_address will only succeed if the server's GatewayPorts option is enabled (see sshd_config(5)).
 >
 > If the port argument is '0', the listen port will be dynamically allocated on the server and reported to the client at run time.  When used together with -O forward, the allocated port will be printed to the standard output.
+
+### SSH Break Commands
+
+From <https://askubuntu.com/a/29952/443835>
+
+```text
+Supported escape sequences:
+     ~.   - terminate connection (and any multiplexed sessions)
+     ~B   - send a BREAK to the remote system
+     ~C   - open a command line
+     ~R   - request rekey
+     ~V/v - decrease/increase verbosity (LogLevel)
+     ~^Z  - suspend ssh
+     ~#   - list forwarded connections
+     ~&   - background ssh (when waiting for connections to terminate)
+     ~?   - this message
+     ~~   - send the escape character by typing it twice
+(Note that escapes are only recognized immediately after newline.)
+```
 
 ## SSH Keys
 

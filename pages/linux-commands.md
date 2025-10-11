@@ -8,7 +8,7 @@ layout: pages
 published: true
 fmContentType: pages
 date: 2024-12-13T15:22:00
-lastmod: 2025-10-11T05:30:14.376Z
+lastmod: 2025-10-11T06:37:39.924Z
 tags:
     - Commands
     - Linux
@@ -33,7 +33,9 @@ isdraft: false
     * [top](#top)
     * [kill and killall](#kill-and-killall)
   * [Aliases](#aliases)
-  * [TMUX](#tmux)
+  * [Screen Multiplexer](#screen-multiplexer)
+    * [Byobu](#byobu)
+    * [TMUX](#tmux)
     * [screen](#screen)
   * [Serial Stuff](#serial-stuff)
 * [Misc Terminal Tools](#misc-terminal-tools)
@@ -416,11 +418,72 @@ To make permanent, add alias to:
 > [!NOTE] Double edged sword
 > If you add an option to a command as an alias, when you remote to a new system, it may not have that alias. Consider the usefulness of a permanent alias vs the gain in muscle memory
 
-### TMUX
+### Screen Multiplexer
+
 <!-- cspell:ignore Byobu -->
 * [ ] TMUX
 * [ ] Byobu
 * [ ] screen
+
+#### Byobu
+
+You need to consider the terminal emulator settings when using Byobu. See [A different answer to Byobu Function keys via PuTTY](../_posts/2025-10-11-a-different-answer-to-byobu-via-putty.md) but these usually need to be:
+
+* Terminal-type set to string to `xterm` ( or `putty-256colour`) if using PuTTY. Iterm on Mac may need these set to `xterm-256color` or `screen-256color`.
+* PuTTY Keyboard --> Function Keys and Keypad set to `Xterm R6` or in some cases `Xterm 216+`
+
+More Iterm specific settings for the keyboard: <https://apple.stackexchange.com/a/375992>
+
+Keyboard shortcuts for Byobu when using tmux: <https://github.com/dustinkirkland/byobu/blob/master/usr/share/doc/byobu/help.tmux.txt>. As at 11/10/2025:
+
+```text
+  F1                             * Used by X11 *
+    Shift-F1                     Display this help
+  F2                             Create a new window
+    Shift-F2                     Create a horizontal split
+    Ctrl-F2                      Create a vertical split
+    Ctrl-Shift-F2                Create a new session
+  F3/F4                          Move focus among windows
+    Alt-Left/Right               Move focus among windows
+    Alt-Up/Down                  Move focus among sessions
+    Shift-Left/Right/Up/Down     Move focus among splits
+    Shift-F3/F4                  Move focus among splits
+    Ctrl-F3/F4                   Move a split
+    Ctrl-Shift-F3/F4             Move a window
+    Shift-Alt-Left/Right/Up/Down Resize a split
+  F5                             Reload profile, refresh status
+    Alt-F5                       Toggle UTF-8 support, refresh status
+    Shift-F5                     Toggle through status lines
+    Ctrl-F5                      Reconnect ssh/gpg/dbus sockets
+    Ctrl-Shift-F5                Change status bar's color randomly
+  F6                             Detach session and then logout
+    Shift-F6                     Detach session and do not logout
+    Alt-F6                       Detach all clients but yourself
+    Ctrl-F6                      Kill split in focus
+  F7                             Enter scrollback history
+    Alt-PageUp/PageDown          Enter and move through scrollback
+    Shift-F7                     Save history to $BYOBU_RUN_DIR/printscreen
+  F8                             Rename the current window
+    Ctrl-F8                      Rename the current session
+    Shift-F8                     Toggle through split arrangements
+    Alt-Shift-F8                 Restore a split-pane layout
+    Ctrl-Shift-F8                Save the current split-pane layout
+  F9                             Launch byobu-config window
+    Ctrl-F9                      Enter command and run in all windows
+    Shift-F9                     Enter command and run in all splits
+    Alt-F9                       Toggle sending keyboard input to all splits
+  F10                            * Used by X11 *
+  F11                            * Used by X11 *
+    Alt-F11                      Expand split to a full window
+    Shift-F11                    Zoom into a split, zoom out of a split
+    Ctrl-F11                     Join window into a vertical split
+  F12                            Escape sequence
+    Shift-F12                    Toggle on/off Byobu's keybindings
+    Alt-F12                      Toggle on/off Byobu's mouse support
+    Ctrl-Shift-F12               Mondrian squares
+```
+
+#### TMUX
 
 #### screen
 
