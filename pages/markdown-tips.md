@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: false
 date: 2025-01-17T13:40:00
-lastmod: 2025-04-24T00:07:26.357Z
+lastmod: 2025-10-11T04:09:16.403Z
 tags:
     - Language
     - References
@@ -62,7 +62,8 @@ Less useful but still good:
 <https://spec.commonmark.org/current/> the standard\
 <https://daringfireball.net/projects/markdown/>\
 <https://en.wikipedia.org/wiki/Markdown>\
-<https://markdown.github.io/> - is supposed to documents various implementations but I think this is actually dead
+<https://markdown.github.io/> - is supposed to documents various implementations but I think this is actually dead\
+<https://www.markdownguide.org/hacks/> - Workarounds for things not officially supported by Markdown.
 
 ## Important things to remember
 
