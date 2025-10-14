@@ -8,7 +8,7 @@ categories:
 published: true
 isdraft: true
 date: 2025-01-05T14:25:00
-lastmod: 2025-09-14T07:44:31.248Z
+lastmod: 2025-10-14T07:57:28.168Z
 tags:
     - Commands
     - References
@@ -21,6 +21,7 @@ keywords:
 
 <!--- cSpell:disable --->
 * [Common Git Aliases](#common-git-aliases)
+* [Git CLI Quickhits you keep forgetting](#git-cli-quickhits-you-keep-forgetting)
 * [Git CLI Setup](#git-cli-setup)
   * [git user config](#git-user-config)
   * [Git Credential Stuff](#git-credential-stuff)
@@ -48,6 +49,16 @@ keywords:
 ## Common Git Aliases
 
 <https://adtc.github.io/>
+
+## Git CLI Quickhits you keep forgetting
+
+`git show`: show last commit\
+`git show @HEAD`: show HEAD\
+`git show @~`: show ~ means first the parent of the mentioned commit\
+`git show @~2`: show ~2 is the first parent of the first parent etc
+
+[gitrevisions - Specifying revisions and ranges for Git](https://git-scm.com/docs/gitrevisions)\
+[Git Basics - Viewing the Commit History](https://git-scm.com/book/en/v2/Git-Basics-Viewing-the-Commit-History)
 
 ## Git CLI Setup
 
