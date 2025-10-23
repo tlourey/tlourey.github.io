@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-09-27T08:18:32.123Z
+lastmod: 2025-10-23T05:21:02.810Z
 fmContentType: pages
 ---
 
@@ -189,7 +189,9 @@ Also check [Windows Tips](windows-tips.md)
 
 ## Active Directory
 
-<https://admx.help/> - good group policy reference - except for all the ads
+<https://admx.help/> - good group policy reference - except for all the ads\
+<https://adamtheautomator.com/audit-group-membership-changes-active-directory/>\
+<https://learn.microsoft.com/en-us/windows-server/identity/ad-ds/plan/appendix-l--events-to-monitor>
 
 ## Regex and Similar
 
