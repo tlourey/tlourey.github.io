@@ -19,7 +19,7 @@ tags:
     - Provisioning
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-10-03T03:12:37.048Z
+lastmod: 2025-10-23T04:24:41.748Z
 keywords:
     - Tools
 ---
@@ -322,6 +322,7 @@ Also often includes abuse functions
 
 **<https://mha.azurewebsites.net>** - Microsoft Message Header Analyzer - really good header analyzer\
 <https://toolbox.googleapps.com/apps/messageheader/> - Google Message Header Analyzer\
+<https://toolbox.googleapps.com/apps/dig/> - Google Dig (DNS Lookup)\
 **<https://mxtoolbox.com>** - really great site with lots of email tools\
 
 * **<https://mxtoolbox.com/SuperTool.aspx>**\
