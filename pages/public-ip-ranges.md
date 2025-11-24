@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:34:00
-lastmod: 2025-03-24T12:16:28.417Z
+lastmod: 2025-11-24T07:13:07.967Z
 tags:
     - Networks
     - References
@@ -27,6 +27,7 @@ isdraft: false
 * [Omnissa](#omnissa)
 * [Salesforce](#salesforce)
 * [Starlink](#starlink)
+* [Viasat](#viasat)
 * [CGNAT](#cgnat)
 * [Misc Providers](#misc-providers)
 * [Misc Sources](#misc-sources)
@@ -91,6 +92,12 @@ isdraft: false
 
 [All Starlink IP Subnets and geolocation mapping](https://geoip.starlinkisp.net/)\
 CSV Feed: <https://geoip.starlinkisp.net/feed.csv>
+
+## Viasat
+
+<https://github.com/Viasat/geofeed/tree/main>\
+<https://github.com/Viasat/geofeed/blob/main/geofeed.csv>\
+<https://raw.githubusercontent.com/Viasat/geofeed/main/geofeed.csv>
 
 ## CGNAT
 
