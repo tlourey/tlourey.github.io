@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:34:00
-lastmod: 2025-11-24T07:13:07.967Z
+lastmod: 2025-12-17T23:07:10.621Z
 tags:
     - Networks
     - References
@@ -110,6 +110,7 @@ CSV Feed: <https://geoip.starlinkisp.net/feed.csv>
 * [Oracle Cloud](https://docs.oracle.com/iaas/tools/public_ip_ranges.json)
 * [Linode](https://geoip.linode.com/)
 * [DigitalOcean (DO)](https://digitalocean.com/geo/google.csv)
+* [m247](https://geoip.m247.ro/)
 
 ## Misc Sources
 
