@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:34:00
-lastmod: 2025-12-17T23:07:10.621Z
+lastmod: 2025-12-17T23:16:38.501Z
 tags:
     - Networks
     - References
@@ -31,6 +31,7 @@ isdraft: false
 * [CGNAT](#cgnat)
 * [Misc Providers](#misc-providers)
 * [Misc Sources](#misc-sources)
+* [References](#references)
 <!--- cSpell:enable --->
 
 ## Microsoft
@@ -126,3 +127,9 @@ CSV Feed: <https://geoip.starlinkisp.net/feed.csv>
   * Microsoft
   * Linode
   * Oracle
+
+## References
+
+[RFC 8805 - A Format for Self-Published IP Geolocation Feeds](https://datatracker.ietf.org/doc/rfc8805/)\
+<https://blog.apnic.net/2024/12/05/how-to-boost-geolocation-accuracy-with-geofeed/>\
+<https://ipregistry.co/blog/geofeeds>
