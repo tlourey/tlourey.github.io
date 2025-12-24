@@ -14,7 +14,7 @@ tags:
     - References
     - Security
 date: 2025-01-18T16:51:00
-lastmod: 2025-09-10T01:02:40.386Z
+lastmod: 2025-12-24T02:27:14.705Z
 fmContentType: pages
 ---
 
@@ -121,6 +121,9 @@ Other project related operators:
 * [project-rename-operator](https://learn.microsoft.com/en-au/kusto/query/project-rename-operator?view=azure-monitor)
 * [project-reorder-operator](https://learn.microsoft.com/en-au/kusto/query/project-reorder-operator?view=azure-monitor)
 
+> [!TIP] Columns with spaces
+> If you have columns with spaces, use `[""]`. eg: `["Street Address"]`
+
 #### count operator
 
 ```kql
@@ -192,6 +195,8 @@ _GetWatchlist('NetworkAddresses')
 | extend RangeName = ["Range Name"]
 | project IPSubnet,RangeName
 ```
+
+[Other Sentinel watch lists](https://learn.microsoft.com/en-us/azure/sentinel/watchlist-schemas?source=recommendations)
 
 ## Manage KQL Queries
 
