@@ -1,13 +1,13 @@
 ---
 title: WSL Tips and Tricks
 description: Trips and Tricks to help with Windows Subsystem for Linux (WSL)
-published: false
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: null
-lastmod: 2025-12-21T06:23:47.055Z
+lastmod: 2025-12-29T03:15:42.562Z
 tags:
     - Tools
     - Windows
@@ -24,15 +24,24 @@ keywords:
 <!--- cSpell:words -->
 <!--- cSpell:ignore -->
 <!--- cSpell:disable --->
+* [Common WSL Commands](#common-wsl-commands)
 * [Remove Distro (but not uninstall WSL)](#remove-distro-but-not-uninstall-wsl)
 * [Multiples of the same distro](#multiples-of-the-same-distro)
 <!--- cSpell:enable --->
+
+## Common WSL Commands
+
+`wsl --list` / `wsl -l`:list distributions\
+`wsl --list --running`:list running distributions\
+`wsl --distribution <<distro-name-here>>`: start distribution and enter shell as default user\
+`wsl --shutdown`: shutdown all distributions and the WSL management vm\
+`wsl --help | more`: show WSL Help
 
 ## Remove Distro (but not uninstall WSL)
 
 `wsl --unregister <distro name>`
 
-Also consider uninstalling from the Microsoft Store
+Also consider uninstalling from the Microsoft Store in addition to the above.
 
 ## Multiples of the same distro
 
