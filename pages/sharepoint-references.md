@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2025-07-02T07:23:48.080Z
+lastmod: 2026-01-07T06:16:43.126Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -187,13 +187,13 @@ More Info: <https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customi
 > [!TIP] Gallery Module Easier
 > Rather than download and install the MSI its easier to install and manage the SharePoint Online PowerShell Module via PowerShell Gallery
 
-> [!NOTE] PS5 Only?
-> Not sure 100% sure but I think this module may only work in Windows PowerShell 5.1.
+> [!NOTE] PS5 vs PS7
+> If using PowerShell 7 you must import the module with the `-UseWindowsPowerShell` parameter. If you still run into issues run in Windows PowerShell.
 
 #### Install SharePoint Online PowerShell
 
-> [!TIP] PS5 not PS7
-> this module only seems to work in PS5/Windows PowerShell.
+> [!NOTE] PS5 vs PS7
+> If using PowerShell 7 you must import the module with the `-UseWindowsPowerShell` parameter. If you still run into issues run in Windows PowerShell.
 
 Commands to Install or update module
 
@@ -210,7 +210,8 @@ Update-Module -Name Microsoft.Online.SharePoint.PowerShell
 With MFA:
 
 ```powershell
-Import-Module Microsoft.Online.SharePoint.PowerShell
+# for PowerShell 7 - Remove the -UseWindowsPowerShell if using PS5
+Import-Module Microsoft.Online.SharePoint.PowerShell -UseWindowsPowerShell
 Connect-SPOService -Url https://contoso-admin.sharepoint.com
 ```
 
@@ -222,6 +223,9 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com
 [PnP PowerShell Intro](https://learn.microsoft.com/en-au/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps)\
 [PnP PowerShell](https://pnp.github.io/powershell/index.html)\
 [PnP PowerShell Cmdlets](https://pnp.github.io/powershell/cmdlets/index.html)
+
+> [!NOTE] V2 needs PS7
+> V2 onwards of the pnp.powershell module needs PowerShell 7. V1 can be used in Windows PowerShell but some stuff may not work.
 
 #### Installing
 

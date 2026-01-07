@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2025-06-30T00:31:12.752Z
+lastmod: 2026-01-07T06:21:20.800Z
 keywords:
     - Entra
     - Exchange
@@ -204,6 +204,9 @@ This can affect things like validation. Refer to [Validation Tips](sharepoint-re
 
 ### SharePoint or OneDrive Language Settings for enduser via PowerShell
 
+> [!NOTE] V2 needs PS7
+> V2 onwards of the pnp.powershell module needs PowerShell 7. V1 can be used in Windows PowerShell but some stuff may not work.
+
 <https://pnp.github.io/script-samples/spo-set-sharepoint-regional-settings/README.html?tabs=pnpps>\
 
 <https://pkbullock.com/blog/2020/the-many-ways-to-set-uk-locale-in-sharepoint/> - I think this example has a bug or two but its where the above but it gives you an idea on other options.
@@ -215,7 +218,8 @@ Refer to [PnP PowerShell in SharePoint References](sharepoint-references.md#pnp-
 <https://learn.microsoft.com/en-us/powershell/module/sharepoint-online/request-spopersonalsite?view=sharepoint-ps>
 
 ```powershell
-Import-Module Microsoft.Online.SharePoint.PowerShell
+# use -UseWindowsPowerShell if running on PowerShell 7
+Import-Module Microsoft.Online.SharePoint.PowerShell -UseWindowsPowerShell
 Connect-SPOService -Url https://<<YOUR_TENANT_NAME>>-admin.sharepoint.com
 
 $emails = "user1@contoso.com", "user2@contoso.com"
@@ -230,6 +234,10 @@ Disconnect-SPOService
 See more info about SharePoint PowerShell in [SharePoint References](sharepoint-references.md#connect-via-sharepoint-online-powershell)
 
 ## Force user to change password at next login
+
+> [!TIP] Graph PowerShell SDK **instead** of Entra Powershell
+> If you want to force a password change **only**, without changing the Password, use Graph PowerShell and not Entra PowerShell to do this.
+> Using Entra PS module for password profile management **requires** the password be changed, wereas graph does not when setting the flag.
 
 ```powershell
 # Set user account to change password on next login. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
