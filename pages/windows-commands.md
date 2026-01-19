@@ -7,7 +7,7 @@ type: pages
 layout: pages
 published: true
 date: 2024-12-31T11:24:00
-lastmod: 2025-06-20T05:37:20.448Z
+lastmod: 2026-01-19T04:40:56.474Z
 tags:
     - Commands
     - References
@@ -85,15 +85,21 @@ Get-CimInstance -ClassName Win32_OperatingSystem | Select-Object LastBootUpTime
 
 ## User Profile Management
 
-From an administrative command prompt:
+> [!WARNING] Don't just delete folders from c:\users\
+> Deleting folders of old user profiles from `c:\users` is not wise. Why?
+> If that user account ties to login again, the system registry will still expect their profile folder to be there. When it isn't, it will have an error and load a temporary profile.
+
+To <ins>***cleanly***</ins> remove old profiles from a machine run one of the following:
 
 ```bat
+rem Run this from an administrative command prompt
 rundll32.exe sysdm.cpl,EditUserProfiles
-rem OR
-
-SystemPropertiesAdvanced.exe
-rem from run (will prompt for admin)
+rem OR 
+rem run the below from anywhere (it will prompt for admin rights)
+c:\Windows\system32\SystemPropertiesAdvanced.exe
 ```
+
+Then press "Settings" inside the "User Profiles" frame. Then delete the users from there.
 
 ## Bitlocker Status
 
