@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2026-01-23T04:08:07.774Z
-lastmod: 2026-01-23T05:08:46.295Z
+lastmod: 2026-01-23T21:51:39.988Z
 tags:
     - PowerShell
     - Tips
@@ -32,6 +32,7 @@ keywords:
 * [Hash table vs array](#hash-table-vs-array)
 * [Splatting](#splatting)
 * [Importing WindowsPowerShell modules into PowerShel Core (6,7,etc)](#importing-windowspowershell-modules-into-powershel-core-67etc)
+* [Loop Labels](#loop-labels)
 <!--- cSpell:enable --->
 
 ## String vs Array of strings in Parameters
@@ -165,6 +166,39 @@ MyCmdLet `
 
 ```powershell
 Import-Module LegacyModuleName -UseWindowsPowerShell
+```
+
+## Loop Labels
+
+<https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_break?view=powershell-7.5#using-a-labeled-break-in-a-loop>
+
+*"A label can specify any loop keyword, such as **foreach**, **for**, or **while**, in a script."*
+
+```powershell
+:mylabel1 while (<condition 1>) {
+  :mylabel2 foreach ($item in $items) {
+    if (<condition 2>) {
+      break myLabel1
+    }
+    $item = $x   # A statement inside the For-loop
+  }
+}
+$a = $c  # A statement after the labeled While-loop
+```
+
+```powershell
+:red while (<condition1>) {
+  :yellow while (<condition2>) {
+    while (<condition3>) {
+      if ($a) {break}
+      if ($b) {break red}
+      if ($c) {break yellow}
+    }
+    Write-Host "After innermost loop"
+  }
+  Write-Host "After yellow loop"
+}
+Write-Host "After red loop"
 ```
 
 <!-- cSpell:ignore toolname -->
