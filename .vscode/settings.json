@@ -102,6 +102,10 @@
     // "frontMatter.global.timezone": "AEST",
     "frontMatter.site.baseURL": "https://tlourey.github.io",
     "frontMatter.templates.enabled": true,
-    "frontMatter.panel.openOnSupportedFile": true
+    "frontMatter.panel.openOnSupportedFile": true,
+    "github.copilot.enable": {
+        "*": false
+    },
+    "github.copilot.nextEditSuggestions.enabled": false
 
 }
