@@ -1,13 +1,13 @@
 ---
 title: Microsoft Teams Tips
 description: Tips, tricks and shortcuts for MS Teams
-published: false
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2026-02-04T04:34:49.322Z
+lastmod: 2026-02-04T04:35:32.337Z
 tags:
     - Microsoft365
     - Teams
