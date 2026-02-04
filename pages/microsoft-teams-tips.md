@@ -7,12 +7,12 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T05:30:26.931Z
-lastmod: 2025-06-30T00:31:16.914Z
+lastmod: 2026-02-04T04:34:49.322Z
 tags:
     - Microsoft365
     - Teams
     - Tips
-isdraft: truedele
+isdraft: true
 fmContentType: pages
 preview: ""
 keywords:
@@ -41,7 +41,7 @@ keywords:
 |Area|Function|Desktop Shortcut|Webapp shortcut|
 |---|---|---|---|
 |Meetings & Calls|Temporarly unmute|<kbd>CTRL</kbd>+<kbd>Spacebar</kbd>|<kbd>CTRL</kbd>+<kbd>Spacebar</kbd>|
-|Meetings & Calls|Ummute|<kbd>Win+Alt+K</kbd> or <br> <kbd>Ctrl+Shift+M</kbd>| <kbd>Win+Alt+K</kbd> or <br> <kbd>Ctrl+Shift+M</kbd> |
+|Meetings & Calls|Ummute|<kbd>Win+Alt+K</kbd> or <br> <kbd>Ctrl+Shift+M</kbd>|<kbd>Win+Alt+K</kbd> or <br> <kbd>Ctrl+Shift+M</kbd>|
 |Meetings & Calls|End audio or video call|<kbd>Ctrl+Shift+H</kbd>|<kbd>Ctrl+Shift+H</kbd>|
 |Meetings & Calls|Decide a call|<kbd>CTRL+Shift+D</kbd>|<kbd>CTRL+Shift+D</kbd>|
 |Meetings & Calls|Start a video call|<kbd>Alt+Shift+V</kbd>|<kbd>Alt+Shift+V</kbd>|
@@ -54,7 +54,7 @@ keywords:
 |Chat|Mark as important|<kbd>Ctrl+Shift+I</kbd>|<kbd>Ctrl+Shift+I</kbd>|
 |Chat|Expand compose box|<kbd>CTRL+Shif+X</kbd>|<kbd>CTRL+Shif+X</kbd>|
 |Chat|Insert link|<kbd>CTRL+K</kbd>|<kbd>CTRL+K</kbd>|
-|Chat|Paragraph style| <kbd>CTRL+Alt+P</kbd>| <kbd>CTRL+Alt+P</kbd> |
+|Chat|Paragraph style|<kbd>CTRL+Alt+P</kbd>|<kbd>CTRL+Alt+P</kbd>|
 |Chat|Insert code blocks|<kbd>Ctrl+Shift+Alt+B</kbd>|<kbd>Ctrl+Shift+Alt+B</kbd>|
 |Chat|Insert inline code|<kbd>Ctrl+Shift+Alt+C</kbd>|<kbd>Ctrl+Shift+Alt+C</kbd>|
 |Chat|Insert code|<kbd>Ctrl+Alt+5</kbd>|<kbd>Ctrl+Alt+5</kbd>|
@@ -119,10 +119,10 @@ Method 2 allows a lot more control for dev
 The manual hacky way:
 
 | Parameters                | Description                           |
-|------------------------|---------------------------------------|
-| href  | the url to share|
-| msgText | message text |
-| Referrer           | the url that sent it                 |
+|---------------------------|---------------------------------------|
+| href                      | the url to share                      |
+| msgText                   | message text                          |
+| Referrer                  | the url that sent it                  |
 
 Examples:
 
