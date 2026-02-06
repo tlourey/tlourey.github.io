@@ -11,7 +11,7 @@ tags:
     - Memes
 fmContentType: pages
 date: 2025-01-24T19:30:00
-lastmod: 2025-10-11T02:24:15.847Z
+lastmod: 2026-02-06T06:34:31.928Z
 ---
 
 <!--- cSpell:words -->
@@ -45,6 +45,7 @@ lastmod: 2025-10-11T02:24:15.847Z
 * [JFC](#jfc)
 * [This will not end well](#this-will-not-end-well)
 * [If he dies, he dies](#if-he-dies-he-dies)
+* [Hitman Monkey](#hitman-monkey)
 * [Computer says no](#computer-says-no)
 * [Naked Gun Facepalm](#naked-gun-facepalm)
 * [Old man yells at cloud](#old-man-yells-at-cloud)
@@ -257,6 +258,13 @@ The PG Version:
 
 [![Picture](/assets/images/if-he-dies-he-dies.gif)](/assets/images/if-he-dies-he-dies.gif)\
 <https://tenor.com/en-AU/view/rocky-iv-dolph-lundgren-captain-ivan-drago-if-he-dies-he-dies-dies-gif-4956349>
+
+[Top](#content)
+
+## Hitman Monkey
+
+[![Picture](/assets/images/hitman-monkey.jpg)](/assets/images/hitman-monkey.jpg)\
+<https://www.reddit.com/r/funny/comments/3w7ior/the_life_of_the_hitman_monkey/>
 
 [Top](#content)
 
