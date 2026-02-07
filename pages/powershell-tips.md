@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2026-02-07T06:11:51.980Z
+lastmod: 2026-02-07T06:43:40.712Z
 tags:
     - Tips
     - PowerShell
@@ -33,7 +33,7 @@ keywords:
 * [Traps and Gotchas](#traps-and-gotchas)
   * [Invoke-WebRequest and Invoke-RestMethod on PS5](#invoke-webrequest-and-invoke-restmethod-on-ps5)
 * [Module specific tips and Tricks](#module-specific-tips-and-tricks)
-  * [ActiveDirectory](#activedirectory)
+  * [ActiveDirectory PowerShell Module](#activedirectory-powershell-module)
   * [Other Modules Tips and Tricks in other pages](#other-modules-tips-and-tricks-in-other-pages)
 * [PowerShell Resources](#powershell-resources)
 <!--- cSpell:enable --->
@@ -118,7 +118,7 @@ Also check [Misc Tools](misc-tools.md#powershell-tools)
 
 ## Module specific tips and Tricks
 
-### ActiveDirectory
+### ActiveDirectory PowerShell Module
 
 When importing ActiveDirectory module it tries to connect, and makes a new PS Drive with the creds you're running as.
 
@@ -130,13 +130,27 @@ The following allows this.
 # Stop AD Module auto creating a drive
 $Env:ADPS_LoadDefaultDrive = 0
 Import-Module ActiveDirectory
-New-PSDrive -Name AD -PSProvider ActiveDirectory -Root "//RootDSE/" -Server "localhost" -Credential (Get-Credential)
+New-PSDrive -Name AD -PSProvider ActiveDirectory -Root "//RootDSE/" -Server "localhost" -Credential (Get-Credential) -Scope Global
 Set-Location AD:
 ```
+
+Scope needs to be **global** if running from inside scripts according to others.
+
+Some Alternates:
+
+<https://serverfault.com/a/1095167>
+
+Sources:
+
+* [PowerTip: Avoid Loading the AD: Drive with the Active Directory Module](https://devblogs.microsoft.com/scripting/powertip-avoid-loading-the-ad-drive-with-the-active-directory-module/)
+* [Playing with the AD: Drive for Fun and Profit](https://devblogs.microsoft.com/scripting/playing-with-the-ad-drive-for-fun-and-profit/)
 
 > [!TIP] Port forwarding for ActiveDirectory PowerShell
 > If you want to use something like SSH Port Forwarding to connect your local PowerShell instance with ActiveDirectory using different creds, Port forward localhost:9389 to domaincontroller:9389
 > 9389 is ActiveDirectory Web Services
+
+> [!NOTE] Specify Server if not in AD PSDrive
+> When using the above, you may need to either specify the server name on every ActiveDirectory CmdLet OR run all commands after you set location to the AD Drive.
 
 ### Other Modules Tips and Tricks in other pages
 
