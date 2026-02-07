@@ -7,13 +7,18 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-01T01:47:46.278Z
-lastmod: 2025-05-25T04:26:07.490Z
+lastmod: 2026-02-07T06:11:51.980Z
 tags:
     - Tips
     - PowerShell
 isdraft: true
 fmContentType: pages
 preview: ""
+keywords:
+    - modules
+    - powershell
+    - tips
+    - tricks
 ---
 
 <!--- cSpell:disable --->
@@ -27,6 +32,9 @@ preview: ""
 * [Tools](#tools)
 * [Traps and Gotchas](#traps-and-gotchas)
   * [Invoke-WebRequest and Invoke-RestMethod on PS5](#invoke-webrequest-and-invoke-restmethod-on-ps5)
+* [Module specific tips and Tricks](#module-specific-tips-and-tricks)
+  * [ActiveDirectory](#activedirectory)
+  * [Other Modules Tips and Tricks in other pages](#other-modules-tips-and-tricks-in-other-pages)
 * [PowerShell Resources](#powershell-resources)
 <!--- cSpell:enable --->
 
@@ -107,6 +115,35 @@ Also check [Misc Tools](misc-tools.md#powershell-tools)
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-7.5#-authentication>\
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-5.1>\
 <https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-restmethod?view=powershell-7.5#-authentication>
+
+## Module specific tips and Tricks
+
+### ActiveDirectory
+
+When importing ActiveDirectory module it tries to connect, and makes a new PS Drive with the creds you're running as.
+
+You may want to connect to a different server or a port forward to a different box via ssh, use different creds or both.
+
+The following allows this.
+
+```powershell
+# Stop AD Module auto creating a drive
+$Env:ADPS_LoadDefaultDrive = 0
+Import-Module ActiveDirectory
+New-PSDrive -Name AD -PSProvider ActiveDirectory -Root "//RootDSE/" -Server "localhost" -Credential (Get-Credential)
+Set-Location AD:
+```
+
+> [!TIP] Port forwarding for ActiveDirectory PowerShell
+> If you want to use something like SSH Port Forwarding to connect your local PowerShell instance with ActiveDirectory using different creds, Port forward localhost:9389 to domaincontroller:9389
+> 9389 is ActiveDirectory Web Services
+
+### Other Modules Tips and Tricks in other pages
+
+[PnP PowerShell](sharepoint-references.md#pnp-powershell) - PS7 with `import-module -UseWindowsPowerShell` & caution when running inside VSCode\
+[SharePoint Online PowerShell](sharepoint-references.md#sharepoint-online-powershell) - PS5 best & caution when running inside VSCode\
+[Using VSCode with PnP PowerShell](sharepoint-references.md#using-vscode-with-pnp-powershell)\
+[Exchange Commands](exchange-commands.md#exchange-online-powershell)
 
 ## PowerShell Resources
 

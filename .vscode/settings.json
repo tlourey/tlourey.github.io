@@ -106,6 +106,7 @@
     "github.copilot.enable": {
         "*": false
     },
-    "github.copilot.nextEditSuggestions.enabled": false
+    "github.copilot.nextEditSuggestions.enabled": false,
+    "terminal.integrated.hideOnStartup": "always"
 
 }

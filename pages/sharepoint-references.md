@@ -11,7 +11,7 @@ tags:
     - SharePoint
     - References
 fmContentType: pages
-lastmod: 2026-01-07T06:16:43.126Z
+lastmod: 2026-02-07T06:12:23.305Z
 date: 2025-01-28T05:47:28.059Z
 ---
 
@@ -33,8 +33,9 @@ date: 2025-01-28T05:47:28.059Z
     * [Install SharePoint Online PowerShell](#install-sharepoint-online-powershell)
     * [Connect via SharePoint Online PowerShell](#connect-via-sharepoint-online-powershell)
   * [PnP PowerShell](#pnp-powershell)
-    * [Installing](#installing)
-    * [Connecting](#connecting)
+    * [Installing PnP PowerShell](#installing-pnp-powershell)
+    * [Connecting PnP PowerShell](#connecting-pnp-powershell)
+    * [Using VSCode with PnP PowerShell](#using-vscode-with-pnp-powershell)
   * [PnP Provisioning Engine](#pnp-provisioning-engine)
   * [CSOM](#csom)
 * [Permissions](#permissions)
@@ -227,7 +228,7 @@ Connect-SPOService -Url https://contoso-admin.sharepoint.com
 > [!NOTE] V2 needs PS7
 > V2 onwards of the pnp.powershell module needs PowerShell 7. V1 can be used in Windows PowerShell but some stuff may not work.
 
-#### Installing
+#### Installing PnP PowerShell
 
 ```powershell
 Install-Module PnP.PowerShell -Scope CurrentUser
@@ -243,7 +244,7 @@ Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP Rocks" -Tenant [
 > [!TIP] Whats in a name
 > You can change the name away from PnP Rocks to something else if you want just note it and the application id down.
 
-#### Connecting
+#### Connecting PnP PowerShell
 
 <https://pnp.github.io/powershell/articles/authentication.html>
 
@@ -252,6 +253,12 @@ Connect-PnPOnline [Your-Tenant-Name].sharepoint.com -Interactive -ClientId <clie
 # OR
 Connect-PnPOnline [Your-Tenant-Name].sharepoint.com -DeviceLogin -Tenant Your-Tenant-Name.onmicrosoft.com -ClientId <client id of your Entra ID Application Registration>
 ```
+
+#### Using VSCode with PnP PowerShell
+
+> [!WARNING] Running PnP PowerShell and VSCode
+> Use caution if running PnP Module in PowerShell Scripts in VSCode. Its known to have stragne Issues
+> Refer to <https://stackoverflow.com/questions/78491086/get-pnpsitetemplate-gets-stuck-for-a-long-time-on-certain-handlers>
 
 ### PnP Provisioning Engine
 
@@ -303,10 +310,10 @@ The result codes don't exactly match whats in the drop down.
 
 |PowerShell sharingcapability result|External Sharing Drop Down value|
 |--|--|
-|ExternalUserAndGuestSharing| Anyone|
-|ExternalUserSharingOnly | New and Existing Guests|
-|ExistingExternalUserSharingOnly | Existing Guests|
-| Disabed | Only People in your Organisation|
+|ExternalUserAndGuestSharing|Anyone|
+|ExternalUserSharingOnly|New and Existing Guests|
+|ExistingExternalUserSharingOnly|Existing Guests|
+|Disabed|Only People in your Organisation|
 
 ## Lockdown Sites
 
