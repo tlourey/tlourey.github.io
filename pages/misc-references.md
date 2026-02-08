@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2025-10-23T05:21:02.810Z
+lastmod: 2026-02-08T04:23:29.517Z
 fmContentType: pages
 ---
 
@@ -284,4 +284,5 @@ From: <https://ahrefs.com/blog/google-advanced-search-operators/>
 
 ## Misc Misc Misc
 
-[Formatting Sandbox](https://meta.stackexchange.com/questions/3122/formatting-sandbox/327695#327695)
+[Formatting Sandbox](https://meta.stackexchange.com/questions/3122/formatting-sandbox/327695#327695)\
+[Zytrax info](https://www.zytrax.com/tech/) - very deep stuff on common topics. Had the stuff on SPF macros i've never heard of. Plus has SS7 and 100 other tech topics big ones are DNS and LDAP.
