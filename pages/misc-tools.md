@@ -19,7 +19,7 @@ tags:
     - Provisioning
 fmContentType: pages
 date: 2025-01-20T20:00:00
-lastmod: 2025-10-23T04:24:41.748Z
+lastmod: 2026-02-08T03:21:35.464Z
 keywords:
     - Tools
 ---
@@ -333,7 +333,8 @@ Also often includes abuse functions
 
 **<https://dmarcian.com/dmarc-tools/>** - there are a bunch of tools here that I recommend\
 <https://dmarcly.com/tools/>\
-**<https://www.appmaildev.com>** - haven't used much but it seems to be getting better and better
+**<https://www.appmaildev.com>** - haven't used much but it seems to be getting better and better\
+<https://www.learndmarc.com/> - a very visual DMARC, DKIM and SFP tester, header parser and learning tool.
 
 > [!TIP] TIP
 > Links to Exchange and Exchange Online Header Messages are in [Microsoft 365 Tips](microsoft-365-tips.md#exchange-email-header-references)
