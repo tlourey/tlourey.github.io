@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2025-10-11T11:22:52.193Z
+lastmod: 2026-02-19T07:20:35.792Z
 tags:
     - Commands
     - Networks
@@ -364,12 +364,14 @@ cablestatus 1/0/X
 
 From the Netgear M4200 and M4300 Series ProSAFE - Managed SwitchesCLI - Command Reference Manual - Software Version 12.0.2 0 - February 2018 (Page 312):
 
-> _Cable Status: One of the following statuses is returned:\
+> Cable Status: One of the following statuses is returned:
 >
-> * Normal. The cable is working correctly.\
-> * Open. The cable is disconnected or there is a faulty connector.\
-> * Short. There is an electrical short in the cable.\
-> * Cable Test Failed. The cable status could not be determined. The cable may in fact be working._
+> * Normal. The cable is working correctly.
+> * Open. The cable is disconnected or there is a faulty connector.
+> * Short. There is an electrical short in the cable.
+> * Cable Test Failed. The cable status could not be determined. The cable may in fact be working.
+> * Crosstalk: Not in manual but can get returned. Google it.
+> * No Cable: Not in manual but can get returned. Google it.
 >
 > _Cable Length: If this feature is supported by the PHY for the current link speed, the cable length is displayed as a range between the shortest estimated length and the longest estimated length. Note that if the link is down and a cable is attached to a 10/100 Ethernet adapter, then the cable status may display as Open or Short because some Ethernet adapters leave unused wire pairs unterminated or grounded. Unknown is displayed if the cable length could not be determined_
 
