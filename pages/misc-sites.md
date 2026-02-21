@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2025-04-29T07:09:23.953Z
+lastmod: 2026-02-21T21:38:16.962Z
 tags:
     - References
     - Tools
@@ -98,6 +98,8 @@ Windy Help Videos (still haven't watched them):
 ## Notes and Learnings
 
 <https://renenyffenegger.ch/notes/index.html>
+
+See Also [Misc Misc Misc](misc-references.md#misc-misc-misc)
 
 ## Australian Politiics
 

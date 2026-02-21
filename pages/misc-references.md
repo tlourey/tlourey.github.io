@@ -10,7 +10,7 @@ isdraft: false
 tags:
     - References
 date: 2025-01-18T16:52:00
-lastmod: 2026-02-08T04:23:29.517Z
+lastmod: 2026-02-21T21:38:02.263Z
 fmContentType: pages
 ---
 
@@ -26,7 +26,7 @@ fmContentType: pages
     * [RFC1628 - Generic UPS Management Information Base](#rfc1628---generic-ups-management-information-base)
   * [Markdown](#markdown)
   * [Linux Standards](#linux-standards)
-  * [Misc](#misc)
+  * [Misc Standards](#misc-standards)
 * [Linux](#linux)
   * [Debian Manuals](#debian-manuals)
   * [Ubuntu Manuals](#ubuntu-manuals)
@@ -114,7 +114,7 @@ Refer to [Markdown Tips](./markdown-tips.html)
 
 **<https://ss64.com/>** - amazing command line reference resource for Windows, PowerShell, Mac, Linux and more
 
-### Misc
+### Misc Standards
 
 <https://en.wikipedia.org/wiki/Well-known_URI>\
 <https://en.wikipedia.org/wiki/Security.txt> / <https://securitytxt.org/>
@@ -285,4 +285,5 @@ From: <https://ahrefs.com/blog/google-advanced-search-operators/>
 ## Misc Misc Misc
 
 [Formatting Sandbox](https://meta.stackexchange.com/questions/3122/formatting-sandbox/327695#327695)\
-[Zytrax info](https://www.zytrax.com/tech/) - very deep stuff on common topics. Had the stuff on SPF macros i've never heard of. Plus has SS7 and 100 other tech topics big ones are DNS and LDAP.
+[Zytrax info](https://www.zytrax.com/tech/) - very deep stuff on common topics. Had the stuff on SPF macros i've never heard of. Plus has SS7 and 100 other tech topics big ones are DNS and LDAP.\
+<https://renenyffenegger.ch/notes/index.html>
