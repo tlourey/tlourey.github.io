@@ -1,13 +1,13 @@
 ---
 title: App Domain Verifications and Restrictions
-description: TBC
-published: false
+description: A list of DNS based domain verification information collected, often used in SaaS. It will never be complete.
+published: true
 categories:
     - Tech
 type: pages
 layout: pages
 date: 2024-12-12T18:04:19.415Z
-lastmod: 2025-05-14T00:19:54.949Z
+lastmod: 2026-02-21T01:29:00.750Z
 tags:
     - DNS
     - Security
@@ -23,6 +23,7 @@ keywords:
 ---
 
 <!--- cSpell:disable --->
+* [Overview](#overview)
 * [Vendors](#vendors)
   * [Slack](#slack)
   * [monday.com](#mondaycom)
@@ -79,6 +80,10 @@ Record Value Format: `-verification=<random characters>`
 Extra Instance Blocking Available: TBA
 Extra Instance Blocking Info: <>
 -->
+
+## Overview
+
+This page lists DNS based domain verification information i've collected that are often used in SaaS. These are often (but not always) [TXT Records](https://en.wikipedia.org/wiki/TXT_record). It will soon leave draft, but it will never be complete.
 
 ## Vendors
 
