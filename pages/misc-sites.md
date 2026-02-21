@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-27T08:23:28.081Z
-lastmod: 2026-02-21T21:38:16.962Z
+lastmod: 2026-02-21T21:41:58.718Z
 tags:
     - References
     - Tools
@@ -97,7 +97,9 @@ Windy Help Videos (still haven't watched them):
 
 ## Notes and Learnings
 
-<https://renenyffenegger.ch/notes/index.html>
+[Formatting Sandbox](https://meta.stackexchange.com/questions/3122/formatting-sandbox/327695#327695)\
+[Zytrax info](https://www.zytrax.com/tech/) - very deep stuff on common topics. Had the stuff on SPF macros i've never heard of. Plus has SS7 and 100 other tech topics big ones are DNS and LDAP.\
+[Notes](https://renenyffenegger.ch/notes/index.html) - Misc Notes Site found
 
 See Also [Misc Misc Misc](misc-references.md#misc-misc-misc)
 
