@@ -8,7 +8,7 @@ type: pages
 layout: pages
 isdraft: true
 date: 2025-01-17T11:12:00
-lastmod: 2025-04-09T14:43:55.274Z
+lastmod: 2026-03-11T05:24:56.657Z
 tags:
     - Commands
     - References
@@ -37,6 +37,7 @@ keywords:
 * [EdgeRouter](#edgerouter)
   * [Strange issues when uploading firmware](#strange-issues-when-uploading-firmware)
   * [MAC Address Searching on command line](#mac-address-searching-on-command-line)
+  * [VPN Troubleshooting Commands](#vpn-troubleshooting-commands)
   * [EdgeRouter Help Refs](#edgerouter-help-refs)
 * [UISP](#uisp)
   * [When restoring to another device](#when-restoring-to-another-device)
@@ -136,6 +137,19 @@ If all else fails you can look into [uploading a config using SSH/SFTP](https://
 ### MAC Address Searching on command line
 
 `sudo arp -n | grep -i ab:cd:ef:12:34:56`
+
+### VPN Troubleshooting Commands
+
+Note all but some edgerouter vpn troubleshooting commands
+
+```bash
+show vpn log
+show vpn log tail
+show vpn debug ?
+show vpn ike ?
+show vpn ipsec ?
+sudo swanctl --log
+```
 
 ### EdgeRouter Help Refs
 
