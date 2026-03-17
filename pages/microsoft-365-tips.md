@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2026-01-07T06:21:20.800Z
+lastmod: 2026-03-17T23:24:36.863Z
 keywords:
     - Entra
     - Exchange
@@ -238,6 +238,8 @@ See more info about SharePoint PowerShell in [SharePoint References](sharepoint-
 > [!TIP] Graph PowerShell SDK **instead** of Entra Powershell
 > If you want to force a password change **only**, without changing the Password, use Graph PowerShell and not Entra PowerShell to do this.
 > Using Entra PS module for password profile management **requires** the password be changed, wereas graph does not when setting the flag.
+
+The below requires the Microsoft.Graph.Users PowerShell module
 
 ```powershell
 # Set user account to change password on next login. Assumes Microsoft.Graph.Users or Microsoft.Graph module is already installed.
