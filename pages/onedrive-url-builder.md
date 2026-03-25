@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: null
-lastmod: 2026-03-25T04:24:16.850Z
+lastmod: 2026-03-25T04:26:56.198Z
 tags:
     - SharePoint
     - Tips
@@ -32,14 +32,14 @@ keywords:
 
 ## OneDrive URLs
 
-Recycling Bin: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/AdminRecycleBin.aspx?view=5`\
-Second Stage Recycling bin: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/AdminRecycleBin.aspx?view=13`\
-Settings: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/settings.aspx`\
-Storage Metrics: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/storman.aspx`\
-Site Collection Administrators: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/mngsiteadmin.aspx`\
-Site Contents: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/viewlsts.aspx`\
-Site Contents (with view): `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/viewlsts.aspx?view=14`\
-Site Analytics: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/siteanalytics.aspx`\
+Recycling Bin: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/AdminRecycleBin.aspx?view=5`\
+Second Stage Recycling bin: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/AdminRecycleBin.aspx?view=13`\
+Settings: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/settings.aspx`\
+Storage Metrics: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/storman.aspx`\
+Site Collection Administrators: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/mngsiteadmin.aspx`\
+Site Contents: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/viewlsts.aspx`\
+Site Contents (with view): `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/viewlsts.aspx?view=14`\
+Site Analytics: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/siteanalytics.aspx`\
 
 <!-- cSpell:ignore toolname -->
 <!--
