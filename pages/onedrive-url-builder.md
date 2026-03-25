@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: null
-lastmod: 2026-03-25T04:26:56.198Z
+lastmod: 2026-03-25T04:35:51.389Z
 tags:
     - SharePoint
     - Tips
@@ -39,7 +39,9 @@ Storage Metrics: `https://tenantname-my.sharepoint.com/personal/first_last_domai
 Site Collection Administrators: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/mngsiteadmin.aspx`\
 Site Contents: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/viewlsts.aspx`\
 Site Contents (with view): `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/viewlsts.aspx?view=14`\
-Site Analytics: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/siteanalytics.aspx`\
+Site Analytics: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/_layouts/15/siteanalytics.aspx`
+
+Documents: `https://tenantname-my.sharepoint.com/personal/first_last_domain_tld/Documents/Forms/All.aspx`
 
 <!-- cSpell:ignore toolname -->
 <!--
