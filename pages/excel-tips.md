@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T08:13:44.845Z
-lastmod: 2025-06-28T06:08:40.247Z
+lastmod: 2026-04-11T01:04:21.726Z
 tags:
     - Office
     - Tips
@@ -132,8 +132,14 @@ Also add some time (10 hours to convert to AEST): `=(DATEVALUE(MID(A2,1,10))+TIM
 
 ### Custom Formatting
 
+[Review guidelines for customizing a number format](https://support.microsoft.com/en-au/office/review-guidelines-for-customizing-a-number-format-c0a1d1fa-d3f4-4018-96b7-9c9354dd99f5)\
+[Custom Excel number format](https://www.ablebits.com/office-addins-blog/custom-excel-number-format/)
+
 `d/mm/yyyy h:mm`: date and time with 24h time\
 `d/mm/yyyy h:mm AM/PM`: Date and time with 12h time **(Non-Standard)**
+
+> [!NOTE] Undocumented Uses
+> I have seen a couple of instances in the last few years of really strange format codes that are undocumented and do odd things. Some of this may have been due to Copilot generating stuff, or Excel for the web
 
 ## Pivots
 
