@@ -19,7 +19,7 @@ tags:
     - Email
 fmContentType: pages
 date: 2025-01-26T06:42:13.247Z
-lastmod: 2026-03-17T23:24:36.863Z
+lastmod: 2026-05-29T02:29:01.828Z
 keywords:
     - Entra
     - Exchange
@@ -38,6 +38,7 @@ keywords:
 * [Microsoft 365 Language Settings](#microsoft-365-language-settings)
   * [Configuring Preferred Language for users](#configuring-preferred-language-for-users)
   * [Exchange Language Settings for end user via PowerShell](#exchange-language-settings-for-end-user-via-powershell)
+    * [Exchange Working Hours](#exchange-working-hours)
   * [OneDrive Language Settings for end user via Web](#onedrive-language-settings-for-end-user-via-web)
   * [SharePoint Language Settings for end user via web](#sharepoint-language-settings-for-end-user-via-web)
   * [SharePoint or OneDrive Language Settings for enduser via PowerShell](#sharepoint-or-onedrive-language-settings-for-enduser-via-powershell)
@@ -184,6 +185,13 @@ See [Installing Modules in PowerShell Tips](powershell-tips.md#installing-module
 
 > [!TIP] TIP
 > Graph may be able to do the same but I haven't looked into it yet. For those who are keen you can look into: [Update-MgUserMailboxSetting](https://learn.microsoft.com/en-us/powershell/module/microsoft.graph.users/update-mgusermailboxsetting?view=graph-powershell-1.0)
+
+#### Exchange Working Hours
+
+You should set the working hours timezone. While not directly language related, you it is timezone related. And its an easy nice to have. 
+
+`Set-MailboxCalendarConfiguration -Identity $upn -WorkingHoursTimeZone "AUS Eastern Standard Time"`\
+<https://learn.microsoft.com/en-au/powershell/module/exchangepowershell/set-mailboxcalendarconfiguration?view=exchange-ps>
 
 ### OneDrive Language Settings for end user via Web
 
