@@ -8,7 +8,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-02-20T06:58:16.807Z
-lastmod: 2025-08-22T01:35:17.828Z
+lastmod: 2026-05-29T13:03:46.925Z
 tags:
     - References
     - Tips
@@ -45,3 +45,5 @@ preview: ""
 |Stock Market Percentage Points | Percentage Points | In the stock market, "percentage points" often refer to the change in percentage terms, or basis points (bps), which represent 1/100th of 1%. Understanding these concepts helps investors analyze the performance and volatility of their investment | * Finance <br/> * Shares/Stocks  | * A basis point is a unit of measure representing 0.01% or 1/100th of a percentage point. <br/> * For example, an increase of 1% is equivalent to 100 basis points. <br/> * They are commonly used to express changes in interest rates, bond yields, or other financial instruments. | [Investopedia](https://www.investopedia.com/ask/answers/stock-points-meaning/) |
 | Read-eval-print loop | REPL | A read-eval-print loop (REPL), also termed an interactive toplevel or language shell, is a simple interactive computer programming environment that takes single user inputs, executes them, and returns the result to the user; a program written in a REPL environment is executed piecewise. | * Systems <br/> * Shells | Python Shell is an REPL. There are others | [Wikipedia](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) |
 | Net Present Value | NPV | NPV is a way to figure out if a project or investment is *worth it* by calculating how much future money is really worth today. It's a way of measuring the value of an asset that has cashflow by adding up the present value of all the future cash flows that asset will generate | * Tenders <br/> * Finance <br/> * Contracts <br/> * Forecasting | Affects modelling when looking at forecosting costs over a long period of time | [Wikipedia](https://en.wikipedia.org/wiki/Net_present_value) |
+| Internal Rate of Return | IRR | In finance and business, it is a metric used to estimate the profitability of potential investments. It represents the annualized effective compounded rate of return that makes the net present value of all cash flows (both positive and negative) exactly equal to zero. | * Finance <br/> | | [Wikipedia](https://en.wikipedia.org/wiki/Internal_rate_of_return) |
+| Monthly Recurring Revenue | MRR | It is the predictable total income a company generates from active subscriptions every month. | * Finance <br/> | MRR = Total Active Users x Average Revenue Per User (ARPU) | [Wikipedia](https://en.wikipedia.org/wiki/Revenue_stream#Recurring_revenue) |
