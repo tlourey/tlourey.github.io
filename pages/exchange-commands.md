@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T13:03:20.971Z
-lastmod: 2025-07-12T03:52:05.983Z
+lastmod: 2026-06-17T06:36:57.358Z
 tags:
     - Exchange
     - Microsoft365
@@ -34,6 +34,11 @@ keywords:
   * [Mailbox Access Checks](#mailbox-access-checks)
   * [Mailbox Access](#mailbox-access)
   * [Shared Mailbox Sent Items settings](#shared-mailbox-sent-items-settings)
+  * [Group stuff](#group-stuff)
+    * [Unified Groups (aka Microsoft 365 Groups)](#unified-groups-aka-microsoft-365-groups)
+    * [Distribution Groups](#distribution-groups)
+    * [Mail Enabled Security Groups](#mail-enabled-security-groups)
+    * [Dynamic Groups](#dynamic-groups)
   * [Exchange Audit Log search](#exchange-audit-log-search)
     * [Searching for Exchange Transport Rule Changes](#searching-for-exchange-transport-rule-changes)
     * [Searching for Exchange Transport Connector Changes](#searching-for-exchange-transport-connector-changes)
@@ -234,6 +239,7 @@ Full Access
 ```powershell
 Add-MailboxPermission -Identity <MailboxIdentity> -User <DelegateIdentity> -AccessRights FullAccess -InheritanceType All
 Remove-MailboxPermission -Identity <MailboxIdentity> -User <DelegateIdentity> -AccessRights FullAccess -InheritanceType All
+# Remember: Only 1 <DelegateIdentity> at a time
 
 # This example assigns the delegate Raymond Sam the Full Access permission to the mailbox of Terry Adams.
 Add-MailboxPermission -Identity "Terry Adams" -User raymonds -AccessRights FullAccess -InheritanceType All
@@ -246,15 +252,26 @@ Add-MailboxPermission -Identity "Terry Adams" -User raymonds -AccessRights FullA
 Get-MailboxPermission <MailboxIdentity> | where {$_.AccessRights -like 'Full*'} | Format-Table User,Deny,IsInherited,AccessRights -Auto
 ```
 
+<https://learn.microsoft.com/en-au/powershell/module/exchangepowershell/add-mailboxpermission?view=exchange-ps>\
+<https://learn.microsoft.com/en-au/powershell/module/exchangepowershell/remove-mailboxpermission?view=exchange-ps>\
+<https://learn.microsoft.com/en-au/powershell/module/exchangepowershell/get-mailboxpermission?view=exchange-ps>\
+<https://learn.microsoft.com/en-us/troubleshoot/outlook/profiles-and-accounts/full-access-mailbox-not-automapped-outlook-profile>
+
 Send as
 
 ```powershell
 # This example assigns the Send As permission to the Printer Support group on the shared mailbox named Contoso Printer Support.
 Add-RecipientPermission -Identity "Contoso Printer Support" -Trustee "Printer Support" -AccessRights SendAs
 
+# the same as above but doesn't confirm - use with caution
+Add-RecipientPermission -Identity "Contoso Printer Support" -Trustee "Printer Support" -AccessRights SendAs -confirm:$false
+
 # To test it worked:
 Get-RecipientPermission -Identity <MailboxIdentity> -Trustee <DelegateIdentity>
 ```
+
+<https://learn.microsoft.com/en-au/powershell/module/exchangepowershell/add-recipientpermission?view=exchange-ps>\
+<https://learn.microsoft.com/en-au/powershell/module/exchangepowershell/get-recipientpermission?view=exchange-ps>
 
 Send be behalf
 
@@ -273,6 +290,8 @@ Set-DistributionGroup -Identity printersupport@contoso.com -GrantSendOnBehalfTo 
 Set-DynamicDistributionGroup "All Employees" -GrantSendOnBehalfTo @{Remove="Administrator"}
 ```
 
+More <https://learn.microsoft.com/en-au/powershell/module/exchange/set-mailbox?view=exchange-ps>
+
 ### Shared Mailbox Sent Items settings
 
 From <https://www.slipstick.com/exchange/save-items-shared-mailbox-exchange-server-cmdlet/#:~:text=Cmdlet%20for%20Exchange%202013%20CU9%20and%20Office%20365>
@@ -286,6 +305,41 @@ Set-Mailbox <sharedmailboxname> -MessageCopyForSendOnBehalfEnabled $True
 ```
 
 More <https://learn.microsoft.com/en-us/powershell/module/exchange/set-mailbox?view=exchange-ps>
+
+### Group stuff
+
+> [!NOTE] AD Controlled Groups
+> Most of these commands don't work for groups that are "directory backed" aka synced from on prem ad. This is mostly for Distribution Groups, Security Groups and Mail Enabled Security Groups.
+
+#### Unified Groups (aka Microsoft 365 Groups)
+
+<https://learn.microsoft.com/en-au/powershell/module/exchangepowershell/add-unifiedgrouplinks?view=exchange-ps>
+
+Get-UnifiedGroup\
+Get-UnifiedGroupLinks\
+New-UnifiedGroup\
+Remove-UnifiedGroup\
+Remove-UnifiedGroupLinks\
+Set-UnifiedGroup\
+Undo-SoftDeletedUnifiedGroup\
+
+```powershell
+Add-UnifiedGroupLinks -Identity "Legal Department" -LinkType Members -Links chris@contoso.com,michelle@contoso.com
+
+MORE TBC
+```
+
+#### Distribution Groups
+
+TBC
+
+#### Mail Enabled Security Groups
+
+TBC
+
+#### Dynamic Groups
+
+TBC
 
 ### Exchange Audit Log search
 
