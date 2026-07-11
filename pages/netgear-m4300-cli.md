@@ -8,7 +8,7 @@ layout: pages
 published: true
 isdraft: false
 date: 2024-11-02T11:39:00
-lastmod: 2026-02-19T07:20:35.792Z
+lastmod: 2026-07-11T06:13:34.279Z
 tags:
     - Commands
     - Networks
@@ -18,6 +18,8 @@ tags:
 > [!CAUTION] M4300 Only
 > These commands are based on M4300's only. Do not use on older models. Use the commands below with caution. Make sure you backup beforehand. Some commands can cause Netgear's to lockup if done incorrectly.
 
+<!--- cSpell:words -->
+<!--- cSpell:ignore RSPAN -->
 Contents:
 <!--- cSpell:disable --->
 * [CLI Environment Command Modes and Basic commands](#cli-environment-command-modes-and-basic-commands)
@@ -173,6 +175,14 @@ interface                Display the running config for specified interface on
 ### Non-disruptive Configuration Management feature (CLI only)
 
 Will apparently resolve differences rather than sending deltas or a full reload.
+
+Use Startup Config:
+
+```cisco
+reload configuration
+```
+
+Use specific script file:
 
 ```cisco
 copy tftp://<<IPADDRESS>>/Filename.txt nvram:script scriptname.scr
