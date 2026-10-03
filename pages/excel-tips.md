@@ -7,7 +7,7 @@ categories:
 type: pages
 layout: pages
 date: 2025-04-09T08:13:44.845Z
-lastmod: 2026-04-11T01:04:21.726Z
+lastmod: 2026-10-03T00:13:34.362Z
 tags:
     - Office
     - Tips
@@ -32,6 +32,8 @@ keywords:
   * [Search Cell for Text](#search-cell-for-text)
   * [Timestamp and Timezone conversions](#timestamp-and-timezone-conversions)
   * [Date Stuff](#date-stuff)
+  * [Python](#python)
+* [New Arrays in Cells (Beta 2026)](#new-arrays-in-cells-beta-2026)
 * [Formatting](#formatting)
   * [Custom Formatting](#custom-formatting)
 * [Pivots](#pivots)
@@ -124,9 +126,21 @@ Also add some time (10 hours to convert to AEST): `=(DATEVALUE(MID(A2,1,10))+TIM
 
 ### Date Stuff
 
-`=DATEDIF` - older formula
+`=DATEDIF` - older formula\
+`=LET(target,DATE(2026,11,5),NETWORKDAYS(TODAY(),target)-1&" working days until "&TEXT(target,"mmmm d yyyy"))` - pretty number of working days until date but only specified once\
+`=NETWORKDAYS(TODAY(),EOMONTH(TODAY(),MOD(3-MONTH(TODAY()),3)))` - days left in this (calendar) quarter\
+`=NETWORKDAYS(TODAY(),DATE(YEAR(TODAY()),12,31))` - days left in year
 
-* [ ] More Date Stuff
+### Python
+
+`=PY("print(""hello"")",1)`: adding python to excel
+
+[Introduction to Python in Excel](https://support.microsoft.com/en-au/excel/python/introduction-to-python-in-excel)\
+[Get started with Python in Excel](https://support.microsoft.com/en-au/excel/python/get-started-with-python-in-excel)
+
+## New Arrays in Cells (Beta 2026)
+
+[Put multiple values in one cell with lists and arrays in Excel](https://techcommunity.microsoft.com/blog/microsoft365insiderblog/put-multiple-values-in-one-cell-with-lists-and-arrays-in-excel/4559395)
 
 ## Formatting
 
@@ -136,7 +150,8 @@ Also add some time (10 hours to convert to AEST): `=(DATEVALUE(MID(A2,1,10))+TIM
 [Custom Excel number format](https://www.ablebits.com/office-addins-blog/custom-excel-number-format/)
 
 `d/mm/yyyy h:mm`: date and time with 24h time\
-`d/mm/yyyy h:mm AM/PM`: Date and time with 12h time **(Non-Standard)**
+`d/mm/yyyy h:mm AM/PM`: Date and time with 12h time **(Non-Standard)**\
+`0 "days left or other suffix text"`: adds text after value without it being in the string
 
 > [!NOTE] Undocumented Uses
 > I have seen a couple of instances in the last few years of really strange format codes that are undocumented and do odd things. Some of this may have been due to Copilot generating stuff, or Excel for the web
